@@ -1,0 +1,11 @@
+Weather app for Ubuntu devices
+
+To contribute:
+    https://wiki.ubuntu.com/Touch/CoreApps/Weather
+    https://wiki.ubuntu.com/Touch/CoreApps/DevelopmentGuide
+
+The following essential packages are required to develop this app:
+- ubuntu-sdk (see http://developer.ubuntu.com/start)
+- intltool - run the `sudo apt-get install intltool` command for installation
+
+See the debian/control file for an up-to-date list of dependencies

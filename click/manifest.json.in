@@ -1,0 +1,23 @@
+{
+    "architecture": "@CLICK_ARCH@",
+    "description": "A weather forecast application for Ubuntu with support for multiple online weather data sources",
+    "framework": "ubuntu-sdk-14.10",
+    "hooks": {
+        "weather": {
+            "apparmor": "weather.apparmor",
+            "desktop": "@DESKTOP_FILE@"
+        }
+    },
+    "icon": "@ICON@",
+    "maintainer": "Ubuntu App Cats <ubuntu-touch-coreapps@lists.launchpad.net>",
+    "name": "@PROJECT_NAME@",
+    "title": "Weather",
+    "version": "2.0.@BZR_REVNO@",
+    "x-source": {
+        "vcs-bzr": "@BZR_SOURCE@",
+        "vcs-bzr-revno": "@BZR_REVNO@"
+    },
+    "x-test": {
+        "autopilot": "@AUTOPILOT_DIR@"
+    }
+}
