@@ -89,7 +89,6 @@ add_custom_target(ubuntu-weather-app_QMlFiles ALL SOURCES ${QML_JS_FILES})
 
 add_subdirectory(click)
 add_subdirectory(po)
-add_subdirectory(tests)
-add_subdirectory(components)
-add_subdirectory(plugins)
+add_subdirectory(app)
+add_subdirectory(backend)
 
