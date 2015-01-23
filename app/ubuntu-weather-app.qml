@@ -1,9 +1,9 @@
 /*
  * Copyright (C) 2015 Canonical Ltd
  *
- * This file is part of Ubuntu Clock App
+ * This file is part of Ubuntu Weather App
  *
- * Ubuntu Clock App is free software: you can redistribute it and/or modify
+ * Ubuntu Weather App is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 3 as
  * published by the Free Software Foundation.
  *
