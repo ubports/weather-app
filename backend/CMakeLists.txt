@@ -1,12 +1,14 @@
+project(backend)
+
 include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
-set(
-    timeZone_SRCS
-    TimeZone/timezone.cpp
-    TimeZone/timezone_plugin.cpp
-)
+#set(
+#    timeZone_SRCS
+#    TimeZone/timezone.cpp
+#    TimeZone/timezone_plugin.cpp
+#)
 
 #add_library(TimeZoneBackend MODULE
 #    ${timeZone_SRCS}
