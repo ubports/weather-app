@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014 Canonical Ltd
+ * Copyright (C) 2015 Canonical Ltd
  *
  * This file is part of Ubuntu Clock App
  *
@@ -38,7 +38,12 @@ MainView {
 
 
     Page {
-        title: "Weather"
+        title: "Weather Reboot"
+
+        Label {
+            anchors.centerIn: parent
+            text: "Let the awesomeness begin :)"
+        }
 
     }
 }
