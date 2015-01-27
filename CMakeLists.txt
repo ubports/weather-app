@@ -35,6 +35,7 @@ set(MAIN_QML ${APP_HARDCODE}.qml)
 set(DESKTOP_FILE "${APP_HARDCODE}.desktop")
 set(ICON weather-app@30.png)
 set(AUTOPILOT_DIR ubuntu_weather_app)
+set(KEYS_FILE keys.js)
 
 # Set install paths
 if(CLICK_MODE)
@@ -98,6 +99,8 @@ add_custom_target(${DESKTOP_FILE} ALL
 
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${DESKTOP_FILE}
         DESTINATION ${CMAKE_INSTALL_DATADIR}/applications)
+
+install(FILES ${KEYS_FILE} DESTINATION ${CMAKE_INSTALL_PREFIX})
 
 add_subdirectory(app)
 add_subdirectory(backend)
