@@ -18,6 +18,9 @@
 
 import QtQuick 2.3
 import Ubuntu.Components 1.1
+import "data" as Data
+import "data/WeatherApi.js" as WeatherApi
+import "../key.js" as Key
 
 MainView {
     id: weatherApp
@@ -36,6 +39,41 @@ MainView {
     useDeprecatedToolbar: false
     anchorToKeyboard: true
 
+    Component.onCompleted: {
+        storage.getLocations(function(locations) {
+            WeatherApi.sendRequest({
+                action: "updateData",
+                params: {
+                    locations:locations,
+                    force:false,
+                    service: "weatherchannel",
+                    api_key: Key.twcKey
+                }
+            }, responseDataHandler)
+        })
+    }
+
+    function responseDataHandler(messageObject) {
+         if(!messageObject.error) {
+             if(messageObject.action === "updateData") {
+                 messageObject.result.forEach(function(loc) {
+                     // replace location data in cache with refreshed values
+                     if(loc["save"] === true) {
+                         storage.updateLocation(loc.db.id, loc);
+                     }
+                 });
+                 //print(JSON.stringify(messageObject.result));
+                 //buildTabs(messageObject.result);
+             }
+         } else {
+             console.log(messageObject.error.msg+" / "+messageObject.error.request.url)
+             // TODO error handling
+         }
+     }
+
+    Data.Storage {
+        id: storage
+    }
 
     Page {
         title: "Weather Reboot"
