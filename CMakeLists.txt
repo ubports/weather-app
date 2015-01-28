@@ -35,7 +35,7 @@ set(MAIN_QML ${APP_HARDCODE}.qml)
 set(DESKTOP_FILE "${APP_HARDCODE}.desktop")
 set(ICON weather-app@30.png)
 set(AUTOPILOT_DIR ubuntu_weather_app)
-set(KEYS_FILE keys.js)
+set(KEYS_FILE key.js)
 
 # Set install paths
 if(CLICK_MODE)
