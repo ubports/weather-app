@@ -1,0 +1,41 @@
+Source: ubuntu-weather-app
+Priority: extra
+Maintainer: Ubuntu App Cats <ubuntu-touch-coreapps@lists.launchpad.net>
+Build-Depends: cmake,
+               debhelper (>= 9),
+               gettext,
+               intltool,
+               python3 | python-all | python3-dev | python3-all-dev,
+               python3-minimal,
+               qtbase5-dev,
+               qtbase5-dev-tools,
+               qtdeclarative5-dev,
+               qtdeclarative5-dev-tools,
+               qtdeclarative5-ubuntu-ui-toolkit-plugin,
+Standards-Version: 3.9.5
+Section: misc
+Homepage: https://launchpad.net/ubuntu-weather-app
+Vcs-Bzr: https://code.launchpad.net/~ubuntu-weather-dev/ubuntu-weather-app/trunk
+
+Package: ubuntu-weather-app
+Architecture: all
+Depends: qmlscene,
+         qtdeclarative5-localstorage-plugin,
+         qtdeclarative5-qtquick2-plugin,
+         qtdeclarative5-ubuntu-ui-toolkit-plugin | qt-components-ubuntu,
+         suru-icon-theme | ubuntu-mobile-icons,
+         qtdeclarative5-ubuntuweather-timezone-plugin1.0 (>= ${source:Version}),
+         ${misc:Depends}
+Description: Weather application
+ Core Weather application
+
+Package: ubuntu-weather-app-autopilot
+Architecture: all
+Depends: libautopilot-qt (>= 1.4),
+         libqt5test5,
+         libqt5widgets5,
+         ubuntu-ui-toolkit-autopilot,
+         ubuntu-weather-app (>= ${source:Version}),
+         ${misc:Depends}
+Description: Test package for the weather app
+ Autopilot tests for the weather app package
