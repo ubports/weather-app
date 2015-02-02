@@ -29,13 +29,6 @@ Depends: qmlscene,
 Description: Weather application
  Core Weather application
 
-Package: qtdeclarative5-ubuntuweather-timezone-plugin1.0
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: Timezone plugin, used by the Ubuntu Weather app
- This package contains the timezone plugin written for the Ubuntu
- Weather app.
-
 Package: ubuntu-weather-app-autopilot
 Architecture: all
 Depends: libautopilot-qt (>= 1.4),
