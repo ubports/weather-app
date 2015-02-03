@@ -18,9 +18,11 @@
 
 import QtQuick 2.3
 import Ubuntu.Components 1.1
+import "components"
 import "data" as Data
 import "data/WeatherApi.js" as WeatherApi
 import "../key.js" as Key
+import "ui"
 
 MainView {
     id: weatherApp
@@ -75,13 +77,13 @@ MainView {
         id: storage
     }
 
-    Page {
-        title: "Weather Reboot"
+    PageStack {
+        id: mainPageStack
 
-        Label {
-            anchors.centerIn: parent
-            text: "Let the awesomeness begin :)"
+        HomePage {
+            id: homePage
         }
 
+        Component.onCompleted: mainPageStack.push(homePage)
     }
 }
