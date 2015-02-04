@@ -20,7 +20,7 @@ import QtQuick 2.3
 import Ubuntu.Components 1.1
 import "data" as Data
 import "data/WeatherApi.js" as WeatherApi
-import "../key.js" as Key
+import "key.js" as Key
 
 MainView {
     id: weatherApp
