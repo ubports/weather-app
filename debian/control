@@ -24,7 +24,6 @@ Depends: qmlscene,
          qtdeclarative5-qtquick2-plugin,
          qtdeclarative5-ubuntu-ui-toolkit-plugin | qt-components-ubuntu,
          suru-icon-theme | ubuntu-mobile-icons,
-         qtdeclarative5-ubuntuweather-timezone-plugin1.0 (>= ${source:Version}),
          ${misc:Depends}
 Description: Weather application
  Core Weather application
