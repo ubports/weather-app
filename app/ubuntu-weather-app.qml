@@ -21,7 +21,7 @@ import Ubuntu.Components 1.1
 import "components"
 import "data" as Data
 import "data/WeatherApi.js" as WeatherApi
-import "../key.js" as Key
+import "data/key.js" as Key
 import "ui"
 
 MainView {

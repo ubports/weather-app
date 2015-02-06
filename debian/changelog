@@ -1,10 +1,15 @@
+ubuntu-weather-app (2.1) UNRELEASED; urgency=medium
+
+  * 
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Wed, 04 Feb 2015 11:25:02 +0100
+
 ubuntu-weather-app (2.0) utopic; urgency=low
 
   [ Andrew Hayzen ]
   * Initial version of reboot
 
  -- Andrew Hayzen <ahayzen@gmail.com>  Mon, 02 Feb 2014 15:10:00 +0000
-
 
 ubuntu-weather-app (1.8.3ubuntu1) utopic; urgency=low
 

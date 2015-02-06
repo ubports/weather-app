@@ -12,7 +12,7 @@ Build-Depends: cmake,
                qtdeclarative5-dev,
                qtdeclarative5-dev-tools,
                qtdeclarative5-ubuntu-ui-toolkit-plugin,
-Standards-Version: 3.9.5
+Standards-Version: 3.9.6
 Section: misc
 Homepage: https://launchpad.net/ubuntu-weather-app
 Vcs-Bzr: https://code.launchpad.net/~ubuntu-weather-dev/ubuntu-weather-app/trunk
@@ -24,7 +24,6 @@ Depends: qmlscene,
          qtdeclarative5-qtquick2-plugin,
          qtdeclarative5-ubuntu-ui-toolkit-plugin | qt-components-ubuntu,
          suru-icon-theme | ubuntu-mobile-icons,
-         qtdeclarative5-ubuntuweather-timezone-plugin1.0 (>= ${source:Version}),
          ${misc:Depends}
 Description: Weather application
  Core Weather application
