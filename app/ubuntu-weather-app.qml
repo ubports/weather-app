@@ -41,20 +41,64 @@ MainView {
     useDeprecatedToolbar: false
     anchorToKeyboard: true
 
+    /*
+      List of locations and their data, accessible through index
+    */
+    property var locationsList: []
+
+    /*
+      Index of Location before a refresh, to go back after
+    */
+    property int indexAtRefresh: -1
+
+    /*
+      Set default values for settings here
+    */
+    property var settings: {
+        "units": Qt.locale().measurementSystem === Locale.MetricSystem ? "metric" : "imperial",
+        "wind_units": Qt.locale().measurementSystem === Locale.MetricSystem ? "kmh" : "mph",
+        "precip_units": Qt.locale().measurementSystem === Locale.MetricSystem ? "mm" : "in",
+        "service": "weatherchannel"
+    }
+
+    /*
+      Scale symbols and labels.
+    */
+    property string tempScale
+    property string speedScale
+    property string precipScale
+    property string tempUnits
+    property string windUnits
+    property string precipUnits
+
+    /*
+      After reading the settings from storage and updating the default
+      settings with the user selected ones, (re)load pages!
+    */
     Component.onCompleted: {
-        storage.getLocations(function(locations) {
-            WeatherApi.sendRequest({
-                action: "updateData",
-                params: {
-                    locations:locations,
-                    force:false,
-                    service: "weatherchannel",
-                    api_key: Key.twcKey
-                }
-            }, responseDataHandler)
+        storage.getSettings(function(storedSettings) {
+            for(var settingName in storedSettings) {
+                settings[settingName] = storedSettings[settingName];
+            }
+            setScalesAndLabels();
+            refreshData();
         })
     }
 
+    function setScalesAndLabels() {
+        // set scales
+        tempScale = String("°") + ((settings["units"] === "imperial") ? "F" : "C")
+        speedScale = ((settings["wind_units"] === "mph") ? "mph" : "km/h")
+        precipScale = ((settings["precip_units"] === "in") ? "in" : "mm")
+        tempUnits = ((settings["units"] === 'imperial') ? 'imperial' : 'metric')
+        windUnits = ((settings["wind_units"] === 'mph') ? 'imperial' : 'metric')
+        precipUnits = ((settings["precip_units"] === 'in') ? 'imperial' : 'metric')
+    }
+
+    /*
+      Handle response data from data backend. Checks if a location
+      was updated and has to be stored again.
+    */
     function responseDataHandler(messageObject) {
          if(!messageObject.error) {
              if(messageObject.action === "updateData") {
@@ -65,13 +109,42 @@ MainView {
                      }
                  });
                  //print(JSON.stringify(messageObject.result));
-                 //buildTabs(messageObject.result);
+                 fillPages(messageObject.result);
              }
          } else {
              console.log(messageObject.error.msg+" / "+messageObject.error.request.url)
              // TODO error handling
          }
      }
+
+    /* Fill the location pages with their data. */
+    function fillPages(locations) {
+        locationsList = locations;
+        // refactor this when Location are in a ListView!
+        homePage.renderData();
+    }
+
+    /*
+      Refresh data, either directly from storage or by checking against
+      API instead.
+    */
+    function refreshData(from_storage, force_refresh) {
+        if(from_storage === true && force_refresh !== true) {
+            storage.getLocations(fillPages);
+        } else {
+            storage.getLocations(function(locations) {
+                WeatherApi.sendRequest({
+                    action: "updateData",
+                    params: {
+                        locations:locations,
+                        force:force_refresh,
+                        service:settings["service"],
+                        api_key: Key.twcKey
+                    }
+                }, responseDataHandler)
+            });
+        }
+    }
 
     Data.Storage {
         id: storage

@@ -24,7 +24,77 @@ import "../components"
 
 Page {
     // Set to null otherwise the header is shown (but blank) over the top of the listview
+    id: locationPage
     flickable: null
+
+    /*
+      Data properties
+    */
+    property string name;
+    property string conditionText
+    property int currentTemp
+    property string todayMaxTemp
+    property string todayMinTemp
+    property string iconName
+
+    // TODO map iconnames to source image names
+    property var iconMap: {
+        "moon": "moon.svg"
+        // etc pp
+    }
+
+    /*
+      Format date object by given format.
+    */
+    function formatTimestamp(dateData, format) {
+        var date = new Date(dateData.year, dateData.month, dateData.date, dateData.hours, dateData.minutes)
+        return Qt.formatDate(date, i18n.tr(format))
+    }
+
+    /*
+      Extracts values from the location weather data and puts them into the appropriate components
+      to display them.
+
+      Attention: Data access happens through "weatherApp.locationList[]" by index, since complex
+      data in models will lead to type problems.
+    */
+    function renderData() {
+        var index = Math.floor(Math.random()*weatherApp.locationsList.length), // TODO get this value from ListView.currentIndex later!
+            data = weatherApp.locationsList[index],
+            current = data.data[0].current,
+            forecasts = data.data,
+            forecastsLength = forecasts.length,
+            today = forecasts[0],
+            tempUnits = weatherApp.tempUnits,
+            tempScale = weatherApp.tempScale;
+
+        // set general location data
+        name = data.location.adminName1;
+
+        // set current temps and condition
+        iconName = (current.icon) ? current.icon : ""
+        conditionText = (current.condition.main) ? current.condition.main : current.condition; // difference TWC/OWM
+        todayMaxTemp = (today[tempUnits].tempMax) ? Math.round(today[tempUnits].tempMax).toString() + tempScale: "";
+        todayMinTemp = Math.round(today[tempUnits].tempMin.toString()) + tempScale;
+        currentTemp = Math.round(current[tempUnits].temp);
+
+        // reset days list
+        mainPageWeekdayListView.model.clear()
+
+        // set daily forecasts
+        if(forecastsLength > 0) {
+            for(var x=1;x<forecastsLength;x++) {
+                // print(JSON.stringify(forecasts[x][units]))
+                var dayData = {
+                    day: formatTimestamp(forecasts[x].date, 'dddd'),
+                    low: Math.round(forecasts[x][tempUnits].tempMin).toString() + tempScale,
+                    high: (forecasts[x][tempUnits].tempMax !== undefined) ? Math.round(forecasts[x][tempUnits].tempMax).toString() + tempScale : "",
+                    image: (forecasts[x].icon !== undefined && iconMap[forecasts[x].icon] !== undefined) ? iconMap[forecasts[x].icon] + tempScale : ""
+                }
+                mainPageWeekdayListView.model.append(dayData);
+            }
+        }
+    }
 
     ListView {
         id: mainPageWeekdayListView
@@ -32,6 +102,7 @@ Page {
             fill: parent
             margins: units.gu(2)
         }
+
         header: Column {
             anchors {
                 left: parent.left
@@ -40,50 +111,30 @@ Page {
             spacing: units.gu(1)
 
             HeaderRow {
-                locationName: "Hackney"  // TODO: non static
+                locationName: locationPage.name
             }
 
             HomeGraphic {
-
+                icon: locationPage.iconName
             }
 
             HomeTempInfo {
-                description: i18n.tr("Rainy & windy")  // TODO: non static
-                high: "13°C"
-                low: "10°C"
-                now: "13°"  // TODO: non static
+                description: locationPage.conditionText
+                high: locationPage.todayMaxTemp
+                low: locationPage.todayMinTemp
+                now: locationPage.currentTemp
             }
 
             ListItem.ThinDivider {
 
             }
         }
-        model: ListModel {  // TODO: non static
-            ListElement {
-                day: "Saturday"
-                low: 12
-                high: 15
-            }
-            ListElement {
-                day: "Sunday"
-                low: 14
-                high: 18
-            }
-            ListElement {
-                day: "Monday"
-                low: 10
-                high: 11
-            }
-            ListElement {
-                day: "Tuesday"
-                low: -7
-                high: 0
-            }
-        }
+        model: ListModel {}
+
         delegate: DayDelegate {
             day: model.day
-            high: model.high + "°C"  // TODO: non static
-            low: model.low + "°C"
+            high: model.high
+            low: model.low
         }
     }
 }
