@@ -35,12 +35,22 @@ Page {
     property string currentTemp
     property string todayMaxTemp
     property string todayMinTemp
+    property string icon
     property string iconName
 
-    // TODO map iconnames to source image names
     property var iconMap: {
-        "moon": "moon.svg"
-        // etc pp
+        "sun": Qt.resolvedUrl("../graphics/Sunny.png"),
+        "moon": Qt.resolvedUrl("../graphics/Starry-Night.png"),
+        "cloud_sun": Qt.resolvedUrl("../graphics/Cloudy-Circles.png"),
+        "cloud_moon": Qt.resolvedUrl("../graphics/Cloudy-Night.png"),
+        "cloud": Qt.resolvedUrl("../graphics/Cloudy.png"),
+        "rain": Qt.resolvedUrl("../graphics/Big-Rain.png"),
+        "thunder": Qt.resolvedUrl("../graphics/Stormy.png"),
+        "snow_shower": Qt.resolvedUrl("../graphics/Cloudy-Snow.png"),
+        "fog": Qt.resolvedUrl("../graphics/Fog.png"),
+        "snow_rain": Qt.resolvedUrl("../graphics/Cloudy-Snow.png"),
+        "scattered": Qt.resolvedUrl("../graphics/Showers.png"),
+        "overcast": Qt.resolvedUrl("../graphics/Cloudy.png")
     }
 
     /*
@@ -73,6 +83,7 @@ Page {
 
         // set current temps and condition
         iconName = (current.icon) ? current.icon : ""
+        icon = iconMap[iconName]
         conditionText = (current.condition.main) ? current.condition.main : current.condition; // difference TWC/OWM
         todayMaxTemp = (today[tempUnits].tempMax) ? Math.round(today[tempUnits].tempMax).toString() + tempScale: "";
         todayMinTemp = Math.round(today[tempUnits].tempMin).toString() + tempScale;
@@ -115,7 +126,7 @@ Page {
             }
 
             HomeGraphic {
-                icon: locationPage.iconName
+                icon: locationPage.icon
             }
 
             HomeTempInfo {

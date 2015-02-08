@@ -23,27 +23,16 @@ Item {
     height: units.gu(32)
     width: parent.width
 
-    property alias icon: iconLabel.text
+    property alias icon: iconImage.source
 
     // TODO: will be on 'rails' (horizontal listview?) to reveal hourly forecast
     Image {
+        id: iconImage
         anchors {
-            fill: parent
+            centerIn: parent
         }
-
-        Rectangle {
-            anchors {
-                fill: parent
-            }
-            color: "#F00"
-
-            Label {
-                id: iconLabel
-                anchors {
-                    centerIn: parent
-                }
-            }
-        }
+        fillMode: Image.PreserveAspectFit
+        width: parent.width
     }
 }
 
