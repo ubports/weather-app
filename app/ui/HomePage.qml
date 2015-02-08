@@ -39,6 +39,21 @@ Page {
     property string iconName
 
     property var iconMap: {
+        "sun": Qt.resolvedUrl("../graphics/sunny.svg"),
+        "moon": Qt.resolvedUrl("../graphics/starry.svg"),
+        "cloud_sun": Qt.resolvedUrl("../graphics/partly-cloudy.svg"),
+        "cloud_moon": Qt.resolvedUrl("../graphics/cloudy-night.svg"),
+        "cloud": Qt.resolvedUrl("../graphics/cloudy.svg"),
+        "rain": Qt.resolvedUrl("../graphics/rain.svg"),
+        "thunder": Qt.resolvedUrl("../graphics/thunder.svg"),
+        "snow_shower": Qt.resolvedUrl("../graphics/snow.svg"),
+        "fog": Qt.resolvedUrl("../graphics/fog.svg"),
+        "snow_rain": Qt.resolvedUrl("../graphics/snow.svg"),
+        "scattered": Qt.resolvedUrl("../graphics/rain.svg"),
+        "overcast": Qt.resolvedUrl("../graphics/cloudy.svg")
+    }
+
+    property var imageMap: {
         "sun": Qt.resolvedUrl("../graphics/Sunny.png"),
         "moon": Qt.resolvedUrl("../graphics/Starry-Night.png"),
         "cloud_sun": Qt.resolvedUrl("../graphics/Cloudy-Circles.png"),
@@ -83,7 +98,7 @@ Page {
 
         // set current temps and condition
         iconName = (current.icon) ? current.icon : ""
-        icon = iconMap[iconName]
+        icon = imageMap[iconName]
         conditionText = (current.condition.main) ? current.condition.main : current.condition; // difference TWC/OWM
         todayMaxTemp = (today[tempUnits].tempMax) ? Math.round(today[tempUnits].tempMax).toString() + tempScale: "";
         todayMinTemp = Math.round(today[tempUnits].tempMin).toString() + tempScale;
@@ -100,7 +115,7 @@ Page {
                     day: formatTimestamp(forecasts[x].date, 'dddd'),
                     low: Math.round(forecasts[x][tempUnits].tempMin).toString() + tempScale,
                     high: (forecasts[x][tempUnits].tempMax !== undefined) ? Math.round(forecasts[x][tempUnits].tempMax).toString() + tempScale : "",
-                    image: (forecasts[x].icon !== undefined && iconMap[forecasts[x].icon] !== undefined) ? iconMap[forecasts[x].icon] + tempScale : ""
+                    image: (forecasts[x].icon !== undefined && iconMap[forecasts[x].icon] !== undefined) ? iconMap[forecasts[x].icon] : ""
                 }
                 mainPageWeekdayListView.model.append(dayData);
             }
@@ -145,6 +160,7 @@ Page {
         delegate: DayDelegate {
             day: model.day
             high: model.high
+            image: model.image
             low: model.low
         }
     }
