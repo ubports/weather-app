@@ -32,7 +32,7 @@ Page {
     */
     property string name;
     property string conditionText
-    property int currentTemp
+    property string currentTemp
     property string todayMaxTemp
     property string todayMinTemp
     property string iconName
@@ -69,14 +69,14 @@ Page {
             tempScale = weatherApp.tempScale;
 
         // set general location data
-        name = data.location.adminName1;
+        name = data.location.name;
 
         // set current temps and condition
         iconName = (current.icon) ? current.icon : ""
         conditionText = (current.condition.main) ? current.condition.main : current.condition; // difference TWC/OWM
         todayMaxTemp = (today[tempUnits].tempMax) ? Math.round(today[tempUnits].tempMax).toString() + tempScale: "";
-        todayMinTemp = Math.round(today[tempUnits].tempMin.toString()) + tempScale;
-        currentTemp = Math.round(current[tempUnits].temp);
+        todayMinTemp = Math.round(today[tempUnits].tempMin).toString() + tempScale;
+        currentTemp = Math.round(current[tempUnits].temp).toString() + tempScale;
 
         // reset days list
         mainPageWeekdayListView.model.clear()
