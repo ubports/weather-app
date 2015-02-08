@@ -1,0 +1,173 @@
+ubuntu-weather-app (2.1) UNRELEASED; urgency=medium
+
+  * 
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Wed, 04 Feb 2015 11:25:02 +0100
+
+ubuntu-weather-app (2.0) utopic; urgency=low
+
+  [ Andrew Hayzen ]
+  * Initial version of reboot
+
+ -- Andrew Hayzen <ahayzen@gmail.com>  Mon, 02 Feb 2014 15:10:00 +0000
+
+ubuntu-weather-app (1.8.3ubuntu1) utopic; urgency=low
+
+  [ Dan Chapman ]
+  * Add timezone c++ extension plugin
+
+ -- Dan Chapman <dpniel@ubuntu.com>  Thu, 25 Sep 2014 10:46:29 +0100
+
+ubuntu-weather-app (1.8.3) raring; urgency=low
+
+  [ Martin Borho ]
+  * updated icons for rain and snow
+  * bug fixes and optimizations
+
+  [ Alan Pope ]
+  * Update click framework and apparmor profile version (LP: #1315318) 
+
+ -- Alan Pope <popey@ubuntu.com>  Fri, 02 May 2014 13:51:57 +0100
+
+ubuntu-weather-app (1.8.1ubuntu1) UNRELEASED; urgency=low
+
+  * added missing icon
+
+ -- Martin Borho <martin@borho.net>  Sun, 23 Mar 2014 13:06:17 +0000
+
+ubuntu-weather-app (1.8ubuntu1) UNRELEASED; urgency=low
+
+  [Leo Arias]
+  * Port to autopilot 1.4.
+  * Set the objectNames for the settings options.
+
+  [Nicholas Skaggs]
+  * Fixed test_del_add_bug test, simplify tests, re-enable disabled tests.
+  * Redo create blank db, ensure it's being used across all tests.
+  * Add cmake build.
+  * Set revno to match store.
+  * Updated tests to use more emulator standards.
+  * Tweaked activity indicator handling.
+
+  [Dennis O'Flaherty]
+  * Load weather for the selected city when clicking the OWM logo instead of loading for London.
+
+  [Raul Yeguas]
+  * Added an modified logo for OpenWeatherMap (have mercy on me, christina-li and michal) and an action to open its website on click.
+  * Added animations for daily and houly forecast scroll.
+  * Improved animation speed by reducing image size.
+  * Removes SideStage hint, fixes related to the sizes of the current weather data display on tablets.
+
+  [Victor Thompson]
+  * Added unit of measure for main temperature value.
+  * Fixed conversion of wind speed data for TWC data.
+  * Prevent predictive text in search bar.
+
+  [Arash Badie Modiri]
+  * Changed a translation string into something a little bit more general.
+
+  [Martin Borho]
+  * Optimized and added haptic effect to hourly scrolling .
+  * Added The Weather Channel as default weather data provider.
+  * Added keyboard shortcuts.
+  * Initial tablet design of the Weather app.
+  * Refactored all width:parent.width and height:parent.height through corresponding anchors
+  * Fixed edit dialog to fill window on N7 2013 landscape
+  * Fixed weather AP tests to not assume tablet mode
+  * Fixed content sticking to the top, when height was changed in phone mode
+  * Fixed StateNotFoundError failures in image 206
+  * Removed WorkerScriptfor API calls
+  * New icon names used in API clients
+  * Using the current condition icon for the current day
+
+  [David Planella]
+  * Fixed the rule to generate a .pot template after the migration to cmake.
+  * Minor improvements on the weather API: added parameterize(), added locale parameters to TWC calls
+  * Fixes empty TWC URL if locale is not supported.
+  * Adds documentation for the The Weather Channel API.
+  * Makes the provider footer to be full width in order for it to make it look good on a Nexus 7.
+  * Fixes the shorter length header on the N7 using anchors instead of widths.
+
+  [Alan Pope]
+  * New icon.
+
+ -- Martin Borho <martin@borho.net>  Fri, 21 Mar 2014 11:26:17 +0000
+
+ubuntu-weather-app (1.0ubuntu1) UNRELEASED; urgency=medium
+
+  * New icon 
+
+ -- Alan Pope <alan.pope@canonical.com>  Tue, 18 Feb 2014 21:26:17 +0000
+
+ubuntu-weather-app (1.0) saucy; urgency=low
+
+  [Andrew Starr-Bochicchio]
+  * Use the system locale to determine both the default units and the display of time.
+  * Add predictive search for locations. (LP: #1218910)
+  * Increase visibility of ActivityIndicator (LP: #1218904)
+
+  [David Planella]
+  * Updated translatable strings, a couple of small fixes to ease translations
+
+  [Dennis O'Flaherty]
+  * Fixes for precipitation values.
+
+  [Martin Borho]
+  * Removing a location add adding a new one fails. (LP: #1230297)
+  * Added location lookup via geoip and geonames.org with test (LP: #1187312, #1188726)
+  * Added fixes for new removable ListItem and the changed LocalStorage path. (LP: #1234544)
+  * Added setting for precipitation unit, mm or in.
+  * Location search now via geonames.org. (LP: #1230153)
+  * Updated predefined cities list.
+  * Added component for notifications.
+  * Added bottom margin to scrolling area in tabs and moved warm colors up the gradient color scheme.
+  * Visual improvements and fixes to LocationManagerSheet and AddLocationSheet. (LP: #1198541, #1221734)
+  * Added updated label, removed years from date labels. (LP: #1219200, #1221149, #1221162)
+  * Improved scrolling, added slow/fast scrolling for day/hour scrolling distinction. (LP:# 1221169)
+  * Added option in settings to change the wind speed unit. (LP: #1214934, #1190784)
+  * Dynamic gradient backgrounds according to the visual design.
+  * Added missing localstorage dependency.
+
+  [Nicholas Skaags]
+  * Add support for testing via click packages.
+
+  [Raúl Yeguas]
+  * Updated colors in GradientsMap.js. (LP: #1226746)
+  * Returns the last element to primary information screen and skip animation. (LP: #1227150)
+  * improved CurrentTemp text size
+  * UbuntuAnimations should be used (LP: #1218805)
+  * Replaced ValueSelector with new OptionSelector in Settings.
+  * Implemented a new scrolling.
+  * Added pressure data and modified the transition animation.
+  * Font color should be always white, with drop shadow.
+
+  [Sergio Schvezov]
+  * changing applicationName to com.ubuntu.weather to write in the unconfined areas
+  * cleaning up python code
+  * add the click data into the package and added apparmor rules (LP: #121839)
+
+ -- Martin Borho <martin@borho.net>  Tue, 8 Oct 2013 22:42:00 +0200
+
+ubuntu-weather-app (0.3) raring; urgency=low
+  
+  * LocationManager-Sheet added
+  * Settings-Sheet added
+  * Autopilot tests
+  * Data-provider calls now in WorkerScript
+  * ActivityIndicators while loading
+  * Suru theme added
+  * Displaying more weather data for every location
+
+ -- Martin Borho <martin@borho.net>  Tue, 13 Aug 2013 21:33:33 +0200
+
+ubuntu-weather-app (0.2) raring; urgency=low
+
+  * Added support for packaging and installing translations 
+
+ -- David Planella <david.planella@ubuntu.com>  Tue, 28 May 2013 14:21:33 +0200
+
+ubuntu-weather-app (0.1) raring; urgency=low
+
+  * Initial release
+
+ -- Michael Hall <mhall119@ubuntu.com>  Mon, 11 Feb 2013 16:04:00 -0500
