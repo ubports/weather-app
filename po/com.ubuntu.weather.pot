@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-03 21:25+0000\n"
+"POT-Creation-Date: 2015-02-08 19:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,7 +21,11 @@ msgstr ""
 msgid "Today"
 msgstr ""
 
-#: ../app/ui/HomePage.qml:51
+#: ../app/ui/HomePage.qml:30 ../app/ui/LocationsPage.qml:28
+msgid "Locations"
+msgstr ""
+
+#: ../app/ui/HomePage.qml:54
 msgid "Rainy & windy"
 msgstr ""
 
