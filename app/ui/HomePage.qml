@@ -76,7 +76,7 @@ Page {
         conditionText = (current.condition.main) ? current.condition.main : current.condition; // difference TWC/OWM
         todayMaxTemp = (today[tempUnits].tempMax) ? Math.round(today[tempUnits].tempMax).toString() + tempScale: "";
         todayMinTemp = Math.round(today[tempUnits].tempMin).toString() + tempScale;
-        currentTemp = Math.round(current[tempUnits].temp).toString() + tempScale;
+        currentTemp = Math.round(current[tempUnits].temp).toString() + String("°");
 
         // reset days list
         mainPageWeekdayListView.model.clear()
