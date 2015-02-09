@@ -101,7 +101,8 @@ MainView {
                         locations:locations,
                         force:force_refresh,
                         service:settings.service,
-                        api_key: Key.twcKey
+                        api_key: Key.twcKey,
+                        interval: settings.refreshInterval
                     }
                 }, responseDataHandler)
             });
@@ -112,6 +113,7 @@ MainView {
         id: settings
         category: "weatherSettings"
 
+        property int refreshInterval: 1800
         property string precipUnits
         property string service
         property string tempScale

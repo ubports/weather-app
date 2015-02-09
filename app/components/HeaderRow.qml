@@ -42,6 +42,8 @@ Row {
         height: width
         width: units.gu(4)
 
+        onClicked: mainPageStack.push(Qt.resolvedUrl("../ui/SettingsPage.qml"))
+
         Rectangle {
             anchors {
                 fill: parent

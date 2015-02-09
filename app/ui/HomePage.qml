@@ -35,7 +35,7 @@ PageWithBottomEdge {
     /*
       Data properties
     */
-    property string name;
+    property string name
     property string conditionText
     property string currentTemp
     property string todayMaxTemp
