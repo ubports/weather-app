@@ -53,35 +53,41 @@ Item {
                     console.log('Removed old locations, Database upgraded to v0.3');
                 });
         }
-    }
 
-    function saveSetting(key, value) {
-        openDB();
-        db.transaction( function(tx){
-            tx.executeSql('INSERT OR REPLACE INTO settings VALUES(?, ?)', [key, value]);
-        });
-    }
+        if (!settings.migrated) {  // TODO: remove check once dropping table
+            try {  // attempt to read the old settings
+                var oldSettings = {};
 
-    function getSettings(callback) {
-        openDB();
-        var settings = {};
-        db.readTransaction(
-            function(tx){
-                var rs = tx.executeSql('SELECT key, value FROM Settings');
-                for(var i = 0; i < rs.rows.length; i++) {
-                    var row = rs.rows.item(i);
-                    settings[row.key] = row.value;
-                }
-                callback(settings);
+                // Load old settings
+                db.readTransaction( function(tx) {
+                    var rs = tx.executeSql("SELECT * FROM settings")
+
+                    for(var i = 0; i < rs.rows.length; i++) {
+                        var row = rs.rows.item(i);
+                        oldSettings[row.key] = row.value;
+                    }
+                });
+
+                console.debug("Migrating old data:", JSON.stringify(oldSettings))
+
+                // Move to new Settings API
+                settings.migrated = true
+                settings.precip_units = oldSettings["precip_units"]
+                settings.service = oldSettings["service"]
+                settings.units = oldSettings["units"]
+                settings.wind_units = oldSettings["wind_units"]
+            } catch (e) {  // likely table did not exist
+                console.debug("No old data to migrate.")
+                settings.migrated = true
             }
-        );
-    }
+        }
 
-    function clearSetting(name) {
-        openDB();
-        db.transaction(function(tx){
-            tx.executeSql('DELETE FROM Settings WHERE key = ?', [name]);
+        /*
+          TODO: uncomment when reboot is ready to replace existing app
+        db.transaction( function(tx) {
+            tx.executeSql("DROP TABLE IF EXISTS settings")
         });
+        */
     }
 
     function insertLocation(data) {
@@ -130,7 +136,6 @@ Item {
         openDB();
         db.transaction(function(tx){
             tx.executeSql('DELETE FROM Locations WHERE 1');
-            tx.executeSql('DELETE FROM Settings WHERE 1');
         });
     }
 }

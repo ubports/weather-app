@@ -17,6 +17,7 @@
  */
 
 import QtQuick 2.3
+import Qt.labs.settings 1.0
 import Ubuntu.Components 1.1
 import "components"
 import "data" as Data
@@ -52,48 +53,19 @@ MainView {
     property int indexAtRefresh: -1
 
     /*
-      Set default values for settings here
-    */
-    property var settings: {
-        "units": Qt.locale().measurementSystem === Locale.MetricSystem ? "metric" : "imperial",
-        "wind_units": Qt.locale().measurementSystem === Locale.MetricSystem ? "kmh" : "mph",
-        "precip_units": Qt.locale().measurementSystem === Locale.MetricSystem ? "mm" : "in",
-        "service": "weatherchannel"
-    }
-
-    /*
       Scale symbols and labels.
     */
-    property string tempScale
-    property string speedScale
-    property string precipScale
-    property string tempUnits
-    property string windUnits
-    property string precipUnits
+    property string tempScale: String("°") + settings.units === "imperial" ? "F" : "C"
+    property string speedScale: settings.wind_units === "mph" ? "mph" : "km/h"
+    property string precipScale: settings.precip_units === "in" ? "in" : "mm"
+    property string tempUnits: settings.units === "imperial" ? "imperial" : "metric"
+    property string windUnits: settings.wind_units === "mph" ? "imperial" : "metric"
+    property string precipUnits: settings.precip_units === "in" ? "imperial" : "metric"
 
     /*
-      After reading the settings from storage and updating the default
-      settings with the user selected ones, (re)load pages!
+      (re)load the pages on completion
     */
-    Component.onCompleted: {
-        storage.getSettings(function(storedSettings) {
-            for(var settingName in storedSettings) {
-                settings[settingName] = storedSettings[settingName];
-            }
-            setScalesAndLabels();
-            refreshData();
-        })
-    }
-
-    function setScalesAndLabels() {
-        // set scales
-        tempScale = String("°") + ((settings["units"] === "imperial") ? "F" : "C")
-        speedScale = ((settings["wind_units"] === "mph") ? "mph" : "km/h")
-        precipScale = ((settings["precip_units"] === "in") ? "in" : "mm")
-        tempUnits = ((settings["units"] === 'imperial') ? 'imperial' : 'metric')
-        windUnits = ((settings["wind_units"] === 'mph') ? 'imperial' : 'metric')
-        precipUnits = ((settings["precip_units"] === 'in') ? 'imperial' : 'metric')
-    }
+    Component.onCompleted: refreshData();
 
     /*
       Handle response data from data backend. Checks if a location
@@ -138,12 +110,24 @@ MainView {
                     params: {
                         locations:locations,
                         force:force_refresh,
-                        service:settings["service"],
+                        service:settings.service,
                         api_key: Key.twcKey
                     }
                 }, responseDataHandler)
             });
         }
+    }
+
+    Settings {
+        id: settings
+        category: "weatherSettings"
+
+        property string units: Qt.locale().measurementSystem === Locale.MetricSystem ? "metric" : "imperial"
+        property string wind_units: Qt.locale().measurementSystem === Locale.MetricSystem ? "kmh" : "mph"
+        property string precip_units: Qt.locale().measurementSystem === Locale.MetricSystem ? "mm" : "in"
+        property string service: "weatherchannel"
+
+        property bool migrated: false  // TODO: remove once dropping old table
     }
 
     Data.Storage {
