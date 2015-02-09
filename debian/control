@@ -21,6 +21,7 @@ Package: ubuntu-weather-app
 Architecture: all
 Depends: qmlscene,
          qtdeclarative5-localstorage-plugin,
+         qml-module-qt-labs-settings,
          qtdeclarative5-qtquick2-plugin,
          qtdeclarative5-ubuntu-ui-toolkit-plugin | qt-components-ubuntu,
          suru-icon-theme | ubuntu-mobile-icons,
