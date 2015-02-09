@@ -72,10 +72,12 @@ Item {
 
                 // Move to new Settings API
                 settings.migrated = true
-                settings.precip_units = oldSettings["precip_units"]
+                settings.precipUnits = oldSettings["precip_units"]
                 settings.service = oldSettings["service"]
+                settings.tempScale = oldSettings["units"] === "metric" ? "C" : "F"
+                settings.tempUnits = oldSettings["units"]
                 settings.units = oldSettings["units"]
-                settings.wind_units = oldSettings["wind_units"]
+                settings.windUnits = oldSettings["wind_units"]
             } catch (e) {  // likely table did not exist
                 console.debug("No old data to migrate.")
                 settings.migrated = true

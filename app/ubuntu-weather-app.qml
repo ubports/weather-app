@@ -53,16 +53,6 @@ MainView {
     property int indexAtRefresh: -1
 
     /*
-      Scale symbols and labels.
-    */
-    property string tempScale: String("°") + settings.units === "imperial" ? "F" : "C"
-    property string speedScale: settings.wind_units === "mph" ? "mph" : "km/h"
-    property string precipScale: settings.precip_units === "in" ? "in" : "mm"
-    property string tempUnits: settings.units === "imperial" ? "imperial" : "metric"
-    property string windUnits: settings.wind_units === "mph" ? "imperial" : "metric"
-    property string precipUnits: settings.precip_units === "in" ? "imperial" : "metric"
-
-    /*
       (re)load the pages on completion
     */
     Component.onCompleted: refreshData();
@@ -122,12 +112,28 @@ MainView {
         id: settings
         category: "weatherSettings"
 
-        property string units: Qt.locale().measurementSystem === Locale.MetricSystem ? "metric" : "imperial"
-        property string wind_units: Qt.locale().measurementSystem === Locale.MetricSystem ? "kmh" : "mph"
-        property string precip_units: Qt.locale().measurementSystem === Locale.MetricSystem ? "mm" : "in"
-        property string service: "weatherchannel"
+        property string precipUnits
+        property string service
+        property string tempScale
+        property string tempUnits
+        property string units
+        property string windUnits
 
         property bool migrated: false  // TODO: remove once dropping old table
+
+        Component.onCompleted: {
+            if (units === "") {  // No settings so load defaults
+                console.debug("No settings, using defaults")
+                var metric = Qt.locale().measurementSystem === Locale.MetricSystem
+
+                precipUnits = metric ? "mm" : "in"
+                service = "weatherchannel"
+                tempScale = String("°") + metric ? "C" : "F"
+                tempUnits = tempScale === "C" ? "metric" : "imperial"
+                units = metric ? "metric" : "imperial"
+                windUnits = metric ? "kmh" : "mph"
+            }
+        }
     }
 
     Data.Storage {
