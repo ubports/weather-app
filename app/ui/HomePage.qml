@@ -22,10 +22,15 @@ import Ubuntu.Components.ListItems 0.1 as ListItem
 import "../components"
 
 
-Page {
+PageWithBottomEdge {
     // Set to null otherwise the header is shown (but blank) over the top of the listview
     id: locationPage
     flickable: null
+
+    bottomEdgePageSource: Qt.resolvedUrl("LocationsPage.qml")
+    bottomEdgeTitle: i18n.tr("Locations")
+    tipColor: UbuntuColors.orange
+    tipLabelColor: "#FFF"
 
     /*
       Data properties
