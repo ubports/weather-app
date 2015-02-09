@@ -71,7 +71,7 @@ PageWithBottomEdge {
             forecastsLength = forecasts.length,
             today = forecasts[0];
 
-        var tempUnits = settings.tempScale === "C" ? "metric" : "imperial"
+        var tempUnits = settings.tempScale === "°C" ? "metric" : "imperial"
 
         // set general location data
         name = data.location.name;
