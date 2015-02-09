@@ -28,6 +28,8 @@ PageWithBottomEdge {
 
     bottomEdgePageSource: Qt.resolvedUrl("LocationsPage.qml")
     bottomEdgeTitle: i18n.tr("Locations")
+    tipColor: UbuntuColors.orange
+    tipLabelColor: "#FFF"
 
     ListView {
         id: mainPageWeekdayListView

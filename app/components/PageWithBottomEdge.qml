@@ -84,6 +84,10 @@ Page {
     property bool _showEdgePageWhenReady: false
     property int _areaWhenExpanded: 0
 
+    // CUSTOM properties to allow changing of color
+    property alias tipColor: tip.color
+    property alias tipLabelColor: tipLabel.color
+
     signal bottomEdgeReleased()
     signal bottomEdgeDismissed()
 
