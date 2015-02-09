@@ -115,7 +115,6 @@ MainView {
         property string precipUnits
         property string service
         property string tempScale
-        property string tempUnits
         property string units
         property string windUnits
 
@@ -129,7 +128,6 @@ MainView {
                 precipUnits = metric ? "mm" : "in"
                 service = "weatherchannel"
                 tempScale = String("°") + metric ? "C" : "F"
-                tempUnits = tempScale === "C" ? "metric" : "imperial"
                 units = metric ? "metric" : "imperial"
                 windUnits = metric ? "kmh" : "mph"
             }

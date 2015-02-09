@@ -75,7 +75,6 @@ Item {
                 settings.precipUnits = oldSettings["precip_units"]
                 settings.service = oldSettings["service"]
                 settings.tempScale = oldSettings["units"] === "metric" ? "C" : "F"
-                settings.tempUnits = oldSettings["units"]
                 settings.units = oldSettings["units"]
                 settings.windUnits = oldSettings["wind_units"]
             } catch (e) {  // likely table did not exist
