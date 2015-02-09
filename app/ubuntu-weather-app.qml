@@ -127,7 +127,7 @@ MainView {
 
                 precipUnits = metric ? "mm" : "in"
                 service = "weatherchannel"
-                tempScale = String("°") + metric ? "C" : "F"
+                tempScale = "°" + (metric ? "C" : "F")
                 units = metric ? "metric" : "imperial"
                 windUnits = metric ? "kmh" : "mph"
             }
