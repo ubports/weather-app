@@ -44,7 +44,7 @@ Page {
                 text: i18n.tr("Provider")
 
                 onDelegateClicked: {
-                    settings.service = model[selectedIndex]
+                    settings.service = model[index]
                     refreshData(false, true)
                 }
             }

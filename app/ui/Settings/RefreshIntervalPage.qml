@@ -47,7 +47,7 @@ Page {
                 text: i18n.tr("Interval")
 
                 onDelegateClicked: {
-                    settings.refreshInterval = model[selectedIndex]
+                    settings.refreshInterval = model[index]
                     refreshData(false, true)
                 }
             }

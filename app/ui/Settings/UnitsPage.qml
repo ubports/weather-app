@@ -44,7 +44,7 @@ Page {
                 text: i18n.tr("Temperature")
 
                 onDelegateClicked: {
-                    settings.tempScale = model[selectedIndex]
+                    settings.tempScale = model[index]
                     refreshData()
                 }
             }
@@ -56,7 +56,7 @@ Page {
                 text: i18n.tr("Precipitation")
 
                 onDelegateClicked: {
-                    settings.precipUnits = model[selectedIndex]
+                    settings.precipUnits = model[index]
                     refreshData()
                 }
             }
@@ -68,7 +68,7 @@ Page {
                 selectedIndex: model.indexOf(settings.windUnits)
 
                 onDelegateClicked: {
-                    settings.windUnits = model[selectedIndex]
+                    settings.windUnits = model[index]
                     refreshData()
                 }
             }
