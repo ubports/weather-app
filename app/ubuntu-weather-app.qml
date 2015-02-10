@@ -118,7 +118,7 @@ MainView {
         property string units
         property string windUnits
 
-        property bool migrated: false  // TODO: remove once dropping old table
+        property bool migrated: false
 
         Component.onCompleted: {
             if (units === "") {  // No settings so load defaults
