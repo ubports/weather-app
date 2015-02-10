@@ -54,7 +54,7 @@ Item {
                 });
         }
 
-        if (!settings.migrated) {  // TODO: remove check once dropping table
+        if (!settings.migrated) {
             try {  // attempt to read the old settings
                 var oldSettings = {};
 
@@ -77,18 +77,18 @@ Item {
                 settings.tempScale = "°" + (oldSettings["units"] === "metric" ? "C" : "F")
                 settings.units = oldSettings["units"]
                 settings.windUnits = oldSettings["wind_units"]
+
+                /*
+                  TODO: uncomment when reboot is ready to replace existing app
+                db.transaction( function(tx) {
+                    tx.executeSql("DROP TABLE IF EXISTS settings")
+                });
+                */
             } catch (e) {  // likely table did not exist
                 console.debug("No old data to migrate.")
                 settings.migrated = true
             }
         }
-
-        /*
-          TODO: uncomment when reboot is ready to replace existing app
-        db.transaction( function(tx) {
-            tx.executeSql("DROP TABLE IF EXISTS settings")
-        });
-        */
     }
 
     function insertLocation(data) {
