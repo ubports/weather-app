@@ -480,7 +480,7 @@ var WeatherChannelApi = (function() {
             },
             imperial: {
                 tempMin: calcFahrenheit(data.minTemp),
-                tempMax: calcFahrenheit(data.maxTemp || data.minTemp),
+                tempMax: calcFahrenheit(data.maxTemp !== undefined ? data.maxTemp : data.minTemp),
                 windSpeed: convertKmhToMph(partData.wSpeed)
             },
             precipType: partData.precip_type,
