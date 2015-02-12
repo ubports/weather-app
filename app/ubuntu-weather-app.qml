@@ -17,6 +17,7 @@
  */
 
 import QtQuick 2.3
+import Qt.labs.settings 1.0
 import Ubuntu.Components 1.1
 import "components"
 import "data" as Data
@@ -52,48 +53,9 @@ MainView {
     property int indexAtRefresh: -1
 
     /*
-      Set default values for settings here
+      (re)load the pages on completion
     */
-    property var settings: {
-        "units": Qt.locale().measurementSystem === Locale.MetricSystem ? "metric" : "imperial",
-        "wind_units": Qt.locale().measurementSystem === Locale.MetricSystem ? "kmh" : "mph",
-        "precip_units": Qt.locale().measurementSystem === Locale.MetricSystem ? "mm" : "in",
-        "service": "weatherchannel"
-    }
-
-    /*
-      Scale symbols and labels.
-    */
-    property string tempScale
-    property string speedScale
-    property string precipScale
-    property string tempUnits
-    property string windUnits
-    property string precipUnits
-
-    /*
-      After reading the settings from storage and updating the default
-      settings with the user selected ones, (re)load pages!
-    */
-    Component.onCompleted: {
-        storage.getSettings(function(storedSettings) {
-            for(var settingName in storedSettings) {
-                settings[settingName] = storedSettings[settingName];
-            }
-            setScalesAndLabels();
-            refreshData();
-        })
-    }
-
-    function setScalesAndLabels() {
-        // set scales
-        tempScale = String("°") + ((settings["units"] === "imperial") ? "F" : "C")
-        speedScale = ((settings["wind_units"] === "mph") ? "mph" : "km/h")
-        precipScale = ((settings["precip_units"] === "in") ? "in" : "mm")
-        tempUnits = ((settings["units"] === 'imperial') ? 'imperial' : 'metric')
-        windUnits = ((settings["wind_units"] === 'mph') ? 'imperial' : 'metric')
-        precipUnits = ((settings["precip_units"] === 'in') ? 'imperial' : 'metric')
-    }
+    Component.onCompleted: refreshData();
 
     /*
       Handle response data from data backend. Checks if a location
@@ -138,11 +100,37 @@ MainView {
                     params: {
                         locations:locations,
                         force:force_refresh,
-                        service:settings["service"],
+                        service:settings.service,
                         api_key: Key.twcKey
                     }
                 }, responseDataHandler)
             });
+        }
+    }
+
+    Settings {
+        id: settings
+        category: "weatherSettings"
+
+        property string precipUnits
+        property string service
+        property string tempScale
+        property string units
+        property string windUnits
+
+        property bool migrated: false
+
+        Component.onCompleted: {
+            if (units === "") {  // No settings so load defaults
+                console.debug("No settings, using defaults")
+                var metric = Qt.locale().measurementSystem === Locale.MetricSystem
+
+                precipUnits = metric ? "mm" : "in"
+                service = "weatherchannel"
+                tempScale = "°" + (metric ? "C" : "F")
+                units = metric ? "metric" : "imperial"
+                windUnits = metric ? "kmh" : "mph"
+            }
         }
     }
 
