@@ -35,7 +35,7 @@ PageWithBottomEdge {
     /*
       Data properties
     */
-    property string name;
+    property string name
     property string conditionText
     property string currentTemp
     property string todayMaxTemp
@@ -94,9 +94,9 @@ PageWithBottomEdge {
             current = data.data[0].current,
             forecasts = data.data,
             forecastsLength = forecasts.length,
-            today = forecasts[0],
-            tempUnits = weatherApp.tempUnits,
-            tempScale = weatherApp.tempScale;
+            today = forecasts[0];
+
+        var tempUnits = settings.tempScale === "°C" ? "metric" : "imperial"
 
         // set general location data
         name = data.location.name;
@@ -105,8 +105,8 @@ PageWithBottomEdge {
         iconName = (current.icon) ? current.icon : ""
         icon = imageMap[iconName]
         conditionText = (current.condition.main) ? current.condition.main : current.condition; // difference TWC/OWM
-        todayMaxTemp = (today[tempUnits].tempMax) ? Math.round(today[tempUnits].tempMax).toString() + tempScale: "";
-        todayMinTemp = Math.round(today[tempUnits].tempMin).toString() + tempScale;
+        todayMaxTemp = (today[tempUnits].tempMax !== undefined) ? Math.round(today[tempUnits].tempMax).toString() + settings.tempScale: "";
+        todayMinTemp = Math.round(today[tempUnits].tempMin).toString() + settings.tempScale;
         currentTemp = Math.round(current[tempUnits].temp).toString() + String("°");
 
         // reset days list
@@ -118,8 +118,8 @@ PageWithBottomEdge {
                 // print(JSON.stringify(forecasts[x][units]))
                 var dayData = {
                     day: formatTimestamp(forecasts[x].date, 'dddd'),
-                    low: Math.round(forecasts[x][tempUnits].tempMin).toString() + tempScale,
-                    high: (forecasts[x][tempUnits].tempMax !== undefined) ? Math.round(forecasts[x][tempUnits].tempMax).toString() + tempScale : "",
+                    low: Math.round(forecasts[x][tempUnits].tempMin).toString() + settings.tempScale,
+                    high: (forecasts[x][tempUnits].tempMax !== undefined) ? Math.round(forecasts[x][tempUnits].tempMax).toString() + settings.tempScale : "",
                     image: (forecasts[x].icon !== undefined && iconMap[forecasts[x].icon] !== undefined) ? iconMap[forecasts[x].icon] : ""
                 }
                 mainPageWeekdayListView.model.append(dayData);

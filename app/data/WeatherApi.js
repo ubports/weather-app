@@ -480,7 +480,7 @@ var WeatherChannelApi = (function() {
             },
             imperial: {
                 tempMin: calcFahrenheit(data.minTemp),
-                tempMax: calcFahrenheit(data.maxTemp || data.minTemp),
+                tempMax: calcFahrenheit(data.maxTemp !== undefined ? data.maxTemp : data.minTemp),
                 windSpeed: convertKmhToMph(partData.wSpeed)
             },
             precipType: partData.precip_type,
@@ -728,7 +728,7 @@ var sendRequest = function(message, responseCallback) {
                         api_key: message.params.api_key
                     },
                     secsFromLastFetch = (now-loc.updated)/1000;
-                if( message.params.force===true || loc.format !== RESPONSE_DATA_VERSION || secsFromLastFetch > 1800){
+                if( message.params.force===true || loc.format !== RESPONSE_DATA_VERSION || secsFromLastFetch > params.interval){
                     // data older than 30min, location is new or data format is deprecated
                     WeatherApi.getLocationData(params, updatedHnd, onError);
                 } else {
