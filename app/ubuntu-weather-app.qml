@@ -48,6 +48,11 @@ MainView {
     property var locationsList: []
 
     /*
+      Index of the current locationList of locations and their data, accessible through index
+    */
+    property int current: 0
+
+    /*
       Index of Location before a refresh, to go back after
     */
     property int indexAtRefresh: -1
@@ -81,9 +86,8 @@ MainView {
 
     /* Fill the location pages with their data. */
     function fillPages(locations) {
+        locationsList = []
         locationsList = locations;
-        // refactor this when Location are in a ListView!
-        homePage.renderData();
     }
 
     /*
@@ -140,13 +144,12 @@ MainView {
         id: storage
     }
 
+    HomePage {
+        id: homePage
+    }
+
     PageStack {
         id: mainPageStack
-
-        HomePage {
-            id: homePage
-        }
-
         Component.onCompleted: mainPageStack.push(homePage)
     }
 }

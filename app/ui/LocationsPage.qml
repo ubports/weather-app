@@ -36,14 +36,18 @@ Page {
         }
         delegate: ListItem.Standard {
             text: model.location.name
+            onClicked: {
+                weatherApp.current = index;
+                pageStack.pop()
+            }
         }
     }
 
     function populateLocationsModel(locations) {
-        for (var i=0; i < locations.length; i++) {
-            locationsModel.append(locations[i])
+        for (var i=0; i < weatherApp.locationsList.length; i++) {
+            locationsModel.append(weatherApp.locationsList[i])
         }
     }
 
-    Component.onCompleted: storage.getLocations(populateLocationsModel)
+    Component.onCompleted: populateLocationsModel()
 }
