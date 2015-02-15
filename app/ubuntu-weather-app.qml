@@ -143,12 +143,8 @@ MainView {
         id: storage
     }
 
-    HomePage {
-        id: homePage
-    }
-
     PageStack {
         id: mainPageStack
-        Component.onCompleted: mainPageStack.push(homePage)
+        Component.onCompleted: mainPageStack.push(Qt.resolvedUrl("ui/HomePage.qml"))
     }
 }
