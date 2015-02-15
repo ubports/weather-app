@@ -70,7 +70,6 @@ PageWithBottomEdge {
             //snapMode: ListView.SnapOneItem
             orientation: ListView.Horizontal
             currentIndex: settings.current
-            highlightMoveDuration: 150
             highlightRangeMode: ListView.StrictlyEnforceRange
             onCurrentIndexChanged: {
                 print("CI: "+currentIndex)
