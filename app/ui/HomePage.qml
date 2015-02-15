@@ -69,7 +69,7 @@ PageWithBottomEdge {
             // TODO with snapMode, currentIndex is not properly set and setting currentIndex fails
             //snapMode: ListView.SnapOneItem
             orientation: ListView.Horizontal
-            currentIndex: weatherApp.current
+            currentIndex: settings.current
             highlightMoveDuration: 150
             highlightRangeMode: ListView.StrictlyEnforceRange
             onCurrentIndexChanged: {

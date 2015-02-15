@@ -45,12 +45,7 @@ MainView {
     /*
       List of locations and their data, accessible through index
     */
-    property var locationsList: []
-
-    /*
-      Index of the current locationList of locations and their data, accessible through index
-    */
-    property int current: 0
+    property var locationsList: []    
 
     /*
       Index of Location before a refresh, to go back after
@@ -116,6 +111,10 @@ MainView {
     Settings {
         id: settings
         category: "weatherSettings"
+        /*
+          Index of the current locationList of locations and their data, accessible through index
+        */
+        property int current: 0
 
         property int refreshInterval: 1800
         property string precipUnits

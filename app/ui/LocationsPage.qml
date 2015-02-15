@@ -37,7 +37,7 @@ Page {
         delegate: ListItem.Standard {
             text: model.location.name
             onClicked: {
-                weatherApp.current = index;
+                settings.current = index;
                 pageStack.pop()
             }
         }
