@@ -87,6 +87,12 @@ PageWithBottomEdge {
             delegate: LocationPane {}
 
             property bool loaded: false
+            // TODO: workaround for not being able to use snapMode property
+            Component.onCompleted: {
+                var scaleFactor = units.gridUnit * 10;
+                maximumFlickVelocity = maximumFlickVelocity * scaleFactor;
+                flickDeceleration = flickDeceleration * scaleFactor;
+            }
 
             Connections {
                 target: settings
