@@ -40,7 +40,7 @@ Rectangle {
     anchors.fill: parent.fill
 
     /*
-      Calculates the height of all location data components, to set the Flickable.contentHeight right!
+      Calculates the height of all location data components, to set the Flickable.contentHeight right.
     */
     function setFlickableContentHeight() {
         var contentHeightGu = (homeTempInfo.height+homeGraphic.height

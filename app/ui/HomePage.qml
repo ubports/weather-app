@@ -46,7 +46,7 @@ PageWithBottomEdge {
     }
 
     /*
-      Flickable to scroll the location vertically!
+      Flickable to scroll the location vertically.
       The respective contentHeight gets calculated after the Location is filled with data.
     */
     Flickable {
@@ -56,7 +56,7 @@ PageWithBottomEdge {
         contentWidth: parent.width
 
         /*
-          ListView for locations with snap-scrolling horizontally!
+          ListView for locations with snap-scrolling horizontally.
         */
         ListView {
             id: locationPages
