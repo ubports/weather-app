@@ -73,8 +73,27 @@ PageWithBottomEdge {
             highlightRangeMode: ListView.StrictlyEnforceRange
             onCurrentIndexChanged: {
                 print("CI: "+currentIndex)
+                if (loaded) {
+                    settings.current = currentIndex
+                }
+            }
+            onModelChanged: {
+                currentIndex = settings.current
+
+                if (model > 0) {
+                    loaded = true
+                }
             }
             delegate: LocationPane {}
+
+            property bool loaded: false
+
+            Connections {
+                target: settings
+                onCurrentChanged: {
+                    locationPages.currentIndex = settings.current
+                }
+            }
         }
     }
 }
