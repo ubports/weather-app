@@ -103,12 +103,12 @@ Rectangle {
         spacing: units.gu(1)
 
         HeaderRow {
-            id:headerRow
+            id: headerRow
             locationName: locationItem.name
         }
 
         HomeGraphic {
-            id:homeGraphic
+            id: homeGraphic
             icon: locationItem.iconName
         }
 
@@ -124,7 +124,7 @@ Rectangle {
     }
     Column {
         id: weekdayColumn
-        width:parent.width
+        width: parent.width
         height: childrenRect.height
         anchors {
             top: locationTop.bottom

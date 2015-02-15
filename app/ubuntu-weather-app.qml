@@ -97,9 +97,9 @@ MainView {
                 WeatherApi.sendRequest({
                     action: "updateData",
                     params: {
-                        locations:locations,
-                        force:force_refresh,
-                        service:settings.service,
+                        locations: locations,
+                        force: force_refresh,
+                        service: settings.service,
                         api_key: Key.twcKey,
                         interval: settings.refreshInterval
                     }

@@ -50,8 +50,8 @@ PageWithBottomEdge {
       The respective contentHeight gets calculated after the Location is filled with data.
     */
     Flickable {
-        id:locationFlickable
-        width:parent.width
+        id: locationFlickable
+        width: parent.width
         height: parent.height
         contentWidth: parent.width
 
@@ -61,8 +61,8 @@ PageWithBottomEdge {
         ListView {
             id: locationPages
             anchors.fill: parent
-            width:parent.width
-            height:childrenRect.height
+            width: parent.width
+            height: childrenRect.height
             contentWidth: parent.width
             contentHeight: childrenRect.height
             model: weatherApp.locationsList.length
