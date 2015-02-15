@@ -60,23 +60,22 @@ PageWithBottomEdge {
         */
         ListView {
             id: locationPages
-            anchors {
-                fill: parent
-            }
+            anchors.fill: parent
             width:parent.width
             height:childrenRect.height
             contentWidth: parent.width
             contentHeight: childrenRect.height
             model: weatherApp.locationsList.length
-            snapMode: ListView.SnapOneItem
+            // TODO with snapMode, currentIndex is not properly set and setting currentIndex fails
+            //snapMode: ListView.SnapOneItem
             orientation: ListView.Horizontal
             currentIndex: weatherApp.current
+            highlightMoveDuration: 150
+            highlightRangeMode: ListView.StrictlyEnforceRange
             onCurrentIndexChanged: {
                 print("CI: "+currentIndex)
             }
-            delegate: Location {
-
-            }
+            delegate: LocationPane {}
         }
     }
 }

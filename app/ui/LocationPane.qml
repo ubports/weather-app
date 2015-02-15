@@ -19,8 +19,9 @@
 import QtQuick 2.3
 import Ubuntu.Components 1.1
 import Ubuntu.Components.ListItems 0.1 as ListItem
+import "../components"
 
-Item {
+Rectangle {
     id: locationItem
     /*
       Data properties
@@ -36,9 +37,7 @@ Item {
 
     width: locationPage.width
     height: childrenRect.height
-    anchors {
-        fill: parent.fill
-    }
+    anchors.fill: parent.fill
 
     /*
       Calculates the height of all location data components, to set the Flickable.contentHeight right!
@@ -90,7 +89,7 @@ Item {
                 }
                 mainPageWeekdayListView.model.append(dayData);
             }
-        }
+        }        
         setFlickableContentHeight();
     }
 
