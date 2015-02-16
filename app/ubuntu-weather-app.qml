@@ -45,7 +45,7 @@ MainView {
     /*
       List of locations and their data, accessible through index
     */
-    property var locationsList: []
+    property var locationsList: []    
 
     /*
       Index of Location before a refresh, to go back after
@@ -81,9 +81,8 @@ MainView {
 
     /* Fill the location pages with their data. */
     function fillPages(locations) {
+        locationsList = []
         locationsList = locations;
-        // refactor this when Location are in a ListView!
-        homePage.renderData();
     }
 
     /*
@@ -98,9 +97,9 @@ MainView {
                 WeatherApi.sendRequest({
                     action: "updateData",
                     params: {
-                        locations:locations,
-                        force:force_refresh,
-                        service:settings.service,
+                        locations: locations,
+                        force: force_refresh,
+                        service: settings.service,
                         api_key: Key.twcKey,
                         interval: settings.refreshInterval
                     }
@@ -112,6 +111,10 @@ MainView {
     Settings {
         id: settings
         category: "weatherSettings"
+        /*
+          Index of the current locationList of locations and their data, accessible through index
+        */
+        property int current: 0
 
         property int refreshInterval: 1800
         property string precipUnits
@@ -142,11 +145,6 @@ MainView {
 
     PageStack {
         id: mainPageStack
-
-        HomePage {
-            id: homePage
-        }
-
-        Component.onCompleted: mainPageStack.push(homePage)
+        Component.onCompleted: mainPageStack.push(Qt.resolvedUrl("ui/HomePage.qml"))
     }
 }
