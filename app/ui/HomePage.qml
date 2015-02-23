@@ -18,7 +18,6 @@
 
 import QtQuick 2.3
 import Ubuntu.Components 1.1
-import Ubuntu.Components.ListItems 0.1 as ListItem
 import "../components"
 
 
@@ -31,17 +30,6 @@ PageWithBottomEdge {
     bottomEdgeTitle: i18n.tr("Locations")
     tipColor: UbuntuColors.orange
     tipLabelColor: "#FFF"
-
-    /*
-      Data properties
-    */
-    property string name
-    property string conditionText
-    property string currentTemp
-    property string todayMaxTemp
-    property string todayMinTemp
-    property string icon
-    property string iconName
 
     property var iconMap: {
         "sun": Qt.resolvedUrl("../graphics/sunny.svg"),
@@ -82,91 +70,60 @@ PageWithBottomEdge {
     }
 
     /*
-      Extracts values from the location weather data and puts them into the appropriate components
-      to display them.
-
-      Attention: Data access happens through "weatherApp.locationList[]" by index, since complex
-      data in models will lead to type problems.
+      Flickable to scroll the location vertically.
+      The respective contentHeight gets calculated after the Location is filled with data.
     */
-    function renderData() {
-        var index = Math.floor(Math.random()*weatherApp.locationsList.length), // TODO get this value from ListView.currentIndex later!
-            data = weatherApp.locationsList[index],
-            current = data.data[0].current,
-            forecasts = data.data,
-            forecastsLength = forecasts.length,
-            today = forecasts[0];
+    Flickable {
+        id: locationFlickable
+        width: parent.width
+        height: parent.height
+        contentWidth: parent.width
 
-        var tempUnits = settings.tempScale === "°C" ? "metric" : "imperial"
-
-        // set general location data
-        name = data.location.name;
-
-        // set current temps and condition
-        iconName = (current.icon) ? current.icon : ""
-        icon = imageMap[iconName]
-        conditionText = (current.condition.main) ? current.condition.main : current.condition; // difference TWC/OWM
-        todayMaxTemp = (today[tempUnits].tempMax !== undefined) ? Math.round(today[tempUnits].tempMax).toString() + settings.tempScale: "";
-        todayMinTemp = Math.round(today[tempUnits].tempMin).toString() + settings.tempScale;
-        currentTemp = Math.round(current[tempUnits].temp).toString() + String("°");
-
-        // reset days list
-        mainPageWeekdayListView.model.clear()
-
-        // set daily forecasts
-        if(forecastsLength > 0) {
-            for(var x=1;x<forecastsLength;x++) {
-                // print(JSON.stringify(forecasts[x][units]))
-                var dayData = {
-                    day: formatTimestamp(forecasts[x].date, 'dddd'),
-                    low: Math.round(forecasts[x][tempUnits].tempMin).toString() + settings.tempScale,
-                    high: (forecasts[x][tempUnits].tempMax !== undefined) ? Math.round(forecasts[x][tempUnits].tempMax).toString() + settings.tempScale : "",
-                    image: (forecasts[x].icon !== undefined && iconMap[forecasts[x].icon] !== undefined) ? iconMap[forecasts[x].icon] : ""
+        /*
+          ListView for locations with snap-scrolling horizontally.
+        */
+        ListView {
+            id: locationPages
+            anchors.fill: parent
+            width: parent.width
+            height: childrenRect.height
+            contentWidth: parent.width
+            contentHeight: childrenRect.height
+            model: weatherApp.locationsList.length
+            // TODO with snapMode, currentIndex is not properly set and setting currentIndex fails
+            //snapMode: ListView.SnapOneItem
+            orientation: ListView.Horizontal
+            currentIndex: settings.current
+            highlightRangeMode: ListView.StrictlyEnforceRange
+            onCurrentIndexChanged: {
+                print("CI: "+currentIndex)
+                if (loaded) {
+                    settings.current = currentIndex
                 }
-                mainPageWeekdayListView.model.append(dayData);
             }
-        }
-    }
+            onModelChanged: {
+                currentIndex = settings.current
 
-    ListView {
-        id: mainPageWeekdayListView
-        anchors {
-            fill: parent
-            margins: units.gu(2)
-        }
-
-        header: Column {
-            anchors {
-                left: parent.left
-                right: parent.right
+                if (model > 0) {
+                    loaded = true
+                }
             }
-            spacing: units.gu(1)
+            delegate: LocationPane {}
 
-            HeaderRow {
-                locationName: locationPage.name
+            property bool loaded: false
+            // TODO: workaround for not being able to use snapMode property
+            Component.onCompleted: {
+                var scaleFactor = units.gridUnit * 10;
+                maximumFlickVelocity = maximumFlickVelocity * scaleFactor;
+                flickDeceleration = flickDeceleration * scaleFactor;
             }
 
-            HomeGraphic {
-                icon: locationPage.icon
+            Connections {
+                target: settings
+                onCurrentChanged: {
+                    locationPages.currentIndex = settings.current
+                }
             }
-
-            HomeTempInfo {
-                description: locationPage.conditionText
-                high: locationPage.todayMaxTemp
-                low: locationPage.todayMinTemp
-                now: locationPage.currentTemp
-            }
-
-            ListItem.ThinDivider {
-
-            }
-        }
-        model: ListModel {}
-
-        delegate: DayDelegate {
-            day: model.day
-            high: model.high
-            image: model.image
-            low: model.low
         }
     }
 }
