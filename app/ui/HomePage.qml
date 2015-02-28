@@ -31,10 +31,34 @@ PageWithBottomEdge {
     tipColor: UbuntuColors.orange
     tipLabelColor: "#FFF"
 
-    // TODO map iconnames to source image names
     property var iconMap: {
-        "moon": "moon.svg"
-        // etc pp
+        "sun": Qt.resolvedUrl("../graphics/sunny.svg"),
+        "moon": Qt.resolvedUrl("../graphics/starry.svg"),
+        "cloud_sun": Qt.resolvedUrl("../graphics/partly-cloudy.svg"),
+        "cloud_moon": Qt.resolvedUrl("../graphics/cloudy-night.svg"),
+        "cloud": Qt.resolvedUrl("../graphics/cloudy.svg"),
+        "rain": Qt.resolvedUrl("../graphics/rain.svg"),
+        "thunder": Qt.resolvedUrl("../graphics/thunder.svg"),
+        "snow_shower": Qt.resolvedUrl("../graphics/snow.svg"),
+        "fog": Qt.resolvedUrl("../graphics/fog.svg"),
+        "snow_rain": Qt.resolvedUrl("../graphics/snow.svg"),
+        "scattered": Qt.resolvedUrl("../graphics/rain.svg"),
+        "overcast": Qt.resolvedUrl("../graphics/cloudy.svg")
+    }
+
+    property var imageMap: {
+        "sun": Qt.resolvedUrl("../graphics/Sunny.png"),
+        "moon": Qt.resolvedUrl("../graphics/Starry-Night.png"),
+        "cloud_sun": Qt.resolvedUrl("../graphics/Cloudy-Circles.png"),
+        "cloud_moon": Qt.resolvedUrl("../graphics/Cloudy-Night.png"),
+        "cloud": Qt.resolvedUrl("../graphics/Cloudy.png"),
+        "rain": Qt.resolvedUrl("../graphics/Big-Rain.png"),
+        "thunder": Qt.resolvedUrl("../graphics/Stormy.png"),
+        "snow_shower": Qt.resolvedUrl("../graphics/Cloudy-Snow.png"),
+        "fog": Qt.resolvedUrl("../graphics/Fog.png"),
+        "snow_rain": Qt.resolvedUrl("../graphics/Cloudy-Snow.png"),
+        "scattered": Qt.resolvedUrl("../graphics/Showers.png"),
+        "overcast": Qt.resolvedUrl("../graphics/Cloudy.png")
     }
 
     /*

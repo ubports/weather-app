@@ -31,6 +31,7 @@ Rectangle {
     property string currentTemp
     property string todayMaxTemp
     property string todayMinTemp
+    property string icon
     property string iconName
 
     Component.onCompleted: renderData(index)
@@ -69,6 +70,7 @@ Rectangle {
 
         // set current temps and condition
         iconName = (current.icon) ? current.icon : ""
+        icon = imageMap[iconName]
         conditionText = (current.condition.main) ? current.condition.main : current.condition; // difference TWC/OWM
         todayMaxTemp = (today[tempUnits].tempMax !== undefined) ? Math.round(today[tempUnits].tempMax).toString() + settings.tempScale: "";
         todayMinTemp = Math.round(today[tempUnits].tempMin).toString() + settings.tempScale;
@@ -85,7 +87,7 @@ Rectangle {
                     day: formatTimestamp(forecasts[x].date, 'dddd'),
                     low: Math.round(forecasts[x][tempUnits].tempMin).toString() + settings.tempScale,
                     high: (forecasts[x][tempUnits].tempMax !== undefined) ? Math.round(forecasts[x][tempUnits].tempMax).toString() + settings.tempScale : "",
-                                                                            image: (forecasts[x].icon !== undefined && iconMap[forecasts[x].icon] !== undefined) ? iconMap[forecasts[x].icon] + settings.tempScale : ""
+                    image: (forecasts[x].icon !== undefined && iconMap[forecasts[x].icon] !== undefined) ? iconMap[forecasts[x].icon] : ""
                 }
                 mainPageWeekdayListView.model.append(dayData);
             }
@@ -109,7 +111,7 @@ Rectangle {
 
         HomeGraphic {
             id: homeGraphic
-            icon: locationItem.iconName
+            icon: locationItem.icon
         }
 
         HomeTempInfo {
@@ -138,6 +140,7 @@ Rectangle {
             DayDelegate {
                 day: model.day
                 high: model.high
+                image: model.image
                 low: model.low
             }
         }

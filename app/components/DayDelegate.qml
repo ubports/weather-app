@@ -60,20 +60,6 @@ ListItem.Standard {
         }
         height: units.gu(3)
         width: units.gu(3)
-
-        Rectangle {
-            anchors {
-                fill: parent
-            }
-            color: "#F00"
-
-            Label {
-                anchors {
-                    centerIn: parent
-                }
-                text: "img"
-            }
-        }
     }
 
     Label {

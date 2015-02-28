@@ -13,5 +13,6 @@ install(FILES ${MAIN_QML} DESTINATION ${UBUNTU-WEATHER_APP_DIR})
 
 add_subdirectory(components)
 add_subdirectory(data)
+add_subdirectory(graphics)
 add_subdirectory(ui)
 
