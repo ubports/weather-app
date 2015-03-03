@@ -87,7 +87,7 @@ Page {
     }
 
     function searchResponseHandler(msgObject) {
-        if (!msgObject.error && 1==2) {
+        if (!msgObject.error) {
             appendCities(msgObject.result.locations)
         } else {
             citiesModel.httpError = true
