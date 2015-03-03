@@ -208,13 +208,13 @@ MainView {
             // Sort the item indexes as loops below assume *numeric* sort
             indexes.sort(function(a,b) { return a - b })
 
-            // TODO: resort settings
             for (i=0; i < indexes.length; i++) {
                 if (settings.current >= i) {  // Update settings to respect new changes
                     settings.current -= settings.current;
                 }
             }
 
+            // Get location db ids to remove
             var locations = []
 
             for (i=0; i < indexes.length; i++) {
