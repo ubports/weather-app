@@ -104,7 +104,6 @@ PageWithBottomEdge {
             currentIndex: settings.current
             highlightRangeMode: ListView.StrictlyEnforceRange
             onCurrentIndexChanged: {
-                print("CI: "+currentIndex)
                 if (loaded) {
                     settings.current = currentIndex
                 }
