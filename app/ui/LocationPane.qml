@@ -61,7 +61,8 @@ Rectangle {
                 current = data.data[0].current,
                 forecasts = data.data,
                 forecastsLength = forecasts.length,
-                today = forecasts[0];
+                today = forecasts[0],
+                hourlyForecasts = [];
 
         var tempUnits = settings.tempScale === "°C" ? "metric" : "imperial"
 
@@ -81,8 +82,17 @@ Rectangle {
 
         // set daily forecasts
         if(forecastsLength > 0) {
-            for(var x=1;x<forecastsLength;x++) {
-                // print(JSON.stringify(forecasts[x][units]))
+            for(var x=0;x<forecastsLength;x++) {
+                // collect hourly forecasts if available
+                if(forecasts[x].hourly !== undefined && forecasts[x].hourly.length > 0) {
+                    hourlyForecasts = hourlyForecasts.concat(forecasts[x].hourly)
+                }
+                if(x === 0) {
+                    // skip todays daydata
+                    continue;
+                }
+
+                // set daydata
                 var dayData = {
                     day: formatTimestamp(forecasts[x].date, 'dddd'),
                     low: Math.round(forecasts[x][tempUnits].tempMin).toString() + settings.tempScale,
@@ -93,6 +103,12 @@ Rectangle {
             }
         }        
         setFlickableContentHeight();
+
+        // set data for hourly forecasts
+        if(hourlyForecasts.length > 0) {
+            homeHourlyLoader.forecasts = hourlyForecasts;
+            homeHourlyLoader.tempUnits = tempUnits;
+        }
     }
 
     Column {
@@ -112,6 +128,25 @@ Rectangle {
         HomeGraphic {
             id: homeGraphic
             icon: locationItem.icon
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    homeGraphic.visible = false;
+                }
+            }
+        }
+
+        Loader {
+            id: homeHourlyLoader
+            active: !homeGraphic.visible
+            asynchronous: true
+            height: units.gu(32)
+            source: "../components/HomeHourly.qml"
+            visible: active
+            width: parent.width
+
+            property var forecasts: []
+            property string tempUnits: ""
         }
 
         HomeTempInfo {

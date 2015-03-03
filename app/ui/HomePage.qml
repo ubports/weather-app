@@ -70,6 +70,14 @@ PageWithBottomEdge {
     }
 
     /*
+      Format time object by given format.
+    */
+    function formatTime(dateData, format) {
+        var date = new Date(dateData.year, dateData.month, dateData.date, dateData.hours, dateData.minutes)
+        return Qt.formatTime(date, i18n.tr(format))
+    }
+
+    /*
       Flickable to scroll the location vertically.
       The respective contentHeight gets calculated after the Location is filled with data.
     */
@@ -96,7 +104,6 @@ PageWithBottomEdge {
             currentIndex: settings.current
             highlightRangeMode: ListView.StrictlyEnforceRange
             onCurrentIndexChanged: {
-                print("CI: "+currentIndex)
                 if (loaded) {
                     settings.current = currentIndex
                 }
