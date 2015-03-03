@@ -197,7 +197,7 @@ MainView {
                 settings.current -= settings.current;
             }
 
-            storage.clearLocations(locationsList[index].db.id);
+            storage.clearLocation(locationsList[index].db.id);
 
             refreshData(true, false);
         }
