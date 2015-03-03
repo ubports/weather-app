@@ -141,6 +141,37 @@ MainView {
 
     Data.Storage {
         id: storage
+
+        // Add the location to the storage and refresh the locationList
+        // Return true if a location is added
+        function addLocation(location) {
+            var exists = checkLocationExists(location)
+
+            if(!exists) {
+                if(location.dbId === undefined || location.dbId=== 0) {
+                    storage.insertLocation({location: location});
+                }
+
+                refreshData(false, true)
+            }
+
+            return !exists;
+        }
+
+        // Return true if the location given is already in the locationsList
+        function checkLocationExists(location) {
+            var exists = false;
+
+            for (var i=0; !exists && i < locationsList.length; i++) {
+                var loc = locationsList[i].location;
+
+                if (loc.services.geonames && (loc.services.geonames === location.services.geonames)) {
+                    exists = true;
+                }
+            }
+
+            return exists;
+        }
     }
 
     PageStack {

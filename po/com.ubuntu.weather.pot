@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-15 14:57+0100\n"
+"POT-Creation-Date: 2015-03-03 00:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,6 +19,30 @@ msgstr ""
 
 #: ../app/components/HomeTempInfo.qml:38
 msgid "Today"
+msgstr ""
+
+#: ../app/ui/AddPage.qml:29
+msgid "Add city"
+msgstr ""
+
+#: ../app/ui/AddPage.qml:40
+msgid "Search city"
+msgstr ""
+
+#: ../app/ui/AddPage.qml:163
+msgid "No city found"
+msgstr ""
+
+#: ../app/ui/AddPage.qml:176
+msgid "Couldn't load weather data, please try later again!"
+msgstr ""
+
+#: ../app/ui/AddPage.qml:186
+msgid "Location already added."
+msgstr ""
+
+#: ../app/ui/AddPage.qml:189
+msgid "OK"
 msgstr ""
 
 #: ../app/ui/HomePage.qml:30 ../app/ui/LocationsPage.qml:28

@@ -94,6 +94,7 @@ Item {
     function insertLocation(data) {
         openDB();
         var res;
+
         db.transaction( function(tx){
             var r = tx.executeSql('INSERT INTO Locations(data, date) VALUES(?, ?)', [JSON.stringify(data), new Date().getTime()]);
             res = r.insertId;
