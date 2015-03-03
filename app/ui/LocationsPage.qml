@@ -27,6 +27,13 @@ Page {
     flickable: null
     title: i18n.tr("Locations")
 
+    head.actions: [
+        Action {
+            iconName: "add"
+            onTriggered: mainPageStack.push(Qt.resolvedUrl("AddPage.qml"))
+        }
+    ]
+
     ListView {
         anchors {
             fill: parent
@@ -43,10 +50,17 @@ Page {
         }
     }
 
-    function populateLocationsModel(locations) {
+    function populateLocationsModel() {
+        locationsModel.clear()
+
         for (var i=0; i < weatherApp.locationsList.length; i++) {
             locationsModel.append(weatherApp.locationsList[i])
         }
+    }
+
+    Connections {
+        target: weatherApp
+        onLocationsListChanged: populateLocationsModel()
     }
 
     Component.onCompleted: populateLocationsModel()
