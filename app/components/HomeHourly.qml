@@ -39,8 +39,6 @@ Item {
         id: hourlyForecasts
         width:parent.width
         height:parent.height
-        contentWidth: childrenRect.width
-        contentHeight: parent.height
         model: forecasts.length
         orientation: ListView.Horizontal
         clip:true
