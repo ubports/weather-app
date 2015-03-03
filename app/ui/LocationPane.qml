@@ -106,8 +106,8 @@ Rectangle {
 
         // set data for hourly forecasts
         if(hourlyForecasts.length > 0) {
-            homeHourly.forecasts = hourlyForecasts;
-            homeHourly.tempUnits = tempUnits;
+            homeHourlyLoader.forecasts = hourlyForecasts;
+            homeHourlyLoader.tempUnits = tempUnits;
         }
     }
 
@@ -136,9 +136,17 @@ Rectangle {
             }
         }
 
-        HomeHourly {
-            id: homeHourly
-            visible: !homeGraphic.visible
+        Loader {
+            id: homeHourlyLoader
+            active: !homeGraphic.visible
+            asynchronous: true
+            height: units.gu(32)
+            source: "../components/HomeHourly.qml"
+            visible: active
+            width: parent.width
+
+            property var forecasts: []
+            property string tempUnits: ""
         }
 
         HomeTempInfo {

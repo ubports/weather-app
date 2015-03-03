@@ -23,11 +23,6 @@ import QtGraphicalEffects 1.0
 
 Item {
     id: homeHourly
-    height: units.gu(32)
-    width: parent.width
-
-    property var forecasts: []
-    property string tempUnits: ""
 
     onVisibleChanged: {
         if(visible) {
