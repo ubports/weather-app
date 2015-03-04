@@ -42,6 +42,8 @@ MainView {
     useDeprecatedToolbar: false
     anchorToKeyboard: true
 
+    signal listItemSwiping(int i)
+
     /*
       List of locations and their data, accessible through index
     */
@@ -152,7 +154,8 @@ MainView {
                     storage.insertLocation({location: location});
                 }
 
-                refreshData(false, true)
+                refreshData(true, false)  // load new location into models (without data)
+                refreshData(false, true)  // FIXME: can be really slow as it refreshes all models
             }
 
             return !exists;
@@ -171,6 +174,56 @@ MainView {
             }
 
             return exists;
+        }
+
+        function moveLocation(from, to) {
+            // Update settings to respect new changes
+            if (from === settings.current) {
+                settings.current = to;
+            } else if (from < settings.current && to >= settings.current) {
+                settings.current -= 1;
+            } else if (from > settings.current && to <= settings.current) {
+                settings.current += 1;
+            }
+
+            storage.reorder(locationsList[from].db.id, locationsList[to].db.id);
+
+            refreshData(true, false);
+        }
+
+        // Remove a location from the list
+        function removeLocation(index) {
+            if (settings.current >= index) {  // Update settings to respect new changes
+                settings.current -= settings.current;
+            }
+
+            storage.clearLocation(locationsList[index].db.id);
+
+            refreshData(true, false);
+        }
+
+        function removeMultiLocations(indexes) {
+            var i;
+
+            // Sort the item indexes as loops below assume *numeric* sort
+            indexes.sort(function(a,b) { return a - b })
+
+            for (i=0; i < indexes.length; i++) {
+                if (settings.current >= i) {  // Update settings to respect new changes
+                    settings.current -= settings.current;
+                }
+            }
+
+            // Get location db ids to remove
+            var locations = []
+
+            for (i=0; i < indexes.length; i++) {
+                locations.push(locationsList[indexes[i]].db.id)
+            }
+
+            storage.clearMultiLocation(locations);
+
+            refreshData(true, false);
         }
     }
 

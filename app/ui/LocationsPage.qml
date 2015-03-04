@@ -19,6 +19,8 @@
 import QtQuick 2.3
 import Ubuntu.Components 1.1
 import Ubuntu.Components.ListItems 0.1 as ListItem
+import "../components"
+import "../components/ListItemActions"
 
 
 Page {
@@ -27,25 +29,72 @@ Page {
     flickable: null
     title: i18n.tr("Locations")
 
-    head.actions: [
-        Action {
-            iconName: "add"
-            onTriggered: mainPageStack.push(Qt.resolvedUrl("AddPage.qml"))
+    state: locationsListView.state === "multiselectable" ? "selection" : "default"
+    states: [
+        PageHeadState {
+            id: defaultState
+            name: "default"
+            actions: [
+                Action {
+                    iconName: "add"
+                    onTriggered: mainPageStack.push(Qt.resolvedUrl("AddPage.qml"))
+                }
+            ]
+            PropertyChanges {
+                target: locationsPage.head
+                actions: defaultState.actions
+            }
+        },
+        MultiSelectHeadState {
+            listview: locationsListView
+            removable: true
+            thisPage: locationsPage
+
+            onRemoved: storage.removeMultiLocations(selectedItems.slice())
         }
     ]
 
-    ListView {
+    MultiSelectListView {
+        id: locationsListView
         anchors {
             fill: parent
         }
         model: ListModel {
             id: locationsModel
         }
-        delegate: ListItem.Standard {
-            text: model.location.name
-            onClicked: {
+        delegate: WeatherListItem {
+            leftSideAction: Remove {
+                onTriggered: storage.removeLocation(index)
+            }
+            multiselectable: true
+            reorderable: true
+
+            onItemClicked: {
                 settings.current = index;
                 pageStack.pop()
+            }
+            onReorder: {
+                console.debug("Move: ", from, to);
+
+                storage.moveLocation(from, to);
+            }
+
+            Label {
+                anchors {
+                    left: parent.left
+                    leftMargin: units.gu(2)
+                    right: parent.right
+                    rightMargin: units.gu(2)
+                    verticalCenter: parent.verticalCenter
+                }
+                elide: Text.ElideRight
+                text: model.location.name
+            }
+
+            ListItem.ThinDivider {
+                anchors {
+                    bottom: parent.bottom
+                }
             }
         }
     }

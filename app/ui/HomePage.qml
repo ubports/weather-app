@@ -105,6 +105,7 @@ PageWithBottomEdge {
             highlightRangeMode: ListView.StrictlyEnforceRange
             onCurrentIndexChanged: {
                 if (loaded) {
+                    // FIXME: when a model is reloaded this causes the currentIndex to be lost
                     settings.current = currentIndex
                 }
             }

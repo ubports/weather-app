@@ -134,10 +134,56 @@ Item {
         });
     }
 
+    function clearMultiLocation(locations) {
+        openDB();
+
+        db.transaction(function (tx) {
+            // Remove all the deleted indexes
+            for (var i=0; i < locations.length; i++) {
+                tx.executeSql('DELETE FROM Locations WHERE id=?;', [locations[i]])
+            }
+
+            // Rebuild locations in order
+            var rs = tx.executeSql('SELECT id FROM Locations ORDER BY id ASC')
+
+            for (i=0; i < rs.rows.length; i++) {
+                tx.executeSql('UPDATE Locations SET id=? WHERE id=?;',
+                              [i, rs.rows.item(i).id])
+            }
+        })
+    }
+
     function clearDB() { // for dev purposes
         openDB();
         db.transaction(function(tx){
             tx.executeSql('DELETE FROM Locations WHERE 1');
         });
+    }
+
+    function reorder(from, to) {
+        openDB();
+
+        db.transaction(function(tx) {
+            // Track to move put as -1 for now
+            tx.executeSql('UPDATE Locations SET id=? WHERE id=?;',
+                          [-1, from])
+
+            // Shuffle locations inbetween from->to
+            if (from > to) {
+                for (var i = from-1; i >= to; i--) {
+                    tx.executeSql('UPDATE Locations SET id=? WHERE id=?;',
+                                  [i+1, i])
+                }
+            } else {
+                for (var j = from+1; j <= to; j++) {
+                    tx.executeSql('UPDATE Locations SET id=? WHERE id=?;',
+                                  [j-1, j])
+                }
+            }
+
+            // Switch moving location to its new position
+            tx.executeSql('UPDATE Locations SET id=? WHERE id=?;',
+                          [to, -1])
+        })
     }
 }
