@@ -20,7 +20,6 @@ import QtQuick 2.3
 import Ubuntu.Components 1.1
 import Ubuntu.Components.ListItems 0.1 as ListItem
 
-
 Page {
     title: i18n.tr("Settings")
 
@@ -41,21 +40,21 @@ Page {
                 progression: true
                 text: i18n.tr("Units")
 
-                onClicked: mainPageStack.push(Qt.resolvedUrl("Settings/UnitsPage.qml"))
+                onClicked: mainPageStack.push(Qt.resolvedUrl("settings/UnitsPage.qml"))
             }
 
             ListItem.SingleValue {
                 progression: true
                 text: i18n.tr("Data Provider")
 
-                onClicked: mainPageStack.push(Qt.resolvedUrl("Settings/DataProviderPage.qml"))
+                onClicked: mainPageStack.push(Qt.resolvedUrl("settings/DataProviderPage.qml"))
             }
 
             ListItem.SingleValue {
                 progression: true
                 text: i18n.tr("Refresh Interval")
 
-                onClicked: mainPageStack.push(Qt.resolvedUrl("Settings/RefreshIntervalPage.qml"))
+                onClicked: mainPageStack.push(Qt.resolvedUrl("settings/RefreshIntervalPage.qml"))
             }
         }
     }
