@@ -37,7 +37,7 @@ Page {
             actions: [
                 Action {
                     iconName: "add"
-                    onTriggered: mainPageStack.push(Qt.resolvedUrl("AddPage.qml"))
+                    onTriggered: mainPageStack.push(Qt.resolvedUrl("AddLocationPage.qml"))
                 }
             ]
             PropertyChanges {
