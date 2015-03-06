@@ -1,4 +1,4 @@
-add_subdirectory(Settings)
+add_subdirectory(settings)
 
 file(GLOB UI_QML_JS_FILES *.qml *.js)
 

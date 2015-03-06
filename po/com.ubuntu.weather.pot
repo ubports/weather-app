@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-03 18:45+0000\n"
+"POT-Creation-Date: 2015-03-06 14:23+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -65,44 +65,44 @@ msgstr ""
 msgid "Locations"
 msgstr ""
 
-#: ../app/ui/Settings/DataProviderPage.qml:25 ../app/ui/SettingsPage.qml:49
-msgid "Data Provider"
+#: ../app/ui/SettingsPage.qml:25
+msgid "Settings"
 msgstr ""
 
-#: ../app/ui/Settings/DataProviderPage.qml:44
-msgid "Provider"
-msgstr ""
-
-#: ../app/ui/Settings/RefreshIntervalPage.qml:25 ../app/ui/SettingsPage.qml:56
-msgid "Refresh Interval"
-msgstr ""
-
-#: ../app/ui/Settings/RefreshIntervalPage.qml:42
-msgid "minutes"
-msgstr ""
-
-#: ../app/ui/Settings/RefreshIntervalPage.qml:47
-msgid "Interval"
-msgstr ""
-
-#: ../app/ui/Settings/UnitsPage.qml:25 ../app/ui/SettingsPage.qml:42
+#: ../app/ui/SettingsPage.qml:42 ../app/ui/settings/UnitsPage.qml:25
 msgid "Units"
 msgstr ""
 
-#: ../app/ui/Settings/UnitsPage.qml:44
+#: ../app/ui/SettingsPage.qml:49 ../app/ui/settings/DataProviderPage.qml:25
+msgid "Data Provider"
+msgstr ""
+
+#: ../app/ui/SettingsPage.qml:56 ../app/ui/settings/RefreshIntervalPage.qml:25
+msgid "Refresh Interval"
+msgstr ""
+
+#: ../app/ui/settings/DataProviderPage.qml:44
+msgid "Provider"
+msgstr ""
+
+#: ../app/ui/settings/RefreshIntervalPage.qml:42
+msgid "minutes"
+msgstr ""
+
+#: ../app/ui/settings/RefreshIntervalPage.qml:47
+msgid "Interval"
+msgstr ""
+
+#: ../app/ui/settings/UnitsPage.qml:44
 msgid "Temperature"
 msgstr ""
 
-#: ../app/ui/Settings/UnitsPage.qml:56
+#: ../app/ui/settings/UnitsPage.qml:56
 msgid "Precipitation"
 msgstr ""
 
-#: ../app/ui/Settings/UnitsPage.qml:67
+#: ../app/ui/settings/UnitsPage.qml:67
 msgid "Wind Speed"
-msgstr ""
-
-#: ../app/ui/SettingsPage.qml:25
-msgid "Settings"
 msgstr ""
 
 #: ubuntu-weather-app.desktop.in.in.h:1
