@@ -30,6 +30,12 @@ Page {
     title: i18n.tr("Select a city")
     visible: false
 
+    /*
+      Flickable is set to null to stop page header from hiding since the fast
+      scroll component hides top anchor margin is incorrect.
+    */
+    flickable: null
+
     state: "default"
     states: [
         PageHeadState {
@@ -138,7 +144,19 @@ Page {
     ListView {
         id: locationList
 
+        clip: true
+        currentIndex: -1
         anchors.fill: parent
+        anchors.rightMargin: fastScroll.showing ? fastScroll.width - units.gu(1)
+                                                : 0
+
+        function getSectionText(index) {
+            return citiesModel.get(index).name.substring(0,1)
+        }
+
+        onFlickStarted: {
+            forceActiveFocus()
+        }
 
         section.property: "name"
         section.criteria: ViewSection.FirstCharacter
@@ -193,6 +211,26 @@ Page {
         }
 
         Component.onCompleted: loadEmpty()
+
+        Behavior on anchors.rightMargin {
+            UbuntuNumberAnimation {}
+        }
+    }
+
+    FastScroll {
+        id: fastScroll
+
+        listView: locationList
+
+        enabled: (locationList.contentHeight > (locationList.height * 2)) &&
+                 (locationList.height >= minimumHeight)
+
+        anchors {
+            top: locationList.top
+            topMargin: units.gu(1.5)
+            bottom: locationList.bottom
+            right: parent.right
+        }
     }
 
     ActivityIndicator {
