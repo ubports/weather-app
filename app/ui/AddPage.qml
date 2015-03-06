@@ -25,32 +25,71 @@ import "../data/CitiesList.js" as Cities
 import "../data/WeatherApi.js" as WeatherApi
 
 Page {
-    id: addPage
-    title: i18n.tr("Add city")
+    id: addLocationPage
 
-    head.contents: TextField {
-        id: searchField
-        anchors {
-           left: parent ? parent.left : undefined
-           right: parent ? parent.right : undefined
-           rightMargin: units.gu(2)
-        }
-        hasClearButton: true
-        inputMethodHints: Qt.ImhNoPredictiveText
-        placeholderText: i18n.tr("Search city")
+    title: i18n.tr("Select a city")
+    visible: false
 
-        onTextChanged: {
-            if (text.trim() === "") {
-                loadEmpty()
-            } else {
-                loadFromProvider(text)
+    state: "default"
+    states: [
+        PageHeadState {
+            name: "default"
+            head: addLocationPage.head
+            actions: [
+                Action {
+                    iconName: "search"
+                    text: i18n.tr("City")
+                    onTriggered: {
+                        addLocationPage.state = "search"
+                        searchComponentLoader.sourceComponent = searchComponent
+                        searchComponentLoader.item.forceActiveFocus()
+                    }
+                }
+            ]
+        },
+
+        PageHeadState {
+            name: "search"
+            head: addLocationPage.head
+            backAction: Action {
+                iconName: "back"
+                text: i18n.tr("Back")
+                onTriggered: {
+                    locationList.forceActiveFocus()
+                    searchComponentLoader.item.text = ""
+                    addLocationPage.state = "default"
+                    searchComponentLoader.sourceComponent = undefined
+                }
+            }
+
+            contents: Loader {
+                id: searchComponentLoader
+                anchors {
+                    left: parent ? parent.left : undefined
+                    right: parent ? parent.right : undefined
+                    rightMargin: units.gu(2)
+                }
             }
         }
+    ]
 
-        onVisibleChanged: {
-           if (visible) {
-               forceActiveFocus()
-           }
+    Component {
+        id: searchComponent
+        TextField {
+            id: searchField
+            objectName: "searchField"
+
+            inputMethodHints: Qt.ImhNoPredictiveText
+            placeholderText: i18n.tr("Search city")
+            hasClearButton: true
+
+            onTextChanged: {
+                if (text.trim() === "") {
+                    loadEmpty()
+                } else {
+                    loadFromProvider(text)
+                }
+            }
         }
     }
 
@@ -78,12 +117,12 @@ Page {
         clearModelForLoading()
 
         WeatherApi.sendRequest({
-            action: "searchByName",
-            params: {
-                name: search,
-                units: "metric"
-            }
-        }, searchResponseHandler)
+                                   action: "searchByName",
+                                   params: {
+                                       name: search,
+                                       units: "metric"
+                                   }
+                               }, searchResponseHandler)
     }
 
     function searchResponseHandler(msgObject) {
@@ -97,10 +136,18 @@ Page {
     }
 
     ListView {
-        id: addLocationView
-        anchors {
-            fill: parent
+        id: locationList
+
+        anchors.fill: parent
+
+        section.property: "name"
+        section.criteria: ViewSection.FirstCharacter
+        section.labelPositioning: ViewSection.InlineLabels
+
+        section.delegate: ListItem.Header {
+            text: section
         }
+
         model: ListModel {
             id: citiesModel
 
@@ -109,7 +156,9 @@ Page {
 
             onRowsAboutToBeInserted: loading = false
         }
+
         delegate: ListItem.Empty {
+            showDivider: false
             Column {
                 anchors {
                     left: parent.left
@@ -118,20 +167,19 @@ Page {
                     rightMargin: units.gu(2)
                     verticalCenter: parent.verticalCenter
                 }
-                spacing: units.gu(0.5)
 
                 Label {
                     color: UbuntuColors.darkGrey
                     elide: Text.ElideRight
                     fontSize: "medium"
-                    text: model.name
+                    text: name
                 }
 
                 Label {
                     color: UbuntuColors.lightGrey
                     elide: Text.ElideRight
-                    fontSize: "small"
-                    text: model.countryName
+                    fontSize: "xx-small"
+                    text: countryName
                 }
             }
 
