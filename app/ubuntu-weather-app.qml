@@ -153,9 +153,7 @@ MainView {
                 if(location.dbId === undefined || location.dbId=== 0) {
                     storage.insertLocation({location: location});
                 }
-
-                refreshData(true, false)  // load new location into models (without data)
-                refreshData(false, true)  // FIXME: can be really slow as it refreshes all models
+                refreshData();
             }
 
             return !exists;
