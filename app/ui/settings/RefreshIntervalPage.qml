@@ -42,7 +42,7 @@ Page {
                     text: Math.floor(modelData / 60).toString() + " " + i18n.tr("minutes")
                 }
                 expanded: true
-                model: [300, 600, 900, 1800]
+                model: [600, 900, 1800, 3600]
                 selectedIndex: model.indexOf(settings.refreshInterval)
                 text: i18n.tr("Interval")
 
