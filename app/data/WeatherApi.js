@@ -725,9 +725,10 @@ var sendRequest = function(message, responseCallback) {
                         db: loc.db,
                         units: 'metric',
                         service: message.params.service,
-                        api_key: message.params.api_key
+                        api_key: message.params.api_key,
+                        interval: message.params.interval
                     },
-                    secsFromLastFetch = (now-loc.updated)/1000;
+                    secsFromLastFetch = (now-loc.updated)/1000;                                
                 if( message.params.force===true || loc.format !== RESPONSE_DATA_VERSION || secsFromLastFetch > params.interval){
                     // data older than 30min, location is new or data format is deprecated
                     WeatherApi.getLocationData(params, updatedHnd, onError);
