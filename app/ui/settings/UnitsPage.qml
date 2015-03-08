@@ -45,7 +45,7 @@ Page {
 
                 onDelegateClicked: {
                     settings.tempScale = model[index]
-                    refreshData()
+                    refreshData(true)
                 }
             }
 
@@ -57,7 +57,7 @@ Page {
 
                 onDelegateClicked: {
                     settings.precipUnits = model[index]
-                    refreshData()
+                    refreshData(true)
                 }
             }
 
@@ -69,7 +69,7 @@ Page {
 
                 onDelegateClicked: {
                     settings.windUnits = model[index]
-                    refreshData()
+                    refreshData(true)
                 }
             }
         }
