@@ -92,6 +92,8 @@ MainView {
       API instead.
     */
     function refreshData(from_storage, force_refresh) {
+        from_storage = from_storage || false
+        force_refresh = force_refresh || false
         if(from_storage === true && force_refresh !== true) {
             storage.getLocations(fillPages);
         } else {
