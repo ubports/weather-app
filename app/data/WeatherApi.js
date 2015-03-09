@@ -23,7 +23,7 @@
 *  Version of the response data format.
 *  Increase this number to force a refresh.
 */
-var RESPONSE_DATA_VERSION = 20140315;
+var RESPONSE_DATA_VERSION = 20150307;
 
 /**
 * Helper functions
@@ -233,7 +233,7 @@ var OpenWeatherMapApi = (function() {
             windDeg: data.wind.deg,
             windDir: calcWindDir(data.wind.deg),
             icon: _icon_map[data.weather[0].icon],
-            condition: data.weather[0]
+            condition: data.weather[0].main
         };
         if(data.id !== undefined) {
             result["service"] = _serviceName;
@@ -263,7 +263,7 @@ var OpenWeatherMapApi = (function() {
             pressure: data.pressure,
             humidity: data.humidity,
             icon: _icon_map[data.weather[0].icon],
-            condition: data.weather[0],
+            condition: data.weather[0].main,
             windDeg: data.deg,
             windDir: calcWindDir(data.deg),
             hourly: []
@@ -725,7 +725,8 @@ var sendRequest = function(message, responseCallback) {
                         db: loc.db,
                         units: 'metric',
                         service: message.params.service,
-                        api_key: message.params.api_key
+                        api_key: message.params.api_key,
+                        interval: message.params.interval
                     },
                     secsFromLastFetch = (now-loc.updated)/1000;
                 if( message.params.force===true || loc.format !== RESPONSE_DATA_VERSION || secsFromLastFetch > params.interval){

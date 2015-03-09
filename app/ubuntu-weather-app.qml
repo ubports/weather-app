@@ -92,6 +92,8 @@ MainView {
       API instead.
     */
     function refreshData(from_storage, force_refresh) {
+        from_storage = from_storage || false
+        force_refresh = force_refresh || false
         if(from_storage === true && force_refresh !== true) {
             storage.getLocations(fillPages);
         } else {
@@ -153,9 +155,7 @@ MainView {
                 if(location.dbId === undefined || location.dbId=== 0) {
                     storage.insertLocation({location: location});
                 }
-
-                refreshData(true, false)  // load new location into models (without data)
-                refreshData(false, true)  // FIXME: can be really slow as it refreshes all models
+                refreshData();
             }
 
             return !exists;
