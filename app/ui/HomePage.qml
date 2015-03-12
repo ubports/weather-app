@@ -87,6 +87,13 @@ PageWithBottomEdge {
         height: parent.height
         contentWidth: parent.width
 
+        PullToRefresh {
+            id: pullToRefresh
+            parent: locationFlickable
+            refreshing: locationPages.loaded === false
+            onRefresh: refreshData(false, true)
+        }
+
         /*
           ListView for locations with snap-scrolling horizontally.
         */
