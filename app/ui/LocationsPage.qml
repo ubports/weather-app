@@ -104,7 +104,7 @@ Page {
                         centerIn: parent
                     }
                     height: units.gu(3)
-                    source: locationPage.iconMap[locationPages.contentItem.children[index].iconName]
+                    source: locationPage.iconMap[locationPages.contentItem.children[index].iconName] || ""
                     width: units.gu(3)
                 }
 
@@ -117,7 +117,8 @@ Page {
                     font.pixelSize: units.gu(4)
                     font.weight: Font.Light
                     height: units.gu(6)
-                    text: locationPages.contentItem.children[index].currentTemp + settings.tempScale[1]
+                    text: locationPages.contentItem.children[index].currentTemp ? locationPages.contentItem.children[index].currentTemp + settings.tempScale[1]
+                                                                                : ""
                     verticalAlignment: Text.AlignVCenter
                 }
             }
