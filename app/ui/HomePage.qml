@@ -87,6 +87,16 @@ PageWithBottomEdge {
         height: parent.height
         contentWidth: parent.width
 
+        PullToRefresh {
+            id: pullToRefresh
+            parent: locationFlickable
+            refreshing: false
+            onRefresh: {
+                refreshing = true
+                refreshData(false, true)
+            }
+        }
+
         /*
           ListView for locations with snap-scrolling horizontally.
         */
@@ -113,6 +123,7 @@ PageWithBottomEdge {
                 currentIndex = settings.current
 
                 if (model > 0) {
+                    pullToRefresh.refreshing = false
                     loaded = true
                 }
             }
