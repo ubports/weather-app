@@ -70,8 +70,8 @@ Rectangle {
         name = data.location.name;
 
         // set current temps and condition
-        iconName = (current.icon) ? current.icon : ""
-        icon = imageMap[iconName]
+        iconName = (current.icon) ? current.icon : "";
+        icon = (imageMap[iconName] !== undefined) ? imageMap[iconName] : "";
         conditionText = (current.condition.main) ? current.condition.main : current.condition; // difference TWC/OWM
         todayMaxTemp = (today[tempUnits].tempMax !== undefined) ? Math.round(today[tempUnits].tempMax).toString() + settings.tempScale: "";
         todayMinTemp = Math.round(today[tempUnits].tempMin).toString() + settings.tempScale;
