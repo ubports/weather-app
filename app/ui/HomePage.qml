@@ -90,8 +90,11 @@ PageWithBottomEdge {
         PullToRefresh {
             id: pullToRefresh
             parent: locationFlickable
-            refreshing: locationPages.loaded === false
-            onRefresh: refreshData(false, true)
+            refreshing: false
+            onRefresh: {
+                refreshing = true
+                refreshData(false, true)
+            }
         }
 
         /*
@@ -120,6 +123,7 @@ PageWithBottomEdge {
                 currentIndex = settings.current
 
                 if (model > 0) {
+                    pullToRefresh.refreshing = false
                     loaded = true
                 }
             }
