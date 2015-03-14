@@ -21,7 +21,6 @@ import Qt.labs.settings 1.0
 import Ubuntu.Components 1.1
 import "components"
 import "data" as Data
-import "data/WeatherApi.js" as WeatherApi
 import "data/key.js" as Key
 import "ui"
 
@@ -63,22 +62,26 @@ MainView {
       Handle response data from data backend. Checks if a location
       was updated and has to be stored again.
     */
-    function responseDataHandler(messageObject) {
-         if(!messageObject.error) {
-             if(messageObject.action === "updateData") {
-                 messageObject.result.forEach(function(loc) {
-                     // replace location data in cache with refreshed values
-                     if(loc["save"] === true) {
-                         storage.updateLocation(loc.db.id, loc);
-                     }
-                 });
-                 //print(JSON.stringify(messageObject.result));
-                 fillPages(messageObject.result);
+    WorkerScript {
+         id: lookupWorker
+         source: Qt.resolvedUrl("./data/WeatherApi.js")
+         onMessage: {
+             if(!messageObject.error) {
+                 if(messageObject.action === "updateData") {
+                     messageObject.result.forEach(function(loc) {
+                         // replace location data in cache with refreshed values
+                         if(loc["save"] === true) {
+                             storage.updateLocation(loc.db.id, loc);
+                         }
+                     });
+                     //print(JSON.stringify(messageObject.result));
+                     fillPages(messageObject.result);
+                 }
+             } else {
+                 console.log(messageObject.error.msg+" / "+messageObject.error.request.url)
+                 // TODO error handling
              }
-         } else {
-             console.log(messageObject.error.msg+" / "+messageObject.error.request.url)
-             // TODO error handling
-         }
+        }
      }
 
     /* Fill the location pages with their data. */
@@ -98,7 +101,7 @@ MainView {
             storage.getLocations(fillPages);
         } else {
             storage.getLocations(function(locations) {
-                WeatherApi.sendRequest({
+                 lookupWorker.sendMessage({
                     action: "updateData",
                     params: {
                         locations: locations,
@@ -107,7 +110,7 @@ MainView {
                         api_key: Key.twcKey,
                         interval: settings.refreshInterval
                     }
-                }, responseDataHandler)
+                })
             });
         }
     }
