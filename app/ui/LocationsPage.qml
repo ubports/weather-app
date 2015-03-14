@@ -96,6 +96,8 @@ Page {
                     height: locationsListItem.height
                     text: model.location.name
                     verticalAlignment: Text.AlignVCenter
+                    width: weatherImage.visible ? (locationsListItem.width / 2) - units.gu(4)
+                                                : locationsListItem.width - units.gu(16)
                 }
 
                 Image {
@@ -105,6 +107,7 @@ Page {
                     }
                     height: units.gu(3)
                     source: locationPage.iconMap[locationPages.contentItem.children[index].iconName] || ""
+                    visible: locationsPage.state === "default"
                     width: units.gu(3)
                 }
 
@@ -120,6 +123,7 @@ Page {
                     text: locationPages.contentItem.children[index].currentTemp ? locationPages.contentItem.children[index].currentTemp + settings.tempScale[1]
                                                                                 : ""
                     verticalAlignment: Text.AlignVCenter
+                    visible: locationsPage.state === "default"
                 }
             }
 
