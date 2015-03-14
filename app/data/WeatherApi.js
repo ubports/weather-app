@@ -671,74 +671,80 @@ var WeatherApi = (function(_services) {
     "geoip": GeoipApi
 });
 
-var sendRequest = function(message, responseCallback) {
-    // handles the response data
-    var finished = function(result) {
-        // print result to get data for test json files
-        // print(JSON.stringify(result));
-        //WorkerScript.sendMessage({
-        responseCallback({
-            action: message.action,
-            result: result
-        })
-    }
-    // handles errors
-    var onError = function(err) {
-        console.log(JSON.stringify(err, null, true));
-        //WorkerScript.sendMessage({ 'error': err})
-        responseCallback({ 'error': err})
-    }
-    // keep order of locations, sort results
-    var sortDataResults = function(locA, locB) {
-        return locA.db.id - locB.db.id;
-    }
-    // perform the api calls
-    if(message.action === "searchByName") {
-        WeatherApi.search("name", message.params, finished, onError);
-    } else if(message.action === "searchByPoint") {
-        WeatherApi.search("point", message.params, finished, onError);
-    } else if(message.action === "getGeoIp") {
-        WeatherApi.geoLookup(message.params, finished, onError);
-    } else if(message.action === "updateData") {
-        var locLength = message.params.locations.length,
-            locUpdated = 0,
-            result = [],
-            now = new Date().getTime();
-        if(locLength > 0) {
-            message.params.locations.forEach(function(loc) {
-                var updatedHnd = function (newData, cached) {
-                        locUpdated += 1;
-                        if(cached === true) {
-                            newData["save"] = false;
-                        } else {
-                            newData["save"] = true;
-                            newData["updated"] =  new Date().getTime();
-                        }
-                        result.push(newData);
-                        if(locUpdated === locLength) {
-                            result.sort(sortDataResults);
-                            finished(result);
-                        }
-                    },
-                    params = {
-                        location:loc.location,
-                        db: loc.db,
-                        units: 'metric',
-                        service: message.params.service,
-                        api_key: message.params.api_key,
-                        interval: message.params.interval
-                    },
-                    secsFromLastFetch = (now-loc.updated)/1000;
-                if( message.params.force===true || loc.format !== RESPONSE_DATA_VERSION || secsFromLastFetch > params.interval){
-                    // data older than 30min, location is new or data format is deprecated
-                    WeatherApi.getLocationData(params, updatedHnd, onError);
-                } else {
-                    console.log("["+loc.location.name+"] returning cached data, time from last fetch: "+secsFromLastFetch)
-                    updatedHnd(loc, true);
-                }
+/**
+*  following WorkerScript handles the data requests against the weather API.
+*  "message" requires a "params" property with the required params to perform
+*  the API call and an "action" property, which will be added also to the response.
+*/
+
+if(typeof WorkerScript != "undefined") {
+    WorkerScript.onMessage = function(message) {
+        // handles the response data
+        var finished = function(result) {
+            // print result to get data for test json files
+            // print(JSON.stringify(result));
+            WorkerScript.sendMessage({
+                action: message.action,
+                result: result
             })
-        } else {
-            finished(result);
+        }
+        // handles errors
+        var onError = function(err) {
+            console.log(JSON.stringify(err, null, true));
+            WorkerScript.sendMessage({ 'error': err})
+        }
+        // keep order of locations, sort results
+        var sortDataResults = function(locA, locB) {
+            return locA.db.id - locB.db.id;
+        }
+        // perform the api calls
+        if(message.action === "searchByName") {
+            WeatherApi.search("name", message.params, finished, onError);
+        } else if(message.action === "searchByPoint") {
+            WeatherApi.search("point", message.params, finished, onError);
+        } else if(message.action === "getGeoIp") {
+            WeatherApi.geoLookup(message.params, finished, onError);
+        } else if(message.action === "updateData") {
+            var locLength = message.params.locations.length,
+                locUpdated = 0,
+                result = [],
+                now = new Date().getTime();
+            if(locLength > 0) {
+                message.params.locations.forEach(function(loc) {
+                    var updatedHnd = function (newData, cached) {
+                            locUpdated += 1;
+                            if(cached === true) {
+                                newData["save"] = false;
+                            } else {
+                                newData["save"] = true;
+                                newData["updated"] =  new Date().getTime();
+                            }
+                            result.push(newData);
+                            if(locUpdated === locLength) {
+                                result.sort(sortDataResults);
+                                finished(result);
+                            }
+                        },
+                        params = {
+                            location:loc.location,
+                            db: loc.db,
+                            units: 'metric',
+                            service: message.params.service,
+                            api_key: message.params.api_key,
+                            interval: message.params.interval
+                        },
+                        secsFromLastFetch = (now-loc.updated)/1000;
+                    if( message.params.force===true || loc.format !== RESPONSE_DATA_VERSION || secsFromLastFetch > params.interval){
+                        // data older than 30min, location is new or data format is deprecated
+                        WeatherApi.getLocationData(params, updatedHnd, onError);
+                    } else {
+                        console.log("["+loc.location.name+"] returning cached data, time from last fetch: "+secsFromLastFetch)
+                        updatedHnd(loc, true);
+                    }
+                })
+            } else {
+                finished(result);
+            }
         }
     }
 }
