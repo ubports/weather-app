@@ -56,7 +56,10 @@ MainView {
     /*
       (re)load the pages on completion
     */
-    Component.onCompleted: refreshData();
+    Component.onCompleted: {
+        storage.getLocations(fillPages);
+        refreshData();
+    }
 
     /*
       Handle response data from data backend. Checks if a location
