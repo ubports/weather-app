@@ -63,6 +63,7 @@ Page {
             id: locationsModel
         }
         delegate: WeatherListItem {
+            id: locationsListItem
             leftSideAction: Remove {
                 onTriggered: storage.removeLocation(index)
             }
@@ -79,16 +80,47 @@ Page {
                 storage.moveLocation(from, to);
             }
 
-            Label {
-                anchors {
+            Row {
+                anchors{
+                    top: parent.top
                     left: parent.left
                     leftMargin: units.gu(2)
                     right: parent.right
                     rightMargin: units.gu(2)
-                    verticalCenter: parent.verticalCenter
+                    bottom: parent.bottom
                 }
-                elide: Text.ElideRight
-                text: model.location.name
+                spacing: units.gu(2)
+
+                Label {
+                    elide: Text.ElideRight
+                    height: locationsListItem.height
+                    text: model.location.name
+                    verticalAlignment: Text.AlignVCenter
+                }
+
+                Image {
+                    id: weatherImage
+                    anchors {
+                        centerIn: parent
+                    }
+                    height: units.gu(3)
+                    source: locationPage.iconMap[locationPages.contentItem.children[index].iconName] || ""
+                    width: units.gu(3)
+                }
+
+                Label {
+                    id: nowLabel
+                    anchors {
+                        right: parent.right
+                    }
+                    color: UbuntuColors.orange
+                    font.pixelSize: units.gu(4)
+                    font.weight: Font.Light
+                    height: units.gu(6)
+                    text: locationPages.contentItem.children[index].currentTemp ? locationPages.contentItem.children[index].currentTemp + settings.tempScale[1]
+                                                                                : ""
+                    verticalAlignment: Text.AlignVCenter
+                }
             }
 
             ListItem.ThinDivider {
