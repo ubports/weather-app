@@ -122,28 +122,23 @@ Page {
     function loadFromProvider(search) {
         clearModelForLoading()
 
-        lookupWorker.sendMessage({
+        WeatherApi.sendRequest({
                                    action: "searchByName",
                                    params: {
                                        name: search,
                                        units: "metric"
                                    }
-                               });
+                               }, searchResponseHandler)
     }
 
-
-    WorkerScript {
-        id: lookupWorker
-        source: Qt.resolvedUrl("../data/WeatherApi.js")
-        onMessage: {
-            if (!messageObject.error) {
-                appendCities(messageObject.result.locations)
-            } else {
-                citiesModel.httpError = true
-            }
-
-            citiesModel.loading = false
+    function searchResponseHandler(msgObject) {
+        if (!msgObject.error) {
+            appendCities(msgObject.result.locations)
+        } else {
+            citiesModel.httpError = true
         }
+
+        citiesModel.loading = false
     }
 
     ListView {
