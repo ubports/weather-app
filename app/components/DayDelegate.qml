@@ -26,7 +26,7 @@ ListItem.Standard {
     // TODO: will expand when clicked to reveal more info
 
     property alias day: dayLabel.text
-    property alias image: weatherImage.source
+    property alias image: weatherImage.name
     property alias high: highLabel.text
     property alias low: lowLabel.text
 
@@ -52,7 +52,7 @@ ListItem.Standard {
         fontSize: "medium"
     }
 
-    Image {
+    Icon {
         id: weatherImage
         anchors {
             horizontalCenter: parent.horizontalCenter

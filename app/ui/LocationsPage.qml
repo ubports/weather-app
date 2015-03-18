@@ -80,33 +80,36 @@ Page {
                 storage.moveLocation(from, to);
             }
 
-            Row {
-                anchors{
-                    top: parent.top
+            Item {
+                anchors {
+                    bottom: parent.bottom
                     left: parent.left
                     leftMargin: units.gu(2)
                     right: parent.right
                     rightMargin: units.gu(2)
-                    bottom: parent.bottom
+                    top: parent.top
                 }
-                spacing: units.gu(2)
 
                 Label {
+                    id: nameLabel
+                    anchors {
+                        left: parent.left
+                        right: weatherImage.visible ? weatherImage.left : parent.right
+                        rightMargin: units.gu(1)
+                        verticalCenter: parent.verticalCenter
+                    }
                     elide: Text.ElideRight
-                    height: locationsListItem.height
                     text: model.location.name
-                    verticalAlignment: Text.AlignVCenter
-                    width: weatherImage.visible ? (locationsListItem.width / 2) - units.gu(4)
-                                                : locationsListItem.width - units.gu(16)
                 }
 
-                Image {
+                Icon {
                     id: weatherImage
                     anchors {
-                        centerIn: parent
+                        horizontalCenter: parent.horizontalCenter
+                        verticalCenter: parent.verticalCenter
                     }
                     height: units.gu(3)
-                    source: locationPage.iconMap[locationPages.contentItem.children[index].iconName] || ""
+                    name: locationPage.iconMap[locationPages.contentItem.children[index].iconName] || ""
                     visible: locationsPage.state === "default"
                     width: units.gu(3)
                 }
@@ -114,15 +117,18 @@ Page {
                 Label {
                     id: nowLabel
                     anchors {
+                        left: weatherImage.right
+                        leftMargin: units.gu(1)
                         right: parent.right
+                        verticalCenter: parent.verticalCenter
                     }
                     color: UbuntuColors.orange
+                    elide: Text.ElideRight
                     font.pixelSize: units.gu(4)
                     font.weight: Font.Light
-                    height: units.gu(6)
+                    horizontalAlignment: Text.AlignRight
                     text: locationPages.contentItem.children[index].currentTemp ? locationPages.contentItem.children[index].currentTemp + settings.tempScale[1]
                                                                                 : ""
-                    verticalAlignment: Text.AlignVCenter
                     visible: locationsPage.state === "default"
                 }
             }
