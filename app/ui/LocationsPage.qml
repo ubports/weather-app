@@ -63,6 +63,7 @@ Page {
             id: locationsModel
         }
         delegate: WeatherListItem {
+            id: locationsListItem
             leftSideAction: Remove {
                 onTriggered: storage.removeLocation(index)
             }
@@ -79,16 +80,57 @@ Page {
                 storage.moveLocation(from, to);
             }
 
-            Label {
+            Item {
                 anchors {
+                    bottom: parent.bottom
                     left: parent.left
                     leftMargin: units.gu(2)
                     right: parent.right
                     rightMargin: units.gu(2)
-                    verticalCenter: parent.verticalCenter
+                    top: parent.top
                 }
-                elide: Text.ElideRight
-                text: model.location.name
+
+                Label {
+                    id: nameLabel
+                    anchors {
+                        left: parent.left
+                        right: weatherImage.visible ? weatherImage.left : parent.right
+                        rightMargin: units.gu(1)
+                        verticalCenter: parent.verticalCenter
+                    }
+                    elide: Text.ElideRight
+                    text: model.location.name
+                }
+
+                Icon {
+                    id: weatherImage
+                    anchors {
+                        horizontalCenter: parent.horizontalCenter
+                        verticalCenter: parent.verticalCenter
+                    }
+                    height: units.gu(3)
+                    name: locationPage.iconMap[locationPages.contentItem.children[index].iconName] || ""
+                    visible: locationsPage.state === "default"
+                    width: units.gu(3)
+                }
+
+                Label {
+                    id: nowLabel
+                    anchors {
+                        left: weatherImage.right
+                        leftMargin: units.gu(1)
+                        right: parent.right
+                        verticalCenter: parent.verticalCenter
+                    }
+                    color: UbuntuColors.orange
+                    elide: Text.ElideRight
+                    font.pixelSize: units.gu(4)
+                    font.weight: Font.Light
+                    horizontalAlignment: Text.AlignRight
+                    text: locationPages.contentItem.children[index].currentTemp ? locationPages.contentItem.children[index].currentTemp + settings.tempScale[1]
+                                                                                : ""
+                    visible: locationsPage.state === "default"
+                }
             }
 
             ListItem.ThinDivider {
