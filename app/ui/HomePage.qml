@@ -32,18 +32,18 @@ PageWithBottomEdge {
     tipLabelColor: "#FFF"
 
     property var iconMap: {
-        "sun": Qt.resolvedUrl("../graphics/sunny.svg"),
-        "moon": Qt.resolvedUrl("../graphics/starry.svg"),
-        "cloud_sun": Qt.resolvedUrl("../graphics/partly-cloudy.svg"),
-        "cloud_moon": Qt.resolvedUrl("../graphics/cloudy-night.svg"),
-        "cloud": Qt.resolvedUrl("../graphics/cloudy.svg"),
-        "rain": Qt.resolvedUrl("../graphics/rain.svg"),
-        "thunder": Qt.resolvedUrl("../graphics/thunder.svg"),
-        "snow_shower": Qt.resolvedUrl("../graphics/snow.svg"),
-        "fog": Qt.resolvedUrl("../graphics/fog.svg"),
-        "snow_rain": Qt.resolvedUrl("../graphics/snow.svg"),
-        "scattered": Qt.resolvedUrl("../graphics/rain.svg"),
-        "overcast": Qt.resolvedUrl("../graphics/cloudy.svg")
+        "sun": "weather-clear-symbolic",
+        "moon": "weather-clear-night-symbolic",
+        "cloud_sun": "weather-few-clouds-symbolic",
+        "cloud_moon": "weather-few-clouds-night-symbolic",
+        "cloud": "weather-clouds-symbolic",
+        "rain": "weather-showers-symbolic",
+        "thunder": "weather-storm-symbolic",
+        "snow_shower": "weather-snow-symbolic",
+        "fog": "weather-fog-symbolic",
+        "snow_rain": "weather-snow-symbolic",
+        "scattered": "weather-showers-scattered-symbolic",
+        "overcast": "weather-overcast-symbolic"
     }
 
     property var imageMap: {

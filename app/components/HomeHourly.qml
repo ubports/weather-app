@@ -62,17 +62,13 @@ Item {
                     width: units.gu(7)
                     height: units.gu(7)
                     anchors.horizontalCenter: parent.horizontalCenter
-                    Image {
-                        id: iconImage
-                        fillMode: Image.PreserveAspectFit
-                        anchors.fill: parent
-                        source: (hourData.icon !== undefined && iconMap[hourData.icon] !== undefined) ? iconMap[hourData.icon] : ""
-                    }
-                    ColorOverlay {
-                        anchors.fill: iconImage
-                        source: iconImage
+                    Icon {
+                        anchors {
+                            fill: parent
+                            margins: units.gu(0.5)
+                        }
                         color: UbuntuColors.orange
-                        anchors.horizontalCenter: parent.horizontalCenter
+                        name: (hourData.icon !== undefined && iconMap[hourData.icon] !== undefined) ? iconMap[hourData.icon] : ""
                     }
                 }
                 Label {
