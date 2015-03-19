@@ -19,37 +19,45 @@
 import QtQuick 2.3
 import Ubuntu.Components 1.1
 import Ubuntu.Components.ListItems 0.1 as ListItem
-
+import "../../components"
 
 Page {
     title: i18n.tr("Refresh Interval")
 
-    Flickable {
-        anchors {
-            fill: parent
+    ListModel {
+        id: refreshModel
+        Component.onCompleted: initialize()
+        function initialize() {
+            refreshModel.append({"interval": 600, "text": i18n.tr("%1 minutes").arg(10)})
+            refreshModel.append({"interval": 900, "text": i18n.tr("%1 minutes").arg(15)})
+            refreshModel.append({"interval": 1800, "text": i18n.tr("%1 minutes").arg(30)})
+            refreshModel.append({"interval": 3600, "text": i18n.tr("%1 minutes").arg(60)})
         }
-        height: parent.height
-        contentHeight: unitsColumn.childrenRect.height
+    }
 
-        Column {
-            id: unitsColumn
-            anchors {
-                fill: parent
+    ExpandableListItem {
+        id: dataProviderSetting
+
+        listViewHeight: refreshModel.count*units.gu(6) - units.gu(1)
+        customModel: refreshModel
+        headerTitle: i18n.tr("Interval")
+        headerSubTitle: Math.floor(settings.refreshInterval / 60).toString() + " " + i18n.tr("minutes")
+
+        customDelegate: ListItem.Standard {
+            text: model.text
+            onClicked: {
+                settings.refreshInterval = model.interval
+                refreshData(false, true)
             }
 
-            ListItem.ItemSelector {
-                delegate: OptionSelectorDelegate {
-                    text: Math.floor(modelData / 60).toString() + " " + i18n.tr("minutes")
-                }
-                expanded: true
-                model: [600, 900, 1800, 3600]
-                selectedIndex: model.indexOf(settings.refreshInterval)
-                text: i18n.tr("Interval")
-
-                onDelegateClicked: {
-                    settings.refreshInterval = model[index]
-                    refreshData(false, true)
-                }
+            Icon {
+                width: units.gu(2)
+                height: width
+                name: "ok"
+                visible: settings.refreshInterval === model.interval
+                anchors.right: parent.right
+                anchors.rightMargin: units.gu(2)
+                anchors.verticalCenter: parent.verticalCenter
             }
         }
     }

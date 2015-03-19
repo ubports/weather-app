@@ -19,34 +19,40 @@
 import QtQuick 2.3
 import Ubuntu.Components 1.1
 import Ubuntu.Components.ListItems 0.1 as ListItem
-
+import "../../components"
 
 Page {
     title: i18n.tr("Data Provider")
 
-    Flickable {
-        anchors {
-            fill: parent
-        }
-        height: parent.height
-        contentHeight: unitsColumn.childrenRect.height
+    ListModel {
+        id: dataProviderModel
+        ListElement { text: "openweathermap" }
+        ListElement { text: "weatherchannel" }
+    }
 
-        Column {
-            id: unitsColumn
-            anchors {
-                fill: parent
+    ExpandableListItem {
+        id: dataProviderSetting
+
+        listViewHeight: dataProviderModel.count*units.gu(6) - units.gu(1)
+        customModel: dataProviderModel
+        headerTitle: i18n.tr("Provider")
+        headerSubTitle: settings.service
+
+        customDelegate: ListItem.Standard {
+            text: model.text
+            onClicked: {
+                settings.service = model.text
+                refreshData(false, true)
             }
 
-            ListItem.ItemSelector {
-                expanded: true
-                model: ["openweathermap", "weatherchannel"]  // "geonames", "geoip"]
-                selectedIndex: model.indexOf(settings.service)
-                text: i18n.tr("Provider")
-
-                onDelegateClicked: {
-                    settings.service = model[index]
-                    refreshData(false, true)
-                }
+            Icon {
+                width: units.gu(2)
+                height: width
+                name: "ok"
+                visible: settings.service === model.text
+                anchors.right: parent.right
+                anchors.rightMargin: units.gu(2)
+                anchors.verticalCenter: parent.verticalCenter
             }
         }
     }
