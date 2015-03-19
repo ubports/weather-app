@@ -80,10 +80,12 @@ Item {
 
             }
             Rectangle {
-                width: units.gu(0.1)
-                height: hourColumn.height
-                color: UbuntuColors.darkGrey
                 anchors.verticalCenter: parent.verticalCenter
+                color: UbuntuColors.darkGrey
+                height: hourColumn.height
+                opacity: 0.2
+                visible: index > 0
+                width: units.gu(0.1)
             }
         }
     }
