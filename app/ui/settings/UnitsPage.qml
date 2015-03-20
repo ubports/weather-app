@@ -35,8 +35,8 @@ Page {
             id: temperatureModel
             Component.onCompleted: initialize()
             function initialize() {
-                temperatureModel.append({"text": i18n.tr("°C")})
-                temperatureModel.append({"text": i18n.tr("°F")})
+                temperatureModel.append({"text": i18n.tr("°C"), "value": "°C"})
+                temperatureModel.append({"text": i18n.tr("°F"), "value": "°F"})
             }
         }
 
@@ -44,8 +44,8 @@ Page {
             id: precipationModel
             Component.onCompleted: initialize()
             function initialize() {
-                precipationModel.append({"text": i18n.tr("mm")})
-                precipationModel.append({"text": i18n.tr("in")})
+                precipationModel.append({"text": i18n.tr("mm"), "value": "mm"})
+                precipationModel.append({"text": i18n.tr("in"), "value": "in"})
             }
         }
 
@@ -53,8 +53,8 @@ Page {
             id: windSpeeModel
             Component.onCompleted: initialize()
             function initialize() {
-                windSpeeModel.append({"text": i18n.tr("kmh")})
-                windSpeeModel.append({"text": i18n.tr("mph")})
+                windSpeeModel.append({"text": i18n.tr("kmh"), "value": "kmh"})
+                windSpeeModel.append({"text": i18n.tr("mph"), "value": "mph"})
             }
         }
 
@@ -68,12 +68,13 @@ Page {
                 listViewHeight: temperatureModel.count*units.gu(6) - units.gu(0.5)
                 model: temperatureModel
                 text: i18n.tr("Temperature")
-                subText: settings.tempScale
+                subText: settings.tempScale === "°C" ? i18n.tr("°C")
+                                                     : i18n.tr("°F")
 
                 delegate: ListItem.Standard {
                     text: model.text
                     onClicked: {
-                        settings.tempScale = model.text
+                        settings.tempScale = model.value
                         refreshData(true)
                     }
 
@@ -81,7 +82,7 @@ Page {
                         width: units.gu(2)
                         height: width
                         name: "ok"
-                        visible: settings.tempScale === model.text
+                        visible: settings.tempScale === model.value
                         anchors.right: parent.right
                         anchors.rightMargin: units.gu(2)
                         anchors.verticalCenter: parent.verticalCenter
@@ -95,12 +96,13 @@ Page {
                 listViewHeight: precipationModel.count*units.gu(6) - units.gu(0.5)
                 model: precipationModel
                 text: i18n.tr("Precipitation")
-                subText: settings.precipUnits
+                subText: settings.precipUnits === "mm" ? i18n.tr("mm")
+                                                       : i18n.tr("in")
 
                 delegate: ListItem.Standard {
                     text: model.text
                     onClicked: {
-                        settings.precipUnits = model.text
+                        settings.precipUnits = model.value
                         refreshData(true)
                     }
 
@@ -108,7 +110,7 @@ Page {
                         width: units.gu(2)
                         height: width
                         name: "ok"
-                        visible: settings.precipUnits === model.text
+                        visible: settings.precipUnits === model.value
                         anchors.right: parent.right
                         anchors.rightMargin: units.gu(2)
                         anchors.verticalCenter: parent.verticalCenter
@@ -122,12 +124,13 @@ Page {
                 listViewHeight: windSpeeModel.count*units.gu(6) - units.gu(0.5)
                 model: windSpeeModel
                 text: i18n.tr("Wind Speed")
-                subText: settings.windUnits
+                subText: settings.windUnits === "kmh" ? i18n.tr("kmh")
+                                                      : i18n.tr("mph")
 
                 delegate: ListItem.Standard {
                     text: model.text
                     onClicked: {
-                        settings.windUnits = model.text
+                        settings.windUnits = model.value
                         refreshData(true)
                     }
 
@@ -135,7 +138,7 @@ Page {
                         width: units.gu(2)
                         height: width
                         name: "ok"
-                        visible: settings.windUnits === model.text
+                        visible: settings.windUnits === model.value
                         anchors.right: parent.right
                         anchors.rightMargin: units.gu(2)
                         anchors.verticalCenter: parent.verticalCenter

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-20 01:33+0100\n"
+"POT-Creation-Date: 2015-03-20 15:23+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -109,27 +109,27 @@ msgstr[1] ""
 msgid "Interval"
 msgstr ""
 
-#: ../app/ui/settings/UnitsPage.qml:38
+#: ../app/ui/settings/UnitsPage.qml:38 ../app/ui/settings/UnitsPage.qml:71
 msgid "°C"
 msgstr ""
 
-#: ../app/ui/settings/UnitsPage.qml:39
+#: ../app/ui/settings/UnitsPage.qml:39 ../app/ui/settings/UnitsPage.qml:72
 msgid "°F"
 msgstr ""
 
-#: ../app/ui/settings/UnitsPage.qml:47
+#: ../app/ui/settings/UnitsPage.qml:47 ../app/ui/settings/UnitsPage.qml:99
 msgid "mm"
 msgstr ""
 
-#: ../app/ui/settings/UnitsPage.qml:48
+#: ../app/ui/settings/UnitsPage.qml:48 ../app/ui/settings/UnitsPage.qml:100
 msgid "in"
 msgstr ""
 
-#: ../app/ui/settings/UnitsPage.qml:56
+#: ../app/ui/settings/UnitsPage.qml:56 ../app/ui/settings/UnitsPage.qml:127
 msgid "kmh"
 msgstr ""
 
-#: ../app/ui/settings/UnitsPage.qml:57
+#: ../app/ui/settings/UnitsPage.qml:57 ../app/ui/settings/UnitsPage.qml:128
 msgid "mph"
 msgstr ""
 
@@ -137,11 +137,11 @@ msgstr ""
 msgid "Temperature"
 msgstr ""
 
-#: ../app/ui/settings/UnitsPage.qml:97
+#: ../app/ui/settings/UnitsPage.qml:98
 msgid "Precipitation"
 msgstr ""
 
-#: ../app/ui/settings/UnitsPage.qml:124
+#: ../app/ui/settings/UnitsPage.qml:126
 msgid "Wind Speed"
 msgstr ""
 
