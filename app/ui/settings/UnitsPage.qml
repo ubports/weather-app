@@ -35,6 +35,9 @@ Page {
             id: temperatureModel
             Component.onCompleted: initialize()
             function initialize() {
+                // TRANSLATORS: The strings are standard measurement units
+                // of temperature and are shown in the settings page. Only
+                // the abbreviated forms are used.
                 temperatureModel.append({"text": i18n.tr("°C"), "value": "°C"})
                 temperatureModel.append({"text": i18n.tr("°F"), "value": "°F"})
             }
@@ -44,6 +47,9 @@ Page {
             id: precipationModel
             Component.onCompleted: initialize()
             function initialize() {
+                // TRANSLATORS: The strings are standard measurement units
+                // of precipitation and are shown in the settings page. Only
+                // the abbreviated forms are used.
                 precipationModel.append({"text": i18n.tr("mm"), "value": "mm"})
                 precipationModel.append({"text": i18n.tr("in"), "value": "in"})
             }
@@ -53,6 +59,9 @@ Page {
             id: windSpeeModel
             Component.onCompleted: initialize()
             function initialize() {
+                // TRANSLATORS: The strings are standard measurement units
+                // of wind speed and are shown in the settings page. Only
+                // the abbreviated forms are used.
                 windSpeeModel.append({"text": i18n.tr("kmh"), "value": "kmh"})
                 windSpeeModel.append({"text": i18n.tr("mph"), "value": "mph"})
             }

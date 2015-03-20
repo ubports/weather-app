@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-20 15:23+0100\n"
+"POT-Creation-Date: 2015-03-20 20:30+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -109,39 +109,48 @@ msgstr[1] ""
 msgid "Interval"
 msgstr ""
 
-#: ../app/ui/settings/UnitsPage.qml:38 ../app/ui/settings/UnitsPage.qml:71
+#. TRANSLATORS: The strings are standard measurement units
+#. of temperature and are shown in the settings page. Only
+#. the abbreviated forms are used.
+#: ../app/ui/settings/UnitsPage.qml:41 ../app/ui/settings/UnitsPage.qml:80
 msgid "°C"
 msgstr ""
 
-#: ../app/ui/settings/UnitsPage.qml:39 ../app/ui/settings/UnitsPage.qml:72
+#: ../app/ui/settings/UnitsPage.qml:42 ../app/ui/settings/UnitsPage.qml:81
 msgid "°F"
 msgstr ""
 
-#: ../app/ui/settings/UnitsPage.qml:47 ../app/ui/settings/UnitsPage.qml:99
+#. TRANSLATORS: The strings are standard measurement units
+#. of precipitation and are shown in the settings page. Only
+#. the abbreviated forms are used.
+#: ../app/ui/settings/UnitsPage.qml:53 ../app/ui/settings/UnitsPage.qml:108
 msgid "mm"
 msgstr ""
 
-#: ../app/ui/settings/UnitsPage.qml:48 ../app/ui/settings/UnitsPage.qml:100
+#: ../app/ui/settings/UnitsPage.qml:54 ../app/ui/settings/UnitsPage.qml:109
 msgid "in"
 msgstr ""
 
-#: ../app/ui/settings/UnitsPage.qml:56 ../app/ui/settings/UnitsPage.qml:127
+#. TRANSLATORS: The strings are standard measurement units
+#. of wind speed and are shown in the settings page. Only
+#. the abbreviated forms are used.
+#: ../app/ui/settings/UnitsPage.qml:65 ../app/ui/settings/UnitsPage.qml:136
 msgid "kmh"
 msgstr ""
 
-#: ../app/ui/settings/UnitsPage.qml:57 ../app/ui/settings/UnitsPage.qml:128
+#: ../app/ui/settings/UnitsPage.qml:66 ../app/ui/settings/UnitsPage.qml:137
 msgid "mph"
 msgstr ""
 
-#: ../app/ui/settings/UnitsPage.qml:70
+#: ../app/ui/settings/UnitsPage.qml:79
 msgid "Temperature"
 msgstr ""
 
-#: ../app/ui/settings/UnitsPage.qml:98
+#: ../app/ui/settings/UnitsPage.qml:107
 msgid "Precipitation"
 msgstr ""
 
-#: ../app/ui/settings/UnitsPage.qml:126
+#: ../app/ui/settings/UnitsPage.qml:135
 msgid "Wind Speed"
 msgstr ""
 
