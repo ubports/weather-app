@@ -28,22 +28,22 @@ Page {
         id: refreshModel
         Component.onCompleted: initialize()
         function initialize() {
-            refreshModel.append({"interval": 600, "text": i18n.tr("%1 minutes").arg(10)})
-            refreshModel.append({"interval": 900, "text": i18n.tr("%1 minutes").arg(15)})
-            refreshModel.append({"interval": 1800, "text": i18n.tr("%1 minutes").arg(30)})
-            refreshModel.append({"interval": 3600, "text": i18n.tr("%1 minutes").arg(60)})
+            refreshModel.append({"interval": 600, "text": i18n.tr("%1 minute", "%1 minutes", 10).arg(10)})
+            refreshModel.append({"interval": 900, "text": i18n.tr("%1 minute", "%1 minutes", 15).arg(15)})
+            refreshModel.append({"interval": 1800, "text": i18n.tr("%1 minute", "%1 minutes", 30).arg(30)})
+            refreshModel.append({"interval": 3600, "text": i18n.tr("%1 minute", "%1 minutes", 60).arg(60)})
         }
     }
 
     ExpandableListItem {
         id: dataProviderSetting
 
-        listViewHeight: refreshModel.count*units.gu(6) - units.gu(1)
-        customModel: refreshModel
-        headerTitle: i18n.tr("Interval")
-        headerSubTitle: Math.floor(settings.refreshInterval / 60).toString() + " " + i18n.tr("minutes")
+        listViewHeight: refreshModel.count*units.gu(6)
+        model: refreshModel
+        text: i18n.tr("Interval")
+        subText: i18n.tr("%1 minute", "%1 minutes", Math.floor(settings.refreshInterval / 60).toString()).arg(Math.floor(settings.refreshInterval / 60).toString())
 
-        customDelegate: ListItem.Standard {
+        delegate: ListItem.Standard {
             text: model.text
             onClicked: {
                 settings.refreshInterval = model.interval

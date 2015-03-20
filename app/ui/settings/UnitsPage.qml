@@ -19,57 +19,127 @@
 import QtQuick 2.3
 import Ubuntu.Components 1.1
 import Ubuntu.Components.ListItems 0.1 as ListItem
-
+import "../../components"
 
 Page {
     title: i18n.tr("Units")
 
+    flickable: null
+
     Flickable {
-        anchors {
-            fill: parent
-        }
+        anchors.fill: parent
         height: parent.height
         contentHeight: unitsColumn.childrenRect.height
 
+        ListModel {
+            id: temperatureModel
+            Component.onCompleted: initialize()
+            function initialize() {
+                temperatureModel.append({"text": i18n.tr("°C")})
+                temperatureModel.append({"text": i18n.tr("°F")})
+            }
+        }
+
+        ListModel {
+            id: precipationModel
+            Component.onCompleted: initialize()
+            function initialize() {
+                precipationModel.append({"text": i18n.tr("mm")})
+                precipationModel.append({"text": i18n.tr("in")})
+            }
+        }
+
+        ListModel {
+            id: windSpeeModel
+            Component.onCompleted: initialize()
+            function initialize() {
+                windSpeeModel.append({"text": i18n.tr("kmh")})
+                windSpeeModel.append({"text": i18n.tr("mph")})
+            }
+        }
+
         Column {
             id: unitsColumn
-            anchors {
-                fill: parent
-            }
+            anchors.fill: parent
 
-            ListItem.ItemSelector {
-                expanded: true
-                model: ["°C", "°F"]
-                selectedIndex: model.indexOf(settings.tempScale)
+            ExpandableListItem {
+                id: temperatureSetting
+
+                listViewHeight: temperatureModel.count*units.gu(6) - units.gu(0.5)
+                model: temperatureModel
                 text: i18n.tr("Temperature")
+                subText: settings.tempScale
 
-                onDelegateClicked: {
-                    settings.tempScale = model[index]
-                    refreshData(true)
+                delegate: ListItem.Standard {
+                    text: model.text
+                    onClicked: {
+                        settings.tempScale = model.text
+                        refreshData(true)
+                    }
+
+                    Icon {
+                        width: units.gu(2)
+                        height: width
+                        name: "ok"
+                        visible: settings.tempScale === model.text
+                        anchors.right: parent.right
+                        anchors.rightMargin: units.gu(2)
+                        anchors.verticalCenter: parent.verticalCenter
+                    }
                 }
             }
 
-            ListItem.ItemSelector {
-                expanded: true
-                model: ["mm", "in"]
-                selectedIndex: model.indexOf(settings.precipUnits)
+            ExpandableListItem {
+                id: precipationSetting
+
+                listViewHeight: precipationModel.count*units.gu(6) - units.gu(0.5)
+                model: precipationModel
                 text: i18n.tr("Precipitation")
+                subText: settings.precipUnits
 
-                onDelegateClicked: {
-                    settings.precipUnits = model[index]
-                    refreshData(true)
+                delegate: ListItem.Standard {
+                    text: model.text
+                    onClicked: {
+                        settings.precipUnits = model.text
+                        refreshData(true)
+                    }
+
+                    Icon {
+                        width: units.gu(2)
+                        height: width
+                        name: "ok"
+                        visible: settings.precipUnits === model.text
+                        anchors.right: parent.right
+                        anchors.rightMargin: units.gu(2)
+                        anchors.verticalCenter: parent.verticalCenter
+                    }
                 }
             }
 
-            ListItem.ItemSelector {
-                expanded: true
-                model: ["kmh", "mph"]
-                text: i18n.tr("Wind Speed")
-                selectedIndex: model.indexOf(settings.windUnits)
+            ExpandableListItem {
+                id: windSetting
 
-                onDelegateClicked: {
-                    settings.windUnits = model[index]
-                    refreshData(true)
+                listViewHeight: windSpeeModel.count*units.gu(6) - units.gu(0.5)
+                model: windSpeeModel
+                text: i18n.tr("Wind Speed")
+                subText: settings.windUnits
+
+                delegate: ListItem.Standard {
+                    text: model.text
+                    onClicked: {
+                        settings.windUnits = model.text
+                        refreshData(true)
+                    }
+
+                    Icon {
+                        width: units.gu(2)
+                        height: width
+                        name: "ok"
+                        visible: settings.windUnits === model.text
+                        anchors.right: parent.right
+                        anchors.rightMargin: units.gu(2)
+                        anchors.verticalCenter: parent.verticalCenter
+                    }
                 }
             }
         }

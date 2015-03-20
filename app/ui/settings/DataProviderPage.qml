@@ -34,11 +34,11 @@ Page {
         id: dataProviderSetting
 
         listViewHeight: dataProviderModel.count*units.gu(6) - units.gu(1)
-        customModel: dataProviderModel
-        headerTitle: i18n.tr("Provider")
-        headerSubTitle: settings.service
+        model: dataProviderModel
+        text: i18n.tr("Provider")
+        subText: settings.service
 
-        customDelegate: ListItem.Standard {
+        delegate: ListItem.Standard {
             text: model.text
             onClicked: {
                 settings.service = model.text
