@@ -23,7 +23,7 @@
 *  Version of the response data format.
 *  Increase this number to force a refresh.
 */
-var RESPONSE_DATA_VERSION = 20150307;
+var RESPONSE_DATA_VERSION = 20150321;
 
 /**
 * Helper functions
@@ -533,18 +533,27 @@ var WeatherChannelApi = (function() {
             tmpResult[day] = _buildDayFormat(date, dayData, nowMs);
         }
         //
-        if(data["current"]) {
-            var today = todayDate.year+"-"+todayDate.month+"-"+todayDate.date
-            tmpResult[today]["current"] = _buildDataPoint(todayDate, data["current"]);
-        }
         if(data["forecast"] !== undefined) {
             data["forecast"].forEach(function(hourData) {
                 var dateData = getLocationTime((hourData.dateTime*1000)+offset),
                     day = dateData.year+"-"+dateData.month+"-"+dateData.date;
-                if(tmpResult[day]) {                    
+                if(tmpResult[day]) {
                     tmpResult[day]["hourly"].push(_buildDataPoint(dateData, hourData));
                 }
             })
+        }
+        //
+        if(data["current"]) {
+            var today = todayDate.year+"-"+todayDate.month+"-"+todayDate.date;
+            tmpResult[today]["current"] = _buildDataPoint(todayDate, data["current"]);
+            // if the icon is missing, use the first from the hourly forecast
+            if(!tmpResult[today]["current"].icon && tmpResult[today]["hourly"] && tmpResult[today]["hourly"].length > 0) {
+                tmpResult[today]["current"].icon = tmpResult[today]["hourly"][0].icon;
+            }
+            // if condtion text is missing, use the conditon from the first hourly forecast
+            if(tmpResult[today]["current"].condition === "-" && tmpResult[today]["hourly"] && tmpResult[today]["hourly"].length > 0) {
+                tmpResult[today]["current"].condition = tmpResult[today]["hourly"][0].condition;
+            }
         }
         //
         for(var d in tmpResult) {
