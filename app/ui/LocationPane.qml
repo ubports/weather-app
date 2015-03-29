@@ -21,7 +21,7 @@ import Ubuntu.Components 1.1
 import Ubuntu.Components.ListItems 0.1 as ListItem
 import "../components"
 
-Rectangle {
+Item {
     id: locationItem
     /*
       Data properties
@@ -39,6 +39,10 @@ Rectangle {
     width: locationPage.width
     height: childrenRect.height
     anchors.fill: parent.fill
+
+    function emptyIfUndefined(variable) {
+        return variable === undefined ? "" : variable
+    }
 
     /*
       Calculates the height of all location data components, to set the Flickable.contentHeight right.
@@ -97,7 +101,12 @@ Rectangle {
                     day: formatTimestamp(forecasts[x].date, 'dddd'),
                     low: Math.round(forecasts[x][tempUnits].tempMin).toString() + settings.tempScale,
                     high: (forecasts[x][tempUnits].tempMax !== undefined) ? Math.round(forecasts[x][tempUnits].tempMax).toString() + settings.tempScale : "",
-                    image: (forecasts[x].icon !== undefined && iconMap[forecasts[x].icon] !== undefined) ? iconMap[forecasts[x].icon] : ""
+                    image: (forecasts[x].icon !== undefined && iconMap[forecasts[x].icon] !== undefined) ? iconMap[forecasts[x].icon] : "",
+                    chanceOfRain: emptyIfUndefined(forecasts[x].propPrecip),
+                    humidity: forecasts[x].humidity === undefined ? "" : forecasts[x].humidity + "%",
+                    uvIndex: emptyIfUndefined(forecasts[x].uv),
+                    wind: forecasts[x][tempUnits].windSpeed === undefined || forecasts[x].windDir === undefined
+                                ? "" : Math.round(forecasts[x][tempUnits].windSpeed) + settings.windUnits + " " + forecasts[x].windDir
                 }
                 mainPageWeekdayListView.model.append(dayData);
             }
@@ -173,10 +182,21 @@ Rectangle {
             id: mainPageWeekdayListView
             model: ListModel{}
             DayDelegate {
+                flickable: locationFlickable
+
                 day: model.day
                 high: model.high
                 image: model.image
                 low: model.low
+
+                chanceOfRain: model.chanceOfRain
+                humidity: model.humidity
+                // TODO: extra from API
+                //pollen: model.pollen
+                //sunrise: model.sunrise
+                //sunset: model.sunset
+                wind: model.wind
+                uvIndex: model.uvIndex
             }
         }
     }

@@ -105,8 +105,6 @@ PageWithBottomEdge {
             anchors.fill: parent
             width: parent.width
             height: childrenRect.height
-            contentWidth: parent.width
-            contentHeight: childrenRect.height
             model: weatherApp.locationsList.length
             // TODO with snapMode, currentIndex is not properly set and setting currentIndex fails
             //snapMode: ListView.SnapOneItem
