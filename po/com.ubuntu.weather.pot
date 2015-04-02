@@ -53,19 +53,19 @@ msgstr ""
 msgid "Search city"
 msgstr ""
 
-#: ../app/ui/AddLocationPage.qml:249
+#: ../app/ui/AddLocationPage.qml:268
 msgid "No city found"
 msgstr ""
 
-#: ../app/ui/AddLocationPage.qml:262
+#: ../app/ui/AddLocationPage.qml:281
 msgid "Couldn't load weather data, please try later again!"
 msgstr ""
 
-#: ../app/ui/AddLocationPage.qml:272
+#: ../app/ui/AddLocationPage.qml:291
 msgid "Location already added."
 msgstr ""
 
-#: ../app/ui/AddLocationPage.qml:275
+#: ../app/ui/AddLocationPage.qml:294
 msgid "OK"
 msgstr ""
 

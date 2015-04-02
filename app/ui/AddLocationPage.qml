@@ -99,11 +99,30 @@ Page {
         }
     }
 
-    function appendCities(list) {
-        list.forEach(function(loc) {
-            citiesModel.append(loc);
-        })
-    }
+    // Builds a area label for the location, depending on the uniqueness of name, adminName1 and country
+     function buildAreaLabel(loc, a1Counts) {
+         var label = "";
+         label += ((loc.adminName1) ? loc.adminName1.replace(/ Region$/,''):"");
+         if (loc.adminName2 && a1Counts[loc.name+loc.adminName1] > 1) {
+             // even name and adminName1 are multiple, add adminName2
+             label += ", "+loc.adminName2;
+         }
+         label += ((label !== "") ? ", " : "") + loc.countryName
+         return label;
+     }
+
+     function appendCities(list) {
+         var a1Counts = {};
+         // count occurrences of name+adminName1 and name+country
+         list.forEach(function(loc) {
+             a1Counts[loc.name+loc.adminName1] = (!a1Counts[loc.name+loc.adminName1]) ? 1 : a1Counts[loc.name+loc.adminName1]+1;
+         });
+         // add locations to listmodel
+         list.forEach(function(loc) {
+             loc.areaLabel = buildAreaLabel(loc, a1Counts)
+             citiesModel.append(loc);
+         })
+     }
 
     function clearModelForLoading() {
         citiesModel.clear()
@@ -197,7 +216,7 @@ Page {
                     color: UbuntuColors.lightGrey
                     elide: Text.ElideRight
                     fontSize: "xx-small"
-                    text: countryName
+                    text: areaLabel
                 }
             }
 
