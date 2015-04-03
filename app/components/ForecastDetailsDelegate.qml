@@ -31,22 +31,10 @@ Row {
     
     Image {
         id: image
+        antialiasing: true
         height: units.gu(2)
+        smooth: true
         width: height
-        
-        Rectangle {
-            anchors {
-                fill: parent
-            }
-            color: "#F00"
-            
-            Label {
-                anchors {
-                    centerIn: parent
-                }
-                text: "img"
-            }
-        }
     }
     
     Label {

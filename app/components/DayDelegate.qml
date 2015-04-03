@@ -204,39 +204,48 @@ ListItem.Standard {
             }
             spacing: units.gu(2)
 
+            // FIXME: extended-infomation_* aren't actually on device
+
             ForecastDetailsDelegate {
                 id: chanceOfRainForecast
                 forecast: i18n.tr("Chance of rain")
+                imageSource: "../graphics/extended-information_chance-of-rain.svg"
             }
 
             ForecastDetailsDelegate {
                 id: windForecast
                 forecast: i18n.tr("Winds")
+                imageSource: "../graphics/extended-information_wind.svg"
             }
 
             ForecastDetailsDelegate {
                 id: uvIndexForecast
+                imageSource: "../graphics/extended-information_uv-level.svg"
                 forecast: i18n.tr("UV Index")
             }
 
             ForecastDetailsDelegate {
                 id: pollenForecast
                 forecast: i18n.tr("Pollen")
+                // FIXME: need icon
             }
 
             ForecastDetailsDelegate {
                 id: humidityForecast
                 forecast: i18n.tr("Humidity")
+                imageSource: "../graphics/extended-information_humidity.svg"
             }
 
             ForecastDetailsDelegate {
                 id: sunriseForecast
                 forecast: i18n.tr("Sunrise")
+                // FIXME: need icon
             }
 
             ForecastDetailsDelegate {
                 id: sunsetForecast
                 forecast: i18n.tr("Sunset")
+                // FIXME: need icon
             }
         }
     }
