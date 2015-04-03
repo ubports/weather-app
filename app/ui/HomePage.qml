@@ -87,6 +87,12 @@ PageWithBottomEdge {
         height: parent.height
         contentWidth: parent.width
 
+        Behavior on contentHeight {
+            NumberAnimation {
+
+            }
+        }
+
         PullToRefresh {
             id: pullToRefresh
             parent: locationFlickable

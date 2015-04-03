@@ -52,7 +52,7 @@ Row {
     Label {
         id: forecastLabel
         elide: Text.ElideRight
-        width: units.gu(15)
+        width: units.gu(12)
     }
     
     Label {

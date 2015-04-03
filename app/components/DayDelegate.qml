@@ -24,11 +24,9 @@ ListItem.Standard {
     id: dayDelegate
     height: collapsedHeight
 
-    // TODO: will expand when clicked to reveal more info
-
     property Flickable flickable
     property int collapsedHeight: units.gu(8)
-    property int expandedHeight: units.gu(12) + extraInfoColumn.childrenRect.height
+    property int expandedHeight: collapsedHeight + units.gu(4) + extraInfoColumn.childrenRect.height
 
     property alias day: dayLabel.text
     property alias image: weatherImage.name
@@ -76,9 +74,48 @@ ListItem.Standard {
 
     transitions: [
         Transition {
+            from: "normal"
+            to: "expanded"
+            SequentialAnimation {
+                NumberAnimation {
+                    easing.type: Easing.InOutQuad
+                    properties: "height"
+                }
+                NumberAnimation {
+                    easing.type: Easing.InOutQuad
+                    properties: "opacity"
+                }
+            }
+            SequentialAnimation {
+                NumberAnimation {
+                    easing.type: Easing.InOutQuad
+                    property: "contentY";
+                    target: flickable;
+                    to: dayDelegate.y + parent.y < flickable.contentHeight - flickable.height + (expandedHeight - collapsedHeight) ? dayDelegate.y + parent.y : flickable.contentHeight - flickable.height + (expandedHeight - collapsedHeight)
+                }
+                ScriptAction {
+                    script: flickable.returnToBounds()
+                }
+            }
+
+        },
+        Transition {
+            from: "expanded"
+            to: "normal"
+            SequentialAnimation {
+                NumberAnimation {
+                    easing.type: Easing.InOutQuad
+                    properties: "opacity"
+                }
+                NumberAnimation {
+                    easing.type: Easing.InOutQuad
+                    properties: "height"
+                }
+            }
             NumberAnimation {
                 easing.type: Easing.InOutQuad
-                properties: "height, opacity"
+                properties: "contentY,contentHeight"
+                target: flickable
             }
         }
     ]
