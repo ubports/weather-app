@@ -32,6 +32,7 @@ Item {
             centerIn: parent
         }
         fillMode: Image.PreserveAspectFit
+        height: parent.height
         width: parent.width
     }
 }
