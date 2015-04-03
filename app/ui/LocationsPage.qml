@@ -99,7 +99,7 @@ Page {
                         verticalCenter: parent.verticalCenter
                     }
                     elide: Text.ElideRight
-                    text: model.location.name
+                    text: name
                 }
 
                 Icon {
@@ -109,7 +109,7 @@ Page {
                         verticalCenter: parent.verticalCenter
                     }
                     height: units.gu(3)
-                    name: locationPage.iconMap[locationPages.contentItem.children[index].iconName] || ""
+                    name: icon
                     visible: locationsPage.state === "default"
                     width: units.gu(3)
                 }
@@ -126,10 +126,12 @@ Page {
                     elide: Text.ElideRight
                     font.pixelSize: units.gu(4)
                     font.weight: Font.Light
-                    horizontalAlignment: Text.AlignRight
-                    text: locationPages.contentItem.children[index].currentTemp ? locationPages.contentItem.children[index].currentTemp + settings.tempScale[1]
-                                                                                : ""
+                    horizontalAlignment: Text.AlignRight                    
+                    text: temp + ""+ settings.tempScale
                     visible: locationsPage.state === "default"
+                }
+                Component.onCompleted: {
+
                 }
             }
 
@@ -143,9 +145,16 @@ Page {
 
     function populateLocationsModel() {
         locationsModel.clear()
-
+        var loc = {}, data = {},
+            tempUnits = settings.tempScale === "°C" ? "metric" : "imperial";
         for (var i=0; i < weatherApp.locationsList.length; i++) {
-            locationsModel.append(weatherApp.locationsList[i])
+            data = weatherApp.locationsList[i];
+            loc = {
+                "name": data.location.name,
+                "temp": Math.round(data.data[0].current[tempUnits].temp).toString(),
+                "icon": iconMap[data.data[0].current.icon]
+            }
+            locationsModel.append(loc)
         }
     }
 
