@@ -36,9 +36,13 @@ Page {
             Component.onCompleted: initialize()
             function initialize() {
                 // TRANSLATORS: The strings are standard measurement units
-                // of temperature and are shown in the settings page. Only
-                // the abbreviated forms are used.
+                // of temperature in Celcius and are shown in the settings page.
+                // Only the abbreviated form of Celcius should be used.
                 temperatureModel.append({"text": i18n.tr("°C"), "value": "°C"})
+
+                // TRANSLATORS: The strings are standard measurement units
+                // of temperature in Fahrenheit and are shown in the settings page.
+                // Only the abbreviated form of Fahrenheit should be used.
                 temperatureModel.append({"text": i18n.tr("°F"), "value": "°F"})
             }
         }
@@ -48,9 +52,13 @@ Page {
             Component.onCompleted: initialize()
             function initialize() {
                 // TRANSLATORS: The strings are standard measurement units
-                // of precipitation and are shown in the settings page. Only
-                // the abbreviated forms are used.
+                // of precipitation in millimeters and are shown in the settings page.
+                // Only the abbreviated form of millimeters should be used.
                 precipationModel.append({"text": i18n.tr("mm"), "value": "mm"})
+
+                // TRANSLATORS: The strings are standard measurement units
+                // of precipitation in inches and are shown in the settings page.
+                // Only the abbreviated form of inches should be used.
                 precipationModel.append({"text": i18n.tr("in"), "value": "in"})
             }
         }
@@ -60,9 +68,13 @@ Page {
             Component.onCompleted: initialize()
             function initialize() {
                 // TRANSLATORS: The strings are standard measurement units
-                // of wind speed and are shown in the settings page. Only
-                // the abbreviated forms are used.
+                // of wind speed in kilometers per hour and are shown in the settings page.
+                // Only the abbreviated form of kilometers per hour should be used.
                 windSpeeModel.append({"text": i18n.tr("kmh"), "value": "kmh"})
+
+                // TRANSLATORS: The strings are standard measurement units
+                // of wind speed in miles per hour and are shown in the settings page.
+                // Only the abbreviated form of miles per hour should be used.
                 windSpeeModel.append({"text": i18n.tr("mph"), "value": "mph"})
             }
         }
