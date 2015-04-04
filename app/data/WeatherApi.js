@@ -23,7 +23,7 @@
 *  Version of the response data format.
 *  Increase this number to force a refresh.
 */
-var RESPONSE_DATA_VERSION = 20150321;
+var RESPONSE_DATA_VERSION = 20150404;
 
 /**
 * Helper functions
@@ -550,9 +550,11 @@ var WeatherChannelApi = (function() {
             if(!tmpResult[today]["current"].icon && tmpResult[today]["hourly"] && tmpResult[today]["hourly"].length > 0) {
                 tmpResult[today]["current"].icon = tmpResult[today]["hourly"][0].icon;
             }
-            // if condtion text is missing, use the conditon from the first hourly forecast
-            if(tmpResult[today]["current"].condition === "-" && tmpResult[today]["hourly"] && tmpResult[today]["hourly"].length > 0) {
-                tmpResult[today]["current"].condition = tmpResult[today]["hourly"][0].condition;
+            // if condition text is missing, use the conditon from the first hourly forecast
+            if(tmpResult[today]["current"].condition === "-" || tmpResult[today]["current"].condition === undefined) {
+                if(tmpResult[today]["hourly"] && tmpResult[today]["hourly"].length > 0) {
+                    tmpResult[today]["current"].condition = tmpResult[today]["hourly"][0].condition;
+                }
             }
         }
         //
