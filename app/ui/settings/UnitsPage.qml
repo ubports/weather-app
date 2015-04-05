@@ -64,18 +64,18 @@ Page {
         }
 
         ListModel {
-            id: windSpeeModel
+            id: windSpeedModel
             Component.onCompleted: initialize()
             function initialize() {
                 // TRANSLATORS: The strings are standard measurement units
                 // of wind speed in kilometers per hour and are shown in the settings page.
                 // Only the abbreviated form of kilometers per hour should be used.
-                windSpeeModel.append({"text": i18n.tr("kmh"), "value": "kmh"})
+                windSpeedModel.append({"text": i18n.tr("kmh"), "value": "kmh"})
 
                 // TRANSLATORS: The strings are standard measurement units
                 // of wind speed in miles per hour and are shown in the settings page.
                 // Only the abbreviated form of miles per hour should be used.
-                windSpeeModel.append({"text": i18n.tr("mph"), "value": "mph"})
+                windSpeedModel.append({"text": i18n.tr("mph"), "value": "mph"})
             }
         }
 
@@ -142,8 +142,8 @@ Page {
             ExpandableListItem {
                 id: windSetting
 
-                listViewHeight: windSpeeModel.count*units.gu(6) - units.gu(0.5)
-                model: windSpeeModel
+                listViewHeight: windSpeedModel.count*units.gu(6) - units.gu(0.5)
+                model: windSpeedModel
                 text: i18n.tr("Wind Speed")
                 subText: settings.windUnits === "kmh" ? i18n.tr("kmh")
                                                       : i18n.tr("mph")
