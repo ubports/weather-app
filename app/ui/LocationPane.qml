@@ -106,7 +106,7 @@ Item {
                     low: Math.round(forecasts[x][tempUnits].tempMin).toString() + settings.tempScale,
                     high: (forecasts[x][tempUnits].tempMax !== undefined) ? Math.round(forecasts[x][tempUnits].tempMax).toString() + settings.tempScale : "",
                     image: (forecasts[x].icon !== undefined && iconMap[forecasts[x].icon] !== undefined) ? iconMap[forecasts[x].icon] : "",
-                    chanceOfRain: emptyIfUndefined(forecasts[x].propPrecip, "%"),
+                    chanceOfRain: forecasts[x].propPrecip === undefined ? -1 : forecasts[x].propPrecip,
                     humidity: emptyIfUndefined(forecasts[x].humidity, "%"),
                     uvIndex: emptyIfUndefined(forecasts[x].uv),
                     wind: forecasts[x][tempUnits].windSpeed === undefined || forecasts[x].windDir === undefined

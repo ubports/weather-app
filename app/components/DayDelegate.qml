@@ -33,7 +33,7 @@ ListItem.Standard {
     property alias high: highLabel.text
     property alias low: lowLabel.text
 
-    property alias chanceOfRain: chanceOfRainForecast.value
+    property alias chanceOfRain: chanceOfRainForecast.chance
     property alias humidity: humidityForecast.value
     property alias pollen: pollenForecast.value
     property alias sunrise: sunriseForecast.value
@@ -195,7 +195,6 @@ ListItem.Standard {
         opacity: 0
         visible: opacity !== 0
 
-        // TODO: add overview text eg "Chance of flurries"
 
         Column {
             id: extraInfoColumn
@@ -206,10 +205,17 @@ ListItem.Standard {
 
             // FIXME: extended-infomation_* aren't actually on device
 
-            ForecastDetailsDelegate {
+            // Overview text
+            Label {
                 id: chanceOfRainForecast
-                forecast: i18n.tr("Chance of rain")
-                imageSource: "../graphics/extended-information_chance-of-rain.svg"
+                color: UbuntuColors.coolGrey
+                fontSize: "x-large"
+                horizontalAlignment: Text.AlignHCenter
+                text: i18n.tr("Chance of rain")
+                width: parent.width
+                visible: false  // FIXME: add overview text eg "Chance of flurries"
+
+                property int chance: 0
             }
 
             ForecastDetailsDelegate {

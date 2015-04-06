@@ -21,26 +21,25 @@ import Ubuntu.Components 1.1
 import Ubuntu.Components.ListItems 0.1 as ListItem
 
 Row {
-    height: image.height
+    height: icon.height
     spacing: units.gu(2)
     visible: value !== ""
 
-    property alias imageSource: image.source
+    property alias imageSource: icon.source
     property alias forecast: forecastLabel.text
     property alias value: forecastValue.text
     
-    Image {
-        id: image
-        antialiasing: true
+    Icon {
+        id: icon
+        color: "#000"
         height: units.gu(2)
-        smooth: true
         width: height
     }
     
     Label {
         id: forecastLabel
         elide: Text.ElideRight
-        width: units.gu(12)
+        width: units.gu(8)
     }
     
     Label {
