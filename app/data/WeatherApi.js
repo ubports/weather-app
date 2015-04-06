@@ -550,11 +550,10 @@ var WeatherChannelApi = (function() {
             if(!tmpResult[today]["current"].icon && tmpResult[today]["hourly"] && tmpResult[today]["hourly"].length > 0) {
                 tmpResult[today]["current"].icon = tmpResult[today]["hourly"][0].icon;
             }
-            // if condition text is missing, use the conditon from the first hourly forecast
-            if(tmpResult[today]["current"].condition === "-" || tmpResult[today]["current"].condition === undefined) {
-                if(tmpResult[today]["hourly"] && tmpResult[today]["hourly"].length > 0) {
+            // if condition text is missing, use the condition from the first hourly forecast
+            if((tmpResult[today]["current"].condition === "-" || tmpResult[today]["current"].condition === undefined)
+                && (tmpResult[today]["hourly"] && tmpResult[today]["hourly"].length > 0)) {
                     tmpResult[today]["current"].condition = tmpResult[today]["hourly"][0].condition;
-                }
             }
         }
         //
