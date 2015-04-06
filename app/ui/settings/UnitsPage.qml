@@ -19,57 +19,151 @@
 import QtQuick 2.3
 import Ubuntu.Components 1.1
 import Ubuntu.Components.ListItems 0.1 as ListItem
-
+import "../../components"
 
 Page {
     title: i18n.tr("Units")
 
+    flickable: null
+
     Flickable {
-        anchors {
-            fill: parent
-        }
+        anchors.fill: parent
         height: parent.height
         contentHeight: unitsColumn.childrenRect.height
 
+        ListModel {
+            id: temperatureModel
+            Component.onCompleted: initialize()
+            function initialize() {
+                // TRANSLATORS: The strings are standard measurement units
+                // of temperature in Celcius and are shown in the settings page.
+                // Only the abbreviated form of Celcius should be used.
+                temperatureModel.append({"text": i18n.tr("°C"), "value": "°C"})
+
+                // TRANSLATORS: The strings are standard measurement units
+                // of temperature in Fahrenheit and are shown in the settings page.
+                // Only the abbreviated form of Fahrenheit should be used.
+                temperatureModel.append({"text": i18n.tr("°F"), "value": "°F"})
+            }
+        }
+
+        ListModel {
+            id: precipationModel
+            Component.onCompleted: initialize()
+            function initialize() {
+                // TRANSLATORS: The strings are standard measurement units
+                // of precipitation in millimeters and are shown in the settings page.
+                // Only the abbreviated form of millimeters should be used.
+                precipationModel.append({"text": i18n.tr("mm"), "value": "mm"})
+
+                // TRANSLATORS: The strings are standard measurement units
+                // of precipitation in inches and are shown in the settings page.
+                // Only the abbreviated form of inches should be used.
+                precipationModel.append({"text": i18n.tr("in"), "value": "in"})
+            }
+        }
+
+        ListModel {
+            id: windSpeedModel
+            Component.onCompleted: initialize()
+            function initialize() {
+                // TRANSLATORS: The strings are standard measurement units
+                // of wind speed in kilometers per hour and are shown in the settings page.
+                // Only the abbreviated form of kilometers per hour should be used.
+                windSpeedModel.append({"text": i18n.tr("kmh"), "value": "kmh"})
+
+                // TRANSLATORS: The strings are standard measurement units
+                // of wind speed in miles per hour and are shown in the settings page.
+                // Only the abbreviated form of miles per hour should be used.
+                windSpeedModel.append({"text": i18n.tr("mph"), "value": "mph"})
+            }
+        }
+
         Column {
             id: unitsColumn
-            anchors {
-                fill: parent
-            }
+            anchors.fill: parent
 
-            ListItem.ItemSelector {
-                expanded: true
-                model: ["°C", "°F"]
-                selectedIndex: model.indexOf(settings.tempScale)
+            ExpandableListItem {
+                id: temperatureSetting
+
+                listViewHeight: temperatureModel.count*units.gu(6) - units.gu(0.5)
+                model: temperatureModel
                 text: i18n.tr("Temperature")
+                subText: settings.tempScale === "°C" ? i18n.tr("°C")
+                                                     : i18n.tr("°F")
 
-                onDelegateClicked: {
-                    settings.tempScale = model[index]
-                    refreshData(true)
+                delegate: ListItem.Standard {
+                    text: model.text
+                    onClicked: {
+                        settings.tempScale = model.value
+                        refreshData(true)
+                    }
+
+                    Icon {
+                        width: units.gu(2)
+                        height: width
+                        name: "ok"
+                        visible: settings.tempScale === model.value
+                        anchors.right: parent.right
+                        anchors.rightMargin: units.gu(2)
+                        anchors.verticalCenter: parent.verticalCenter
+                    }
                 }
             }
 
-            ListItem.ItemSelector {
-                expanded: true
-                model: ["mm", "in"]
-                selectedIndex: model.indexOf(settings.precipUnits)
+            ExpandableListItem {
+                id: precipationSetting
+
+                listViewHeight: precipationModel.count*units.gu(6) - units.gu(0.5)
+                model: precipationModel
                 text: i18n.tr("Precipitation")
+                subText: settings.precipUnits === "mm" ? i18n.tr("mm")
+                                                       : i18n.tr("in")
 
-                onDelegateClicked: {
-                    settings.precipUnits = model[index]
-                    refreshData(true)
+                delegate: ListItem.Standard {
+                    text: model.text
+                    onClicked: {
+                        settings.precipUnits = model.value
+                        refreshData(true)
+                    }
+
+                    Icon {
+                        width: units.gu(2)
+                        height: width
+                        name: "ok"
+                        visible: settings.precipUnits === model.value
+                        anchors.right: parent.right
+                        anchors.rightMargin: units.gu(2)
+                        anchors.verticalCenter: parent.verticalCenter
+                    }
                 }
             }
 
-            ListItem.ItemSelector {
-                expanded: true
-                model: ["kmh", "mph"]
-                text: i18n.tr("Wind Speed")
-                selectedIndex: model.indexOf(settings.windUnits)
+            ExpandableListItem {
+                id: windSetting
 
-                onDelegateClicked: {
-                    settings.windUnits = model[index]
-                    refreshData(true)
+                listViewHeight: windSpeedModel.count*units.gu(6) - units.gu(0.5)
+                model: windSpeedModel
+                text: i18n.tr("Wind Speed")
+                subText: settings.windUnits === "kmh" ? i18n.tr("kmh")
+                                                      : i18n.tr("mph")
+
+                delegate: ListItem.Standard {
+                    text: model.text
+                    onClicked: {
+                        settings.windUnits = model.value
+                        refreshData(true)
+                    }
+
+                    Icon {
+                        width: units.gu(2)
+                        height: width
+                        name: "ok"
+                        visible: settings.windUnits === model.value
+                        anchors.right: parent.right
+                        anchors.rightMargin: units.gu(2)
+                        anchors.verticalCenter: parent.verticalCenter
+                    }
                 }
             }
         }
