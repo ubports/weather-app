@@ -88,7 +88,7 @@ Page {
                 }
 
                 Label {
-                    id: nameLabel
+                    id: locationName
                     anchors {
                         left: parent.left
                         right: weatherImage.visible ? weatherImage.left : parent.right
@@ -109,7 +109,7 @@ Page {
                 }
 
                 Label {
-                    id: nowLabel
+                    id: temperatureLabel
                     anchors {
                         left: weatherImage.right
                         leftMargin: units.gu(1)
@@ -121,7 +121,7 @@ Page {
                     font.pixelSize: units.gu(4)
                     font.weight: Font.Light
                     horizontalAlignment: Text.AlignRight
-                    text: temp + ""+ settings.tempScale
+                    text: temp + settings.tempScale
                     visible: locationsPage.state === "default"
                 }
             }
