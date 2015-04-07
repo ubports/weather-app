@@ -82,12 +82,9 @@ Page {
 
             Item {
                 anchors {
-                    bottom: parent.bottom
-                    left: parent.left
+                    fill: parent
                     leftMargin: units.gu(2)
-                    right: parent.right
                     rightMargin: units.gu(2)
-                    top: parent.top
                 }
 
                 Label {
@@ -104,14 +101,11 @@ Page {
 
                 Icon {
                     id: weatherImage
-                    anchors {
-                        horizontalCenter: parent.horizontalCenter
-                        verticalCenter: parent.verticalCenter
-                    }
-                    height: units.gu(3)
                     name: icon
-                    visible: locationsPage.state === "default"
                     width: units.gu(3)
+                    height: units.gu(3)
+                    anchors.centerIn: parent
+                    visible: locationsPage.state === "default"
                 }
 
                 Label {
@@ -126,12 +120,9 @@ Page {
                     elide: Text.ElideRight
                     font.pixelSize: units.gu(4)
                     font.weight: Font.Light
-                    horizontalAlignment: Text.AlignRight                    
+                    horizontalAlignment: Text.AlignRight
                     text: temp + ""+ settings.tempScale
                     visible: locationsPage.state === "default"
-                }
-                Component.onCompleted: {
-
                 }
             }
 
