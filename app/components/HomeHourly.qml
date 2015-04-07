@@ -18,11 +18,15 @@
 
 import QtQuick 2.3
 import Ubuntu.Components 1.1
-import Ubuntu.Components.ListItems 0.1 as ListItem
-import QtGraphicalEffects 1.0
 
-Item {
+ListView {
     id: homeHourly
+
+    width: parent ? parent.width : undefined
+    height: parent ? parent.height : undefined
+    model: forecasts.length
+    orientation: ListView.Horizontal
+    clip:true
 
     onVisibleChanged: {
         if(visible) {
@@ -30,63 +34,64 @@ Item {
         }
     }
 
-    ListView {
-        id: hourlyForecasts
-        width:parent.width
-        height:parent.height
-        model: forecasts.length
-        orientation: ListView.Horizontal
-        clip:true
-        MouseArea {
-            anchors.fill: parent
-            onClicked: {
-                homeGraphic.visible = true
+    MouseArea {
+        anchors.fill: parent
+        onClicked: {
+            homeGraphic.visible = true
+        }
+    }
+
+    delegate: Item {
+        id: delegate
+
+        property var hourData: forecasts[index]
+
+        width: childrenRect.width
+        height: parent.height
+
+        Column {
+            id: hourColumn
+            width: units.gu(10)
+            height: childrenRect.height
+            anchors.verticalCenter: parent.verticalCenter
+
+            Label {
+                text: formatTimestamp(hourData.date, 'ddd')+" "+formatTime(hourData.date, 'h:mm')
+                fontSize: "small"
+                font.weight: Font.Light
+                anchors.horizontalCenter: parent.horizontalCenter
+            }
+
+            Item {
+                width: units.gu(7)
+                height: units.gu(7)
+                anchors.horizontalCenter: parent.horizontalCenter
+                Icon {
+                    anchors {
+                        fill: parent
+                        margins: units.gu(0.5)
+                    }
+                    color: UbuntuColors.orange
+                    name: (hourData.icon !== undefined && iconMap[hourData.icon] !== undefined) ? iconMap[hourData.icon] : ""
+                }
+            }
+
+            Label {
+                font.pixelSize: units.gu(3)
+                font.weight: Font.Light
+                anchors.horizontalCenter: parent.horizontalCenter
+                text: Math.round(hourData[tempUnits].temp).toString()+settings.tempScale
             }
         }
-        delegate: Rectangle {
-            width: childrenRect.width
-            height: parent.height
-            property var hourData: forecasts[index]
-            Column {
-                id: hourColumn
-                width: units.gu(10)
-                height: childrenRect.height
-                anchors.verticalCenter: parent.verticalCenter
-                Label {
-                    text: formatTimestamp(hourData.date, 'ddd')+" "+formatTime(hourData.date, 'h:mm')
-                    fontSize: "small"
-                    font.weight: Font.Light
-                    anchors.horizontalCenter: parent.horizontalCenter
-                }
-                Item {
-                    width: units.gu(7)
-                    height: units.gu(7)
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    Icon {
-                        anchors {
-                            fill: parent
-                            margins: units.gu(0.5)
-                        }
-                        color: UbuntuColors.orange
-                        name: (hourData.icon !== undefined && iconMap[hourData.icon] !== undefined) ? iconMap[hourData.icon] : ""
-                    }
-                }
-                Label {
-                    font.pixelSize: units.gu(3)
-                    font.weight: Font.Light
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    text: Math.round(hourData[tempUnits].temp).toString()+settings.tempScale
-                }
 
-            }
-            Rectangle {
-                anchors.verticalCenter: parent.verticalCenter
-                color: UbuntuColors.darkGrey
-                height: hourColumn.height
-                opacity: 0.2
-                visible: index > 0
-                width: units.gu(0.1)
-            }
+        Rectangle {
+            anchors.verticalCenter: parent.verticalCenter
+            color: UbuntuColors.darkGrey
+            height: hourColumn.height
+            opacity: 0.2
+            visible: index > 0
+            width: units.gu(0.1)
         }
     }
 }
+
