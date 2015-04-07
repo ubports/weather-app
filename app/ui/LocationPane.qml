@@ -113,7 +113,9 @@ Rectangle {
 
     Column {
         id: locationTop
+
         anchors {
+            top: parent.top
             left: parent.left
             right: parent.right
             margins: units.gu(2)
