@@ -22,11 +22,11 @@ import Ubuntu.Components 1.1
 ListView {
     id: homeHourly
 
-    width: parent ? parent.width : undefined
+    clip:true
     height: parent ? parent.height : undefined
+    width: parent ? parent.width : undefined
     model: forecasts.length
     orientation: ListView.Horizontal
-    clip:true
 
     onVisibleChanged: {
         if(visible) {
@@ -46,26 +46,28 @@ ListView {
 
         property var hourData: forecasts[index]
 
-        width: childrenRect.width
         height: parent.height
+        width: childrenRect.width
 
         Column {
             id: hourColumn
-            width: units.gu(10)
-            height: childrenRect.height
+
             anchors.verticalCenter: parent.verticalCenter
+            height: childrenRect.height
+            width: units.gu(10)
 
             Label {
-                text: formatTimestamp(hourData.date, 'ddd')+" "+formatTime(hourData.date, 'h:mm')
+                anchors.horizontalCenter: parent.horizontalCenter
                 fontSize: "small"
                 font.weight: Font.Light
-                anchors.horizontalCenter: parent.horizontalCenter
+                text: formatTimestamp(hourData.date, 'ddd')+" "+formatTime(hourData.date, 'h:mm')
             }
 
             Item {
-                width: units.gu(7)
-                height: units.gu(7)
                 anchors.horizontalCenter: parent.horizontalCenter
+                height: units.gu(7)
+                width: units.gu(7)
+
                 Icon {
                     anchors {
                         fill: parent
@@ -77,9 +79,9 @@ ListView {
             }
 
             Label {
+                anchors.horizontalCenter: parent.horizontalCenter
                 font.pixelSize: units.gu(3)
                 font.weight: Font.Light
-                anchors.horizontalCenter: parent.horizontalCenter
                 text: Math.round(hourData[tempUnits].temp).toString()+settings.tempScale
             }
         }
