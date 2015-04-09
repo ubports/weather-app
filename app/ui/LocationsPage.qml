@@ -101,10 +101,10 @@ Page {
 
                 Icon {
                     id: weatherImage
-                    name: icon
-                    width: units.gu(3)
-                    height: units.gu(3)
                     anchors.centerIn: parent
+                    name: icon
+                    height: units.gu(3)
+                    width: units.gu(3)
                     visible: locationsPage.state === "default"
                 }
 

@@ -33,8 +33,8 @@ RowLayout {
         elide: Text.ElideRight
         font.weight: Font.Normal
         fontSize: "large"
-        Layout.fillWidth: true
         height: settingsButton.height
+        Layout.fillWidth: true
         verticalAlignment: Text.AlignVCenter
     }
 
@@ -47,16 +47,16 @@ RowLayout {
 
         Rectangle {
             anchors.fill: parent
-            visible: parent.pressed
             color: Theme.palette.selected.background
+            visible: parent.pressed
         }
 
         Icon {
-            name: "settings"
-            height: width
-            width: units.gu(2.5)
             anchors.centerIn: parent
             color: UbuntuColors.darkGrey
+            height: width
+            name: "settings"
+            width: units.gu(2.5)
         }
     }
 }
