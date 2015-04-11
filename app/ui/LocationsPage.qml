@@ -82,16 +82,13 @@ Page {
 
             Item {
                 anchors {
-                    bottom: parent.bottom
-                    left: parent.left
+                    fill: parent
                     leftMargin: units.gu(2)
-                    right: parent.right
                     rightMargin: units.gu(2)
-                    top: parent.top
                 }
 
                 Label {
-                    id: nameLabel
+                    id: locationName
                     anchors {
                         left: parent.left
                         right: weatherImage.visible ? weatherImage.left : parent.right
@@ -104,18 +101,15 @@ Page {
 
                 Icon {
                     id: weatherImage
-                    anchors {
-                        horizontalCenter: parent.horizontalCenter
-                        verticalCenter: parent.verticalCenter
-                    }
-                    height: units.gu(3)
+                    anchors.centerIn: parent
                     name: icon
-                    visible: locationsPage.state === "default"
+                    height: units.gu(3)
                     width: units.gu(3)
+                    visible: locationsPage.state === "default"
                 }
 
                 Label {
-                    id: nowLabel
+                    id: temperatureLabel
                     anchors {
                         left: weatherImage.right
                         leftMargin: units.gu(1)
@@ -126,12 +120,9 @@ Page {
                     elide: Text.ElideRight
                     font.pixelSize: units.gu(4)
                     font.weight: Font.Light
-                    horizontalAlignment: Text.AlignRight                    
-                    text: temp + ""+ settings.tempScale
+                    horizontalAlignment: Text.AlignRight
+                    text: temp + settings.tempScale
                     visible: locationsPage.state === "default"
-                }
-                Component.onCompleted: {
-
                 }
             }
 
