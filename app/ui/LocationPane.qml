@@ -80,7 +80,7 @@ Item {
         // set current temps and condition
         iconName = (current.icon) ? current.icon : "";
         icon = (imageMap[iconName] !== undefined) ? imageMap[iconName] : "";
-        conditionText = (current.condition.main) ? current.condition.main : current.condition; // difference TWC/OWM
+        conditionText = (current.condition !== undefined) ? current.condition : "";
         todayMaxTemp = (today[tempUnits].tempMax !== undefined) ? Math.round(today[tempUnits].tempMax).toString() + settings.tempScale: "";
         todayMinTemp = Math.round(today[tempUnits].tempMin).toString() + settings.tempScale;
         currentTemp = Math.round(current[tempUnits].temp).toString() + String("°");
@@ -126,7 +126,9 @@ Item {
 
     Column {
         id: locationTop
+
         anchors {
+            top: parent.top
             left: parent.left
             right: parent.right
             margins: units.gu(2)

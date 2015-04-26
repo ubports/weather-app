@@ -78,6 +78,15 @@ PageWithBottomEdge {
     }
 
     /*
+      Background for the PageWithBottomEdge
+    */
+    Rectangle {
+        id: pageBackground
+        anchors.fill: parent
+        color: "white"
+    }
+
+    /*
       Flickable to scroll the location vertically.
       The respective contentHeight gets calculated after the Location is filled with data.
     */
