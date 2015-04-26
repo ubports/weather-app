@@ -40,21 +40,15 @@ Item {
     height: childrenRect.height
     anchors.fill: parent.fill
 
+    // FIXME: not sure where the 2GU comes from, PullToRefresh or something in HomePage?
+    onHeightChanged: locationFlickable.contentHeight = locationItem.height + units.gu(2)
+
     function emptyIfUndefined(variable, append) {
         if (append === undefined) {
             append = ""
         }
 
         return variable === undefined ? "" : variable + append
-    }
-
-    /*
-      Calculates the height of all location data components, to set the Flickable.contentHeight right.
-    */
-    function setFlickableContentHeight() {
-        var contentHeightGu = (homeTempInfo.height+homeGraphic.height
-                               +(weekdayColumn.height*mainPageWeekdayListView.model.count))/units.gridUnit;
-        locationFlickable.contentHeight = units.gu(contentHeightGu+25);
     }
 
     /*
@@ -115,7 +109,6 @@ Item {
                 mainPageWeekdayListView.model.append(dayData);
             }
         }        
-        setFlickableContentHeight();
 
         // set data for hourly forecasts
         if(hourlyForecasts.length > 0) {
@@ -178,6 +171,7 @@ Item {
         id: weekdayColumn
         width: parent.width
         height: childrenRect.height
+
         anchors {
             top: locationTop.bottom
             left: parent.left
@@ -187,9 +181,7 @@ Item {
         Repeater {
             id: mainPageWeekdayListView
             model: ListModel{}
-            DayDelegate {
-                flickable: locationFlickable
-
+            delegate: DayDelegate {
                 day: model.day
                 high: model.high
                 image: model.image

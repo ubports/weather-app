@@ -118,18 +118,26 @@ PageWithBottomEdge {
         ListView {
             id: locationPages
             anchors.fill: parent
-            width: parent.width
+            currentIndex: settings.current
+            delegate: LocationPane {}
             height: childrenRect.height
+            highlightRangeMode: ListView.StrictlyEnforceRange
             model: weatherApp.locationsList.length
+            orientation: ListView.Horizontal
             // TODO with snapMode, currentIndex is not properly set and setting currentIndex fails
             //snapMode: ListView.SnapOneItem
-            orientation: ListView.Horizontal
-            currentIndex: settings.current
-            highlightRangeMode: ListView.StrictlyEnforceRange
+            width: parent.width
+
+            property bool loaded: false
+
+            signal collapseOtherDelegates(int index)
+
             onCurrentIndexChanged: {
                 if (loaded) {
                     // FIXME: when a model is reloaded this causes the currentIndex to be lost
                     settings.current = currentIndex
+
+                    collapseOtherDelegates(-1)  // collapse all
                 }
             }
             onModelChanged: {
@@ -140,9 +148,12 @@ PageWithBottomEdge {
                     loaded = true
                 }
             }
-            delegate: LocationPane {}
+            onVisibleChanged: {
+                if (!visible && loaded) {
+                    collapseOtherDelegates(-1)  // collapse all
+                }
+            }
 
-            property bool loaded: false
             // TODO: workaround for not being able to use snapMode property
             Component.onCompleted: {
                 var scaleFactor = units.gridUnit * 10;

@@ -24,7 +24,6 @@ ListItem.Standard {
     id: dayDelegate
     height: collapsedHeight
 
-    property Flickable flickable
     property int collapsedHeight: units.gu(8)
     property int expandedHeight: collapsedHeight + units.gu(4) + extraInfoColumn.childrenRect.height
 
@@ -52,18 +51,12 @@ ListItem.Standard {
                 target: dayDelegate
                 height: collapsedHeight
             }
-            StateChangeScript {
-                script: flickable.contentHeight -= expandedHeight - collapsedHeight
-            }
         },
         State {
             name: "expanded"
             PropertyChanges {
                 target: dayDelegate
                 height: expandedHeight
-            }
-            StateChangeScript {
-                script: flickable.contentHeight += expandedHeight - collapsedHeight
             }
             PropertyChanges {
                 target: expandedInfo
@@ -86,18 +79,6 @@ ListItem.Standard {
                     properties: "opacity"
                 }
             }
-            SequentialAnimation {
-                NumberAnimation {
-                    easing.type: Easing.InOutQuad
-                    property: "contentY";
-                    target: flickable;
-                    to: dayDelegate.y + parent.y < flickable.contentHeight - flickable.height + (expandedHeight - collapsedHeight) ? dayDelegate.y + parent.y : flickable.contentHeight - flickable.height + (expandedHeight - collapsedHeight)
-                }
-                ScriptAction {
-                    script: flickable.returnToBounds()
-                }
-            }
-
         },
         Transition {
             from: "expanded"
@@ -112,15 +93,13 @@ ListItem.Standard {
                     properties: "height"
                 }
             }
-            NumberAnimation {
-                easing.type: Easing.InOutQuad
-                properties: "contentY,contentHeight"
-                target: flickable
-            }
         }
     ]
 
-    onClicked: state = state === "normal" ? "expanded" : "normal"
+    onClicked: {
+        state = state === "normal" ? "expanded" : "normal"
+        locationPages.collapseOtherDelegates(index)
+    }
 
     ListItem.ThinDivider {
         anchors {
@@ -254,5 +233,13 @@ ListItem.Standard {
                 // FIXME: need icon
             }
         }
+    }
+
+    Component.onCompleted: {
+        locationPages.collapseOtherDelegates.connect(function(otherIndex) {
+            if (dayDelegate && typeof index !== "undefined" && otherIndex !== index) {
+                state = "normal"
+            }
+        });
     }
 }
