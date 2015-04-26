@@ -29,7 +29,7 @@ Rectangle {
         bottomMargin: Qt.inputMethod.keyboardRectangle.height
     }
     height: units.dp(3)
-    color: "#50000000"
+    color: "white"
     opacity: 0
     visible: opacity > 0
 
