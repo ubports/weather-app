@@ -147,7 +147,7 @@ MainView {
                 service = "weatherchannel"
                 tempScale = "°" + (metric ? "C" : "F")
                 units = metric ? "metric" : "imperial"
-                windUnits = metric ? "kmh" : "mph"
+                windUnits = metric ? "kph" : "mph"
             }
         }
     }
