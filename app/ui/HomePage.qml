@@ -133,6 +133,7 @@ PageWithBottomEdge {
 
                 if (model > 0) {
                     pullToRefresh.refreshing = false
+                    loading = false
                     loaded = true
                 }
             }
@@ -153,5 +154,9 @@ PageWithBottomEdge {
                 }
             }
         }
+    }
+
+    LoadingIndicator {
+        id: loadingIndicator
     }
 }

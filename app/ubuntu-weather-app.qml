@@ -55,6 +55,11 @@ MainView {
     property int indexAtRefresh: -1
 
     /*
+      Is the app loading?
+    */
+    property bool loading: false
+
+    /*
       (re)load the pages on completion
     */
     Component.onCompleted: {
@@ -97,6 +102,7 @@ MainView {
     function refreshData(from_storage, force_refresh) {
         from_storage = from_storage || false
         force_refresh = force_refresh || false
+        loading = true
         if(from_storage === true && force_refresh !== true) {
             storage.getLocations(fillPages);
         } else {
