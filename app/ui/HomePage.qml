@@ -24,6 +24,7 @@ import "../components"
 PageWithBottomEdge {
     // Set to null otherwise the header is shown (but blank) over the top of the listview
     id: locationPage
+    objectName: "homePage"
     flickable: null
 
     bottomEdgePageSource: Qt.resolvedUrl("LocationsPage.qml")
