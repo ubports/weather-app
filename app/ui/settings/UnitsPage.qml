@@ -70,7 +70,7 @@ Page {
                 // TRANSLATORS: The strings are standard measurement units
                 // of wind speed in kilometers per hour and are shown in the settings page.
                 // Only the abbreviated form of kilometers per hour should be used.
-                windSpeedModel.append({"text": i18n.tr("kmh"), "value": "kmh"})
+                windSpeedModel.append({"text": i18n.tr("kph"), "value": "kph"})
 
                 // TRANSLATORS: The strings are standard measurement units
                 // of wind speed in miles per hour and are shown in the settings page.
@@ -145,7 +145,7 @@ Page {
                 listViewHeight: windSpeedModel.count*units.gu(6) - units.gu(0.5)
                 model: windSpeedModel
                 text: i18n.tr("Wind Speed")
-                subText: settings.windUnits === "kmh" ? i18n.tr("kmh")
+                subText: settings.windUnits === "kph" ? i18n.tr("kph")
                                                       : i18n.tr("mph")
 
                 delegate: ListItem.Standard {

@@ -44,12 +44,12 @@ function calcInch(mm) {
     return mm/25.4;
 }
 //
-function calcKmh(ms) {
+function calcKph(ms) {
     return ms*3.6;
 }
 //
-function convertKmhToMph(kmh) {
-    return kmh*0.621;
+function convertKphToMph(kph) {
+    return kph*0.621;
 }
 //
 function calcWindDir(degrees) {
@@ -218,7 +218,7 @@ var OpenWeatherMapApi = (function() {
             date: date,
             metric: {
                 temp:data.main.temp,
-                windSpeed: calcKmh(data.wind.speed),
+                windSpeed: calcKph(data.wind.speed),
                 rain: data.main.rain || ((data.rain) ? data.rain["3h"] : false ) || 0,
                 snow: data.main.snow || ((data.snow) ? data.snow["3h"] : false ) || 0
             },
@@ -249,7 +249,7 @@ var OpenWeatherMapApi = (function() {
             metric: {
                 tempMin: data.temp.min,
                 tempMax: data.temp.max,
-                windSpeed: calcKmh(data.speed),
+                windSpeed: calcKph(data.speed),
                 rain: data.rain || 0,
                 snow: data.snow || 0
             },
@@ -450,7 +450,7 @@ var WeatherChannelApi = (function() {
                 imperial: {
                     temp: calcFahrenheit(data.temp),
                     tempFeels: calcFahrenheit(data.feelsLike),
-                    windSpeed: convertKmhToMph(data.wSpeed)
+                    windSpeed: convertKphToMph(data.wSpeed)
                 },
                 precipType: (data.precip_type !== undefined) ? data.precip_type : null,
                 propPrecip: (data.pop !== undefined) ? data.pop : null,
@@ -481,7 +481,7 @@ var WeatherChannelApi = (function() {
             imperial: {
                 tempMin: calcFahrenheit(data.minTemp),
                 tempMax: calcFahrenheit(data.maxTemp !== undefined ? data.maxTemp : data.minTemp),
-                windSpeed: convertKmhToMph(partData.wSpeed)
+                windSpeed: convertKphToMph(partData.wSpeed)
             },
             precipType: partData.precip_type,
             propPrecip: partData.pop,
