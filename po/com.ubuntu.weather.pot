@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-27 17:49-0500\n"
+"POT-Creation-Date: 2015-04-29 15:21+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,34 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: ../app/components/DayDelegate.qml:193
+msgid "Chance of rain"
+msgstr ""
+
+#: ../app/components/DayDelegate.qml:202
+msgid "Winds"
+msgstr ""
+
+#: ../app/components/DayDelegate.qml:209
+msgid "UV Index"
+msgstr ""
+
+#: ../app/components/DayDelegate.qml:214
+msgid "Pollen"
+msgstr ""
+
+#: ../app/components/DayDelegate.qml:220
+msgid "Humidity"
+msgstr ""
+
+#: ../app/components/DayDelegate.qml:226
+msgid "Sunrise"
+msgstr ""
+
+#: ../app/components/DayDelegate.qml:232
+msgid "Sunset"
+msgstr ""
 
 #: ../app/components/HomeTempInfo.qml:38
 msgid "Today"

@@ -21,7 +21,7 @@ import Ubuntu.Components 1.1
 import Ubuntu.Components.ListItems 0.1 as ListItem
 import "../components"
 
-Rectangle {
+Item {
     id: locationItem
     /*
       Data properties
@@ -40,13 +40,15 @@ Rectangle {
     height: childrenRect.height
     anchors.fill: parent.fill
 
-    /*
-      Calculates the height of all location data components, to set the Flickable.contentHeight right.
-    */
-    function setFlickableContentHeight() {
-        var contentHeightGu = (homeTempInfo.height+homeGraphic.height
-                               +(weekdayColumn.height*mainPageWeekdayListView.model.count))/units.gridUnit;
-        locationFlickable.contentHeight = units.gu(contentHeightGu+25);
+    // FIXME: not sure where the 3GU comes from, PullToRefresh or something in HomePage?
+    onHeightChanged: locationFlickable.contentHeight = locationItem.height + units.gu(3)
+
+    function emptyIfUndefined(variable, append) {
+        if (append === undefined) {
+            append = ""
+        }
+
+        return variable === undefined ? "" : variable + append
     }
 
     /*
@@ -97,12 +99,16 @@ Rectangle {
                     day: formatTimestamp(forecasts[x].date, 'dddd'),
                     low: Math.round(forecasts[x][tempUnits].tempMin).toString() + settings.tempScale,
                     high: (forecasts[x][tempUnits].tempMax !== undefined) ? Math.round(forecasts[x][tempUnits].tempMax).toString() + settings.tempScale : "",
-                    image: (forecasts[x].icon !== undefined && iconMap[forecasts[x].icon] !== undefined) ? iconMap[forecasts[x].icon] : ""
+                    image: (forecasts[x].icon !== undefined && iconMap[forecasts[x].icon] !== undefined) ? iconMap[forecasts[x].icon] : "",
+                    chanceOfRain: forecasts[x].propPrecip === undefined ? -1 : forecasts[x].propPrecip,
+                    humidity: emptyIfUndefined(forecasts[x].humidity, "%"),
+                    uvIndex: emptyIfUndefined(forecasts[x].uv),
+                    wind: forecasts[x][tempUnits].windSpeed === undefined || forecasts[x].windDir === undefined
+                                ? "" : Math.round(forecasts[x][tempUnits].windSpeed) + settings.windUnits + " " + forecasts[x].windDir
                 }
                 mainPageWeekdayListView.model.append(dayData);
             }
         }        
-        setFlickableContentHeight();
 
         // set data for hourly forecasts
         if(hourlyForecasts.length > 0) {
@@ -165,6 +171,7 @@ Rectangle {
         id: weekdayColumn
         width: parent.width
         height: childrenRect.height
+
         anchors {
             top: locationTop.bottom
             left: parent.left
@@ -174,11 +181,20 @@ Rectangle {
         Repeater {
             id: mainPageWeekdayListView
             model: ListModel{}
-            DayDelegate {
+            delegate: DayDelegate {
                 day: model.day
                 high: model.high
                 image: model.image
                 low: model.low
+
+                chanceOfRain: model.chanceOfRain
+                humidity: model.humidity
+                // TODO: extra from API
+                //pollen: model.pollen
+                //sunrise: model.sunrise
+                //sunset: model.sunset
+                wind: model.wind
+                uvIndex: model.uvIndex
             }
         }
     }
