@@ -41,6 +41,15 @@ Page {
         PageHeadState {
             name: "default"
             head: addLocationPage.head
+            backAction: Action {
+                iconName: "back"
+                text: i18n.tr("Back")
+                onTriggered: {
+                    if(locationsList.length > 0) {
+                        mainPageStack.pop()
+                    }
+                }
+            }
             actions: [
                 Action {
                     iconName: "search"
