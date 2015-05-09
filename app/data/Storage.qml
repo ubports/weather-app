@@ -79,7 +79,7 @@ Item {
                 if (oldSettings["precip_units"] !== undefined) {
                     settings.precipUnits = oldSettings["precip_units"]
                 } else {
-                     settings.precipUnits = metric ? "mm" : "in"
+                    settings.precipUnits = metric ? "mm" : "in"
                 }
 
                 if (oldSettings["units"] !== undefined) {
