@@ -70,13 +70,32 @@ Item {
 
                 console.debug("Migrating old data:", JSON.stringify(oldSettings))
 
+                var metric = Qt.locale().measurementSystem === Locale.MetricSystem
+
                 // Move to new Settings API
                 settings.migrated = true
-                settings.precipUnits = oldSettings["precip_units"]
-                settings.service = oldSettings["service"]
-                settings.tempScale = "°" + (oldSettings["units"] === "metric" ? "C" : "F")
-                settings.units = oldSettings["units"]
-                settings.windUnits = oldSettings["wind_units"]
+                settings.service = oldSettings["service"] === undefined ? "weatherchannel" : oldSettings["service"]
+
+                if (oldSettings["precip_units"] !== undefined) {
+                    settings.precipUnits = oldSettings["precip_units"]
+                } else {
+                     settings.precipUnits = metric ? "mm" : "in"
+                }
+
+                if (oldSettings["units"] !== undefined) {
+                    settings.tempScale = oldSettings["units"] === "metric" ? "°C" : "°F"
+                    settings.units = oldSettings["units"]
+                } else {
+                    settings.tempScale = metric ? "°C" : "°F"
+                    settings.units = metric ? "metric" : "imperial"
+                }
+
+                if (oldSettings["units"] !== undefined) {
+                    // If old wind speed was in "kmh" use "kph" instead
+                    settings.windUnits = oldSettings["wind_units"] === "kmh" ? "kph" : oldSettings["wind_units"]
+                } else {
+                    settings.windUnits = metric ? "kph" : "mph"
+                }
 
                 /*
                   TODO: uncomment when reboot is ready to replace existing app
