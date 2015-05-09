@@ -175,8 +175,9 @@ Item {
         anchors {
             top: locationTop.bottom
             left: parent.left
+            leftMargin: units.gu(2)
             right: parent.right
-            margins: units.gu(2)
+            rightMargin: units.gu(2)
         }
         Repeater {
             id: mainPageWeekdayListView
