@@ -65,6 +65,14 @@ MainView {
     Component.onCompleted: {
         storage.getLocations(fillPages);
         refreshData();
+
+        /*
+          TODO: Also add a check to determine if current location can be
+                resolved.
+        */
+        if (locationsList.length == 0) {
+            mainPageStack.push(Qt.resolvedUrl("ui/AddLocationPage.qml"));
+        }
     }
 
     /*
