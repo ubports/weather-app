@@ -129,6 +129,10 @@ MainView {
         }
     }
 
+    CurrentLocation {
+        id: currentLocation
+    }
+
     Settings {
         id: settings
         category: "weatherSettings"
