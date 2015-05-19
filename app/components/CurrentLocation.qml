@@ -25,7 +25,7 @@ import Ubuntu.Components 1.1
 Item {
     id: currentLocation
 
-    property string string: ""
+    property string string: "Undefined"
 
     PositionSource {
         id: currentPosition
@@ -34,29 +34,27 @@ Item {
 
         onPositionChanged: {
             var coord = currentPosition.position.coordinate
-            geocodeModel.query = coord
-            geocodeModel.update()
+            if (coord.isValid) {
+                geocodeModel.query = coord
+                geocodeModel.update()
+                refreshData(false, true)
+            }
         }
     }
 
     Plugin {
-        id: nokiaPlugin
-        name: "nokia"
+        id: osmPlugin
+        name: "osm"
     }
 
     GeocodeModel {
         id: geocodeModel
         autoUpdate: false
-        plugin: nokiaPlugin
+        plugin: osmPlugin
 
         onCountChanged: {
             if (count > 0) {
-                var address = geocodeModel.get(0).address
-                if (address.state !== "") {
-                    currentLocation.string = address.city + ", "  + address.state
-                } else {
-                    currentLocation.string = address.city + ", "  + address.country
-                }
+                currentLocation.string = geocodeModel.get(0).address.city
             }
         }
     }

@@ -138,7 +138,7 @@ Page {
         locationsModel.clear()
         var loc = {}, data = {},
             tempUnits = settings.tempScale === "°C" ? "metric" : "imperial";
-        locationsModel.append({ "name": currentLocation.string, "temp": 0, "icon": "" })
+        locationsModel.append({ "name": currentLocation.string, "temp": "0", "icon": "weather-clear-symbolic" })
         for (var i=0; i < weatherApp.locationsList.length; i++) {
             data = weatherApp.locationsList[i];
             loc = {
