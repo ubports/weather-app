@@ -37,7 +37,6 @@ Item {
             if (coord.isValid) {
                 geocodeModel.query = coord
                 geocodeModel.update()
-                refreshData(false, true)
             }
         }
     }
@@ -53,8 +52,10 @@ Item {
         plugin: osmPlugin
 
         onCountChanged: {
-            if (count > 0) {
+            // Update the currentLocation if one is found and it does not match the stored location
+            if (count > 0 && currentLocation.string !== geocodeModel.get(0).address.city) {
                 currentLocation.string = geocodeModel.get(0).address.city
+                refreshData(false, true)
             }
         }
     }
