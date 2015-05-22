@@ -94,7 +94,6 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${DESKTOP_FILE}
         DESTINATION ${CMAKE_INSTALL_DATADIR}/applications)
 
 add_subdirectory(app)
-add_subdirectory(backend)
 add_subdirectory(po)
 add_subdirectory(tests)
 
