@@ -28,9 +28,9 @@ class UbuntuWeatherApp(object):
         self.app = app_proxy
         self.main_view = self.app.wait_select_single(MainView)
 
-    def get_home_page(self):
+    def get_add_location_page(self):
         return self.main_view.wait_select_single(
-            HomePage, objectName='homePage')
+            AddLocationPage, objectName="addLocationPage")
 
 
 class Page(UbuntuUIToolkitCustomProxyObjectBase):
@@ -42,16 +42,10 @@ class Page(UbuntuUIToolkitCustomProxyObjectBase):
         self.main_view = self.get_root_instance().select_single(MainView)
 
 
-class PageWithBottomEdge(Page):
-    """Autopilot helper for PageWithBottomEdge."""
+class AddLocationPage(Page):
+    """Autopilot helper for AddLocationPage."""
     def __init__(self, *args):
-        super(PageWithBottomEdge, self).__init__(*args)
-
-
-class HomePage(PageWithBottomEdge):
-    """Autopilot helper for HomePage."""
-    def __init__(self, *args):
-        super(HomePage, self).__init__(*args)
+        super(AddLocationPage, self).__init__(*args)
 
 
 class MainView(MainView):

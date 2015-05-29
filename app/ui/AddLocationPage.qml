@@ -26,7 +26,7 @@ import "../data/WeatherApi.js" as WeatherApi
 
 Page {
     id: addLocationPage
-
+    objectName: "addLocationPage"
     title: i18n.tr("Select a city")
     visible: false
 
@@ -41,6 +41,12 @@ Page {
         PageHeadState {
             name: "default"
             head: addLocationPage.head
+            backAction: Action {
+                iconName: "back"
+                text: i18n.tr("Back")
+                visible: locationsList.length > 0
+                onTriggered: mainPageStack.pop()
+            }
             actions: [
                 Action {
                     iconName: "search"

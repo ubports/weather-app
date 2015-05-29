@@ -26,8 +26,8 @@ Page {
 
     ListModel {
         id: dataProviderModel
-        ListElement { text: "openweathermap" }
-        ListElement { text: "weatherchannel" }
+        ListElement { text: "OpenWeatherMap" }
+        ListElement { text: "The Weather Channel" }
     }
 
     ExpandableListItem {
@@ -36,12 +36,16 @@ Page {
         listViewHeight: dataProviderModel.count*units.gu(6) - units.gu(1)
         model: dataProviderModel
         text: i18n.tr("Provider")
-        subText: settings.service
+        subText: settings.service === "weatherchannel" ? "The Weather Channel" : "OpenWeatherMap"
 
         delegate: ListItem.Standard {
             text: model.text
             onClicked: {
-                settings.service = model.text
+                if (model.text === "The Weather Channel") {
+                    settings.service = "weatherchannel"
+                } else {
+                    settings.service = "openweathermap"
+                }
                 refreshData(false, true)
             }
 
@@ -49,7 +53,7 @@ Page {
                 width: units.gu(2)
                 height: width
                 name: "ok"
-                visible: settings.service === model.text
+                visible: dataProviderSetting.subText === model.text
                 anchors.right: parent.right
                 anchors.rightMargin: units.gu(2)
                 anchors.verticalCenter: parent.verticalCenter

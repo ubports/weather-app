@@ -24,9 +24,9 @@ class TestMainWindow(UbuntuWeatherAppTestCase):
     def setUp(self):
         super(TestMainWindow, self).setUp()
 
-    def test_home_page_start(self):
-        """ tests that the home page is shown on startup"""
+    def test_add_location_page_start(self):
+        """ tests that the add location page is shown on startup"""
 
-        home_page = self.app.get_home_page()
+        add_location_page = self.app.get_add_location_page()
 
-        self.assertThat(home_page.visible, Eventually(Equals(True)))
+        self.assertThat(add_location_page.visible, Eventually(Equals(True)))
