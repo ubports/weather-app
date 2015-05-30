@@ -54,7 +54,26 @@ Item {
         onCountChanged: {
             // Update the currentLocation if one is found and it does not match the stored location
             if (count > 0 && currentLocation.string !== geocodeModel.get(0).address.city) {
-                currentLocation.string = geocodeModel.get(0).address.city
+                var loc = geocodeModel.get(0)
+                currentLocation.string = loc.address.city
+                var addLoc = {
+                    "location": {
+                        "coord": {
+                            "lon": loc.coordinate.longitude,
+                            "lat": loc.coordinate.latitude
+                        },
+                        "name": loc.address.city,
+                        "country": loc.address.countryCode,
+                        "countryName": loc.address.country,
+                        "adminName1": loc.address.city,
+                        "adminName2": loc.address.state !== undefined ? loc.address.state : "",
+                        "adminName3": loc.address.countryCode
+                    }
+                }
+
+                console.log("Loc to add:", JSON.stringify(addLoc))
+
+                storage.addLocation(addLoc)
                 refreshData(false, true)
             }
         }
