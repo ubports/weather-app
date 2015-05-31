@@ -167,13 +167,25 @@ MainView {
     Data.Storage {
         id: storage
 
+        // Add or replace the current locaiton to the storage and refresh the
+        // locationList
+        function updateCurrentLocation(location) {
+            if (locationsList == null || locationsList.length == 0) {
+                storage.insertLocation({location: location});
+            } else {
+                storage.updateLocation(locationsList[0].db.id, {location: location});
+            }
+
+            refreshData();
+        }
+
         // Add the location to the storage and refresh the locationList
         // Return true if a location is added
         function addLocation(location) {
             var exists = checkLocationExists(location)
 
             if(!exists) {
-                if(location.dbId === undefined || location.dbId=== 0) {
+                if(location.dbId === undefined || location.dbId === 0) {
                     storage.insertLocation({location: location});
                 }
                 refreshData();

@@ -20,12 +20,34 @@ import QtLocation 5.3
 import QtPositioning 5.2
 import QtQuick 2.3
 import Ubuntu.Components 1.1
+import "../data/WeatherApi.js" as WeatherApi
 
 
 Item {
     id: currentLocation
 
     property string string: "Undefined"
+
+    function searchForLocation(lat, lon) {
+        WeatherApi.sendRequest({
+                                   action: "searchByPoint",
+                                   params: {
+                                       coords: {
+                                           lat: lat,
+                                           lon: lon
+                                       }
+                                   }
+                               }, searchResponseHandler)
+    }
+
+    function searchResponseHandler(msgObject) {
+        if (!msgObject.error) {
+            console.log("Loc to add:", JSON.stringify(msgObject.result.locations[0]))
+            storage.updateCurrentLocation(msgObject.result.locations[0])
+            refreshData(false, true)
+        }
+    }
+
 
     PositionSource {
         id: currentPosition
@@ -56,25 +78,7 @@ Item {
             if (count > 0 && currentLocation.string !== geocodeModel.get(0).address.city) {
                 var loc = geocodeModel.get(0)
                 currentLocation.string = loc.address.city
-                var addLoc = {
-                    "location": {
-                        "coord": {
-                            "lon": loc.coordinate.longitude,
-                            "lat": loc.coordinate.latitude
-                        },
-                        "name": loc.address.city,
-                        "country": loc.address.countryCode,
-                        "countryName": loc.address.country,
-                        "adminName1": loc.address.city,
-                        "adminName2": loc.address.state !== undefined ? loc.address.state : "",
-                        "adminName3": loc.address.countryCode
-                    }
-                }
-
-                console.log("Loc to add:", JSON.stringify(addLoc))
-
-                storage.addLocation(addLoc)
-                refreshData(false, true)
+                searchForLocation(loc.coordinate.latitude, loc.coordinate.longitude)
             }
         }
     }
