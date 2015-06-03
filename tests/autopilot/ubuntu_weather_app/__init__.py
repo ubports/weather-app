@@ -10,7 +10,7 @@ from ubuntuuitoolkit import MainView, UbuntuUIToolkitCustomProxyObjectBase
 
 
 class UbuntuWeatherAppException(Exception):
-    """Exception raised when there's an error in the Music App."""
+    """Exception raised when there's an error in the Weather App."""
 
 
 def click_object(func):
@@ -22,7 +22,7 @@ def click_object(func):
 
 
 class UbuntuWeatherApp(object):
-    """Autopilot helper object for the Music application."""
+    """Autopilot helper object for the Weather application."""
 
     def __init__(self, app_proxy):
         self.app = app_proxy
@@ -37,9 +37,6 @@ class Page(UbuntuUIToolkitCustomProxyObjectBase):
     """Autopilot helper for Pages."""
     def __init__(self, *args):
         super(Page, self).__init__(*args)
-        # XXX we need a better way to keep reference to the main view.
-        # --elopio - 2014-01-31
-        self.main_view = self.get_root_instance().select_single(MainView)
 
 
 class AddLocationPage(Page):
