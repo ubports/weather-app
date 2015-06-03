@@ -26,7 +26,7 @@ import "../data/WeatherApi.js" as WeatherApi
 
 Page {
     id: addLocationPage
-
+    objectName: "addLocationPage"
     title: i18n.tr("Select a city")
     visible: false
 
