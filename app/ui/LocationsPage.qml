@@ -87,21 +87,37 @@ Page {
                     rightMargin: units.gu(2)
                 }
 
-                Label {
-                    id: locationName
+                Column {
                     anchors {
                         left: parent.left
                         right: weatherImage.visible ? weatherImage.left : parent.right
                         rightMargin: units.gu(1)
                         verticalCenter: parent.verticalCenter
                     }
-                    elide: Text.ElideRight
-                    text: name
+
+                    Label {
+                        id: locationName
+                        elide: Text.ElideRight
+                        fontSize: "medium"
+                        text: index != 0 ? name : i18n.tr("Current Location")
+                    }
+                    Label {
+                        id: locationName2
+                        elide: Text.ElideRight
+                        fontSize: "small"
+                        font.weight: Font.Light
+                        text: index != 0 ? (adminName1 == name ? countryName : adminName1)
+                                         : name + ", " + (adminName1 == name ? countryName : adminName1)
+                    }
                 }
 
                 Icon {
                     id: weatherImage
-                    anchors.centerIn: parent
+                    anchors {
+                        right: parent.right
+                        rightMargin: units.gu(12)
+                        verticalCenter: parent.verticalCenter
+                    }
                     name: icon
                     height: units.gu(3)
                     width: units.gu(3)
@@ -143,6 +159,9 @@ Page {
             data = weatherApp.locationsList[i];
             loc = {
                 "name": data.location.name,
+                "adminName1": data.location.adminName1,
+                "areaLabel": data.location.areaLabel,
+                "countryName": data.location.countryName,
                 "temp": Math.round(data.data[0].current[tempUnits].temp).toString(),
                 "icon": iconMap[data.data[0].current.icon]
             }
