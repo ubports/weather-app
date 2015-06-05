@@ -176,7 +176,7 @@ MainView {
                 storage.updateLocation(locationsList[0].db.id, {location: location});
             }
 
-            refreshData();
+            refreshData(false, true);
         }
 
         // Add the location to the storage and refresh the locationList

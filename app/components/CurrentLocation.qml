@@ -44,7 +44,6 @@ Item {
         if (!msgObject.error) {
             console.log("Loc to add:", JSON.stringify(msgObject.result.locations[0]))
             storage.updateCurrentLocation(msgObject.result.locations[0])
-            refreshData(false, true)
         }
     }
 
