@@ -103,6 +103,7 @@ Page {
                     }
                     Label {
                         id: locationName2
+                        color: UbuntuColors.lightGrey
                         elide: Text.ElideRight
                         fontSize: "small"
                         font.weight: Font.Light
