@@ -98,7 +98,7 @@ msgstr ""
 msgid "OK"
 msgstr ""
 
-#: ../app/ui/HomePage.qml:30 ../app/ui/LocationsPage.qml:30
+#: ../app/ui/HomePage.qml:31 ../app/ui/LocationsPage.qml:30
 msgid "Locations"
 msgstr ""
 
