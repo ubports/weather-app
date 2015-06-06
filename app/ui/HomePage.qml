@@ -95,6 +95,7 @@ PageWithBottomEdge {
         id: locationFlickable
         width: parent.width
         height: parent.height
+        contentHeight: locationPages.currentItem.childrenRect.height + units.gu(3)
         contentWidth: parent.width
 
         Behavior on contentHeight {
