@@ -95,6 +95,9 @@ PageWithBottomEdge {
         id: locationFlickable
         width: parent.width
         height: parent.height
+
+        // FIXME: not sure where the 3GU comes from, PullToRefresh or something in HomePage?
+        contentHeight: locationPages.currentItem.childrenRect.height + units.gu(3)
         contentWidth: parent.width
 
         Behavior on contentHeight {

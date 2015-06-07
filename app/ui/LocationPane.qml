@@ -40,9 +40,6 @@ Item {
     height: childrenRect.height
     anchors.fill: parent.fill
 
-    // FIXME: not sure where the 3GU comes from, PullToRefresh or something in HomePage?
-    onHeightChanged: locationFlickable.contentHeight = locationItem.height + units.gu(3)
-
     function emptyIfUndefined(variable, append) {
         if (append === undefined) {
             append = ""
