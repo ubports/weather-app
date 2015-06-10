@@ -90,7 +90,7 @@ Page {
                 Column {
                     anchors {
                         left: parent.left
-                        right: currentWeatherImage.visible ? currentWeatherImage.left : parent.right
+                        right: currentWeatherImage.left
                         rightMargin: units.gu(1)
                         verticalCenter: parent.verticalCenter
                     }
@@ -121,7 +121,6 @@ Page {
                     name: icon
                     height: units.gu(3)
                     width: units.gu(3)
-                    visible: locationsPage.state === "default"
                 }
 
                 Label {
@@ -138,7 +137,6 @@ Page {
                     font.weight: Font.Light
                     horizontalAlignment: Text.AlignRight
                     text: temp + settings.tempScale
-                    visible: locationsPage.state === "default"
                 }
             }
 
