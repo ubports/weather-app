@@ -54,6 +54,10 @@ Page {
         }
     ]
 
+    ListModel {
+        id: currentLocationModel
+    }
+
     MultiSelectListView {
         id: locationsListView
         anchors {
@@ -62,6 +66,89 @@ Page {
         model: ListModel {
             id: locationsModel
         }
+        header: ListView {
+            id: currentLocationListView
+            anchors {
+                left: parent.left
+                leftMargin: units.gu(2)
+                right: parent.right
+                rightMargin: units.gu(2)
+                top: parent.top
+
+            }
+            height: units.gu(8)
+            interactive: false
+            model: currentLocationModel
+            delegate: WeatherListItem {
+                id: currentLocationsListItem
+
+                onItemClicked: {
+                    settings.current = index;
+                    pageStack.pop()
+                }
+
+                Column {
+                    anchors {
+                        left: parent.left
+                        right: currentWeatherImage.visible ? currentWeatherImage.left : parent.right
+                        rightMargin: units.gu(1)
+                        verticalCenter: parent.verticalCenter
+                    }
+
+                    Label {
+                        id: currentLocationName
+                        elide: Text.ElideRight
+                        fontSize: "medium"
+                        text: i18n.tr("Current Location")
+                    }
+                    Label {
+                        id: currentLocationName2
+                        color: UbuntuColors.lightGrey
+                        elide: Text.ElideRight
+                        fontSize: "small"
+                        font.weight: Font.Light
+                        text: name + ", " + (adminName1 == name ? countryName : adminName1)
+                    }
+                }
+
+                Icon {
+                    id: currentWeatherImage
+                    anchors {
+                        right: parent.right
+                        rightMargin: units.gu(12)
+                        verticalCenter: parent.verticalCenter
+                    }
+                    name: icon
+                    height: units.gu(3)
+                    width: units.gu(3)
+                    visible: locationsPage.state === "default"
+                }
+
+                Label {
+                    id: currentTemperatureLabel
+                    anchors {
+                        left: currentWeatherImage.right
+                        leftMargin: units.gu(1)
+                        right: parent.right
+                        verticalCenter: parent.verticalCenter
+                    }
+                    color: UbuntuColors.orange
+                    elide: Text.ElideRight
+                    font.pixelSize: units.gu(4)
+                    font.weight: Font.Light
+                    horizontalAlignment: Text.AlignRight
+                    text: temp + settings.tempScale
+                    visible: locationsPage.state === "default"
+                }
+            }
+
+            ListItem.ThinDivider {
+                anchors {
+                    bottom: parent.bottom
+                }
+            }
+        }
+
         delegate: WeatherListItem {
             id: locationsListItem
             leftSideAction: Remove {
@@ -71,7 +158,7 @@ Page {
             reorderable: true
 
             onItemClicked: {
-                settings.current = index;
+                settings.current = index + 1;
                 pageStack.pop()
             }
             onReorder: {
@@ -99,7 +186,7 @@ Page {
                         id: locationName
                         elide: Text.ElideRight
                         fontSize: "medium"
-                        text: index != 0 ? name : i18n.tr("Current Location")
+                        text: name
                     }
                     Label {
                         id: locationName2
@@ -107,8 +194,7 @@ Page {
                         elide: Text.ElideRight
                         fontSize: "small"
                         font.weight: Font.Light
-                        text: index != 0 ? (adminName1 == name ? countryName : adminName1)
-                                         : name + ", " + (adminName1 == name ? countryName : adminName1)
+                        text: adminName1 == name ? countryName : adminName1
                     }
                 }
 
@@ -152,6 +238,7 @@ Page {
     }
 
     function populateLocationsModel() {
+        currentLocationModel.clear()
         locationsModel.clear()
         var loc = {}, data = {},
             tempUnits = settings.tempScale === "°C" ? "metric" : "imperial";
@@ -166,7 +253,12 @@ Page {
                 "temp": Math.round(data.data[0].current[tempUnits].temp).toString(),
                 "icon": iconMap[data.data[0].current.icon]
             }
-            locationsModel.append(loc)
+
+            if (i > 0) {
+                locationsModel.append(loc)
+            } else {
+                currentLocationModel.append(loc)
+            }
         }
     }
 
