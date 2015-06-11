@@ -74,7 +74,6 @@ Page {
                 right: parent.right
                 rightMargin: units.gu(2)
                 top: parent.top
-
             }
             height: units.gu(8)
             interactive: false
