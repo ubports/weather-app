@@ -73,13 +73,12 @@ Page {
                 leftMargin: units.gu(2)
                 right: parent.right
                 rightMargin: units.gu(2)
-                top: parent.top
             }
-            height: units.gu(8)
+            height: contentHeight
             interactive: false
             model: currentLocationModel
             delegate: WeatherListItem {
-                id: currentLocationsListItem
+                id: currentLocationListItem
 
                 onItemClicked: {
                     settings.current = index;
@@ -138,12 +137,6 @@ Page {
                     text: temp + settings.tempScale
                 }
             }
-
-            ListItem.ThinDivider {
-                anchors {
-                    bottom: parent.bottom
-                }
-            }
         }
 
         delegate: WeatherListItem {
@@ -162,6 +155,13 @@ Page {
                 console.debug("Move: ", from, to);
 
                 storage.moveLocation(from, to);
+            }
+
+            ListItem.ThinDivider {
+                anchors {
+                    top: parent.top
+                }
+                visible: index == 0
             }
 
             Item {
