@@ -111,6 +111,7 @@ PageWithBottomEdge {
             parent: locationFlickable
             refreshing: false
             onRefresh: {
+                locationPages.loaded = false
                 refreshing = true
                 refreshData(false, true)
             }
