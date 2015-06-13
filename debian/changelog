@@ -1,6 +1,12 @@
+ubuntu-weather-app (3.0) UNRELEASED; urgency=medium
+
+  * Sync debian version with click version.
+
+ -- Victor Thompson <victor.thompson@gmail.com>  Mon, 01 Jun 2015 20:11:23 -0500
+
 ubuntu-weather-app (2.1) UNRELEASED; urgency=medium
 
-  * 
+  * Update packaging to reflect reboot changes.
 
  -- Daniel Holbach <daniel.holbach@ubuntu.com>  Wed, 04 Feb 2015 11:25:02 +0100
 
