@@ -65,14 +65,6 @@ MainView {
     Component.onCompleted: {
         storage.getLocations(fillPages);
         refreshData();
-
-        /*
-          TODO: Also add a check to determine if current location can be
-                resolved.
-        */
-        if (locationsList.length == 0) {
-            mainPageStack.push(Qt.resolvedUrl("ui/AddLocationPage.qml"));
-        }
     }
 
     /*
@@ -161,7 +153,30 @@ MainView {
                 units = metric ? "metric" : "imperial"
                 windUnits = metric ? "kph" : "mph"
             }
+
+            if (locationsList == null || locationsList.length == 0) {
+                getCurrentLocationTimer.start()
+            }
         }
+    }
+
+    Timer {
+        id: getCurrentLocationTimer
+        interval: 5000
+
+        onTriggered: {
+            if (locationsList.length == 0) {
+                mainPageStack.push(Qt.resolvedUrl("ui/AddLocationPage.qml"));
+            }
+        }
+    }
+
+    Label {
+        id: emptyStateLabel
+        anchors.centerIn: parent
+        text: i18n.tr("Searching for current location...")
+        visible: (locationsList == null || locationsList.length == 0) && mainPageStack.depth == 1
+        z: 1000
     }
 
     Data.Storage {
