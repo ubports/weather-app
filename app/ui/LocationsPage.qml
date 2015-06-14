@@ -66,15 +66,13 @@ Page {
         model: ListModel {
             id: locationsModel
         }
-        header: ListView {
+        header: MultiSelectListView {
             id: currentLocationListView
             anchors {
                 left: parent.left
-                leftMargin: units.gu(2)
                 right: parent.right
-                rightMargin: units.gu(2)
             }
-            height: contentHeight
+            height: units.gu(8)
             interactive: false
             model: currentLocationModel
             delegate: WeatherListItem {
@@ -95,12 +93,24 @@ Page {
 
                     Label {
                         id: currentLocationName
+
+                        anchors {
+                            left: parent.left
+                            leftMargin: units.gu(2)
+                        }
+
                         elide: Text.ElideRight
                         fontSize: "medium"
                         text: i18n.tr("Current Location")
                     }
                     Label {
                         id: currentLocationName2
+
+                        anchors {
+                            left: parent.left
+                            leftMargin: units.gu(2)
+                        }
+
                         color: UbuntuColors.lightGrey
                         elide: Text.ElideRight
                         fontSize: "small"
@@ -113,7 +123,7 @@ Page {
                     id: currentWeatherImage
                     anchors {
                         right: parent.right
-                        rightMargin: units.gu(12)
+                        rightMargin: units.gu(14)
                         verticalCenter: parent.verticalCenter
                     }
                     name: icon
@@ -127,6 +137,7 @@ Page {
                         left: currentWeatherImage.right
                         leftMargin: units.gu(1)
                         right: parent.right
+                        rightMargin: units.gu(2)
                         verticalCenter: parent.verticalCenter
                     }
                     color: UbuntuColors.orange
