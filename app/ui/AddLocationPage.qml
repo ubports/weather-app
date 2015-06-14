@@ -44,7 +44,6 @@ Page {
             backAction: Action {
                 iconName: "back"
                 text: i18n.tr("Back")
-                visible: locationsList.length > 0
                 onTriggered: mainPageStack.pop()
             }
             actions: [

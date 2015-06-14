@@ -153,21 +153,6 @@ MainView {
                 units = metric ? "metric" : "imperial"
                 windUnits = metric ? "kph" : "mph"
             }
-
-            if (locationsList == null || locationsList.length == 0) {
-                getCurrentLocationTimer.start()
-            }
-        }
-    }
-
-    Timer {
-        id: getCurrentLocationTimer
-        interval: 5000
-
-        onTriggered: {
-            if (locationsList.length == 0) {
-                mainPageStack.push(Qt.resolvedUrl("ui/AddLocationPage.qml"));
-            }
         }
     }
 
@@ -177,6 +162,21 @@ MainView {
         text: i18n.tr("Searching for current location...")
         visible: (locationsList == null || locationsList.length == 0) && mainPageStack.depth == 1
         z: 1000
+    }
+
+    Button {
+        id: emptyStateButton
+        anchors {
+            horizontalCenter: emptyStateLabel.horizontalCenter
+            top: emptyStateLabel.bottom
+            topMargin: units.gu(4)
+        }
+
+        text: i18n.tr("Add a manual location")
+        visible: (locationsList == null || locationsList.length == 0) && mainPageStack.depth == 1
+        z: 1000
+
+        onTriggered: mainPageStack.push(Qt.resolvedUrl("ui/AddLocationPage.qml"));
     }
 
     Data.Storage {
