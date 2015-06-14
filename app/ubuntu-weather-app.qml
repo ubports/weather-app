@@ -156,27 +156,31 @@ MainView {
         }
     }
 
-    Label {
-        id: emptyStateLabel
+    Column {
         anchors.centerIn: parent
-        text: i18n.tr("Searching for current location...")
         visible: (locationsList == null || locationsList.length == 0) && mainPageStack.depth == 1
         z: 1000
-    }
 
-    Button {
-        id: emptyStateButton
-        anchors {
-            horizontalCenter: emptyStateLabel.horizontalCenter
-            top: emptyStateLabel.bottom
-            topMargin: units.gu(4)
+        Label {
+            id: emptyStateLabel
+            anchors.centerIn: parent
+            text: i18n.tr("Searching for current location...")
         }
 
-        text: i18n.tr("Add a manual location")
-        visible: (locationsList == null || locationsList.length == 0) && mainPageStack.depth == 1
-        z: 1000
+        Button {
+            id: emptyStateButton
+            objectName: "emptyStateButton"
 
-        onTriggered: mainPageStack.push(Qt.resolvedUrl("ui/AddLocationPage.qml"));
+            anchors {
+                horizontalCenter: emptyStateLabel.horizontalCenter
+                top: emptyStateLabel.bottom
+                topMargin: units.gu(4)
+            }
+
+            text: i18n.tr("Add a manual location")
+
+            onTriggered: mainPageStack.push(Qt.resolvedUrl("ui/AddLocationPage.qml"));
+        }
     }
 
     Data.Storage {
