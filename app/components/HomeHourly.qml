@@ -28,6 +28,8 @@ ListView {
     model: forecasts.length
     orientation: ListView.Horizontal
 
+    property string currentDate: Qt.formatTime(new Date())
+
     onVisibleChanged: {
         if(visible) {
             ListView.model = forecasts.length
@@ -60,7 +62,7 @@ ListView {
                 anchors.horizontalCenter: parent.horizontalCenter
                 fontSize: "small"
                 font.weight: Font.Light
-                text: formatTimestamp(hourData.date, 'ddd')+" "+formatTime(hourData.date, 'h:mm')
+                text: currentDate.search(Qt.locale().amText) !== -1 || currentDate.search(Qt.locale().pmText) !== -1 ? formatTimestamp(hourData.date, 'ddd')+" "+formatTime(hourData.date, 'hap') : formatTimestamp(hourData.date, 'ddd')+" "+formatTime(hourData.date, 'h:mm')
             }
 
             Item {
