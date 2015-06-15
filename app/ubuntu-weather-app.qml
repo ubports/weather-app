@@ -158,12 +158,13 @@ MainView {
 
     Column {
         anchors.centerIn: parent
+        spacing: units.gu(4)
         visible: (locationsList == null || locationsList.length == 0) && mainPageStack.depth == 1
         z: 1000
 
         Label {
             id: emptyStateLabel
-            anchors.centerIn: parent
+            anchors.horizontalCenter: parent.horizontalCenter
             text: i18n.tr("Searching for current location...")
         }
 
@@ -171,11 +172,7 @@ MainView {
             id: emptyStateButton
             objectName: "emptyStateButton"
 
-            anchors {
-                horizontalCenter: emptyStateLabel.horizontalCenter
-                top: emptyStateLabel.bottom
-                topMargin: units.gu(4)
-            }
+            anchors.horizontalCenter: parent.horizontalCenter
 
             text: i18n.tr("Add a manual location")
 
