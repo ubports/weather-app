@@ -25,7 +25,8 @@ class TestMainWindow(UbuntuWeatherAppTestCase):
         super(TestMainWindow, self).setUp()
 
     def test_add_location_button(self):
-        """ tests that the add location page is shown after the Add Location button is clicked"""
+        """ tests that the add location page is shown after the Add Location
+            button is clicked """
 
         self.app.click_add_location_button()
 
