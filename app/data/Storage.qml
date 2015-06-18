@@ -121,6 +121,12 @@ Item {
         return res;
     }
 
+    function insertLocationAtStart(data) {
+        var res = insertLocation(data);
+        reorder(res, 0);
+        return 0;
+    }
+
     function updateLocation(dbId, data) {
         openDB();
         db.transaction( function(tx){
