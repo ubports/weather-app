@@ -18,7 +18,6 @@
 
 import QtQuick 2.4
 import Ubuntu.Components 1.2
-import Ubuntu.Components.ListItems 0.1 as ListItem
 import "../../components"
 
 Page {
@@ -38,26 +37,18 @@ Page {
     ExpandableListItem {
         id: dataProviderSetting
 
-        listViewHeight: refreshModel.count*units.gu(6)
+        listViewHeight: refreshModel.count*units.gu(7) - units.gu(1)
         model: refreshModel
         text: i18n.tr("Interval")
         subText: i18n.tr("%1 minute", "%1 minutes", Math.floor(settings.refreshInterval / 60).toString()).arg(Math.floor(settings.refreshInterval / 60).toString())
 
-        delegate: ListItem.Standard {
-            text: model.text
+        delegate: StandardListItem {
+            title: model.text
+            icon: "ok"
+            showIcon: settings.refreshInterval === model.interval
             onClicked: {
                 settings.refreshInterval = model.interval
                 refreshData(false, true)
-            }
-
-            Icon {
-                width: units.gu(2)
-                height: width
-                name: "ok"
-                visible: settings.refreshInterval === model.interval
-                anchors.right: parent.right
-                anchors.rightMargin: units.gu(2)
-                anchors.verticalCenter: parent.verticalCenter
             }
         }
     }

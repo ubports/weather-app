@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-21 14:28+0000\n"
+"POT-Creation-Date: 2015-06-21 14:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -110,34 +110,34 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: ../app/ui/SettingsPage.qml:38 ../app/ui/settings/UnitsPage.qml:25
+#: ../app/ui/SettingsPage.qml:38 ../app/ui/settings/UnitsPage.qml:24
 msgid "Units"
 msgstr ""
 
-#: ../app/ui/SettingsPage.qml:43 ../app/ui/settings/DataProviderPage.qml:25
+#: ../app/ui/SettingsPage.qml:43 ../app/ui/settings/DataProviderPage.qml:24
 msgid "Data Provider"
 msgstr ""
 
-#: ../app/ui/SettingsPage.qml:48 ../app/ui/settings/RefreshIntervalPage.qml:25
+#: ../app/ui/SettingsPage.qml:48 ../app/ui/settings/RefreshIntervalPage.qml:24
 msgid "Refresh Interval"
 msgstr ""
 
-#: ../app/ui/settings/DataProviderPage.qml:38
+#: ../app/ui/settings/DataProviderPage.qml:37
 msgid "Provider"
 msgstr ""
 
+#: ../app/ui/settings/RefreshIntervalPage.qml:30
 #: ../app/ui/settings/RefreshIntervalPage.qml:31
 #: ../app/ui/settings/RefreshIntervalPage.qml:32
 #: ../app/ui/settings/RefreshIntervalPage.qml:33
-#: ../app/ui/settings/RefreshIntervalPage.qml:34
-#: ../app/ui/settings/RefreshIntervalPage.qml:44
+#: ../app/ui/settings/RefreshIntervalPage.qml:43
 #, qt-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../app/ui/settings/RefreshIntervalPage.qml:43
+#: ../app/ui/settings/RefreshIntervalPage.qml:42
 msgid "Interval"
 msgstr ""
 
@@ -158,28 +158,28 @@ msgstr ""
 #. TRANSLATORS: The strings are standard measurement units
 #. of precipitation in millimeters and are shown in the settings page.
 #. Only the abbreviated form of millimeters should be used.
-#: ../app/ui/settings/UnitsPage.qml:57 ../app/ui/settings/UnitsPage.qml:120
+#: ../app/ui/settings/UnitsPage.qml:57 ../app/ui/settings/UnitsPage.qml:112
 msgid "mm"
 msgstr ""
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of precipitation in inches and are shown in the settings page.
 #. Only the abbreviated form of inches should be used.
-#: ../app/ui/settings/UnitsPage.qml:62 ../app/ui/settings/UnitsPage.qml:121
+#: ../app/ui/settings/UnitsPage.qml:62 ../app/ui/settings/UnitsPage.qml:113
 msgid "in"
 msgstr ""
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of wind speed in kilometers per hour and are shown in the settings page.
 #. Only the abbreviated form of kilometers per hour should be used.
-#: ../app/ui/settings/UnitsPage.qml:73 ../app/ui/settings/UnitsPage.qml:148
+#: ../app/ui/settings/UnitsPage.qml:73 ../app/ui/settings/UnitsPage.qml:132
 msgid "kph"
 msgstr ""
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of wind speed in miles per hour and are shown in the settings page.
 #. Only the abbreviated form of miles per hour should be used.
-#: ../app/ui/settings/UnitsPage.qml:78 ../app/ui/settings/UnitsPage.qml:149
+#: ../app/ui/settings/UnitsPage.qml:78 ../app/ui/settings/UnitsPage.qml:133
 msgid "mph"
 msgstr ""
 
@@ -187,11 +187,11 @@ msgstr ""
 msgid "Temperature"
 msgstr ""
 
-#: ../app/ui/settings/UnitsPage.qml:119
+#: ../app/ui/settings/UnitsPage.qml:111
 msgid "Precipitation"
 msgstr ""
 
-#: ../app/ui/settings/UnitsPage.qml:147
+#: ../app/ui/settings/UnitsPage.qml:131
 msgid "Wind Speed"
 msgstr ""
 

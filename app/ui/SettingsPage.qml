@@ -24,7 +24,7 @@ Page {
     title: i18n.tr("Settings")
 
     Flickable {
-
+        clip: true
         anchors.fill: parent
         contentHeight: settingsColumn.height
         height: parent.height

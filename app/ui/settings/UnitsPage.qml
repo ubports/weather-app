@@ -18,7 +18,6 @@
 
 import QtQuick 2.4
 import Ubuntu.Components 1.2
-import Ubuntu.Components.ListItems 0.1 as ListItem
 import "../../components"
 
 Page {
@@ -27,6 +26,7 @@ Page {
     flickable: null
 
     Flickable {
+        clip: true
         anchors.fill: parent
         height: parent.height
         contentHeight: unitsColumn.childrenRect.height
@@ -86,27 +86,19 @@ Page {
             ExpandableListItem {
                 id: temperatureSetting
 
-                listViewHeight: temperatureModel.count*units.gu(6) - units.gu(0.5)
+                listViewHeight: temperatureModel.count*units.gu(7) - units.gu(1)
                 model: temperatureModel
                 text: i18n.tr("Temperature")
                 subText: settings.tempScale === "°C" ? i18n.tr("°C")
                                                      : i18n.tr("°F")
 
-                delegate: ListItem.Standard {
-                    text: model.text
+                delegate: StandardListItem {
+                    title: model.text
+                    icon: "ok"
+                    showIcon: settings.tempScale === model.value
                     onClicked: {
                         settings.tempScale = model.value
                         refreshData(true)
-                    }
-
-                    Icon {
-                        width: units.gu(2)
-                        height: width
-                        name: "ok"
-                        visible: settings.tempScale === model.value
-                        anchors.right: parent.right
-                        anchors.rightMargin: units.gu(2)
-                        anchors.verticalCenter: parent.verticalCenter
                     }
                 }
             }
@@ -114,27 +106,19 @@ Page {
             ExpandableListItem {
                 id: precipationSetting
 
-                listViewHeight: precipationModel.count*units.gu(6) - units.gu(0.5)
+                listViewHeight: precipationModel.count*units.gu(7) - units.gu(1)
                 model: precipationModel
                 text: i18n.tr("Precipitation")
                 subText: settings.precipUnits === "mm" ? i18n.tr("mm")
                                                        : i18n.tr("in")
 
-                delegate: ListItem.Standard {
-                    text: model.text
+                delegate: StandardListItem {
+                    title: model.text
+                    icon: "ok"
+                    showIcon: settings.precipUnits === model.value
                     onClicked: {
                         settings.precipUnits = model.value
                         refreshData(true)
-                    }
-
-                    Icon {
-                        width: units.gu(2)
-                        height: width
-                        name: "ok"
-                        visible: settings.precipUnits === model.value
-                        anchors.right: parent.right
-                        anchors.rightMargin: units.gu(2)
-                        anchors.verticalCenter: parent.verticalCenter
                     }
                 }
             }
@@ -142,27 +126,19 @@ Page {
             ExpandableListItem {
                 id: windSetting
 
-                listViewHeight: windSpeedModel.count*units.gu(6) - units.gu(0.5)
+                listViewHeight: windSpeedModel.count*units.gu(7) - units.gu(1)
                 model: windSpeedModel
                 text: i18n.tr("Wind Speed")
                 subText: settings.windUnits === "kph" ? i18n.tr("kph")
                                                       : i18n.tr("mph")
 
-                delegate: ListItem.Standard {
-                    text: model.text
+                delegate: StandardListItem {
+                    title: model.text
+                    icon: "ok"
+                    showIcon: settings.windUnits === model.value
                     onClicked: {
                         settings.windUnits = model.value
                         refreshData(true)
-                    }
-
-                    Icon {
-                        width: units.gu(2)
-                        height: width
-                        name: "ok"
-                        visible: settings.windUnits === model.value
-                        anchors.right: parent.right
-                        anchors.rightMargin: units.gu(2)
-                        anchors.verticalCenter: parent.verticalCenter
                     }
                 }
             }

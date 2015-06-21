@@ -18,7 +18,6 @@
 
 import QtQuick 2.4
 import Ubuntu.Components 1.2
-import Ubuntu.Components.ListItems 0.1 as ListItem
 import "../../components"
 
 Page {
@@ -33,13 +32,15 @@ Page {
     ExpandableListItem {
         id: dataProviderSetting
 
-        listViewHeight: dataProviderModel.count*units.gu(6) - units.gu(1)
+        listViewHeight: dataProviderModel.count*units.gu(7) - units.gu(1)
         model: dataProviderModel
         text: i18n.tr("Provider")
         subText: settings.service === "weatherchannel" ? "The Weather Channel" : "OpenWeatherMap"
 
-        delegate: ListItem.Standard {
-            text: model.text
+        delegate: StandardListItem {
+            title: model.text
+            icon: "ok"
+            showIcon: dataProviderSetting.subText === model.text
             onClicked: {
                 if (model.text === "The Weather Channel") {
                     settings.service = "weatherchannel"
@@ -47,16 +48,6 @@ Page {
                     settings.service = "openweathermap"
                 }
                 refreshData(false, true)
-            }
-
-            Icon {
-                width: units.gu(2)
-                height: width
-                name: "ok"
-                visible: dataProviderSetting.subText === model.text
-                anchors.right: parent.right
-                anchors.rightMargin: units.gu(2)
-                anchors.verticalCenter: parent.verticalCenter
             }
         }
     }

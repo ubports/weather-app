@@ -24,21 +24,23 @@ ListItem {
     id: listItem
 
     property alias title: _title.text
+    property alias icon: _icon.name
+    property alias showIcon: _icon.visible
 
     RowLayout {
         anchors { left: parent.left; right: parent.right; verticalCenter: parent.verticalCenter; margins: units.gu(2) }
-        height: _progression.height
+        height: _icon.height
         spacing: units.gu(2)
         
         Label {
             id: _title
-            anchors.verticalCenter: _progression.verticalCenter
+            anchors.verticalCenter: _icon.verticalCenter
             elide: Text.ElideRight
             Layout.fillWidth: true
         }
         
         Icon {
-            id: _progression
+            id: _icon
             height: units.gu(2); width: height
             name: "go-next"
         }
