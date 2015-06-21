@@ -32,6 +32,11 @@ class UbuntuWeatherApp(object):
         return self.main_view.wait_select_single(
             AddLocationPage, objectName="addLocationPage")
 
+    def click_add_location_button(self):
+        add_location_button = self.main_view.wait_select_single(
+            "Button", objectName="emptyStateButton")
+        self.app.pointing_device.click_object(add_location_button)
+
 
 class Page(UbuntuUIToolkitCustomProxyObjectBase):
     """Autopilot helper for Pages."""
