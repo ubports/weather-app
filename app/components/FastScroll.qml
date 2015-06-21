@@ -1,7 +1,7 @@
 /****************************************************************************
 **
 ** Copyright (C) 2011 Nokia Corporation and/or its subsidiary(-ies).
-** Copyright (C) 2014 Canonical Ltda
+** Copyright (C) 2014, 2015 Canonical Ltda
 ** All rights reserved.
 ** Contact: Nokia Corporation (qt-info@nokia.com)
 **
@@ -40,8 +40,8 @@
 ****************************************************************************/
 
 // FastScroll.qml
-import QtQuick 2.3
-import Ubuntu.Components 1.1
+import QtQuick 2.4
+import Ubuntu.Components 1.2
 import "FastScroll.js" as Sections
 
 Item {

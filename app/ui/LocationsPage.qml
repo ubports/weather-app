@@ -16,8 +16,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.3
-import Ubuntu.Components 1.1
+import QtQuick 2.4
+import Ubuntu.Components 1.2
 import Ubuntu.Components.ListItems 0.1 as ListItem
 import "../components"
 import "../components/ListItemActions"
@@ -54,6 +54,10 @@ Page {
         }
     ]
 
+    ListModel {
+        id: currentLocationModel
+    }
+
     MultiSelectListView {
         id: locationsListView
         anchors {
@@ -62,6 +66,90 @@ Page {
         model: ListModel {
             id: locationsModel
         }
+        header: MultiSelectListView {
+            id: currentLocationListView
+            anchors {
+                left: parent.left
+                right: parent.right
+            }
+            height: units.gu(8)
+            interactive: false
+            model: currentLocationModel
+            delegate: WeatherListItem {
+                id: currentLocationListItem
+
+                onItemClicked: {
+                    settings.current = index;
+                    pageStack.pop()
+                }
+
+                Column {
+                    anchors {
+                        left: parent.left
+                        right: currentWeatherImage.left
+                        rightMargin: units.gu(1)
+                        verticalCenter: parent.verticalCenter
+                    }
+
+                    Label {
+                        id: currentLocationName
+
+                        anchors {
+                            left: parent.left
+                            leftMargin: units.gu(2)
+                        }
+
+                        elide: Text.ElideRight
+                        fontSize: "medium"
+                        text: i18n.tr("Current Location")
+                    }
+                    Label {
+                        id: currentLocationName2
+
+                        anchors {
+                            left: parent.left
+                            leftMargin: units.gu(2)
+                        }
+
+                        color: UbuntuColors.lightGrey
+                        elide: Text.ElideRight
+                        fontSize: "small"
+                        font.weight: Font.Light
+                        text: name + ", " + (adminName1 == name ? countryName : adminName1)
+                    }
+                }
+
+                Icon {
+                    id: currentWeatherImage
+                    anchors {
+                        right: parent.right
+                        rightMargin: units.gu(14)
+                        verticalCenter: parent.verticalCenter
+                    }
+                    name: icon
+                    height: units.gu(3)
+                    width: units.gu(3)
+                }
+
+                Label {
+                    id: currentTemperatureLabel
+                    anchors {
+                        left: currentWeatherImage.right
+                        leftMargin: units.gu(1)
+                        right: parent.right
+                        rightMargin: units.gu(2)
+                        verticalCenter: parent.verticalCenter
+                    }
+                    color: UbuntuColors.orange
+                    elide: Text.ElideRight
+                    font.pixelSize: units.gu(4)
+                    font.weight: Font.Light
+                    horizontalAlignment: Text.AlignRight
+                    text: temp + settings.tempScale
+                }
+            }
+        }
+
         delegate: WeatherListItem {
             id: locationsListItem
             leftSideAction: Remove {
@@ -71,13 +159,20 @@ Page {
             reorderable: true
 
             onItemClicked: {
-                settings.current = index;
+                settings.current = index + 1;
                 pageStack.pop()
             }
             onReorder: {
                 console.debug("Move: ", from, to);
 
                 storage.moveLocation(from, to);
+            }
+
+            ListItem.ThinDivider {
+                anchors {
+                    top: parent.top
+                }
+                visible: index == 0
             }
 
             Item {
@@ -99,7 +194,7 @@ Page {
                         id: locationName
                         elide: Text.ElideRight
                         fontSize: "medium"
-                        text: index != 0 ? name : i18n.tr("Current Location")
+                        text: name
                     }
                     Label {
                         id: locationName2
@@ -107,8 +202,7 @@ Page {
                         elide: Text.ElideRight
                         fontSize: "small"
                         font.weight: Font.Light
-                        text: index != 0 ? (adminName1 == name ? countryName : adminName1)
-                                         : name + ", " + (adminName1 == name ? countryName : adminName1)
+                        text: adminName1 == name ? countryName : adminName1
                     }
                 }
 
@@ -152,6 +246,7 @@ Page {
     }
 
     function populateLocationsModel() {
+        currentLocationModel.clear()
         locationsModel.clear()
         var loc = {}, data = {},
             tempUnits = settings.tempScale === "°C" ? "metric" : "imperial";
@@ -166,7 +261,12 @@ Page {
                 "temp": Math.round(data.data[0].current[tempUnits].temp).toString(),
                 "icon": iconMap[data.data[0].current.icon]
             }
-            locationsModel.append(loc)
+
+            if (i > 0) {
+                locationsModel.append(loc)
+            } else {
+                currentLocationModel.append(loc)
+            }
         }
     }
 
