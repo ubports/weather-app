@@ -64,14 +64,6 @@ MainView {
     Component.onCompleted: {
         storage.getLocations(fillPages);
         refreshData();
-
-        /*
-          TODO: Also add a check to determine if current location can be
-                resolved.
-        */
-        if (locationsList.length == 0) {
-            mainPageStack.push(Qt.resolvedUrl("ui/AddLocationPage.qml"));
-        }
     }
 
     /*
@@ -160,6 +152,30 @@ MainView {
                 units = metric ? "metric" : "imperial"
                 windUnits = metric ? "kph" : "mph"
             }
+        }
+    }
+
+    Column {
+        anchors.centerIn: parent
+        spacing: units.gu(4)
+        visible: (locationsList == null || locationsList.length == 0) && mainPageStack.depth == 1
+        z: 1000
+
+        Label {
+            id: emptyStateLabel
+            anchors.horizontalCenter: parent.horizontalCenter
+            text: i18n.tr("Searching for current location...")
+        }
+
+        Button {
+            id: emptyStateButton
+            objectName: "emptyStateButton"
+
+            anchors.horizontalCenter: parent.horizontalCenter
+
+            text: i18n.tr("Add a manual location")
+
+            onTriggered: mainPageStack.push(Qt.resolvedUrl("ui/AddLocationPage.qml"));
         }
     }
 
