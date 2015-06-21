@@ -162,20 +162,16 @@ Item {
             now: locationItem.currentTemp
         }
 
-        ListItem.ThinDivider {}
+        // TODO: Migrate this to using the new SDK list item when possible.
+        ListItem.ThinDivider { anchors { leftMargin: units.gu(-2); rightMargin: units.gu(-2) } }
     }
     Column {
         id: weekdayColumn
-        width: parent.width
-        height: childrenRect.height
 
-        anchors {
-            top: locationTop.bottom
-            left: parent.left
-            leftMargin: units.gu(2)
-            right: parent.right
-            rightMargin: units.gu(2)
-        }
+        anchors.top: locationTop.bottom
+        height: childrenRect.height
+        width: parent.width
+
         Repeater {
             id: mainPageWeekdayListView
             model: ListModel{}

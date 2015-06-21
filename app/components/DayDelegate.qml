@@ -18,14 +18,13 @@
 
 import QtQuick 2.4
 import Ubuntu.Components 1.2
-import Ubuntu.Components.ListItems 0.1 as ListItem
 
-ListItem.Standard {
+ListItem {
     id: dayDelegate
     height: collapsedHeight
 
     property int collapsedHeight: units.gu(8)
-    property int expandedHeight: collapsedHeight + units.gu(4) + extraInfoColumn.childrenRect.height
+    property int expandedHeight: collapsedHeight + units.gu(4) + extraInfoColumn.height
 
     property alias day: dayLabel.text
     property alias image: weatherImage.name
@@ -39,9 +38,6 @@ ListItem.Standard {
     property alias sunset: sunsetForecast.value
     property alias wind: windForecast.value
     property alias uvIndex: uvIndexForecast.value
-
-    // Standard divider is not full width so add a ThinDivider to the bottom
-    showDivider: false
 
     state: "normal"
     states: [
@@ -101,65 +97,70 @@ ListItem.Standard {
         locationPages.collapseOtherDelegates(index)
     }
 
-    ListItem.ThinDivider {
-        anchors {
-            bottom: parent.bottom
-        }
-    }
+    Item {
+        id: mainInfo
 
-    Label {
-        id: dayLabel
+        height: collapsedHeight
         anchors {
             left: parent.left
-            right: weatherImage.left
-            rightMargin: units.gu(1)
-            top: parent.top
-            topMargin: (collapsedHeight - dayLabel.height) / 2
-        }
-        elide: Text.ElideRight
-        font.weight: Font.Light
-        fontSize: "medium"
-    }
-
-    Icon {
-        id: weatherImage
-        anchors {
-            horizontalCenter: parent.horizontalCenter
-            verticalCenter: dayLabel.verticalCenter
-        }
-        height: units.gu(3)
-        width: units.gu(3)
-    }
-
-    Label {
-        id: lowLabel
-        anchors {
-            left: weatherImage.right
-            right: highLabel.left
-            rightMargin: units.gu(1)
-            verticalCenter: dayLabel.verticalCenter
-        }
-        elide: Text.ElideRight
-        font.pixelSize: units.gu(2)
-        font.weight: Font.Light
-        fontSize: "medium"
-        height: units.gu(2)
-        horizontalAlignment: Text.AlignRight
-        verticalAlignment: Text.AlignTop  // AlignTop appears to align bottom?
-    }
-
-    Label {
-        id: highLabel
-        anchors {
-            bottom: lowLabel.bottom
             right: parent.right
+            margins: units.gu(2)
         }
-        color: UbuntuColors.orange
-        elide: Text.ElideRight
-        font.pixelSize: units.gu(3)
-        font.weight: Font.Normal
-        height: units.gu(3)
-        verticalAlignment: Text.AlignTop  // AlignTop appears to align bottom?
+
+        Label {
+            id: dayLabel
+            anchors {
+                left: parent.left
+                right: weatherImage.left
+                rightMargin: units.gu(1)
+                top: parent.top
+                topMargin: (collapsedHeight - dayLabel.height) / 2
+            }
+            elide: Text.ElideRight
+            font.weight: Font.Light
+            fontSize: "medium"
+        }
+
+        Icon {
+            id: weatherImage
+            anchors {
+                horizontalCenter: parent.horizontalCenter
+                verticalCenter: dayLabel.verticalCenter
+            }
+            height: units.gu(3)
+            width: units.gu(3)
+        }
+
+        Label {
+            id: lowLabel
+            anchors {
+                left: weatherImage.right
+                right: highLabel.left
+                rightMargin: units.gu(1)
+                verticalCenter: dayLabel.verticalCenter
+            }
+            elide: Text.ElideRight
+            font.pixelSize: units.gu(2)
+            font.weight: Font.Light
+            fontSize: "medium"
+            height: units.gu(2)
+            horizontalAlignment: Text.AlignRight
+            verticalAlignment: Text.AlignTop  // AlignTop appears to align bottom?
+        }
+
+        Label {
+            id: highLabel
+            anchors {
+                bottom: lowLabel.bottom
+                right: parent.right
+            }
+            color: UbuntuColors.orange
+            elide: Text.ElideRight
+            font.pixelSize: units.gu(3)
+            font.weight: Font.Normal
+            height: units.gu(3)
+            verticalAlignment: Text.AlignTop  // AlignTop appears to align bottom?
+        }
     }
 
     Item {
@@ -168,12 +169,11 @@ ListItem.Standard {
             bottom: parent.bottom
             left: parent.left
             right: parent.right
-            top: dayLabel.bottom
-            topMargin: units.gu(2)
+            top: mainInfo.bottom
+            bottomMargin: units.gu(2)
         }
         opacity: 0
         visible: opacity !== 0
-
 
         Column {
             id: extraInfoColumn
