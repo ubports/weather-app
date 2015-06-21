@@ -16,7 +16,7 @@
  * Authored by: Martin Borho <martin@borho.net>
  */
 import QtQuick.LocalStorage 2.0
-import QtQuick 2.3
+import QtQuick 2.4
 
 Item {
     property var db: null

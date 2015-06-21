@@ -1,7 +1,7 @@
 {
     "architecture": "all",
     "description": "A weather forecast application for Ubuntu with support for multiple online weather data sources",
-    "framework": "ubuntu-sdk-14.10-qml",
+    "framework": "ubuntu-sdk-15.04-qml",
     "hooks": {
         "weather": {
             "apparmor": "ubuntu-weather-app.apparmor",
