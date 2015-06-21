@@ -18,7 +18,6 @@
 
 import QtQuick 2.4
 import Ubuntu.Components 1.2
-import Ubuntu.Components.ListItems 1.0 as ListItem
 import Ubuntu.Components.Popups 1.0
 import "../components"
 import "../data/CitiesList.js" as Cities
@@ -187,8 +186,14 @@ Page {
         section.criteria: ViewSection.FirstCharacter
         section.labelPositioning: ViewSection.InlineLabels
 
-        section.delegate: ListItem.Header {
-            text: section
+        section.delegate: ListItem {
+            height: headerText.implicitHeight + units.gu(1)
+            Label {
+                id: headerText
+                text: section
+                anchors { left: parent.left; right: parent.right; margins: units.gu(2) }
+                font.weight: Font.DemiBold
+            }
         }
 
         model: ListModel {
@@ -200,8 +205,8 @@ Page {
             onRowsAboutToBeInserted: loading = false
         }
 
-        delegate: ListItem.Empty {
-            showDivider: false
+        delegate: ListItem {
+            divider.visible: false
             Column {
                 anchors {
                     left: parent.left
