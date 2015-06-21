@@ -62,7 +62,7 @@ ListView {
                 anchors.horizontalCenter: parent.horizontalCenter
                 fontSize: "small"
                 font.weight: Font.Light
-                text: currentDate.search(Qt.locale().amText) !== -1 || currentDate.search(Qt.locale().pmText) !== -1 ? formatTimestamp(hourData.date, 'ddd')+" "+formatTime(hourData.date, 'hap') : formatTimestamp(hourData.date, 'ddd')+" "+formatTime(hourData.date, 'h:mm')
+                text: currentDate.search(Qt.locale().amText) !== -1 || currentDate.search(Qt.locale().pmText) !== -1 ? "%1 %2".arg(formatTimestamp(hourData.date, 'ddd')).arg(formatTime(hourData.date, 'hap')) : "%1 %2".arg(formatTimestamp(hourData.date, 'ddd')).arg(formatTime(hourData.date, 'h:mm'))
             }
 
             Item {
