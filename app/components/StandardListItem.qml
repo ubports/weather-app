@@ -17,32 +17,32 @@
  */
 
 import QtQuick 2.4
+import QtQuick.Layouts 1.1
 import Ubuntu.Components 1.2
 
-Row {
-    height: icon.height
-    spacing: units.gu(2)
-    visible: value !== ""
+ListItem {
+    id: listItem
 
-    property alias imageSource: icon.source
-    property alias forecast: forecastLabel.text
-    property alias value: forecastValue.text
-    
-    Icon {
-        id: icon
-        color: "#000"
-        height: units.gu(2)
-        width: height
-    }
-    
-    Label {
-        id: forecastLabel
-        elide: Text.ElideRight
-        width: units.gu(8)
-    }
-    
-    Label {
-        id: forecastValue
-        width: units.gu(10)
+    property alias title: _title.text
+    property alias icon: _icon.name
+    property alias showIcon: _icon.visible
+
+    RowLayout {
+        anchors { left: parent.left; right: parent.right; verticalCenter: parent.verticalCenter; margins: units.gu(2) }
+        height: _icon.height
+        spacing: units.gu(2)
+        
+        Label {
+            id: _title
+            anchors.verticalCenter: _icon.verticalCenter
+            elide: Text.ElideRight
+            Layout.fillWidth: true
+        }
+        
+        Icon {
+            id: _icon
+            height: units.gu(2); width: height
+            name: "go-next"
+        }
     }
 }

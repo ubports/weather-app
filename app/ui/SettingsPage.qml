@@ -18,42 +18,34 @@
 
 import QtQuick 2.4
 import Ubuntu.Components 1.2
-import Ubuntu.Components.ListItems 0.1 as ListItem
+import "../components"
 
 Page {
     title: i18n.tr("Settings")
 
     Flickable {
-        anchors {
-            fill: parent
-        }
+        clip: true
+        anchors.fill: parent
+        contentHeight: settingsColumn.height
         height: parent.height
-        contentHeight: settingsColumn.childrenRect.height
 
         Column {
             id: settingsColumn
-            anchors {
-                fill: parent
-            }
 
-            ListItem.SingleValue {
-                progression: true
-                text: i18n.tr("Units")
+            anchors.fill: parent
 
+            StandardListItem {
+                title: i18n.tr("Units")
                 onClicked: mainPageStack.push(Qt.resolvedUrl("settings/UnitsPage.qml"))
             }
 
-            ListItem.SingleValue {
-                progression: true
-                text: i18n.tr("Data Provider")
-
+            StandardListItem {
+                title: i18n.tr("Data Provider")
                 onClicked: mainPageStack.push(Qt.resolvedUrl("settings/DataProviderPage.qml"))
             }
 
-            ListItem.SingleValue {
-                progression: true
-                text: i18n.tr("Refresh Interval")
-
+            StandardListItem {
+                title: i18n.tr("Refresh Interval")
                 onClicked: mainPageStack.push(Qt.resolvedUrl("settings/RefreshIntervalPage.qml"))
             }
         }
