@@ -100,8 +100,8 @@ Item {
                     image: (forecasts[x].icon !== undefined && iconMap[forecasts[x].icon] !== undefined) ? iconMap[forecasts[x].icon] : "",
                     chanceOfRain: forecasts[x].propPrecip === undefined ? -1 : forecasts[x].propPrecip,
                     humidity: emptyIfUndefined(forecasts[x].humidity, "%"),
-                    sunrise: forecasts[x].sunrise || SunCalc.SunCalc.getTimes(new Date(), data.location.coord.lat, data.location.coord.lon).sunrise.toLocaleTimeString(),
-                    sunset: forecasts[x].sunset || SunCalc.SunCalc.getTimes(new Date(), data.location.coord.lat, data.location.coord.lon).sunset.toLocaleTimeString(),
+                    sunrise: forecasts[x].sunrise || SunCalc.SunCalc.getTimes(getDate(forecasts[x].date), data.location.coord.lat, data.location.coord.lon).sunrise.toLocaleTimeString(),
+                    sunset: forecasts[x].sunset || SunCalc.SunCalc.getTimes(getDate(forecasts[x].date), data.location.coord.lat, data.location.coord.lon).sunset.toLocaleTimeString(),
                     uvIndex: emptyIfUndefined(forecasts[x].uv),
                     wind: forecasts[x][tempUnits].windSpeed === undefined || forecasts[x].windDir === undefined
                                 ? "" : Math.round(forecasts[x][tempUnits].windSpeed) + settings.windUnits + " " + forecasts[x].windDir

@@ -66,7 +66,7 @@ PageWithBottomEdge {
       Format date object by given format.
     */
     function formatTimestamp(dateData, format) {
-        var date = new Date(dateData.year, dateData.month, dateData.date, dateData.hours, dateData.minutes)
+        var date = getDate(dateData)
         return Qt.formatDate(date, i18n.tr(format))
     }
 
@@ -74,8 +74,16 @@ PageWithBottomEdge {
       Format time object by given format.
     */
     function formatTime(dateData, format) {
-        var date = new Date(dateData.year, dateData.month, dateData.date, dateData.hours, dateData.minutes)
+        var date = getDate(dateData)
         return Qt.formatTime(date, i18n.tr(format))
+    }
+
+    /*
+      Get Date object from dateData.
+    */
+    function getDate(dateData) {
+        var date = new Date(dateData.year, dateData.month, dateData.date, dateData.hours, dateData.minutes)
+        return date
     }
 
     /*
