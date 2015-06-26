@@ -20,6 +20,7 @@ import QtQuick 2.4
 import Ubuntu.Components 1.2
 import Ubuntu.Components.ListItems 0.1 as ListItem
 import "../components"
+import "../data/suncalc.js" as SunCalc
 
 Item {
     id: locationItem
@@ -99,6 +100,8 @@ Item {
                     image: (forecasts[x].icon !== undefined && iconMap[forecasts[x].icon] !== undefined) ? iconMap[forecasts[x].icon] : "",
                     chanceOfRain: forecasts[x].propPrecip === undefined ? -1 : forecasts[x].propPrecip,
                     humidity: emptyIfUndefined(forecasts[x].humidity, "%"),
+                    sunrise: forecasts[x].sunrise || SunCalc.SunCalc.getTimes(new Date(), data.location.coord.lat, data.location.coord.lon).sunrise.toLocaleTimeString(),
+                    sunset: forecasts[x].sunset || SunCalc.SunCalc.getTimes(new Date(), data.location.coord.lat, data.location.coord.lon).sunset.toLocaleTimeString(),
                     uvIndex: emptyIfUndefined(forecasts[x].uv),
                     wind: forecasts[x][tempUnits].windSpeed === undefined || forecasts[x].windDir === undefined
                                 ? "" : Math.round(forecasts[x][tempUnits].windSpeed) + settings.windUnits + " " + forecasts[x].windDir
@@ -185,8 +188,8 @@ Item {
                 humidity: model.humidity
                 // TODO: extra from API
                 //pollen: model.pollen
-                //sunrise: model.sunrise
-                //sunset: model.sunset
+                sunrise: model.sunrise
+                sunset: model.sunset
                 wind: model.wind
                 uvIndex: model.uvIndex
             }

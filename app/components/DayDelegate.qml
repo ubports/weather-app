@@ -224,13 +224,13 @@ ListItem {
             ForecastDetailsDelegate {
                 id: sunriseForecast
                 forecast: i18n.tr("Sunrise")
-                // FIXME: need icon
+                imageName: "info"
             }
 
             ForecastDetailsDelegate {
                 id: sunsetForecast
                 forecast: i18n.tr("Sunset")
-                // FIXME: need icon
+                imageName: "info"
             }
         }
     }

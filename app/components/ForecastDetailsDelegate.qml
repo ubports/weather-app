@@ -24,6 +24,7 @@ Row {
     spacing: units.gu(2)
     visible: value !== ""
 
+    property alias imageName: icon.name
     property alias imageSource: icon.source
     property alias forecast: forecastLabel.text
     property alias value: forecastValue.text
