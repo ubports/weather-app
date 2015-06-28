@@ -139,6 +139,7 @@ MainView {
         property string units
         property string windUnits
 
+        property bool addedCurrentLocation: false
         property bool migrated: false
 
         Component.onCompleted: {
@@ -185,8 +186,9 @@ MainView {
         // Add or replace the current locaiton to the storage and refresh the
         // locationList
         function updateCurrentLocation(location) {
-            if (locationsList == null || locationsList.length == 0) {
-                storage.insertLocation({location: location});
+            if (!settings.addedCurrentLocation || locationsList == null || locationsList.length == 0) {
+                storage.insertLocationAtStart({location: location});
+                settings.addedCurrentLocation = true;
             } else {
                 storage.updateLocation(locationsList[0].db.id, {location: location});
             }
