@@ -234,7 +234,7 @@ Page {
                 if (storage.addLocation(citiesModel.get(index))) {
                     mainPageStack.pop()
                 } else {
-                    PopupUtils.open(locationExistsComponent, addPage)
+                    PopupUtils.open(locationExistsComponent, addLocationPage)
                 }
             }
         }
