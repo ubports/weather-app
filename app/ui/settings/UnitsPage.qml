@@ -48,22 +48,6 @@ Page {
         }
 
         ListModel {
-            id: precipationModel
-            Component.onCompleted: initialize()
-            function initialize() {
-                // TRANSLATORS: The strings are standard measurement units
-                // of precipitation in millimeters and are shown in the settings page.
-                // Only the abbreviated form of millimeters should be used.
-                precipationModel.append({"text": i18n.tr("mm"), "value": "mm"})
-
-                // TRANSLATORS: The strings are standard measurement units
-                // of precipitation in inches and are shown in the settings page.
-                // Only the abbreviated form of inches should be used.
-                precipationModel.append({"text": i18n.tr("in"), "value": "in"})
-            }
-        }
-
-        ListModel {
             id: windSpeedModel
             Component.onCompleted: initialize()
             function initialize() {
@@ -98,26 +82,6 @@ Page {
                     showIcon: settings.tempScale === model.value
                     onClicked: {
                         settings.tempScale = model.value
-                        refreshData(true)
-                    }
-                }
-            }
-
-            ExpandableListItem {
-                id: precipationSetting
-
-                listViewHeight: precipationModel.count*units.gu(7) - units.gu(1)
-                model: precipationModel
-                text: i18n.tr("Precipitation")
-                subText: settings.precipUnits === "mm" ? i18n.tr("mm")
-                                                       : i18n.tr("in")
-
-                delegate: StandardListItem {
-                    title: model.text
-                    icon: "ok"
-                    showIcon: settings.precipUnits === model.value
-                    onClicked: {
-                        settings.precipUnits = model.value
                         refreshData(true)
                     }
                 }
