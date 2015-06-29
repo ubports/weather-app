@@ -31,7 +31,8 @@ ListItem {
     property alias high: highLabel.text
     property alias low: lowLabel.text
 
-    property alias chanceOfRain: chanceOfRainForecast.chance
+    property alias description: descriptionForecast.text
+    property alias chanceOfRain: chanceOfRainForecast.value
     property alias humidity: humidityForecast.value
     property alias pollen: pollenForecast.value
     property alias sunrise: sunriseForecast.value
@@ -186,15 +187,19 @@ ListItem {
 
             // Overview text
             Label {
-                id: chanceOfRainForecast
+                id: descriptionForecast
                 color: UbuntuColors.coolGrey
                 fontSize: "x-large"
                 horizontalAlignment: Text.AlignHCenter
                 text: i18n.tr("Chance of rain")
                 width: parent.width
                 visible: false  // FIXME: add overview text eg "Chance of flurries"
+            }
 
-                property int chance: 0
+            ForecastDetailsDelegate {
+                id: chanceOfRainForecast
+                forecast: i18n.tr("Chance of rain")
+                imageSource: "../graphics/extended-information_chance-of-rain.svg"
             }
 
             ForecastDetailsDelegate {
