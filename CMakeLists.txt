@@ -33,7 +33,7 @@ set(APP_NAME weather)
 set(APP_HARDCODE ubuntu-weather-app)
 set(MAIN_QML ${APP_HARDCODE}.qml)
 set(DESKTOP_FILE "${APP_HARDCODE}.desktop")
-set(ICON weather-app@30.png)
+set(ICON_FILE weather-app@30.png)
 set(AUTOPILOT_DIR ubuntu_weather_app)
 
 # Set install paths
