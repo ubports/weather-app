@@ -27,7 +27,8 @@ class UbuntuWeatherApp(object):
     def __init__(self, app_proxy):
         self.app = app_proxy
 
-        # Select by objectName due to it being MainView12 not MainView
+        # FIXME: Select by objectName due to it being MainView12 not MainView
+        # pad.lv/1350532
         self.main_view = self.app.wait_select_single(objectName="weather")
 
     def get_add_location_page(self):
