@@ -34,6 +34,11 @@ class UbuntuWeatherApp(object):
         return self.main_view.wait_select_single(
             AddLocationPage, objectName="addLocationPage")
 
+    def get_home_page(self):
+        return self.main_view.wait_select_single(
+            HomePage, objectName="homePage"
+        )
+
     def click_add_location_button(self):
         add_location_button = self.main_view.wait_select_single(
             "Button", objectName="emptyStateButton")
@@ -46,10 +51,27 @@ class Page(UbuntuUIToolkitCustomProxyObjectBase):
         super(Page, self).__init__(*args)
 
 
+class PageWithBottomEdge(Page):
+    """Autopilot helper for PageWithBottomEdge."""
+    def __init__(self, *args):
+        super(PageWithBottomEdge, self).__init__(*args)
+
+
 class AddLocationPage(Page):
     """Autopilot helper for AddLocationPage."""
     def __init__(self, *args):
         super(AddLocationPage, self).__init__(*args)
+
+
+class HomePage(Page):
+    """Autopilot helper for HomePage."""
+    def __init__(self, *args):
+        super(HomePage, self).__init__(*args)
+
+    def get_location_count(self):
+        return self.wait_select_single(
+            "QQuickListView", objectName="locationPages"
+        ).count
 
 
 class MainView(MainView):

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-28 19:17-0500\n"
+"POT-Creation-Date: 2015-07-18 18:04+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -118,15 +118,15 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: ../app/ui/SettingsPage.qml:38 ../app/ui/settings/UnitsPage.qml:24
+#: ../app/ui/SettingsPage.qml:32 ../app/ui/settings/UnitsPage.qml:24
 msgid "Units"
 msgstr ""
 
-#: ../app/ui/SettingsPage.qml:43 ../app/ui/settings/DataProviderPage.qml:24
+#: ../app/ui/SettingsPage.qml:37 ../app/ui/settings/DataProviderPage.qml:24
 msgid "Data Provider"
 msgstr ""
 
-#: ../app/ui/SettingsPage.qml:48 ../app/ui/settings/RefreshIntervalPage.qml:24
+#: ../app/ui/SettingsPage.qml:42 ../app/ui/settings/RefreshIntervalPage.qml:24
 msgid "Refresh Interval"
 msgstr ""
 
