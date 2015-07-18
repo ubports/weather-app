@@ -1,6 +1,11 @@
 ubuntu-weather-app (3.0) UNRELEASED; urgency=medium
 
+  [Victor Thompson]
   * Sync debian version with click version.
+  * Use sunrise/sunset from API if available, otherwise use calculated times
+  * Allow adding the current location as a duplicate to the Locations List.
+  * Add chance of rain
+  * Add conditions text to day delegate. 
 
  -- Victor Thompson <victor.thompson@gmail.com>  Mon, 01 Jun 2015 20:11:23 -0500
 
