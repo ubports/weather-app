@@ -37,8 +37,7 @@ class UbuntuWeatherApp(object):
 
     def get_home_page(self):
         return self.main_view.wait_select_single(
-            HomePage, objectName="homePage"
-        )
+            HomePage, objectName="homePage")
 
     def click_add_location_button(self):
         add_location_button = self.main_view.wait_select_single(
@@ -71,8 +70,7 @@ class HomePage(Page):
 
     def get_location_count(self):
         return self.wait_select_single(
-            "QQuickListView", objectName="locationPages"
-        ).count
+            "QQuickListView", objectName="locationPages").count
 
 
 class MainView(MainView):

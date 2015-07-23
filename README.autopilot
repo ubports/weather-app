@@ -2,7 +2,7 @@
 
 The Weather app follows a test driven development where autopilot tests are run before every merge into trunk. If you are submitting your bugfix/patch to the Weather app, please follow the following steps below to ensure that all tests pass before proposing a merge request.
 
-If you are looking for more info about Autopilot or writing AP tests for the clock app, here are some useful links to help you:
+If you are looking for more info about Autopilot or writing AP tests for the weather app, here are some useful links to help you:
 
 - http://developer.ubuntu.com/start/quality
 - https://developer.ubuntu.com/api/autopilot/python/1.5.0/
