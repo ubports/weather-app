@@ -171,8 +171,7 @@ class DatabaseMixin(object):
         for loc_data in locations:
             db_exec = "INSERT INTO Locations(date, data) VALUES('{}', '{}')"
             cursor.execute(db_exec.format(
-                int(time.time() * 1000), loc_data)
-            )
+                int(time.time() * 1000), loc_data))
             conn.commit()
 
         conn.close()
@@ -202,8 +201,7 @@ class DatabaseMixin(object):
 
         self.assertThat(
             lambda: os.path.exists(self.db_path),
-            Eventually(Equals(True))
-        )
+            Eventually(Equals(True)))
 
         # this needs to stay in sync with Storage.qml enties
         logger.debug("Creating locations and settings tables")
@@ -228,15 +226,13 @@ class DatabaseMixin(object):
     def load_vars(self):
         self.app_dir = os.path.join(
             os.environ.get('HOME'),
-            ".local/share/com.ubuntu.weather"
-        )
+            ".local/share/com.ubuntu.weather")
         self.db_dir = os.path.join(self.app_dir, 'Databases')
         self.db_file = "34e1e542f2f083ff18f537b07a380071.sqlite"
         self.db_path = os.path.join(self.db_dir, self.db_file)
 
         self.json_path = os.path.abspath(
-            os.path.join(os.path.dirname(__file__), '..', 'files')
-        )
+            os.path.join(os.path.dirname(__file__), '..', 'files'))
 
 
 class UbuntuWeatherAppTestCase(BaseTestCaseWithPatchedHome, DatabaseMixin):
