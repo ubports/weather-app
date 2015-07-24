@@ -1,6 +1,8 @@
 ubuntu-weather-app (3.0) UNRELEASED; urgency=medium
 
+  [Victor Thompson]
   * Sync debian version with click version.
+  * Default to OWM if the key file for TWC is blank.
 
  -- Victor Thompson <victor.thompson@gmail.com>  Mon, 01 Jun 2015 20:11:23 -0500
 
