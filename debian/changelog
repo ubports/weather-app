@@ -2,6 +2,10 @@ ubuntu-weather-app (3.0) UNRELEASED; urgency=medium
 
   [ Victor Thompson ]
   * Sync debian version with click version.
+  * Use sunrise/sunset from API if available, otherwise use calculated times
+  * Allow adding the current location as a duplicate to the Locations List.
+  * Add chance of rain
+  * Add conditions text to day delegate. 
   * Default to OWM if the key file for TWC is blank.
 
   [ Andrew Hayzen ]

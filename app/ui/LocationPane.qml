@@ -98,7 +98,7 @@ Item {
                     low: Math.round(forecasts[x][tempUnits].tempMin).toString() + settings.tempScale,
                     high: (forecasts[x][tempUnits].tempMax !== undefined) ? Math.round(forecasts[x][tempUnits].tempMax).toString() + settings.tempScale : "",
                     image: (forecasts[x].icon !== undefined && iconMap[forecasts[x].icon] !== undefined) ? iconMap[forecasts[x].icon] : "",
-                    chanceOfRain: forecasts[x].propPrecip === undefined ? -1 : forecasts[x].propPrecip,
+                    chanceOfRain: emptyIfUndefined(forecasts[x].propPrecip, "%"),
                     humidity: emptyIfUndefined(forecasts[x].humidity, "%"),
                     sunrise: forecasts[x].sunrise || SunCalc.SunCalc.getTimes(getDate(forecasts[x].date), data.location.coord.lat, data.location.coord.lon).sunrise.toLocaleTimeString(),
                     sunset: forecasts[x].sunset || SunCalc.SunCalc.getTimes(getDate(forecasts[x].date), data.location.coord.lat, data.location.coord.lon).sunset.toLocaleTimeString(),
