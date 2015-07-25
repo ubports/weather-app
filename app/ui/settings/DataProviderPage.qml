@@ -19,6 +19,7 @@
 import QtQuick 2.4
 import Ubuntu.Components 1.2
 import "../../components"
+import "../../data/key.js" as Key
 
 Page {
     title: i18n.tr("Data Provider")
@@ -26,7 +27,6 @@ Page {
     ListModel {
         id: dataProviderModel
         ListElement { text: "OpenWeatherMap" }
-        ListElement { text: "The Weather Channel" }
     }
 
     ExpandableListItem {
@@ -49,6 +49,13 @@ Page {
                 }
                 refreshData(false, true)
             }
+        }
+    }
+
+    Component.onCompleted: {
+        // If the key file for TWC is not blank, add the service to the model
+        if (Key.twcKey !== "") {
+            dataProviderModel.append({ text: "The Weather Channel" })
         }
     }
 }

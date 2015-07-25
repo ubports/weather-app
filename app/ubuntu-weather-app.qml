@@ -153,6 +153,10 @@ MainView {
                 units = metric ? "metric" : "imperial"
                 windUnits = metric ? "kph" : "mph"
             }
+
+            if (Key.twcKey === "") {  // No API key for TWC, so use OWM
+                service = "openweathermap"
+            }
         }
     }
 
