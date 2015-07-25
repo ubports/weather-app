@@ -17,13 +17,13 @@ License: GPL-3
 
 Files: app/data/suncalc.js
 Copyright: 2014 Vladimir Agafonkin
-License: BSD
+License: BSD-2-clause
 
 Files: debian/*
 Copyright: 2013 Canonical Ltd.
 License: LGPL-3
 
-License: BSD
+License: BSD-2-clause
  Redistribution and use in source and binary forms, with or without modification, are
  permitted provided that the following conditions are met:
  .
