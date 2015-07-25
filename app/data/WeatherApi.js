@@ -512,6 +512,7 @@ var WeatherChannelApi = (function() {
                 "daily": combinedData[0]["DailyForecasts"],
                 "forecast": combinedData[0]["HourlyForecasts"],
                 "current": combinedData[0]["StandardObservation"],
+                "sunRiseSet": combinedData[0]["SunRiseSet"],
             };
         print("["+location.name+"] "+JSON.stringify(localNow));
         // add openweathermap id for faster responses
@@ -522,6 +523,7 @@ var WeatherChannelApi = (function() {
         for(var x=0;x<5;x++) {
             var dayData = data["daily"][x],
                 date = getLocationTime(((dayData.validDate*1000)-1000)+offset); // minus 1 sec to handle +/-12 TZ
+            var sunRiseSet = data["sunRiseSet"][x];
             day = date.year+"-"+date.month+"-"+date.date;
             if(!todayDate) {
                 if(localNow.year+"-"+localNow.month+"-"+localNow.date > day) {
@@ -531,6 +533,10 @@ var WeatherChannelApi = (function() {
                 todayDate = date;
             }
             tmpResult[day] = _buildDayFormat(date, dayData, nowMs);
+            var sunrise = new Date(sunRiseSet.rise*1000);
+            var sunset = new Date(sunRiseSet.set*1000);
+            tmpResult[day].sunrise = sunrise.toLocaleTimeString();
+            tmpResult[day].sunset = sunset.toLocaleTimeString();
         }
         //
         if(data["forecast"] !== undefined) {
