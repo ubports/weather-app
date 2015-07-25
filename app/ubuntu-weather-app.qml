@@ -215,14 +215,15 @@ MainView {
             return !exists;
         }
 
-        // Return true if the location given is already in the locationsList
+        // Return true if the location given is already in the locationsList, and is not the same
+        // as the current location.
         function checkLocationExists(location) {
             var exists = false;
 
             for (var i=0; !exists && i < locationsList.length; i++) {
                 var loc = locationsList[i].location;
 
-                if (loc.services.geonames && (loc.services.geonames === location.services.geonames)) {
+                if (loc.services.geonames && (loc.services.geonames === location.services.geonames) && !(settings.addedCurrentLocation && i === 0)) {
                     exists = true;
                 }
             }
