@@ -1,3 +1,5 @@
+add_subdirectory(databases)
+add_subdirectory(files)
 add_subdirectory(tests)
 
 # make the emulator files visible on qtcreator

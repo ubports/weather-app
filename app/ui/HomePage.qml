@@ -122,6 +122,7 @@ PageWithBottomEdge {
         */
         ListView {
             id: locationPages
+            objectName: "locationPages"
             anchors.fill: parent
             currentIndex: settings.current
             delegate: LocationPane {}
