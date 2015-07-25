@@ -23,31 +23,24 @@ import "../components"
 Page {
     title: i18n.tr("Settings")
 
-    Flickable {
-        clip: true
+    Column {
+        id: settingsColumn
+
         anchors.fill: parent
-        contentHeight: settingsColumn.height
-        height: parent.height
 
-        Column {
-            id: settingsColumn
+        StandardListItem {
+            title: i18n.tr("Units")
+            onClicked: mainPageStack.push(Qt.resolvedUrl("settings/UnitsPage.qml"))
+        }
 
-            anchors.fill: parent
+        StandardListItem {
+            title: i18n.tr("Data Provider")
+            onClicked: mainPageStack.push(Qt.resolvedUrl("settings/DataProviderPage.qml"))
+        }
 
-            StandardListItem {
-                title: i18n.tr("Units")
-                onClicked: mainPageStack.push(Qt.resolvedUrl("settings/UnitsPage.qml"))
-            }
-
-            StandardListItem {
-                title: i18n.tr("Data Provider")
-                onClicked: mainPageStack.push(Qt.resolvedUrl("settings/DataProviderPage.qml"))
-            }
-
-            StandardListItem {
-                title: i18n.tr("Refresh Interval")
-                onClicked: mainPageStack.push(Qt.resolvedUrl("settings/RefreshIntervalPage.qml"))
-            }
+        StandardListItem {
+            title: i18n.tr("Refresh Interval")
+            onClicked: mainPageStack.push(Qt.resolvedUrl("settings/RefreshIntervalPage.qml"))
         }
     }
 }

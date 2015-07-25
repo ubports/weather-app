@@ -19,12 +19,17 @@
 import os
 import os.path
 import shutil
+import sqlite3
+import time
 import logging
 
 import fixtures
 from ubuntu_weather_app import UbuntuWeatherApp
+import ubuntu_weather_app
 
 from autopilot import logging as autopilot_logging
+from autopilot.matchers import Eventually
+from testtools.matchers import Equals
 from autopilot.testcase import AutopilotTestCase
 
 import ubuntuuitoolkit
@@ -138,13 +143,123 @@ class BaseTestCaseWithPatchedHome(AutopilotTestCase):
                                                          newvalue=temp_dir))
 
             logger.debug("Patched home to fake home directory %s" % temp_dir)
+
         return temp_dir
 
 
-class UbuntuWeatherAppTestCase(BaseTestCaseWithPatchedHome):
+class DatabaseMixin(object):
+
+    """
+    Helper functions for dealing with sqlite databases
+    """
+
+    def _execute_sql(self, statement):
+        conn = sqlite3.connect(self.db_path)
+        cursor = conn.cursor()
+        logger.debug("Executing sql")
+        logger.debug(statement)
+        cursor.execute(statement)
+        conn.commit()
+        conn.close()
+
+    def add_locations_to_database(self, limit=None):
+        locations = self.get_locations_data()
+        conn = sqlite3.connect(self.db_path)
+        cursor = conn.cursor()
+        logger.debug("Adding locations to database")
+
+        for loc_data in locations:
+            db_exec = "INSERT INTO Locations(date, data) VALUES('{}', '{}')"
+            cursor.execute(db_exec.format(
+                int(time.time() * 1000), loc_data))
+            conn.commit()
+
+        conn.close()
+
+    def clean_db(self):
+        logger.debug("Removing existing database at %s" % self.db_dir)
+
+        try:
+            shutil.rmtree(self.db_dir)
+        except OSError:
+            logger.debug("Could not remove existing database")
+            pass
+
+    def create_blank_db(self):
+        self.clean_db()
+
+        # create blank db
+        database_tmpl_dir = os.path.join(
+            os.path.dirname(ubuntu_weather_app.__file__),
+            'databases')
+        logger.debug("Creating blank db on filesystem %s" % self.db_dir)
+
+        if not os.path.exists(self.app_dir):
+            os.makedirs(self.app_dir)
+
+        shutil.copytree(database_tmpl_dir, self.db_dir)
+
+        self.assertThat(
+            lambda: os.path.exists(self.db_path),
+            Eventually(Equals(True)))
+
+        # this needs to stay in sync with Storage.qml enties
+        logger.debug("Creating locations and settings tables")
+        self._execute_sql("CREATE TABLE IF NOT EXISTS Locations(id INTEGER "
+                          "PRIMARY KEY AUTOINCREMENT, data TEXT, date TEXT)")
+
+        self._execute_sql("CREATE TABLE IF NOT EXISTS settings(key TEXT "
+                          "UNIQUE, value TEXT)")
+
+    def get_locations_data(self):
+        result = []
+        json_files = [self.json_path + '/1.json', self.json_path + '/2.json']
+
+        for path in json_files:
+            with open(path) as fh:
+                json_str = fh.read()
+                result.append(json_str.strip())
+                fh.close()
+
+        return result
+
+    def load_vars(self):
+        self.app_dir = os.path.join(
+            os.environ.get('HOME'),
+            ".local/share/com.ubuntu.weather")
+        self.db_dir = os.path.join(self.app_dir, 'Databases')
+        self.db_file = "34e1e542f2f083ff18f537b07a380071.sqlite"
+        self.db_path = os.path.join(self.db_dir, self.db_file)
+
+        self.json_path = os.path.abspath(
+            os.path.join(os.path.dirname(__file__), '..', 'files'))
+
+
+class UbuntuWeatherAppTestCase(BaseTestCaseWithPatchedHome, DatabaseMixin):
 
     """Base test case that launches the ubuntu-weather-app."""
 
     def setUp(self):
         super(UbuntuWeatherAppTestCase, self).setUp()
+
+        self.load_vars()
+        self.create_blank_db()
+
+        self.app = UbuntuWeatherApp(self.launcher())
+
+
+class UbuntuWeatherAppTestCaseWithData(BaseTestCaseWithPatchedHome,
+                                       DatabaseMixin):
+
+    """Base test case that launches the ubuntu-weather-app with data."""
+
+    def setUp(self):
+        super(UbuntuWeatherAppTestCaseWithData, self).setUp()
+
+        self.load_vars()
+        self.create_blank_db()
+
+        logger.debug("Adding fake data to new database")
+        self.add_locations_to_database()
+
         self.app = UbuntuWeatherApp(self.launcher())

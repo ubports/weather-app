@@ -19,10 +19,10 @@ from ubuntu_weather_app.tests import UbuntuWeatherAppTestCase
 logger = logging.getLogger(__name__)
 
 
-class TestMainWindow(UbuntuWeatherAppTestCase):
+class TestEmptyState(UbuntuWeatherAppTestCase):
 
     def setUp(self):
-        super(TestMainWindow, self).setUp()
+        super(TestEmptyState, self).setUp()
 
     def test_add_location_button(self):
         """ tests that the add location page is shown after the Add Location
