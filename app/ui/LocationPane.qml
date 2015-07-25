@@ -98,6 +98,7 @@ Item {
                     low: Math.round(forecasts[x][tempUnits].tempMin).toString() + settings.tempScale,
                     high: (forecasts[x][tempUnits].tempMax !== undefined) ? Math.round(forecasts[x][tempUnits].tempMax).toString() + settings.tempScale : "",
                     image: (forecasts[x].icon !== undefined && iconMap[forecasts[x].icon] !== undefined) ? iconMap[forecasts[x].icon] : "",
+                    condition: emptyIfUndefined(forecasts[x].condition),
                     chanceOfRain: emptyIfUndefined(forecasts[x].propPrecip, "%"),
                     humidity: emptyIfUndefined(forecasts[x].humidity, "%"),
                     sunrise: forecasts[x].sunrise || SunCalc.SunCalc.getTimes(getDate(forecasts[x].date), data.location.coord.lat, data.location.coord.lon).sunrise.toLocaleTimeString(),
@@ -184,6 +185,7 @@ Item {
                 image: model.image
                 low: model.low
 
+                condition: model.condition
                 chanceOfRain: model.chanceOfRain
                 humidity: model.humidity
                 // TODO: extra from API
