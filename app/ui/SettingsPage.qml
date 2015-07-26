@@ -44,8 +44,8 @@ Page {
         }
 
         StandardListItem {
-            title: i18n.tr("Privacy")
-            onClicked: mainPageStack.push(Qt.resolvedUrl("settings/PrivacyPage.qml"))
+            title: i18n.tr("Location")
+            onClicked: mainPageStack.push(Qt.resolvedUrl("settings/LocationPage.qml"))
         }
     }
 }

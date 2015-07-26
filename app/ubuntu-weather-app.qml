@@ -92,7 +92,7 @@ MainView {
     function fillPages(locations) {
         locationsList = []
 
-        if (settings.addedCurrentLocation && !settings.autoDetectLocation) {
+        if (settings.addedCurrentLocation && !settings.detectCurrentLocation) {
             locations.splice(0, 1);
         }
 
@@ -137,7 +137,7 @@ MainView {
         */
         property int current: 0
 
-        property bool autoDetectLocation: true
+        property bool detectCurrentLocation: true
         property int refreshInterval: 1800
         property string precipUnits
         property string service

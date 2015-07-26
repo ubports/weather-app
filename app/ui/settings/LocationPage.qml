@@ -21,17 +21,17 @@ import Ubuntu.Components 1.2
 import Ubuntu.Components.ListItems 1.0 as ListItem
 
 Page {
-    title: i18n.tr("Privacy")
+    title: i18n.tr("Location")
 
     ListItem.Standard {
         control: CheckBox {
-            checked: settings.autoDetectLocation
+            checked: settings.detectCurrentLocation
 
             onClicked: {
-                settings.autoDetectLocation = checked;
-                refreshData(false, true);
+                settings.detectCurrentLocation = checked;
+                refreshData();
             }
         }
-        text: i18n.tr("Auto detect location")
+        text: i18n.tr("Detect current location")
     }
 }
