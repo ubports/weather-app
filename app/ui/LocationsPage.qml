@@ -159,7 +159,12 @@ Page {
             reorderable: true
 
             onItemClicked: {
-                settings.current = index + 1;
+                if (settings.addedCurrentLocation && settings.detectCurrentLocation) {
+                    settings.current = index + 1;
+                } else {
+                    settings.current = index;
+                }
+
                 pageStack.pop()
             }
             onReorder: {
