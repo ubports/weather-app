@@ -153,7 +153,13 @@ Page {
         delegate: WeatherListItem {
             id: locationsListItem
             leftSideAction: Remove {
-                onTriggered: storage.removeLocation(index)
+                onTriggered: {
+                    if (settings.addedCurrentLocation && settings.detectCurrentLocation) {
+                        storage.removeLocation(index)
+                    } else {
+                        storage.removeLocation(index - 1)
+                    }
+                }
             }
             multiselectable: true
             reorderable: true
@@ -170,7 +176,11 @@ Page {
             onReorder: {
                 console.debug("Move: ", from, to);
 
-                storage.moveLocation(from, to);
+                if (settings.addedCurrentLocation && settings.detectCurrentLocation) {
+                    storage.moveLocation(from, to);
+                } else {
+                    storage.moveLocation(from - 1, to - 1);
+                }
             }
 
             ListItem.ThinDivider {
