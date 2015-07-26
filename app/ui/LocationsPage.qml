@@ -72,7 +72,7 @@ Page {
                 left: parent.left
                 right: parent.right
             }
-            height: settings.addedCurrentLocation ? units.gu(8) : units.gu(0)
+            height: settings.addedCurrentLocation && settings.autoDetectLocation ? units.gu(8) : units.gu(0)
             interactive: false
             model: currentLocationModel
             delegate: WeatherListItem {
@@ -262,7 +262,7 @@ Page {
                 "icon": iconMap[data.data[0].current.icon]
             }
 
-            if (!settings.addedCurrentLocation || i > 0) {
+            if (!settings.addedCurrentLocation || i > 0 || !settings.autoDetectLocation) {
                 locationsModel.append(loc)
             } else {
                 currentLocationModel.append(loc)

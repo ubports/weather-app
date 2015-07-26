@@ -41,7 +41,7 @@ Item {
     }
 
     function searchResponseHandler(msgObject) {
-        if (!msgObject.error) {
+        if (!msgObject.error && settings.autoDetectLocation) {
             console.log("Loc to add:", JSON.stringify(msgObject.result.locations[0]))
             storage.updateCurrentLocation(msgObject.result.locations[0])
         }
@@ -51,7 +51,7 @@ Item {
     PositionSource {
         id: currentPosition
         updateInterval: 1000
-        active: true
+        active: settings.autoDetectLocation
 
         onPositionChanged: {
             var coord = currentPosition.position.coordinate

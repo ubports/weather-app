@@ -42,5 +42,10 @@ Page {
             title: i18n.tr("Refresh Interval")
             onClicked: mainPageStack.push(Qt.resolvedUrl("settings/RefreshIntervalPage.qml"))
         }
+
+        StandardListItem {
+            title: i18n.tr("Privacy")
+            onClicked: mainPageStack.push(Qt.resolvedUrl("settings/PrivacyPage.qml"))
+        }
     }
 }
