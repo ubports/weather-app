@@ -1,0 +1,204 @@
+# German translation for ubuntu-weather-app
+# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# This file is distributed under the same license as the ubuntu-weather-app package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ubuntu-weather-app\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2015-07-18 18:04+0100\n"
+"PO-Revision-Date: 2015-07-25 10:00+0000\n"
+"Last-Translator: Torsten Franz <Unknown>\n"
+"Language-Team: German <de@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2015-07-26 05:40+0000\n"
+"X-Generator: Launchpad (build 17628)\n"
+
+#: ../app/components/DayDelegate.qml:193
+msgid "Chance of rain"
+msgstr "Regen möglich"
+
+#: ../app/components/DayDelegate.qml:202
+msgid "Winds"
+msgstr ""
+
+#: ../app/components/DayDelegate.qml:209
+msgid "UV Index"
+msgstr "UV-Index"
+
+#: ../app/components/DayDelegate.qml:214
+msgid "Pollen"
+msgstr ""
+
+#: ../app/components/DayDelegate.qml:220
+msgid "Humidity"
+msgstr "Luftfeuchtigkeit"
+
+#: ../app/components/DayDelegate.qml:226
+msgid "Sunrise"
+msgstr "Sonnenaufgang"
+
+#: ../app/components/DayDelegate.qml:232
+msgid "Sunset"
+msgstr "Sonnenuntergang"
+
+#: ../app/components/HomeTempInfo.qml:38
+msgid "Today"
+msgstr "Heute"
+
+#: ../app/components/ListItemActions/Remove.qml:26
+msgid "Remove"
+msgstr "Entfernen"
+
+#: ../app/components/MultiSelectHeadState.qml:27
+msgid "Select All"
+msgstr "Alle auswählen"
+
+#: ../app/components/MultiSelectHeadState.qml:39
+msgid "Delete"
+msgstr "Löschen"
+
+#: ../app/components/MultiSelectHeadState.qml:51
+msgid "Cancel selection"
+msgstr "Auswahl abbrechen"
+
+#: ../app/ubuntu-weather-app.qml:168
+msgid "Searching for current location..."
+msgstr ""
+
+#: ../app/ubuntu-weather-app.qml:177
+msgid "Add a manual location"
+msgstr ""
+
+#: ../app/ui/AddLocationPage.qml:29
+msgid "Select a city"
+msgstr "Eine Stadt auswählen"
+
+#: ../app/ui/AddLocationPage.qml:45 ../app/ui/AddLocationPage.qml:66
+msgid "Back"
+msgstr "Zurück"
+
+#: ../app/ui/AddLocationPage.qml:51
+msgid "City"
+msgstr "Ort"
+
+#: ../app/ui/AddLocationPage.qml:93
+msgid "Search city"
+msgstr ""
+
+#: ../app/ui/AddLocationPage.qml:278
+msgid "No city found"
+msgstr ""
+
+#: ../app/ui/AddLocationPage.qml:291
+msgid "Couldn't load weather data, please try later again!"
+msgstr ""
+"Wetterdaten konnten nicht geladen werden, bitte versuchen Sie es später noch "
+"einmal!"
+
+#: ../app/ui/AddLocationPage.qml:301
+msgid "Location already added."
+msgstr "Ort wurde schon hinzugefügt."
+
+#: ../app/ui/AddLocationPage.qml:304
+msgid "OK"
+msgstr "OK"
+
+#: ../app/ui/HomePage.qml:31 ../app/ui/LocationsPage.qml:30
+msgid "Locations"
+msgstr "Standorte"
+
+#: ../app/ui/LocationsPage.qml:104
+msgid "Current Location"
+msgstr "Aktueller Standort"
+
+#: ../app/ui/SettingsPage.qml:24
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: ../app/ui/SettingsPage.qml:32 ../app/ui/settings/UnitsPage.qml:24
+msgid "Units"
+msgstr "Einheiten"
+
+#: ../app/ui/SettingsPage.qml:37 ../app/ui/settings/DataProviderPage.qml:24
+msgid "Data Provider"
+msgstr ""
+
+#: ../app/ui/SettingsPage.qml:42 ../app/ui/settings/RefreshIntervalPage.qml:24
+msgid "Refresh Interval"
+msgstr ""
+
+#: ../app/ui/settings/DataProviderPage.qml:37
+msgid "Provider"
+msgstr "Anbieter"
+
+#: ../app/ui/settings/RefreshIntervalPage.qml:30
+#: ../app/ui/settings/RefreshIntervalPage.qml:31
+#: ../app/ui/settings/RefreshIntervalPage.qml:32
+#: ../app/ui/settings/RefreshIntervalPage.qml:33
+#: ../app/ui/settings/RefreshIntervalPage.qml:43
+#, qt-format
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] "%1 Minute"
+msgstr[1] "%1 Minuten"
+
+#: ../app/ui/settings/RefreshIntervalPage.qml:42
+msgid "Interval"
+msgstr "Intervall"
+
+#. TRANSLATORS: The strings are standard measurement units
+#. of temperature in Celcius and are shown in the settings page.
+#. Only the abbreviated form of Celcius should be used.
+#: ../app/ui/settings/UnitsPage.qml:41 ../app/ui/settings/UnitsPage.qml:76
+msgid "°C"
+msgstr "°C"
+
+#. TRANSLATORS: The strings are standard measurement units
+#. of temperature in Fahrenheit and are shown in the settings page.
+#. Only the abbreviated form of Fahrenheit should be used.
+#: ../app/ui/settings/UnitsPage.qml:46 ../app/ui/settings/UnitsPage.qml:77
+msgid "°F"
+msgstr "°F"
+
+#. TRANSLATORS: The strings are standard measurement units
+#. of wind speed in kilometers per hour and are shown in the settings page.
+#. Only the abbreviated form of kilometers per hour should be used.
+#: ../app/ui/settings/UnitsPage.qml:57 ../app/ui/settings/UnitsPage.qml:96
+msgid "kph"
+msgstr ""
+
+#. TRANSLATORS: The strings are standard measurement units
+#. of wind speed in miles per hour and are shown in the settings page.
+#. Only the abbreviated form of miles per hour should be used.
+#: ../app/ui/settings/UnitsPage.qml:62 ../app/ui/settings/UnitsPage.qml:97
+msgid "mph"
+msgstr ""
+
+#: ../app/ui/settings/UnitsPage.qml:75
+msgid "Temperature"
+msgstr "Temperatur"
+
+#: ../app/ui/settings/UnitsPage.qml:95
+msgid "Wind Speed"
+msgstr "Windgeschwindigkeit"
+
+#: ubuntu-weather-app.desktop.in.in.h:1
+msgid "Weather"
+msgstr "Wetter"
+
+#: ubuntu-weather-app.desktop.in.in.h:2
+msgid ""
+"A weather forecast application for Ubuntu with support for multiple online "
+"weather data sources"
+msgstr ""
+"Eine Wettervorhersagen-App für Ubuntu mit Unterstützung für viele Online-"
+"Wetterdatenquellen"
+
+#: ubuntu-weather-app.desktop.in.in.h:3
+msgid "weather;forecast;twc;openweathermap;the weather channel;"
+msgstr "Wetter;Vorhersage;openweathermap;the weather channel;"
