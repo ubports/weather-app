@@ -27,7 +27,7 @@ Page {
         control: CheckBox {
             checked: settings.autoDetectLocation
 
-            onCheckedChanged: {
+            onClicked: {
                 settings.autoDetectLocation = checked;
                 refreshData(false, true);
             }
