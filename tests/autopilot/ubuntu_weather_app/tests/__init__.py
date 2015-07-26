@@ -260,9 +260,10 @@ class SettingsMixin(object):
             os.environ.get('HOME'),
             ".config/com.ubuntu.weather")
         self.settings_filepath = os.path.join(self.settings_dir,
-            'com.ubuntu.weather.conf')
+                                              'com.ubuntu.weather.conf')
         self.settings_location_added = os.path.join(self.db_dir,
-            "location_added.conf")
+                                                    "location_added.conf")
+
 
 class UbuntuWeatherAppTestCase(BaseTestCaseWithPatchedHome, DatabaseMixin,
                                SettingsMixin):
