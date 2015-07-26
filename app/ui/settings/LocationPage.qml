@@ -33,5 +33,7 @@ Page {
             }
         }
         text: i18n.tr("Detect current location")
+
+        onClicked: control.checked = !control.checked
     }
 }
