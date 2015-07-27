@@ -185,4 +185,14 @@ PageWithBottomEdge {
     LoadingIndicator {
         id: loadingIndicator
     }
+
+    Loader {
+        active: (locationsList === null || locationsList.length === 0) && mainPageStack.depth === 1
+        anchors {
+            fill: parent
+        }
+        asynchronous: true
+        source: "../components/EmptyStateComponent.qml"
+        visible: status === Loader.Ready && active
+    }
 }

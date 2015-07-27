@@ -17,28 +17,27 @@
  */
 
 import QtQuick 2.4
-import QtQuick.Layouts 1.1
 import Ubuntu.Components 1.2
 
-RowLayout {
-    id: headerRow
 
-    property alias locationName: locationNameLabel.text
+AbstractButton {
+    id: settingsButton
+    height: width
+    width: units.gu(4)
 
-    width: parent.width
+    onClicked: mainPageStack.push(Qt.resolvedUrl("../ui/SettingsPage.qml"))
 
-    Label {
-        id: locationNameLabel
-        color: UbuntuColors.darkGrey
-        elide: Text.ElideRight
-        font.weight: Font.Normal
-        fontSize: "large"
-        height: settingsButton.height
-        Layout.fillWidth: true
-        verticalAlignment: Text.AlignVCenter
+    Rectangle {
+        anchors.fill: parent
+        color: Theme.palette.selected.background
+        visible: parent.pressed
     }
 
-    SettingsButton {
-        id: settingsButton
+    Icon {
+        anchors.centerIn: parent
+        color: UbuntuColors.darkGrey
+        height: width
+        name: "settings"
+        width: units.gu(2.5)
     }
 }
