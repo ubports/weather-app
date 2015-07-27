@@ -50,19 +50,7 @@ Page {
             removable: true
             thisPage: locationsPage
 
-            onRemoved: {
-                if (settings.addedCurrentLocation && settings.detectCurrentLocation) {
-                    storage.removeMultiLocations(selectedItems.slice());
-                } else {
-                    var items = []
-
-                    for (var i=0; i < selectedItems.length; i++) {
-                        items.push(selectedItems[i] - 1);
-                    }
-
-                    storage.removeMultiLocations(items);
-                }
-            }
+            onRemoved: storage.removeMultiLocations(selectedItems.slice());
         }
     ]
 
@@ -165,34 +153,20 @@ Page {
         delegate: WeatherListItem {
             id: locationsListItem
             leftSideAction: Remove {
-                onTriggered: {
-                    if (settings.addedCurrentLocation && settings.detectCurrentLocation) {
-                        storage.removeLocation(index)
-                    } else {
-                        storage.removeLocation(index - 1)
-                    }
-                }
+                onTriggered: storage.removeLocation(index)
             }
             multiselectable: true
             reorderable: true
 
             onItemClicked: {
-                if (settings.addedCurrentLocation && settings.detectCurrentLocation) {
-                    settings.current = index + 1;
-                } else {
-                    settings.current = index;
-                }
+                settings.current = index + 1;
 
                 pageStack.pop()
             }
             onReorder: {
                 console.debug("Move: ", from, to);
 
-                if (settings.addedCurrentLocation && settings.detectCurrentLocation) {
-                    storage.moveLocation(from, to);
-                } else {
-                    storage.moveLocation(from - 1, to - 1);
-                }
+                storage.moveLocation(from, to);
             }
 
             ListItem.ThinDivider {
@@ -289,7 +263,7 @@ Page {
                 "icon": iconMap[data.data[0].current.icon]
             }
 
-            if (!settings.addedCurrentLocation || i > 0 || !settings.detectCurrentLocation) {
+            if (!settings.addedCurrentLocation || i > 0) {
                 locationsModel.append(loc)
             } else {
                 currentLocationModel.append(loc)

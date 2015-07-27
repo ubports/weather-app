@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-27 01:01+0100\n"
+"POT-Creation-Date: 2015-07-27 01:55+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -66,11 +66,11 @@ msgstr ""
 msgid "Cancel selection"
 msgstr ""
 
-#: ../app/ubuntu-weather-app.qml:178
+#: ../app/ubuntu-weather-app.qml:184
 msgid "Searching for current location..."
 msgstr ""
 
-#: ../app/ubuntu-weather-app.qml:187
+#: ../app/ubuntu-weather-app.qml:193
 msgid "Add a manual location"
 msgstr ""
 
@@ -110,7 +110,7 @@ msgstr ""
 msgid "Locations"
 msgstr ""
 
-#: ../app/ui/LocationsPage.qml:116
+#: ../app/ui/LocationsPage.qml:104
 msgid "Current Location"
 msgstr ""
 
@@ -138,7 +138,7 @@ msgstr ""
 msgid "Provider"
 msgstr ""
 
-#: ../app/ui/settings/LocationPage.qml:35
+#: ../app/ui/settings/LocationPage.qml:32
 msgid "Detect current location"
 msgstr ""
 

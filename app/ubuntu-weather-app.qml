@@ -91,11 +91,6 @@ MainView {
     /* Fill the location pages with their data. */
     function fillPages(locations) {
         locationsList = []
-
-        if (settings.addedCurrentLocation && !settings.detectCurrentLocation) {
-            locations.splice(0, 1);
-        }
-
         locationsList = locations;
     }
 
@@ -147,6 +142,17 @@ MainView {
 
         property bool addedCurrentLocation: false
         property bool migrated: false
+
+        onDetectCurrentLocationChanged: {
+            if (!detectCurrentLocation) {
+                if (addedCurrentLocation) {
+                    storage.removeLocation(-1);  // indexes are increased by 1
+                    addedCurrentLocation = false;
+                }
+
+                refreshData();
+            }
+        }
 
         Component.onCompleted: {
             if (units === "") {  // No settings so load defaults
@@ -239,8 +245,10 @@ MainView {
 
         function moveLocation(from, to) {
             // Indexes are offset by 1 to account for current location
-            from += 1
-            to += 1
+            if (settings.addedCurrentLocation) {
+                from += 1
+                to += 1
+            }
 
             // Update settings to respect new changes
             if (from === settings.current) {
@@ -259,7 +267,10 @@ MainView {
         // Remove a location from the list
         function removeLocation(index) {
             // Indexes are offset by 1 to account for current location
-            index += 1
+            if (settings.addedCurrentLocation) {
+                index += 1
+            }
+
             if (settings.current >= index) {  // Update settings to respect new changes
                 settings.current -= settings.current;
             }
@@ -285,7 +296,11 @@ MainView {
             var locations = []
 
             for (i=0; i < indexes.length; i++) {
-                locations.push(locationsList[indexes[i] + 1].db.id)
+                if (settings.addedCurrentLocation) {
+                    locations.push(locationsList[indexes[i] + 1].db.id)
+                } else {
+                    locations.push(locationsList[indexes[i]].db.id)
+                }
             }
 
             storage.clearMultiLocation(locations);

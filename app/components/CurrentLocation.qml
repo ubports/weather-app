@@ -75,9 +75,22 @@ Item {
         onCountChanged: {
             // Update the currentLocation if one is found and it does not match the stored location
             if (count > 0 && currentLocation.string !== geocodeModel.get(0).address.city) {
-                var loc = geocodeModel.get(0)
-                currentLocation.string = loc.address.city
-                searchForLocation(loc.coordinate.latitude, loc.coordinate.longitude)
+                search();
+            }
+        }
+
+        function search() {
+            var loc = geocodeModel.get(0)
+            currentLocation.string = loc.address.city
+            searchForLocation(loc.coordinate.latitude, loc.coordinate.longitude)
+        }
+    }
+
+    Connections {
+        target: settings
+        onDetectCurrentLocationChanged: {
+            if (settings.detectCurrentLocation) {
+                geocodeModel.search();
             }
         }
     }

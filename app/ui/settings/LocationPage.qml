@@ -27,10 +27,7 @@ Page {
         control: CheckBox {
             checked: settings.detectCurrentLocation
 
-            onCheckedChanged: {
-                settings.detectCurrentLocation = checked;
-                refreshData();
-            }
+            onCheckedChanged: settings.detectCurrentLocation = checked;
         }
         text: i18n.tr("Detect current location")
 
