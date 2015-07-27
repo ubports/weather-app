@@ -1,4 +1,4 @@
-# Russian translation for ubuntu-weather-app
+# Galician translation for ubuntu-weather-app
 # Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the ubuntu-weather-app package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
@@ -8,20 +8,19 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-27 01:55+0100\n"
-"PO-Revision-Date: 2015-07-25 18:35+0000\n"
-"Last-Translator: Bartosz Kosiorek <Unknown>\n"
-"Language-Team: Russian <ru@li.org>\n"
+"PO-Revision-Date: 2015-07-27 02:53+0000\n"
+"Last-Translator: Marcos Lans <Unknown>\n"
+"Language-Team: Galician <gl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Launchpad-Export-Date: 2015-07-27 05:59+0000\n"
 "X-Generator: Launchpad (build 17628)\n"
 
 #: ../app/components/DayDelegate.qml:199
 msgid "Chance of rain"
-msgstr ""
+msgstr "Posibilidade de choiva"
 
 #: ../app/components/DayDelegate.qml:205
 msgid "Winds"
@@ -37,35 +36,35 @@ msgstr ""
 
 #: ../app/components/DayDelegate.qml:223
 msgid "Humidity"
-msgstr ""
+msgstr "Humidade"
 
 #: ../app/components/DayDelegate.qml:229
 msgid "Sunrise"
-msgstr "Восход"
+msgstr "Abrente"
 
 #: ../app/components/DayDelegate.qml:235
 msgid "Sunset"
-msgstr "Заход"
+msgstr "Solpor"
 
 #: ../app/components/HomeTempInfo.qml:38
 msgid "Today"
-msgstr ""
+msgstr "Hoxe"
 
 #: ../app/components/ListItemActions/Remove.qml:26
 msgid "Remove"
-msgstr ""
+msgstr "Eliminar"
 
 #: ../app/components/MultiSelectHeadState.qml:27
 msgid "Select All"
-msgstr ""
+msgstr "Seleccionar todo"
 
 #: ../app/components/MultiSelectHeadState.qml:39
 msgid "Delete"
-msgstr ""
+msgstr "Eliminar"
 
 #: ../app/components/MultiSelectHeadState.qml:51
 msgid "Cancel selection"
-msgstr ""
+msgstr "Cancelar selección"
 
 #: ../app/ubuntu-weather-app.qml:184
 msgid "Searching for current location..."
@@ -77,15 +76,15 @@ msgstr ""
 
 #: ../app/ui/AddLocationPage.qml:29
 msgid "Select a city"
-msgstr ""
+msgstr "Seleccionar cidade"
 
 #: ../app/ui/AddLocationPage.qml:45 ../app/ui/AddLocationPage.qml:66
 msgid "Back"
-msgstr ""
+msgstr "Volver"
 
 #: ../app/ui/AddLocationPage.qml:51
 msgid "City"
-msgstr ""
+msgstr "Cidade"
 
 #: ../app/ui/AddLocationPage.qml:93
 msgid "Search city"
@@ -97,7 +96,7 @@ msgstr ""
 
 #: ../app/ui/AddLocationPage.qml:291
 msgid "Couldn't load weather data, please try later again!"
-msgstr ""
+msgstr "Non se cargaron os datos do tempo, ténteo máis tarde."
 
 #: ../app/ui/AddLocationPage.qml:301
 msgid "Location already added."
