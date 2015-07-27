@@ -48,6 +48,7 @@ Page {
             actions: [
                 Action {
                     iconName: "search"
+                    objectName: "search"
                     text: i18n.tr("City")
                     onTriggered: {
                         addLocationPage.state = "search"
@@ -206,6 +207,7 @@ Page {
 
         delegate: ListItem {
             divider.visible: false
+            objectName: "addLocation" + index
             Column {
                 anchors {
                     left: parent.left

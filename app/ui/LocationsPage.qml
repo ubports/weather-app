@@ -27,6 +27,7 @@ Page {
     id: locationsPage
     // Set to null otherwise the first delegate appears +header.height down the page
     flickable: null
+    objectName: "locationsPage"
     title: i18n.tr("Locations")
 
     state: locationsListView.state === "multiselectable" ? "selection" : "default"
@@ -37,6 +38,7 @@ Page {
             actions: [
                 Action {
                     iconName: "add"
+                    objectName: "addLocation"
                     onTriggered: mainPageStack.push(Qt.resolvedUrl("AddLocationPage.qml"))
                 }
             ]
