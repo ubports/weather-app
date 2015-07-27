@@ -50,7 +50,19 @@ Page {
             removable: true
             thisPage: locationsPage
 
-            onRemoved: storage.removeMultiLocations(selectedItems.slice())
+            onRemoved: {
+                if (settings.addedCurrentLocation && settings.detectCurrentLocation) {
+                    storage.removeMultiLocations(selectedItems.slice());
+                } else {
+                    var items = []
+
+                    for (var i=0; i < selectedItems.length; i++) {
+                        items.push(selectedItems[i] - 1);
+                    }
+
+                    storage.removeMultiLocations(items);
+                }
+            }
         }
     ]
 
