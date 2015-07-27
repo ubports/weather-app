@@ -50,7 +50,7 @@ Page {
             removable: true
             thisPage: locationsPage
 
-            onRemoved: storage.removeMultiLocations(selectedItems.slice())
+            onRemoved: storage.removeMultiLocations(selectedItems.slice());
         }
     ]
 
@@ -72,7 +72,7 @@ Page {
                 left: parent.left
                 right: parent.right
             }
-            height: settings.addedCurrentLocation ? units.gu(8) : units.gu(0)
+            height: settings.addedCurrentLocation && settings.detectCurrentLocation ? units.gu(8) : units.gu(0)
             interactive: false
             model: currentLocationModel
             delegate: WeatherListItem {
@@ -160,6 +160,7 @@ Page {
 
             onItemClicked: {
                 settings.current = index + 1;
+
                 pageStack.pop()
             }
             onReorder: {

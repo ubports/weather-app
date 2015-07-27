@@ -223,7 +223,7 @@ class DatabaseMixin(object):
 
         return result
 
-    def load_vars(self):
+    def load_database_vars(self):
         self.app_dir = os.path.join(
             os.environ.get('HOME'),
             ".local/share/com.ubuntu.weather")
@@ -235,29 +235,67 @@ class DatabaseMixin(object):
             os.path.join(os.path.dirname(__file__), '..', 'files'))
 
 
-class UbuntuWeatherAppTestCase(BaseTestCaseWithPatchedHome, DatabaseMixin):
+class SettingsMixin(object):
+
+    """
+    Helper functions for dealing with the settings file
+    """
+
+    def create_settings_with_location_added(self):
+        logger.debug("Creating settings with location added")
+
+        if not os.path.exists(self.settings_dir):
+            os.makedirs(self.settings_dir)
+
+        shutil.copyfile(self.settings_location_added, self.settings_filepath)
+
+        self.assertThat(
+            lambda: os.path.exists(self.settings_filepath),
+            Eventually(Equals(True)))
+
+    def load_settings_vars(self):
+        self.db_dir = os.path.abspath(
+            os.path.join(os.path.dirname(__file__), '..', 'databases'))
+        self.settings_dir = os.path.join(
+            os.environ.get('HOME'),
+            ".config/com.ubuntu.weather")
+        self.settings_filepath = os.path.join(self.settings_dir,
+                                              'com.ubuntu.weather.conf')
+        self.settings_location_added = os.path.join(self.db_dir,
+                                                    "location_added.conf")
+
+
+class UbuntuWeatherAppTestCase(BaseTestCaseWithPatchedHome, DatabaseMixin,
+                               SettingsMixin):
 
     """Base test case that launches the ubuntu-weather-app."""
 
     def setUp(self):
         super(UbuntuWeatherAppTestCase, self).setUp()
 
-        self.load_vars()
+        self.load_database_vars()
         self.create_blank_db()
+
+        self.load_settings_vars()
+        self.create_settings_with_location_added()
 
         self.app = UbuntuWeatherApp(self.launcher())
 
 
 class UbuntuWeatherAppTestCaseWithData(BaseTestCaseWithPatchedHome,
-                                       DatabaseMixin):
+                                       DatabaseMixin,
+                                       SettingsMixin):
 
     """Base test case that launches the ubuntu-weather-app with data."""
 
     def setUp(self):
         super(UbuntuWeatherAppTestCaseWithData, self).setUp()
 
-        self.load_vars()
+        self.load_database_vars()
         self.create_blank_db()
+
+        self.load_settings_vars()
+        self.create_settings_with_location_added()
 
         logger.debug("Adding fake data to new database")
         self.add_locations_to_database()

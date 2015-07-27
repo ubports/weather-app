@@ -10,6 +10,8 @@ ubuntu-weather-app (3.0) UNRELEASED; urgency=medium
 
   [ Andrew Hayzen ]
   * Add mocked locations for autopilot and add a test using the data
+  * Add setting to disable auto detecting location
+  * When running under autopilot do not auto detect location
 
  -- Victor Thompson <victor.thompson@gmail.com>  Mon, 01 Jun 2015 20:11:23 -0500
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-18 18:04+0100\n"
+"POT-Creation-Date: 2015-07-27 01:55+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,31 +18,31 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: ../app/components/DayDelegate.qml:193
+#: ../app/components/DayDelegate.qml:199
 msgid "Chance of rain"
 msgstr ""
 
-#: ../app/components/DayDelegate.qml:202
+#: ../app/components/DayDelegate.qml:205
 msgid "Winds"
 msgstr ""
 
-#: ../app/components/DayDelegate.qml:209
+#: ../app/components/DayDelegate.qml:212
 msgid "UV Index"
 msgstr ""
 
-#: ../app/components/DayDelegate.qml:214
+#: ../app/components/DayDelegate.qml:217
 msgid "Pollen"
 msgstr ""
 
-#: ../app/components/DayDelegate.qml:220
+#: ../app/components/DayDelegate.qml:223
 msgid "Humidity"
 msgstr ""
 
-#: ../app/components/DayDelegate.qml:226
+#: ../app/components/DayDelegate.qml:229
 msgid "Sunrise"
 msgstr ""
 
-#: ../app/components/DayDelegate.qml:232
+#: ../app/components/DayDelegate.qml:235
 msgid "Sunset"
 msgstr ""
 
@@ -66,11 +66,11 @@ msgstr ""
 msgid "Cancel selection"
 msgstr ""
 
-#: ../app/ubuntu-weather-app.qml:168
+#: ../app/ubuntu-weather-app.qml:184
 msgid "Searching for current location..."
 msgstr ""
 
-#: ../app/ubuntu-weather-app.qml:177
+#: ../app/ubuntu-weather-app.qml:193
 msgid "Add a manual location"
 msgstr ""
 
@@ -122,7 +122,7 @@ msgstr ""
 msgid "Units"
 msgstr ""
 
-#: ../app/ui/SettingsPage.qml:37 ../app/ui/settings/DataProviderPage.qml:24
+#: ../app/ui/SettingsPage.qml:37 ../app/ui/settings/DataProviderPage.qml:25
 msgid "Data Provider"
 msgstr ""
 
@@ -130,8 +130,16 @@ msgstr ""
 msgid "Refresh Interval"
 msgstr ""
 
+#: ../app/ui/SettingsPage.qml:47 ../app/ui/settings/LocationPage.qml:24
+msgid "Location"
+msgstr ""
+
 #: ../app/ui/settings/DataProviderPage.qml:37
 msgid "Provider"
+msgstr ""
+
+#: ../app/ui/settings/LocationPage.qml:32
+msgid "Detect current location"
 msgstr ""
 
 #: ../app/ui/settings/RefreshIntervalPage.qml:30

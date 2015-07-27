@@ -41,7 +41,7 @@ Item {
     }
 
     function searchResponseHandler(msgObject) {
-        if (!msgObject.error) {
+        if (!msgObject.error && settings.detectCurrentLocation) {
             console.log("Loc to add:", JSON.stringify(msgObject.result.locations[0]))
             storage.updateCurrentLocation(msgObject.result.locations[0])
         }
@@ -51,7 +51,7 @@ Item {
     PositionSource {
         id: currentPosition
         updateInterval: 1000
-        active: true
+        active: settings.detectCurrentLocation
 
         onPositionChanged: {
             var coord = currentPosition.position.coordinate
@@ -75,9 +75,22 @@ Item {
         onCountChanged: {
             // Update the currentLocation if one is found and it does not match the stored location
             if (count > 0 && currentLocation.string !== geocodeModel.get(0).address.city) {
-                var loc = geocodeModel.get(0)
-                currentLocation.string = loc.address.city
-                searchForLocation(loc.coordinate.latitude, loc.coordinate.longitude)
+                search();
+            }
+        }
+
+        function search() {
+            var loc = geocodeModel.get(0)
+            currentLocation.string = loc.address.city
+            searchForLocation(loc.coordinate.latitude, loc.coordinate.longitude)
+        }
+    }
+
+    Connections {
+        target: settings
+        onDetectCurrentLocationChanged: {
+            if (settings.detectCurrentLocation) {
+                geocodeModel.search();
             }
         }
     }
