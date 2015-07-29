@@ -39,24 +39,29 @@ Item {
             centerIn: parent
         }
         spacing: units.gu(4)
+        width: parent.width - units.gu(4)
 
         Label {
             id: emptyStateLabel
             anchors {
                 horizontalCenter: parent.horizontalCenter
             }
-            text: i18n.tr("Searching for current location...")
+            horizontalAlignment: Text.AlignHCenter
+            text: settings.detectCurrentLoaction
+                  ? i18n.tr("Searching for current location...")
+                  : i18n.tr("Cannot determine your location")
+            width: parent.width
+            wrapMode: Text.WordWrap
         }
 
-        Button {
-            id: emptyStateButton
+        Label {
             anchors {
                 horizontalCenter: parent.horizontalCenter
             }
-            objectName: "emptyStateButton"
-            text: i18n.tr("Add a manual location")
-
-            onTriggered: mainPageStack.push(Qt.resolvedUrl("../ui/AddLocationPage.qml"));
+            horizontalAlignment: Text.AlignHCenter
+            text: i18n.tr("Manually add a location by swiping up from the bottom of the display")
+            width: parent.width
+            wrapMode: Text.WordWrap
         }
     }
 }

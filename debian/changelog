@@ -14,6 +14,9 @@ ubuntu-weather-app (3.0) UNRELEASED; urgency=medium
   * When running under autopilot do not auto detect location
   * Show settings button on empty state page
   * Fix empty state page so that bottom edge animation is ontop
+  * Remove add location button
+  * Change phrasing of manual add location
+  * Conditionally show searching location from detectCurrentLocation setting
 
  -- Victor Thompson <victor.thompson@gmail.com>  Mon, 01 Jun 2015 20:11:23 -0500
 
