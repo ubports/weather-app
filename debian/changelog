@@ -17,7 +17,7 @@ ubuntu-weather-app (3.0) UNRELEASED; urgency=medium
   * Fix empty state page so that bottom edge animation is ontop
   * Remove add location button
   * Change phrasing of manual add location
-  * Conditionally show searching location from detectCurrentLocation setting
+  * Conditionally show "searching for current location" depending on the detectCurrentLocation setting
 
  -- Victor Thompson <victor.thompson@gmail.com>  Mon, 01 Jun 2015 20:11:23 -0500
 
