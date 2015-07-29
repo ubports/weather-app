@@ -141,6 +141,10 @@ class LocationsPage(Page):
     def click_add_location_action(self):
         self.main_view.get_header().click_action_button("addLocation")
 
+    def get_location(self, index):
+        return self.select_single(WeatherListItem,
+                                  objectName="location" + str(index))
+
 
 class MainView(MainView):
     """Autopilot custom proxy object for the MainView."""
@@ -149,3 +153,8 @@ class MainView(MainView):
     def __init__(self, *args):
         super(MainView, self).__init__(*args)
         self.visible.wait_for(True)
+
+
+class WeatherListItem(UbuntuUIToolkitCustomProxyObjectBase):
+    def get_name(self):
+        return self.select_single("Label", objectName="name").text

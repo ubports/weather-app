@@ -50,33 +50,51 @@ class TestAddLocationPage(UbuntuWeatherAppTestCaseWithData):
         # Select the location
         self.add_location_page.click_location(0)
 
-        # Check locations page is now visible and go back
+        # Check locations page is now visible
         self.assertThat(self.locations_page.visible, Eventually(Equals(True)))
+
+        # Get the list item of the added location
+        list_item = self.locations_page.get_location(self.start_count)
+
+        # Check that the name is correct
+        self.assertThat(list_item.get_name(), Equals("Amsterdam"))
+
+        # Go back to the homepage
         self.locations_page.click_back()
+
+        # Check homepage is now visible
+        self.assertThat(self.home_page.visible, Eventually(Equals(True)))
 
         # Check that the location was added
         self.assertThat(self.home_page.get_location_count,
                         Eventually(Equals(self.start_count + 1)))
-
-        # Check homepage is now visible
-        self.assertThat(self.home_page.visible, Eventually(Equals(True)))
 
     def test_add_location_via_search(self):
         """ tests adding a location via searching for the location """
 
+        location_name = "Paris"
+
         # Perform search
-        self.add_location_page.search("Paris")
+        self.add_location_page.search(location_name)
 
         # Select the location
         self.add_location_page.click_location(0)
 
-        # Check locations page is now visible and go back
+        # Check locations page is now visible
         self.assertThat(self.locations_page.visible, Eventually(Equals(True)))
+
+        # Get the list item of the added location
+        list_item = self.locations_page.get_location(self.start_count)
+
+        # Check that the name is correct
+        self.assertThat(list_item.get_name(), Equals(location_name))
+
+        # Go back to the homepage
         self.locations_page.click_back()
+
+        # Check homepage is now visible
+        self.assertThat(self.home_page.visible, Eventually(Equals(True)))
 
         # Check that the location was added
         self.assertThat(self.home_page.get_location_count,
                         Eventually(Equals(self.start_count + 1)))
-
-        # Check homepage is now visible
-        self.assertThat(self.home_page.visible, Eventually(Equals(True)))
