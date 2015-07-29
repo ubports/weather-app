@@ -59,9 +59,6 @@ class Page(UbuntuUIToolkitCustomProxyObjectBase):
     def __init__(self, *args, **kwargs):
         super(Page, self).__init__(*args, **kwargs)
 
-        # XXX we need a better way to keep reference to the main view.
-        # --elopio - 2014-01-31
-
         # Use only objectName due to bug 1350532 as it is MainView12
         self.main_view = self.get_root_instance().select_single(
             objectName="weather")
