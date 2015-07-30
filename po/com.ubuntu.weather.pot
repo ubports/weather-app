@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-27 01:55+0100\n"
+"POT-Creation-Date: 2015-07-29 21:25+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,6 +46,18 @@ msgstr ""
 msgid "Sunset"
 msgstr ""
 
+#: ../app/components/EmptyStateComponent.qml:51
+msgid "Searching for current location..."
+msgstr ""
+
+#: ../app/components/EmptyStateComponent.qml:52
+msgid "Cannot determine your location"
+msgstr ""
+
+#: ../app/components/EmptyStateComponent.qml:62
+msgid "Manually add a location by swiping up from the bottom of the display"
+msgstr ""
+
 #: ../app/components/HomeTempInfo.qml:38
 msgid "Today"
 msgstr ""
@@ -64,14 +76,6 @@ msgstr ""
 
 #: ../app/components/MultiSelectHeadState.qml:51
 msgid "Cancel selection"
-msgstr ""
-
-#: ../app/ubuntu-weather-app.qml:184
-msgid "Searching for current location..."
-msgstr ""
-
-#: ../app/ubuntu-weather-app.qml:193
-msgid "Add a manual location"
 msgstr ""
 
 #: ../app/ui/AddLocationPage.qml:29

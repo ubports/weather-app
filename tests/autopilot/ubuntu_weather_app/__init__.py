@@ -6,7 +6,12 @@
 # by the Free Software Foundation.
 
 """ubuntu-weather-app tests and emulators - top level package."""
+from autopilot.introspection import dbus
+import logging
 from ubuntuuitoolkit import MainView, UbuntuUIToolkitCustomProxyObjectBase
+
+
+logger = logging.getLogger(__name__)
 
 
 class UbuntuWeatherAppException(Exception):
@@ -39,10 +44,9 @@ class UbuntuWeatherApp(object):
         return self.main_view.wait_select_single(
             HomePage, objectName="homePage")
 
-    def click_add_location_button(self):
-        add_location_button = self.main_view.wait_select_single(
-            "Button", objectName="emptyStateButton")
-        self.app.pointing_device.click_object(add_location_button)
+    def get_locations_page(self):
+        return self.main_view.wait_select_single(
+            LocationsPage, objectName="locationsPage")
 
 
 class Page(UbuntuUIToolkitCustomProxyObjectBase):
@@ -56,6 +60,27 @@ class PageWithBottomEdge(Page):
     def __init__(self, *args):
         super(PageWithBottomEdge, self).__init__(*args)
 
+    def reveal_bottom_edge_page(self):
+        """Bring the bottom edge page to the screen"""
+
+        self.bottomEdgePageLoaded.wait_for(True)
+
+        try:
+            action_item = self.wait_select_single(objectName='bottomEdgeTip')
+            action_item.visible.wait_for(True)
+            start_x = (action_item.globalRect.x +
+                       (action_item.globalRect.width * 0.5))
+            start_y = (action_item.globalRect.y +
+                       (action_item.height * 0.5))
+            stop_y = start_y - (self.height * 0.7)
+
+            self.pointing_device.drag(start_x, start_y,
+                                      start_x, stop_y, rate=2)
+            self.isReady.wait_for(True)
+        except dbus.StateNotFoundError:
+            logger.error('BottomEdge element not found.')
+            raise
+
 
 class AddLocationPage(Page):
     """Autopilot helper for AddLocationPage."""
@@ -63,7 +88,7 @@ class AddLocationPage(Page):
         super(AddLocationPage, self).__init__(*args)
 
 
-class HomePage(Page):
+class HomePage(PageWithBottomEdge):
     """Autopilot helper for HomePage."""
     def __init__(self, *args):
         super(HomePage, self).__init__(*args)
@@ -71,6 +96,12 @@ class HomePage(Page):
     def get_location_count(self):
         return self.wait_select_single(
             "QQuickListView", objectName="locationPages").count
+
+
+class LocationsPage(Page):
+    """Autopilot helper for LocationsPage."""
+    def __init__(self, *args, **kwargs):
+        super(LocationsPage, self).__init__(*args, **kwargs)
 
 
 class MainView(MainView):
