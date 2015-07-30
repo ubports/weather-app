@@ -192,7 +192,7 @@ PageWithBottomEdge {
             fill: parent
         }
         asynchronous: true
-        source: "../components/EmptyStateComponent.qml"
+        source: "../components/HomePageEmptyStateComponent.qml"
         visible: status === Loader.Ready && active
     }
 }

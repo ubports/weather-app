@@ -7,6 +7,8 @@ ubuntu-weather-app (3.0) UNRELEASED; urgency=medium
   * Add chance of rain
   * Add conditions text to day delegate. 
   * Default to OWM if the key file for TWC is blank.
+  * Rename EmptyStateComponent to HomePageEmptyStateComponent
+  * Add a LocationsPageEmptyStateComponent
 
   [ Andrew Hayzen ]
   * Add mocked locations for autopilot and add a test using the data
