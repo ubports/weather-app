@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-07-27 01:55+0100\n"
-"PO-Revision-Date: 2015-07-28 18:48+0000\n"
+"POT-Creation-Date: 2015-07-29 21:25+0100\n"
+"PO-Revision-Date: 2015-07-29 20:39+0000\n"
 "Last-Translator: Phillip Sz <Unknown>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-07-29 05:58+0000\n"
+"X-Launchpad-Export-Date: 2015-07-30 06:17+0000\n"
 "X-Generator: Launchpad (build 17646)\n"
 
 #: ../app/components/DayDelegate.qml:199
@@ -46,6 +46,18 @@ msgstr "Sonnenaufgang"
 msgid "Sunset"
 msgstr "Sonnenuntergang"
 
+#: ../app/components/EmptyStateComponent.qml:51
+msgid "Searching for current location..."
+msgstr "Suche nach aktuellem Standort …"
+
+#: ../app/components/EmptyStateComponent.qml:52
+msgid "Cannot determine your location"
+msgstr ""
+
+#: ../app/components/EmptyStateComponent.qml:62
+msgid "Manually add a location by swiping up from the bottom of the display"
+msgstr ""
+
 #: ../app/components/HomeTempInfo.qml:38
 msgid "Today"
 msgstr "Heute"
@@ -65,14 +77,6 @@ msgstr "Löschen"
 #: ../app/components/MultiSelectHeadState.qml:51
 msgid "Cancel selection"
 msgstr "Auswahl abbrechen"
-
-#: ../app/ubuntu-weather-app.qml:184
-msgid "Searching for current location..."
-msgstr "Suche nach aktuellem Standort …"
-
-#: ../app/ubuntu-weather-app.qml:193
-msgid "Add a manual location"
-msgstr "Manuell einen Standort hinzufügen"
 
 #: ../app/ui/AddLocationPage.qml:29
 msgid "Select a city"
@@ -142,7 +146,7 @@ msgstr "Anbieter"
 
 #: ../app/ui/settings/LocationPage.qml:32
 msgid "Detect current location"
-msgstr ""
+msgstr "Den aktuellen Standort feststellen"
 
 #: ../app/ui/settings/RefreshIntervalPage.qml:30
 #: ../app/ui/settings/RefreshIntervalPage.qml:31
@@ -210,3 +214,6 @@ msgstr ""
 #: ubuntu-weather-app.desktop.in.in.h:3
 msgid "weather;forecast;twc;openweathermap;the weather channel;"
 msgstr "Wetter;Vorhersage;openweathermap;the weather channel;"
+
+#~ msgid "Add a manual location"
+#~ msgstr "Manuell einen Standort hinzufügen"
