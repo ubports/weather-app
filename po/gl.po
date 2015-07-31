@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-29 21:25+0100\n"
-"PO-Revision-Date: 2015-07-27 16:28+0000\n"
+"PO-Revision-Date: 2015-07-31 01:15+0000\n"
 "Last-Translator: Marcos Lans <Unknown>\n"
 "Language-Team: Galician <gl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-07-30 06:17+0000\n"
-"X-Generator: Launchpad (build 17646)\n"
+"X-Launchpad-Export-Date: 2015-07-31 05:44+0000\n"
+"X-Generator: Launchpad (build 17656)\n"
 
 #: ../app/components/DayDelegate.qml:199
 msgid "Chance of rain"
@@ -52,11 +52,11 @@ msgstr "Buscando a localización..."
 
 #: ../app/components/EmptyStateComponent.qml:52
 msgid "Cannot determine your location"
-msgstr ""
+msgstr "Non foi posíbel determinar a súa localización"
 
 #: ../app/components/EmptyStateComponent.qml:62
 msgid "Manually add a location by swiping up from the bottom of the display"
-msgstr ""
+msgstr "Engada unha localización esvarando o dedo desde o fondo da pantalla"
 
 #: ../app/components/HomeTempInfo.qml:38
 msgid "Today"
@@ -212,6 +212,3 @@ msgstr ""
 #: ubuntu-weather-app.desktop.in.in.h:3
 msgid "weather;forecast;twc;openweathermap;the weather channel;"
 msgstr "tempo;clima;weather channel;previsión;prognóstico;openweathermap;"
-
-#~ msgid "Add a manual location"
-#~ msgstr "Engadir localización manualmente"

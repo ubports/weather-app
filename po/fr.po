@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2015-07-30 06:17+0000\n"
-"X-Generator: Launchpad (build 17646)\n"
+"X-Launchpad-Export-Date: 2015-07-31 05:44+0000\n"
+"X-Generator: Launchpad (build 17656)\n"
 
 #: ../app/components/DayDelegate.qml:199
 msgid "Chance of rain"
@@ -214,6 +214,3 @@ msgstr ""
 #: ubuntu-weather-app.desktop.in.in.h:3
 msgid "weather;forecast;twc;openweathermap;the weather channel;"
 msgstr "météo;temps;prévisions;twc;openweathermap;the weather channel;"
-
-#~ msgid "Add a manual location"
-#~ msgstr "Ajouter un emplacement manuellement"
