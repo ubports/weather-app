@@ -13,6 +13,11 @@ ubuntu-weather-app (3.0) UNRELEASED; urgency=medium
   * Add setting to disable auto detecting location
   * When running under autopilot do not auto detect location
   * Fix for console error on startup if there are no locations
+  * Show settings button on empty state page
+  * Fix empty state page so that bottom edge animation is ontop
+  * Remove add location button
+  * Change phrasing of manual add location
+  * Conditionally show "searching for current location" depending on the detectCurrentLocation setting
   * Create autopilot test which adds a location via searching (LP: #1452497)
   * Create autopilot test which adds a location via cached results (LP: #1452497)
 

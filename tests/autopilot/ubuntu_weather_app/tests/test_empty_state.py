@@ -24,12 +24,18 @@ class TestEmptyState(UbuntuWeatherAppTestCase):
     def setUp(self):
         super(TestEmptyState, self).setUp()
 
-    def test_add_location_button(self):
-        """ tests that the add location page is shown after the Add Location
-            button is clicked """
+    def test_add_locations_page_from_bottom_edge(self):
+        """ tests that the add location page is shown after swiping up
+            the bottom edge"""
 
-        self.app.click_add_location_button()
+        home_page = self.app.get_home_page()
+        home_page.visible.wait_for(True)
 
-        add_location_page = self.app.get_add_location_page()
+        # Check that there are no locations
+        self.assertThat(home_page.get_location_count, Eventually(Equals(0)))
 
-        self.assertThat(add_location_page.visible, Eventually(Equals(True)))
+        home_page.reveal_bottom_edge_page()
+
+        locations_page = self.app.get_locations_page()
+
+        self.assertThat(locations_page.visible, Eventually(Equals(True)))

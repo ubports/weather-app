@@ -25,6 +25,7 @@ import "../components/ListItemActions"
 
 Page {
     id: locationsPage
+    objectName: "locationsPage"
     // Set to null otherwise the first delegate appears +header.height down the page
     flickable: null
     objectName: "locationsPage"
