@@ -5,16 +5,10 @@
 # under the terms of the GNU General Public License version 3, as published
 # by the Free Software Foundation.
 
-import logging
-
 """ubuntu-weather-app tests and emulators - top level package."""
 from autopilot.introspection import dbus
 import logging
 from ubuntuuitoolkit import MainView, UbuntuUIToolkitCustomProxyObjectBase
-from autopilot.introspection import dbus
-
-logger = logging.getLogger(__name__)
-
 
 logger = logging.getLogger(__name__)
 
@@ -87,27 +81,6 @@ class PageWithBottomEdge(Page):
             start_y = (action_item.globalRect.y +
                        (action_item.height * 0.5))
             stop_y = start_y - (self.height * 0.7)
-            self.pointing_device.drag(start_x, start_y,
-                                      start_x, stop_y, rate=2)
-            self.isReady.wait_for(True)
-        except dbus.StateNotFoundError:
-            logger.error('BottomEdge element not found.')
-            raise
-
-    def reveal_bottom_edge_page(self):
-        """Bring the bottom edge page to the screen"""
-
-        self.bottomEdgePageLoaded.wait_for(True)
-
-        try:
-            action_item = self.wait_select_single(objectName='bottomEdgeTip')
-            action_item.visible.wait_for(True)
-            start_x = (action_item.globalRect.x +
-                       (action_item.globalRect.width * 0.5))
-            start_y = (action_item.globalRect.y +
-                       (action_item.height * 0.5))
-            stop_y = start_y - (self.height * 0.7)
-
             self.pointing_device.drag(start_x, start_y,
                                       start_x, stop_y, rate=2)
             self.isReady.wait_for(True)
