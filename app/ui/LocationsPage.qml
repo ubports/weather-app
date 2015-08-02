@@ -248,7 +248,7 @@ Page {
     }
 
     Loader {
-        active: (locationsList === null || locationsList.length === 0) && mainPageStack.depth === 2
+        active: locationsList === null || locationsList.length === 0
         anchors {
             fill: parent
         }
