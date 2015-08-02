@@ -94,11 +94,17 @@ Page {
             placeholderText: i18n.tr("Search city")
             hasClearButton: true
 
-            onTextChanged: {
-                if (text.trim() === "") {
-                    loadEmpty()
-                } else {
-                    loadFromProvider(text)
+            onTextChanged: searchTimer.restart()
+
+            Timer {
+                id: searchTimer
+                interval: 250
+                onTriggered: {
+                    if (text.trim() === "") {
+                        loadEmpty()
+                    } else {
+                        loadFromProvider(text)
+                    }
                 }
             }
         }
