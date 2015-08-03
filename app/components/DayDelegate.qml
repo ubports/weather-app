@@ -227,13 +227,13 @@ ListItem {
             ForecastDetailsDelegate {
                 id: sunriseForecast
                 forecast: i18n.tr("Sunrise")
-                imageName: "info"
+                imageSource: "../graphics/extended-information_sunrise.svg"
             }
 
             ForecastDetailsDelegate {
                 id: sunsetForecast
                 forecast: i18n.tr("Sunset")
-                imageName: "info"
+                imageSource: "../graphics/extended-information_sunset.svg"
             }
         }
     }
