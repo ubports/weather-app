@@ -7,6 +7,7 @@ ubuntu-weather-app (3.0) UNRELEASED; urgency=medium
   * Add chance of rain
   * Add conditions text to day delegate. 
   * Default to OWM if the key file for TWC is blank.
+  * Add sunrise and sunset icons from the spec
   * Rename EmptyStateComponent to HomePageEmptyStateComponent
   * Add a LocationsPageEmptyStateComponent
 
