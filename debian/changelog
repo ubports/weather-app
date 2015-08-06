@@ -19,6 +19,9 @@ ubuntu-weather-app (3.0) UNRELEASED; urgency=medium
   * Remove add location button
   * Change phrasing of manual add location
   * Conditionally show "searching for current location" depending on the detectCurrentLocation setting
+  * Create autopilot test which adds a location via searching (LP: #1452497)
+  * Create autopilot test which adds a location via cached results (LP: #1452497)
+  * Fix for racy search bar causing incorrect search query when typed quickly
 
  -- Victor Thompson <victor.thompson@gmail.com>  Mon, 01 Jun 2015 20:11:23 -0500
 
