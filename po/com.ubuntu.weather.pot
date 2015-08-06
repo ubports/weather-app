@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-02 14:48+0100\n"
+"POT-Creation-Date: 2015-08-06 01:02+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -82,31 +82,31 @@ msgstr ""
 msgid "Select a city"
 msgstr ""
 
-#: ../app/ui/AddLocationPage.qml:45 ../app/ui/AddLocationPage.qml:67
+#: ../app/ui/AddLocationPage.qml:47 ../app/ui/AddLocationPage.qml:69
 msgid "Back"
 msgstr ""
 
-#: ../app/ui/AddLocationPage.qml:52
+#: ../app/ui/AddLocationPage.qml:54
 msgid "City"
 msgstr ""
 
-#: ../app/ui/AddLocationPage.qml:94
+#: ../app/ui/AddLocationPage.qml:113
 msgid "Search city"
 msgstr ""
 
-#: ../app/ui/AddLocationPage.qml:286
+#: ../app/ui/AddLocationPage.qml:293
 msgid "No city found"
 msgstr ""
 
-#: ../app/ui/AddLocationPage.qml:299
+#: ../app/ui/AddLocationPage.qml:306
 msgid "Couldn't load weather data, please try later again!"
 msgstr ""
 
-#: ../app/ui/AddLocationPage.qml:309
+#: ../app/ui/AddLocationPage.qml:316
 msgid "Location already added."
 msgstr ""
 
-#: ../app/ui/AddLocationPage.qml:312
+#: ../app/ui/AddLocationPage.qml:319
 msgid "OK"
 msgstr ""
 

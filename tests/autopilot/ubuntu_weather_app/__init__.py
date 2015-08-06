@@ -113,6 +113,9 @@ class AddLocationPage(Page):
         search_field = self.get_search_field()
         search_field.write(value)
 
+        # Wait for model to finish loading
+        self.searching.wait_for(False)
+
 
 class HomePage(PageWithBottomEdge):
     """Autopilot helper for HomePage."""

@@ -35,6 +35,8 @@ Page {
     */
     flickable: null
 
+    property bool searching: citiesModel.loading || searchTimer.running
+
     state: "default"
     states: [
         PageHeadState {
@@ -84,6 +86,23 @@ Page {
         }
     ]
 
+    // Outside component so property can bind to for autopilot
+    Timer {
+        id: searchTimer
+        interval: 250
+        onTriggered: {
+            if (searchComponentLoader.item) {  // check component exists
+                if (searchComponentLoader.item.text.trim() === "") {
+                    loadEmpty()
+                } else {
+                    loadFromProvider(searchComponentLoader.item.text)
+                }
+            } else {
+                loadEmpty()
+            }
+        }
+    }
+
     Component {
         id: searchComponent
         TextField {
@@ -95,18 +114,6 @@ Page {
             hasClearButton: true
 
             onTextChanged: searchTimer.restart()
-
-            Timer {
-                id: searchTimer
-                interval: 250
-                onTriggered: {
-                    if (text.trim() === "") {
-                        loadEmpty()
-                    } else {
-                        loadFromProvider(text)
-                    }
-                }
-            }
         }
     }
 
