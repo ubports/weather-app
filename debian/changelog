@@ -1,4 +1,4 @@
-ubuntu-weather-app (3.0) UNRELEASED; urgency=medium
+ubuntu-weather-app (3.0ubuntu1) UNRELEASED; urgency=medium
 
   [ Victor Thompson ]
   * Sync debian version with click version.
@@ -8,6 +8,7 @@ ubuntu-weather-app (3.0) UNRELEASED; urgency=medium
   * Add conditions text to day delegate. 
   * Default to OWM if the key file for TWC is blank.
   * Add sunrise and sunset icons from the spec
+  * Fix the CMakeLists.txt to include the app icon
   * Rename EmptyStateComponent to HomePageEmptyStateComponent
   * Add a LocationsPageEmptyStateComponent
 
