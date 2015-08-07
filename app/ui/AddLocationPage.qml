@@ -35,6 +35,8 @@ Page {
     */
     flickable: null
 
+    property bool searching: citiesModel.loading || searchTimer.running
+
     state: "default"
     states: [
         PageHeadState {
@@ -48,6 +50,7 @@ Page {
             actions: [
                 Action {
                     iconName: "search"
+                    objectName: "search"
                     text: i18n.tr("City")
                     onTriggered: {
                         addLocationPage.state = "search"
@@ -83,6 +86,23 @@ Page {
         }
     ]
 
+    // Outside component so property can bind to for autopilot
+    Timer {
+        id: searchTimer
+        interval: 250
+        onTriggered: {
+            if (searchComponentLoader.item) {  // check component exists
+                if (searchComponentLoader.item.text.trim() === "") {
+                    loadEmpty()
+                } else {
+                    loadFromProvider(searchComponentLoader.item.text)
+                }
+            } else {
+                loadEmpty()
+            }
+        }
+    }
+
     Component {
         id: searchComponent
         TextField {
@@ -93,13 +113,7 @@ Page {
             placeholderText: i18n.tr("Search city")
             hasClearButton: true
 
-            onTextChanged: {
-                if (text.trim() === "") {
-                    loadEmpty()
-                } else {
-                    loadFromProvider(text)
-                }
-            }
+            onTextChanged: searchTimer.restart()
         }
     }
 
@@ -206,6 +220,7 @@ Page {
 
         delegate: ListItem {
             divider.visible: false
+            objectName: "addLocation" + index
             Column {
                 anchors {
                     left: parent.left

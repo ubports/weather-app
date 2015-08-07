@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-07-29 21:25+0100\n"
+"POT-Creation-Date: 2015-08-06 01:02+0100\n"
 "PO-Revision-Date: 2015-07-29 20:39+0000\n"
 "Last-Translator: Phillip Sz <Unknown>\n"
 "Language-Team: German <de@li.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-07-31 05:44+0000\n"
+"X-Launchpad-Export-Date: 2015-08-06 05:50+0000\n"
 "X-Generator: Launchpad (build 17656)\n"
 
 #: ../app/components/DayDelegate.qml:199
@@ -82,41 +82,41 @@ msgstr "Auswahl abbrechen"
 msgid "Select a city"
 msgstr "Eine Stadt auswählen"
 
-#: ../app/ui/AddLocationPage.qml:45 ../app/ui/AddLocationPage.qml:66
+#: ../app/ui/AddLocationPage.qml:47 ../app/ui/AddLocationPage.qml:69
 msgid "Back"
 msgstr "Zurück"
 
-#: ../app/ui/AddLocationPage.qml:51
+#: ../app/ui/AddLocationPage.qml:54
 msgid "City"
 msgstr "Ort"
 
-#: ../app/ui/AddLocationPage.qml:93
+#: ../app/ui/AddLocationPage.qml:113
 msgid "Search city"
 msgstr "Ort suchen"
 
-#: ../app/ui/AddLocationPage.qml:278
+#: ../app/ui/AddLocationPage.qml:293
 msgid "No city found"
 msgstr "Keinen Ort gefunden"
 
-#: ../app/ui/AddLocationPage.qml:291
+#: ../app/ui/AddLocationPage.qml:306
 msgid "Couldn't load weather data, please try later again!"
 msgstr ""
 "Wetterdaten konnten nicht geladen werden, bitte versuchen Sie es später noch "
 "einmal!"
 
-#: ../app/ui/AddLocationPage.qml:301
+#: ../app/ui/AddLocationPage.qml:316
 msgid "Location already added."
 msgstr "Ort wurde schon hinzugefügt."
 
-#: ../app/ui/AddLocationPage.qml:304
+#: ../app/ui/AddLocationPage.qml:319
 msgid "OK"
 msgstr "OK"
 
-#: ../app/ui/HomePage.qml:31 ../app/ui/LocationsPage.qml:30
+#: ../app/ui/HomePage.qml:31 ../app/ui/LocationsPage.qml:31
 msgid "Locations"
 msgstr "Standorte"
 
-#: ../app/ui/LocationsPage.qml:104
+#: ../app/ui/LocationsPage.qml:106
 msgid "Current Location"
 msgstr "Aktueller Standort"
 

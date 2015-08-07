@@ -38,6 +38,7 @@ Page {
             actions: [
                 Action {
                     iconName: "add"
+                    objectName: "addLocation"
                     onTriggered: mainPageStack.push(Qt.resolvedUrl("AddLocationPage.qml"))
                 }
             ]
@@ -153,6 +154,7 @@ Page {
 
         delegate: WeatherListItem {
             id: locationsListItem
+            objectName: "location" + index
             leftSideAction: Remove {
                 onTriggered: storage.removeLocation(index)
             }
@@ -194,6 +196,7 @@ Page {
 
                     Label {
                         id: locationName
+                        objectName: "name"
                         elide: Text.ElideRight
                         fontSize: "medium"
                         text: name
