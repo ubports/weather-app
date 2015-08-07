@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-08-06 01:02+0100\n"
+"POT-Creation-Date: 2015-08-06 19:16-0500\n"
 "PO-Revision-Date: 2015-07-27 20:27+0000\n"
 "Last-Translator: Richard Somlói <ricsipontaz@gmail.com>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-08-06 05:50+0000\n"
+"X-Launchpad-Export-Date: 2015-08-07 06:14+0000\n"
 "X-Generator: Launchpad (build 17656)\n"
 
 #: ../app/components/DayDelegate.qml:199
@@ -46,15 +46,15 @@ msgstr "Napkelte"
 msgid "Sunset"
 msgstr "Napnyugta"
 
-#: ../app/components/EmptyStateComponent.qml:51
+#: ../app/components/HomePageEmptyStateComponent.qml:51
 msgid "Searching for current location..."
 msgstr "Jelenlegi helyzet meghatározása…"
 
-#: ../app/components/EmptyStateComponent.qml:52
+#: ../app/components/HomePageEmptyStateComponent.qml:52
 msgid "Cannot determine your location"
 msgstr ""
 
-#: ../app/components/EmptyStateComponent.qml:62
+#: ../app/components/HomePageEmptyStateComponent.qml:62
 msgid "Manually add a location by swiping up from the bottom of the display"
 msgstr ""
 
@@ -65,6 +65,10 @@ msgstr "Ma"
 #: ../app/components/ListItemActions/Remove.qml:26
 msgid "Remove"
 msgstr "Eltávolítás"
+
+#: ../app/components/LocationsPageEmptyStateComponent.qml:36
+msgid "No locations found. Tap the plus icon to search for one."
+msgstr ""
 
 #: ../app/components/MultiSelectHeadState.qml:27
 msgid "Select All"
