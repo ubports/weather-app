@@ -78,8 +78,7 @@ class PageWithBottomEdge(Page):
             action_item.visible.wait_for(True)
             start_x = (action_item.globalRect.x +
                        (action_item.globalRect.width * 0.5))
-            start_y = (action_item.globalRect.y +
-                       (action_item.height * 0.5))
+            start_y = action_item.globalRect.y
             stop_y = start_y - (self.height * 0.7)
             self.pointing_device.drag(start_x, start_y,
                                       start_x, stop_y, rate=2)
