@@ -250,6 +250,16 @@ Page {
         }
     }
 
+    Loader {
+        active: locationsList === null || locationsList.length === 0
+        anchors {
+            fill: parent
+        }
+        asynchronous: true
+        source: "../components/LocationsPageEmptyStateComponent.qml"
+        visible: status === Loader.Ready && active
+    }
+
     function populateLocationsModel() {
         currentLocationModel.clear()
         locationsModel.clear()

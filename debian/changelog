@@ -9,6 +9,8 @@ ubuntu-weather-app (3.0ubuntu1) UNRELEASED; urgency=medium
   * Default to OWM if the key file for TWC is blank.
   * Add sunrise and sunset icons from the spec
   * Fix the CMakeLists.txt to include the app icon
+  * Rename EmptyStateComponent to HomePageEmptyStateComponent
+  * Add a LocationsPageEmptyStateComponent
 
   [ Andrew Hayzen ]
   * Add mocked locations for autopilot and add a test using the data

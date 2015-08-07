@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-06 01:02+0100\n"
+"POT-Creation-Date: 2015-08-06 19:16-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,15 +46,15 @@ msgstr ""
 msgid "Sunset"
 msgstr ""
 
-#: ../app/components/EmptyStateComponent.qml:51
+#: ../app/components/HomePageEmptyStateComponent.qml:51
 msgid "Searching for current location..."
 msgstr ""
 
-#: ../app/components/EmptyStateComponent.qml:52
+#: ../app/components/HomePageEmptyStateComponent.qml:52
 msgid "Cannot determine your location"
 msgstr ""
 
-#: ../app/components/EmptyStateComponent.qml:62
+#: ../app/components/HomePageEmptyStateComponent.qml:62
 msgid "Manually add a location by swiping up from the bottom of the display"
 msgstr ""
 
@@ -64,6 +64,10 @@ msgstr ""
 
 #: ../app/components/ListItemActions/Remove.qml:26
 msgid "Remove"
+msgstr ""
+
+#: ../app/components/LocationsPageEmptyStateComponent.qml:36
+msgid "No locations found. Tap the plus icon to search for one."
 msgstr ""
 
 #: ../app/components/MultiSelectHeadState.qml:27
