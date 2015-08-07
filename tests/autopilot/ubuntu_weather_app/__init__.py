@@ -139,6 +139,17 @@ class LocationsPage(Page):
         return self.select_single(WeatherListItem,
                                   objectName="location" + str(index))
 
+    def remove_single_location(self, index):
+        list_item = self.get_location(0)
+        x, y, width, height = list_item.globalRect
+        start_x = x + (width * 0.2)
+        stop_x = x + (width * 0.8)
+        start_y = stop_y = y + (height // 2)
+
+        self.pointing_device.drag(start_x, start_y, stop_x, stop_y)
+
+        list_item.select_remove()
+
 
 class MainView(MainView):
     """Autopilot custom proxy object for the MainView."""
@@ -152,3 +163,7 @@ class MainView(MainView):
 class WeatherListItem(UbuntuUIToolkitCustomProxyObjectBase):
     def get_name(self):
         return self.select_single("Label", objectName="name").text
+
+    @click_object
+    def select_remove(self):
+        return self.select_single(objectName="swipeDeleteAction")
