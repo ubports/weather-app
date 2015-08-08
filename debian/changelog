@@ -11,6 +11,8 @@ ubuntu-weather-app (3.0ubuntu1) UNRELEASED; urgency=medium
   * Fix the CMakeLists.txt to include the app icon
   * Rename EmptyStateComponent to HomePageEmptyStateComponent
   * Add a LocationsPageEmptyStateComponent
+  * Remove C++ flag from CMakeLists.txt
+  * Show README files in QtCreator
 
   [ Andrew Hayzen ]
   * Add mocked locations for autopilot and add a test using the data
