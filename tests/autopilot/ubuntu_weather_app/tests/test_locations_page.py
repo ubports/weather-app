@@ -75,7 +75,7 @@ class TestLocationsPage(UbuntuWeatherAppTestCaseWithData):
         # Select the list item of the second location
         self.locations_page.click_location(1)
 
-        # Check that the first location is not London
+        # Check that the selected location is the same as it was
         self.assertThat(self.home_page.get_selected_location_index(),
                         Eventually(NotEquals(current_index)))
 
