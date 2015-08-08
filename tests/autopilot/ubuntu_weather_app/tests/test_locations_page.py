@@ -65,3 +65,19 @@ class TestLocationsPage(UbuntuWeatherAppTestCaseWithData):
 
         # Check homepage is now visible
         self.assertThat(self.home_page.visible, Eventually(Equals(True)))
+
+    def test_changing_location(self):
+        """ tests changing the selected location """
+
+        # Get the current index for the selected location (0)
+        current_index = self.home_page.get_selected_location_index()
+
+        # Select the list item of the second location
+        self.locations_page.click_location(1)
+
+        # Check that the first location is not London
+        self.assertThat(self.home_page.get_selected_location_index(),
+                        Eventually(NotEquals(current_index)))
+
+        # Check homepage is now visible
+        self.assertThat(self.home_page.visible, Eventually(Equals(True)))

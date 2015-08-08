@@ -126,6 +126,10 @@ class HomePage(PageWithBottomEdge):
         return self.wait_select_single(
             "QQuickListView", objectName="locationPages").count
 
+    def get_selected_location_index(self):
+        return self.wait_select_single(
+            "QQuickListView", objectName="locationPages").currentIndex
+
 
 class LocationsPage(Page):
     """Autopilot helper for LocationsPage."""
@@ -134,6 +138,11 @@ class LocationsPage(Page):
 
     def click_add_location_action(self):
         self.main_view.get_header().click_action_button("addLocation")
+
+    @click_object
+    def click_location(self, index):
+        return self.select_single(WeatherListItem,
+                                  objectName="location" + str(index))
 
     def get_location(self, index):
         return self.select_single(WeatherListItem,
