@@ -152,3 +152,17 @@ class MainView(MainView):
 class WeatherListItem(UbuntuUIToolkitCustomProxyObjectBase):
     def get_name(self):
         return self.select_single("Label", objectName="name").text
+
+    @click_object
+    def select_remove(self):
+        return self.select_single(objectName="swipeDeleteAction")
+
+    def swipe_and_select_remove(self):
+        x, y, width, height = self.globalRect
+        start_x = x + (width * 0.2)
+        stop_x = x + (width * 0.8)
+        start_y = stop_y = y + (height // 2)
+
+        self.pointing_device.drag(start_x, start_y, stop_x, stop_y)
+
+        self.select_remove()
