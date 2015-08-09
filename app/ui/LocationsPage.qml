@@ -82,11 +82,6 @@ Page {
 
                 onItemClicked: {
                     settings.current = index;
-                    if (settings.addedCurrentLocation && settings.detectCurrentLocation) {
-                        settings.current = index;
-                    } else {
-                        settings.current = index-1;
-                    }
                     pageStack.pop()
                 }
 
