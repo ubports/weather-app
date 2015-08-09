@@ -126,6 +126,15 @@ class HomePage(PageWithBottomEdge):
         return self.wait_select_single(
             "QQuickListView", objectName="locationPages").count
 
+    def get_daydelegate(self):
+        weekdaycolumn = self.wait_select_single(
+            "QQuickColumn", objectName="weekdayColumn0")
+        return weekdaycolumn.wait_select_single(
+            "DayDelegate", objectName="dayDelegate0")
+
+    def click_daydelegate(self, day_delegate):
+        self.pointing_device.click_object(day_delegate)
+
 
 class LocationsPage(Page):
     """Autopilot helper for LocationsPage."""
