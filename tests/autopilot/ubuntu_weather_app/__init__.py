@@ -132,8 +132,9 @@ class HomePage(PageWithBottomEdge):
         return weekdaycolumn.wait_select_single(
             "DayDelegate", objectName="dayDelegate0")
 
+    @click_object
     def click_daydelegate(self, day_delegate):
-        self.pointing_device.click_object(day_delegate)
+        return day_delegate
 
 
 class LocationsPage(Page):
