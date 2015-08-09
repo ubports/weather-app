@@ -26,6 +26,9 @@ ubuntu-weather-app (3.0ubuntu1) UNRELEASED; urgency=medium
   * Create autopilot test which adds a location via cached results (LP: #1452497)
   * Fix for racy search bar causing incorrect search query when typed quickly
 
+  [ Carla Sella ]
+  * Create autopilot test which shows the day delegate (LP: #1452491) 
+
  -- Victor Thompson <victor.thompson@gmail.com>  Mon, 01 Jun 2015 20:11:23 -0500
 
 ubuntu-weather-app (2.1) UNRELEASED; urgency=medium
