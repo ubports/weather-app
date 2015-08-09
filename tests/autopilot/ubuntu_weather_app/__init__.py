@@ -183,6 +183,7 @@ class SettingsPage(Page):
     def get_units_page(self):
         return self.main_view.wait_select_single(UnitsPage)
 
+
 class UnitsPage(Page):
     @click_object
     def expand_temperature_setting(self):

@@ -11,7 +11,7 @@ from __future__ import absolute_import
 
 import logging
 from autopilot.matchers import Eventually
-from testtools.matchers import Equals, NotEquals
+from testtools.matchers import NotEquals
 
 
 from ubuntu_weather_app.tests import UbuntuWeatherAppTestCaseWithData
