@@ -82,6 +82,11 @@ Page {
 
                 onItemClicked: {
                     settings.current = index;
+                    if (settings.addedCurrentLocation && settings.detectCurrentLocation) {
+                        settings.current = index;
+                    } else {
+                        settings.current = index-1;
+                    }
                     pageStack.pop()
                 }
 
@@ -162,7 +167,11 @@ Page {
             reorderable: true
 
             onItemClicked: {
-                settings.current = index + 1;
+                if (settings.addedCurrentLocation && settings.detectCurrentLocation) {
+                    settings.current = index + 1;
+                } else {
+                    settings.current = index;
+                }
 
                 pageStack.pop()
             }

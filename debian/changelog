@@ -13,6 +13,8 @@ ubuntu-weather-app (3.0ubuntu1) UNRELEASED; urgency=medium
   * Add a LocationsPageEmptyStateComponent
   * Create autopilot test which removes a single location (LP: #1452499)
   * Create autopilot test which changes the selected location (LP: #1452494)
+  * When location detection is off, make sure the correct location can be
+    selected (LP: #1482936)
 
   [ Andrew Hayzen ]
   * Add mocked locations for autopilot and add a test using the data
