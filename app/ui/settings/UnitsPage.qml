@@ -22,6 +22,8 @@ import "../../components"
 
 Page {
     title: i18n.tr("Units")
+    // property set for bug #1341671
+    property string testProperty: "For bug #1341671"
 
     flickable: null
 
@@ -78,6 +80,7 @@ Page {
 
                 delegate: StandardListItem {
                     title: model.text
+                    objectName: "temperatureUnit"
                     icon: "ok"
                     showIcon: settings.tempScale === model.value
                     onClicked: {

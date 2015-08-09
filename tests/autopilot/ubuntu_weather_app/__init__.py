@@ -135,6 +135,11 @@ class HomePage(PageWithBottomEdge):
     def click_daydelegate(self, day_delegate):
         self.pointing_device.click_object(day_delegate)
 
+    def click_settings_button(self):
+        settings_button = self.select_single(
+            "AbstractButton", objectName="settingsButton0")
+        self.pointing_device.click_object(settings_button)
+        return wait.select_single("SettingsPage")
 
 class LocationsPage(Page):
     """Autopilot helper for LocationsPage."""
@@ -161,3 +166,21 @@ class MainView(MainView):
 class WeatherListItem(UbuntuUIToolkitCustomProxyObjectBase):
     def get_name(self):
         return self.select_single("Label", objectName="name").text
+
+
+class SettingsPage(Page):
+    def get_units_page(self):
+        list_item = wait.select_single("StandardListItem", title="Units")
+        self.pointing_device.click_object(list_item)
+        return wait.select_single("UnitsPage")
+
+
+class UnitsPage(Page):
+    def get_temperature_unit(self):
+        temperature = self.select_single("Subtitled", text="Temperature")
+        return self.temperature.subText
+
+    def change_temperature_unit(self):
+        self.pointing_device.click_object(
+            self.select_single("Subtitled", text="Temperature"))
+

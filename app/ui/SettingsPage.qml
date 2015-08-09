@@ -22,6 +22,8 @@ import "../components"
 
 Page {
     title: i18n.tr("Settings")
+    // property set for bug #1341671
+    property string testProperty: "For bug #1341671"
 
     Column {
         id: settingsColumn
