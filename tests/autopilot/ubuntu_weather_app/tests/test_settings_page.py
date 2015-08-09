@@ -30,12 +30,14 @@ class TestSettingsPage(UbuntuWeatherAppTestCaseWithData):
     def test_switch_temperature_units(self):
         home_page = self.app.get_home_page()
         home_page.click_settings_button()
+
         settings_page = self.app.get_settings_page()
         settings_page.click_settings_page_listitem("Units")
+
         units_page = settings_page.get_units_page()
         units_page.expand_temperature_setting()
-        previous_unit = units_page.get_selected_temperature_unit()
 
+        previous_unit = units_page.get_selected_temperature_unit()
         units_page.change_temperature_unit()
         self.assertThat(previous_unit, Eventually(NotEquals(
             units_page.get_selected_temperature_unit())))
