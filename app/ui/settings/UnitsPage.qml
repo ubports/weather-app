@@ -71,6 +71,7 @@ Page {
 
             ExpandableListItem {
                 id: temperatureSetting
+                objectName: "temperatureSetting"
 
                 listViewHeight: temperatureModel.count*units.gu(7) - units.gu(1)
                 model: temperatureModel
@@ -80,7 +81,6 @@ Page {
 
                 delegate: StandardListItem {
                     title: model.text
-                    objectName: "temperatureUnit"
                     icon: "ok"
                     showIcon: settings.tempScale === model.value
                     onClicked: {

@@ -184,10 +184,21 @@ class SettingsPage(Page):
         return self.main_view.wait_select_single(UnitsPage)
 
 class UnitsPage(Page):
-    #def get_temperature_unit(self):
-        #temperature = self.select_single("Subtitled", text="Temperature")
-        #return temperature.subText
+    @click_object
+    def expand_temperature_setting(self):
+        return self.select_single(
+            "ExpandableListItem", objectName="temperatureSetting")
 
     @click_object
     def change_temperature_unit(self):
-        return self.select_single("Subtitled", text="Temperature")
+        temperatureSetting = self.select_single(
+            "ExpandableListItem", objectName="temperatureSetting")
+        unselected_unit = temperatureSetting.select_single(
+            "StandardListItem", showIcon="False")
+        return unselected_unit
+
+    def get_selected_temperature_unit(self):
+        temperatureSetting = self.select_single(
+            "ExpandableListItem", objectName="temperatureSetting")
+        return temperatureSetting.select_single(
+            "StandardListItem", showIcon="True").title
