@@ -12,6 +12,8 @@ ubuntu-weather-app (3.0ubuntu1) UNRELEASED; urgency=medium
   * Rename EmptyStateComponent to HomePageEmptyStateComponent
   * Add a LocationsPageEmptyStateComponent
   * Create autopilot test which removes a single location (LP: #1452499)
+  * Remove C++ flag from CMakeLists.txt
+  * Show README files in QtCreator
 
   [ Andrew Hayzen ]
   * Add mocked locations for autopilot and add a test using the data
