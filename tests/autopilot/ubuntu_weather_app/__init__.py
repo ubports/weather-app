@@ -47,6 +47,9 @@ class UbuntuWeatherApp(object):
         return self.main_view.wait_select_single(
             LocationsPage, objectName="locationsPage")
 
+    def get_settings_page(self):
+        return self.main_view.wait_select_single(SettingsPage)
+
 
 class Page(UbuntuUIToolkitCustomProxyObjectBase):
     """Autopilot helper for Pages."""
@@ -126,20 +129,22 @@ class HomePage(PageWithBottomEdge):
         return self.wait_select_single(
             "QQuickListView", objectName="locationPages").count
 
-    def get_daydelegate(self):
+    def get_daydelegate(self, weekdaycolumn, day):
         weekdaycolumn = self.wait_select_single(
-            "QQuickColumn", objectName="weekdayColumn0")
+            "QQuickColumn", objectName="weekdayColumn" + str(weekdaycolumn))
         return weekdaycolumn.wait_select_single(
-            "DayDelegate", objectName="dayDelegate0")
+            "DayDelegate", objectName="dayDelegate" + str(day))
 
+    @click_object
     def click_daydelegate(self, day_delegate):
-        self.pointing_device.click_object(day_delegate)
+        return day_delegate
 
+    @click_object
     def click_settings_button(self):
         settings_button = self.select_single(
             "AbstractButton", objectName="settingsButton0")
-        self.pointing_device.click_object(settings_button)
-        return wait.select_single("SettingsPage")
+        return settings_button
+
 
 class LocationsPage(Page):
     """Autopilot helper for LocationsPage."""
@@ -169,18 +174,20 @@ class WeatherListItem(UbuntuUIToolkitCustomProxyObjectBase):
 
 
 class SettingsPage(Page):
-    def get_units_page(self):
-        list_item = wait.select_single("StandardListItem", title="Units")
-        self.pointing_device.click_object(list_item)
-        return wait.select_single("UnitsPage")
+    @click_object
+    def click_settings_page_listitem(self, listitem_title):
+        list_item = self.select_single(
+            "StandardListItem", title=listitem_title)
+        return list_item
 
+    def get_units_page(self):
+        return self.main_view.wait_select_single(UnitsPage)
 
 class UnitsPage(Page):
-    def get_temperature_unit(self):
-        temperature = self.select_single("Subtitled", text="Temperature")
-        return self.temperature.subText
+    #def get_temperature_unit(self):
+        #temperature = self.select_single("Subtitled", text="Temperature")
+        #return temperature.subText
 
+    @click_object
     def change_temperature_unit(self):
-        self.pointing_device.click_object(
-            self.select_single("Subtitled", text="Temperature"))
-
+        return self.select_single("Subtitled", text="Temperature")
