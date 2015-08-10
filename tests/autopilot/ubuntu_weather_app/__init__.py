@@ -186,6 +186,7 @@ class WeatherListItem(UbuntuUIToolkitCustomProxyObjectBase):
 
         self.select_remove()
 
+
 class SettingsPage(Page):
     @click_object
     def click_settings_page_listitem(self, listitem_title):
