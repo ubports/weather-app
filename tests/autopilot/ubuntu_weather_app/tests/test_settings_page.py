@@ -64,4 +64,3 @@ class TestSettingsPage(UbuntuWeatherAppTestCaseWithData):
         units_page.click_back()
         settings_page.click_back()
         return previous_unit
-
