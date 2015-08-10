@@ -141,8 +141,7 @@ class LocationsPage(Page):
 
     @click_object
     def click_location(self, index):
-        return self.select_single(WeatherListItem,
-                                  objectName="location" + str(index))
+        return self.get_location(index)
 
     def get_location(self, index):
         return self.select_single(WeatherListItem,
