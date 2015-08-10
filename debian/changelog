@@ -32,6 +32,7 @@ ubuntu-weather-app (3.0ubuntu1) UNRELEASED; urgency=medium
   [ Carla Sella ]
   * Create autopilot test which shows the day delegate (LP: #1452491) 
   * Create autopilot test witch changes temperature units (LP: #1452493) 
+  * Create autopilot test witch changest wind units (LP: #1452496) 
 
  -- Victor Thompson <victor.thompson@gmail.com>  Mon, 01 Jun 2015 20:11:23 -0500
 

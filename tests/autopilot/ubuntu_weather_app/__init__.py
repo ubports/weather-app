@@ -200,20 +200,19 @@ class SettingsPage(Page):
 
 class UnitsPage(Page):
     @click_object
-    def expand_temperature_setting(self):
-        return self.select_single(
-            "ExpandableListItem", objectName="temperatureSetting")
+    def expand_units_listitem(self, listitem):
+        return self.select_single("ExpandableListItem", objectName=listitem)
 
     @click_object
-    def change_temperature_unit(self):
-        temperatureSetting = self.select_single(
-            "ExpandableListItem", objectName="temperatureSetting")
-        unselected_unit = temperatureSetting.select_single(
+    def change_listitem_unit(self, listitem):
+        listitemSetting = self.select_single(
+            "ExpandableListItem", objectName=listitem)
+        unselected_unit = listitemSetting.select_single(
             "StandardListItem", showIcon="False")
         return unselected_unit
 
-    def get_selected_temperature_unit(self):
-        temperatureSetting = self.select_single(
-            "ExpandableListItem", objectName="temperatureSetting")
-        return temperatureSetting.select_single(
+    def get_selected_listitem_unit(self, listitem):
+        listitemSetting = self.select_single(
+            "ExpandableListItem", objectName=listitem)
+        return listitemSetting.select_single(
             "StandardListItem", showIcon="True").title

@@ -91,6 +91,7 @@ Page {
 
             ExpandableListItem {
                 id: windSetting
+                objectName: "windSetting"
 
                 listViewHeight: windSpeedModel.count*units.gu(7) - units.gu(1)
                 model: windSpeedModel
