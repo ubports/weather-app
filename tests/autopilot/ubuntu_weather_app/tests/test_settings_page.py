@@ -27,10 +27,10 @@ class TestSettingsPage(UbuntuWeatherAppTestCaseWithData):
     def setUp(self):
         super(TestSettingsPage, self).setUp()
 
-    def test_switch_temperature_units(self):
         home_page = self.app.get_home_page()
         home_page.click_settings_button()
 
+    def test_switch_temperature_units(self):
         settings_page = self.app.get_settings_page()
         settings_page.click_settings_page_listitem("Units")
 
