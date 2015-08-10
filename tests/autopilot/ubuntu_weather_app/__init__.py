@@ -125,6 +125,16 @@ class HomePage(PageWithBottomEdge):
         return self.wait_select_single(
             "QQuickListView", objectName="locationPages").count
 
+    def get_daydelegate(self, weekdaycolumn, day):
+        weekdaycolumn = self.wait_select_single(
+            "QQuickColumn", objectName="weekdayColumn" + str(weekdaycolumn))
+        return weekdaycolumn.wait_select_single(
+            "DayDelegate", objectName="dayDelegate" + str(day))
+
+    @click_object
+    def click_daydelegate(self, day_delegate):
+        return day_delegate
+
 
 class LocationsPage(Page):
     """Autopilot helper for LocationsPage."""
@@ -151,3 +161,17 @@ class MainView(MainView):
 class WeatherListItem(UbuntuUIToolkitCustomProxyObjectBase):
     def get_name(self):
         return self.select_single("Label", objectName="name").text
+
+    @click_object
+    def select_remove(self):
+        return self.select_single(objectName="swipeDeleteAction")
+
+    def swipe_and_select_remove(self):
+        x, y, width, height = self.globalRect
+        start_x = x + (width * 0.2)
+        stop_x = x + (width * 0.8)
+        start_y = stop_y = y + (height // 2)
+
+        self.pointing_device.drag(start_x, start_y, stop_x, stop_y)
+
+        self.select_remove()

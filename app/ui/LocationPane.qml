@@ -109,7 +109,7 @@ Item {
                 }
                 mainPageWeekdayListView.model.append(dayData);
             }
-        }        
+        }
 
         // set data for hourly forecasts
         if(hourlyForecasts.length > 0) {
@@ -171,6 +171,7 @@ Item {
     }
     Column {
         id: weekdayColumn
+        objectName: "weekdayColumn" + index
 
         anchors.top: locationTop.bottom
         height: childrenRect.height

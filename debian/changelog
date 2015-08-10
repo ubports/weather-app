@@ -11,9 +11,15 @@ ubuntu-weather-app (3.0ubuntu1) UNRELEASED; urgency=medium
   * Fix the CMakeLists.txt to include the app icon
   * Rename EmptyStateComponent to HomePageEmptyStateComponent
   * Add a LocationsPageEmptyStateComponent
+  * Create autopilot test which removes a single location (LP: #1452499)
+  * Remove C++ flag from CMakeLists.txt
+  * Show README files in QtCreator
   * Create autopilot test which cancels adding a location (LP: #1452498)
   * Make the tests grab the top of the minimized tooltip to avoid resizing the
     app
+  * Create autopilot test which removes a single location (LP: #1452499)
+  * Remove C++ flag from CMakeLists.txt
+  * Show README files in QtCreator
 
   [ Andrew Hayzen ]
   * Add mocked locations for autopilot and add a test using the data
@@ -28,6 +34,9 @@ ubuntu-weather-app (3.0ubuntu1) UNRELEASED; urgency=medium
   * Create autopilot test which adds a location via searching (LP: #1452497)
   * Create autopilot test which adds a location via cached results (LP: #1452497)
   * Fix for racy search bar causing incorrect search query when typed quickly
+
+  [ Carla Sella ]
+  * Create autopilot test which shows the day delegate (LP: #1452491) 
 
  -- Victor Thompson <victor.thompson@gmail.com>  Mon, 01 Jun 2015 20:11:23 -0500
 

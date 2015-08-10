@@ -11,7 +11,6 @@ if(NOT INTLTOOL_EXTRACT)
 endif()
 
 set (UBUNTU_MANIFEST_PATH "manifest.json.in" CACHE INTERNAL "Relative path to the manifest file")
-set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -fno-permissive -pedantic -Wall -Wextra")
 
 find_package(Qt5Core REQUIRED)
 find_package(Qt5Qml REQUIRED)
@@ -97,5 +96,12 @@ add_subdirectory(app)
 add_subdirectory(po)
 add_subdirectory(tests)
 
+# make the qml files visible on qtcreator
+file(GLOB QML_JS_FILES
+    RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
+    *.qml *.js README* *.txt)
+	  
+add_custom_target(com_ubuntu_weather_QMLFiles DEPENDS ubuntu-weather-app.qml SOURCES ${QML_JS_FILES})
+	  
 # TODO: Add custom target for autopilot and run.
 
