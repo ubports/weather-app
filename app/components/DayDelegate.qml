@@ -21,6 +21,7 @@ import Ubuntu.Components 1.2
 
 ListItem {
     id: dayDelegate
+    objectName:"dayDelegate" + index
     height: collapsedHeight
 
     property int collapsedHeight: units.gu(8)

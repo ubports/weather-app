@@ -48,7 +48,7 @@ class TestLocationsPage(UbuntuWeatherAppTestCaseWithData):
         self.assertThat(list_item.get_name(), Equals("London"))
 
         # Remove the location via the list item action
-        self.locations_page.remove_single_location(0)
+        list_item.swipe_and_select_remove()
 
         # Check that the location was removed
         self.assertThat(self.home_page.get_location_count,

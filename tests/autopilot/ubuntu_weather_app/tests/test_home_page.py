@@ -30,3 +30,18 @@ class TestHomePage(UbuntuWeatherAppTestCaseWithData):
         home_page = self.app.get_home_page()
 
         self.assertThat(home_page.get_location_count, Eventually(Equals(2)))
+
+    def test_show_day_details(self):
+        """ tests clicking on a day delegate to expand and contract it"""
+
+        home_page = self.app.get_home_page()
+
+        weekdaycolumn = 0
+        day = 0
+        day_delegate = home_page.get_daydelegate(weekdaycolumn, day)
+        self.assertThat(day_delegate.state, Eventually(Equals("normal")))
+
+        home_page.click_daydelegate(day_delegate)
+        day_delegate.height.wait_for(day_delegate.expandedHeight)
+        self.assertThat(day_delegate.state, Eventually(Equals("expanded")))
+        self.assertEqual(day_delegate.height, day_delegate.expandedHeight)
