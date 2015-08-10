@@ -22,8 +22,7 @@ import "../../components"
 
 Page {
     title: i18n.tr("Units")
-    // property set for bug #1341671
-    property string testProperty: "For bug #1341671"
+    property bool bug1341671workaround: true
 
     flickable: null
 
