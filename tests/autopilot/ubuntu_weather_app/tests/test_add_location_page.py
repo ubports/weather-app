@@ -103,7 +103,7 @@ class TestAddLocationPage(UbuntuWeatherAppTestCaseWithData):
         """ tests tapping the back button in the add location page """
 
         # Go back to the locations page
-        self.app.main_view.get_header().click_custom_back_button()
+        self.add_location_page.click_back()
 
         # Go back to the homepage
         self.locations_page.click_back()

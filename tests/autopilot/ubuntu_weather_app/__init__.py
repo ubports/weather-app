@@ -93,6 +93,9 @@ class AddLocationPage(Page):
     def __init__(self, *args, **kwargs):
         super(AddLocationPage, self).__init__(*args, **kwargs)
 
+    def click_back(self):
+        self.main_view.get_header().click_custom_back_button()
+
     @click_object
     def click_location(self, index):
         return self.select_single("UCListItem",
