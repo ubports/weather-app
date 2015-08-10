@@ -11,7 +11,7 @@ from __future__ import absolute_import
 
 import logging
 from autopilot.matchers import Eventually
-from testtools.matchers import NotEquals
+from testtools.matchers import NotEquals, Equals
 
 
 from ubuntu_weather_app.tests import UbuntuWeatherAppTestCaseWithData
@@ -41,3 +41,12 @@ class TestSettingsPage(UbuntuWeatherAppTestCaseWithData):
         units_page.change_temperature_unit()
         self.assertThat(previous_unit, Eventually(NotEquals(
             units_page.get_selected_temperature_unit())))
+
+        units_page.click_back()
+        settings_page.click_back()
+
+        day_delegate = self.app.get_home_page().get_daydelegate(0, 0)
+        self.assertThat(day_delegate.low.endswith(
+            previous_unit), Equals(False))
+        self.assertThat(day_delegate.high.endswith(
+            previous_unit), Equals(False))
