@@ -188,6 +188,7 @@ class WeatherListItem(UbuntuUIToolkitCustomProxyObjectBase):
 
 
 class SettingsPage(Page):
+    """Autopilot helper for SettingsPage."""
     @click_object
     def click_settings_page_listitem(self, listitem_title):
         list_item = self.select_single(
@@ -199,6 +200,7 @@ class SettingsPage(Page):
 
 
 class UnitsPage(Page):
+    """Autopilot helper for UnitsPage."""
     @click_object
     def expand_units_listitem(self, listitem):
         return self.select_single("ExpandableListItem", objectName=listitem)

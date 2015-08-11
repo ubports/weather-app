@@ -21,8 +21,8 @@ logger = logging.getLogger(__name__)
 
 class TestSettingsPage(UbuntuWeatherAppTestCaseWithData):
 
-    """ Tests for the add locations page
-        setUp jumps to add to locations page as all tests start from here """
+    """ Tests for the settings page
+        setUp opens settings page as all tests start from here """
 
     def setUp(self):
         super(TestSettingsPage, self).setUp()
@@ -31,6 +31,7 @@ class TestSettingsPage(UbuntuWeatherAppTestCaseWithData):
         home_page.click_settings_button()
 
     def test_switch_temperature_units(self):
+         """ tests switching temperature units in Units page """
         unit_name = "temperatureSetting"
         previous_unit = self._change_listitem_unit(unit_name)
 
@@ -41,6 +42,7 @@ class TestSettingsPage(UbuntuWeatherAppTestCaseWithData):
             previous_unit), Equals(False))
 
     def test_switch_wind_speed_units(self):
+         """ tests switching wind speed unit in Units page """
         unit_name = "windSetting"
         previous_unit = self._change_listitem_unit(unit_name)
 
