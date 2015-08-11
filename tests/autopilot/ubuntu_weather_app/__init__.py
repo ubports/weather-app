@@ -141,9 +141,8 @@ class HomePage(PageWithBottomEdge):
 
     @click_object
     def click_settings_button(self):
-        settings_button = self.select_single(
+        return self.select_single(
             "AbstractButton", objectName="settingsButton0")
-        return settings_button
 
 
 class LocationsPage(Page):
@@ -191,9 +190,7 @@ class SettingsPage(Page):
     """Autopilot helper for SettingsPage."""
     @click_object
     def click_settings_page_listitem(self, listitem_title):
-        list_item = self.select_single(
-            "StandardListItem", title=listitem_title)
-        return list_item
+        return self.select_single("StandardListItem", title=listitem_title)
 
     def get_units_page(self):
         return self.main_view.wait_select_single(UnitsPage)
@@ -209,9 +206,8 @@ class UnitsPage(Page):
     def change_listitem_unit(self, listitem):
         listitemSetting = self.select_single(
             "ExpandableListItem", objectName=listitem)
-        unselected_unit = listitemSetting.select_single(
+        return listitemSetting.select_single(
             "StandardListItem", showIcon="False")
-        return unselected_unit
 
     def get_selected_listitem_unit(self, listitem):
         listitemSetting = self.select_single(

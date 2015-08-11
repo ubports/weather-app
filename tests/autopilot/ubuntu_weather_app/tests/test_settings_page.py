@@ -27,15 +27,15 @@ class TestSettingsPage(UbuntuWeatherAppTestCaseWithData):
     def setUp(self):
         super(TestSettingsPage, self).setUp()
 
-        home_page = self.app.get_home_page()
-        home_page.click_settings_button()
+        self.home_page = self.app.get_home_page()
+        self.home_page.click_settings_button()
 
     def test_switch_temperature_units(self):
         """ tests switching temperature units in Units page """
         unit_name = "temperatureSetting"
         previous_unit = self._change_listitem_unit(unit_name)
 
-        day_delegate = self.app.get_home_page().get_daydelegate(0, 0)
+        day_delegate = self.home_page.get_daydelegate(0, 0)
         self.assertThat(day_delegate.low.endswith(
             previous_unit), Equals(False))
         self.assertThat(day_delegate.high.endswith(
@@ -46,12 +46,14 @@ class TestSettingsPage(UbuntuWeatherAppTestCaseWithData):
         unit_name = "windSetting"
         previous_unit = self._change_listitem_unit(unit_name)
 
-        day_delegate = self.app.get_home_page().get_daydelegate(0, 0)
+        day_delegate = self.home_page.get_daydelegate(0, 0)
         wind_unit = day_delegate.wind.split(" ", 1)
 
         self.assertThat(wind_unit[0].endswith(previous_unit), Equals(False))
 
     def _change_listitem_unit(self, unit_name):
+        """ Common actions to change listitem unit for temperature and wind
+            speed tests """
         settings_page = self.app.get_settings_page()
         settings_page.click_settings_page_listitem("Units")
 
@@ -59,7 +61,7 @@ class TestSettingsPage(UbuntuWeatherAppTestCaseWithData):
         units_page.expand_units_listitem(unit_name)
 
         previous_unit = units_page.get_selected_listitem_unit(unit_name)
-        units_page. change_listitem_unit(unit_name)
+        units_page.change_listitem_unit(unit_name)
         self.assertThat(previous_unit, Eventually(NotEquals(
             units_page.get_selected_listitem_unit(unit_name))))
 
