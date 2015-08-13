@@ -78,8 +78,7 @@ class PageWithBottomEdge(Page):
             action_item.visible.wait_for(True)
             start_x = (action_item.globalRect.x +
                        (action_item.globalRect.width * 0.5))
-            start_y = (action_item.globalRect.y +
-                       (action_item.height * 0.5))
+            start_y = action_item.globalRect.y
             stop_y = start_y - (self.height * 0.7)
             self.pointing_device.drag(start_x, start_y,
                                       start_x, stop_y, rate=2)
@@ -93,6 +92,9 @@ class AddLocationPage(Page):
     """Autopilot helper for AddLocationPage."""
     def __init__(self, *args, **kwargs):
         super(AddLocationPage, self).__init__(*args, **kwargs)
+
+    def click_back(self):
+        self.main_view.get_header().click_custom_back_button()
 
     @click_object
     def click_location(self, index):
