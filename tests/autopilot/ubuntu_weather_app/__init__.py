@@ -122,13 +122,15 @@ class HomePage(PageWithBottomEdge):
     def __init__(self, *args, **kwargs):
         super(HomePage, self).__init__(*args, **kwargs)
 
-    def get_location_count(self):
+    def get_location_pages(self):
         return self.wait_select_single(
-            "QQuickListView", objectName="locationPages").count
+            "QQuickListView", objectName="locationPages")
+
+    def get_location_count(self):
+        return self.get_location_pages().count
 
     def get_selected_location_index(self):
-        return self.wait_select_single(
-            "QQuickListView", objectName="locationPages").currentIndex
+        return self.get_location_pages().currentIndex
 
     def get_daydelegate(self, weekdaycolumn, day):
         weekdaycolumn = self.wait_select_single(
