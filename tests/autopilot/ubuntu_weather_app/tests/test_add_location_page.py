@@ -100,6 +100,22 @@ class TestAddLocationPage(UbuntuWeatherAppTestCaseWithData):
         self.assertThat(self.home_page.get_location_count,
                         Eventually(Equals(self.start_count + 1)))
 
+    def test_cancel_add_location(self):
+        """ tests tapping the back button in the add location page """
+
+        # Go back to the locations page
+        self.add_location_page.click_back()
+
+        # Go back to the homepage
+        self.locations_page.click_back()
+
+        # Check homepage is now visible
+        self.assertThat(self.home_page.visible, Eventually(Equals(True)))
+
+        # Check that the location count did not change
+        self.assertThat(self.home_page.get_location_count,
+                        Eventually(Equals(self.start_count)))
+
     def test_location_not_found(self):
         """ tests empty search results for new location """
 
