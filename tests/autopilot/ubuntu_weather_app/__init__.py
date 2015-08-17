@@ -104,10 +104,17 @@ class AddLocationPage(Page):
     def click_search_action(self):
         self.main_view.get_header().click_action_button("search")
 
+    def get_results_count(self):
+        return self.wait_select_single(
+            "QQuickListView", objectName="locationList").count
+
     def get_search_field(self):
         header = self.main_view.get_header()
 
         return header.select_single("TextField", objectName="searchField")
+
+    def is_empty_label_visible(self):
+        return self.select_single("Label", objectName="noCity").visible
 
     def search(self, value):
         self.click_search_action()
