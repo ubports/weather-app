@@ -155,8 +155,8 @@ class LocationsPage(Page):
         self.main_view.get_header().click_action_button("addLocation")
 
     def get_location(self, index):
-        return self.select_single(WeatherListItem,
-                                  objectName="location" + str(index))
+        return self.wait_select_single(WeatherListItem,
+                                       objectName="location" + str(index))
 
 
 class MainView(MainView):

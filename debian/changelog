@@ -32,6 +32,7 @@ ubuntu-weather-app (3.0ubuntu1) UNRELEASED; urgency=medium
   * Create autopilot test which adds a location via searching (LP: #1452497)
   * Create autopilot test which adds a location via cached results (LP: #1452497)
   * Fix for racy search bar causing incorrect search query when typed quickly
+  * Fix for flaky test as get_location does not wait for location to be loaded (LP: #1485657)
 
   [ Carla Sella ]
   * Create autopilot test which shows the day delegate (LP: #1452491) 
