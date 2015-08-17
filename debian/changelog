@@ -17,6 +17,7 @@ ubuntu-weather-app (3.0ubuntu1) UNRELEASED; urgency=medium
   * Create autopilot test which cancels adding a location (LP: #1452498)
   * Make the tests grab the top of the minimized tooltip to avoid resizing the
     app
+  * Create autopilot test for no locations found from search (LP: #1452501)
   * Create autopilot test which changes the selected location (LP: #1452494)
   * When location detection is off, make sure the correct location can be
     selected (LP: #1482936)

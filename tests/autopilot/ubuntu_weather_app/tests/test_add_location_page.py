@@ -12,6 +12,7 @@ from __future__ import absolute_import
 import logging
 from autopilot.matchers import Eventually
 from testtools.matchers import Equals
+from testtools.matchers import NotEquals
 
 
 from ubuntu_weather_app.tests import UbuntuWeatherAppTestCaseWithData
@@ -114,3 +115,26 @@ class TestAddLocationPage(UbuntuWeatherAppTestCaseWithData):
         # Check that the location count did not change
         self.assertThat(self.home_page.get_location_count,
                         Eventually(Equals(self.start_count)))
+
+    def test_location_not_found(self):
+        """ tests empty search results for new location """
+
+        location_name = "UbuntuCity"
+
+        # Check that the empty search results label is not visible
+        self.assertThat(self.add_location_page.is_empty_label_visible(),
+                        Equals(False))
+
+        # Check that the number of results is not zero
+        self.assertThat(self.add_location_page.get_results_count(),
+                        NotEquals(0))
+
+        # Perform search
+        self.add_location_page.search(location_name)
+
+        # Check that the empty search results label is visible
+        self.assertThat(self.add_location_page.is_empty_label_visible(),
+                        Eventually(Equals(True)))
+
+        # Check that the number of results is zero
+        self.assertThat(self.add_location_page.get_results_count(), Equals(0))
