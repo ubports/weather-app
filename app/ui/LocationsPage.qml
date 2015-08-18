@@ -161,6 +161,8 @@ Page {
             multiselectable: true
             reorderable: true
 
+            property string name: model.name  // store in property so that AP can access
+
             onItemClicked: {
                 if (settings.addedCurrentLocation && settings.detectCurrentLocation) {
                     settings.current = index + 1;

@@ -1,0 +1,1709 @@
+{
+    "location": {
+        "coord": {
+            "lon": "10.01534",
+            "lat": "53.57532"
+        },
+        "timezone": {
+            "gmtOffset": 1,
+            "dstOffset": 2,
+            "timeZoneId": "Europe/Berlin"
+        },
+        "areaLabel": "Hamburg, Germany",
+        "population": 1739117,
+        "adminName2": "",
+        "name": "Hamburg",
+        "country": "DE",
+        "countryName": "Germany",
+        "adminName1": "Hamburg",
+        "adminName3": "",
+        "services": {
+            "weatherchannel": "GMXX0049",
+            "geonames": 2911298
+        }
+    },
+    "db": {
+        "id": 1,
+        "updated": "2014-03-15T14:41:54.459Z"
+    },
+    "format": 20140315,
+    "data": [
+        {
+            "date": {
+                "year": 2014,
+                "month": 2,
+                "date": 15,
+                "hours": 18,
+                "minutes": 59
+            },
+            "timestamp": 1394906400,
+            "metric": {
+                "tempMin": 6,
+                "windSpeed": 32
+            },
+            "imperial": {
+                "tempMin": 42.8,
+                "tempMax": 42.8,
+                "windSpeed": 19.472
+            },
+            "precipType": "rain",
+            "propPrecip": 60,
+            "pressure": null,
+            "humidity": 90,
+            "icon": "rain",
+            "condition": "Showers / Wind",
+            "windDeg": 279,
+            "windDir": "W",
+            "uv": 0,
+            "hourly": [
+                {
+                    "timestamp": 1394895600,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 15,
+                        "hours": 16,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 8,
+                        "tempFeels": 4,
+                        "windSpeed": 32
+                    },
+                    "imperial": {
+                        "temp": 46.4,
+                        "tempFeels": 39.2,
+                        "windSpeed": 19.872
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 10,
+                    "humidity": 71,
+                    "windDeg": 296,
+                    "windDir": "WNW",
+                    "icon": "overcast",
+                    "condition": "Partly Cloudy / Wind",
+                    "uv": 1
+                },
+                {
+                    "timestamp": 1394899200,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 15,
+                        "hours": 17,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 7,
+                        "tempFeels": 3,
+                        "windSpeed": 32
+                    },
+                    "imperial": {
+                        "temp": 44.6,
+                        "tempFeels": 37.4,
+                        "windSpeed": 19.872
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 10,
+                    "humidity": 77,
+                    "windDeg": 292,
+                    "windDir": "WNW",
+                    "icon": "overcast",
+                    "condition": "Partly Cloudy / Wind",
+                    "uv": 0
+                },
+                {
+                    "timestamp": 1394902800,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 15,
+                        "hours": 18,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 7,
+                        "tempFeels": 3,
+                        "windSpeed": 27
+                    },
+                    "imperial": {
+                        "temp": 44.6,
+                        "tempFeels": 37.4,
+                        "windSpeed": 16.767
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 20,
+                    "humidity": 80,
+                    "windDeg": 288,
+                    "windDir": "WNW",
+                    "icon": "overcast",
+                    "condition": "Cloudy",
+                    "uv": 0
+                },
+                {
+                    "timestamp": 1394906400,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 15,
+                        "hours": 19,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 7,
+                        "tempFeels": 3,
+                        "windSpeed": 24
+                    },
+                    "imperial": {
+                        "temp": 44.6,
+                        "tempFeels": 37.4,
+                        "windSpeed": 14.904
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 20,
+                    "humidity": 83,
+                    "windDeg": 283,
+                    "windDir": "WNW",
+                    "icon": "overcast",
+                    "condition": "Cloudy",
+                    "uv": 0
+                },
+                {
+                    "timestamp": 1394910000,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 15,
+                        "hours": 20,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 7,
+                        "tempFeels": 3,
+                        "windSpeed": 24
+                    },
+                    "imperial": {
+                        "temp": 44.6,
+                        "tempFeels": 37.4,
+                        "windSpeed": 14.904
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 20,
+                    "humidity": 86,
+                    "windDeg": 277,
+                    "windDir": "W",
+                    "icon": "overcast",
+                    "condition": "Cloudy",
+                    "uv": 0
+                },
+                {
+                    "timestamp": 1394913600,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 15,
+                        "hours": 21,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 7,
+                        "tempFeels": 3,
+                        "windSpeed": 22
+                    },
+                    "imperial": {
+                        "temp": 44.6,
+                        "tempFeels": 37.4,
+                        "windSpeed": 13.661999999999999
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 50,
+                    "humidity": 86,
+                    "windDeg": 271,
+                    "windDir": "W",
+                    "icon": "rain",
+                    "condition": "Light Rain",
+                    "uv": 0
+                },
+                {
+                    "timestamp": 1394917200,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 15,
+                        "hours": 22,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 7,
+                        "tempFeels": 3,
+                        "windSpeed": 22
+                    },
+                    "imperial": {
+                        "temp": 44.6,
+                        "tempFeels": 37.4,
+                        "windSpeed": 13.661999999999999
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 60,
+                    "humidity": 89,
+                    "windDeg": 268,
+                    "windDir": "W",
+                    "icon": "rain",
+                    "condition": "Light Rain",
+                    "uv": 0
+                },
+                {
+                    "timestamp": 1394920800,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 15,
+                        "hours": 23,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 7,
+                        "tempFeels": 3,
+                        "windSpeed": 24
+                    },
+                    "imperial": {
+                        "temp": 44.6,
+                        "tempFeels": 37.4,
+                        "windSpeed": 14.904
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 60,
+                    "humidity": 93,
+                    "windDeg": 268,
+                    "windDir": "W",
+                    "icon": "rain",
+                    "condition": "Light Rain",
+                    "uv": 0
+                }
+            ],
+            "current": {
+                "timestamp": "1394893200",
+                "date": {
+                    "year": 2014,
+                    "month": 2,
+                    "date": 15,
+                    "hours": 18,
+                    "minutes": 59
+                },
+                "metric": {
+                    "temp": 8,
+                    "tempFeels": 4,
+                    "windSpeed": 38
+                },
+                "imperial": {
+                    "temp": 46.4,
+                    "tempFeels": 39.2,
+                    "windSpeed": 23.598
+                },
+                "precipType": null,
+                "propPrecip": null,
+                "humidity": 62,
+                "pressure": "1012.87",
+                "windDeg": 290,
+                "windDir": "WNW",
+                "icon": "cloud_sun",
+                "condition": "Partly Cloudy",
+                "uv": 1
+            }
+        },
+        {
+            "date": {
+                "year": 2014,
+                "month": 2,
+                "date": 16,
+                "hours": 18,
+                "minutes": 59
+            },
+            "timestamp": 1394992800,
+            "metric": {
+                "tempMin": 7,
+                "tempMax": 9,
+                "windSpeed": 35
+            },
+            "imperial": {
+                "tempMin": 44.6,
+                "tempMax": 48.2,
+                "windSpeed": 21.735
+            },
+            "precipType": "rain",
+            "propPrecip": 40,
+            "pressure": null,
+            "humidity": 88,
+            "icon": "rain",
+            "condition": "Showers / Wind",
+            "windDeg": 285,
+            "windDir": "WNW",
+            "uv": 1,
+            "hourly": [
+                {
+                    "timestamp": 1394924400,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 16,
+                        "hours": 0,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 7,
+                        "tempFeels": 3,
+                        "windSpeed": 25
+                    },
+                    "imperial": {
+                        "temp": 44.6,
+                        "tempFeels": 37.4,
+                        "windSpeed": 15.525
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 60,
+                    "humidity": 89,
+                    "windDeg": 271,
+                    "windDir": "W",
+                    "icon": "rain",
+                    "condition": "Showers",
+                    "uv": 0
+                },
+                {
+                    "timestamp": 1394928000,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 16,
+                        "hours": 1,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 7,
+                        "tempFeels": 3,
+                        "windSpeed": 27
+                    },
+                    "imperial": {
+                        "temp": 44.6,
+                        "tempFeels": 37.4,
+                        "windSpeed": 16.767
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 50,
+                    "humidity": 93,
+                    "windDeg": 275,
+                    "windDir": "W",
+                    "icon": "rain",
+                    "condition": "Showers",
+                    "uv": 0
+                },
+                {
+                    "timestamp": 1394931600,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 16,
+                        "hours": 2,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 8,
+                        "tempFeels": 4,
+                        "windSpeed": 28
+                    },
+                    "imperial": {
+                        "temp": 46.4,
+                        "tempFeels": 39.2,
+                        "windSpeed": 17.387999999999998
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 50,
+                    "humidity": 93,
+                    "windDeg": 280,
+                    "windDir": "W",
+                    "icon": "rain",
+                    "condition": "Showers",
+                    "uv": 0
+                },
+                {
+                    "timestamp": 1394935200,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 16,
+                        "hours": 3,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 8,
+                        "tempFeels": 4,
+                        "windSpeed": 32
+                    },
+                    "imperial": {
+                        "temp": 46.4,
+                        "tempFeels": 39.2,
+                        "windSpeed": 19.872
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 50,
+                    "humidity": 96,
+                    "windDeg": 285,
+                    "windDir": "WNW",
+                    "icon": "rain",
+                    "condition": "Showers / Wind",
+                    "uv": 0
+                },
+                {
+                    "timestamp": 1394938800,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 16,
+                        "hours": 4,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 8,
+                        "tempFeels": 5,
+                        "windSpeed": 32
+                    },
+                    "imperial": {
+                        "temp": 46.4,
+                        "tempFeels": 41,
+                        "windSpeed": 19.872
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 40,
+                    "humidity": 93,
+                    "windDeg": 288,
+                    "windDir": "WNW",
+                    "icon": "rain",
+                    "condition": "Showers / Wind",
+                    "uv": 0
+                },
+                {
+                    "timestamp": 1394942400,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 16,
+                        "hours": 5,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 8,
+                        "tempFeels": 5,
+                        "windSpeed": 32
+                    },
+                    "imperial": {
+                        "temp": 46.4,
+                        "tempFeels": 41,
+                        "windSpeed": 19.872
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 40,
+                    "humidity": 93,
+                    "windDeg": 289,
+                    "windDir": "WNW",
+                    "icon": "rain",
+                    "condition": "Showers / Wind",
+                    "uv": 0
+                },
+                {
+                    "timestamp": 1394946000,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 16,
+                        "hours": 6,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 8,
+                        "tempFeels": 5,
+                        "windSpeed": 32
+                    },
+                    "imperial": {
+                        "temp": 46.4,
+                        "tempFeels": 41,
+                        "windSpeed": 19.872
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 40,
+                    "humidity": 89,
+                    "windDeg": 289,
+                    "windDir": "WNW",
+                    "icon": "rain",
+                    "condition": "Few Showers / Wind",
+                    "uv": 0
+                },
+                {
+                    "timestamp": 1394949600,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 16,
+                        "hours": 7,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 8,
+                        "tempFeels": 5,
+                        "windSpeed": 32
+                    },
+                    "imperial": {
+                        "temp": 46.4,
+                        "tempFeels": 41,
+                        "windSpeed": 19.872
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 30,
+                    "humidity": 89,
+                    "windDeg": 288,
+                    "windDir": "WNW",
+                    "icon": "rain",
+                    "condition": "Few Showers / Wind",
+                    "uv": 0
+                },
+                {
+                    "timestamp": 1394953200,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 16,
+                        "hours": 8,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 8,
+                        "tempFeels": 5,
+                        "windSpeed": 32
+                    },
+                    "imperial": {
+                        "temp": 46.4,
+                        "tempFeels": 41,
+                        "windSpeed": 19.872
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 30,
+                    "humidity": 89,
+                    "windDeg": 286,
+                    "windDir": "WNW",
+                    "icon": "rain",
+                    "condition": "Few Showers / Wind",
+                    "uv": 0
+                },
+                {
+                    "timestamp": 1394956800,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 16,
+                        "hours": 9,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 8,
+                        "tempFeels": 5,
+                        "windSpeed": 32
+                    },
+                    "imperial": {
+                        "temp": 46.4,
+                        "tempFeels": 41,
+                        "windSpeed": 19.872
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 40,
+                    "humidity": 93,
+                    "windDeg": 285,
+                    "windDir": "WNW",
+                    "icon": "rain",
+                    "condition": "Showers / Wind",
+                    "uv": 0
+                },
+                {
+                    "timestamp": 1394960400,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 16,
+                        "hours": 10,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 8,
+                        "tempFeels": 5,
+                        "windSpeed": 32
+                    },
+                    "imperial": {
+                        "temp": 46.4,
+                        "tempFeels": 41,
+                        "windSpeed": 19.872
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 40,
+                    "humidity": 93,
+                    "windDeg": 284,
+                    "windDir": "WNW",
+                    "icon": "rain",
+                    "condition": "Showers / Wind",
+                    "uv": 0
+                },
+                {
+                    "timestamp": 1394964000,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 16,
+                        "hours": 11,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 8,
+                        "tempFeels": 5,
+                        "windSpeed": 33
+                    },
+                    "imperial": {
+                        "temp": 46.4,
+                        "tempFeels": 41,
+                        "windSpeed": 20.493
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 40,
+                    "humidity": 93,
+                    "windDeg": 285,
+                    "windDir": "WNW",
+                    "icon": "rain",
+                    "condition": "Showers / Wind",
+                    "uv": 1
+                },
+                {
+                    "timestamp": 1394967600,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 16,
+                        "hours": 12,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 9,
+                        "tempFeels": 5,
+                        "windSpeed": 33
+                    },
+                    "imperial": {
+                        "temp": 48.2,
+                        "tempFeels": 41,
+                        "windSpeed": 20.493
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 30,
+                    "humidity": 86,
+                    "windDeg": 286,
+                    "windDir": "WNW",
+                    "icon": "rain",
+                    "condition": "Few Showers / Wind",
+                    "uv": 1
+                },
+                {
+                    "timestamp": 1394971200,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 16,
+                        "hours": 13,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 9,
+                        "tempFeels": 5,
+                        "windSpeed": 35
+                    },
+                    "imperial": {
+                        "temp": 48.2,
+                        "tempFeels": 41,
+                        "windSpeed": 21.735
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 30,
+                    "humidity": 86,
+                    "windDeg": 286,
+                    "windDir": "WNW",
+                    "icon": "rain",
+                    "condition": "Few Showers / Wind",
+                    "uv": 1
+                },
+                {
+                    "timestamp": 1394974800,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 16,
+                        "hours": 14,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 9,
+                        "tempFeels": 5,
+                        "windSpeed": 35
+                    },
+                    "imperial": {
+                        "temp": 48.2,
+                        "tempFeels": 41,
+                        "windSpeed": 21.735
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 30,
+                    "humidity": 86,
+                    "windDeg": 285,
+                    "windDir": "WNW",
+                    "icon": "rain",
+                    "condition": "Few Showers / Wind",
+                    "uv": 0
+                },
+                {
+                    "timestamp": 1394978400,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 16,
+                        "hours": 15,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 9,
+                        "tempFeels": 5,
+                        "windSpeed": 33
+                    },
+                    "imperial": {
+                        "temp": 48.2,
+                        "tempFeels": 41,
+                        "windSpeed": 20.493
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 30,
+                    "humidity": 86,
+                    "windDeg": 283,
+                    "windDir": "WNW",
+                    "icon": "rain",
+                    "condition": "Few Showers / Wind",
+                    "uv": 0
+                },
+                {
+                    "timestamp": 1394982000,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 16,
+                        "hours": 16,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 9,
+                        "tempFeels": 5,
+                        "windSpeed": 33
+                    },
+                    "imperial": {
+                        "temp": 48.2,
+                        "tempFeels": 41,
+                        "windSpeed": 20.493
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 30,
+                    "humidity": 86,
+                    "windDeg": 281,
+                    "windDir": "W",
+                    "icon": "rain",
+                    "condition": "Few Showers / Wind",
+                    "uv": 0
+                },
+                {
+                    "timestamp": 1394985600,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 16,
+                        "hours": 17,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 9,
+                        "tempFeels": 5,
+                        "windSpeed": 32
+                    },
+                    "imperial": {
+                        "temp": 48.2,
+                        "tempFeels": 41,
+                        "windSpeed": 19.872
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 30,
+                    "humidity": 86,
+                    "windDeg": 281,
+                    "windDir": "W",
+                    "icon": "rain",
+                    "condition": "Few Showers / Wind",
+                    "uv": 0
+                },
+                {
+                    "timestamp": 1394989200,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 16,
+                        "hours": 18,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 8,
+                        "tempFeels": 5,
+                        "windSpeed": 28
+                    },
+                    "imperial": {
+                        "temp": 46.4,
+                        "tempFeels": 41,
+                        "windSpeed": 17.387999999999998
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 20,
+                    "humidity": 86,
+                    "windDeg": 281,
+                    "windDir": "W",
+                    "icon": "overcast",
+                    "condition": "Cloudy",
+                    "uv": 0
+                },
+                {
+                    "timestamp": 1394992800,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 16,
+                        "hours": 19,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 8,
+                        "tempFeels": 5,
+                        "windSpeed": 27
+                    },
+                    "imperial": {
+                        "temp": 46.4,
+                        "tempFeels": 41,
+                        "windSpeed": 16.767
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 20,
+                    "humidity": 86,
+                    "windDeg": 281,
+                    "windDir": "W",
+                    "icon": "overcast",
+                    "condition": "Cloudy",
+                    "uv": 0
+                },
+                {
+                    "timestamp": 1394996400,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 16,
+                        "hours": 20,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 8,
+                        "tempFeels": 5,
+                        "windSpeed": 25
+                    },
+                    "imperial": {
+                        "temp": 46.4,
+                        "tempFeels": 41,
+                        "windSpeed": 15.525
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 20,
+                    "humidity": 86,
+                    "windDeg": 279,
+                    "windDir": "W",
+                    "icon": "overcast",
+                    "condition": "Cloudy",
+                    "uv": 0
+                },
+                {
+                    "timestamp": 1395000000,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 16,
+                        "hours": 21,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 8,
+                        "tempFeels": 5,
+                        "windSpeed": 25
+                    },
+                    "imperial": {
+                        "temp": 46.4,
+                        "tempFeels": 41,
+                        "windSpeed": 15.525
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 20,
+                    "humidity": 86,
+                    "windDeg": 276,
+                    "windDir": "W",
+                    "icon": "overcast",
+                    "condition": "Cloudy",
+                    "uv": 0
+                },
+                {
+                    "timestamp": 1395003600,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 16,
+                        "hours": 22,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 8,
+                        "tempFeels": 5,
+                        "windSpeed": 24
+                    },
+                    "imperial": {
+                        "temp": 46.4,
+                        "tempFeels": 41,
+                        "windSpeed": 14.904
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 20,
+                    "humidity": 86,
+                    "windDeg": 273,
+                    "windDir": "W",
+                    "icon": "overcast",
+                    "condition": "Cloudy",
+                    "uv": 0
+                },
+                {
+                    "timestamp": 1395007200,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 16,
+                        "hours": 23,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 8,
+                        "tempFeels": 5,
+                        "windSpeed": 24
+                    },
+                    "imperial": {
+                        "temp": 46.4,
+                        "tempFeels": 41,
+                        "windSpeed": 14.904
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 20,
+                    "humidity": 86,
+                    "windDeg": 272,
+                    "windDir": "W",
+                    "icon": "overcast",
+                    "condition": "Cloudy",
+                    "uv": 0
+                }
+            ]
+        },
+        {
+            "date": {
+                "year": 2014,
+                "month": 2,
+                "date": 17,
+                "hours": 18,
+                "minutes": 59
+            },
+            "timestamp": 1395079200,
+            "metric": {
+                "tempMin": 5,
+                "tempMax": 10,
+                "windSpeed": 32
+            },
+            "imperial": {
+                "tempMin": 41,
+                "tempMax": 50,
+                "windSpeed": 19.872
+            },
+            "precipType": "rain",
+            "propPrecip": 40,
+            "pressure": null,
+            "humidity": 78,
+            "icon": "scattered",
+            "condition": "AM Showers / Wind",
+            "windDeg": 277,
+            "windDir": "W",
+            "uv": 1,
+            "hourly": [
+                {
+                    "timestamp": 1395010800,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 17,
+                        "hours": 0,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 8,
+                        "tempFeels": 5,
+                        "windSpeed": 24
+                    },
+                    "imperial": {
+                        "temp": 46.4,
+                        "tempFeels": 41,
+                        "windSpeed": 14.904
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 20,
+                    "humidity": 89,
+                    "windDeg": 272,
+                    "windDir": "W",
+                    "icon": "overcast",
+                    "condition": "Cloudy",
+                    "uv": 0
+                },
+                {
+                    "timestamp": 1395014400,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 17,
+                        "hours": 1,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 8,
+                        "tempFeels": 5,
+                        "windSpeed": 24
+                    },
+                    "imperial": {
+                        "temp": 46.4,
+                        "tempFeels": 41,
+                        "windSpeed": 14.904
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 20,
+                    "humidity": 89,
+                    "windDeg": 273,
+                    "windDir": "W",
+                    "icon": "overcast",
+                    "condition": "Cloudy",
+                    "uv": 0
+                },
+                {
+                    "timestamp": 1395018000,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 17,
+                        "hours": 2,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 8,
+                        "tempFeels": 5,
+                        "windSpeed": 24
+                    },
+                    "imperial": {
+                        "temp": 46.4,
+                        "tempFeels": 41,
+                        "windSpeed": 14.904
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 20,
+                    "humidity": 89,
+                    "windDeg": 274,
+                    "windDir": "W",
+                    "icon": "overcast",
+                    "condition": "Cloudy",
+                    "uv": 0
+                },
+                {
+                    "timestamp": 1395021600,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 17,
+                        "hours": 3,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 8,
+                        "tempFeels": 5,
+                        "windSpeed": 24
+                    },
+                    "imperial": {
+                        "temp": 46.4,
+                        "tempFeels": 41,
+                        "windSpeed": 14.904
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 20,
+                    "humidity": 89,
+                    "windDeg": 274,
+                    "windDir": "W",
+                    "icon": "overcast",
+                    "condition": "Cloudy",
+                    "uv": 0
+                },
+                {
+                    "timestamp": 1395025200,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 17,
+                        "hours": 4,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 8,
+                        "tempFeels": 5,
+                        "windSpeed": 24
+                    },
+                    "imperial": {
+                        "temp": 46.4,
+                        "tempFeels": 41,
+                        "windSpeed": 14.904
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 20,
+                    "humidity": 89,
+                    "windDeg": 274,
+                    "windDir": "W",
+                    "icon": "overcast",
+                    "condition": "Cloudy",
+                    "uv": 0
+                },
+                {
+                    "timestamp": 1395028800,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 17,
+                        "hours": 5,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 8,
+                        "tempFeels": 5,
+                        "windSpeed": 24
+                    },
+                    "imperial": {
+                        "temp": 46.4,
+                        "tempFeels": 41,
+                        "windSpeed": 14.904
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 20,
+                    "humidity": 89,
+                    "windDeg": 274,
+                    "windDir": "W",
+                    "icon": "overcast",
+                    "condition": "Cloudy",
+                    "uv": 0
+                },
+                {
+                    "timestamp": 1395032400,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 17,
+                        "hours": 6,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 8,
+                        "tempFeels": 5,
+                        "windSpeed": 25
+                    },
+                    "imperial": {
+                        "temp": 46.4,
+                        "tempFeels": 41,
+                        "windSpeed": 15.525
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 10,
+                    "humidity": 86,
+                    "windDeg": 273,
+                    "windDir": "W",
+                    "icon": "overcast",
+                    "condition": "Cloudy",
+                    "uv": 0
+                },
+                {
+                    "timestamp": 1395036000,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 17,
+                        "hours": 7,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 8,
+                        "tempFeels": 5,
+                        "windSpeed": 25
+                    },
+                    "imperial": {
+                        "temp": 46.4,
+                        "tempFeels": 41,
+                        "windSpeed": 15.525
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 10,
+                    "humidity": 86,
+                    "windDeg": 273,
+                    "windDir": "W",
+                    "icon": "overcast",
+                    "condition": "Cloudy",
+                    "uv": 0
+                },
+                {
+                    "timestamp": 1395039600,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 17,
+                        "hours": 8,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 8,
+                        "tempFeels": 4,
+                        "windSpeed": 27
+                    },
+                    "imperial": {
+                        "temp": 46.4,
+                        "tempFeels": 39.2,
+                        "windSpeed": 16.767
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 20,
+                    "humidity": 86,
+                    "windDeg": 274,
+                    "windDir": "W",
+                    "icon": "overcast",
+                    "condition": "Cloudy",
+                    "uv": 0
+                },
+                {
+                    "timestamp": 1395043200,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 17,
+                        "hours": 9,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 8,
+                        "tempFeels": 4,
+                        "windSpeed": 27
+                    },
+                    "imperial": {
+                        "temp": 46.4,
+                        "tempFeels": 39.2,
+                        "windSpeed": 16.767
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 40,
+                    "humidity": 86,
+                    "windDeg": 275,
+                    "windDir": "W",
+                    "icon": "rain",
+                    "condition": "Showers",
+                    "uv": 0
+                },
+                {
+                    "timestamp": 1395046800,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 17,
+                        "hours": 10,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 8,
+                        "tempFeels": 5,
+                        "windSpeed": 28
+                    },
+                    "imperial": {
+                        "temp": 46.4,
+                        "tempFeels": 41,
+                        "windSpeed": 17.387999999999998
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 40,
+                    "humidity": 83,
+                    "windDeg": 276,
+                    "windDir": "W",
+                    "icon": "rain",
+                    "condition": "Showers",
+                    "uv": 1
+                },
+                {
+                    "timestamp": 1395050400,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 17,
+                        "hours": 11,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 9,
+                        "tempFeels": 5,
+                        "windSpeed": 30
+                    },
+                    "imperial": {
+                        "temp": 48.2,
+                        "tempFeels": 41,
+                        "windSpeed": 18.63
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 40,
+                    "humidity": 77,
+                    "windDeg": 277,
+                    "windDir": "W",
+                    "icon": "rain",
+                    "condition": "Showers",
+                    "uv": 1
+                },
+                {
+                    "timestamp": 1395054000,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 17,
+                        "hours": 12,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 10,
+                        "tempFeels": 6,
+                        "windSpeed": 32
+                    },
+                    "imperial": {
+                        "temp": 50,
+                        "tempFeels": 42.8,
+                        "windSpeed": 19.872
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 20,
+                    "humidity": 74,
+                    "windDeg": 278,
+                    "windDir": "W",
+                    "icon": "overcast",
+                    "condition": "Cloudy / Wind",
+                    "uv": 1
+                },
+                {
+                    "timestamp": 1395057600,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 17,
+                        "hours": 13,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 10,
+                        "tempFeels": 6,
+                        "windSpeed": 32
+                    },
+                    "imperial": {
+                        "temp": 50,
+                        "tempFeels": 42.8,
+                        "windSpeed": 19.872
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 20,
+                    "humidity": 71,
+                    "windDeg": 279,
+                    "windDir": "W",
+                    "icon": "overcast",
+                    "condition": "Cloudy / Wind",
+                    "uv": 1
+                },
+                {
+                    "timestamp": 1395061200,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 17,
+                        "hours": 14,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 10,
+                        "tempFeels": 6,
+                        "windSpeed": 32
+                    },
+                    "imperial": {
+                        "temp": 50,
+                        "tempFeels": 42.8,
+                        "windSpeed": 19.872
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 20,
+                    "humidity": 71,
+                    "windDeg": 279,
+                    "windDir": "W",
+                    "icon": "overcast",
+                    "condition": "Cloudy / Wind",
+                    "uv": 1
+                },
+                {
+                    "timestamp": 1395064800,
+                    "date": {
+                        "year": 2014,
+                        "month": 2,
+                        "date": 17,
+                        "hours": 15,
+                        "minutes": 0
+                    },
+                    "metric": {
+                        "temp": 10,
+                        "tempFeels": 6,
+                        "windSpeed": 30
+                    },
+                    "imperial": {
+                        "temp": 50,
+                        "tempFeels": 42.8,
+                        "windSpeed": 18.63
+                    },
+                    "precipType": "rain",
+                    "propPrecip": 20,
+                    "humidity": 71,
+                    "windDeg": 279,
+                    "windDir": "W",
+                    "icon": "overcast",
+                    "condition": "Cloudy",
+                    "uv": 1
+                }
+            ]
+        },
+        {
+            "date": {
+                "year": 2014,
+                "month": 2,
+                "date": 18,
+                "hours": 18,
+                "minutes": 59
+            },
+            "timestamp": 1395165600,
+            "metric": {
+                "tempMin": 6,
+                "tempMax": 10,
+                "windSpeed": 22
+            },
+            "imperial": {
+                "tempMin": 42.8,
+                "tempMax": 50,
+                "windSpeed": 13.661999999999999
+            },
+            "precipType": "rain",
+            "propPrecip": 20,
+            "pressure": null,
+            "humidity": 79,
+            "icon": "overcast",
+            "condition": "Cloudy",
+            "windDeg": 260,
+            "windDir": "W",
+            "uv": 1,
+            "hourly": []
+        },
+        {
+            "date": {
+                "year": 2014,
+                "month": 2,
+                "date": 19,
+                "hours": 18,
+                "minutes": 59
+            },
+            "timestamp": 1395252000,
+            "metric": {
+                "tempMin": 5,
+                "tempMax": 8,
+                "windSpeed": 35
+            },
+            "imperial": {
+                "tempMin": 41,
+                "tempMax": 46.4,
+                "windSpeed": 21.735
+            },
+            "precipType": "rain",
+            "propPrecip": 60,
+            "pressure": null,
+            "humidity": 84,
+            "icon": "rain",
+            "condition": "Light Rain / Wind",
+            "windDeg": 272,
+            "windDir": "W",
+            "uv": 1,
+            "hourly": []
+        },
+        {
+            "date": {
+                "year": 2014,
+                "month": 2,
+                "date": 20,
+                "hours": 18,
+                "minutes": 59
+            },
+            "timestamp": 1395338400,
+            "metric": {
+                "tempMin": 6,
+                "tempMax": 13,
+                "windSpeed": 17
+            },
+            "imperial": {
+                "tempMin": 42.8,
+                "tempMax": 55.400000000000006,
+                "windSpeed": 10.557
+            },
+            "precipType": "rain",
+            "propPrecip": 0,
+            "pressure": null,
+            "humidity": 59,
+            "icon": "cloud_sun",
+            "condition": "Mostly Sunny",
+            "windDeg": 245,
+            "windDir": "WSW",
+            "uv": 2,
+            "hourly": []
+        },
+        {
+            "date": {
+                "year": 2014,
+                "month": 2,
+                "date": 21,
+                "hours": 18,
+                "minutes": 59
+            },
+            "timestamp": 1395424800,
+            "metric": {
+                "tempMin": 6,
+                "tempMax": 12,
+                "windSpeed": 20
+            },
+            "imperial": {
+                "tempMin": 42.8,
+                "tempMax": 53.6,
+                "windSpeed": 12.42
+            },
+            "precipType": "rain",
+            "propPrecip": 20,
+            "pressure": null,
+            "humidity": 45,
+            "icon": "cloud_sun",
+            "condition": "Partly Cloudy",
+            "windDeg": 186,
+            "windDir": "S",
+            "uv": 2,
+            "hourly": []
+        },
+        {
+            "date": {
+                "year": 2014,
+                "month": 2,
+                "date": 22,
+                "hours": 18,
+                "minutes": 59
+            },
+            "timestamp": 1395511200,
+            "metric": {
+                "tempMin": 5,
+                "tempMax": 13,
+                "windSpeed": 24
+            },
+            "imperial": {
+                "tempMin": 41,
+                "tempMax": 55.400000000000006,
+                "windSpeed": 14.904
+            },
+            "precipType": "rain",
+            "propPrecip": 10,
+            "pressure": null,
+            "humidity": 72,
+            "icon": "cloud_sun",
+            "condition": "Partly Cloudy",
+            "windDeg": 229,
+            "windDir": "SW",
+            "uv": 2,
+            "hourly": []
+        },
+        {
+            "date": {
+                "year": 2014,
+                "month": 2,
+                "date": 23,
+                "hours": 18,
+                "minutes": 59
+            },
+            "timestamp": 1395597600,
+            "metric": {
+                "tempMin": 3,
+                "tempMax": 11,
+                "windSpeed": 20
+            },
+            "imperial": {
+                "tempMin": 37.4,
+                "tempMax": 51.8,
+                "windSpeed": 12.42
+            },
+            "precipType": "rain",
+            "propPrecip": 40,
+            "pressure": null,
+            "humidity": 76,
+            "icon": "rain",
+            "condition": "Showers",
+            "windDeg": 241,
+            "windDir": "WSW",
+            "uv": 2,
+            "hourly": []
+        },
+        {
+            "date": {
+                "year": 2014,
+                "month": 2,
+                "date": 24,
+                "hours": 18,
+                "minutes": 59
+            },
+            "timestamp": 1395684000,
+            "metric": {
+                "tempMin": 3,
+                "tempMax": 11,
+                "windSpeed": 17
+            },
+            "imperial": {
+                "tempMin": 37.4,
+                "tempMax": 51.8,
+                "windSpeed": 10.557
+            },
+            "precipType": "rain",
+            "propPrecip": 20,
+            "pressure": null,
+            "humidity": 75,
+            "icon": "cloud_sun",
+            "condition": "Mostly Cloudy",
+            "windDeg": 245,
+            "windDir": "WSW",
+            "uv": 2,
+            "hourly": []
+        }
+    ],
+    "save": true,
+    "updated": 1394894538202
+}
