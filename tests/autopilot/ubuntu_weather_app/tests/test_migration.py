@@ -9,14 +9,11 @@
 
 from __future__ import absolute_import
 
-import logging
 from autopilot.matchers import Eventually
 from testtools.matchers import Equals
 
 
 from ubuntu_weather_app.tests import UbuntuWeatherAppTestCaseWithLegacyData
-
-logger = logging.getLogger(__name__)
 
 
 class TestMigration(UbuntuWeatherAppTestCaseWithLegacyData):
