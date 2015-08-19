@@ -39,9 +39,9 @@ class TestMigration(UbuntuWeatherAppTestCaseWithLegacyData):
         locations_page.visible.wait_for(True)
 
         # Check that the locations are correct
-        self.assertThat(locations_page.get_location(0).name,
+        self.assertThat(locations_page.get_location(0).get_name,
                         Eventually(Equals("Hamburg")))
-        self.assertThat(locations_page.get_location(1).name,
+        self.assertThat(locations_page.get_location(1).get_name,
                         Eventually(Equals("London")))
 
     # TODO: once units test land add tests for testing migrated settings
