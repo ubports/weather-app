@@ -93,91 +93,58 @@ PageWithBottomEdge {
     }
 
     /*
-      Flickable to scroll the location vertically.
-      The respective contentHeight gets calculated after the Location is filled with data.
+      ListView for locations with snap-scrolling horizontally.
     */
-    Flickable {
-        id: locationFlickable
-        width: parent.width
-        height: parent.height
+    ListView {
+        id: locationPages
+        objectName: "locationPages"
+        anchors.fill: parent
+        contentHeight: parent.height
+        currentIndex: settings.current
+        delegate: LocationPane {}
+        highlightRangeMode: ListView.StrictlyEnforceRange
+        model: weatherApp.locationsList.length
+        orientation: ListView.Horizontal
+        // TODO with snapMode, currentIndex is not properly set and setting currentIndex fails
+        //snapMode: ListView.SnapOneItem
 
-        // FIXME: not sure where the 3GU comes from, PullToRefresh or something in HomePage?
-        contentHeight: locationPages.currentItem ? locationPages.currentItem.childrenRect.height + units.gu(3) : 0
-        contentWidth: parent.width
+        property bool loaded: false
 
-        Behavior on contentHeight {
-            NumberAnimation {
+        signal collapseOtherDelegates(int index)
 
+        onCurrentIndexChanged: {
+            if (loaded) {
+                // FIXME: when a model is reloaded this causes the currentIndex to be lost
+                settings.current = currentIndex
+
+                collapseOtherDelegates(-1)  // collapse all
+            }
+        }
+        onModelChanged: {
+            currentIndex = settings.current
+
+            if (model > 0) {
+                loading = false
+                loaded = true
+            }
+        }
+        onVisibleChanged: {
+            if (!visible && loaded) {
+                collapseOtherDelegates(-1)  // collapse all
             }
         }
 
-        PullToRefresh {
-            id: pullToRefresh
-            parent: locationFlickable
-            refreshing: false
-            onRefresh: {
-                locationPages.loaded = false
-                refreshing = true
-                refreshData(false, true)
-            }
+        // TODO: workaround for not being able to use snapMode property
+        Component.onCompleted: {
+            var scaleFactor = units.gridUnit * 10;
+            maximumFlickVelocity = maximumFlickVelocity * scaleFactor;
+            flickDeceleration = flickDeceleration * scaleFactor;
         }
 
-        /*
-          ListView for locations with snap-scrolling horizontally.
-        */
-        ListView {
-            id: locationPages
-            objectName: "locationPages"
-            anchors.fill: parent
-            currentIndex: settings.current
-            delegate: LocationPane {}
-            height: childrenRect.height
-            highlightRangeMode: ListView.StrictlyEnforceRange
-            model: weatherApp.locationsList.length
-            orientation: ListView.Horizontal
-            // TODO with snapMode, currentIndex is not properly set and setting currentIndex fails
-            //snapMode: ListView.SnapOneItem
-            width: parent.width
-
-            property bool loaded: false
-
-            signal collapseOtherDelegates(int index)
-
-            onCurrentIndexChanged: {
-                if (loaded) {
-                    // FIXME: when a model is reloaded this causes the currentIndex to be lost
-                    settings.current = currentIndex
-
-                    collapseOtherDelegates(-1)  // collapse all
-                }
-            }
-            onModelChanged: {
-                currentIndex = settings.current
-
-                if (model > 0) {
-                    pullToRefresh.refreshing = false
-                    loading = false
-                    loaded = true
-                }
-            }
-            onVisibleChanged: {
-                if (!visible && loaded) {
-                    collapseOtherDelegates(-1)  // collapse all
-                }
-            }
-
-            // TODO: workaround for not being able to use snapMode property
-            Component.onCompleted: {
-                var scaleFactor = units.gridUnit * 10;
-                maximumFlickVelocity = maximumFlickVelocity * scaleFactor;
-                flickDeceleration = flickDeceleration * scaleFactor;
-            }
-
-            Connections {
-                target: settings
-                onCurrentChanged: {
-                    locationPages.currentIndex = settings.current
-                }
+        Connections {
+            target: settings
+            onCurrentChanged: {
+                locationPages.currentIndex = settings.current
             }
         }
     }

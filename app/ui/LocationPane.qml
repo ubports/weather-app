@@ -22,8 +22,16 @@ import Ubuntu.Components.ListItems 0.1 as ListItem
 import "../components"
 import "../data/suncalc.js" as SunCalc
 
-Item {
-    id: locationItem
+
+ListView {
+    id: mainPageWeekdayListView
+    height: parent.height
+    model: ListModel {
+
+    }
+    objectName: "locationListView" + index
+    width: weatherApp.width
+
     /*
       Data properties
     */
@@ -35,11 +43,85 @@ Item {
     property string icon
     property string iconName
 
-    Component.onCompleted: renderData(index)
+    property var hourlyForecastsData
+    property string hourlyTempUnits
 
-    width: locationPage.width
-    height: childrenRect.height
-    anchors.fill: parent.fill
+    delegate: DayDelegate {
+        day: model.day
+        high: model.high
+        image: model.image
+        low: model.low
+
+        modelData: model
+    }
+    header: Column {
+        id: locationTop
+
+        anchors {
+            left: parent.left
+            right: parent.right
+            margins: units.gu(2)
+        }
+        spacing: units.gu(1)
+        onHeightChanged: mainPageWeekdayListView.contentY = -height
+
+        Row {  // spacing at top
+            height: units.gu(1)
+            width: parent.width
+        }
+
+        HeaderRow {
+            id: headerRow
+            locationName: mainPageWeekdayListView.name
+        }
+
+        HomeGraphic {
+            id: homeGraphic
+            icon: mainPageWeekdayListView.icon
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    homeGraphic.visible = false;
+                }
+            }
+        }
+
+        Loader {
+            id: homeHourlyLoader
+            active: !homeGraphic.visible
+            asynchronous: true
+            height: units.gu(32)
+            source: "../components/HomeHourly.qml"
+            visible: active
+            width: parent.width
+        }
+
+        HomeTempInfo {
+            id: homeTempInfo
+            description: conditionText
+            high: mainPageWeekdayListView.todayMaxTemp
+            low: mainPageWeekdayListView.todayMinTemp
+            now: mainPageWeekdayListView.currentTemp
+        }
+
+        // TODO: Migrate this to using the new SDK list item when possible.
+        ListItem.ThinDivider {
+            anchors {
+                leftMargin: units.gu(-2);
+                rightMargin: units.gu(-2)
+            }
+        }
+    }
+
+    PullToRefresh {
+        id: pullToRefresh
+        refreshing: false
+        onRefresh: {
+            locationPages.loaded = false
+            refreshing = true
+            refreshData(false, true)
+        }
+    }
 
     function emptyIfUndefined(variable, append) {
         if (append === undefined) {
@@ -113,89 +195,10 @@ Item {
 
         // set data for hourly forecasts
         if(hourlyForecasts.length > 0) {
-            homeHourlyLoader.forecasts = hourlyForecasts;
-            homeHourlyLoader.tempUnits = tempUnits;
+            hourlyForecastsData = hourlyForecasts;
+            hourlyTempUnits = tempUnits;
         }
     }
 
-    Column {
-        id: locationTop
-
-        anchors {
-            top: parent.top
-            left: parent.left
-            right: parent.right
-            margins: units.gu(2)
-        }
-        spacing: units.gu(1)
-
-        HeaderRow {
-            id: headerRow
-            locationName: locationItem.name
-        }
-
-        HomeGraphic {
-            id: homeGraphic
-            icon: locationItem.icon
-            MouseArea {
-                anchors.fill: parent
-                onClicked: {
-                    homeGraphic.visible = false;
-                }
-            }
-        }
-
-        Loader {
-            id: homeHourlyLoader
-            active: !homeGraphic.visible
-            asynchronous: true
-            height: units.gu(32)
-            source: "../components/HomeHourly.qml"
-            visible: active
-            width: parent.width
-
-            property var forecasts: []
-            property string tempUnits: ""
-        }
-
-        HomeTempInfo {
-            id: homeTempInfo
-            description: conditionText
-            high: locationItem.todayMaxTemp
-            low: locationItem.todayMinTemp
-            now: locationItem.currentTemp
-        }
-
-        // TODO: Migrate this to using the new SDK list item when possible.
-        ListItem.ThinDivider { anchors { leftMargin: units.gu(-2); rightMargin: units.gu(-2) } }
-    }
-    Column {
-        id: weekdayColumn
-        objectName: "weekdayColumn" + index
-
-        anchors.top: locationTop.bottom
-        height: childrenRect.height
-        width: parent.width
-
-        Repeater {
-            id: mainPageWeekdayListView
-            model: ListModel{}
-            delegate: DayDelegate {
-                day: model.day
-                high: model.high
-                image: model.image
-                low: model.low
-
-                condition: model.condition
-                chanceOfRain: model.chanceOfRain
-                humidity: model.humidity
-                // TODO: extra from API
-                //pollen: model.pollen
-                sunrise: model.sunrise
-                sunset: model.sunset
-                wind: model.wind
-                uvIndex: model.uvIndex
-            }
-        }
-    }
+    Component.onCompleted: renderData(index)
 }
