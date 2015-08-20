@@ -165,8 +165,8 @@ class LocationsPage(Page):
         return self.get_location(index)
 
     def get_location(self, index):
-        return self.select_single(WeatherListItem,
-                                  objectName="location" + str(index))
+        return self.wait_select_single(WeatherListItem,
+                                       objectName="location" + str(index))
 
 
 class MainView(MainView):
