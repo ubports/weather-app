@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-08-06 19:16-0500\n"
+"POT-Creation-Date: 2015-08-12 00:11+0100\n"
 "PO-Revision-Date: 2015-07-27 17:54+0000\n"
 "Last-Translator: Bartosz Kosiorek <Unknown>\n"
 "Language-Team: English (United Kingdom) <en_GB@li.org>\n"
@@ -15,34 +15,34 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-08-08 06:24+0000\n"
-"X-Generator: Launchpad (build 17656)\n"
+"X-Launchpad-Export-Date: 2015-08-21 05:45+0000\n"
+"X-Generator: Launchpad (build 17690)\n"
 
-#: ../app/components/DayDelegate.qml:199
+#: ../app/components/DayDelegate.qml:200
 msgid "Chance of rain"
 msgstr "Chance of rain"
 
-#: ../app/components/DayDelegate.qml:205
+#: ../app/components/DayDelegate.qml:206
 msgid "Winds"
 msgstr "Winds"
 
-#: ../app/components/DayDelegate.qml:212
+#: ../app/components/DayDelegate.qml:213
 msgid "UV Index"
 msgstr "UV Index"
 
-#: ../app/components/DayDelegate.qml:217
+#: ../app/components/DayDelegate.qml:218
 msgid "Pollen"
 msgstr "Pollen"
 
-#: ../app/components/DayDelegate.qml:223
+#: ../app/components/DayDelegate.qml:224
 msgid "Humidity"
 msgstr "Humidity"
 
-#: ../app/components/DayDelegate.qml:229
+#: ../app/components/DayDelegate.qml:230
 msgid "Sunrise"
 msgstr "Sunrise"
 
-#: ../app/components/DayDelegate.qml:235
+#: ../app/components/DayDelegate.qml:236
 msgid "Sunset"
 msgstr "Sunset"
 
