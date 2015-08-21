@@ -111,6 +111,15 @@ ListView {
                 rightMargin: units.gu(-2)
             }
         }
+
+        Connections {
+            target: locationPages
+            onCurrentIndexChanged: {
+                if (locationPages.currentIndex === index) {
+                    mainPageWeekdayListView.contentY = -height
+                }
+            }
+        }
     }
 
     PullToRefresh {
