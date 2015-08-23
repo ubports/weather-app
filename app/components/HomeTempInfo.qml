@@ -40,6 +40,7 @@ Column {
 
     Label {
         id: descriptionLabel
+        font.capitalization: Font.Capitalize
         font.weight: Font.Normal
         fontSize: "large"
     }
