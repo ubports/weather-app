@@ -32,6 +32,11 @@ class TestSettingsPage(UbuntuWeatherAppTestCaseWithData):
     def test_switch_temperature_units(self):
         """ tests switching temperature units in Units page """
         unit_name = "temperatureSetting"
+
+        # checking that the initial unit is  F
+        self.assertThat(
+            self._get_previous_display_unit(unit_name), Equals("F"))
+
         previous_unit = self._change_listitem_unit(unit_name)
 
         day_delegate = self.home_page.get_daydelegate(0, 0)
@@ -43,6 +48,11 @@ class TestSettingsPage(UbuntuWeatherAppTestCaseWithData):
     def test_switch_wind_speed_units(self):
         """ tests switching wind speed unit in Units page """
         unit_name = "windSetting"
+
+        # checking that the initial unit is
+        self.assertThat(
+            self._get_previous_display_unit(unit_name), Equals("mph"))
+
         previous_unit = self._change_listitem_unit(unit_name)
 
         day_delegate = self.home_page.get_daydelegate(0, 0)
@@ -68,3 +78,14 @@ class TestSettingsPage(UbuntuWeatherAppTestCaseWithData):
         units_page.click_back()
         settings_page.click_back()
         return previous_unit
+
+    def _get_previous_display_unit(self, unit_name):
+        day_delegate = self.home_page.get_daydelegate(0, 0)
+        if unit_name == "temperatureSetting":
+            low_unit = day_delegate.low[-1:]
+            high_unit = day_delegate.high[-1:]
+            if low_unit == high_unit:
+                return high_unit
+        elif unit_name == "windSetting":
+            wind_unit = day_delegate.wind.split(" ", 1)[0][-3:]
+            return wind_unit
