@@ -112,11 +112,22 @@ ListView {
             }
         }
 
+        NumberAnimation {
+            id: scrollToTopAnimation
+            target: mainPageWeekdayListView;
+            property: "contentY";
+            duration: 200;
+            easing.type: Easing.InOutQuad
+            to: -height
+        }
+
         Connections {
             target: locationPages
             onCurrentIndexChanged: {
-                if (locationPages.currentIndex === index) {
-                    mainPageWeekdayListView.contentY = -height
+                if (locationPages.currentIndex !== index) {
+                    scrollToTopAnimation.start()
+                } else {
+                    mainPageWeekdayListView.contentY = -locationTop.height
                 }
             }
         }
