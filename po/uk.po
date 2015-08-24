@@ -1,4 +1,4 @@
-# English (United Kingdom) translation for ubuntu-weather-app
+# Ukrainian translation for ubuntu-weather-app
 # Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the ubuntu-weather-app package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
@@ -8,147 +8,151 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-08-12 00:11+0100\n"
-"PO-Revision-Date: 2015-08-22 22:31+0000\n"
-"Last-Translator: Bartosz Kosiorek <Unknown>\n"
-"Language-Team: English (United Kingdom) <en_GB@li.org>\n"
+"PO-Revision-Date: 2015-08-22 06:56+0000\n"
+"Last-Translator: Yuri Chornoivan <yurchor@gmail.com>\n"
+"Language-Team: Ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Launchpad-Export-Date: 2015-08-23 06:42+0000\n"
 "X-Generator: Launchpad (build 17690)\n"
 
 #: ../app/components/DayDelegate.qml:200
 msgid "Chance of rain"
-msgstr "Chance of rain"
+msgstr "Можливий дощ"
 
 #: ../app/components/DayDelegate.qml:206
 msgid "Winds"
-msgstr "Winds"
+msgstr "Вітер"
 
 #: ../app/components/DayDelegate.qml:213
 msgid "UV Index"
-msgstr "UV Index"
+msgstr "Індекс УФ-випромінювання"
 
 #: ../app/components/DayDelegate.qml:218
 msgid "Pollen"
-msgstr "Pollen"
+msgstr "Пилок"
 
 #: ../app/components/DayDelegate.qml:224
 msgid "Humidity"
-msgstr "Humidity"
+msgstr "Вологість"
 
 #: ../app/components/DayDelegate.qml:230
 msgid "Sunrise"
-msgstr "Sunrise"
+msgstr "Схід сонця"
 
 #: ../app/components/DayDelegate.qml:236
 msgid "Sunset"
-msgstr "Sunset"
+msgstr "Захід сонця"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:51
 msgid "Searching for current location..."
-msgstr "Searching for current location..."
+msgstr "Шукаємо поточне місце розташування…"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:52
 msgid "Cannot determine your location"
-msgstr "Cannot determine your location"
+msgstr "Не вдалося визначити ваше розташування"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:62
 msgid "Manually add a location by swiping up from the bottom of the display"
-msgstr "Manually add a location by swiping up from the bottom of the display"
+msgstr ""
+"Додати місце вручну можна пересуванням пальця вгору з нижньої частини дисплея"
 
 #: ../app/components/HomeTempInfo.qml:38
 msgid "Today"
-msgstr "Today"
+msgstr "Сьогодні"
 
 #: ../app/components/ListItemActions/Remove.qml:26
 msgid "Remove"
-msgstr "Remove"
+msgstr "Вилучити"
 
 #: ../app/components/LocationsPageEmptyStateComponent.qml:36
 msgid "No locations found. Tap the plus icon to search for one."
-msgstr "No locations found. Tap the plus icon to search for one."
+msgstr "Місця не знайдено. Натисніть плюсик, щоб виконати пошук."
 
 #: ../app/components/MultiSelectHeadState.qml:27
 msgid "Select All"
-msgstr "Select All"
+msgstr "Вибрати усе"
 
 #: ../app/components/MultiSelectHeadState.qml:39
 msgid "Delete"
-msgstr "Delete"
+msgstr "Вилучити"
 
 #: ../app/components/MultiSelectHeadState.qml:51
 msgid "Cancel selection"
-msgstr "Cancel selection"
+msgstr "Скасувати позначення"
 
 #: ../app/ui/AddLocationPage.qml:29
 msgid "Select a city"
-msgstr "Select a city"
+msgstr "Виберіть місто"
 
 #: ../app/ui/AddLocationPage.qml:47 ../app/ui/AddLocationPage.qml:69
 msgid "Back"
-msgstr "Back"
+msgstr "Назад"
 
 #: ../app/ui/AddLocationPage.qml:54
 msgid "City"
-msgstr "City"
+msgstr "Місто"
 
 #: ../app/ui/AddLocationPage.qml:113
 msgid "Search city"
-msgstr "Search city"
+msgstr "Шукати місто"
 
 #: ../app/ui/AddLocationPage.qml:293
 msgid "No city found"
-msgstr "No city found"
+msgstr "Міста не знайдено"
 
 #: ../app/ui/AddLocationPage.qml:306
 msgid "Couldn't load weather data, please try later again!"
-msgstr "Couldn't load weather data, please try later again!"
+msgstr ""
+"Не вдалося завантажити дані щодо погоди. Будь ласка, повторіть спробу "
+"пізніше!"
 
 #: ../app/ui/AddLocationPage.qml:316
 msgid "Location already added."
-msgstr "Location already added."
+msgstr "Місце вже додано."
 
 #: ../app/ui/AddLocationPage.qml:319
 msgid "OK"
-msgstr "OK"
+msgstr "Гаразд"
 
 #: ../app/ui/HomePage.qml:31 ../app/ui/LocationsPage.qml:31
 msgid "Locations"
-msgstr "Locations"
+msgstr "Місця"
 
 #: ../app/ui/LocationsPage.qml:106
 msgid "Current Location"
-msgstr "Current Location"
+msgstr "Поточне розташування"
 
 #: ../app/ui/SettingsPage.qml:24
 msgid "Settings"
-msgstr "Settings"
+msgstr "Параметри"
 
 #: ../app/ui/SettingsPage.qml:32 ../app/ui/settings/UnitsPage.qml:24
 msgid "Units"
-msgstr "Units"
+msgstr "Одиниці"
 
 #: ../app/ui/SettingsPage.qml:37 ../app/ui/settings/DataProviderPage.qml:25
 msgid "Data Provider"
-msgstr "Data Provider"
+msgstr "Джерело даних"
 
 #: ../app/ui/SettingsPage.qml:42 ../app/ui/settings/RefreshIntervalPage.qml:24
 msgid "Refresh Interval"
-msgstr "Refresh Interval"
+msgstr "Інтервал оновлення"
 
 #: ../app/ui/SettingsPage.qml:47 ../app/ui/settings/LocationPage.qml:24
 msgid "Location"
-msgstr "Location"
+msgstr "Місце"
 
 #: ../app/ui/settings/DataProviderPage.qml:37
 msgid "Provider"
-msgstr "Provider"
+msgstr "Джерело"
 
 #: ../app/ui/settings/LocationPage.qml:32
 msgid "Detect current location"
-msgstr "Detect current location"
+msgstr "Визначити поточне місце"
 
 #: ../app/ui/settings/RefreshIntervalPage.qml:30
 #: ../app/ui/settings/RefreshIntervalPage.qml:31
@@ -158,12 +162,13 @@ msgstr "Detect current location"
 #, qt-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
-msgstr[0] "%1 minute"
-msgstr[1] "%1 minutes"
+msgstr[0] "%1 хвилина"
+msgstr[1] "%1 хвилини"
+msgstr[2] "%1 хвилин"
 
 #: ../app/ui/settings/RefreshIntervalPage.qml:42
 msgid "Interval"
-msgstr "Interval"
+msgstr "Інтервал"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of temperature in Celcius and are shown in the settings page.
@@ -184,35 +189,36 @@ msgstr "°F"
 #. Only the abbreviated form of kilometers per hour should be used.
 #: ../app/ui/settings/UnitsPage.qml:57 ../app/ui/settings/UnitsPage.qml:96
 msgid "kph"
-msgstr "kph"
+msgstr "км/год"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of wind speed in miles per hour and are shown in the settings page.
 #. Only the abbreviated form of miles per hour should be used.
 #: ../app/ui/settings/UnitsPage.qml:62 ../app/ui/settings/UnitsPage.qml:97
 msgid "mph"
-msgstr "mph"
+msgstr "миля/год"
 
 #: ../app/ui/settings/UnitsPage.qml:75
 msgid "Temperature"
-msgstr "Temperature"
+msgstr "Температура"
 
 #: ../app/ui/settings/UnitsPage.qml:95
 msgid "Wind Speed"
-msgstr "Wind Speed"
+msgstr "Швидкість вітру"
 
 #: ubuntu-weather-app.desktop.in.in.h:1
 msgid "Weather"
-msgstr "Weather"
+msgstr "Погода"
 
 #: ubuntu-weather-app.desktop.in.in.h:2
 msgid ""
 "A weather forecast application for Ubuntu with support for multiple online "
 "weather data sources"
 msgstr ""
-"A weather forecast application for Ubuntu with support for multiple online "
-"weather data sources"
+"Програма для показу прогнозів погоди в Ubuntu. Передбачено підтримку "
+"декількох джерел даних щодо погоди."
 
 #: ubuntu-weather-app.desktop.in.in.h:3
 msgid "weather;forecast;twc;openweathermap;the weather channel;"
-msgstr "weather;forecast;twc;openweathermap;the weather channel;"
+msgstr ""
+"погода;прогноз;weather;forecast;twc;openweathermap;the weather channel;"
