@@ -202,15 +202,12 @@ class UnitsPage(Page):
     def expand_units_listitem(self, listitem):
         return self.select_single("ExpandableListItem", objectName=listitem)
 
-    @click_object
-    def change_listitem_unit(self, listitem):
+    def get_expanded_listitem(self, listitem, showIcon):
         listitemSetting = self.select_single(
             "ExpandableListItem", objectName=listitem)
         return listitemSetting.select_single(
-            "StandardListItem", showIcon="False")
+            "StandardListItem", showIcon=showIcon)
 
-    def get_selected_listitem_unit(self, listitem):
-        listitemSetting = self.select_single(
-            "ExpandableListItem", objectName=listitem)
-        return listitemSetting.select_single(
-            "StandardListItem", showIcon="True").title
+    @click_object
+    def click_not_selected_listitem(self, unit_name):
+        return self.get_expanded_listitem(unit_name, "False")

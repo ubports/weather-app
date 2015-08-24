@@ -10,7 +10,6 @@
 from __future__ import absolute_import
 
 import logging
-from autopilot.matchers import Eventually
 from testtools.matchers import NotEquals, Equals
 
 
@@ -60,10 +59,11 @@ class TestSettingsPage(UbuntuWeatherAppTestCaseWithData):
         units_page = settings_page.get_units_page()
         units_page.expand_units_listitem(unit_name)
 
-        previous_unit = units_page.get_selected_listitem_unit(unit_name)
-        units_page.change_listitem_unit(unit_name)
-        self.assertThat(previous_unit, Eventually(NotEquals(
-            units_page.get_selected_listitem_unit(unit_name))))
+        previous_unit = units_page.get_expanded_listitem(
+            unit_name, "True").title
+        units_page.click_not_selected_listitem(unit_name)
+        self.assertThat(previous_unit, NotEquals(
+            units_page.get_expanded_listitem(unit_name, "True")))
 
         units_page.click_back()
         settings_page.click_back()
