@@ -5,7 +5,7 @@ ubuntu-weather-app (3.0ubuntu1) UNRELEASED; urgency=medium
   * Use sunrise/sunset from API if available, otherwise use calculated times
   * Allow adding the current location as a duplicate to the Locations List.
   * Add chance of rain
-  * Add conditions text to day delegate. 
+  * Add conditions text to day delegate.
   * Default to OWM if the key file for TWC is blank.
   * Add sunrise and sunset icons from the spec
   * Fix the CMakeLists.txt to include the app icon
@@ -21,6 +21,8 @@ ubuntu-weather-app (3.0ubuntu1) UNRELEASED; urgency=medium
   * Create autopilot test which changes the selected location (LP: #1452494)
   * When location detection is off, make sure the correct location can be
     selected (LP: #1482936)
+  * Lock app in portrait mode
+  * Get the condition text to be translated from the OWM API. (LP: #1487793)
 
   [ Andrew Hayzen ]
   * Add mocked locations for autopilot and add a test using the data
@@ -41,6 +43,8 @@ ubuntu-weather-app (3.0ubuntu1) UNRELEASED; urgency=medium
 
   [ Carla Sella ]
   * Create autopilot test which shows the day delegate (LP: #1452491)
+  * Create autopilot test which changes temperature units (LP: #1452493)
+  * Create autopilot test which changest wind units (LP: #1452496)
 
  -- Victor Thompson <victor.thompson@gmail.com>  Mon, 01 Jun 2015 20:11:23 -0500
 
@@ -71,7 +75,7 @@ ubuntu-weather-app (1.8.3) raring; urgency=low
   * bug fixes and optimizations
 
   [ Alan Pope ]
-  * Update click framework and apparmor profile version (LP: #1315318) 
+  * Update click framework and apparmor profile version (LP: #1315318)
 
  -- Alan Pope <popey@ubuntu.com>  Fri, 02 May 2014 13:51:57 +0100
 
@@ -141,7 +145,7 @@ ubuntu-weather-app (1.8ubuntu1) UNRELEASED; urgency=low
 
 ubuntu-weather-app (1.0ubuntu1) UNRELEASED; urgency=medium
 
-  * New icon 
+  * New icon
 
  -- Alan Pope <alan.pope@canonical.com>  Tue, 18 Feb 2014 21:26:17 +0000
 
@@ -195,7 +199,7 @@ ubuntu-weather-app (1.0) saucy; urgency=low
  -- Martin Borho <martin@borho.net>  Tue, 8 Oct 2013 22:42:00 +0200
 
 ubuntu-weather-app (0.3) raring; urgency=low
-  
+
   * LocationManager-Sheet added
   * Settings-Sheet added
   * Autopilot tests
@@ -208,7 +212,7 @@ ubuntu-weather-app (0.3) raring; urgency=low
 
 ubuntu-weather-app (0.2) raring; urgency=low
 
-  * Added support for packaging and installing translations 
+  * Added support for packaging and installing translations
 
  -- David Planella <david.planella@ubuntu.com>  Tue, 28 May 2013 14:21:33 +0200
 

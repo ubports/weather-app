@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-08-06 19:16-0500\n"
-"PO-Revision-Date: 2015-07-27 17:55+0000\n"
+"POT-Creation-Date: 2015-08-12 00:11+0100\n"
+"PO-Revision-Date: 2015-08-22 22:44+0000\n"
 "Last-Translator: Bartosz Kosiorek <Unknown>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,34 +16,34 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2015-08-08 06:24+0000\n"
-"X-Generator: Launchpad (build 17656)\n"
+"X-Launchpad-Export-Date: 2015-08-23 06:42+0000\n"
+"X-Generator: Launchpad (build 17690)\n"
 
-#: ../app/components/DayDelegate.qml:199
+#: ../app/components/DayDelegate.qml:200
 msgid "Chance of rain"
 msgstr "Możliwy deszcz"
 
-#: ../app/components/DayDelegate.qml:205
+#: ../app/components/DayDelegate.qml:206
 msgid "Winds"
 msgstr "Wiatr"
 
-#: ../app/components/DayDelegate.qml:212
+#: ../app/components/DayDelegate.qml:213
 msgid "UV Index"
 msgstr "Index UV"
 
-#: ../app/components/DayDelegate.qml:217
+#: ../app/components/DayDelegate.qml:218
 msgid "Pollen"
 msgstr "Pylenie"
 
-#: ../app/components/DayDelegate.qml:223
+#: ../app/components/DayDelegate.qml:224
 msgid "Humidity"
 msgstr "Wilgotność"
 
-#: ../app/components/DayDelegate.qml:229
+#: ../app/components/DayDelegate.qml:230
 msgid "Sunrise"
 msgstr "Wschód słońca"
 
-#: ../app/components/DayDelegate.qml:235
+#: ../app/components/DayDelegate.qml:236
 msgid "Sunset"
 msgstr "Zachód słońca"
 
@@ -53,11 +53,11 @@ msgstr "Wyszukiwanie bieżącego położenia..."
 
 #: ../app/components/HomePageEmptyStateComponent.qml:52
 msgid "Cannot determine your location"
-msgstr ""
+msgstr "Nie można ustalić położenia"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:62
 msgid "Manually add a location by swiping up from the bottom of the display"
-msgstr ""
+msgstr "Dodaj ręcznie położenie przez przeciągnięcie w górę od dołu ekranu"
 
 #: ../app/components/HomeTempInfo.qml:38
 msgid "Today"
@@ -70,6 +70,7 @@ msgstr "Usuń"
 #: ../app/components/LocationsPageEmptyStateComponent.qml:36
 msgid "No locations found. Tap the plus icon to search for one."
 msgstr ""
+"Nie znaleziono położenia. Naciśnij ikonę z plusem, aby znaleźć położenie."
 
 #: ../app/components/MultiSelectHeadState.qml:27
 msgid "Select All"
