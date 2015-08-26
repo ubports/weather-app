@@ -47,6 +47,9 @@ class UbuntuWeatherApp(object):
         return self.main_view.wait_select_single(
             LocationsPage, objectName="locationsPage")
 
+    def get_settings_page(self):
+        return self.main_view.wait_select_single(SettingsPage)
+
 
 class Page(UbuntuUIToolkitCustomProxyObjectBase):
     """Autopilot helper for Pages."""
@@ -151,6 +154,11 @@ class HomePage(PageWithBottomEdge):
     def click_daydelegate(self, day_delegate):
         return day_delegate
 
+    @click_object
+    def click_settings_button(self):
+        return self.select_single(
+            "AbstractButton", objectName="settingsButton0")
+
 
 class LocationsPage(Page):
     """Autopilot helper for LocationsPage."""
@@ -195,3 +203,30 @@ class WeatherListItem(UbuntuUIToolkitCustomProxyObjectBase):
         self.pointing_device.drag(start_x, start_y, stop_x, stop_y)
 
         self.select_remove()
+
+
+class SettingsPage(Page):
+    """Autopilot helper for SettingsPage."""
+    @click_object
+    def click_settings_page_listitem(self, listitem_title):
+        return self.select_single("StandardListItem", title=listitem_title)
+
+    def get_units_page(self):
+        return self.main_view.wait_select_single(UnitsPage)
+
+
+class UnitsPage(Page):
+    """Autopilot helper for UnitsPage."""
+    @click_object
+    def expand_units_listitem(self, listitem):
+        return self.select_single("ExpandableListItem", objectName=listitem)
+
+    def get_expanded_listitem(self, listitem, showIcon):
+        listitemSetting = self.select_single(
+            "ExpandableListItem", objectName=listitem)
+        return listitemSetting.select_single(
+            "StandardListItem", showIcon=showIcon)
+
+    @click_object
+    def click_not_selected_listitem(self, unit_name):
+        return self.get_expanded_listitem(unit_name, "False")

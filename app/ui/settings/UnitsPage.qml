@@ -22,6 +22,7 @@ import "../../components"
 
 Page {
     title: i18n.tr("Units")
+    property bool bug1341671workaround: true
 
     flickable: null
 
@@ -69,6 +70,7 @@ Page {
 
             ExpandableListItem {
                 id: temperatureSetting
+                objectName: "temperatureSetting"
 
                 listViewHeight: temperatureModel.count*units.gu(7) - units.gu(1)
                 model: temperatureModel
@@ -89,6 +91,7 @@ Page {
 
             ExpandableListItem {
                 id: windSetting
+                objectName: "windSetting"
 
                 listViewHeight: windSpeedModel.count*units.gu(7) - units.gu(1)
                 model: windSpeedModel

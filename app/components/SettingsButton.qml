@@ -22,6 +22,7 @@ import Ubuntu.Components 1.2
 
 AbstractButton {
     id: settingsButton
+    objectName: "settingsButton" + index
     height: width
     width: units.gu(4)
 
