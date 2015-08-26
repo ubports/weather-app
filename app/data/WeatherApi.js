@@ -233,7 +233,7 @@ var OpenWeatherMapApi = (function() {
             windDeg: data.wind.deg,
             windDir: calcWindDir(data.wind.deg),
             icon: _icon_map[data.weather[0].icon],
-            condition: data.weather[0].main
+            condition: data.weather[0].description
         };
         if(data.id !== undefined) {
             result["service"] = _serviceName;
@@ -263,7 +263,7 @@ var OpenWeatherMapApi = (function() {
             pressure: data.pressure,
             humidity: data.humidity,
             icon: _icon_map[data.weather[0].icon],
-            condition: data.weather[0].main,
+            condition: data.weather[0].description,
             windDeg: data.deg,
             windDir: calcWindDir(data.deg),
             hourly: []
@@ -324,14 +324,14 @@ var OpenWeatherMapApi = (function() {
             latLongParams = "&lat="+encodeURIComponent(params.location.coord.lat)
                 + "&lon="+encodeURIComponent(params.location.coord.lon);
         if(params.location.services && params.location.services[_serviceName]) {
-            urls.current = _baseUrl + "weather?units="+params.units+"&id="+params.location.services[_serviceName];
-            urls.daily = _baseUrl + "forecast/daily?id="+params.location.services[_serviceName]+"&cnt=10&units="+params.units
-            urls.forecast = _baseUrl + "forecast?id="+params.location.services[_serviceName]+"&units="+params.units
+            urls.current = _baseUrl + "weather?units="+params.units+"&id="+params.location.services[_serviceName]+"&lang="+Qt.locale().name.split("_")[0];
+            urls.daily = _baseUrl + "forecast/daily?id="+params.location.services[_serviceName]+"&cnt=10&units="+params.units+"&lang="+Qt.locale().name.split("_")[0];
+            urls.forecast = _baseUrl + "forecast?id="+params.location.services[_serviceName]+"&units="+params.units+"&lang="+Qt.locale().name.split("_")[0];
 
         } else if (params.location.coord) {
-            urls.current = _baseUrl + "weather?units="+params.units+latLongParams;
-            urls.daily = _baseUrl+"forecast/daily?cnt=10&units="+params.units+latLongParams;
-            urls.forecast = _baseUrl+"forecast?units="+params.units+latLongParams;
+            urls.current = _baseUrl + "weather?units="+params.units+latLongParams+"&lang="+Qt.locale().name.split("_")[0];
+            urls.daily = _baseUrl+"forecast/daily?cnt=10&units="+params.units+latLongParams+"&lang="+Qt.locale().name.split("_")[0];
+            urls.forecast = _baseUrl+"forecast?units="+params.units+latLongParams+"&lang="+Qt.locale().name.split("_")[0];
         }
         return urls;
     }

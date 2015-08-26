@@ -190,6 +190,7 @@ ListItem {
             Label {
                 id: conditionForecast
                 color: UbuntuColors.coolGrey
+                font.capitalization: Font.Capitalize
                 fontSize: "x-large"
                 horizontalAlignment: Text.AlignHCenter
                 width: parent.width
