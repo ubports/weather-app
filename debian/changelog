@@ -21,6 +21,7 @@ ubuntu-weather-app (3.0ubuntu1) UNRELEASED; urgency=medium
   * Create autopilot test which changes the selected location (LP: #1452494)
   * When location detection is off, make sure the correct location can be
     selected (LP: #1482936)
+  * Lock app in portrait mode
   * Get the condition text to be translated from the OWM API. (LP: #1487793)
 
   [ Andrew Hayzen ]
