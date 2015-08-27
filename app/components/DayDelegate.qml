@@ -25,21 +25,14 @@ ListItem {
     height: collapsedHeight
 
     property int collapsedHeight: units.gu(8)
-    property int expandedHeight: collapsedHeight + units.gu(4) + extraInfoColumn.height
+    property int expandedHeight: collapsedHeight + units.gu(4) + (expandedInfo.item ? expandedInfo.item.height : 0)
 
     property alias day: dayLabel.text
     property alias image: weatherImage.name
     property alias high: highLabel.text
     property alias low: lowLabel.text
 
-    property alias condition: conditionForecast.text
-    property alias chanceOfRain: chanceOfRainForecast.value
-    property alias humidity: humidityForecast.value
-    property alias pollen: pollenForecast.value
-    property alias sunrise: sunriseForecast.value
-    property alias sunset: sunsetForecast.value
-    property alias wind: windForecast.value
-    property alias uvIndex: uvIndexForecast.value
+    property alias modelData: expandedInfo.modelData
 
     state: "normal"
     states: [
@@ -48,6 +41,10 @@ ListItem {
             PropertyChanges {
                 target: dayDelegate
                 height: collapsedHeight
+            }
+            PropertyChanges {
+                target: expandedInfo
+                opacity: 0
             }
         },
         State {
@@ -68,9 +65,8 @@ ListItem {
             from: "normal"
             to: "expanded"
             SequentialAnimation {
-                NumberAnimation {
-                    easing.type: Easing.InOutQuad
-                    properties: "height"
+                ScriptAction {
+                    script: expandedInfo.active = true
                 }
                 NumberAnimation {
                     easing.type: Easing.InOutQuad
@@ -86,9 +82,8 @@ ListItem {
                     easing.type: Easing.InOutQuad
                     properties: "opacity"
                 }
-                NumberAnimation {
-                    easing.type: Easing.InOutQuad
-                    properties: "height"
+                ScriptAction {
+                    script: expandedInfo.active = false
                 }
             }
         }
@@ -165,78 +160,27 @@ ListItem {
         }
     }
 
-    Item {
+    Loader {
         id: expandedInfo
+        active: false
         anchors {
-            bottom: parent.bottom
-            left: parent.left
-            right: parent.right
-            top: mainInfo.bottom
             bottomMargin: units.gu(2)
+            left: parent.left
+            leftMargin: units.gu(2)
+            right: parent.right
+            rightMargin: units.gu(2)
+            top: mainInfo.bottom
         }
+        asynchronous: true
         opacity: 0
-        visible: opacity !== 0
+        source: "DayDelegateExtraInfo.qml"
 
-        Column {
-            id: extraInfoColumn
-            anchors {
-                centerIn: parent
-            }
-            spacing: units.gu(2)
+        property var modelData
+    }
 
-            // FIXME: extended-infomation_* aren't actually on device
-
-            // Overview text
-            Label {
-                id: conditionForecast
-                color: UbuntuColors.coolGrey
-                font.capitalization: Font.Capitalize
-                fontSize: "x-large"
-                horizontalAlignment: Text.AlignHCenter
-                width: parent.width
-            }
-
-            ForecastDetailsDelegate {
-                id: chanceOfRainForecast
-                forecast: i18n.tr("Chance of rain")
-                imageSource: "../graphics/extended-information_chance-of-rain.svg"
-            }
-
-            ForecastDetailsDelegate {
-                id: windForecast
-                forecast: i18n.tr("Winds")
-                imageSource: "../graphics/extended-information_wind.svg"
-            }
-
-            ForecastDetailsDelegate {
-                id: uvIndexForecast
-                imageSource: "../graphics/extended-information_uv-level.svg"
-                forecast: i18n.tr("UV Index")
-            }
-
-            ForecastDetailsDelegate {
-                id: pollenForecast
-                forecast: i18n.tr("Pollen")
-                // FIXME: need icon
-            }
-
-            ForecastDetailsDelegate {
-                id: humidityForecast
-                forecast: i18n.tr("Humidity")
-                imageSource: "../graphics/extended-information_humidity.svg"
-            }
-
-            ForecastDetailsDelegate {
-                id: sunriseForecast
-                forecast: i18n.tr("Sunrise")
-                imageSource: "../graphics/extended-information_sunrise.svg"
-            }
-
-            ForecastDetailsDelegate {
-                id: sunsetForecast
-                forecast: i18n.tr("Sunset")
-                imageSource: "../graphics/extended-information_sunset.svg"
-            }
+    Behavior on height {
+        NumberAnimation {
+            easing.type: Easing.InOutQuad
         }
     }
 

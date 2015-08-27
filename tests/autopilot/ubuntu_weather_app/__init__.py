@@ -144,10 +144,10 @@ class HomePage(PageWithBottomEdge):
     def get_selected_location_index(self):
         return self.get_location_pages().currentIndex
 
-    def get_daydelegate(self, weekdaycolumn, day):
-        weekdaycolumn = self.wait_select_single(
-            "QQuickColumn", objectName="weekdayColumn" + str(weekdaycolumn))
-        return weekdaycolumn.wait_select_single(
+    def get_daydelegate(self, location, day):
+        listview = self.wait_select_single(
+            "LocationPane", objectName="locationListView" + str(location))
+        return listview.wait_select_single(
             "DayDelegate", objectName="dayDelegate" + str(day))
 
     @click_object

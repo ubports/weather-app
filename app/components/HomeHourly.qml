@@ -25,14 +25,14 @@ ListView {
     clip:true
     height: parent ? parent.height : undefined
     width: parent ? parent.width : undefined
-    model: forecasts.length
+    model: hourlyForecastsData.length
     orientation: ListView.Horizontal
 
     property string currentDate: Qt.formatTime(new Date())
 
     onVisibleChanged: {
         if(visible) {
-            ListView.model = forecasts.length
+            ListView.model = hourlyForecastsData.length
         }
     }
 
@@ -46,7 +46,7 @@ ListView {
     delegate: Item {
         id: delegate
 
-        property var hourData: forecasts[index]
+        property var hourData: hourlyForecastsData[index]
 
         height: parent.height
         width: childrenRect.width
@@ -84,7 +84,7 @@ ListView {
                 anchors.horizontalCenter: parent.horizontalCenter
                 font.pixelSize: units.gu(3)
                 font.weight: Font.Light
-                text: Math.round(hourData[tempUnits].temp).toString()+settings.tempScale
+                text: Math.round(hourData[hourlyTempUnits].temp).toString()+settings.tempScale
             }
         }
 
