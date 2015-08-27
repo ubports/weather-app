@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-08-12 00:11+0100\n"
+"POT-Creation-Date: 2015-08-24 19:08+0100\n"
 "PO-Revision-Date: 2015-08-23 15:43+0000\n"
 "Last-Translator: Richard Somlói <ricsipontaz@gmail.com>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
@@ -15,34 +15,34 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-08-24 05:23+0000\n"
+"X-Launchpad-Export-Date: 2015-08-27 05:49+0000\n"
 "X-Generator: Launchpad (build 17690)\n"
 
-#: ../app/components/DayDelegate.qml:200
+#: ../app/components/DayDelegateExtraInfo.qml:44
 msgid "Chance of rain"
 msgstr "Eső esélye"
 
-#: ../app/components/DayDelegate.qml:206
+#: ../app/components/DayDelegateExtraInfo.qml:51
 msgid "Winds"
 msgstr "Szél"
 
-#: ../app/components/DayDelegate.qml:213
+#: ../app/components/DayDelegateExtraInfo.qml:59
 msgid "UV Index"
 msgstr "UV Index"
 
-#: ../app/components/DayDelegate.qml:218
+#: ../app/components/DayDelegateExtraInfo.qml:65
 msgid "Pollen"
 msgstr "Pollen"
 
-#: ../app/components/DayDelegate.qml:224
+#: ../app/components/DayDelegateExtraInfo.qml:72
 msgid "Humidity"
 msgstr "Páratartalom"
 
-#: ../app/components/DayDelegate.qml:230
+#: ../app/components/DayDelegateExtraInfo.qml:79
 msgid "Sunrise"
 msgstr "Napkelte"
 
-#: ../app/components/DayDelegate.qml:236
+#: ../app/components/DayDelegateExtraInfo.qml:86
 msgid "Sunset"
 msgstr "Napnyugta"
 
@@ -100,19 +100,19 @@ msgstr "Város"
 msgid "Search city"
 msgstr "Város keresése"
 
-#: ../app/ui/AddLocationPage.qml:293
+#: ../app/ui/AddLocationPage.qml:295
 msgid "No city found"
 msgstr "Nincs találat"
 
-#: ../app/ui/AddLocationPage.qml:306
+#: ../app/ui/AddLocationPage.qml:308
 msgid "Couldn't load weather data, please try later again!"
 msgstr "Nem sikerült betölteni az időjárásadatokat, próbálja újra később!"
 
-#: ../app/ui/AddLocationPage.qml:316
+#: ../app/ui/AddLocationPage.qml:318
 msgid "Location already added."
 msgstr "Ez a hely már hozzá lett adva."
 
-#: ../app/ui/AddLocationPage.qml:319
+#: ../app/ui/AddLocationPage.qml:321
 msgid "OK"
 msgstr "OK"
 

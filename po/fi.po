@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-08-12 00:11+0100\n"
+"POT-Creation-Date: 2015-08-24 19:08+0100\n"
 "PO-Revision-Date: 2015-08-22 07:47+0000\n"
 "Last-Translator: Jiri Grönroos <Unknown>\n"
 "Language-Team: Finnish <fi@li.org>\n"
@@ -15,34 +15,34 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-08-23 06:42+0000\n"
+"X-Launchpad-Export-Date: 2015-08-27 05:49+0000\n"
 "X-Generator: Launchpad (build 17690)\n"
 
-#: ../app/components/DayDelegate.qml:200
+#: ../app/components/DayDelegateExtraInfo.qml:44
 msgid "Chance of rain"
 msgstr "Sateen mahdollisuus"
 
-#: ../app/components/DayDelegate.qml:206
+#: ../app/components/DayDelegateExtraInfo.qml:51
 msgid "Winds"
 msgstr "Tuuli"
 
-#: ../app/components/DayDelegate.qml:213
+#: ../app/components/DayDelegateExtraInfo.qml:59
 msgid "UV Index"
 msgstr "UV-indeksi"
 
-#: ../app/components/DayDelegate.qml:218
+#: ../app/components/DayDelegateExtraInfo.qml:65
 msgid "Pollen"
 msgstr "Siitepöly"
 
-#: ../app/components/DayDelegate.qml:224
+#: ../app/components/DayDelegateExtraInfo.qml:72
 msgid "Humidity"
 msgstr "Ilmankosteus"
 
-#: ../app/components/DayDelegate.qml:230
+#: ../app/components/DayDelegateExtraInfo.qml:79
 msgid "Sunrise"
 msgstr "Auringonnousu"
 
-#: ../app/components/DayDelegate.qml:236
+#: ../app/components/DayDelegateExtraInfo.qml:86
 msgid "Sunset"
 msgstr "Auringonlasku"
 
@@ -99,19 +99,19 @@ msgstr "Kaupunki"
 msgid "Search city"
 msgstr "Etsi kaupunkia"
 
-#: ../app/ui/AddLocationPage.qml:293
+#: ../app/ui/AddLocationPage.qml:295
 msgid "No city found"
 msgstr "Kaupunkia ei löytynyt"
 
-#: ../app/ui/AddLocationPage.qml:306
+#: ../app/ui/AddLocationPage.qml:308
 msgid "Couldn't load weather data, please try later again!"
 msgstr "Säätietojen lataaminen ei onnistunut, yritä uudelleen myöhemmin!"
 
-#: ../app/ui/AddLocationPage.qml:316
+#: ../app/ui/AddLocationPage.qml:318
 msgid "Location already added."
 msgstr "Sijainti on jo lisätty."
 
-#: ../app/ui/AddLocationPage.qml:319
+#: ../app/ui/AddLocationPage.qml:321
 msgid "OK"
 msgstr "OK"
 
