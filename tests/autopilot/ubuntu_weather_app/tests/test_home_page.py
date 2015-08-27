@@ -42,6 +42,10 @@ class TestHomePage(UbuntuWeatherAppTestCaseWithData):
         self.assertThat(day_delegate.state, Eventually(Equals("normal")))
 
         home_page.click_daydelegate(day_delegate)
+
+        # Re-get daydelegate as change in loaders changes tree
+        day_delegate = home_page.get_daydelegate(weekdaycolumn, day)
+
         day_delegate.height.wait_for(day_delegate.expandedHeight)
         self.assertThat(day_delegate.state, Eventually(Equals("expanded")))
         self.assertEqual(day_delegate.height, day_delegate.expandedHeight)

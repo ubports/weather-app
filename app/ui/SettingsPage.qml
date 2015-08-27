@@ -22,6 +22,7 @@ import "../components"
 
 Page {
     title: i18n.tr("Settings")
+    property bool bug1341671workaround: true
 
     Column {
         id: settingsColumn

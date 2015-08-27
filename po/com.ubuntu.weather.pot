@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-24 11:17+0100\n"
+"POT-Creation-Date: 2015-08-27 14:46+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,31 +18,31 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: ../app/components/DayDelegate.qml:200
+#: ../app/components/DayDelegateExtraInfo.qml:45
 msgid "Chance of rain"
 msgstr ""
 
-#: ../app/components/DayDelegate.qml:206
+#: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Winds"
 msgstr ""
 
-#: ../app/components/DayDelegate.qml:213
+#: ../app/components/DayDelegateExtraInfo.qml:60
 msgid "UV Index"
 msgstr ""
 
-#: ../app/components/DayDelegate.qml:218
+#: ../app/components/DayDelegateExtraInfo.qml:66
 msgid "Pollen"
 msgstr ""
 
-#: ../app/components/DayDelegate.qml:224
+#: ../app/components/DayDelegateExtraInfo.qml:73
 msgid "Humidity"
 msgstr ""
 
-#: ../app/components/DayDelegate.qml:230
+#: ../app/components/DayDelegateExtraInfo.qml:80
 msgid "Sunrise"
 msgstr ""
 
-#: ../app/components/DayDelegate.qml:236
+#: ../app/components/DayDelegateExtraInfo.qml:87
 msgid "Sunset"
 msgstr ""
 
@@ -126,19 +126,19 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: ../app/ui/SettingsPage.qml:32 ../app/ui/settings/UnitsPage.qml:24
+#: ../app/ui/SettingsPage.qml:33 ../app/ui/settings/UnitsPage.qml:24
 msgid "Units"
 msgstr ""
 
-#: ../app/ui/SettingsPage.qml:37 ../app/ui/settings/DataProviderPage.qml:25
+#: ../app/ui/SettingsPage.qml:38 ../app/ui/settings/DataProviderPage.qml:25
 msgid "Data Provider"
 msgstr ""
 
-#: ../app/ui/SettingsPage.qml:42 ../app/ui/settings/RefreshIntervalPage.qml:24
+#: ../app/ui/SettingsPage.qml:43 ../app/ui/settings/RefreshIntervalPage.qml:24
 msgid "Refresh Interval"
 msgstr ""
 
-#: ../app/ui/SettingsPage.qml:47 ../app/ui/settings/LocationPage.qml:24
+#: ../app/ui/SettingsPage.qml:48 ../app/ui/settings/LocationPage.qml:24
 msgid "Location"
 msgstr ""
 
@@ -168,36 +168,36 @@ msgstr ""
 #. TRANSLATORS: The strings are standard measurement units
 #. of temperature in Celcius and are shown in the settings page.
 #. Only the abbreviated form of Celcius should be used.
-#: ../app/ui/settings/UnitsPage.qml:41 ../app/ui/settings/UnitsPage.qml:76
+#: ../app/ui/settings/UnitsPage.qml:42 ../app/ui/settings/UnitsPage.qml:78
 msgid "°C"
 msgstr ""
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of temperature in Fahrenheit and are shown in the settings page.
 #. Only the abbreviated form of Fahrenheit should be used.
-#: ../app/ui/settings/UnitsPage.qml:46 ../app/ui/settings/UnitsPage.qml:77
+#: ../app/ui/settings/UnitsPage.qml:47 ../app/ui/settings/UnitsPage.qml:79
 msgid "°F"
 msgstr ""
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of wind speed in kilometers per hour and are shown in the settings page.
 #. Only the abbreviated form of kilometers per hour should be used.
-#: ../app/ui/settings/UnitsPage.qml:57 ../app/ui/settings/UnitsPage.qml:96
+#: ../app/ui/settings/UnitsPage.qml:58 ../app/ui/settings/UnitsPage.qml:99
 msgid "kph"
 msgstr ""
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of wind speed in miles per hour and are shown in the settings page.
 #. Only the abbreviated form of miles per hour should be used.
-#: ../app/ui/settings/UnitsPage.qml:62 ../app/ui/settings/UnitsPage.qml:97
+#: ../app/ui/settings/UnitsPage.qml:63 ../app/ui/settings/UnitsPage.qml:100
 msgid "mph"
 msgstr ""
 
-#: ../app/ui/settings/UnitsPage.qml:75
+#: ../app/ui/settings/UnitsPage.qml:77
 msgid "Temperature"
 msgstr ""
 
-#: ../app/ui/settings/UnitsPage.qml:95
+#: ../app/ui/settings/UnitsPage.qml:98
 msgid "Wind Speed"
 msgstr ""
 
