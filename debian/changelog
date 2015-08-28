@@ -23,6 +23,7 @@ ubuntu-weather-app (3.0ubuntu1) UNRELEASED; urgency=medium
     selected (LP: #1482936)
   * Lock app in portrait mode
   * Get the condition text to be translated from the OWM API. (LP: #1487793)
+  * Make sure the text elides on the LocationsPage (LP: #1469460)
 
   [ Andrew Hayzen ]
   * Add mocked locations for autopilot and add a test using the data

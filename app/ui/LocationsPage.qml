@@ -104,6 +104,7 @@ Page {
                         elide: Text.ElideRight
                         fontSize: "medium"
                         text: i18n.tr("Current Location")
+                        width: parent.width
                     }
                     Label {
                         id: currentLocationName2
@@ -118,6 +119,7 @@ Page {
                         fontSize: "small"
                         font.weight: Font.Light
                         text: name + ", " + (adminName1 == name ? countryName : adminName1)
+                        width: parent.width
                     }
                 }
 
@@ -204,6 +206,7 @@ Page {
                         elide: Text.ElideRight
                         fontSize: "medium"
                         text: name
+                        width: parent.width
                     }
                     Label {
                         id: locationName2
@@ -212,6 +215,7 @@ Page {
                         fontSize: "small"
                         font.weight: Font.Light
                         text: adminName1 == name ? countryName : adminName1
+                        width: parent.width
                     }
                 }
 
