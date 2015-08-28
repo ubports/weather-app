@@ -189,15 +189,12 @@ class DatabaseMixin(object):
         self.clean_db()
 
         # create blank db
-        database_tmpl_dir = os.path.join(
-            os.path.dirname(ubuntu_weather_app.__file__),
-            'databases')
         logger.debug("Creating blank db on filesystem %s" % self.db_dir)
 
         if not os.path.exists(self.app_dir):
             os.makedirs(self.app_dir)
 
-        shutil.copytree(database_tmpl_dir, self.db_dir)
+        shutil.copytree(self.database_tmpl_dir, self.db_dir)
 
         self.assertThat(
             lambda: os.path.exists(self.db_path),
@@ -227,6 +224,9 @@ class DatabaseMixin(object):
         self.app_dir = os.path.join(
             os.environ.get('HOME'),
             ".local/share/com.ubuntu.weather")
+        self.database_tmpl_dir = os.path.join(
+            os.path.dirname(ubuntu_weather_app.__file__),
+            'databases')
         self.db_dir = os.path.join(self.app_dir, 'Databases')
         self.db_file = "34e1e542f2f083ff18f537b07a380071.sqlite"
         self.db_path = os.path.join(self.db_dir, self.db_file)
@@ -235,23 +235,47 @@ class DatabaseMixin(object):
             os.path.join(os.path.dirname(__file__), '..', 'files'))
 
 
+class LegacyDatabaseMixin(DatabaseMixin):
+    def load_database_vars(self):
+        self.app_dir = os.path.join(
+            os.environ.get('HOME'),
+            ".local/share/com.ubuntu.weather")
+        self.database_tmpl_dir = os.path.join(
+            os.path.dirname(ubuntu_weather_app.__file__),
+            'databases', 'legacy')
+        self.db_dir = os.path.join(self.app_dir, 'Databases')
+        self.db_file = "34e1e542f2f083ff18f537b07a380071.sqlite"
+        self.db_path = os.path.join(self.db_dir, self.db_file)
+
+        self.json_path = os.path.abspath(
+            os.path.join(os.path.dirname(__file__), '..', 'files', 'legacy'))
+
+
 class SettingsMixin(object):
 
     """
     Helper functions for dealing with the settings file
     """
 
-    def create_settings_with_location_added(self):
-        logger.debug("Creating settings with location added")
-
+    def _create_settings_base(self, path):
         if not os.path.exists(self.settings_dir):
             os.makedirs(self.settings_dir)
 
-        shutil.copyfile(self.settings_location_added, self.settings_filepath)
+        shutil.copyfile(path, self.settings_filepath)
 
         self.assertThat(
             lambda: os.path.exists(self.settings_filepath),
             Eventually(Equals(True)))
+
+    def create_settings_for_migration(self):
+        logger.debug("Creating settings with for migration")
+
+        self._create_settings_base(self.settings_for_migration)
+
+    def create_settings_with_location_added(self):
+        logger.debug("Creating settings with location added")
+
+        self._create_settings_base(self.settings_location_added)
 
     def load_settings_vars(self):
         self.db_dir = os.path.abspath(
@@ -263,6 +287,8 @@ class SettingsMixin(object):
                                               'com.ubuntu.weather.conf')
         self.settings_location_added = os.path.join(self.db_dir,
                                                     "location_added.conf")
+        self.settings_for_migration = os.path.join(self.db_dir,
+                                                   "for_migration.conf")
 
 
 class UbuntuWeatherAppTestCase(BaseTestCaseWithPatchedHome, DatabaseMixin,
@@ -296,6 +322,27 @@ class UbuntuWeatherAppTestCaseWithData(BaseTestCaseWithPatchedHome,
 
         self.load_settings_vars()
         self.create_settings_with_location_added()
+
+        logger.debug("Adding fake data to new database")
+        self.add_locations_to_database()
+
+        self.app = UbuntuWeatherApp(self.launcher())
+
+
+class UbuntuWeatherAppTestCaseWithLegacyData(BaseTestCaseWithPatchedHome,
+                                             LegacyDatabaseMixin,
+                                             SettingsMixin):
+
+    """Base test case that launches the ubuntu-weather-app with legacy data."""
+
+    def setUp(self):
+        super(UbuntuWeatherAppTestCaseWithLegacyData, self).setUp()
+
+        self.load_database_vars()
+        self.create_blank_db()
+
+        self.load_settings_vars()
+        self.create_settings_for_migration()
 
         logger.debug("Adding fake data to new database")
         self.add_locations_to_database()
