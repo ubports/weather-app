@@ -87,7 +87,6 @@ MainView {
                  //print(JSON.stringify(messageObject.result));
                  fillPages(messageObject.result);
              }
-             networkError = false
          } else {
              console.log(messageObject.error.msg+" / "+messageObject.error.request.url)
          }
