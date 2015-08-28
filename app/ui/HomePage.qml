@@ -162,4 +162,14 @@ PageWithBottomEdge {
         source: "../components/HomePageEmptyStateComponent.qml"
         visible: status === Loader.Ready && active
     }
+    
+    Loader {
+        active: networkError && mainPageStack.depth === 1
+        anchors {
+            fill: parent
+        }
+        asynchronous: true
+        source: "../components/NetworkErrorStateComponent.qml"
+        visible: status === Loader.Ready && active
+    }
 }

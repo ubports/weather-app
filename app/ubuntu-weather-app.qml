@@ -59,6 +59,11 @@ MainView {
     property bool loading: false
 
     /*
+      Indicates of the last API call resulted in a network error
+    */
+    property bool networkError: false
+
+    /*
       (re)load the pages on completion
     */
     Component.onCompleted: {
@@ -82,10 +87,12 @@ MainView {
                  //print(JSON.stringify(messageObject.result));
                  fillPages(messageObject.result);
              }
+             networkError = false
          } else {
              console.log(messageObject.error.msg+" / "+messageObject.error.request.url)
-             // TODO error handling
          }
+
+         networkError = messageObject.error
      }
 
     /* Fill the location pages with their data. */
