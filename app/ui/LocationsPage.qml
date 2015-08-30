@@ -26,8 +26,6 @@ import "../components/ListItemActions"
 Page {
     id: locationsPage
     objectName: "locationsPage"
-    // Set to null otherwise the first delegate appears +header.height down the page
-    flickable: null
     title: i18n.tr("Locations")
 
     state: locationsListView.state === "multiselectable" ? "selection" : "default"
@@ -64,6 +62,8 @@ Page {
         id: locationsListView
         anchors {
             fill: parent
+            // TODO: Fix this offset
+            topMargin: -units.gu(9)
         }
         model: ListModel {
             id: locationsModel
