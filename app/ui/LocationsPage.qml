@@ -89,7 +89,7 @@ Page {
                     anchors {
                         left: parent.left
                         right: currentWeatherImage.left
-                        rightMargin: units.gu(1)
+                        rightMargin: units.gu(3)
                         verticalCenter: parent.verticalCenter
                     }
 
