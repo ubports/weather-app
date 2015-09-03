@@ -91,7 +91,7 @@ MainView {
              console.log(messageObject.error.msg+" / "+messageObject.error.request.url)
          }
 
-         networkError = messageObject.error
+         networkError = messageObject.error !== undefined
      }
 
     /* Fill the location pages with their data. */
