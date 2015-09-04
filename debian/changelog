@@ -23,6 +23,7 @@ ubuntu-weather-app (3.0ubuntu1) UNRELEASED; urgency=medium
     selected (LP: #1482936)
   * Lock app in portrait mode
   * Get the condition text to be translated from the OWM API. (LP: #1487793)
+  * Add a Network Error State Component for when a connection error takes place.
 
   [ Andrew Hayzen ]
   * Add mocked locations for autopilot and add a test using the data
