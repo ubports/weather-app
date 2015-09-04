@@ -25,7 +25,13 @@ Column {
     anchors {
         centerIn: parent
     }
+    objectName: "dayDelegateExtraInfo"
     spacing: units.gu(2)
+
+    // Hack for autopilot otherwise Albums appears as MusicPage
+    // due to bug 1341671 it is required that there is a property so that
+    // qml doesn't optimise using the parent type
+    property bool bug1341671workaround: true
 
     // FIXME: extended-infomation_* aren't actually on device
 
@@ -51,6 +57,7 @@ Column {
         id: windForecast
         forecast: i18n.tr("Winds")
         imageSource: "../graphics/extended-information_wind.svg"
+        objectName: "windForecast"
         value: modelData.wind
     }
 
