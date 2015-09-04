@@ -55,8 +55,8 @@ class TestSettingsPage(UbuntuWeatherAppTestCaseWithData):
         previous_unit = self._change_listitem_unit(unit_name)
 
         day_delegate = self.home_page.get_daydelegate(0, 0)
-        extra_day_delegate = day_delegate.get_extra_info()
-        wind_unit = extra_day_delegate.wind.split(" ", 1)
+        day_delegate_extra_info = day_delegate.get_extra_info()
+        wind_unit = day_delegate_extra_info.wind.split(" ", 1)
 
         self.assertThat(wind_unit[0].endswith(previous_unit), Equals(False))
 
@@ -90,5 +90,5 @@ class TestSettingsPage(UbuntuWeatherAppTestCaseWithData):
             if low_unit == high_unit:
                 return high_unit
         elif unit_name == "windSetting":
-            extra_day_delegate = day_delegate.get_extra_info()
-            return extra_day_delegate.wind.split(" ", 1)[0][-3:]
+            day_delegate_extra_info = day_delegate.get_extra_info()
+            return day_delegate_extra_info.wind.split(" ", 1)[0][-3:]
