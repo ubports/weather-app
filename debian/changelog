@@ -42,6 +42,7 @@ ubuntu-weather-app (3.0ubuntu1) UNRELEASED; urgency=medium
   * Split day delegate extra info into a separate component that is loaded on demand
   * Use ListView per Location Pane so that scrolling vertically only affect the currently focused pane
   * Add autopilot tests which check that data is migrated correctly (LP: #1485262)
+  * Fix for wind test failing and some selects not waiting for visible=True (LP: #1492321)
 
   [ Carla Sella ]
   * Create autopilot test which shows the day delegate (LP: #1452491)
