@@ -63,7 +63,7 @@ Page {
         anchors {
             fill: parent
             // TODO: Fix this offset
-            topMargin: -units.gu(9)
+            topMargin: -locationsPage.header.height
         }
         model: ListModel {
             id: locationsModel
