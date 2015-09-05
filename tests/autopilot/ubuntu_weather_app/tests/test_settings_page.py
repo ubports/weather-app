@@ -27,7 +27,6 @@ class TestSettingsPage(UbuntuWeatherAppTestCaseWithData):
         super(TestSettingsPage, self).setUp()
 
         self.home_page = self.app.get_home_page()
-        self.home_page.click_settings_button()
 
     def test_switch_temperature_units(self):
         """ tests switching temperature units in Units page """
@@ -56,13 +55,17 @@ class TestSettingsPage(UbuntuWeatherAppTestCaseWithData):
         previous_unit = self._change_listitem_unit(unit_name)
 
         day_delegate = self.home_page.get_daydelegate(0, 0)
-        wind_unit = day_delegate.wind.split(" ", 1)
+        day_delegate_extra_info = day_delegate.get_extra_info()
+        wind_unit = day_delegate_extra_info.wind.split(" ", 1)
 
         self.assertThat(wind_unit[0].endswith(previous_unit), Equals(False))
 
     def _change_listitem_unit(self, unit_name):
         """ Common actions to change listitem unit for temperature and wind
             speed tests """
+
+        self.home_page.click_settings_button()
+
         settings_page = self.app.get_settings_page()
         settings_page.click_settings_page_listitem("Units")
 
@@ -87,5 +90,5 @@ class TestSettingsPage(UbuntuWeatherAppTestCaseWithData):
             if low_unit == high_unit:
                 return high_unit
         elif unit_name == "windSetting":
-            wind_unit = day_delegate.wind.split(" ", 1)[0][-3:]
-            return wind_unit
+            day_delegate_extra_info = day_delegate.get_extra_info()
+            return day_delegate_extra_info.wind.split(" ", 1)[0][-3:]
