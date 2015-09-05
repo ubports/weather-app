@@ -43,6 +43,8 @@ ubuntu-weather-app (3.0ubuntu1) UNRELEASED; urgency=medium
   * Use ListView per Location Pane so that scrolling vertically only affect the currently focused pane
   * Add autopilot tests which check that data is migrated correctly (LP: #1485262)
   * Fix for wind test failing and some selects not waiting for visible=True (LP: #1492321)
+  * Add LocationPane helper to the autopilot tests
+  * Various tidy ups to improve readability and code commentary of autopilot code
 
   [ Carla Sella ]
   * Create autopilot test which shows the day delegate (LP: #1452491)

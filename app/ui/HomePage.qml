@@ -101,7 +101,9 @@ PageWithBottomEdge {
         anchors.fill: parent
         contentHeight: parent.height
         currentIndex: settings.current
-        delegate: LocationPane {}
+        delegate: LocationPane {
+            objectName: "locationPane" + index
+        }
         highlightRangeMode: ListView.StrictlyEnforceRange
         model: weatherApp.locationsList.length
         orientation: ListView.Horizontal

@@ -26,69 +26,73 @@ class TestSettingsPage(UbuntuWeatherAppTestCaseWithData):
     def setUp(self):
         super(TestSettingsPage, self).setUp()
 
+        # Get the home page and selected pane
         self.home_page = self.app.get_home_page()
+        self.location_pane = self.home_page.get_selected_location_pane()
+
+        # Get initial wind and temperature settings
+        self.day_delegate = self.location_pane.get_day_delegate(0)
+
+        self.initial_wind_unit = self.day_delegate.get_wind_unit()
+        self.initial_temperature_unit = self.day_delegate.get_temperature_unit(
+        )
+
+        # Open and get the settings page
+        self.location_pane.click_settings_button()
+        self.settings_page = self.app.get_settings_page()
+
+        # Click the units page
+        self.settings_page.click_settings_page_listitem("Units")
+
+        # Get the units page
+        self.units_page = self.settings_page.get_units_page()
 
     def test_switch_temperature_units(self):
         """ tests switching temperature units in Units page """
-        unit_name = "temperatureSetting"
 
-        # checking that the initial unit is  F
-        self.assertThat(
-            self._get_previous_display_unit(unit_name), Equals("F"))
+        # Check that the initial unit is F
+        self.assertThat(self.initial_temperature_unit, Equals("F"))
 
-        previous_unit = self._change_listitem_unit(unit_name)
+        # Change the unit
+        changed = self.units_page.change_listitem_unit("temperatureSetting")
 
-        day_delegate = self.home_page.get_daydelegate(0, 0)
-        self.assertThat(day_delegate.low.endswith(
-            previous_unit), Equals(False))
-        self.assertThat(day_delegate.high.endswith(
-            previous_unit), Equals(False))
+        # Check that the new value is not the previously selected
+        self.assertThat(changed, Equals(True))
+
+        # Go back to the home page
+        self.units_page.click_back()
+        self.settings_page.click_back()
+
+        # Reget the home page and selected pane as they have changed
+        self.location_pane = self.home_page.get_selected_location_pane()
+        self.day_delegate = self.location_pane.get_day_delegate(0)
+
+        # Check that the unit is different to the starting unit
+        self.assertThat(self.day_delegate.low.endswith(
+            self.initial_temperature_unit), Equals(False))
+        self.assertThat(self.day_delegate.high.endswith(
+            self.initial_temperature_unit), Equals(False))
 
     def test_switch_wind_speed_units(self):
         """ tests switching wind speed unit in Units page """
-        unit_name = "windSetting"
 
-        # checking that the initial unit is
-        self.assertThat(
-            self._get_previous_display_unit(unit_name), Equals("mph"))
+        # Check that the initial unit is mph
+        self.assertThat(self.initial_wind_unit, Equals("mph"))
 
-        previous_unit = self._change_listitem_unit(unit_name)
+        # Change the unit
+        changed = self.units_page.change_listitem_unit("windSetting")
 
-        day_delegate = self.home_page.get_daydelegate(0, 0)
-        day_delegate_extra_info = day_delegate.get_extra_info()
-        wind_unit = day_delegate_extra_info.wind.split(" ", 1)
+        # Check that the new value is not the previously selected
+        self.assertThat(changed, Equals(True))
 
-        self.assertThat(wind_unit[0].endswith(previous_unit), Equals(False))
+        # Go back to the home page
+        self.units_page.click_back()
+        self.settings_page.click_back()
 
-    def _change_listitem_unit(self, unit_name):
-        """ Common actions to change listitem unit for temperature and wind
-            speed tests """
+        # Reget the home page and selected pane as they have changed
+        self.location_pane = self.home_page.get_selected_location_pane()
+        self.day_delegate = self.location_pane.get_day_delegate(0)
 
-        self.home_page.click_settings_button()
-
-        settings_page = self.app.get_settings_page()
-        settings_page.click_settings_page_listitem("Units")
-
-        units_page = settings_page.get_units_page()
-        units_page.expand_units_listitem(unit_name)
-
-        previous_unit = units_page.get_expanded_listitem(
-            unit_name, "True").title
-        units_page.click_not_selected_listitem(unit_name)
-        self.assertThat(previous_unit, NotEquals(
-            units_page.get_expanded_listitem(unit_name, "True")))
-
-        units_page.click_back()
-        settings_page.click_back()
-        return previous_unit
-
-    def _get_previous_display_unit(self, unit_name):
-        day_delegate = self.home_page.get_daydelegate(0, 0)
-        if unit_name == "temperatureSetting":
-            low_unit = day_delegate.low[-1:]
-            high_unit = day_delegate.high[-1:]
-            if low_unit == high_unit:
-                return high_unit
-        elif unit_name == "windSetting":
-            day_delegate_extra_info = day_delegate.get_extra_info()
-            return day_delegate_extra_info.wind.split(" ", 1)[0][-3:]
+        # Check that the unit is different to the starting unit
+        self.assertThat(self.day_delegate.get_wind_unit().endswith(
+            self.initial_wind_unit), Equals(False))
