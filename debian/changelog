@@ -23,6 +23,8 @@ ubuntu-weather-app (3.0ubuntu1) UNRELEASED; urgency=medium
     selected (LP: #1482936)
   * Lock app in portrait mode
   * Get the condition text to be translated from the OWM API. (LP: #1487793)
+  * Add a Network Error State Component for when a connection error takes place.
+  * Allow the LocationsPage to be flickable. (LP: #1490044)
   * Make sure the text elides on the LocationsPage and the AddLocationPage. (LP: #1469460)
 
   [ Andrew Hayzen ]
@@ -42,6 +44,7 @@ ubuntu-weather-app (3.0ubuntu1) UNRELEASED; urgency=medium
   * Split day delegate extra info into a separate component that is loaded on demand
   * Use ListView per Location Pane so that scrolling vertically only affect the currently focused pane
   * Add autopilot tests which check that data is migrated correctly (LP: #1485262)
+  * Fix for wind test failing and some selects not waiting for visible=True (LP: #1492321)
 
   [ Carla Sella ]
   * Create autopilot test which shows the day delegate (LP: #1452491)

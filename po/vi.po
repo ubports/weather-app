@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-08-24 19:08+0100\n"
+"POT-Creation-Date: 2015-08-28 16:51-0500\n"
 "PO-Revision-Date: 2015-08-21 23:47+0000\n"
 "Last-Translator: Vu Do Quynh <vdquynh@gmail.com>\n"
 "Language-Team: Vietnamese <vi@li.org>\n"
@@ -15,34 +15,34 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2015-08-27 05:49+0000\n"
-"X-Generator: Launchpad (build 17690)\n"
+"X-Launchpad-Export-Date: 2015-09-05 05:41+0000\n"
+"X-Generator: Launchpad (build 17706)\n"
 
-#: ../app/components/DayDelegateExtraInfo.qml:44
+#: ../app/components/DayDelegateExtraInfo.qml:45
 msgid "Chance of rain"
 msgstr "Có khả năng mưa"
 
-#: ../app/components/DayDelegateExtraInfo.qml:51
+#: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Winds"
 msgstr "Gió"
 
-#: ../app/components/DayDelegateExtraInfo.qml:59
+#: ../app/components/DayDelegateExtraInfo.qml:60
 msgid "UV Index"
 msgstr "Chỉ số UV"
 
-#: ../app/components/DayDelegateExtraInfo.qml:65
+#: ../app/components/DayDelegateExtraInfo.qml:66
 msgid "Pollen"
 msgstr "Hạt pollen"
 
-#: ../app/components/DayDelegateExtraInfo.qml:72
+#: ../app/components/DayDelegateExtraInfo.qml:73
 msgid "Humidity"
 msgstr "Độ ẩm"
 
-#: ../app/components/DayDelegateExtraInfo.qml:79
+#: ../app/components/DayDelegateExtraInfo.qml:80
 msgid "Sunrise"
 msgstr "Mặt trời mọc"
 
-#: ../app/components/DayDelegateExtraInfo.qml:86
+#: ../app/components/DayDelegateExtraInfo.qml:87
 msgid "Sunset"
 msgstr "Mặt trời lặn"
 
@@ -81,6 +81,18 @@ msgstr "Xóa bỏ"
 #: ../app/components/MultiSelectHeadState.qml:51
 msgid "Cancel selection"
 msgstr "Loại bỏ chọn lọc"
+
+#: ../app/components/NetworkErrorStateComponent.qml:48
+msgid "Network Error"
+msgstr ""
+
+#: ../app/components/NetworkErrorStateComponent.qml:57
+msgid "Ubuntu suggests you check your network settings and try again."
+msgstr ""
+
+#: ../app/components/NetworkErrorStateComponent.qml:63
+msgid "Retry"
+msgstr ""
 
 #: ../app/ui/AddLocationPage.qml:29
 msgid "Select a city"
@@ -126,19 +138,19 @@ msgstr "Địa điểm hiện tại"
 msgid "Settings"
 msgstr "Thiết lập"
 
-#: ../app/ui/SettingsPage.qml:32 ../app/ui/settings/UnitsPage.qml:24
+#: ../app/ui/SettingsPage.qml:33 ../app/ui/settings/UnitsPage.qml:24
 msgid "Units"
 msgstr "Các đơn vị"
 
-#: ../app/ui/SettingsPage.qml:37 ../app/ui/settings/DataProviderPage.qml:25
+#: ../app/ui/SettingsPage.qml:38 ../app/ui/settings/DataProviderPage.qml:25
 msgid "Data Provider"
 msgstr "Nhà cung cấp Số liệu"
 
-#: ../app/ui/SettingsPage.qml:42 ../app/ui/settings/RefreshIntervalPage.qml:24
+#: ../app/ui/SettingsPage.qml:43 ../app/ui/settings/RefreshIntervalPage.qml:24
 msgid "Refresh Interval"
 msgstr "Thời gian cập nhật"
 
-#: ../app/ui/SettingsPage.qml:47 ../app/ui/settings/LocationPage.qml:24
+#: ../app/ui/SettingsPage.qml:48 ../app/ui/settings/LocationPage.qml:24
 msgid "Location"
 msgstr "Vị trí"
 
@@ -167,36 +179,36 @@ msgstr "Khoảng cách"
 #. TRANSLATORS: The strings are standard measurement units
 #. of temperature in Celcius and are shown in the settings page.
 #. Only the abbreviated form of Celcius should be used.
-#: ../app/ui/settings/UnitsPage.qml:41 ../app/ui/settings/UnitsPage.qml:76
+#: ../app/ui/settings/UnitsPage.qml:42 ../app/ui/settings/UnitsPage.qml:78
 msgid "°C"
 msgstr "°C"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of temperature in Fahrenheit and are shown in the settings page.
 #. Only the abbreviated form of Fahrenheit should be used.
-#: ../app/ui/settings/UnitsPage.qml:46 ../app/ui/settings/UnitsPage.qml:77
+#: ../app/ui/settings/UnitsPage.qml:47 ../app/ui/settings/UnitsPage.qml:79
 msgid "°F"
 msgstr "°F"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of wind speed in kilometers per hour and are shown in the settings page.
 #. Only the abbreviated form of kilometers per hour should be used.
-#: ../app/ui/settings/UnitsPage.qml:57 ../app/ui/settings/UnitsPage.qml:96
+#: ../app/ui/settings/UnitsPage.qml:58 ../app/ui/settings/UnitsPage.qml:99
 msgid "kph"
 msgstr ""
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of wind speed in miles per hour and are shown in the settings page.
 #. Only the abbreviated form of miles per hour should be used.
-#: ../app/ui/settings/UnitsPage.qml:62 ../app/ui/settings/UnitsPage.qml:97
+#: ../app/ui/settings/UnitsPage.qml:63 ../app/ui/settings/UnitsPage.qml:100
 msgid "mph"
 msgstr "mph"
 
-#: ../app/ui/settings/UnitsPage.qml:75
+#: ../app/ui/settings/UnitsPage.qml:77
 msgid "Temperature"
 msgstr "Nhiệt độ"
 
-#: ../app/ui/settings/UnitsPage.qml:95
+#: ../app/ui/settings/UnitsPage.qml:98
 msgid "Wind Speed"
 msgstr "Tốc độ gió"
 

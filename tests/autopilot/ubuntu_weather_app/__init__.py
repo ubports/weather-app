@@ -20,7 +20,9 @@ class UbuntuWeatherAppException(Exception):
 def click_object(func):
     """Wrapper which clicks the returned object"""
     def func_wrapper(self, *args, **kwargs):
-        return self.pointing_device.click_object(func(self, *args, **kwargs))
+        item = func(self, *args, **kwargs)
+        self.pointing_device.click_object(item)
+        return item
 
     return func_wrapper
 
@@ -48,7 +50,7 @@ class UbuntuWeatherApp(object):
             LocationsPage, objectName="locationsPage")
 
     def get_settings_page(self):
-        return self.main_view.wait_select_single(SettingsPage)
+        return self.main_view.wait_select_single(SettingsPage, visible=True)
 
 
 class Page(UbuntuUIToolkitCustomProxyObjectBase):
@@ -129,6 +131,27 @@ class AddLocationPage(Page):
         self.searching.wait_for(False)
 
 
+class DayDelegate(UbuntuUIToolkitCustomProxyObjectBase):
+    @click_object
+    def click_self(self):
+        return self
+
+    def get_extra_info(self):
+        """Expand the delegate and get the extra info"""
+        self.click_self()
+
+        return self.wait_select_single(DayDelegateExtraInfo,
+                                       objectName="dayDelegateExtraInfo",
+                                       visible=True)
+
+
+class DayDelegateExtraInfo(UbuntuUIToolkitCustomProxyObjectBase):
+    @property
+    def wind(self):
+        return self.select_single("ForecastDetailsDelegate",
+                                  objectName="windForecast").value
+
+
 class HomePage(PageWithBottomEdge):
     """Autopilot helper for HomePage."""
     def __init__(self, *args, **kwargs):
@@ -148,7 +171,7 @@ class HomePage(PageWithBottomEdge):
         listview = self.wait_select_single(
             "LocationPane", objectName="locationListView" + str(location))
         return listview.wait_select_single(
-            "DayDelegate", objectName="dayDelegate" + str(day))
+            DayDelegate, objectName="dayDelegate" + str(day))
 
     @click_object
     def click_daydelegate(self, day_delegate):
@@ -212,21 +235,26 @@ class SettingsPage(Page):
         return self.select_single("StandardListItem", title=listitem_title)
 
     def get_units_page(self):
-        return self.main_view.wait_select_single(UnitsPage)
+        return self.main_view.wait_select_single(UnitsPage, visible=True)
 
 
 class UnitsPage(Page):
     """Autopilot helper for UnitsPage."""
     @click_object
-    def expand_units_listitem(self, listitem):
+    def click_not_selected_listitem(self, unit_name):
+        return self.get_expanded_listitem(unit_name, "False")
+
+    @click_object
+    def click_units_listitem(self, listitem):
         return self.select_single("ExpandableListItem", objectName=listitem)
+
+    def expand_units_listitem(self, listitem):
+        item = self.click_units_listitem(listitem)
+        item.expanded.wait_for(True)
+        return item
 
     def get_expanded_listitem(self, listitem, showIcon):
         listitemSetting = self.select_single(
             "ExpandableListItem", objectName=listitem)
         return listitemSetting.select_single(
             "StandardListItem", showIcon=showIcon)
-
-    @click_object
-    def click_not_selected_listitem(self, unit_name):
-        return self.get_expanded_listitem(unit_name, "False")
