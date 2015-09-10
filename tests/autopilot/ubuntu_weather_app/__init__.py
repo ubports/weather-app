@@ -155,10 +155,14 @@ class DayDelegate(UbuntuUIToolkitCustomProxyObjectBase):
                                        visible=True)
 
     def get_temperature_unit(self):
+        # Get last character of the high temperature eg C in 42C
         return self.high[-1:]
 
     def get_wind_unit(self):
         day_delegate_extra_info = self.get_extra_info()
+
+        # Get the last 3 characters of the wind speed portion of the string.
+        # For instance, "kph" in "8kph SW".
         return day_delegate_extra_info.wind.split(" ", 1)[0][-3:]
 
 
