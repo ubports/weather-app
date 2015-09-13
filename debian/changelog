@@ -25,7 +25,7 @@ ubuntu-weather-app (3.0ubuntu1) UNRELEASED; urgency=medium
   * Get the condition text to be translated from the OWM API. (LP: #1487793)
   * Add a Network Error State Component for when a connection error takes place.
   * Allow the LocationsPage to be flickable. (LP: #1490044)
-  * Make the first column of the day delegate extra info wider to accomodate other
+  * Make the first column of the day delegate extra info wider to accommodate other
     languages.
 
   [ Andrew Hayzen ]
