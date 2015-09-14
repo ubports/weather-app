@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-08-28 16:51-0500\n"
-"PO-Revision-Date: 2015-08-08 13:17+0000\n"
+"PO-Revision-Date: 2015-09-13 16:05+0000\n"
 "Last-Translator: Anne <anneonyme017@gmail.com>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2015-09-05 05:41+0000\n"
-"X-Generator: Launchpad (build 17706)\n"
+"X-Launchpad-Export-Date: 2015-09-14 06:04+0000\n"
+"X-Generator: Launchpad (build 17720)\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:45
 msgid "Chance of rain"
@@ -88,15 +88,16 @@ msgstr "Annuler la sélection"
 
 #: ../app/components/NetworkErrorStateComponent.qml:48
 msgid "Network Error"
-msgstr ""
+msgstr "Erreur de réseau"
 
 #: ../app/components/NetworkErrorStateComponent.qml:57
 msgid "Ubuntu suggests you check your network settings and try again."
 msgstr ""
+"Ubuntu vous suggère de vérifier vos paramètres de réseau et de réessayer."
 
 #: ../app/components/NetworkErrorStateComponent.qml:63
 msgid "Retry"
-msgstr ""
+msgstr "Réessayer"
 
 #: ../app/ui/AddLocationPage.qml:29
 msgid "Select a city"
