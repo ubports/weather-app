@@ -26,6 +26,7 @@ class TestMigration(UbuntuWeatherAppTestCaseWithLegacyData):
 
         home_page = self.app.get_home_page()
 
+        # Check that the count is the same as expected
         self.assertThat(home_page.get_location_count, Eventually(Equals(2)))
 
     def test_locations_page(self):
