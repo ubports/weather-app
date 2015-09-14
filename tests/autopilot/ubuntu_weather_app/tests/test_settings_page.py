@@ -32,7 +32,6 @@ class TestSettingsPage(UbuntuWeatherAppTestCaseWithData):
 
         # Get initial wind and temperature settings
         self.day_delegate = self.location_pane.get_day_delegate(0)
-
         self.initial_wind_unit = self.day_delegate.get_wind_unit()
         self.initial_temperature_unit = self.day_delegate.get_temperature_unit(
         )
