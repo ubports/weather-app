@@ -25,6 +25,7 @@ ubuntu-weather-app (3.0ubuntu1) UNRELEASED; urgency=medium
   * Get the condition text to be translated from the OWM API. (LP: #1487793)
   * Add a Network Error State Component for when a connection error takes place.
   * Allow the LocationsPage to be flickable. (LP: #1490044)
+  * Make sure the text elides on the LocationsPage and the AddLocationPage. (LP: #1469460)
 
   [ Andrew Hayzen ]
   * Add mocked locations for autopilot and add a test using the data
