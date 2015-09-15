@@ -44,6 +44,6 @@ Row {
     
     Label {
         id: forecastValue
-        width: units.gu(10)
+        width: units.gu(14)
     }
 }
