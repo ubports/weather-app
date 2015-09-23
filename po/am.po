@@ -1,0 +1,228 @@
+# Amharic translation for ubuntu-weather-app
+# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# This file is distributed under the same license as the ubuntu-weather-app package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ubuntu-weather-app\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2015-08-28 16:51-0500\n"
+"PO-Revision-Date: 2015-09-22 22:44+0000\n"
+"Last-Translator: samson <Unknown>\n"
+"Language-Team: Amharic <am@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Launchpad-Export-Date: 2015-09-23 07:01+0000\n"
+"X-Generator: Launchpad (build 17749)\n"
+
+#: ../app/components/DayDelegateExtraInfo.qml:45
+msgid "Chance of rain"
+msgstr "ዝናብ የመዝነብ እድል"
+
+#: ../app/components/DayDelegateExtraInfo.qml:52
+msgid "Winds"
+msgstr "ነፋስ"
+
+#: ../app/components/DayDelegateExtraInfo.qml:60
+msgid "UV Index"
+msgstr "የ ፀሐይ ጨረር"
+
+#: ../app/components/DayDelegateExtraInfo.qml:66
+msgid "Pollen"
+msgstr "ብናኝ"
+
+#: ../app/components/DayDelegateExtraInfo.qml:73
+msgid "Humidity"
+msgstr "የ አየር እርጥበት"
+
+#: ../app/components/DayDelegateExtraInfo.qml:80
+msgid "Sunrise"
+msgstr "የ ፀሐይ መውጫ"
+
+#: ../app/components/DayDelegateExtraInfo.qml:87
+msgid "Sunset"
+msgstr "የ ፀሐይ መጥለቂያ"
+
+#: ../app/components/HomePageEmptyStateComponent.qml:51
+msgid "Searching for current location..."
+msgstr "የ አሁኑን አካባቢ በ መፈለግ ላይ"
+
+#: ../app/components/HomePageEmptyStateComponent.qml:52
+msgid "Cannot determine your location"
+msgstr "ያሉበትን አካባቢ ማወቅ አልተቻለም"
+
+#: ../app/components/HomePageEmptyStateComponent.qml:62
+msgid "Manually add a location by swiping up from the bottom of the display"
+msgstr "በ እጅ አካባቢ ይጨምሩ ማሳያውን ከ ታች ወደ ላይ በ መጥረግ"
+
+#: ../app/components/HomeTempInfo.qml:38
+msgid "Today"
+msgstr "ዛሬ"
+
+#: ../app/components/ListItemActions/Remove.qml:26
+msgid "Remove"
+msgstr "ማስወገጃ"
+
+#: ../app/components/LocationsPageEmptyStateComponent.qml:36
+msgid "No locations found. Tap the plus icon to search for one."
+msgstr "አካባቢ አልተገኘም: መታ ያድርጉ መደመሪያ ምልክት ፈልጎ ለ መጨመር"
+
+#: ../app/components/MultiSelectHeadState.qml:27
+msgid "Select All"
+msgstr "ሁሉንም መምረጫ"
+
+#: ../app/components/MultiSelectHeadState.qml:39
+msgid "Delete"
+msgstr "ማጥፊያ"
+
+#: ../app/components/MultiSelectHeadState.qml:51
+msgid "Cancel selection"
+msgstr "ምርጫውን መሰረዣ"
+
+#: ../app/components/NetworkErrorStateComponent.qml:48
+msgid "Network Error"
+msgstr "የ ኔትዎርክ ስህተት"
+
+#: ../app/components/NetworkErrorStateComponent.qml:57
+msgid "Ubuntu suggests you check your network settings and try again."
+msgstr "ኡቡንቱ የ እርስዎን ኔትዎርክ ማሰናጃ ይመርምሩ እና እንደገና ይሞክሩ ይላል"
+
+#: ../app/components/NetworkErrorStateComponent.qml:63
+msgid "Retry"
+msgstr "እንደገና መሞከሪያ"
+
+#: ../app/ui/AddLocationPage.qml:29
+msgid "Select a city"
+msgstr "ከተማ ይምረጡ"
+
+#: ../app/ui/AddLocationPage.qml:47 ../app/ui/AddLocationPage.qml:69
+msgid "Back"
+msgstr "ወደ ኋላ"
+
+#: ../app/ui/AddLocationPage.qml:54
+msgid "City"
+msgstr "ከተማ"
+
+#: ../app/ui/AddLocationPage.qml:113
+msgid "Search city"
+msgstr "ከተማ መፈለጊያ"
+
+#: ../app/ui/AddLocationPage.qml:295
+msgid "No city found"
+msgstr "ምንም ከተማ አልተገኘም"
+
+#: ../app/ui/AddLocationPage.qml:308
+msgid "Couldn't load weather data, please try later again!"
+msgstr "የ አየር ንብረት ዳታ መጫን አልተቻለም፡ እባክዎን እንደገና ይሞክሩ!"
+
+#: ../app/ui/AddLocationPage.qml:318
+msgid "Location already added."
+msgstr "አካባቢው ቀደም ብሎ ተጨምሯል"
+
+#: ../app/ui/AddLocationPage.qml:321
+msgid "OK"
+msgstr "እሺ"
+
+#: ../app/ui/HomePage.qml:31 ../app/ui/LocationsPage.qml:31
+msgid "Locations"
+msgstr "አካባቢ"
+
+#: ../app/ui/LocationsPage.qml:106
+msgid "Current Location"
+msgstr "የ አሁኑ አካባቢ"
+
+#: ../app/ui/SettingsPage.qml:24
+msgid "Settings"
+msgstr "ማሰናጃዎች"
+
+#: ../app/ui/SettingsPage.qml:33 ../app/ui/settings/UnitsPage.qml:24
+msgid "Units"
+msgstr "መለኪያ"
+
+#: ../app/ui/SettingsPage.qml:38 ../app/ui/settings/DataProviderPage.qml:25
+msgid "Data Provider"
+msgstr "ዳታ አቅራቢው"
+
+#: ../app/ui/SettingsPage.qml:43 ../app/ui/settings/RefreshIntervalPage.qml:24
+msgid "Refresh Interval"
+msgstr "ማናቃቂያ ከ እረፍት"
+
+#: ../app/ui/SettingsPage.qml:48 ../app/ui/settings/LocationPage.qml:24
+msgid "Location"
+msgstr "አካባቢ"
+
+#: ../app/ui/settings/DataProviderPage.qml:37
+msgid "Provider"
+msgstr "አቅራቢው"
+
+#: ../app/ui/settings/LocationPage.qml:32
+msgid "Detect current location"
+msgstr "የ አሁኑን አካባቢ መፈለጊያ"
+
+#: ../app/ui/settings/RefreshIntervalPage.qml:30
+#: ../app/ui/settings/RefreshIntervalPage.qml:31
+#: ../app/ui/settings/RefreshIntervalPage.qml:32
+#: ../app/ui/settings/RefreshIntervalPage.qml:33
+#: ../app/ui/settings/RefreshIntervalPage.qml:43
+#, qt-format
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] "%1 ደቂቃ"
+msgstr[1] "%1 ደቂቃዎች"
+
+#: ../app/ui/settings/RefreshIntervalPage.qml:42
+msgid "Interval"
+msgstr "ክፍተት"
+
+#. TRANSLATORS: The strings are standard measurement units
+#. of temperature in Celcius and are shown in the settings page.
+#. Only the abbreviated form of Celcius should be used.
+#: ../app/ui/settings/UnitsPage.qml:42 ../app/ui/settings/UnitsPage.qml:78
+msgid "°C"
+msgstr "°ሴ"
+
+#. TRANSLATORS: The strings are standard measurement units
+#. of temperature in Fahrenheit and are shown in the settings page.
+#. Only the abbreviated form of Fahrenheit should be used.
+#: ../app/ui/settings/UnitsPage.qml:47 ../app/ui/settings/UnitsPage.qml:79
+msgid "°F"
+msgstr "°ፋ"
+
+#. TRANSLATORS: The strings are standard measurement units
+#. of wind speed in kilometers per hour and are shown in the settings page.
+#. Only the abbreviated form of kilometers per hour should be used.
+#: ../app/ui/settings/UnitsPage.qml:58 ../app/ui/settings/UnitsPage.qml:99
+msgid "kph"
+msgstr "ኪሜ/በ"
+
+#. TRANSLATORS: The strings are standard measurement units
+#. of wind speed in miles per hour and are shown in the settings page.
+#. Only the abbreviated form of miles per hour should be used.
+#: ../app/ui/settings/UnitsPage.qml:63 ../app/ui/settings/UnitsPage.qml:100
+msgid "mph"
+msgstr "ማ/ሰ"
+
+#: ../app/ui/settings/UnitsPage.qml:77
+msgid "Temperature"
+msgstr "የ አየር ንብረት"
+
+#: ../app/ui/settings/UnitsPage.qml:98
+msgid "Wind Speed"
+msgstr "የ ንፋስ ፍጥነት"
+
+#: ubuntu-weather-app.desktop.in.in.h:1
+msgid "Weather"
+msgstr "የ አየር ንብረት"
+
+#: ubuntu-weather-app.desktop.in.in.h:2
+msgid ""
+"A weather forecast application for Ubuntu with support for multiple online "
+"weather data sources"
+msgstr "ለ ኡቡንቱ የ አየር ንብረት መተግበሪያ በርካታ የ አየር ንብረት ዳታ ምንጮች በመስመር ላይ ይደገፋል"
+
+#: ubuntu-weather-app.desktop.in.in.h:3
+msgid "weather;forecast;twc;openweathermap;the weather channel;"
+msgstr "የ አየር ንብረት: ግምት: twc;openweathermap የ አየር ንብረት ጣቢያ:"
