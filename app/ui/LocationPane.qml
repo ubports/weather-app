@@ -29,7 +29,7 @@ ListView {
     model: ListModel {
 
     }
-    objectName: "locationListView" + index
+    objectName: "locationListView"
     width: weatherApp.width
 
     /*

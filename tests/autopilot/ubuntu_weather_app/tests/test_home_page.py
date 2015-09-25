@@ -24,28 +24,35 @@ class TestHomePage(UbuntuWeatherAppTestCaseWithData):
     def setUp(self):
         super(TestHomePage, self).setUp()
 
+        self.home_page = self.app.get_home_page()
+
     def test_locations_count_startup(self):
         """ tests that the correct number of locations appear at startup """
 
-        home_page = self.app.get_home_page()
-
-        self.assertThat(home_page.get_location_count, Eventually(Equals(2)))
+        self.assertThat(self.home_page.get_location_count,
+                        Eventually(Equals(2)))
 
     def test_show_day_details(self):
         """ tests clicking on a day delegate to expand and contract it"""
 
-        home_page = self.app.get_home_page()
-
-        weekdaycolumn = 0
         day = 0
-        day_delegate = home_page.get_daydelegate(weekdaycolumn, day)
+
+        # Get the first day delegate in the selection pane
+        location_pane = self.home_page.get_selected_location_pane()
+        day_delegate = location_pane.get_day_delegate(day)
+
+        # Check that the extra info is not shown
         self.assertThat(day_delegate.state, Eventually(Equals("normal")))
 
-        home_page.click_daydelegate(day_delegate)
+        # Click the delegate to show the extra info
+        location_pane.click_day_delegate(day)
 
         # Re-get daydelegate as change in loaders changes tree
-        day_delegate = home_page.get_daydelegate(weekdaycolumn, day)
+        day_delegate = location_pane.get_day_delegate(day)
 
+        # Wait for the height of the delegate to grow
         day_delegate.height.wait_for(day_delegate.expandedHeight)
+
+        # Check that the state and height of the delegate have changed
         self.assertThat(day_delegate.state, Eventually(Equals("expanded")))
         self.assertEqual(day_delegate.height, day_delegate.expandedHeight)

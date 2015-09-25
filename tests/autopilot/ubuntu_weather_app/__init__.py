@@ -27,6 +27,11 @@ def click_object(func):
     return func_wrapper
 
 
+#
+# Base helpers
+#
+
+
 class UbuntuWeatherApp(object):
     """Autopilot helper object for the Weather application."""
 
@@ -93,6 +98,11 @@ class PageWithBottomEdge(Page):
             raise
 
 
+#
+# Helpers for specific objects
+#
+
+
 class AddLocationPage(Page):
     """Autopilot helper for AddLocationPage."""
     def __init__(self, *args, **kwargs):
@@ -144,6 +154,17 @@ class DayDelegate(UbuntuUIToolkitCustomProxyObjectBase):
                                        objectName="dayDelegateExtraInfo",
                                        visible=True)
 
+    def get_temperature_unit(self):
+        # Get last character of the high temperature eg C in 42C
+        return self.high[-1:]
+
+    def get_wind_unit(self):
+        day_delegate_extra_info = self.get_extra_info()
+
+        # Get the last 3 characters of the wind speed portion of the string.
+        # For instance, "kph" in "8kph SW".
+        return day_delegate_extra_info.wind.split(" ", 1)[0][-3:]
+
 
 class DayDelegateExtraInfo(UbuntuUIToolkitCustomProxyObjectBase):
     @property
@@ -157,30 +178,37 @@ class HomePage(PageWithBottomEdge):
     def __init__(self, *args, **kwargs):
         super(HomePage, self).__init__(*args, **kwargs)
 
+    def get_location_count(self):
+        return self.get_location_pages().count
+
     def get_location_pages(self):
         return self.wait_select_single(
             "QQuickListView", objectName="locationPages")
 
-    def get_location_count(self):
-        return self.get_location_pages().count
+    def get_location_pane(self, index):
+        return self.wait_select_single(
+            LocationPane, objectName="locationPane" + str(index))
 
     def get_selected_location_index(self):
         return self.get_location_pages().currentIndex
 
-    def get_daydelegate(self, location, day):
-        listview = self.wait_select_single(
-            "LocationPane", objectName="locationListView" + str(location))
-        return listview.wait_select_single(
-            DayDelegate, objectName="dayDelegate" + str(day))
+    def get_selected_location_pane(self):
+        return self.get_location_pane(self.get_selected_location_index())
 
+
+class LocationPane(UbuntuUIToolkitCustomProxyObjectBase):
     @click_object
-    def click_daydelegate(self, day_delegate):
-        return day_delegate
+    def click_day_delegate(self, day):
+        return self.get_day_delegate(day)
 
     @click_object
     def click_settings_button(self):
         return self.select_single(
-            "AbstractButton", objectName="settingsButton0")
+            "AbstractButton", objectName="settingsButton")
+
+    def get_day_delegate(self, day):
+        return self.wait_select_single(
+            "DayDelegate", objectName="dayDelegate" + str(day))
 
 
 class LocationsPage(Page):
@@ -209,25 +237,6 @@ class MainView(MainView):
         self.visible.wait_for(True)
 
 
-class WeatherListItem(UbuntuUIToolkitCustomProxyObjectBase):
-    def get_name(self):
-        return self.select_single("Label", objectName="name").text
-
-    @click_object
-    def select_remove(self):
-        return self.select_single(objectName="swipeDeleteAction")
-
-    def swipe_and_select_remove(self):
-        x, y, width, height = self.globalRect
-        start_x = x + (width * 0.2)
-        stop_x = x + (width * 0.8)
-        start_y = stop_y = y + (height // 2)
-
-        self.pointing_device.drag(start_x, start_y, stop_x, stop_y)
-
-        self.select_remove()
-
-
 class SettingsPage(Page):
     """Autopilot helper for SettingsPage."""
     @click_object
@@ -240,6 +249,22 @@ class SettingsPage(Page):
 
 class UnitsPage(Page):
     """Autopilot helper for UnitsPage."""
+    def change_listitem_unit(self, unit_name):
+        """Common actions to change listitem unit and return if it changed"""
+
+        # Expand the listitem as we are already on the units page
+        self.expand_units_listitem(unit_name)
+
+        # Get the currently selected value
+        previous_unit = self.get_expanded_listitem(unit_name, "True").title
+
+        # Click the non-selected value
+        self.click_not_selected_listitem(unit_name)
+
+        # Return True/False if the selection has changed
+        return self.get_expanded_listitem(
+            unit_name, "True").title != previous_unit
+
     @click_object
     def click_not_selected_listitem(self, unit_name):
         return self.get_expanded_listitem(unit_name, "False")
@@ -258,3 +283,22 @@ class UnitsPage(Page):
             "ExpandableListItem", objectName=listitem)
         return listitemSetting.select_single(
             "StandardListItem", showIcon=showIcon)
+
+
+class WeatherListItem(UbuntuUIToolkitCustomProxyObjectBase):
+    def get_name(self):
+        return self.select_single("Label", objectName="name").text
+
+    @click_object
+    def select_remove(self):
+        return self.select_single(objectName="swipeDeleteAction")
+
+    def swipe_and_select_remove(self):
+        x, y, width, height = self.globalRect
+        start_x = x + (width * 0.2)
+        stop_x = x + (width * 0.8)
+        start_y = stop_y = y + (height // 2)
+
+        self.pointing_device.drag(start_x, start_y, stop_x, stop_y)
+
+        self.select_remove()

@@ -236,6 +236,7 @@ Page {
                     elide: Text.ElideRight
                     fontSize: "medium"
                     text: name
+                    width: parent.width
                 }
 
                 Label {
@@ -243,6 +244,7 @@ Page {
                     elide: Text.ElideRight
                     fontSize: "xx-small"
                     text: areaLabel
+                    width: parent.width
                 }
             }
 

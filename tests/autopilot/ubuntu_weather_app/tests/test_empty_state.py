@@ -34,8 +34,11 @@ class TestEmptyState(UbuntuWeatherAppTestCase):
         # Check that there are no locations
         self.assertThat(home_page.get_location_count, Eventually(Equals(0)))
 
+        # Pull from the bottom to show the bottom edge
         home_page.reveal_bottom_edge_page()
 
+        # Get the locations page
         locations_page = self.app.get_locations_page()
 
+        # Check that the locations page is visible
         self.assertThat(locations_page.visible, Eventually(Equals(True)))
