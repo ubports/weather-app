@@ -36,15 +36,14 @@ ListView {
       Data properties
     */
     property string name
-    property string conditionText
     property string currentTemp
-    property string todayMaxTemp
-    property string todayMinTemp
     property string icon
     property string iconName
 
     property var hourlyForecastsData
     property string hourlyTempUnits
+
+    property var todayData
 
     delegate: DayDelegate {
         day: model.day
@@ -98,9 +97,7 @@ ListView {
 
         HomeTempInfo {
             id: homeTempInfo
-            description: conditionText
-            high: mainPageWeekdayListView.todayMaxTemp
-            low: mainPageWeekdayListView.todayMinTemp
+            modelData: todayData
             now: mainPageWeekdayListView.currentTemp
         }
 
@@ -143,6 +140,25 @@ ListView {
         }
     }
 
+    function getDayData(data) {
+        var tempUnits = settings.tempScale === "°C" ? "metric" : "imperial"
+
+        return {
+            day: formatTimestamp(data.date, 'dddd'),
+            low: Math.round(data[tempUnits].tempMin).toString() + settings.tempScale,
+            high: (data[tempUnits].tempMax !== undefined) ? Math.round(data[tempUnits].tempMax).toString() + settings.tempScale : "",
+            image: (data.icon !== undefined && iconMap[data.icon] !== undefined) ? iconMap[data.icon] : "",
+            condition: emptyIfUndefined(data.condition),
+            chanceOfRain: emptyIfUndefined(data.propPrecip, "%"),
+            humidity: emptyIfUndefined(data.humidity, "%"),
+            sunrise: data.sunrise || SunCalc.SunCalc.getTimes(getDate(data.date), data.location.coord.lat, data.location.coord.lon).sunrise.toLocaleTimeString(),
+            sunset: data.sunset || SunCalc.SunCalc.getTimes(getDate(data.date), data.location.coord.lat, data.location.coord.lon).sunset.toLocaleTimeString(),
+            uvIndex: emptyIfUndefined(data.uv),
+            wind: data[tempUnits].windSpeed === undefined || data.windDir === undefined
+                        ? "" : Math.round(data[tempUnits].windSpeed) + settings.windUnits + " " + data.windDir
+        };
+    }
+
     function emptyIfUndefined(variable, append) {
         if (append === undefined) {
             append = ""
@@ -163,7 +179,6 @@ ListView {
                 current = data.data[0].current,
                 forecasts = data.data,
                 forecastsLength = forecasts.length,
-                today = forecasts[0],
                 hourlyForecasts = [];
 
         var tempUnits = settings.tempScale === "°C" ? "metric" : "imperial"
@@ -174,12 +189,10 @@ ListView {
         // set current temps and condition
         iconName = (current.icon) ? current.icon : "";
         icon = (imageMap[iconName] !== undefined) ? imageMap[iconName] : "";
-        conditionText = (current.condition !== undefined) ? current.condition : "";
-        todayMaxTemp = (today[tempUnits].tempMax !== undefined) ? Math.round(today[tempUnits].tempMax).toString() + settings.tempScale: "";
-        todayMinTemp = Math.round(today[tempUnits].tempMin).toString() + settings.tempScale;
         currentTemp = Math.round(current[tempUnits].temp).toString() + String("°");
 
         // reset days list
+        // TODO: overwrite and trim to make the refresh smoother?
         mainPageWeekdayListView.model.clear()
 
         // set daily forecasts
@@ -189,27 +202,25 @@ ListView {
                 if(forecasts[x].hourly !== undefined && forecasts[x].hourly.length > 0) {
                     hourlyForecasts = hourlyForecasts.concat(forecasts[x].hourly)
                 }
-                if(x === 0) {
-                    // skip todays daydata
-                    continue;
-                }
 
-                // set daydata
-                var dayData = {
-                    day: formatTimestamp(forecasts[x].date, 'dddd'),
-                    low: Math.round(forecasts[x][tempUnits].tempMin).toString() + settings.tempScale,
-                    high: (forecasts[x][tempUnits].tempMax !== undefined) ? Math.round(forecasts[x][tempUnits].tempMax).toString() + settings.tempScale : "",
-                    image: (forecasts[x].icon !== undefined && iconMap[forecasts[x].icon] !== undefined) ? iconMap[forecasts[x].icon] : "",
-                    condition: emptyIfUndefined(forecasts[x].condition),
-                    chanceOfRain: emptyIfUndefined(forecasts[x].propPrecip, "%"),
-                    humidity: emptyIfUndefined(forecasts[x].humidity, "%"),
-                    sunrise: forecasts[x].sunrise || SunCalc.SunCalc.getTimes(getDate(forecasts[x].date), data.location.coord.lat, data.location.coord.lon).sunrise.toLocaleTimeString(),
-                    sunset: forecasts[x].sunset || SunCalc.SunCalc.getTimes(getDate(forecasts[x].date), data.location.coord.lat, data.location.coord.lon).sunset.toLocaleTimeString(),
-                    uvIndex: emptyIfUndefined(forecasts[x].uv),
-                    wind: forecasts[x][tempUnits].windSpeed === undefined || forecasts[x].windDir === undefined
-                                ? "" : Math.round(forecasts[x][tempUnits].windSpeed) + settings.windUnits + " " + forecasts[x].windDir
+                // Copy the coords of the location
+                // so that sun{rise,set} work with OWM
+                forecasts[x].location = {
+                    coord: data.location.coord,
+                };
+
+                if (x === 0) {
+                    // Store as tmp var so we can remove the condition
+                    // therefore not showing it in the expandable
+                    var tmpData = getDayData(forecasts[x]);
+                    tmpData.condition = "";
+
+                    // store today's data for later use
+                    todayData = tmpData;
+                } else {
+                    // set daydata
+                    mainPageWeekdayListView.model.append(getDayData(forecasts[x]));
                 }
-                mainPageWeekdayListView.model.append(dayData);
             }
         }
 

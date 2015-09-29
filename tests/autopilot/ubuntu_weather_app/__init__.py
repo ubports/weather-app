@@ -196,10 +196,18 @@ class HomePage(PageWithBottomEdge):
         return self.get_location_pane(self.get_selected_location_index())
 
 
+class HomeTempInfo(UbuntuUIToolkitCustomProxyObjectBase):
+    pass
+
+
 class LocationPane(UbuntuUIToolkitCustomProxyObjectBase):
     @click_object
     def click_day_delegate(self, day):
         return self.get_day_delegate(day)
+
+    @click_object
+    def click_home_temp_info(self):
+        return self.get_home_temp_info()
 
     @click_object
     def click_settings_button(self):
@@ -209,6 +217,10 @@ class LocationPane(UbuntuUIToolkitCustomProxyObjectBase):
     def get_day_delegate(self, day):
         return self.wait_select_single(
             "DayDelegate", objectName="dayDelegate" + str(day))
+
+    def get_home_temp_info(self):
+        return self.wait_select_single(
+            "HomeTempInfo", objectName="homeTempInfo")
 
 
 class LocationsPage(Page):

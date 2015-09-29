@@ -47,6 +47,8 @@ ubuntu-weather-app (3.0ubuntu1) UNRELEASED; urgency=medium
   * Fix for wind test failing and some selects not waiting for visible=True (LP: #1492321)
   * Add LocationPane helper to the autopilot tests
   * Various tidy ups to improve readability and code commentary of autopilot code
+  * Implement extra info expandable for today info (LP: #1496422, LP: #1478255)
+  * Add autopilot test for expanding the today info
 
   [ Carla Sella ]
   * Create autopilot test which shows the day delegate (LP: #1452491)
