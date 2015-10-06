@@ -210,13 +210,8 @@ ListView {
                 };
 
                 if (x === 0) {
-                    // Store as tmp var so we can remove the condition
-                    // therefore not showing it in the expandable
-                    var tmpData = getDayData(forecasts[x]);
-                    tmpData.condition = "";
-
                     // store today's data for later use
-                    todayData = tmpData;
+                    todayData = getDayData(forecasts[x]);
                 } else {
                     // set daydata
                     mainPageWeekdayListView.model.append(getDayData(forecasts[x]));

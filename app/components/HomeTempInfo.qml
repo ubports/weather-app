@@ -82,7 +82,7 @@ Item {
         }
     ]
 
-    property int collapsedHeight: units.gu(12)
+    property int collapsedHeight: units.gu(14)
     property int expandedHeight: collapsedHeight + units.gu(4) + (expandedInfo.item ? expandedInfo.item.height : 0)
 
     property var modelData
@@ -156,20 +156,42 @@ Item {
         opacity: 0
         source: "DayDelegateExtraInfo.qml"
 
-        property var modelData: todayData || ({})
+        property var modelData: {
+            var tmp = ({});
+
+            // Remove the condition only for modelData
+            // as it is needed in todayData in the Colum above
+            if (todayData) {
+                tmp = todayData;
+                tmp.condition = "";
+            }
+
+            return tmp;
+        }
     }
 
     MouseArea {
         anchors {
             fill: parent
         }
-        onClicked: parent.state = parent.state === "normal" ? "expanded" : "normal"
+        onClicked: {
+            parent.state = parent.state === "normal" ? "expanded" : "normal"
+            locationPages.collapseOtherDelegates(-2)
+        }
     }
 
     Behavior on height {
         NumberAnimation {
             easing.type: Easing.InOutQuad
         }
+    }
+
+    Component.onCompleted: {
+        locationPages.collapseOtherDelegates.connect(function(otherIndex) {
+            if (homeTempInfoItem && typeof index !== "undefined" && otherIndex !== -2) {
+                state = "normal"
+            }
+        });
     }
 }
 
