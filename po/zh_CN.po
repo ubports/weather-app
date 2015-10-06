@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-08-28 16:51-0500\n"
+"POT-Creation-Date: 2015-09-29 17:15+0100\n"
 "PO-Revision-Date: 2015-08-17 03:50+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
@@ -15,34 +15,34 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2015-09-05 05:41+0000\n"
-"X-Generator: Launchpad (build 17706)\n"
+"X-Launchpad-Export-Date: 2015-10-06 06:23+0000\n"
+"X-Generator: Launchpad (build 17796)\n"
 
-#: ../app/components/DayDelegateExtraInfo.qml:45
+#: ../app/components/DayDelegateExtraInfo.qml:51
 msgid "Chance of rain"
 msgstr ""
 
-#: ../app/components/DayDelegateExtraInfo.qml:52
+#: ../app/components/DayDelegateExtraInfo.qml:58
 msgid "Winds"
 msgstr ""
 
-#: ../app/components/DayDelegateExtraInfo.qml:60
+#: ../app/components/DayDelegateExtraInfo.qml:67
 msgid "UV Index"
 msgstr ""
 
-#: ../app/components/DayDelegateExtraInfo.qml:66
+#: ../app/components/DayDelegateExtraInfo.qml:73
 msgid "Pollen"
 msgstr ""
 
-#: ../app/components/DayDelegateExtraInfo.qml:73
+#: ../app/components/DayDelegateExtraInfo.qml:80
 msgid "Humidity"
 msgstr ""
 
-#: ../app/components/DayDelegateExtraInfo.qml:80
+#: ../app/components/DayDelegateExtraInfo.qml:87
 msgid "Sunrise"
 msgstr ""
 
-#: ../app/components/DayDelegateExtraInfo.qml:87
+#: ../app/components/DayDelegateExtraInfo.qml:94
 msgid "Sunset"
 msgstr ""
 
@@ -110,23 +110,23 @@ msgstr ""
 msgid "Search city"
 msgstr ""
 
-#: ../app/ui/AddLocationPage.qml:295
+#: ../app/ui/AddLocationPage.qml:297
 msgid "No city found"
 msgstr ""
 
-#: ../app/ui/AddLocationPage.qml:308
+#: ../app/ui/AddLocationPage.qml:310
 msgid "Couldn't load weather data, please try later again!"
 msgstr ""
 
-#: ../app/ui/AddLocationPage.qml:318
+#: ../app/ui/AddLocationPage.qml:320
 msgid "Location already added."
 msgstr ""
 
-#: ../app/ui/AddLocationPage.qml:321
+#: ../app/ui/AddLocationPage.qml:323
 msgid "OK"
 msgstr ""
 
-#: ../app/ui/HomePage.qml:31 ../app/ui/LocationsPage.qml:31
+#: ../app/ui/HomePage.qml:31 ../app/ui/LocationsPage.qml:29
 msgid "Locations"
 msgstr ""
 
