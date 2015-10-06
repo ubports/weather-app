@@ -273,7 +273,7 @@ Page {
         readonly property int pageStartY: 0
 
         z: 1
-        color: Theme.palette.normal.background
+        color: weatherApp.backgroundColor
         clip: true
         anchors {
             left: parent.left

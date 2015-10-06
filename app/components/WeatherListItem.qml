@@ -22,6 +22,7 @@ import Ubuntu.Components 1.2
 
 ListItemWithActions {
     id: root
+    color: "transparent"
 
     property int listItemIndex: index
     property bool multiselectable: false
