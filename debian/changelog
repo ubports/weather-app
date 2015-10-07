@@ -48,6 +48,7 @@ ubuntu-weather-app (3.0ubuntu1) UNRELEASED; urgency=medium
   * Add LocationPane helper to the autopilot tests
   * Various tidy ups to improve readability and code commentary of autopilot code
   * ListItem transparent and PageWithBottomEdge colour correct so that they don't appear white on the LocationsPage
+  * When expanding day delegates ensure that extra info is visible by animating it into view (LP: #1496425)
 
   [ Carla Sella ]
   * Create autopilot test which shows the day delegate (LP: #1452491)
