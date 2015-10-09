@@ -1,4 +1,4 @@
-# Galician translation for ubuntu-weather-app
+# Uyghur translation for ubuntu-weather-app
 # Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the ubuntu-weather-app package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
@@ -8,160 +8,159 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-09-29 17:15+0100\n"
-"PO-Revision-Date: 2015-09-10 11:20+0000\n"
-"Last-Translator: Marcos Lans <Unknown>\n"
-"Language-Team: Galician <gl@li.org>\n"
+"PO-Revision-Date: 2015-09-27 06:50+0000\n"
+"Last-Translator: eltikin <eltikinuyghur@hotmail.com>\n"
+"Language-Team: Uyghur <ug@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-10-06 06:22+0000\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Launchpad-Export-Date: 2015-10-06 06:23+0000\n"
 "X-Generator: Launchpad (build 17796)\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:51
 msgid "Chance of rain"
-msgstr "Posibilidade de choiva"
+msgstr "يامغۇر يېغىش ئېھتىماللىقى"
 
 #: ../app/components/DayDelegateExtraInfo.qml:58
 msgid "Winds"
-msgstr "Ventos"
+msgstr ""
 
 #: ../app/components/DayDelegateExtraInfo.qml:67
 msgid "UV Index"
-msgstr "Índice UV"
+msgstr ""
 
 #: ../app/components/DayDelegateExtraInfo.qml:73
 msgid "Pollen"
-msgstr "Polen"
+msgstr ""
 
 #: ../app/components/DayDelegateExtraInfo.qml:80
 msgid "Humidity"
-msgstr "Humidade"
+msgstr "نەملىك"
 
 #: ../app/components/DayDelegateExtraInfo.qml:87
 msgid "Sunrise"
-msgstr "Abrente"
+msgstr "كۈن چىقىش"
 
 #: ../app/components/DayDelegateExtraInfo.qml:94
 msgid "Sunset"
-msgstr "Solpor"
+msgstr "كۈن ئولتۇرۇش"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:51
 msgid "Searching for current location..."
-msgstr "Buscando a localización..."
+msgstr ""
 
 #: ../app/components/HomePageEmptyStateComponent.qml:52
 msgid "Cannot determine your location"
-msgstr "Non foi posíbel determinar a súa localización"
+msgstr ""
 
 #: ../app/components/HomePageEmptyStateComponent.qml:62
 msgid "Manually add a location by swiping up from the bottom of the display"
-msgstr "Engada unha localización esvarando o dedo desde o fondo da pantalla"
+msgstr ""
 
 #: ../app/components/HomeTempInfo.qml:38
 msgid "Today"
-msgstr "Hoxe"
+msgstr "بۈگۈن"
 
 #: ../app/components/ListItemActions/Remove.qml:26
 msgid "Remove"
-msgstr "Eliminar"
+msgstr "چىقىرىۋەت"
 
 #: ../app/components/LocationsPageEmptyStateComponent.qml:36
 msgid "No locations found. Tap the plus icon to search for one."
-msgstr "Non se atoparon localizacións. Toque na icona + para buscar unha."
+msgstr ""
 
 #: ../app/components/MultiSelectHeadState.qml:27
 msgid "Select All"
-msgstr "Seleccionar todo"
+msgstr "ھەممىنى تاللا"
 
 #: ../app/components/MultiSelectHeadState.qml:39
 msgid "Delete"
-msgstr "Eliminar"
+msgstr "ئۆچۈر"
 
 #: ../app/components/MultiSelectHeadState.qml:51
 msgid "Cancel selection"
-msgstr "Cancelar selección"
+msgstr "تاللاشنى ئەمەلدىن قالدۇر"
 
 #: ../app/components/NetworkErrorStateComponent.qml:48
 msgid "Network Error"
-msgstr "Erro de rede"
+msgstr "تور خاتالىقى"
 
 #: ../app/components/NetworkErrorStateComponent.qml:57
 msgid "Ubuntu suggests you check your network settings and try again."
 msgstr ""
-"Ubuntu suxírelle que revise os axustes de rede antes de tentalo de novo."
 
 #: ../app/components/NetworkErrorStateComponent.qml:63
 msgid "Retry"
-msgstr "Reintentar"
+msgstr "قايتا سىنا"
 
 #: ../app/ui/AddLocationPage.qml:29
 msgid "Select a city"
-msgstr "Seleccionar cidade"
+msgstr ""
 
 #: ../app/ui/AddLocationPage.qml:47 ../app/ui/AddLocationPage.qml:69
 msgid "Back"
-msgstr "Volver"
+msgstr "قايتىش"
 
 #: ../app/ui/AddLocationPage.qml:54
 msgid "City"
-msgstr "Cidade"
+msgstr "شەھەر"
 
 #: ../app/ui/AddLocationPage.qml:113
 msgid "Search city"
-msgstr "Buscar a cidade"
+msgstr "رايۇن تەۋەلىكى"
 
 #: ../app/ui/AddLocationPage.qml:297
 msgid "No city found"
-msgstr "Non se atopou a cidade"
+msgstr ""
 
 #: ../app/ui/AddLocationPage.qml:310
 msgid "Couldn't load weather data, please try later again!"
-msgstr "Non se cargaron os datos do tempo, ténteo máis tarde."
+msgstr "ھاۋارايى مەلۇماتىنى ئوقۇغىلى بولمىدى، بىردەمدىن كېيىن قايتا سىناڭ."
 
 #: ../app/ui/AddLocationPage.qml:320
 msgid "Location already added."
-msgstr "A localización xa se engadiu."
+msgstr "ئورۇن قوشۇلۇپ بولغان."
 
 #: ../app/ui/AddLocationPage.qml:323
 msgid "OK"
-msgstr "Aceptar"
+msgstr "تامام"
 
 #: ../app/ui/HomePage.qml:31 ../app/ui/LocationsPage.qml:29
 msgid "Locations"
-msgstr "Localizacións"
+msgstr "ئورۇنلار"
 
 #: ../app/ui/LocationsPage.qml:106
 msgid "Current Location"
-msgstr "Localización actual"
+msgstr "نۆۋەتتىكى ئورۇن"
 
 #: ../app/ui/SettingsPage.qml:24
 msgid "Settings"
-msgstr "Axustes"
+msgstr "تەڭشەكلەر"
 
 #: ../app/ui/SettingsPage.qml:33 ../app/ui/settings/UnitsPage.qml:24
 msgid "Units"
-msgstr "Unidades"
+msgstr "بىرلىكى"
 
 #: ../app/ui/SettingsPage.qml:38 ../app/ui/settings/DataProviderPage.qml:25
 msgid "Data Provider"
-msgstr "Fornecedor dos datos"
+msgstr ""
 
 #: ../app/ui/SettingsPage.qml:43 ../app/ui/settings/RefreshIntervalPage.qml:24
 msgid "Refresh Interval"
-msgstr "Intervalo de actualización"
+msgstr ""
 
 #: ../app/ui/SettingsPage.qml:48 ../app/ui/settings/LocationPage.qml:24
 msgid "Location"
-msgstr "Localización"
+msgstr "ئورۇن"
 
 #: ../app/ui/settings/DataProviderPage.qml:37
 msgid "Provider"
-msgstr "Fornecedor"
+msgstr "تەمىنلىگۈچى"
 
 #: ../app/ui/settings/LocationPage.qml:32
 msgid "Detect current location"
-msgstr "Detectar a localización"
+msgstr ""
 
 #: ../app/ui/settings/RefreshIntervalPage.qml:30
 #: ../app/ui/settings/RefreshIntervalPage.qml:31
@@ -171,12 +170,11 @@ msgstr "Detectar a localización"
 #, qt-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
-msgstr[0] "%1 minuto"
-msgstr[1] "%1 minutos"
+msgstr[0] "%1 مىنۇت"
 
 #: ../app/ui/settings/RefreshIntervalPage.qml:42
 msgid "Interval"
-msgstr "Intervalo"
+msgstr "ئارىلىق"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of temperature in Celcius and are shown in the settings page.
@@ -197,35 +195,35 @@ msgstr "°F"
 #. Only the abbreviated form of kilometers per hour should be used.
 #: ../app/ui/settings/UnitsPage.qml:58 ../app/ui/settings/UnitsPage.qml:99
 msgid "kph"
-msgstr "km/h"
+msgstr ""
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of wind speed in miles per hour and are shown in the settings page.
 #. Only the abbreviated form of miles per hour should be used.
 #: ../app/ui/settings/UnitsPage.qml:63 ../app/ui/settings/UnitsPage.qml:100
 msgid "mph"
-msgstr "m/h"
+msgstr ""
 
 #: ../app/ui/settings/UnitsPage.qml:77
 msgid "Temperature"
-msgstr "Temperatura"
+msgstr "تېمپېراتۇرا"
 
 #: ../app/ui/settings/UnitsPage.qml:98
 msgid "Wind Speed"
-msgstr "Velocidade do vento"
+msgstr ""
 
 #: ubuntu-weather-app.desktop.in.in.h:1
 msgid "Weather"
-msgstr "O Tempo"
+msgstr "ھاۋا رايى"
 
 #: ubuntu-weather-app.desktop.in.in.h:2
 msgid ""
 "A weather forecast application for Ubuntu with support for multiple online "
 "weather data sources"
 msgstr ""
-"Previsión meteorolóxica para Ubuntu con compatibilidade para múltiples "
-"orixes de datos en liña"
+"توردىكى نۇرغۇن ھاۋارايى مەنبەلىرىنى قوللايدىغان ئۇبۇنتۇنىڭ ھاۋارايىدىن "
+"ئالدىن  مەلۇمات بېرىش پروگراممىسى"
 
 #: ubuntu-weather-app.desktop.in.in.h:3
 msgid "weather;forecast;twc;openweathermap;the weather channel;"
-msgstr "tempo;clima;weather channel;previsión;prognóstico;openweathermap;"
+msgstr "ھاۋارايى;ئالدىن مەلۇمات;twc;openweathermap;ھاۋارايى قانىلى;"
