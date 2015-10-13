@@ -160,7 +160,7 @@ Item {
             var tmp = ({});
 
             // Remove the condition only for modelData
-            // as it is needed in todayData in the Colum above
+            // as it is needed in todayData in the Column above
             if (todayData) {
                 tmp = todayData;
                 tmp.condition = "";
@@ -176,6 +176,7 @@ Item {
         }
         onClicked: {
             parent.state = parent.state === "normal" ? "expanded" : "normal"
+            // -2 as this is in header (not a delegate) and needs a fake index
             locationPages.collapseOtherDelegates(-2)
         }
     }
@@ -188,6 +189,7 @@ Item {
 
     Component.onCompleted: {
         locationPages.collapseOtherDelegates.connect(function(otherIndex) {
+            // -2 as this is in header (not a delegate) and needs a fake index
             if (homeTempInfoItem && typeof index !== "undefined" && otherIndex !== -2) {
                 state = "normal"
             }
