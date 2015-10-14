@@ -99,6 +99,18 @@ function parameterize(obj) {
   return str.join("&");
 }
 
+
+// Remove anything including and after APPID in the given term
+function trimAPIKey(data) {
+    var i = data.indexOf("APPID");
+
+    if (i > -1) {
+        data = data.substr(0, i);
+    }
+
+    return data;
+}
+
 var GeoipApi = (function() {
     var _baseUrl = "http://geoip.ubuntu.com/lookup";
     return {
@@ -368,7 +380,7 @@ var OpenWeatherMapApi = (function() {
                 onError(err);
             }),
             retryHandler = (function(err) {
-                console.log("retry of "+err.request.url);
+                console.log("retry of "+trimAPIKey(err.request.url));
                 var retryFunc = handlerMap[err.request.type];
                 apiCaller(retryFunc, addDataToResponse, onErrorHandler);
             });
@@ -634,7 +646,7 @@ var WeatherApi = (function(_services) {
     function _sendRequest(request, onSuccess, onError) {
         var xmlHttp = new XMLHttpRequest();
         if (xmlHttp) {
-            console.log("Sent request URL: " + request.url);
+            console.log("Sent request URL: " + trimAPIKey(request.url));
             xmlHttp.open('GET', request.url, true);
             xmlHttp.onreadystatechange = function () {
                 try {
