@@ -118,7 +118,8 @@ MainView {
                         locations: locations,
                         force: force_refresh,
                         service: settings.service,
-                        api_key: Key.twcKey,
+                        twc_api_key: Key.twcKey,
+                        owm_api_key: Key.owmKey,
                         interval: settings.refreshInterval
                     }
                 }, responseDataHandler)

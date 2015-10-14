@@ -333,6 +333,10 @@ var OpenWeatherMapApi = (function() {
             urls.daily = _baseUrl+"forecast/daily?cnt=10&units="+params.units+latLongParams+"&lang="+Qt.locale().name.split("_")[0];
             urls.forecast = _baseUrl+"forecast?units="+params.units+latLongParams+"&lang="+Qt.locale().name.split("_")[0];
         }
+        urls.current += "&APPID="+params.owm_api_key;
+        urls.daily += "&APPID="+params.owm_api_key;
+        urls.forecast += "&APPID="+params.owm_api_key;
+
         return urls;
     }
     //
@@ -572,7 +576,7 @@ var WeatherChannelApi = (function() {
     function _getUrl(params) {
         var url, serviceId,
             baseParams = {
-                key: params.api_key,
+                key: params.twc_api_key,
                 units: (params.units === "metric") ? "m" : "e",
                 locale: Qt.locale().name,
                 hours: "48",
@@ -741,7 +745,8 @@ var sendRequest = function(message, responseCallback) {
                         db: loc.db,
                         units: 'metric',
                         service: message.params.service,
-                        api_key: message.params.api_key,
+                        twc_api_key: message.params.twc_api_key,
+                        owm_api_key: message.params.owm_api_key,
                         interval: message.params.interval
                     },
                     secsFromLastFetch = (now-loc.updated)/1000;
