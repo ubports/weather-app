@@ -22,7 +22,7 @@ import Ubuntu.Components 1.2
 import "components"
 import "data" as Data
 import "data/WeatherApi.js" as WeatherApi
-import "data/key.js" as Key
+import "data/keys.js" as Keys
 import "ui"
 
 MainView {
@@ -118,8 +118,8 @@ MainView {
                         locations: locations,
                         force: force_refresh,
                         service: settings.service,
-                        twc_api_key: Key.twcKey,
-                        owm_api_key: Key.owmKey,
+                        twc_api_key: Keys.twcKey,
+                        owm_api_key: Keys.owmKey,
                         interval: settings.refreshInterval
                     }
                 }, responseDataHandler)
@@ -173,7 +173,7 @@ MainView {
                 windUnits = metric ? "kph" : "mph"
             }
 
-            if (Key.twcKey === "") {  // No API key for TWC, so use OWM
+            if (Keys.twcKey === "") {  // No API key for TWC, so use OWM
                 service = "openweathermap"
             }
         }
