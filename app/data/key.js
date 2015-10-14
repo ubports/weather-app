@@ -1,2 +1,2 @@
 var twcKey = "";
-var owmKey = "";
+var owmKey = "";  // goto http://openweathermap.org/faq#error401 to get a personal API key
