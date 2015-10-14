@@ -102,10 +102,13 @@ function parameterize(obj) {
 
 // Remove anything including and after APPID in the given term
 function trimAPIKey(data) {
-    var i = data.indexOf("APPID");
+    var owm = data.indexOf("&APPID=");
+    var twc = data.indexOf("&key=");
 
-    if (i > -1) {
-        data = data.substr(0, i);
+    if (owm > -1) {
+        data = data.substr(0, owm);
+    } else if (twc > -1) {
+        data = data.substr(0, twc);
     }
 
     return data;
