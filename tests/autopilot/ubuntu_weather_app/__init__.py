@@ -8,7 +8,8 @@
 """ubuntu-weather-app tests and emulators - top level package."""
 from autopilot.introspection import dbus
 import logging
-from ubuntuuitoolkit import MainView, UbuntuUIToolkitCustomProxyObjectBase
+from ubuntuuitoolkit import (MainView, QQuickListView,
+                             UbuntuUIToolkitCustomProxyObjectBase)
 
 logger = logging.getLogger(__name__)
 
@@ -196,19 +197,36 @@ class HomePage(PageWithBottomEdge):
         return self.get_location_pane(self.get_selected_location_index())
 
 
-class LocationPane(UbuntuUIToolkitCustomProxyObjectBase):
+class HomeTempInfo(UbuntuUIToolkitCustomProxyObjectBase):
+    pass
+
+
+class LocationPane(QQuickListView):
     @click_object
     def click_day_delegate(self, day):
         return self.get_day_delegate(day)
 
     @click_object
+    def click_home_temp_info(self):
+        return self.get_home_temp_info()
+
+    @click_object
     def click_settings_button(self):
-        return self.select_single(
-            "AbstractButton", objectName="settingsButton")
+        self.swipe_to_top()  # ensure at the top of the flickable
+
+        return self.get_settings_button()
 
     def get_day_delegate(self, day):
         return self.wait_select_single(
             "DayDelegate", objectName="dayDelegate" + str(day))
+
+    def get_home_temp_info(self):
+        return self.wait_select_single(
+            "HomeTempInfo", objectName="homeTempInfo")
+
+    def get_settings_button(self):
+        return self.select_single(
+            "AbstractButton", objectName="settingsButton")
 
 
 class LocationsPage(Page):
