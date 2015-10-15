@@ -99,6 +99,21 @@ function parameterize(obj) {
   return str.join("&");
 }
 
+
+// Remove anything including and after APPID in the given term
+function trimAPIKey(data) {
+    var owm = data.indexOf("&APPID=");
+    var twc = data.indexOf("&key=");
+
+    if (owm > -1) {
+        data = data.substr(0, owm);
+    } else if (twc > -1) {
+        data = data.substr(0, twc);
+    }
+
+    return data;
+}
+
 var GeoipApi = (function() {
     var _baseUrl = "http://geoip.ubuntu.com/lookup";
     return {
@@ -333,6 +348,10 @@ var OpenWeatherMapApi = (function() {
             urls.daily = _baseUrl+"forecast/daily?cnt=10&units="+params.units+latLongParams+"&lang="+Qt.locale().name.split("_")[0];
             urls.forecast = _baseUrl+"forecast?units="+params.units+latLongParams+"&lang="+Qt.locale().name.split("_")[0];
         }
+        urls.current += "&APPID="+params.owm_api_key;
+        urls.daily += "&APPID="+params.owm_api_key;
+        urls.forecast += "&APPID="+params.owm_api_key;
+
         return urls;
     }
     //
@@ -364,7 +383,7 @@ var OpenWeatherMapApi = (function() {
                 onError(err);
             }),
             retryHandler = (function(err) {
-                console.log("retry of "+err.request.url);
+                console.log("retry of "+trimAPIKey(err.request.url));
                 var retryFunc = handlerMap[err.request.type];
                 apiCaller(retryFunc, addDataToResponse, onErrorHandler);
             });
@@ -572,7 +591,7 @@ var WeatherChannelApi = (function() {
     function _getUrl(params) {
         var url, serviceId,
             baseParams = {
-                key: params.api_key,
+                key: params.twc_api_key,
                 units: (params.units === "metric") ? "m" : "e",
                 locale: Qt.locale().name,
                 hours: "48",
@@ -630,7 +649,7 @@ var WeatherApi = (function(_services) {
     function _sendRequest(request, onSuccess, onError) {
         var xmlHttp = new XMLHttpRequest();
         if (xmlHttp) {
-            console.log("Sent request URL: " + request.url);
+            console.log("Sent request URL: " + trimAPIKey(request.url));
             xmlHttp.open('GET', request.url, true);
             xmlHttp.onreadystatechange = function () {
                 try {
@@ -741,7 +760,8 @@ var sendRequest = function(message, responseCallback) {
                         db: loc.db,
                         units: 'metric',
                         service: message.params.service,
-                        api_key: message.params.api_key,
+                        twc_api_key: message.params.twc_api_key,
+                        owm_api_key: message.params.owm_api_key,
                         interval: message.params.interval
                     },
                     secsFromLastFetch = (now-loc.updated)/1000;
