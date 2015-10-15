@@ -29,7 +29,6 @@ ListView {
     model: ListModel {
 
     }
-    objectName: "locationListView"
     width: weatherApp.width
 
     /*
@@ -62,7 +61,6 @@ ListView {
             margins: units.gu(2)
         }
         spacing: units.gu(1)
-        onHeightChanged: mainPageWeekdayListView.contentY = -height
 
         Row {  // spacing at top
             height: units.gu(1)
