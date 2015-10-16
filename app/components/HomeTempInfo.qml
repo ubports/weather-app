@@ -19,56 +19,181 @@
 import QtQuick 2.4
 import Ubuntu.Components 1.2
 
-
-Column {
+Item {
+    id: homeTempInfoItem
     anchors {
         left: parent.left
         right: parent.right
     }
-    spacing: units.gu(1)
+    clip: true
+    height: collapsedHeight
+    objectName: "homeTempInfo"
+    state: "normal"
+    states: [
+        State {
+            name: "normal"
+            PropertyChanges {
+                target: homeTempInfoItem
+                height: collapsedHeight
+            }
+            PropertyChanges {
+                target: expandedInfo
+                opacity: 0
+            }
+        },
+        State {
+            name: "expanded"
+            PropertyChanges {
+                target: homeTempInfoItem
+                height: expandedHeight
+            }
+            PropertyChanges {
+                target: expandedInfo
+                opacity: 1
+            }
+        }
+    ]
+    transitions: [
+        Transition {
+            from: "normal"
+            to: "expanded"
+            SequentialAnimation {
+                ScriptAction {
+                    script: expandedInfo.active = true
+                }
+                NumberAnimation {
+                    easing.type: Easing.InOutQuad
+                    properties: "height,opacity"
+                }
+            }
+        },
+        Transition {
+            from: "expanded"
+            to: "normal"
+            SequentialAnimation {
+                NumberAnimation {
+                    easing.type: Easing.InOutQuad
+                    properties: "height,opacity"
+                }
+                ScriptAction {
+                    script: expandedInfo.active = false
+                }
+            }
+        }
+    ]
 
-    property alias description: descriptionLabel.text
-    property alias high: highLabel.text
-    property alias low: lowLabel.text
+    property int collapsedHeight: units.gu(14)
+    property int expandedHeight: collapsedHeight + units.gu(4) + (expandedInfo.item ? expandedInfo.item.height : 0)
+
+    property var modelData
+
     property alias now: nowLabel.text
 
-    Label {
-        font.weight: Font.Light
-        fontSize: "small"
-        text: i18n.tr("Today")
-    }
-
-    Label {
-        id: descriptionLabel
-        font.capitalization: Font.Capitalize
-        font.weight: Font.Normal
-        fontSize: "large"
-    }
-
-    Row {
-        spacing: units.gu(2)
+    Column {
+        id: labelColumn
+        anchors {
+            left: parent.left
+            right: parent.right
+        }
+        spacing: units.gu(1)
 
         Label {
-            id: nowLabel
-            color: UbuntuColors.orange
-            font.pixelSize: units.gu(8)
             font.weight: Font.Light
-            height: units.gu(8)
-            verticalAlignment: Text.AlignBottom  // AlignBottom seems to put it at the top?
+            fontSize: "small"
+            text: i18n.tr("Today")
         }
 
-        Column {
-            Label {
-                id: lowLabel
-                font.weight: Font.Light
-                fontSize: "medium"
-            }
+        Label {
+            id: descriptionLabel
+            font.capitalization: Font.Capitalize
+            font.weight: Font.Normal
+            fontSize: "large"
+            text: modelData.condition
+        }
+
+        Row {
+            spacing: units.gu(2)
 
             Label {
-                id: highLabel
+                id: nowLabel
+                color: UbuntuColors.orange
+                font.pixelSize: units.gu(8)
                 font.weight: Font.Light
-                fontSize: "medium"
+                height: units.gu(8)
+                verticalAlignment: Text.AlignBottom  // AlignBottom seems to put it at the top?
+            }
+
+            Column {
+                Label {
+                    id: lowLabel
+                    font.weight: Font.Light
+                    fontSize: "medium"
+                    text: modelData.low
+                }
+
+                Label {
+                    id: highLabel
+                    font.weight: Font.Light
+                    fontSize: "medium"
+                    text: modelData.high
+                }
             }
         }
     }
+
+    Loader {
+        id: expandedInfo
+        active: false
+        anchors {
+            left: parent.left
+            leftMargin: units.gu(2)
+            right: parent.right
+            rightMargin: units.gu(2)
+            top: labelColumn.bottom
+            topMargin: units.gu(2)
+        }
+        asynchronous: true
+        opacity: 0
+        source: "DayDelegateExtraInfo.qml"
+
+        property var modelData: {
+            var tmp = ({});
+
+            // Remove the condition only for modelData
+            // as it is needed in todayData in the Column above
+            if (todayData) {
+                tmp = todayData;
+                tmp.condition = "";
+            }
+
+            return tmp;
+        }
+    }
+
+    MouseArea {
+        anchors {
+            fill: parent
+        }
+        onClicked: {
+            parent.state = parent.state === "normal" ? "expanded" : "normal"
+            // -2 as this is in header (not a delegate) and needs a fake index
+            locationPages.collapseOtherDelegates(-2)
+        }
+    }
+
+    Behavior on height {
+        NumberAnimation {
+            easing.type: Easing.InOutQuad
+        }
+    }
+
+    Component.onCompleted: {
+        locationPages.collapseOtherDelegates.connect(function(otherIndex) {
+            // -2 as this is in header (not a delegate) and needs a fake index
+            if (homeTempInfoItem && typeof index !== "undefined" && otherIndex !== -2) {
+                state = "normal"
+            }
+        });
+    }
 }
+
