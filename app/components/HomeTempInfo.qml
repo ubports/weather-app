@@ -145,10 +145,7 @@ Item {
         id: expandedInfo
         active: false
         anchors {
-            left: parent.left
-            leftMargin: units.gu(2)
-            right: parent.right
-            rightMargin: units.gu(2)
+            horizontalCenter: parent.horizontalCenter
             top: labelColumn.bottom
             topMargin: units.gu(2)
         }
