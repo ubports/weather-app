@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-10-15 00:45+0100\n"
+"POT-Creation-Date: 2015-10-15 11:39+0100\n"
 "PO-Revision-Date: 2015-09-11 08:58+0000\n"
 "Last-Translator: Richard Somlói <ricsipontaz@gmail.com>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
@@ -15,34 +15,34 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-10-15 06:07+0000\n"
+"X-Launchpad-Export-Date: 2015-10-16 06:03+0000\n"
 "X-Generator: Launchpad (build 17812)\n"
 
-#: ../app/components/DayDelegateExtraInfo.qml:51
+#: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of rain"
 msgstr "Eső esélye"
 
-#: ../app/components/DayDelegateExtraInfo.qml:58
+#: ../app/components/DayDelegateExtraInfo.qml:59
 msgid "Winds"
 msgstr "Szél"
 
-#: ../app/components/DayDelegateExtraInfo.qml:67
+#: ../app/components/DayDelegateExtraInfo.qml:68
 msgid "UV Index"
 msgstr "UV Index"
 
-#: ../app/components/DayDelegateExtraInfo.qml:73
+#: ../app/components/DayDelegateExtraInfo.qml:74
 msgid "Pollen"
 msgstr "Pollen"
 
-#: ../app/components/DayDelegateExtraInfo.qml:80
+#: ../app/components/DayDelegateExtraInfo.qml:81
 msgid "Humidity"
 msgstr "Páratartalom"
 
-#: ../app/components/DayDelegateExtraInfo.qml:87
+#: ../app/components/DayDelegateExtraInfo.qml:88
 msgid "Sunrise"
 msgstr "Napkelte"
 
-#: ../app/components/DayDelegateExtraInfo.qml:94
+#: ../app/components/DayDelegateExtraInfo.qml:95
 msgid "Sunset"
 msgstr "Napnyugta"
 
@@ -59,7 +59,7 @@ msgid "Manually add a location by swiping up from the bottom of the display"
 msgstr ""
 "Kézzel is hozzáadhat helyeket a kijelző aljáról indított ujjmozdulattal"
 
-#: ../app/components/HomeTempInfo.qml:38
+#: ../app/components/HomeTempInfo.qml:103
 msgid "Today"
 msgstr "Ma"
 

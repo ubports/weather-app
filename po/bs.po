@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-10-15 00:45+0100\n"
+"POT-Creation-Date: 2015-10-15 11:39+0100\n"
 "PO-Revision-Date: 2015-10-12 08:07+0000\n"
 "Last-Translator: Kenan Gutić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -16,34 +16,34 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2015-10-15 06:07+0000\n"
+"X-Launchpad-Export-Date: 2015-10-16 06:03+0000\n"
 "X-Generator: Launchpad (build 17812)\n"
 
-#: ../app/components/DayDelegateExtraInfo.qml:51
+#: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of rain"
 msgstr "Šanse da će padati kiša"
 
-#: ../app/components/DayDelegateExtraInfo.qml:58
+#: ../app/components/DayDelegateExtraInfo.qml:59
 msgid "Winds"
 msgstr "Vjetrovi"
 
-#: ../app/components/DayDelegateExtraInfo.qml:67
+#: ../app/components/DayDelegateExtraInfo.qml:68
 msgid "UV Index"
 msgstr "UV indeks"
 
-#: ../app/components/DayDelegateExtraInfo.qml:73
+#: ../app/components/DayDelegateExtraInfo.qml:74
 msgid "Pollen"
 msgstr "Polen"
 
-#: ../app/components/DayDelegateExtraInfo.qml:80
+#: ../app/components/DayDelegateExtraInfo.qml:81
 msgid "Humidity"
 msgstr "Vlažnost"
 
-#: ../app/components/DayDelegateExtraInfo.qml:87
+#: ../app/components/DayDelegateExtraInfo.qml:88
 msgid "Sunrise"
 msgstr "Izlazak sunca"
 
-#: ../app/components/DayDelegateExtraInfo.qml:94
+#: ../app/components/DayDelegateExtraInfo.qml:95
 msgid "Sunset"
 msgstr "Zalazak sunca"
 
@@ -59,7 +59,7 @@ msgstr "Ne mogu utvrditi vašu lokaciju"
 msgid "Manually add a location by swiping up from the bottom of the display"
 msgstr "Ručno dodajte lokaciju klizeći ka gore od dna ekrana"
 
-#: ../app/components/HomeTempInfo.qml:38
+#: ../app/components/HomeTempInfo.qml:103
 msgid "Today"
 msgstr "Danas"
 
