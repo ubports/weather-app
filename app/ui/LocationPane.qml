@@ -140,6 +140,10 @@ ListView {
 
     function getDayData(data) {
         var tempUnits = settings.tempScale === "°C" ? "metric" : "imperial"
+        var timezoneOffset = new Date().getTimezoneOffset();
+        var offset = (data.location.timezone && data.location.timezone.dstOffset) ? (data.location.timezone.dstOffset*60 + timezoneOffset)*60*1000: 0
+        var sunrise = new Date(SunCalc.SunCalc.getTimes(getDate(data.date), data.location.coord.lat, data.location.coord.lon).sunrise.getTime() + offset)
+        var sunset = new Date(SunCalc.SunCalc.getTimes(getDate(data.date), data.location.coord.lat, data.location.coord.lon).sunset.getTime() + offset)
 
         return {
             day: formatTimestamp(data.date, 'dddd'),
@@ -149,8 +153,8 @@ ListView {
             condition: emptyIfUndefined(data.condition),
             chanceOfRain: emptyIfUndefined(data.propPrecip, "%"),
             humidity: emptyIfUndefined(data.humidity, "%"),
-            sunrise: data.sunrise || SunCalc.SunCalc.getTimes(getDate(data.date), data.location.coord.lat, data.location.coord.lon).sunrise.toLocaleTimeString(),
-            sunset: data.sunset || SunCalc.SunCalc.getTimes(getDate(data.date), data.location.coord.lat, data.location.coord.lon).sunset.toLocaleTimeString(),
+            sunrise: data.sunrise || sunrise.toTimeString(),
+            sunset: data.sunset || sunset.toTimeString(),
             uvIndex: emptyIfUndefined(data.uv),
             wind: data[tempUnits].windSpeed === undefined || data.windDir === undefined
                         ? "" : Math.round(data[tempUnits].windSpeed) + settings.windUnits + " " + data.windDir
@@ -201,10 +205,11 @@ ListView {
                     hourlyForecasts = hourlyForecasts.concat(forecasts[x].hourly)
                 }
 
-                // Copy the coords of the location
+                // Copy the coords and timezone of the location
                 // so that sun{rise,set} work with OWM
                 forecasts[x].location = {
                     coord: data.location.coord,
+                    timezone: data.location.timezone
                 };
 
                 if (x === 0) {
