@@ -261,6 +261,10 @@ Page {
         }
     }
 
+    LoadingIndicator {
+        id: loadingIndicator
+    }
+
     Loader {
         active: locationsList === null || locationsList.length === 0
         anchors {

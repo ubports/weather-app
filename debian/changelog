@@ -28,6 +28,7 @@ ubuntu-weather-app (3.0ubuntu1) UNRELEASED; urgency=medium
   * Make sure the text elides on the LocationsPage and the AddLocationPage. (LP: #1469460)
   * Make the first column of the day delegate extra info wider to accommodate other
     languages.
+  * Show the bottom loading animation (LoadingIndicator) on the LocationsPage. (LP: #1490040)
 
   [ Andrew Hayzen ]
   * Add mocked locations for autopilot and add a test using the data
