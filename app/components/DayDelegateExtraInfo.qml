@@ -44,6 +44,7 @@ Column {
         horizontalAlignment: Text.AlignHCenter
         text: modelData.condition
         width: parent.width
+        visible: text !== ""
     }
 
     ForecastDetailsDelegate {

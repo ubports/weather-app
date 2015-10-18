@@ -19,7 +19,7 @@
 import QtQuick 2.4
 import Ubuntu.Components 1.2
 import "../../components"
-import "../../data/key.js" as Key
+import "../../data/keys.js" as Keys
 
 Page {
     title: i18n.tr("Data Provider")
@@ -54,7 +54,7 @@ Page {
 
     Component.onCompleted: {
         // If the key file for TWC is not blank, add the service to the model
-        if (Key.twcKey !== "") {
+        if (Keys.twcKey !== "") {
             dataProviderModel.append({ text: "The Weather Channel" })
         }
     }

@@ -7,42 +7,42 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-08-28 16:51-0500\n"
-"PO-Revision-Date: 2015-08-22 07:47+0000\n"
+"POT-Creation-Date: 2015-10-15 11:39+0100\n"
+"PO-Revision-Date: 2015-10-16 20:09+0000\n"
 "Last-Translator: Jiri Grönroos <Unknown>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-09-05 05:41+0000\n"
-"X-Generator: Launchpad (build 17706)\n"
+"X-Launchpad-Export-Date: 2015-10-18 05:58+0000\n"
+"X-Generator: Launchpad (build 17812)\n"
 
-#: ../app/components/DayDelegateExtraInfo.qml:45
+#: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of rain"
 msgstr "Sateen mahdollisuus"
 
-#: ../app/components/DayDelegateExtraInfo.qml:52
+#: ../app/components/DayDelegateExtraInfo.qml:59
 msgid "Winds"
 msgstr "Tuuli"
 
-#: ../app/components/DayDelegateExtraInfo.qml:60
+#: ../app/components/DayDelegateExtraInfo.qml:68
 msgid "UV Index"
 msgstr "UV-indeksi"
 
-#: ../app/components/DayDelegateExtraInfo.qml:66
+#: ../app/components/DayDelegateExtraInfo.qml:74
 msgid "Pollen"
 msgstr "Siitepöly"
 
-#: ../app/components/DayDelegateExtraInfo.qml:73
+#: ../app/components/DayDelegateExtraInfo.qml:81
 msgid "Humidity"
 msgstr "Ilmankosteus"
 
-#: ../app/components/DayDelegateExtraInfo.qml:80
+#: ../app/components/DayDelegateExtraInfo.qml:88
 msgid "Sunrise"
 msgstr "Auringonnousu"
 
-#: ../app/components/DayDelegateExtraInfo.qml:87
+#: ../app/components/DayDelegateExtraInfo.qml:95
 msgid "Sunset"
 msgstr "Auringonlasku"
 
@@ -58,7 +58,7 @@ msgstr "Sijaintisi määrittäminen epäonnistui"
 msgid "Manually add a location by swiping up from the bottom of the display"
 msgstr "Lisää sijainti itse vetämällä ylös näytön alaosasta."
 
-#: ../app/components/HomeTempInfo.qml:38
+#: ../app/components/HomeTempInfo.qml:103
 msgid "Today"
 msgstr "Tänään"
 
@@ -85,15 +85,15 @@ msgstr "Peru valinta"
 
 #: ../app/components/NetworkErrorStateComponent.qml:48
 msgid "Network Error"
-msgstr ""
+msgstr "Verkkovirhe"
 
 #: ../app/components/NetworkErrorStateComponent.qml:57
 msgid "Ubuntu suggests you check your network settings and try again."
-msgstr ""
+msgstr "Tarkista verkkoasetukset ja yritä uudelleen."
 
 #: ../app/components/NetworkErrorStateComponent.qml:63
 msgid "Retry"
-msgstr ""
+msgstr "Yritä uudelleen"
 
 #: ../app/ui/AddLocationPage.qml:29
 msgid "Select a city"
@@ -111,23 +111,23 @@ msgstr "Kaupunki"
 msgid "Search city"
 msgstr "Etsi kaupunkia"
 
-#: ../app/ui/AddLocationPage.qml:295
+#: ../app/ui/AddLocationPage.qml:297
 msgid "No city found"
 msgstr "Kaupunkia ei löytynyt"
 
-#: ../app/ui/AddLocationPage.qml:308
+#: ../app/ui/AddLocationPage.qml:310
 msgid "Couldn't load weather data, please try later again!"
 msgstr "Säätietojen lataaminen ei onnistunut, yritä uudelleen myöhemmin!"
 
-#: ../app/ui/AddLocationPage.qml:318
+#: ../app/ui/AddLocationPage.qml:320
 msgid "Location already added."
 msgstr "Sijainti on jo lisätty."
 
-#: ../app/ui/AddLocationPage.qml:321
+#: ../app/ui/AddLocationPage.qml:323
 msgid "OK"
 msgstr "OK"
 
-#: ../app/ui/HomePage.qml:31 ../app/ui/LocationsPage.qml:31
+#: ../app/ui/HomePage.qml:31 ../app/ui/LocationsPage.qml:29
 msgid "Locations"
 msgstr "Sijainnit"
 

@@ -37,7 +37,7 @@ class TestHomePage(UbuntuWeatherAppTestCaseWithData):
 
         day = 0
 
-        # Get the first day delegate in the selection pane
+        # Get the first day delegate in the selected pane
         location_pane = self.home_page.get_selected_location_pane()
         day_delegate = location_pane.get_day_delegate(day)
 
@@ -56,3 +56,26 @@ class TestHomePage(UbuntuWeatherAppTestCaseWithData):
         # Check that the state and height of the delegate have changed
         self.assertThat(day_delegate.state, Eventually(Equals("expanded")))
         self.assertEqual(day_delegate.height, day_delegate.expandedHeight)
+
+    def test_show_today_details(self):
+        """tests clicking on the today info to expand and contract it"""
+
+        # Get the HomeTempInfo component from the selected pane
+        location_pane = self.home_page.get_selected_location_pane()
+        home_temp_info = location_pane.get_home_temp_info()
+
+        # Check that the extra info is not shown
+        self.assertThat(home_temp_info.state, Eventually(Equals("normal")))
+
+        # Click the HomeTempInfo to show the extra info
+        location_pane.click_home_temp_info()
+
+        # Re-get HomeTempInfo as change in loaders changes tree
+        home_temp_info = location_pane.get_home_temp_info()
+
+        # Wait for the height of the HomeTempInfo to grow
+        home_temp_info.height.wait_for(home_temp_info.expandedHeight)
+
+        # Check that the state and height of the HomeTempInfo have changed
+        self.assertThat(home_temp_info.state, Eventually(Equals("expanded")))
+        self.assertEqual(home_temp_info.height, home_temp_info.expandedHeight)

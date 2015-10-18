@@ -7,42 +7,42 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-08-28 16:51-0500\n"
-"PO-Revision-Date: 2015-08-23 15:18+0000\n"
+"POT-Creation-Date: 2015-10-15 11:39+0100\n"
+"PO-Revision-Date: 2015-10-17 16:33+0000\n"
 "Last-Translator: Hannie Dumoleyn <Unknown>\n"
 "Language-Team: Dutch <nl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-09-05 05:41+0000\n"
-"X-Generator: Launchpad (build 17706)\n"
+"X-Launchpad-Export-Date: 2015-10-18 05:58+0000\n"
+"X-Generator: Launchpad (build 17812)\n"
 
-#: ../app/components/DayDelegateExtraInfo.qml:45
+#: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of rain"
 msgstr "Kans op regen"
 
-#: ../app/components/DayDelegateExtraInfo.qml:52
+#: ../app/components/DayDelegateExtraInfo.qml:59
 msgid "Winds"
 msgstr "Wind"
 
-#: ../app/components/DayDelegateExtraInfo.qml:60
+#: ../app/components/DayDelegateExtraInfo.qml:68
 msgid "UV Index"
 msgstr "UV-index"
 
-#: ../app/components/DayDelegateExtraInfo.qml:66
+#: ../app/components/DayDelegateExtraInfo.qml:74
 msgid "Pollen"
 msgstr "Pollen"
 
-#: ../app/components/DayDelegateExtraInfo.qml:73
+#: ../app/components/DayDelegateExtraInfo.qml:81
 msgid "Humidity"
 msgstr "Luchtvochtigheid"
 
-#: ../app/components/DayDelegateExtraInfo.qml:80
+#: ../app/components/DayDelegateExtraInfo.qml:88
 msgid "Sunrise"
 msgstr "Zonsopgang"
 
-#: ../app/components/DayDelegateExtraInfo.qml:87
+#: ../app/components/DayDelegateExtraInfo.qml:95
 msgid "Sunset"
 msgstr "Zonsondergang"
 
@@ -60,7 +60,7 @@ msgstr ""
 "Voeg handmatig een locatie toe door te vegen vanaf de onderkant van het "
 "scherm"
 
-#: ../app/components/HomeTempInfo.qml:38
+#: ../app/components/HomeTempInfo.qml:103
 msgid "Today"
 msgstr "Vandaag"
 
@@ -87,15 +87,17 @@ msgstr "Selectie ongedaan maken"
 
 #: ../app/components/NetworkErrorStateComponent.qml:48
 msgid "Network Error"
-msgstr ""
+msgstr "Netwerkfout"
 
 #: ../app/components/NetworkErrorStateComponent.qml:57
 msgid "Ubuntu suggests you check your network settings and try again."
 msgstr ""
+"Ubuntu raadt u aan uw netwerkinstellingen te controleren en het opnieuw te "
+"proberen."
 
 #: ../app/components/NetworkErrorStateComponent.qml:63
 msgid "Retry"
-msgstr ""
+msgstr "Opnieuw proberen"
 
 #: ../app/ui/AddLocationPage.qml:29
 msgid "Select a city"
@@ -113,23 +115,23 @@ msgstr "Plaats"
 msgid "Search city"
 msgstr "Plaats zoeken"
 
-#: ../app/ui/AddLocationPage.qml:295
+#: ../app/ui/AddLocationPage.qml:297
 msgid "No city found"
 msgstr "Geen plaats gevonden"
 
-#: ../app/ui/AddLocationPage.qml:308
+#: ../app/ui/AddLocationPage.qml:310
 msgid "Couldn't load weather data, please try later again!"
 msgstr "Kon weersinformatie niet laden, probeer het later opnieuw!"
 
-#: ../app/ui/AddLocationPage.qml:318
+#: ../app/ui/AddLocationPage.qml:320
 msgid "Location already added."
 msgstr "Locatie is al toegevoegd."
 
-#: ../app/ui/AddLocationPage.qml:321
+#: ../app/ui/AddLocationPage.qml:323
 msgid "OK"
 msgstr "Ok"
 
-#: ../app/ui/HomePage.qml:31 ../app/ui/LocationsPage.qml:31
+#: ../app/ui/HomePage.qml:31 ../app/ui/LocationsPage.qml:29
 msgid "Locations"
 msgstr "Locaties"
 

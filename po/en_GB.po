@@ -7,42 +7,42 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-08-28 16:51-0500\n"
-"PO-Revision-Date: 2015-08-22 22:31+0000\n"
+"POT-Creation-Date: 2015-10-15 11:39+0100\n"
+"PO-Revision-Date: 2015-10-12 11:24+0000\n"
 "Last-Translator: Bartosz Kosiorek <Unknown>\n"
 "Language-Team: English (United Kingdom) <en_GB@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-09-05 05:41+0000\n"
-"X-Generator: Launchpad (build 17706)\n"
+"X-Launchpad-Export-Date: 2015-10-16 06:03+0000\n"
+"X-Generator: Launchpad (build 17812)\n"
 
-#: ../app/components/DayDelegateExtraInfo.qml:45
+#: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of rain"
 msgstr "Chance of rain"
 
-#: ../app/components/DayDelegateExtraInfo.qml:52
+#: ../app/components/DayDelegateExtraInfo.qml:59
 msgid "Winds"
 msgstr "Winds"
 
-#: ../app/components/DayDelegateExtraInfo.qml:60
+#: ../app/components/DayDelegateExtraInfo.qml:68
 msgid "UV Index"
 msgstr "UV Index"
 
-#: ../app/components/DayDelegateExtraInfo.qml:66
+#: ../app/components/DayDelegateExtraInfo.qml:74
 msgid "Pollen"
 msgstr "Pollen"
 
-#: ../app/components/DayDelegateExtraInfo.qml:73
+#: ../app/components/DayDelegateExtraInfo.qml:81
 msgid "Humidity"
 msgstr "Humidity"
 
-#: ../app/components/DayDelegateExtraInfo.qml:80
+#: ../app/components/DayDelegateExtraInfo.qml:88
 msgid "Sunrise"
 msgstr "Sunrise"
 
-#: ../app/components/DayDelegateExtraInfo.qml:87
+#: ../app/components/DayDelegateExtraInfo.qml:95
 msgid "Sunset"
 msgstr "Sunset"
 
@@ -58,7 +58,7 @@ msgstr "Cannot determine your location"
 msgid "Manually add a location by swiping up from the bottom of the display"
 msgstr "Manually add a location by swiping up from the bottom of the display"
 
-#: ../app/components/HomeTempInfo.qml:38
+#: ../app/components/HomeTempInfo.qml:103
 msgid "Today"
 msgstr "Today"
 
@@ -84,15 +84,15 @@ msgstr "Cancel selection"
 
 #: ../app/components/NetworkErrorStateComponent.qml:48
 msgid "Network Error"
-msgstr ""
+msgstr "Network Error"
 
 #: ../app/components/NetworkErrorStateComponent.qml:57
 msgid "Ubuntu suggests you check your network settings and try again."
-msgstr ""
+msgstr "Ubuntu suggests you check your network settings and try again."
 
 #: ../app/components/NetworkErrorStateComponent.qml:63
 msgid "Retry"
-msgstr ""
+msgstr "Retry"
 
 #: ../app/ui/AddLocationPage.qml:29
 msgid "Select a city"
@@ -110,23 +110,23 @@ msgstr "City"
 msgid "Search city"
 msgstr "Search city"
 
-#: ../app/ui/AddLocationPage.qml:295
+#: ../app/ui/AddLocationPage.qml:297
 msgid "No city found"
 msgstr "No city found"
 
-#: ../app/ui/AddLocationPage.qml:308
+#: ../app/ui/AddLocationPage.qml:310
 msgid "Couldn't load weather data, please try later again!"
 msgstr "Couldn't load weather data, please try later again!"
 
-#: ../app/ui/AddLocationPage.qml:318
+#: ../app/ui/AddLocationPage.qml:320
 msgid "Location already added."
 msgstr "Location already added."
 
-#: ../app/ui/AddLocationPage.qml:321
+#: ../app/ui/AddLocationPage.qml:323
 msgid "OK"
 msgstr "OK"
 
-#: ../app/ui/HomePage.qml:31 ../app/ui/LocationsPage.qml:31
+#: ../app/ui/HomePage.qml:31 ../app/ui/LocationsPage.qml:29
 msgid "Locations"
 msgstr "Locations"
 

@@ -72,6 +72,9 @@ ListItem {
                     easing.type: Easing.InOutQuad
                     properties: "opacity"
                 }
+                ScriptAction {  // run animation to ensure the listitem fits
+                    script: waitEnsureVisible.restart()
+                }
             }
         },
         Transition {
@@ -165,10 +168,7 @@ ListItem {
         active: false
         anchors {
             bottomMargin: units.gu(2)
-            left: parent.left
-            leftMargin: units.gu(2)
-            right: parent.right
-            rightMargin: units.gu(2)
+            horizontalCenter: parent.horizontalCenter
             top: mainInfo.bottom
         }
         asynchronous: true
@@ -180,7 +180,47 @@ ListItem {
 
     Behavior on height {
         NumberAnimation {
+            id: heightAnimation
             easing.type: Easing.InOutQuad
+        }
+    }
+
+    NumberAnimation {
+        // animation to ensure the listitem fits by moving the contentY
+        id: ensureVisibleAnimation
+        easing.type: Easing.InOutQuad
+        properties: "contentY"
+        target: dayDelegate.parent.parent
+    }
+
+    Timer {
+        id: waitEnsureVisible
+        interval: 16
+        repeat: false
+
+        onTriggered: {
+            // Only trigger once the loader has loaded
+            // and the animations have stopped
+            // otherwise restart the timer
+            if (expandedInfo.active && expandedInfo.status === Loader.Ready
+                    && !heightAnimation.running) {
+                // stop the current animation
+                ensureVisibleAnimation.running = false;
+
+                // Get the current position
+                var view = dayDelegate.parent.parent;
+                var pos = view.contentY;
+
+                // Tell the listview to make the listitem fit
+                view.positionViewAtIndex(index, ListView.Contain);
+
+                // Animate from the original position to the new position
+                ensureVisibleAnimation.from = pos;
+                ensureVisibleAnimation.to = view.contentY;
+                ensureVisibleAnimation.running = true;
+            } else {
+                restart()
+            }
         }
     }
 
