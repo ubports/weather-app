@@ -77,7 +77,7 @@ Page {
     property bool reloadBottomEdgePage: true
 
     readonly property alias bottomEdgePage: edgeLoader.item
-    readonly property bool isReady: ((bottomEdge.y === 0) && bottomEdgePageLoaded && edgeLoader.item.active)
+    readonly property bool isReady: ((bottomEdge.y === fakeHeader.height) && bottomEdgePageLoaded && edgeLoader.item.active) // CUSTOM change to flag to allow for FakeHeader height
     readonly property bool isCollapsed: (bottomEdge.y === page.height)
     readonly property bool bottomEdgePageLoaded: (edgeLoader.status == Loader.Ready)
 
@@ -90,7 +90,6 @@ Page {
 
     signal bottomEdgeReleased()
     signal bottomEdgeDismissed()
-
 
     function showBottomEdgePage(source, properties)
     {
@@ -152,6 +151,9 @@ Page {
 
         property bool hidden: (activeFocus === false) || ((bottomEdge.y - units.gu(1)) < tip.y)
 
+        // CUSTOM
+        property bool isAnimating: true
+
         enabled: mouseArea.enabled
         visible: page.bottomEdgeEnabled
         anchors {
@@ -166,6 +168,10 @@ Page {
                     }
                     UbuntuNumberAnimation {
                         duration: UbuntuAnimation.SnapDuration
+                    }
+                    // CUSTOM
+                    ScriptAction {
+                        script: tip.isAnimating = false
                     }
                 }
             }
@@ -232,7 +238,6 @@ Page {
             left: parent.left
             right: parent.right
             bottom: parent.bottom
-
         }
         height: bottomEdge.tipHeight
         z: 1
@@ -265,15 +270,34 @@ Page {
         }
     }
 
+    // CUSTOM fake header to make the page with bottom edge transition smoother
+    FakeHeader {
+        id: fakeHeader
+
+        anchors {
+            left: parent.left
+            right: parent.right
+        }
+        y: -fakeHeader.height + (fakeHeader.height * (page.height - bottomEdge.y)) / (page.height - fakeHeader.height)
+        z: bgVisual.z + 1
+
+        Behavior on y {
+            UbuntuNumberAnimation {
+                duration: UbuntuAnimation.SnapDuration
+            }
+        }
+    }
+
     Rectangle {
         id: bottomEdge
         objectName: "bottomEdge"
 
         readonly property int tipHeight: units.gu(3)
-        readonly property int pageStartY: 0
+        // CUSTOM value
+        readonly property int pageStartY: fakeHeader.height
 
         z: 1
-        color: weatherApp.backgroundColor
+        color: Theme.palette.normal.background
         clip: true
         anchors {
             left: parent.left
@@ -281,6 +305,7 @@ Page {
         }
         height: page.height
         y: height
+
         visible: !page.isCollapsed
         state: "collapsed"
         states: [
@@ -290,12 +315,22 @@ Page {
                     target: bottomEdge
                     y: bottomEdge.height
                 }
+                // CUSTOM
+                PropertyChanges {
+                    target: fakeHeader
+                    y: -fakeHeader.height
+                }
             },
             State {
                 name: "expanded"
                 PropertyChanges {
                     target: bottomEdge
                     y: bottomEdge.pageStartY
+                }
+                // CUSTOM
+                PropertyChanges {
+                    target: fakeHeader
+                    y: 0
                 }
             },
             State {
@@ -313,12 +348,20 @@ Page {
                 to: "expanded"
                 SequentialAnimation {
                     alwaysRunToEnd: true
-
-                    SmoothedAnimation {
-                        target: bottomEdge
-                        property: "y"
-                        duration: UbuntuAnimation.FastDuration
-                        easing.type: Easing.Linear
+                    ParallelAnimation {
+                        SmoothedAnimation {
+                            target: bottomEdge
+                            property: "y"
+                            duration: UbuntuAnimation.FastDuration
+                            easing.type: Easing.Linear
+                        }
+                        // CUSTOM
+                        SmoothedAnimation {
+                            target: fakeHeader
+                            property: "y"
+                            duration: UbuntuAnimation.FastDuration
+                            easing.type: Easing.Linear
+                        }
                     }
                     SmoothedAnimation {
                         target: edgeLoader
@@ -353,17 +396,24 @@ Page {
                             edgeLoader.item.active = false
                         }
                     }
-                    SmoothedAnimation {
-                        target: bottomEdge
-                        property: "y"
-                        duration: UbuntuAnimation.SlowDuration
+                    ParallelAnimation {
+                        SmoothedAnimation {
+                            target: bottomEdge
+                            property: "y"
+                            duration: UbuntuAnimation.SlowDuration
+                        }
+                        // CUSTOM
+                        SmoothedAnimation {
+                            target: fakeHeader
+                            property: "y"
+                            duration: UbuntuAnimation.SlowDuration
+                        }
                     }
                     ScriptAction {
                         script: {
                             // destroy current bottom page
                             if (page.reloadBottomEdgePage) {
                                 edgeLoader.active = false
-                                // tip will receive focus on page active true
                             } else {
                                 tip.forceActiveFocus()
                             }
@@ -379,10 +429,10 @@ Page {
             Transition {
                 from: "floating"
                 to: "collapsed"
-                SmoothedAnimation {
+                // MODIFIED
+                UbuntuNumberAnimation {
                     target: bottomEdge
-                    property: "y"
-                    duration: UbuntuAnimation.FastDuration
+                    property: "opacity"
                 }
             }
         ]

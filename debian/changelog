@@ -29,6 +29,7 @@ ubuntu-weather-app (3.0ubuntu1) UNRELEASED; urgency=medium
   * Make the first column of the day delegate extra info wider to accommodate other
     languages.
   * Show the bottom loading animation (LoadingIndicator) on the LocationsPage. (LP: #1490040)
+  * Add FakeHeader component to ease the bottom edge transition.
 
   [ Andrew Hayzen ]
   * Add mocked locations for autopilot and add a test using the data

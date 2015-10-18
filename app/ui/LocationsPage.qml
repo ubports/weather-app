@@ -32,6 +32,7 @@ Page {
     states: [
         PageHeadState {
             id: defaultState
+            head: locationsPage.head
             name: "default"
             actions: [
                 Action {
@@ -40,9 +41,11 @@ Page {
                     onTriggered: mainPageStack.push(Qt.resolvedUrl("AddLocationPage.qml"))
                 }
             ]
-            PropertyChanges {
-                target: locationsPage.head
-                actions: defaultState.actions
+            backAction: Action {
+                iconName: "down"
+                onTriggered: {
+                    pageStack.pop()
+                }
             }
         },
         MultiSelectHeadState {
