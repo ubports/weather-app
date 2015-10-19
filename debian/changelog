@@ -62,6 +62,9 @@ ubuntu-weather-app (3.0ubuntu1) UNRELEASED; urgency=medium
   * Create autopilot test which changes temperature units (LP: #1452493)
   * Create autopilot test which changest wind units (LP: #1452496)
 
+  [ Bartosz Kosiorek ]
+  * Change message text according to Ubuntu UX comment (LP: #1493466)
+
  -- Victor Thompson <victor.thompson@gmail.com>  Mon, 01 Jun 2015 20:11:23 -0500
 
 ubuntu-weather-app (2.1) UNRELEASED; urgency=medium
