@@ -30,6 +30,7 @@ ubuntu-weather-app (3.0ubuntu1) UNRELEASED; urgency=medium
     languages.
   * Show the bottom loading animation (LoadingIndicator) on the LocationsPage. (LP: #1490040)
   * Add FakeHeader component to ease the bottom edge transition.
+  * Use the timezone of the Location to display sunrise/sunset times.
 
   [ Andrew Hayzen ]
   * Add mocked locations for autopilot and add a test using the data
