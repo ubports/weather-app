@@ -141,7 +141,7 @@ ListView {
     function getDayData(data) {
         var tempUnits = settings.tempScale === "°C" ? "metric" : "imperial"
         var timezoneOffset = new Date().getTimezoneOffset();
-        var offset = (data.location.timezone && data.location.timezone.dstOffset) ? (data.location.timezone.dstOffset*60 + timezoneOffset)*60*1000: 0
+        var offset = (data.location.timezone && data.location.timezone.dstOffset !== undefined) ? (data.location.timezone.dstOffset*60 + timezoneOffset)*60*1000: 0
         var options = { timeZone: data.location.timezone.timeZoneId, timeZoneName: 'long' };
         var sunrise = new Date(SunCalc.SunCalc.getTimes(getDate(data.date), data.location.coord.lat, data.location.coord.lon).sunrise.getTime() + offset);
         var sunset = new Date(SunCalc.SunCalc.getTimes(getDate(data.date), data.location.coord.lat, data.location.coord.lon).sunset.getTime() + offset);
