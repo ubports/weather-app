@@ -556,8 +556,9 @@ var WeatherChannelApi = (function() {
             var offset = (location.timezone && location.timezone.dstOffset) ? (location.timezone.dstOffset*60 + timezoneOffset)*60*1000: 0
             var sunrise = new Date(sunRiseSet.rise*1000 + offset);
             var sunset = new Date(sunRiseSet.set*1000 + offset);
-            tmpResult[day].sunrise = sunrise.toTimeString();
-            tmpResult[day].sunset = sunset.toTimeString();
+            var options = { timeZone: location.timezone.timeZoneId, timeZoneName: 'long' };
+            tmpResult[day].sunrise = sunrise.toLocaleTimeString(Qt.locale().name, options);
+            tmpResult[day].sunset = sunset.toLocaleTimeString(Qt.locale().name, options);
         }
         //
         if(data["forecast"] !== undefined) {

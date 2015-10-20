@@ -142,8 +142,9 @@ ListView {
         var tempUnits = settings.tempScale === "°C" ? "metric" : "imperial"
         var timezoneOffset = new Date().getTimezoneOffset();
         var offset = (data.location.timezone && data.location.timezone.dstOffset) ? (data.location.timezone.dstOffset*60 + timezoneOffset)*60*1000: 0
-        var sunrise = new Date(SunCalc.SunCalc.getTimes(getDate(data.date), data.location.coord.lat, data.location.coord.lon).sunrise.getTime() + offset)
-        var sunset = new Date(SunCalc.SunCalc.getTimes(getDate(data.date), data.location.coord.lat, data.location.coord.lon).sunset.getTime() + offset)
+        var options = { timeZone: data.location.timezone.timeZoneId, timeZoneName: 'long' };
+        var sunrise = new Date(SunCalc.SunCalc.getTimes(getDate(data.date), data.location.coord.lat, data.location.coord.lon).sunrise.getTime() + offset);
+        var sunset = new Date(SunCalc.SunCalc.getTimes(getDate(data.date), data.location.coord.lat, data.location.coord.lon).sunset.getTime() + offset);
 
         return {
             day: formatTimestamp(data.date, 'dddd'),
@@ -153,8 +154,8 @@ ListView {
             condition: emptyIfUndefined(data.condition),
             chanceOfRain: emptyIfUndefined(data.propPrecip, "%"),
             humidity: emptyIfUndefined(data.humidity, "%"),
-            sunrise: data.sunrise || sunrise.toTimeString(),
-            sunset: data.sunset || sunset.toTimeString(),
+            sunrise: data.sunrise || sunrise.toLocaleTimeString(Qt.locale().name, options),
+            sunset: data.sunset || sunset.toLocaleTimeString(Qt.locale().name, options),
             uvIndex: emptyIfUndefined(data.uv),
             wind: data[tempUnits].windSpeed === undefined || data.windDir === undefined
                         ? "" : Math.round(data[tempUnits].windSpeed) + settings.windUnits + " " + data.windDir
