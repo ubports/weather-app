@@ -553,7 +553,7 @@ var WeatherChannelApi = (function() {
             }
             tmpResult[day] = _buildDayFormat(date, dayData, nowMs);
             var timezoneOffset = new Date().getTimezoneOffset();
-            var offset = (location.timezone && location.timezone.dstOffset) ? (location.timezone.dstOffset*60 + timezoneOffset)*60*1000: 0
+            var offset = (location.timezone && location.timezone.dstOffset !== undefined) ? (location.timezone.dstOffset*60 + timezoneOffset)*60*1000: 0
             var sunrise = new Date(sunRiseSet.rise*1000 + offset);
             var sunset = new Date(sunRiseSet.set*1000 + offset);
             var options = { timeZone: location.timezone.timeZoneId, timeZoneName: 'long' };
