@@ -553,9 +553,9 @@ var WeatherChannelApi = (function() {
             }
             tmpResult[day] = _buildDayFormat(date, dayData, nowMs);
             var timezoneOffset = new Date().getTimezoneOffset();
-            var offset = (location.timezone && location.timezone.dstOffset !== undefined) ? (location.timezone.dstOffset*60 + timezoneOffset)*60*1000: 0
-            var sunrise = new Date(sunRiseSet.rise*1000 + offset);
-            var sunset = new Date(sunRiseSet.set*1000 + offset);
+            var timesOffset = (location.timezone && location.timezone.dstOffset !== undefined) ? (location.timezone.dstOffset*60 + timezoneOffset)*60*1000: 0
+            var sunrise = new Date(sunRiseSet.rise*1000 + timesOffset);
+            var sunset = new Date(sunRiseSet.set*1000 + timesOffset);
             var options = { timeZone: location.timezone.timeZoneId, timeZoneName: 'long' };
             tmpResult[day].sunrise = sunrise.toLocaleTimeString(Qt.locale().name, options);
             tmpResult[day].sunset = sunset.toLocaleTimeString(Qt.locale().name, options);
