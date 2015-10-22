@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-10-15 11:39+0100\n"
-"PO-Revision-Date: 2015-09-08 17:42+0000\n"
-"Last-Translator: Bartosz Kosiorek <Unknown>\n"
+"PO-Revision-Date: 2015-10-21 16:24+0000\n"
+"Last-Translator: Seweryn Opyd <Unknown>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2015-10-16 06:03+0000\n"
+"X-Launchpad-Export-Date: 2015-10-22 05:57+0000\n"
 "X-Generator: Launchpad (build 17812)\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
@@ -29,7 +29,7 @@ msgstr "Wiatr"
 
 #: ../app/components/DayDelegateExtraInfo.qml:68
 msgid "UV Index"
-msgstr "Index UV"
+msgstr "Indeks UV"
 
 #: ../app/components/DayDelegateExtraInfo.qml:74
 msgid "Pollen"
@@ -49,7 +49,7 @@ msgstr "Zachód słońca"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:51
 msgid "Searching for current location..."
-msgstr "Wyszukiwanie bieżącego położenia..."
+msgstr "Wyszukiwanie bieżącego położenia…"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:52
 msgid "Cannot determine your location"
@@ -206,7 +206,7 @@ msgstr "km/h"
 #. Only the abbreviated form of miles per hour should be used.
 #: ../app/ui/settings/UnitsPage.qml:63 ../app/ui/settings/UnitsPage.qml:100
 msgid "mph"
-msgstr "mile/h"
+msgstr "mil/h"
 
 #: ../app/ui/settings/UnitsPage.qml:77
 msgid "Temperature"
