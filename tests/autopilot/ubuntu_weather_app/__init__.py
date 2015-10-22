@@ -237,6 +237,9 @@ class LocationsPage(Page):
     def click_add_location_action(self):
         self.main_view.get_header().click_action_button("addLocation")
 
+    def click_back(self):
+        return self.main_view.get_header().click_custom_back_button()
+
     @click_object
     def click_location(self, index):
         return self.get_location(index)
