@@ -66,7 +66,7 @@ Page {
         anchors {
             fill: parent
             // TODO: Fix this offset
-            topMargin: -locationsPage.header.height
+            topMargin: locationsPage.header ? -locationsPage.header.height : 0
         }
         model: ListModel {
             id: locationsModel
