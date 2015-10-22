@@ -140,6 +140,7 @@ ListView {
 
     function getDayData(data) {
         var tempUnits = settings.tempScale === "°C" ? "metric" : "imperial"
+        var windUnits = settings.windUnits === "kph" ? "metric" : "imperial";
         var timezoneOffset = new Date().getTimezoneOffset();
         var offset = (data.location.timezone && data.location.timezone.dstOffset !== undefined) ? (data.location.timezone.dstOffset*60 + timezoneOffset)*60*1000: 0
         var options = { timeZone: data.location.timezone.timeZoneId, timeZoneName: 'long' };
@@ -157,8 +158,8 @@ ListView {
             sunrise: data.sunrise || sunrise.toLocaleTimeString(Qt.locale().name, options),
             sunset: data.sunset || sunset.toLocaleTimeString(Qt.locale().name, options),
             uvIndex: emptyIfUndefined(data.uv),
-            wind: data[tempUnits].windSpeed === undefined || data.windDir === undefined
-                        ? "" : Math.round(data[tempUnits].windSpeed) + settings.windUnits + " " + data.windDir
+            wind: data[windUnits].windSpeed === undefined || data.windDir === undefined
+                        ? "" : Math.round(data[windUnits].windSpeed) + settings.windUnits + " " + data.windDir
         };
     }
 

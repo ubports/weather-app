@@ -59,6 +59,7 @@ ubuntu-weather-app (3.0ubuntu1) UNRELEASED; urgency=medium
   * Add autopilot test for expanding the today info
   * Implement extra info expandable for today info (LP: #1496422, LP: #1478255)
   * Fix for autopilot tests not using custom back button and for possible flaky test due to expandHeight changing dynamically
+  * Fix to link the Wind Speed unit to the Wind Unit setting and not the Temperature Unit setting
 
   [ Carla Sella ]
   * Create autopilot test which shows the day delegate (LP: #1452491)
