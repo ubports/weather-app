@@ -1,6 +1,10 @@
 ubuntu-weather-app (3.1ubuntu1) UNRELEASED; urgency=medium
 
+  [ Andrew Hayzen ]
   * Bump version to 3.1
+
+  [ Bartosz Kosiorek ]
+  * Change message text according to Ubuntu UX comment (LP: #1493466)
 
  -- Andrew Hayzen <ahayzen@gmail.com>  Sat, 24 Oct 2015 20:22:31 +0100
 
@@ -71,9 +75,6 @@ ubuntu-weather-app (3.0ubuntu1) vivid; urgency=medium
   * Create autopilot test which shows the day delegate (LP: #1452491)
   * Create autopilot test which changes temperature units (LP: #1452493)
   * Create autopilot test which changest wind units (LP: #1452496)
-
-  [ Bartosz Kosiorek ]
-  * Change message text according to Ubuntu UX comment (LP: #1493466)
 
  -- Andrew Hayzen <ahayzen@gmail.com>  Sat, 24 Oct 2015 20:22:12 +0100
 
