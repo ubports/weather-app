@@ -1,4 +1,4 @@
-# Finnish translation for ubuntu-weather-app
+# Arabic translation for ubuntu-weather-app
 # Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the ubuntu-weather-app package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
@@ -8,160 +8,160 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-10-22 16:15+0100\n"
-"PO-Revision-Date: 2015-10-16 20:09+0000\n"
-"Last-Translator: Jiri Grönroos <Unknown>\n"
-"Language-Team: Finnish <fi@li.org>\n"
+"PO-Revision-Date: 2015-10-20 22:10+0000\n"
+"Last-Translator: Ibrahim Saed <ibraheem5000@gmail.com>\n"
+"Language-Team: Arabic <ar@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n % 100 >= "
+"3 && n % 100 <= 10 ? 3 : n % 100 >= 11 && n % 100 <= 99 ? 4 : 5;\n"
 "X-Launchpad-Export-Date: 2015-10-23 05:51+0000\n"
 "X-Generator: Launchpad (build 17812)\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of rain"
-msgstr "Sateen mahdollisuus"
+msgstr "احتمال هطول أمطار"
 
 #: ../app/components/DayDelegateExtraInfo.qml:59
 msgid "Winds"
-msgstr "Tuuli"
+msgstr "الرياح"
 
 #: ../app/components/DayDelegateExtraInfo.qml:68
 msgid "UV Index"
-msgstr "UV-indeksi"
+msgstr "مؤشر الأشعة فوق البنفسجية"
 
 #: ../app/components/DayDelegateExtraInfo.qml:74
 msgid "Pollen"
-msgstr "Siitepöly"
+msgstr ""
 
 #: ../app/components/DayDelegateExtraInfo.qml:81
 msgid "Humidity"
-msgstr "Ilmankosteus"
+msgstr "الرطوبة"
 
 #: ../app/components/DayDelegateExtraInfo.qml:88
 msgid "Sunrise"
-msgstr "Auringonnousu"
+msgstr "الشروق"
 
 #: ../app/components/DayDelegateExtraInfo.qml:95
 msgid "Sunset"
-msgstr "Auringonlasku"
+msgstr "الغروب"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:51
 msgid "Searching for current location..."
-msgstr "Etsitään nykyistä sijaintia..."
+msgstr "البحث عن الموقع الحالي..."
 
 #: ../app/components/HomePageEmptyStateComponent.qml:52
 msgid "Cannot determine your location"
-msgstr "Sijaintisi määrittäminen epäonnistui"
+msgstr "تعذّر تحديد موقعك"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:62
 msgid "Manually add a location by swiping up from the bottom of the display"
-msgstr "Lisää sijainti itse vetämällä ylös näytön alaosasta."
+msgstr "إضافة موقع يدويا عن طريق السحب لأعلى من أسفل الشاشة"
 
 #: ../app/components/HomeTempInfo.qml:103
 msgid "Today"
-msgstr "Tänään"
+msgstr "اليوم"
 
 #: ../app/components/ListItemActions/Remove.qml:26
 msgid "Remove"
-msgstr "Poista"
+msgstr "إزالة"
 
 #: ../app/components/LocationsPageEmptyStateComponent.qml:36
 msgid "No locations found. Tap the plus icon to search for one."
-msgstr ""
-"Sijainteja ei löytynyt. Napauta plus-kuvaketta etsiäksesi paikkakuntia."
+msgstr "لم يُعثر على مواقع. انقر على أيقونة \"+\" للبحث عن واحدة."
 
 #: ../app/components/MultiSelectHeadState.qml:27
 msgid "Select All"
-msgstr "Valitse kaikki"
+msgstr "اختيار الكل"
 
 #: ../app/components/MultiSelectHeadState.qml:39
 msgid "Delete"
-msgstr "Poista"
+msgstr "حذف"
 
 #: ../app/components/MultiSelectHeadState.qml:51
 msgid "Cancel selection"
-msgstr "Peru valinta"
+msgstr "إلغاء الاختيار"
 
 #: ../app/components/NetworkErrorStateComponent.qml:48
 msgid "Network Error"
-msgstr "Verkkovirhe"
+msgstr "خطأ في الشبكة"
 
 #: ../app/components/NetworkErrorStateComponent.qml:57
 msgid "Ubuntu suggests you check your network settings and try again."
-msgstr "Tarkista verkkoasetukset ja yritä uudelleen."
+msgstr "يقترح عليك أوبونتو فحص إعدادات الشبكة والمحاولة مجددا."
 
 #: ../app/components/NetworkErrorStateComponent.qml:63
 msgid "Retry"
-msgstr "Yritä uudelleen"
+msgstr "إعادة المحاولة"
 
 #: ../app/ui/AddLocationPage.qml:29
 msgid "Select a city"
-msgstr "Valitse kaupunki"
+msgstr "اختر مدينة"
 
 #: ../app/ui/AddLocationPage.qml:47 ../app/ui/AddLocationPage.qml:69
 msgid "Back"
-msgstr "Takaisin"
+msgstr "عودة"
 
 #: ../app/ui/AddLocationPage.qml:54
 msgid "City"
-msgstr "Kaupunki"
+msgstr "المدينة"
 
 #: ../app/ui/AddLocationPage.qml:113
 msgid "Search city"
-msgstr "Etsi kaupunkia"
+msgstr "اختر مدينة"
 
 #: ../app/ui/AddLocationPage.qml:297
 msgid "No city found"
-msgstr "Kaupunkia ei löytynyt"
+msgstr "لم يُعثر على مدن"
 
 #: ../app/ui/AddLocationPage.qml:310
 msgid "Couldn't load weather data, please try later again!"
-msgstr "Säätietojen lataaminen ei onnistunut, yritä uudelleen myöhemmin!"
+msgstr "لم يتمكن من تحميل بيانات الطقس، رجاءً حاول مجددا في وقت لاحق!"
 
 #: ../app/ui/AddLocationPage.qml:320
 msgid "Location already added."
-msgstr "Sijainti on jo lisätty."
+msgstr "المنطقة مضافة بالفعل."
 
 #: ../app/ui/AddLocationPage.qml:323
 msgid "OK"
-msgstr "OK"
+msgstr "موافق"
 
 #: ../app/ui/HomePage.qml:31 ../app/ui/LocationsPage.qml:29
 msgid "Locations"
-msgstr "Sijainnit"
+msgstr "المواقع"
 
 #: ../app/ui/LocationsPage.qml:109
 msgid "Current Location"
-msgstr "Nykyinen sijainti"
+msgstr "الموقع الحالي"
 
 #: ../app/ui/SettingsPage.qml:24
 msgid "Settings"
-msgstr "Asetukset"
+msgstr "الإعدادات"
 
 #: ../app/ui/SettingsPage.qml:33 ../app/ui/settings/UnitsPage.qml:24
 msgid "Units"
-msgstr "Yksiköt"
+msgstr "الوحدات"
 
 #: ../app/ui/SettingsPage.qml:38 ../app/ui/settings/DataProviderPage.qml:25
 msgid "Data Provider"
-msgstr "Tietojen tarjoaja"
+msgstr "مقدّم البيانات"
 
 #: ../app/ui/SettingsPage.qml:43 ../app/ui/settings/RefreshIntervalPage.qml:24
 msgid "Refresh Interval"
-msgstr "Päivitysväli"
+msgstr "فترة التحديث"
 
 #: ../app/ui/SettingsPage.qml:48 ../app/ui/settings/LocationPage.qml:24
 msgid "Location"
-msgstr "Sijainti"
+msgstr "الموقع"
 
 #: ../app/ui/settings/DataProviderPage.qml:37
 msgid "Provider"
-msgstr "Tarjoaja"
+msgstr "مقدّم الخدمة"
 
 #: ../app/ui/settings/LocationPage.qml:32
 msgid "Detect current location"
-msgstr "Havaitse nykyinen sijainti"
+msgstr "الكشف عن الموقع الحالي"
 
 #: ../app/ui/settings/RefreshIntervalPage.qml:30
 #: ../app/ui/settings/RefreshIntervalPage.qml:31
@@ -171,59 +171,64 @@ msgstr "Havaitse nykyinen sijainti"
 #, qt-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
-msgstr[0] "%1 minuutti"
-msgstr[1] "%1 minuuttia"
+msgstr[0] "أقل من دقيقة (%1)"
+msgstr[1] "دقيقة واحدة (%1)"
+msgstr[2] "دقيقتان (%1)"
+msgstr[3] "%1 دقائق"
+msgstr[4] "%1 دقيقة"
+msgstr[5] "%1 دقيقة"
 
 #: ../app/ui/settings/RefreshIntervalPage.qml:42
 msgid "Interval"
-msgstr "Aikaväli"
+msgstr "الفترة"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of temperature in Celcius and are shown in the settings page.
 #. Only the abbreviated form of Celcius should be used.
 #: ../app/ui/settings/UnitsPage.qml:42 ../app/ui/settings/UnitsPage.qml:78
 msgid "°C"
-msgstr "°C"
+msgstr "°م"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of temperature in Fahrenheit and are shown in the settings page.
 #. Only the abbreviated form of Fahrenheit should be used.
 #: ../app/ui/settings/UnitsPage.qml:47 ../app/ui/settings/UnitsPage.qml:79
 msgid "°F"
-msgstr "°F"
+msgstr "°ف"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of wind speed in kilometers per hour and are shown in the settings page.
 #. Only the abbreviated form of kilometers per hour should be used.
 #: ../app/ui/settings/UnitsPage.qml:58 ../app/ui/settings/UnitsPage.qml:99
 msgid "kph"
-msgstr "km/h"
+msgstr "كم/س"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of wind speed in miles per hour and are shown in the settings page.
 #. Only the abbreviated form of miles per hour should be used.
 #: ../app/ui/settings/UnitsPage.qml:63 ../app/ui/settings/UnitsPage.qml:100
 msgid "mph"
-msgstr "mph"
+msgstr "ميل/س"
 
 #: ../app/ui/settings/UnitsPage.qml:77
 msgid "Temperature"
-msgstr "Lämpötila"
+msgstr "درجة الحرارة"
 
 #: ../app/ui/settings/UnitsPage.qml:98
 msgid "Wind Speed"
-msgstr "Tuulen nopeus"
+msgstr "سرعة الرياح"
 
 #: ubuntu-weather-app.desktop.in.in.h:1
 msgid "Weather"
-msgstr "Sää"
+msgstr "الطقس"
 
 #: ubuntu-weather-app.desktop.in.in.h:2
 msgid ""
 "A weather forecast application for Ubuntu with support for multiple online "
 "weather data sources"
-msgstr "Useita eri tietolähteitä tukeva sääennustesovellus Ubuntulle"
+msgstr ""
+"تطبيق توقعات الطقس لأوبونتو مع دعم العديد من مصادر بيانات الطقس على الإنترنت"
 
 #: ubuntu-weather-app.desktop.in.in.h:3
 msgid "weather;forecast;twc;openweathermap;the weather channel;"
-msgstr "weather;forecast;twc;openweathermap;the weather channel;sää;ennuste;"
+msgstr "طقس;الطقس;توقعات;"

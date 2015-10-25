@@ -7,160 +7,160 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-10-15 11:39+0100\n"
-"PO-Revision-Date: 2015-08-17 03:50+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2015-10-22 16:15+0100\n"
+"PO-Revision-Date: 2015-10-20 15:52+0000\n"
+"Last-Translator: Cheng Lu <chenglu1990@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2015-10-16 06:03+0000\n"
+"X-Launchpad-Export-Date: 2015-10-23 05:51+0000\n"
 "X-Generator: Launchpad (build 17812)\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of rain"
-msgstr ""
+msgstr "降水概率"
 
 #: ../app/components/DayDelegateExtraInfo.qml:59
 msgid "Winds"
-msgstr ""
+msgstr "风"
 
 #: ../app/components/DayDelegateExtraInfo.qml:68
 msgid "UV Index"
-msgstr ""
+msgstr "紫外线指数"
 
 #: ../app/components/DayDelegateExtraInfo.qml:74
 msgid "Pollen"
-msgstr ""
+msgstr "花粉"
 
 #: ../app/components/DayDelegateExtraInfo.qml:81
 msgid "Humidity"
-msgstr ""
+msgstr "湿度"
 
 #: ../app/components/DayDelegateExtraInfo.qml:88
 msgid "Sunrise"
-msgstr ""
+msgstr "日出"
 
 #: ../app/components/DayDelegateExtraInfo.qml:95
 msgid "Sunset"
-msgstr ""
+msgstr "日落"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:51
 msgid "Searching for current location..."
-msgstr ""
+msgstr "搜索当前位置..."
 
 #: ../app/components/HomePageEmptyStateComponent.qml:52
 msgid "Cannot determine your location"
-msgstr ""
+msgstr "无法确定您的位置"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:62
 msgid "Manually add a location by swiping up from the bottom of the display"
-msgstr ""
+msgstr "通过屏幕底部向上滑动手动添加位置"
 
 #: ../app/components/HomeTempInfo.qml:103
 msgid "Today"
-msgstr ""
+msgstr "今天"
 
 #: ../app/components/ListItemActions/Remove.qml:26
 msgid "Remove"
-msgstr ""
+msgstr "移除"
 
 #: ../app/components/LocationsPageEmptyStateComponent.qml:36
 msgid "No locations found. Tap the plus icon to search for one."
-msgstr ""
+msgstr "没有找到位置。点击加号图标来搜索一个。"
 
 #: ../app/components/MultiSelectHeadState.qml:27
 msgid "Select All"
-msgstr ""
+msgstr "全选"
 
 #: ../app/components/MultiSelectHeadState.qml:39
 msgid "Delete"
-msgstr ""
+msgstr "删除"
 
 #: ../app/components/MultiSelectHeadState.qml:51
 msgid "Cancel selection"
-msgstr ""
+msgstr "取消选择"
 
 #: ../app/components/NetworkErrorStateComponent.qml:48
 msgid "Network Error"
-msgstr ""
+msgstr "网络错误"
 
 #: ../app/components/NetworkErrorStateComponent.qml:57
 msgid "Ubuntu suggests you check your network settings and try again."
-msgstr ""
+msgstr "Ubuntu建议您检查网络设置，再次尝试。"
 
 #: ../app/components/NetworkErrorStateComponent.qml:63
 msgid "Retry"
-msgstr ""
+msgstr "重试"
 
 #: ../app/ui/AddLocationPage.qml:29
 msgid "Select a city"
-msgstr ""
+msgstr "选择城市"
 
 #: ../app/ui/AddLocationPage.qml:47 ../app/ui/AddLocationPage.qml:69
 msgid "Back"
-msgstr ""
+msgstr "后退"
 
 #: ../app/ui/AddLocationPage.qml:54
 msgid "City"
-msgstr ""
+msgstr "城市"
 
 #: ../app/ui/AddLocationPage.qml:113
 msgid "Search city"
-msgstr ""
+msgstr "搜索城市"
 
 #: ../app/ui/AddLocationPage.qml:297
 msgid "No city found"
-msgstr ""
+msgstr "没有找到城市"
 
 #: ../app/ui/AddLocationPage.qml:310
 msgid "Couldn't load weather data, please try later again!"
-msgstr ""
+msgstr "无法载入天气数据，请稍后再试！"
 
 #: ../app/ui/AddLocationPage.qml:320
 msgid "Location already added."
-msgstr ""
+msgstr "位置已添加。"
 
 #: ../app/ui/AddLocationPage.qml:323
 msgid "OK"
-msgstr ""
+msgstr "确定"
 
 #: ../app/ui/HomePage.qml:31 ../app/ui/LocationsPage.qml:29
 msgid "Locations"
-msgstr ""
+msgstr "位置"
 
-#: ../app/ui/LocationsPage.qml:106
+#: ../app/ui/LocationsPage.qml:109
 msgid "Current Location"
-msgstr ""
+msgstr "当前位置"
 
 #: ../app/ui/SettingsPage.qml:24
 msgid "Settings"
-msgstr ""
+msgstr "设置"
 
 #: ../app/ui/SettingsPage.qml:33 ../app/ui/settings/UnitsPage.qml:24
 msgid "Units"
-msgstr ""
+msgstr "单位"
 
 #: ../app/ui/SettingsPage.qml:38 ../app/ui/settings/DataProviderPage.qml:25
 msgid "Data Provider"
-msgstr ""
+msgstr "数据提供者"
 
 #: ../app/ui/SettingsPage.qml:43 ../app/ui/settings/RefreshIntervalPage.qml:24
 msgid "Refresh Interval"
-msgstr ""
+msgstr "刷新间隔"
 
 #: ../app/ui/SettingsPage.qml:48 ../app/ui/settings/LocationPage.qml:24
 msgid "Location"
-msgstr ""
+msgstr "位置"
 
 #: ../app/ui/settings/DataProviderPage.qml:37
 msgid "Provider"
-msgstr ""
+msgstr "提供者"
 
 #: ../app/ui/settings/LocationPage.qml:32
 msgid "Detect current location"
-msgstr ""
+msgstr "检测当前位置"
 
 #: ../app/ui/settings/RefreshIntervalPage.qml:30
 #: ../app/ui/settings/RefreshIntervalPage.qml:31
@@ -170,59 +170,58 @@ msgstr ""
 #, qt-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 分钟"
 
 #: ../app/ui/settings/RefreshIntervalPage.qml:42
 msgid "Interval"
-msgstr ""
+msgstr "间隔"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of temperature in Celcius and are shown in the settings page.
 #. Only the abbreviated form of Celcius should be used.
 #: ../app/ui/settings/UnitsPage.qml:42 ../app/ui/settings/UnitsPage.qml:78
 msgid "°C"
-msgstr ""
+msgstr "°C"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of temperature in Fahrenheit and are shown in the settings page.
 #. Only the abbreviated form of Fahrenheit should be used.
 #: ../app/ui/settings/UnitsPage.qml:47 ../app/ui/settings/UnitsPage.qml:79
 msgid "°F"
-msgstr ""
+msgstr "°F"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of wind speed in kilometers per hour and are shown in the settings page.
 #. Only the abbreviated form of kilometers per hour should be used.
 #: ../app/ui/settings/UnitsPage.qml:58 ../app/ui/settings/UnitsPage.qml:99
 msgid "kph"
-msgstr ""
+msgstr "公里/小时"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of wind speed in miles per hour and are shown in the settings page.
 #. Only the abbreviated form of miles per hour should be used.
 #: ../app/ui/settings/UnitsPage.qml:63 ../app/ui/settings/UnitsPage.qml:100
 msgid "mph"
-msgstr ""
+msgstr "英里/小时"
 
 #: ../app/ui/settings/UnitsPage.qml:77
 msgid "Temperature"
-msgstr ""
+msgstr "温度"
 
 #: ../app/ui/settings/UnitsPage.qml:98
 msgid "Wind Speed"
-msgstr ""
+msgstr "风速"
 
 #: ubuntu-weather-app.desktop.in.in.h:1
 msgid "Weather"
-msgstr ""
+msgstr "天气"
 
 #: ubuntu-weather-app.desktop.in.in.h:2
 msgid ""
 "A weather forecast application for Ubuntu with support for multiple online "
 "weather data sources"
-msgstr ""
+msgstr "一款支持多个在线数据源的 Ubuntu 版天气预报应用"
 
 #: ubuntu-weather-app.desktop.in.in.h:3
 msgid "weather;forecast;twc;openweathermap;the weather channel;"
-msgstr ""
+msgstr "天气;预报;twc;开源气象服务;天气频道;"

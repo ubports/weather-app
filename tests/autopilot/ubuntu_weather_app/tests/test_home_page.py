@@ -51,7 +51,9 @@ class TestHomePage(UbuntuWeatherAppTestCaseWithData):
         day_delegate = location_pane.get_day_delegate(day)
 
         # Wait for the height of the delegate to grow
-        day_delegate.height.wait_for(day_delegate.expandedHeight)
+        # Re-get the delegate in the wait as the expandedHeight changes
+        day_delegate.height.wait_for(
+            location_pane.get_day_delegate(day).expandedHeight)
 
         # Check that the state and height of the delegate have changed
         self.assertThat(day_delegate.state, Eventually(Equals("expanded")))
@@ -74,7 +76,9 @@ class TestHomePage(UbuntuWeatherAppTestCaseWithData):
         home_temp_info = location_pane.get_home_temp_info()
 
         # Wait for the height of the HomeTempInfo to grow
-        home_temp_info.height.wait_for(home_temp_info.expandedHeight)
+        # Re-get the home temp info in the wait as the expandedHeight changes
+        home_temp_info.height.wait_for(
+            location_pane.get_home_temp_info().expandedHeight)
 
         # Check that the state and height of the HomeTempInfo have changed
         self.assertThat(home_temp_info.state, Eventually(Equals("expanded")))
