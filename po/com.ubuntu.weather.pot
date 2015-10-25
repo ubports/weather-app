@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-22 16:15+0100\n"
+"POT-Creation-Date: 2015-10-25 21:12+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -87,7 +87,7 @@ msgid "Network Error"
 msgstr ""
 
 #: ../app/components/NetworkErrorStateComponent.qml:57
-msgid "Ubuntu suggests you check your network settings and try again."
+msgid "Please check your network settings and try again."
 msgstr ""
 
 #: ../app/components/NetworkErrorStateComponent.qml:63
