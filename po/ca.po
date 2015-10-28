@@ -1,4 +1,4 @@
-# Serbian translation for ubuntu-weather-app
+# Catalan translation for ubuntu-weather-app
 # Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the ubuntu-weather-app package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
@@ -8,160 +8,159 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-10-25 21:12+0100\n"
-"PO-Revision-Date: 2015-10-27 15:20+0000\n"
-"Last-Translator: Данило Шеган <Unknown>\n"
-"Language-Team: Serbian <sr@li.org>\n"
+"PO-Revision-Date: 2015-10-26 18:17+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Launchpad-Export-Date: 2015-10-28 05:57+0000\n"
 "X-Generator: Launchpad (build 17833)\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of rain"
-msgstr "Могућност кише"
+msgstr ""
 
 #: ../app/components/DayDelegateExtraInfo.qml:59
 msgid "Winds"
-msgstr "Ветрови"
+msgstr ""
 
 #: ../app/components/DayDelegateExtraInfo.qml:68
 msgid "UV Index"
-msgstr "УВ индекс"
+msgstr ""
 
 #: ../app/components/DayDelegateExtraInfo.qml:74
 msgid "Pollen"
-msgstr "Плен"
+msgstr ""
 
 #: ../app/components/DayDelegateExtraInfo.qml:81
 msgid "Humidity"
-msgstr "Влажност"
+msgstr ""
 
 #: ../app/components/DayDelegateExtraInfo.qml:88
 msgid "Sunrise"
-msgstr "Излазак сунца"
+msgstr ""
 
 #: ../app/components/DayDelegateExtraInfo.qml:95
 msgid "Sunset"
-msgstr "Залазак сунца"
+msgstr ""
 
 #: ../app/components/HomePageEmptyStateComponent.qml:51
 msgid "Searching for current location..."
-msgstr "Тражим тренутну локацију..."
+msgstr ""
 
 #: ../app/components/HomePageEmptyStateComponent.qml:52
 msgid "Cannot determine your location"
-msgstr "Не могу одредити вашу локацију"
+msgstr ""
 
 #: ../app/components/HomePageEmptyStateComponent.qml:62
 msgid "Manually add a location by swiping up from the bottom of the display"
-msgstr "Ручно додајте локацију превлачењем на горе са дна екрана"
+msgstr ""
 
 #: ../app/components/HomeTempInfo.qml:103
 msgid "Today"
-msgstr "Данас"
+msgstr ""
 
 #: ../app/components/ListItemActions/Remove.qml:26
 msgid "Remove"
-msgstr "Уклони"
+msgstr ""
 
 #: ../app/components/LocationsPageEmptyStateComponent.qml:36
 msgid "No locations found. Tap the plus icon to search for one."
-msgstr "Није нађена локација. Кликните на плус икону да потражите."
+msgstr ""
 
 #: ../app/components/MultiSelectHeadState.qml:27
 msgid "Select All"
-msgstr "Изабери све"
+msgstr ""
 
 #: ../app/components/MultiSelectHeadState.qml:39
 msgid "Delete"
-msgstr "Обриши"
+msgstr ""
 
 #: ../app/components/MultiSelectHeadState.qml:51
 msgid "Cancel selection"
-msgstr "Откажи избор"
+msgstr ""
 
 #: ../app/components/NetworkErrorStateComponent.qml:48
 msgid "Network Error"
-msgstr "Грешка на мрежи"
+msgstr ""
 
 #: ../app/components/NetworkErrorStateComponent.qml:57
 msgid "Please check your network settings and try again."
-msgstr "Проверите ваша подешавања мреже па покушајте поново."
+msgstr ""
 
 #: ../app/components/NetworkErrorStateComponent.qml:63
 msgid "Retry"
-msgstr "Покушај поново"
+msgstr ""
 
 #: ../app/ui/AddLocationPage.qml:29
 msgid "Select a city"
-msgstr "Одаберите град"
+msgstr ""
 
 #: ../app/ui/AddLocationPage.qml:47 ../app/ui/AddLocationPage.qml:69
 msgid "Back"
-msgstr "Назад"
+msgstr ""
 
 #: ../app/ui/AddLocationPage.qml:54
 msgid "City"
-msgstr "Град"
+msgstr ""
 
 #: ../app/ui/AddLocationPage.qml:113
 msgid "Search city"
-msgstr "Потражи град"
+msgstr ""
 
 #: ../app/ui/AddLocationPage.qml:297
 msgid "No city found"
-msgstr "Град није нађен"
+msgstr ""
 
 #: ../app/ui/AddLocationPage.qml:310
 msgid "Couldn't load weather data, please try later again!"
-msgstr "Не могу учитати податке о времену, покушајте касније поново!"
+msgstr ""
 
 #: ../app/ui/AddLocationPage.qml:320
 msgid "Location already added."
-msgstr "Локација је већ додата."
+msgstr ""
 
 #: ../app/ui/AddLocationPage.qml:323
 msgid "OK"
-msgstr "У реду"
+msgstr ""
 
 #: ../app/ui/HomePage.qml:31 ../app/ui/LocationsPage.qml:29
 msgid "Locations"
-msgstr "Локације"
+msgstr ""
 
 #: ../app/ui/LocationsPage.qml:109
 msgid "Current Location"
-msgstr "Тренутна локација"
+msgstr ""
 
 #: ../app/ui/SettingsPage.qml:24
 msgid "Settings"
-msgstr "Подешавања"
+msgstr ""
 
 #: ../app/ui/SettingsPage.qml:33 ../app/ui/settings/UnitsPage.qml:24
 msgid "Units"
-msgstr "Јединице мере"
+msgstr ""
 
 #: ../app/ui/SettingsPage.qml:38 ../app/ui/settings/DataProviderPage.qml:25
 msgid "Data Provider"
-msgstr "Добављач услуге"
+msgstr ""
 
 #: ../app/ui/SettingsPage.qml:43 ../app/ui/settings/RefreshIntervalPage.qml:24
 msgid "Refresh Interval"
-msgstr "Интервал освежавања"
+msgstr ""
 
 #: ../app/ui/SettingsPage.qml:48 ../app/ui/settings/LocationPage.qml:24
 msgid "Location"
-msgstr "Локација"
+msgstr ""
 
 #: ../app/ui/settings/DataProviderPage.qml:37
 msgid "Provider"
-msgstr "Добављач"
+msgstr ""
 
 #: ../app/ui/settings/LocationPage.qml:32
 msgid "Detect current location"
-msgstr "Откриј тренутну локацију"
+msgstr ""
 
 #: ../app/ui/settings/RefreshIntervalPage.qml:30
 #: ../app/ui/settings/RefreshIntervalPage.qml:31
@@ -171,62 +170,59 @@ msgstr "Откриј тренутну локацију"
 #, qt-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
-msgstr[0] "%1 минут"
-msgstr[1] "%1 минута"
-msgstr[2] "%1 минута"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../app/ui/settings/RefreshIntervalPage.qml:42
 msgid "Interval"
-msgstr "Интервал"
+msgstr ""
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of temperature in Celcius and are shown in the settings page.
 #. Only the abbreviated form of Celcius should be used.
 #: ../app/ui/settings/UnitsPage.qml:42 ../app/ui/settings/UnitsPage.qml:78
 msgid "°C"
-msgstr "°C"
+msgstr ""
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of temperature in Fahrenheit and are shown in the settings page.
 #. Only the abbreviated form of Fahrenheit should be used.
 #: ../app/ui/settings/UnitsPage.qml:47 ../app/ui/settings/UnitsPage.qml:79
 msgid "°F"
-msgstr "°F"
+msgstr ""
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of wind speed in kilometers per hour and are shown in the settings page.
 #. Only the abbreviated form of kilometers per hour should be used.
 #: ../app/ui/settings/UnitsPage.qml:58 ../app/ui/settings/UnitsPage.qml:99
 msgid "kph"
-msgstr "км/с"
+msgstr ""
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of wind speed in miles per hour and are shown in the settings page.
 #. Only the abbreviated form of miles per hour should be used.
 #: ../app/ui/settings/UnitsPage.qml:63 ../app/ui/settings/UnitsPage.qml:100
 msgid "mph"
-msgstr "ми/ч"
+msgstr ""
 
 #: ../app/ui/settings/UnitsPage.qml:77
 msgid "Temperature"
-msgstr "Температура"
+msgstr ""
 
 #: ../app/ui/settings/UnitsPage.qml:98
 msgid "Wind Speed"
-msgstr "Брзина ветра"
+msgstr ""
 
 #: ubuntu-weather-app.desktop.in.in.h:1
 msgid "Weather"
-msgstr "Време"
+msgstr ""
 
 #: ubuntu-weather-app.desktop.in.in.h:2
 msgid ""
 "A weather forecast application for Ubuntu with support for multiple online "
 "weather data sources"
 msgstr ""
-"Програм за временску прогнозу за Убунту са подршком за више извора података "
-"о времену са интернета"
 
 #: ubuntu-weather-app.desktop.in.in.h:3
 msgid "weather;forecast;twc;openweathermap;the weather channel;"
-msgstr "време;прогноза;временске прилике;twc;openweathermap;weather channel;"
+msgstr ""
