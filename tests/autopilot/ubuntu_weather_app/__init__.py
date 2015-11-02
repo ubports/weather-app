@@ -130,7 +130,7 @@ class AddLocationPage(Page):
         return header.select_single("TextField", objectName="searchField")
 
     def is_empty_label_visible(self):
-        return self.select_single("Label", objectName="noCity").visible
+        return self.select_single("UCLabel", objectName="noCity").visible
 
     def search(self, value):
         self.click_search_action()
@@ -308,7 +308,7 @@ class UnitsPage(Page):
 
 class WeatherListItem(UbuntuUIToolkitCustomProxyObjectBase):
     def get_name(self):
-        return self.select_single("Label", objectName="name").text
+        return self.select_single("UCLabel", objectName="name").text
 
     @click_object
     def select_remove(self):

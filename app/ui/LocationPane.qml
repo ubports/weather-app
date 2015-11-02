@@ -17,7 +17,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2
+import Ubuntu.Components 1.3
 import Ubuntu.Components.ListItems 0.1 as ListItem
 import "../components"
 import "../data/suncalc.js" as SunCalc

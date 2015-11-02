@@ -17,7 +17,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2
+import Ubuntu.Components 1.3
 import "../components"
 
 
@@ -81,6 +81,12 @@ PageWithBottomEdge {
     */
     function getDate(dateData) {
         return new Date(dateData.year, dateData.month, dateData.date, dateData.hours, dateData.minutes)
+    }
+
+    // Do not show the Page Header
+    head {
+        locked: true
+        visible: false
     }
 
     /*

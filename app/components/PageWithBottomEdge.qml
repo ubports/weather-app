@@ -63,7 +63,7 @@
 */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2
+import Ubuntu.Components 1.3
 
 Page {
     id: page
@@ -77,7 +77,8 @@ Page {
     property bool reloadBottomEdgePage: true
 
     readonly property alias bottomEdgePage: edgeLoader.item
-    readonly property bool isReady: ((bottomEdge.y === fakeHeader.height) && bottomEdgePageLoaded && edgeLoader.item.active) // CUSTOM change to flag to allow for FakeHeader height
+    // FIXME: 6.125 is the header.height
+    readonly property bool isReady: ((bottomEdge.y === units.gu(6.125)) && bottomEdgePageLoaded && edgeLoader.item.active) // CUSTOM change to flag to allow for FakeHeader height
     readonly property bool isCollapsed: (bottomEdge.y === page.height)
     readonly property bool bottomEdgePageLoaded: (edgeLoader.status == Loader.Ready)
 
@@ -108,7 +109,7 @@ Page {
             edgeLoader.item.active = true
             page.pageStack.push(edgeLoader.item)
             if (edgeLoader.item.flickable) {
-                edgeLoader.item.flickable.contentY = -page.header.height
+                edgeLoader.item.flickable.contentY = -units.gu(6.125)  // FIXME: 6.125 is the header.height
                 edgeLoader.item.flickable.returnToBounds()
             }
             if (edgeLoader.item.ready)
@@ -278,7 +279,8 @@ Page {
             left: parent.left
             right: parent.right
         }
-        y: -fakeHeader.height + (fakeHeader.height * (page.height - bottomEdge.y)) / (page.height - fakeHeader.height)
+        // FIXME: 6.125 is the header.height
+        y: -units.gu(6.125) + (units.gu(6.125) * (page.height - bottomEdge.y)) / (page.height - units.gu(6.125))
         z: bgVisual.z + 1
 
         Behavior on y {
@@ -294,7 +296,7 @@ Page {
 
         readonly property int tipHeight: units.gu(3)
         // CUSTOM value
-        readonly property int pageStartY: fakeHeader.height
+        readonly property int pageStartY: units.gu(6.125)  // FIXME: 6.125 is the header.height
 
         z: 1
         color: Theme.palette.normal.background
@@ -318,7 +320,7 @@ Page {
                 // CUSTOM
                 PropertyChanges {
                     target: fakeHeader
-                    y: -fakeHeader.height
+                    y: -units.gu(6.125)  // FIXME: 6.125 is the header.height
                 }
             },
             State {
@@ -363,6 +365,7 @@ Page {
                             easing.type: Easing.Linear
                         }
                     }
+                    /*  // CUSTOM
                     SmoothedAnimation {
                         target: edgeLoader
                         property: "anchors.topMargin"
@@ -370,6 +373,7 @@ Page {
                         duration: UbuntuAnimation.FastDuration
                         easing.type: Easing.Linear
                     }
+                    */
                     SmoothedAnimation {
                         target: edgeLoader
                         property: "anchors.topMargin"
@@ -441,14 +445,19 @@ Page {
             id: edgeLoader
 
             asynchronous: true
-            anchors.fill: parent
+            anchors {
+                fill: parent
+                topMargin: units.gu(6.125)  // CUSTOM
+            }
             //WORKAROUND: The SDK move the page contents down to allocate space for the header we need to avoid that during the page dragging
+            /*  // CUSTOM
             Binding {
                 target: edgeLoader.status === Loader.Ready ? edgeLoader : null
                 property: "anchors.topMargin"
                 value:  edgeLoader.item && edgeLoader.item.flickable ? edgeLoader.item.flickable.contentY : 0
                 when: !page.isReady
             }
+            */
 
             onLoaded: {
                 tip.forceActiveFocus()

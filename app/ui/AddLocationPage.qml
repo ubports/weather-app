@@ -17,8 +17,8 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2
-import Ubuntu.Components.Popups 1.0
+import Ubuntu.Components 1.3
+import Ubuntu.Components.Popups 1.3
 import "../components"
 import "../data/CitiesList.js" as Cities
 import "../data/WeatherApi.js" as WeatherApi
@@ -180,13 +180,15 @@ Page {
 
     ListView {
         id: locationList
-        objectName: "locationList"
+        anchors {
+            fill: parent
+            rightMargin: fastScroll.showing ? fastScroll.width - units.gu(1) : 0
+            topMargin: units.gu(2)
+        }
 
+        objectName: "locationList"
         clip: true
         currentIndex: -1
-        anchors.fill: parent
-        anchors.rightMargin: fastScroll.showing ? fastScroll.width - units.gu(1)
-                                                : 0
 
         function getSectionText(index) {
             return citiesModel.get(index).name.substring(0,1)

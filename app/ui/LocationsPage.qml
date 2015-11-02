@@ -17,7 +17,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2
+import Ubuntu.Components 1.3
 import Ubuntu.Components.ListItems 0.1 as ListItem
 import "../components"
 import "../components/ListItemActions"
@@ -66,7 +66,7 @@ Page {
         anchors {
             fill: parent
             // TODO: Fix this offset
-            topMargin: locationsPage.header ? -locationsPage.header.height : 0
+            topMargin: -units.gu(6.125)  // FIXME: 6.125 is the header.height
         }
         model: ListModel {
             id: locationsModel
