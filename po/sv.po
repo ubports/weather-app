@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-10-22 16:15+0100\n"
+"POT-Creation-Date: 2015-10-25 21:12+0100\n"
 "PO-Revision-Date: 2015-07-29 11:31+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Swedish <sv@li.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-10-23 05:51+0000\n"
+"X-Launchpad-Export-Date: 2015-10-26 05:27+0000\n"
 "X-Generator: Launchpad (build 17812)\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
@@ -87,7 +87,7 @@ msgid "Network Error"
 msgstr ""
 
 #: ../app/components/NetworkErrorStateComponent.qml:57
-msgid "Ubuntu suggests you check your network settings and try again."
+msgid "Please check your network settings and try again."
 msgstr ""
 
 #: ../app/components/NetworkErrorStateComponent.qml:63

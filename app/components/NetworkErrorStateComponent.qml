@@ -54,7 +54,7 @@ Rectangle {
             anchors {
                 horizontalCenter: parent.horizontalCenter
             }
-            text: i18n.tr("Ubuntu suggests you check your network settings and try again.")
+            text: i18n.tr("Please check your network settings and try again.")
             width: parent.width
             wrapMode: Text.WordWrap
         }

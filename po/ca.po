@@ -1,4 +1,4 @@
-# Breton translation for ubuntu-weather-app
+# Catalan translation for ubuntu-weather-app
 # Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the ubuntu-weather-app package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
@@ -8,162 +8,162 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-10-25 21:12+0100\n"
-"PO-Revision-Date: 2015-10-05 06:24+0000\n"
-"Last-Translator: Fohanno Thierry <thierry.fohanno@ofis-bzh.org>\n"
-"Language-Team: Breton <br@li.org>\n"
+"PO-Revision-Date: 2015-10-30 20:30+0000\n"
+"Last-Translator: Felip <felip@openmailbox.org>\n"
+"Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2015-10-26 05:27+0000\n"
-"X-Generator: Launchpad (build 17812)\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2015-10-31 05:36+0000\n"
+"X-Generator: Launchpad (build 17838)\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of rain"
-msgstr "Riskloù glav"
+msgstr "Probabilitat de pluja"
 
 #: ../app/components/DayDelegateExtraInfo.qml:59
 msgid "Winds"
-msgstr "Avelioù"
+msgstr "Vent"
 
 #: ../app/components/DayDelegateExtraInfo.qml:68
 msgid "UV Index"
-msgstr "Feur UL"
+msgstr "Índex UV"
 
 #: ../app/components/DayDelegateExtraInfo.qml:74
 msgid "Pollen"
-msgstr "Pollen"
+msgstr "Pol·len"
 
 #: ../app/components/DayDelegateExtraInfo.qml:81
 msgid "Humidity"
-msgstr "Glebor"
+msgstr "Humitat"
 
 #: ../app/components/DayDelegateExtraInfo.qml:88
 msgid "Sunrise"
-msgstr "Sav-heol"
+msgstr "Sortida del sol"
 
 #: ../app/components/DayDelegateExtraInfo.qml:95
 msgid "Sunset"
-msgstr "Kuzh-heol"
+msgstr "Posta del sol"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:51
 msgid "Searching for current location..."
-msgstr "O klask pelec'h emaoc'h..."
+msgstr "S'està cercant la ubicació actual..."
 
 #: ../app/components/HomePageEmptyStateComponent.qml:52
 msgid "Cannot determine your location"
-msgstr "N'haller ket kavout pelec'h emaoc'h"
+msgstr "No s'ha pogut determinar la vostra ubicació"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:62
 msgid "Manually add a location by swiping up from the bottom of the display"
-msgstr "Ouzhpennañ ul lec'h gant an dorn en ur riklañ adalek traoñ ar skramm"
+msgstr ""
+"Llisqueu el dit cap amunt des de la vora inferior per afegir una ubicació "
+"manualment"
 
 #: ../app/components/HomeTempInfo.qml:103
 msgid "Today"
-msgstr "Hiziv"
+msgstr "Avui"
 
 #: ../app/components/ListItemActions/Remove.qml:26
 msgid "Remove"
-msgstr "Lemel"
+msgstr "Suprimeix"
 
 #: ../app/components/LocationsPageEmptyStateComponent.qml:36
 msgid "No locations found. Tap the plus icon to search for one."
-msgstr ""
-"N'eus bet kavet lec'h ebet. Pouezit war an arlun « + » evit klask unan."
+msgstr "No s'ha trobat cap ubicació. Premeu la icona «+» per cercar-ne una."
 
 #: ../app/components/MultiSelectHeadState.qml:27
 msgid "Select All"
-msgstr "Diuzañ pep tra"
+msgstr "Selecciona-ho tot"
 
 #: ../app/components/MultiSelectHeadState.qml:39
 msgid "Delete"
-msgstr "Diverkañ"
+msgstr "Suprimeix"
 
 #: ../app/components/MultiSelectHeadState.qml:51
 msgid "Cancel selection"
-msgstr "Nullañ an diuzadur"
+msgstr "Cancel·la la selecció"
 
 #: ../app/components/NetworkErrorStateComponent.qml:48
 msgid "Network Error"
-msgstr "Fazi gant ar rouedad"
+msgstr "Error de xarxa"
 
 #: ../app/components/NetworkErrorStateComponent.qml:57
 msgid "Please check your network settings and try again."
-msgstr ""
+msgstr "Comproveu els paràmetres de la xarxa i torneu-ho a provar."
 
 #: ../app/components/NetworkErrorStateComponent.qml:63
 msgid "Retry"
-msgstr "Esaeañ en-dro"
+msgstr "Torna-ho a provar"
 
 #: ../app/ui/AddLocationPage.qml:29
 msgid "Select a city"
-msgstr "Diuzañ ur gêr"
+msgstr "Seleccioneu una ciutat"
 
 #: ../app/ui/AddLocationPage.qml:47 ../app/ui/AddLocationPage.qml:69
 msgid "Back"
-msgstr "Distreiñ"
+msgstr "Enrere"
 
 #: ../app/ui/AddLocationPage.qml:54
 msgid "City"
-msgstr "Kêr"
+msgstr "Ciutat"
 
 #: ../app/ui/AddLocationPage.qml:113
 msgid "Search city"
-msgstr "Klask ur gêr"
+msgstr "Cerca una ciutat"
 
 #: ../app/ui/AddLocationPage.qml:297
 msgid "No city found"
-msgstr "N'eus bet kavet kêr ebet"
+msgstr "No s'ha trobat la ciutat"
 
 #: ../app/ui/AddLocationPage.qml:310
 msgid "Couldn't load weather data, please try later again!"
 msgstr ""
-"N'eus ket bet gallet kargañ roadennoù an amzer, esaeit en-dro diwezhatoc'h, "
-"mar plij !"
+"No s'han pogut carregar les dades del temps, torneu-ho a provar més endavant."
 
 #: ../app/ui/AddLocationPage.qml:320
 msgid "Location already added."
-msgstr "Lec'h bet ouzhpennet dija."
+msgstr "Ja s'h afegit la ubicació."
 
 #: ../app/ui/AddLocationPage.qml:323
 msgid "OK"
-msgstr "Mat eo"
+msgstr "D'acord"
 
 #: ../app/ui/HomePage.qml:31 ../app/ui/LocationsPage.qml:29
 msgid "Locations"
-msgstr "Lec'hioù"
+msgstr "Ubicacions"
 
 #: ../app/ui/LocationsPage.qml:109
 msgid "Current Location"
-msgstr "Lec'h m'emaoc'h"
+msgstr "Ubicació actual"
 
 #: ../app/ui/SettingsPage.qml:24
 msgid "Settings"
-msgstr "Arventennoù"
+msgstr "Paràmetres"
 
 #: ../app/ui/SettingsPage.qml:33 ../app/ui/settings/UnitsPage.qml:24
 msgid "Units"
-msgstr "Unanennoù"
+msgstr "Unitats"
 
 #: ../app/ui/SettingsPage.qml:38 ../app/ui/settings/DataProviderPage.qml:25
 msgid "Data Provider"
-msgstr "Pourchaser roadennoù"
+msgstr "Proveïdor de dades"
 
 #: ../app/ui/SettingsPage.qml:43 ../app/ui/settings/RefreshIntervalPage.qml:24
 msgid "Refresh Interval"
-msgstr "Koulzad freskaat"
+msgstr "Interval de refresc"
 
 #: ../app/ui/SettingsPage.qml:48 ../app/ui/settings/LocationPage.qml:24
 msgid "Location"
-msgstr "Lec'h"
+msgstr "Ubicació"
 
 #: ../app/ui/settings/DataProviderPage.qml:37
 msgid "Provider"
-msgstr "Pourchaser"
+msgstr "Proveïdor"
 
 #: ../app/ui/settings/LocationPage.qml:32
 msgid "Detect current location"
-msgstr "Kavout al lec'h m'emaoc'h"
+msgstr "Detecta la ubicació actual"
 
 #: ../app/ui/settings/RefreshIntervalPage.qml:30
 #: ../app/ui/settings/RefreshIntervalPage.qml:31
@@ -173,12 +173,12 @@ msgstr "Kavout al lec'h m'emaoc'h"
 #, qt-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
-msgstr[0] "%1 vunutenn"
-msgstr[1] "%1 a vunutoù"
+msgstr[0] "%1 minut"
+msgstr[1] "%1 minuts"
 
 #: ../app/ui/settings/RefreshIntervalPage.qml:42
 msgid "Interval"
-msgstr "Koulzad"
+msgstr "Interval"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of temperature in Celcius and are shown in the settings page.
@@ -199,35 +199,36 @@ msgstr "°F"
 #. Only the abbreviated form of kilometers per hour should be used.
 #: ../app/ui/settings/UnitsPage.qml:58 ../app/ui/settings/UnitsPage.qml:99
 msgid "kph"
-msgstr "km/e"
+msgstr "km/h"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of wind speed in miles per hour and are shown in the settings page.
 #. Only the abbreviated form of miles per hour should be used.
 #: ../app/ui/settings/UnitsPage.qml:63 ../app/ui/settings/UnitsPage.qml:100
 msgid "mph"
-msgstr "miltir/e"
+msgstr ""
 
 #: ../app/ui/settings/UnitsPage.qml:77
 msgid "Temperature"
-msgstr "Gwrez"
+msgstr "Temperatura"
 
 #: ../app/ui/settings/UnitsPage.qml:98
 msgid "Wind Speed"
-msgstr "Tizh an avel"
+msgstr "Velocitat del vent"
 
 #: ubuntu-weather-app.desktop.in.in.h:1
 msgid "Weather"
-msgstr "Amzer"
+msgstr "El temps"
 
 #: ubuntu-weather-app.desktop.in.in.h:2
 msgid ""
 "A weather forecast application for Ubuntu with support for multiple online "
 "weather data sources"
 msgstr ""
-"Un arload war Ubuntu evit gouzout petra e vo liv an amzer, hag a gemer e "
-"karg meur a vammenn roadennoù meteorologel enlinenn"
+"Aplicació de predicció del temps que funciona amb diverses fonts de dades "
+"meteorològiques en línia"
 
 #: ubuntu-weather-app.desktop.in.in.h:3
 msgid "weather;forecast;twc;openweathermap;the weather channel;"
-msgstr "amzer;rakwelet;twc;openweathermap;chadenn an amzer;"
+msgstr ""
+"el temps;predicció;meteorologia;openweathermap;the weather channel;twc;"

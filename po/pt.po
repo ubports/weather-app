@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-10-22 16:15+0100\n"
-"PO-Revision-Date: 2015-09-20 10:38+0000\n"
+"POT-Creation-Date: 2015-10-25 21:12+0100\n"
+"PO-Revision-Date: 2015-10-30 08:35+0000\n"
 "Last-Translator: Ivo Xavier <ivofernandes12@gmail.com>\n"
 "Language-Team: Portuguese <pt@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-10-23 05:51+0000\n"
-"X-Generator: Launchpad (build 17812)\n"
+"X-Launchpad-Export-Date: 2015-10-31 05:36+0000\n"
+"X-Generator: Launchpad (build 17838)\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of rain"
@@ -68,7 +68,7 @@ msgstr "Remover"
 
 #: ../app/components/LocationsPageEmptyStateComponent.qml:36
 msgid "No locations found. Tap the plus icon to search for one."
-msgstr "Sem locais encontrados. Clique no botão '+' para procurar uma."
+msgstr "Sem locais encontrados. Clique no botão '+' para procurar."
 
 #: ../app/components/MultiSelectHeadState.qml:27
 msgid "Select All"
@@ -87,8 +87,8 @@ msgid "Network Error"
 msgstr "Erro na rede"
 
 #: ../app/components/NetworkErrorStateComponent.qml:57
-msgid "Ubuntu suggests you check your network settings and try again."
-msgstr "Verifique novamente as suas definições de rede e tente novamente."
+msgid "Please check your network settings and try again."
+msgstr "Verifique as suas definições de rede e tente novamente."
 
 #: ../app/components/NetworkErrorStateComponent.qml:63
 msgid "Retry"

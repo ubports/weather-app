@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-02 20:59+0000\n"
+"POT-Creation-Date: 2015-11-02 21:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -87,7 +87,7 @@ msgid "Network Error"
 msgstr ""
 
 #: ../app/components/NetworkErrorStateComponent.qml:57
-msgid "Ubuntu suggests you check your network settings and try again."
+msgid "Please check your network settings and try again."
 msgstr ""
 
 #: ../app/components/NetworkErrorStateComponent.qml:63
@@ -110,19 +110,19 @@ msgstr ""
 msgid "Search city"
 msgstr ""
 
-#: ../app/ui/AddLocationPage.qml:297
+#: ../app/ui/AddLocationPage.qml:299
 msgid "No city found"
 msgstr ""
 
-#: ../app/ui/AddLocationPage.qml:310
+#: ../app/ui/AddLocationPage.qml:312
 msgid "Couldn't load weather data, please try later again!"
 msgstr ""
 
-#: ../app/ui/AddLocationPage.qml:320
+#: ../app/ui/AddLocationPage.qml:322
 msgid "Location already added."
 msgstr ""
 
-#: ../app/ui/AddLocationPage.qml:323
+#: ../app/ui/AddLocationPage.qml:325
 msgid "OK"
 msgstr ""
 

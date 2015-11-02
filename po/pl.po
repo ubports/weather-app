@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-10-22 16:15+0100\n"
-"PO-Revision-Date: 2015-10-21 16:24+0000\n"
-"Last-Translator: Seweryn Opyd <Unknown>\n"
+"POT-Creation-Date: 2015-10-25 21:12+0100\n"
+"PO-Revision-Date: 2015-10-29 22:04+0000\n"
+"Last-Translator: Bartosz Kosiorek <Unknown>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2015-10-23 05:51+0000\n"
-"X-Generator: Launchpad (build 17812)\n"
+"X-Launchpad-Export-Date: 2015-10-30 05:36+0000\n"
+"X-Generator: Launchpad (build 17838)\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of rain"
@@ -89,8 +89,8 @@ msgid "Network Error"
 msgstr "Błąd sieci"
 
 #: ../app/components/NetworkErrorStateComponent.qml:57
-msgid "Ubuntu suggests you check your network settings and try again."
-msgstr "Sprawdź ustawienia sieci oraz spróbuj jeszcze raz."
+msgid "Please check your network settings and try again."
+msgstr "Proszę sprawdzić ustawienia sieci i spróbować ponownie."
 
 #: ../app/components/NetworkErrorStateComponent.qml:63
 msgid "Retry"
@@ -126,7 +126,7 @@ msgstr "Lokalizacja została już dodana."
 
 #: ../app/ui/AddLocationPage.qml:323
 msgid "OK"
-msgstr "OK"
+msgstr "Ok"
 
 #: ../app/ui/HomePage.qml:31 ../app/ui/LocationsPage.qml:29
 msgid "Locations"
@@ -162,7 +162,7 @@ msgstr "Dostawca"
 
 #: ../app/ui/settings/LocationPage.qml:32
 msgid "Detect current location"
-msgstr "Wykryj bieżące położenie"
+msgstr "Wykrywaj bieżące położenie"
 
 #: ../app/ui/settings/RefreshIntervalPage.qml:30
 #: ../app/ui/settings/RefreshIntervalPage.qml:31
