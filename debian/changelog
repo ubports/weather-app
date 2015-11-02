@@ -2,6 +2,7 @@ ubuntu-weather-app (3.1ubuntu1) UNRELEASED; urgency=medium
 
   [ Andrew Hayzen ]
   * Bump version to 3.1
+  * Update app to use the Ubuntu Components version 1.3 (LP: #1508363)
 
   [ Bartosz Kosiorek ]
   * Change message text according to Ubuntu UX comment (LP: #1493466)
@@ -70,7 +71,6 @@ ubuntu-weather-app (3.0ubuntu1) vivid; urgency=medium
   * Implement extra info expandable for today info (LP: #1496422, LP: #1478255)
   * Fix for autopilot tests not using custom back button and for possible flaky test due to expandHeight changing dynamically
   * Fix to link the Wind Speed unit to the Wind Unit setting and not the Temperature Unit setting
-  * Update app to use the Ubuntu Components version 1.3 (LP: #1508363)
 
   [ Carla Sella ]
   * Create autopilot test which shows the day delegate (LP: #1452491)
