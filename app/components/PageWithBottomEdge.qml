@@ -365,15 +365,13 @@ Page {
                             easing.type: Easing.Linear
                         }
                     }
-                    /*  // CUSTOM
                     SmoothedAnimation {
                         target: edgeLoader
                         property: "anchors.topMargin"
-                        to: - units.gu(4)
+                        to: - units.gu(6.125)  // FIXME: 6.125 is header height
                         duration: UbuntuAnimation.FastDuration
                         easing.type: Easing.Linear
                     }
-                    */
                     SmoothedAnimation {
                         target: edgeLoader
                         property: "anchors.topMargin"
