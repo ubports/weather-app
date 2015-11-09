@@ -1,2 +1,2 @@
 var twcKey = "";
-var owmKey = "";  // goto http://openweathermap.org/appid to get a personal API key
+var owmKey = "";  // See README for details on how to obtain a personal API key

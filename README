@@ -4,6 +4,15 @@ To contribute:
     https://wiki.ubuntu.com/Touch/CoreApps/Weather
     https://wiki.ubuntu.com/Touch/CoreApps/DevelopmentGuide
 
+Note: The OpenWeatherMap service now requires an API key where previously
+      it did not. FOSS developers can register for a free API key
+      which needs to be put into app/data/keys.js for the app to 
+      function correctly. Do not commit branches with the key in place
+      as a centrally managed key is injected at build time.
+
+      See http://openweathermap.org/faq#error401 for details and
+      http://openweathermap.org/appid to obtain a personal key.
+
 The following essential packages are required to develop this app:
 - ubuntu-sdk (see http://developer.ubuntu.com/start)
 - intltool - run the `sudo apt-get install intltool` command for installation
