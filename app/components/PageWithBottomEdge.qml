@@ -86,7 +86,7 @@ Page {
     property int _areaWhenExpanded: 0
 
     // CUSTOM properties to allow changing of color
-    property alias tipColor: tip.color
+    property alias tipColor: tip.backgroundColor  // CUSTOM color => backgroundColor
     property alias tipLabelColor: tipLabel.color
 
     signal bottomEdgeReleased()
@@ -181,7 +181,7 @@ Page {
         z: 1
         width: tipLabel.paintedWidth + units.gu(6)
         height: bottomEdge.tipHeight + units.gu(1)
-        color: Theme.palette.normal.overlay
+        backgroundColor: Theme.palette.normal.overlay  // CUSTOM color => backgroundColor
         Label {
             id: tipLabel
 

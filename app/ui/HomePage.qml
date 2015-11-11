@@ -26,6 +26,7 @@ PageWithBottomEdge {
     id: locationPage
     objectName: "homePage"
     flickable: null
+    title: i18n.tr("Weather")
 
     bottomEdgePageSource: Qt.resolvedUrl("LocationsPage.qml")
     bottomEdgeTitle: i18n.tr("Locations")
