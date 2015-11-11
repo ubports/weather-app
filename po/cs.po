@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-10-25 21:12+0100\n"
+"POT-Creation-Date: 2015-11-09 19:59-0600\n"
 "PO-Revision-Date: 2015-08-11 23:21+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2015-10-26 05:27+0000\n"
-"X-Generator: Launchpad (build 17812)\n"
+"X-Launchpad-Export-Date: 2015-11-11 05:56+0000\n"
+"X-Generator: Launchpad (build 17843)\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of rain"
@@ -36,7 +36,7 @@ msgstr ""
 
 #: ../app/components/DayDelegateExtraInfo.qml:81
 msgid "Humidity"
-msgstr ""
+msgstr "Vlhkost"
 
 #: ../app/components/DayDelegateExtraInfo.qml:88
 msgid "Sunrise"
@@ -94,6 +94,16 @@ msgstr ""
 msgid "Retry"
 msgstr ""
 
+#: ../app/components/NoAPIKeyErrorStateComponent.qml:48
+msgid "No API Keys Found"
+msgstr ""
+
+#: ../app/components/NoAPIKeyErrorStateComponent.qml:57
+msgid ""
+"If you are a developer, please see the README file for instructions on how "
+"to obtain your own Open Weather Map API key."
+msgstr ""
+
 #: ../app/ui/AddLocationPage.qml:29
 msgid "Select a city"
 msgstr ""
@@ -116,19 +126,19 @@ msgstr ""
 
 #: ../app/ui/AddLocationPage.qml:310
 msgid "Couldn't load weather data, please try later again!"
-msgstr ""
+msgstr "Nezle načíst údaje o počasí, zkuste to prosím později."
 
 #: ../app/ui/AddLocationPage.qml:320
 msgid "Location already added."
-msgstr ""
+msgstr "Umístění bylo již přidáno."
 
 #: ../app/ui/AddLocationPage.qml:323
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: ../app/ui/HomePage.qml:31 ../app/ui/LocationsPage.qml:29
 msgid "Locations"
-msgstr ""
+msgstr "Umístění"
 
 #: ../app/ui/LocationsPage.qml:109
 msgid "Current Location"
@@ -136,7 +146,7 @@ msgstr ""
 
 #: ../app/ui/SettingsPage.qml:24
 msgid "Settings"
-msgstr ""
+msgstr "Nastavení"
 
 #: ../app/ui/SettingsPage.qml:33 ../app/ui/settings/UnitsPage.qml:24
 msgid "Units"
@@ -215,14 +225,14 @@ msgstr ""
 
 #: ubuntu-weather-app.desktop.in.in.h:1
 msgid "Weather"
-msgstr ""
+msgstr "Počasí"
 
 #: ubuntu-weather-app.desktop.in.in.h:2
 msgid ""
 "A weather forecast application for Ubuntu with support for multiple online "
 "weather data sources"
-msgstr ""
+msgstr "Aplikace předpovědi počasí pro Ubuntu s podporou mnoha online zdrojů"
 
 #: ubuntu-weather-app.desktop.in.in.h:3
 msgid "weather;forecast;twc;openweathermap;the weather channel;"
-msgstr ""
+msgstr "počasí;předpověď;twc;openweathermat;the weather channel;"
