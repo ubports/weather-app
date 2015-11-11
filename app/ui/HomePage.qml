@@ -19,6 +19,7 @@
 import QtQuick 2.4
 import Ubuntu.Components 1.3
 import "../components"
+import "../data/keys.js" as Keys
 
 
 PageWithBottomEdge {
@@ -173,12 +174,22 @@ PageWithBottomEdge {
     }
     
     Loader {
-        active: networkError && mainPageStack.depth === 1
+        active: networkError && mainPageStack.depth === 1 && (Keys.twcKey || Keys.owmKey)
         anchors {
             fill: parent
         }
         asynchronous: true
         source: "../components/NetworkErrorStateComponent.qml"
+        visible: status === Loader.Ready && active
+    }
+
+    Loader {
+        active: mainPageStack.depth === 1 && !Keys.twcKey && !Keys.owmKey
+        anchors {
+            fill: parent
+        }
+        asynchronous: true
+        source: "../components/NoAPIKeyErrorStateComponent.qml"
         visible: status === Loader.Ready && active
     }
 }

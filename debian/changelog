@@ -7,6 +7,12 @@ ubuntu-weather-app (3.1ubuntu1) UNRELEASED; urgency=medium
   [ Bartosz Kosiorek ]
   * Change message text according to Ubuntu UX comment (LP: #1493466)
 
+  [ Alan Pope ]
+  * Describe how to get a key in the README. Mention this in the keys.js.
+
+  [ Victor Thompson ]
+  * Create an error state when there are no keys found.
+
  -- Andrew Hayzen <ahayzen@gmail.com>  Sat, 24 Oct 2015 20:22:31 +0100
 
 ubuntu-weather-app (3.0ubuntu1) vivid; urgency=medium
