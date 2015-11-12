@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-11 04:01+0000\n"
+"POT-Creation-Date: 2015-11-12 01:49+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -92,6 +92,16 @@ msgstr ""
 
 #: ../app/components/NetworkErrorStateComponent.qml:63
 msgid "Retry"
+msgstr ""
+
+#: ../app/components/NoAPIKeyErrorStateComponent.qml:48
+msgid "No API Keys Found"
+msgstr ""
+
+#: ../app/components/NoAPIKeyErrorStateComponent.qml:57
+msgid ""
+"If you are a developer, please see the README file for instructions on how "
+"to obtain your own Open Weather Map API key."
 msgstr ""
 
 #: ../app/ui/AddLocationPage.qml:29
