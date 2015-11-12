@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-11-09 19:59-0600\n"
-"PO-Revision-Date: 2015-09-11 08:58+0000\n"
+"PO-Revision-Date: 2015-11-11 14:11+0000\n"
 "Last-Translator: Richard Somlói <ricsipontaz@gmail.com>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-11-11 05:56+0000\n"
+"X-Launchpad-Export-Date: 2015-11-12 05:39+0000\n"
 "X-Generator: Launchpad (build 17843)\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
@@ -90,7 +90,7 @@ msgstr "Hálózati hiba"
 
 #: ../app/components/NetworkErrorStateComponent.qml:57
 msgid "Please check your network settings and try again."
-msgstr ""
+msgstr "Ellenőrizze a hálózati beállításait és próbálja újra."
 
 #: ../app/components/NetworkErrorStateComponent.qml:63
 msgid "Retry"
@@ -98,13 +98,15 @@ msgstr "Újra"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:48
 msgid "No API Keys Found"
-msgstr ""
+msgstr "Nem található API kulcs"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:57
 msgid ""
 "If you are a developer, please see the README file for instructions on how "
 "to obtain your own Open Weather Map API key."
 msgstr ""
+"Ha Ön egy fejlesztő, kérjük olvassa el a README fájlt, ahol megtalálhatja a "
+"leírást, miképpen szerezheti meg a saját Open Weather Map API kulcsát."
 
 #: ../app/ui/AddLocationPage.qml:29
 msgid "Select a city"
