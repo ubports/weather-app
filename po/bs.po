@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-11-09 19:59-0600\n"
-"PO-Revision-Date: 2015-10-12 08:07+0000\n"
+"PO-Revision-Date: 2015-11-14 14:03+0000\n"
 "Last-Translator: Kenan Gutić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2015-11-11 05:56+0000\n"
-"X-Generator: Launchpad (build 17843)\n"
+"X-Launchpad-Export-Date: 2015-11-15 05:32+0000\n"
+"X-Generator: Launchpad (build 17845)\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of rain"
@@ -89,7 +89,7 @@ msgstr "Mrežna greška"
 
 #: ../app/components/NetworkErrorStateComponent.qml:57
 msgid "Please check your network settings and try again."
-msgstr ""
+msgstr "Molim provjerite svoje mrežne postavke i pokušajte opet."
 
 #: ../app/components/NetworkErrorStateComponent.qml:63
 msgid "Retry"
@@ -97,13 +97,15 @@ msgstr "Pokušajte opet"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:48
 msgid "No API Keys Found"
-msgstr ""
+msgstr "Nisu pronađeni API ključevi"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:57
 msgid ""
 "If you are a developer, please see the README file for instructions on how "
 "to obtain your own Open Weather Map API key."
 msgstr ""
+"Ako ste programer molimo pogledajte README dokument za instrukcije kako "
+"dobiti svoj vlastiti Open Weather Map API ključ."
 
 #: ../app/ui/AddLocationPage.qml:29
 msgid "Select a city"
