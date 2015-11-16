@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-11-09 19:59-0600\n"
-"PO-Revision-Date: 2015-11-07 19:45+0000\n"
+"PO-Revision-Date: 2015-11-15 17:05+0000\n"
 "Last-Translator: Anne <anneonyme017@gmail.com>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2015-11-11 05:56+0000\n"
-"X-Generator: Launchpad (build 17843)\n"
+"X-Launchpad-Export-Date: 2015-11-16 05:30+0000\n"
+"X-Generator: Launchpad (build 17845)\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of rain"
@@ -100,13 +100,16 @@ msgstr "Réessayer"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:48
 msgid "No API Keys Found"
-msgstr ""
+msgstr "Aucune clé API trouvée"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:57
 msgid ""
 "If you are a developer, please see the README file for instructions on how "
 "to obtain your own Open Weather Map API key."
 msgstr ""
+"Si vous êtes un développeur, veuillez lire le fichier README (« LISEZ-MOI ») "
+"pour plus d'instructions sur la manière d'obtenir votre propre clé API pour "
+"Open Weather Map."
 
 #: ../app/ui/AddLocationPage.qml:29
 msgid "Select a city"
