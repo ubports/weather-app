@@ -30,9 +30,9 @@ include(GNUInstallDirs)
 
 set(APP_NAME weather)
 set(APP_HARDCODE ubuntu-weather-app)
-set(MAIN_QML ${APP_HARDCODE}.qml)
+set(MAIN_QML app/${APP_HARDCODE}.qml)
 set(DESKTOP_FILE "${APP_HARDCODE}.desktop")
-set(ICON weather-app@30.png)
+set(ICON app/weather-app@30.png)
 set(AUTOPILOT_DIR ubuntu_weather_app)
 
 # Set install paths
@@ -41,7 +41,9 @@ if(CLICK_MODE)
   set(UBUNTU-WEATHER_APP_DIR "${CMAKE_INSTALL_DATADIR}/qml")
 
   set(QT_IMPORTS_DIR "${CMAKE_INSTALL_LIBDIR}")
-  set(EXEC "qmlscene $@ ${UBUNTU-WEATHER_APP_DIR}/${MAIN_QML}")
+  set(EXEC "qmlscene $@ ${MAIN_QML}")
+  set(DATA_DIR /)
+
   set(MODULE_PATH ${QT_IMPORTS_DIR})
   if(NOT BZR_REVNO)
     execute_process(
@@ -56,13 +58,15 @@ if(CLICK_MODE)
     message("-- Setting BZR_SOURCE to ${BZR_SOURCE}")
   endif(NOT BZR_SOURCE)
 else(CLICK_MODE)
-  set(UBUNTU-WEATHER_APP_DIR "${CMAKE_INSTALL_DATADIR}/ubuntu-weather-app")
-  execute_process(
-    COMMAND qmake -query QT_INSTALL_QML
-            OUTPUT_VARIABLE QT_IMPORTS_DIR
-            OUTPUT_STRIP_TRAILING_WHITESPACE
-    )
-  set(MODULE_PATH ${QT_IMPORTS_DIR}/WeatherApp)
+  set(DATA_DIR ${CMAKE_INSTALL_DATADIR}/${APP_HARDCODE})
+  set(EXEC ${APP_HARDCODE})
+  set(ICON ${CMAKE_INSTALL_PREFIX}/${DATA_DIR}/${ICON})
+  configure_file(${APP_HARDCODE}.in
+    ${CMAKE_CURRENT_BINARY_DIR}/${APP_HARDCODE})
+  install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/${APP_HARDCODE}
+    DESTINATION ${CMAKE_INSTALL_BINDIR})
+  set(DESKTOP_DIR ${CMAKE_INSTALL_DATADIR}/applications)
+  set(URLS_DIR ${CMAKE_INSTALL_DATADIR}/url-dispatcher/urls)
 endif(CLICK_MODE)
 
 if(${CLICK_MODE})
@@ -72,7 +76,6 @@ if(${CLICK_MODE})
   install(FILES ${CMAKE_CURRENT_BINARY_DIR}/manifest.json DESTINATION ${CMAKE_INSTALL_PREFIX})
   install(FILES "${APP_HARDCODE}.apparmor" DESTINATION ${CMAKE_INSTALL_PREFIX})
 else(CLICK_MODE)
-  set(EXEC "qmlscene $@ -I ${MODULE_PATH}  ${CMAKE_INSTALL_PREFIX}/${UBUNTU-WEATHER_APP_DIR}/${MAIN_QML}")
 endif()
 
 
@@ -81,6 +84,8 @@ file(GLOB_RECURSE I18N_SRC_FILES
     *.qml *.js)
 list(APPEND I18N_SRC_FILES ${DESKTOP_FILE}.in.in.h)
 list(SORT I18N_SRC_FILES)
+install(DIRECTORY app DESTINATION ${DATA_DIR})
+install(FILES ${SRC_FILES} ${ICON_FILE} DESTINATION ${DATA_DIR})
 
 configure_file(${DESKTOP_FILE}.in.in ${DESKTOP_FILE}.in)
 
