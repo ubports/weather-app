@@ -1,0 +1,243 @@
+# Latvian translation for ubuntu-weather-app
+# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# This file is distributed under the same license as the ubuntu-weather-app package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ubuntu-weather-app\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2015-11-09 19:59-0600\n"
+"PO-Revision-Date: 2015-11-21 19:16+0000\n"
+"Last-Translator: Rūdolfs Mazurs <Unknown>\n"
+"Language-Team: Latvian <lv@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2;\n"
+"X-Launchpad-Export-Date: 2015-11-22 05:31+0000\n"
+"X-Generator: Launchpad (build 17850)\n"
+
+#: ../app/components/DayDelegateExtraInfo.qml:52
+msgid "Chance of rain"
+msgstr "Iespējams lietus"
+
+#: ../app/components/DayDelegateExtraInfo.qml:59
+msgid "Winds"
+msgstr "Vēji"
+
+#: ../app/components/DayDelegateExtraInfo.qml:68
+msgid "UV Index"
+msgstr "UV indeks"
+
+#: ../app/components/DayDelegateExtraInfo.qml:74
+msgid "Pollen"
+msgstr "Putekšņi"
+
+#: ../app/components/DayDelegateExtraInfo.qml:81
+msgid "Humidity"
+msgstr "Mitrums"
+
+#: ../app/components/DayDelegateExtraInfo.qml:88
+msgid "Sunrise"
+msgstr "Saullēkts"
+
+#: ../app/components/DayDelegateExtraInfo.qml:95
+msgid "Sunset"
+msgstr "Saulriets"
+
+#: ../app/components/HomePageEmptyStateComponent.qml:51
+msgid "Searching for current location..."
+msgstr "Meklē pašreizējo atrašanās vietu..."
+
+#: ../app/components/HomePageEmptyStateComponent.qml:52
+msgid "Cannot determine your location"
+msgstr "Nevar noteikt jūsu atrašanās vietu"
+
+#: ../app/components/HomePageEmptyStateComponent.qml:62
+msgid "Manually add a location by swiping up from the bottom of the display"
+msgstr "Pašrocīgi pievienojiet vietu, velkot augšup no ekrāna apakšpuses"
+
+#: ../app/components/HomeTempInfo.qml:103
+msgid "Today"
+msgstr "Šodien"
+
+#: ../app/components/ListItemActions/Remove.qml:26
+msgid "Remove"
+msgstr "Noņemt"
+
+#: ../app/components/LocationsPageEmptyStateComponent.qml:36
+msgid "No locations found. Tap the plus icon to search for one."
+msgstr "Nav atrastu vietu. Spiediet uz plusa ikonas, lai kādu atrastu."
+
+#: ../app/components/MultiSelectHeadState.qml:27
+msgid "Select All"
+msgstr "Izvēlēties visu"
+
+#: ../app/components/MultiSelectHeadState.qml:39
+msgid "Delete"
+msgstr "Dzēst"
+
+#: ../app/components/MultiSelectHeadState.qml:51
+msgid "Cancel selection"
+msgstr "Atcelt izvēli"
+
+#: ../app/components/NetworkErrorStateComponent.qml:48
+msgid "Network Error"
+msgstr "Tīkla kļūda"
+
+#: ../app/components/NetworkErrorStateComponent.qml:57
+msgid "Please check your network settings and try again."
+msgstr "Pārbaudiet savus tīkla iestatījumus un mēģiniet vēlreiz."
+
+#: ../app/components/NetworkErrorStateComponent.qml:63
+msgid "Retry"
+msgstr "Mēģināt vēlreiz"
+
+#: ../app/components/NoAPIKeyErrorStateComponent.qml:48
+msgid "No API Keys Found"
+msgstr "Nav atrastu API atslēgu"
+
+#: ../app/components/NoAPIKeyErrorStateComponent.qml:57
+msgid ""
+"If you are a developer, please see the README file for instructions on how "
+"to obtain your own Open Weather Map API key."
+msgstr ""
+"Ja esi izstrādātājs, skatiet README datni, lai uzzinātu, kā iegūt savu Open "
+"Weather Map API atslēgu."
+
+#: ../app/ui/AddLocationPage.qml:29
+msgid "Select a city"
+msgstr "Izvēlieties pilsētu"
+
+#: ../app/ui/AddLocationPage.qml:47 ../app/ui/AddLocationPage.qml:69
+msgid "Back"
+msgstr "Atpakaļ"
+
+#: ../app/ui/AddLocationPage.qml:54
+msgid "City"
+msgstr "Pilsēta"
+
+#: ../app/ui/AddLocationPage.qml:113
+msgid "Search city"
+msgstr "Meklēt pilsētu"
+
+#: ../app/ui/AddLocationPage.qml:297
+msgid "No city found"
+msgstr "Nav atrastu pilsētu"
+
+#: ../app/ui/AddLocationPage.qml:310
+msgid "Couldn't load weather data, please try later again!"
+msgstr "Nevarēja ielādēt laika ziņas, lūdzu, mēģiniet vēlreiz!"
+
+#: ../app/ui/AddLocationPage.qml:320
+msgid "Location already added."
+msgstr "Vieta jau pievienota."
+
+#: ../app/ui/AddLocationPage.qml:323
+msgid "OK"
+msgstr "Labi"
+
+#: ../app/ui/HomePage.qml:31 ../app/ui/LocationsPage.qml:29
+msgid "Locations"
+msgstr "Vietas"
+
+#: ../app/ui/LocationsPage.qml:109
+msgid "Current Location"
+msgstr "Pašreizējā atrašanās vieta"
+
+#: ../app/ui/SettingsPage.qml:24
+msgid "Settings"
+msgstr "Iestatījumi"
+
+#: ../app/ui/SettingsPage.qml:33 ../app/ui/settings/UnitsPage.qml:24
+msgid "Units"
+msgstr "Mērvienības"
+
+#: ../app/ui/SettingsPage.qml:38 ../app/ui/settings/DataProviderPage.qml:25
+msgid "Data Provider"
+msgstr "Datu sniedzējs"
+
+#: ../app/ui/SettingsPage.qml:43 ../app/ui/settings/RefreshIntervalPage.qml:24
+msgid "Refresh Interval"
+msgstr "Atsvaidzināšanas intervāls"
+
+#: ../app/ui/SettingsPage.qml:48 ../app/ui/settings/LocationPage.qml:24
+msgid "Location"
+msgstr "Vieta"
+
+#: ../app/ui/settings/DataProviderPage.qml:37
+msgid "Provider"
+msgstr "Sniedzējs"
+
+#: ../app/ui/settings/LocationPage.qml:32
+msgid "Detect current location"
+msgstr "Noteikt pašreizējo atrašanās vietu"
+
+#: ../app/ui/settings/RefreshIntervalPage.qml:30
+#: ../app/ui/settings/RefreshIntervalPage.qml:31
+#: ../app/ui/settings/RefreshIntervalPage.qml:32
+#: ../app/ui/settings/RefreshIntervalPage.qml:33
+#: ../app/ui/settings/RefreshIntervalPage.qml:43
+#, qt-format
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] "%1 minūte"
+msgstr[1] "%1 minūtes"
+msgstr[2] "%1 minūšu"
+
+#: ../app/ui/settings/RefreshIntervalPage.qml:42
+msgid "Interval"
+msgstr "Intervāls"
+
+#. TRANSLATORS: The strings are standard measurement units
+#. of temperature in Celcius and are shown in the settings page.
+#. Only the abbreviated form of Celcius should be used.
+#: ../app/ui/settings/UnitsPage.qml:42 ../app/ui/settings/UnitsPage.qml:78
+msgid "°C"
+msgstr "°C"
+
+#. TRANSLATORS: The strings are standard measurement units
+#. of temperature in Fahrenheit and are shown in the settings page.
+#. Only the abbreviated form of Fahrenheit should be used.
+#: ../app/ui/settings/UnitsPage.qml:47 ../app/ui/settings/UnitsPage.qml:79
+msgid "°F"
+msgstr "°F"
+
+#. TRANSLATORS: The strings are standard measurement units
+#. of wind speed in kilometers per hour and are shown in the settings page.
+#. Only the abbreviated form of kilometers per hour should be used.
+#: ../app/ui/settings/UnitsPage.qml:58 ../app/ui/settings/UnitsPage.qml:99
+msgid "kph"
+msgstr "km/h"
+
+#. TRANSLATORS: The strings are standard measurement units
+#. of wind speed in miles per hour and are shown in the settings page.
+#. Only the abbreviated form of miles per hour should be used.
+#: ../app/ui/settings/UnitsPage.qml:63 ../app/ui/settings/UnitsPage.qml:100
+msgid "mph"
+msgstr "j/h"
+
+#: ../app/ui/settings/UnitsPage.qml:77
+msgid "Temperature"
+msgstr "Temperatūra"
+
+#: ../app/ui/settings/UnitsPage.qml:98
+msgid "Wind Speed"
+msgstr "Vēja ātrums"
+
+#: ubuntu-weather-app.desktop.in.in.h:1
+msgid "Weather"
+msgstr "Laikapstākļi"
+
+#: ubuntu-weather-app.desktop.in.in.h:2
+msgid ""
+"A weather forecast application for Ubuntu with support for multiple online "
+"weather data sources"
+msgstr ""
+"Laika prognožu lietotne Ubuntu videi, kas atbalsta vairākus tiešsaistes "
+"laikapstākļu datu avotus"
+
+#: ubuntu-weather-app.desktop.in.in.h:3
+msgid "weather;forecast;twc;openweathermap;the weather channel;"
+msgstr "laiks;laikapstākļi;prognozes;twc;openweathermap;laikapstākļu kanāls;"
