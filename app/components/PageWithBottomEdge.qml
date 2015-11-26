@@ -420,6 +420,9 @@ Page {
                                 tip.forceActiveFocus()
                             }
 
+                            // CUSTOM reset the topMargin for next pull
+                            edgeLoader.anchors.topMargin = units.gu(6.125)
+
                             // notify
                             page.bottomEdgeDismissed()
 
