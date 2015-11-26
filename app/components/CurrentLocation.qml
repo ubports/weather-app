@@ -19,7 +19,7 @@
 import QtLocation 5.3
 import QtPositioning 5.2
 import QtQuick 2.4
-import Ubuntu.Components 1.2
+import Ubuntu.Components 1.3
 import "../data/WeatherApi.js" as WeatherApi
 
 

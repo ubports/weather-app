@@ -85,12 +85,17 @@ class PageWithBottomEdge(Page):
         self.bottomEdgePageLoaded.wait_for(True)
 
         try:
-            action_item = self.wait_select_single(objectName='bottomEdgeTip')
+            action_item = self.wait_select_single("UCUbuntuShape",
+                                                  objectName='bottomEdgeTip')
             action_item.visible.wait_for(True)
+
+            # Pick the middle horizontally and vertically of the bottomEdgeTip
             start_x = (action_item.globalRect.x +
                        (action_item.globalRect.width * 0.5))
-            start_y = action_item.globalRect.y
+            start_y = (action_item.globalRect.y +
+                       (action_item.globalRect.height * 0.5))
             stop_y = start_y - (self.height * 0.7)
+
             self.pointing_device.drag(start_x, start_y,
                                       start_x, stop_y, rate=2)
             self.isReady.wait_for(True)
@@ -130,7 +135,7 @@ class AddLocationPage(Page):
         return header.select_single("TextField", objectName="searchField")
 
     def is_empty_label_visible(self):
-        return self.select_single("Label", objectName="noCity").visible
+        return self.select_single("UCLabel", objectName="noCity").visible
 
     def search(self, value):
         self.click_search_action()
@@ -226,7 +231,7 @@ class LocationPane(QQuickListView):
 
     def get_settings_button(self):
         return self.select_single(
-            "AbstractButton", objectName="settingsButton")
+            "UCAbstractButton", objectName="settingsButton")
 
 
 class LocationsPage(Page):
@@ -308,7 +313,7 @@ class UnitsPage(Page):
 
 class WeatherListItem(UbuntuUIToolkitCustomProxyObjectBase):
     def get_name(self):
-        return self.select_single("Label", objectName="name").text
+        return self.select_single("UCLabel", objectName="name").text
 
     @click_object
     def select_remove(self):
