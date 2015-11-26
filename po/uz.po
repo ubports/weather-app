@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-11-09 19:59-0600\n"
+"POT-Creation-Date: 2015-11-26 02:04+0000\n"
 "PO-Revision-Date: 2015-08-22 00:49+0000\n"
 "Last-Translator: Learner <muzaffar.habibullayev@yandex.ru>\n"
 "Language-Team: Uzbek <uz@li.org>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2015-11-11 05:56+0000\n"
-"X-Generator: Launchpad (build 17843)\n"
+"X-Launchpad-Export-Date: 2015-11-26 05:38+0000\n"
+"X-Generator: Launchpad (build 17850)\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of rain"
@@ -121,24 +121,24 @@ msgstr "Shahar"
 msgid "Search city"
 msgstr "Shaharni qidiring"
 
-#: ../app/ui/AddLocationPage.qml:297
+#: ../app/ui/AddLocationPage.qml:299
 msgid "No city found"
 msgstr "Shahar topilmadi"
 
-#: ../app/ui/AddLocationPage.qml:310
+#: ../app/ui/AddLocationPage.qml:312
 msgid "Couldn't load weather data, please try later again!"
 msgstr ""
 "Ob-havo ma'lumotini yuklab bo'lmadi, iltimos keyinroq urinib ko'ring!"
 
-#: ../app/ui/AddLocationPage.qml:320
+#: ../app/ui/AddLocationPage.qml:322
 msgid "Location already added."
 msgstr "Joylashuv allaqachon qo'shilgan."
 
-#: ../app/ui/AddLocationPage.qml:323
+#: ../app/ui/AddLocationPage.qml:325
 msgid "OK"
 msgstr "OK"
 
-#: ../app/ui/HomePage.qml:31 ../app/ui/LocationsPage.qml:29
+#: ../app/ui/HomePage.qml:32 ../app/ui/LocationsPage.qml:29
 msgid "Locations"
 msgstr "Joylashuvlar"
 

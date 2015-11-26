@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-11-09 19:59-0600\n"
+"POT-Creation-Date: 2015-11-26 02:04+0000\n"
 "PO-Revision-Date: 2015-10-20 15:52+0000\n"
 "Last-Translator: Cheng Lu <chenglu1990@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2015-11-11 05:56+0000\n"
-"X-Generator: Launchpad (build 17843)\n"
+"X-Launchpad-Export-Date: 2015-11-26 05:38+0000\n"
+"X-Generator: Launchpad (build 17850)\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of rain"
@@ -120,23 +120,23 @@ msgstr "城市"
 msgid "Search city"
 msgstr "搜索城市"
 
-#: ../app/ui/AddLocationPage.qml:297
+#: ../app/ui/AddLocationPage.qml:299
 msgid "No city found"
 msgstr "没有找到城市"
 
-#: ../app/ui/AddLocationPage.qml:310
+#: ../app/ui/AddLocationPage.qml:312
 msgid "Couldn't load weather data, please try later again!"
 msgstr "无法载入天气数据，请稍后再试！"
 
-#: ../app/ui/AddLocationPage.qml:320
+#: ../app/ui/AddLocationPage.qml:322
 msgid "Location already added."
 msgstr "位置已添加。"
 
-#: ../app/ui/AddLocationPage.qml:323
+#: ../app/ui/AddLocationPage.qml:325
 msgid "OK"
 msgstr "确定"
 
-#: ../app/ui/HomePage.qml:31 ../app/ui/LocationsPage.qml:29
+#: ../app/ui/HomePage.qml:32 ../app/ui/LocationsPage.qml:29
 msgid "Locations"
 msgstr "位置"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-11-09 19:59-0600\n"
+"POT-Creation-Date: 2015-11-26 02:04+0000\n"
 "PO-Revision-Date: 2015-11-20 05:04+0000\n"
 "Last-Translator: GunChleoc <Unknown>\n"
 "Language-Team: Fòram na Gàidhlig\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 || n==11) ? 0 : (n==2 || n==12) ? 1 : "
 "(n > 2 && n < 20) ? 2 : 3;\n"
-"X-Launchpad-Export-Date: 2015-11-21 05:37+0000\n"
+"X-Launchpad-Export-Date: 2015-11-26 05:38+0000\n"
 "X-Generator: Launchpad (build 17850)\n"
 "Language: gd\n"
 
@@ -125,25 +125,25 @@ msgstr "Baile"
 msgid "Search city"
 msgstr "Lorg baile"
 
-#: ../app/ui/AddLocationPage.qml:297
+#: ../app/ui/AddLocationPage.qml:299
 msgid "No city found"
 msgstr "Cha deach baile a lorg"
 
-#: ../app/ui/AddLocationPage.qml:310
+#: ../app/ui/AddLocationPage.qml:312
 msgid "Couldn't load weather data, please try later again!"
 msgstr ""
 "Cha b' urrainn dhuinn dàta na h-aimsire a luchdadh. Nach fheuch thu ris a-"
 "rithist an ceann greis?"
 
-#: ../app/ui/AddLocationPage.qml:320
+#: ../app/ui/AddLocationPage.qml:322
 msgid "Location already added."
 msgstr "Chaidh an t-ionad seo a chur ris mu thràth."
 
-#: ../app/ui/AddLocationPage.qml:323
+#: ../app/ui/AddLocationPage.qml:325
 msgid "OK"
 msgstr "Ceart ma-thà"
 
-#: ../app/ui/HomePage.qml:31 ../app/ui/LocationsPage.qml:29
+#: ../app/ui/HomePage.qml:32 ../app/ui/LocationsPage.qml:29
 msgid "Locations"
 msgstr "Àiteachan"
 
