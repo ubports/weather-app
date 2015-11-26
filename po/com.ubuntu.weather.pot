@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-12 01:49+0000\n"
+"POT-Creation-Date: 2015-11-26 02:04+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -136,11 +136,7 @@ msgstr ""
 msgid "OK"
 msgstr ""
 
-#: ../app/ui/HomePage.qml:30 ubuntu-weather-app.desktop.in.in.h:1
-msgid "Weather"
-msgstr ""
-
-#: ../app/ui/HomePage.qml:33 ../app/ui/LocationsPage.qml:29
+#: ../app/ui/HomePage.qml:32 ../app/ui/LocationsPage.qml:29
 msgid "Locations"
 msgstr ""
 
@@ -225,6 +221,10 @@ msgstr ""
 
 #: ../app/ui/settings/UnitsPage.qml:98
 msgid "Wind Speed"
+msgstr ""
+
+#: ubuntu-weather-app.desktop.in.in.h:1
+msgid "Weather"
 msgstr ""
 
 #: ubuntu-weather-app.desktop.in.in.h:2
