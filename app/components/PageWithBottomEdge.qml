@@ -368,6 +368,7 @@ Page {
                     SmoothedAnimation {
                         target: edgeLoader
                         property: "anchors.topMargin"
+                        // CUSTOM make small to reduce 'bump' when pushing
                         to: -0.1  // FIXME: 6.125 is header height
                         duration: UbuntuAnimation.FastDuration
                         easing.type: Easing.Linear
