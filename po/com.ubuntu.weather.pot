@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-26 02:04+0000\n"
+"POT-Creation-Date: 2015-12-11 21:39-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
-msgid "Chance of rain"
+msgid "Chance of precipitation"
 msgstr ""
 
 #: ../app/components/DayDelegateExtraInfo.qml:59

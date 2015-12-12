@@ -20,7 +20,7 @@ import QtQuick 2.4
 import Ubuntu.Components 1.3
 
 Row {
-    height: icon.height
+    height: forecastLabel.height
     spacing: units.gu(2)
     visible: value !== ""
 
@@ -39,6 +39,7 @@ Row {
     Label {
         id: forecastLabel
         elide: Text.ElideRight
+        wrapMode: Text.WordWrap
         width: units.gu(16)
     }
     
