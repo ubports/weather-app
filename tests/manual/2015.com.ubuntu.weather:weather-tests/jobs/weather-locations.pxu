@@ -1,0 +1,83 @@
+plugin: resource
+id: weather-locations/system-image
+_summary: [Automated] gather system information
+command: system-image-cli -i
+_description:
+ Gather system info
+
+id: weather-locations/show-list-of-locations
+plugin: manual
+_summary: Test to see a list of locations
+estimated_duration: 600
+_description:
+    Test to see a list of locations
+    1. Launch weather app
+        Expect to see weather for your current location
+    2. Swipe up from the bottom of the screen
+        Expect to see a list of locations (only one location on first run, or no locations if gps access denied)
+
+id: weather-locations/add-pre-defined-location
+plugin: manual
+_summary: Test to add a location from a pre-defined list
+estimated_duration: 600
+_description:
+    Test to add a location from a pre-defined list
+    1. Launch weather app
+        Expect to see weather for your current location
+    2. Swipe up from the bottom of the screen
+        Expect to see a list of locations (only one location on first run, or no locations if gps access denied)
+    3. Press "+" icon
+        Expect to see a pre-defined list of city names
+    4. Tap any city on the list
+        Expect to see it added to the list of locations
+    5. Continue to add more cities
+        There is a hard wired limit of 7 locations currently
+
+id: weather-locations/switch-location-by-swipe
+plugin: manual
+_summary: Test to switch locations by swiping
+estimated_duration: 600
+_description:
+    Test to switch locations by swiping
+    1. Launch weather app
+        Expect to see weather for your current location
+    2. Swipe left
+        Expect to switch location
+    3. Swipe right
+        Expect to switch back to previous location
+
+id: weather-locations/switch-location-by-edge
+plugin: manual
+_summary: Test to switch locations using bottom edge
+estimated_duration: 600
+_description:
+    Test to switch locations using bottom edge
+    1. Launch weather app
+        Expect to see weather for your current location
+    2. Swipe up from the bottom of the screen
+        Expect to see a list of locations
+    3. Tap a location
+        Expect to be returned to the main screen, showing weather for selected location
+
+id: weather-locations/delete-location
+plugin: manual
+_summary: Test to remove locations
+estimated_duration: 600
+_description:
+    Test to remove locations
+    1. Launch weather app
+        Expect to see weather for your current location
+    2. Swipe up from the bottom of the screen
+        Expect to see a list of locations
+    3. Swipe a location to the right
+        Expect to see a delete option
+    4. Swipe location left again
+        Expect location NOT to be deleted
+    5. Swipe a location to the right
+        Expect to see a delete option
+    6. Tap delete (trash) button
+        Expect location to be deleted
+
+
+
+
