@@ -63,9 +63,3 @@ _description:
         Expect to see 'Pull down to refresh' then 'Release to refresh'
     3. Let go of the screen
         Expect view to refresh - although you may not see any difference if the data recently refreshed
-
-
-
-
-
-

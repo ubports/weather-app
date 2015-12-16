@@ -60,5 +60,3 @@ _description:
         Expect to see weather for at least the following 4 days
     3. Tap the final day in the list
         Expect it to expand, and still be on screen (i.e. not expanded off-screen)
-
-

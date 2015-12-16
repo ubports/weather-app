@@ -77,7 +77,3 @@ _description:
         Expect to see a delete option
     6. Tap delete (trash) button
         Expect location to be deleted
-
-
-
-
