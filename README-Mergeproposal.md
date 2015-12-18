@@ -9,7 +9,7 @@ Checklist
 *   Does the MP add/remove user visible strings? If Yes, has the pot file been
     updated?
 
-*   Did you remove the API key? (refer README)
+*   Did you remove the API key? (refer README.md)
 
 *   Does the MP change the UI? If Yes, has it been approved by design?
 

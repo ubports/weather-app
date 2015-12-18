@@ -8,9 +8,9 @@ written in parallel to feature implementation to help spot regressions easier.
 API
 ===
 The OpenWeatherMap service requires an API key. 
-Visit [Open Weathe](http://openweathermap.org/appid)r to obtain a personal key.
+Visit [Open Weather](http://openweathermap.org/appid) to obtain a personal key.
 Click [here](http://openweathermap.org/faq#error401) for more details.
-Place the keys in app/data/keys.js
+Place the key between the quotation marks for the "owmKey" variable in app/data/keys.js
 
 **Do not commit branches with the key in place as a centrally managed key is injected at build time.**
 

@@ -5,12 +5,12 @@ The Weather app follows a test driven development where autopilot tests are run 
 
 If you are looking for more info about Autopilot or writing AP tests for the weather app, here are some useful links to help you:
 
-- [http://developer.ubuntu.com/start/quality](http://developer.ubuntu.com/start/quality)
-- [https://developer.ubuntu.com/api/autopilot/python/1.5.0/](https://developer.ubuntu.com/api/autopilot/python/1.5.0/)
+- [Ubuntu - Quality](http://developer.ubuntu.com/start/quality)
+- [Ubuntu - Autopilot](https://developer.ubuntu.com/api/autopilot/python/1.5.0/)
 
 For help and options on running tests, see:
 
-- [https://developer.ubuntu.com/en/start/platform/guides/running-autopilot-tests/](https://developer.ubuntu.com/en/start/platform/guides/running-autopilot-tests/)
+- [Autopilot Tests](https://developer.ubuntu.com/en/start/platform/guides/running-autopilot-tests/)
 
 Prerequisites
 =============
@@ -69,7 +69,8 @@ Using autopkg:
     $ cd ubuntu-weather-app
 
 *  Build a click package
-`$ click-buddy` .
+    
+    $ click-buddy .
 
 *  Run the tests on device (assumes only one click package in the directory)
 

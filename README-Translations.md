@@ -11,9 +11,9 @@ translatable messages to translators. So whenever you add new translatable
 messages in the code, make sure to follow these steps:
 
  1. Run click-buddy to build the project and generate a new .pot file:
-    `click-buddy --dir .`
+    $ click-buddy --dir .
  2. Commit the generated .pot file:
-    `bzr commit -m"Updated translation template"`
+    $ bzr commit -m"Updated translation template"
  3. Push the branch and send a merge proposal as usual
 
 And that's it, once the branch lands Launchpad should take care of all the rest!

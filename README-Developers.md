@@ -1,5 +1,5 @@
-Building and running on Vivid Desktop (15.04)
-=============================================
+Building and running on Desktop
+===============================
 
 Building and running the Ubuntu Weather App is quite simple. You will require
 Ubuntu 15.04 and higher to run on the desktop.
@@ -8,14 +8,14 @@ Ubuntu 15.04 and higher to run on the desktop.
 
     $ bzr branch lp:ubuntu-weather-app branch-name
     $ cd branch-name
-    $ qmlscene ../app/ubuntu-weather-app.qml
+    $ qmlscene app/ubuntu-weather-app.qml
 
 API
 ===
 The OpenWeatherMap service requires an API key. 
-Visit [Open Weathe](http://openweathermap.org/appid)r to obtain a personal key.
+Visit [Open Weather](http://openweathermap.org/appid) to obtain a personal key.
 Click [here](http://openweathermap.org/faq#error401) for more details.
-Place the keys in app/data/keys.js
+Place the key between the quotation marks for the "owmKey" variable in app/data/keys.js
 
 **Do not commit branches with the key in place as a centrally managed key is injected at build time.**
 
@@ -24,7 +24,7 @@ Submitting a patch upstream
 
 If you want to submit a bug fix you can do so by branching the code as shown
 above, implementing the fixes and running to see if it fixed the issue. We also
-request that you run the Autopilottests to check if anything
+request that you run the Autopilot tests to check if anything
 regressed due to the bug fix.
 
 If the tests fail, you will have to fix them before your bug fix can be
@@ -39,7 +39,7 @@ code by,
 Running Tests
 =============
 
-Please check README.autopilot on how to run the tests.
+Please check README-Autopilot.md on how to run the tests.
 They are quite explanatory and will help you get started.
 
 Code Style
@@ -67,8 +67,7 @@ Before reproducing crash it is good to create symbols table for gdb, by using co
 
    
 
-    $ cd branch-name
-    $ cmake -DCMAKE_BUILD_TYPE=Debug .. && make -j3	
+    $ cd branch-name	
 
 To run GDB:
 
@@ -78,7 +77,7 @@ To run GDB:
 
 At this point, you are inside the gdb prompt. Run your application as you normally would.
 
-     run ../app/ubuntu-weather-app.qml
+     run app/ubuntu-weather-app.qml
 
 Your app is now running and monitored by GDB. Reproduce the steps in your app to make it crash. Once it does crash,
 
