@@ -30,5 +30,5 @@ Here are some useful links with regards to the Weather App development.
 
 * [Home Page](https://developer.ubuntu.com/en/community/core-apps/weather/)
 * [Weather App Wiki](https://wiki.ubuntu.com/Touch/CoreApps/Weather)
-* [Designs](https://docs.google.com/presentation/d/1tXcyMBvJAYvwFvUAmTTYzmBP2NFQgbG_Gy8e2gv91kU/edit#slide=id.p)
+* [Designs](https://developer.ubuntu.com/en/community/core-apps/weather/#design)
 * [Project page](https://launchpad.net/ubuntu-weather-app) 
