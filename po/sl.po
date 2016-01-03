@@ -1,0 +1,245 @@
+# Slovenian translation for ubuntu-weather-app
+# Copyright (c) 2016 Rosetta Contributors and Canonical Ltd 2016
+# This file is distributed under the same license as the ubuntu-weather-app package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ubuntu-weather-app\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2015-11-26 02:04+0000\n"
+"PO-Revision-Date: 2016-01-02 13:16+0000\n"
+"Last-Translator: Bernard Banko <Unknown>\n"
+"Language-Team: Slovenian <sl@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || "
+"n%100==4 ? 3 : 0);\n"
+"X-Launchpad-Export-Date: 2016-01-03 05:32+0000\n"
+"X-Generator: Launchpad (build 17865)\n"
+
+#: ../app/components/DayDelegateExtraInfo.qml:52
+msgid "Chance of rain"
+msgstr "Možnost dežja"
+
+#: ../app/components/DayDelegateExtraInfo.qml:59
+msgid "Winds"
+msgstr "Veter"
+
+#: ../app/components/DayDelegateExtraInfo.qml:68
+msgid "UV Index"
+msgstr "Indeks UV"
+
+#: ../app/components/DayDelegateExtraInfo.qml:74
+msgid "Pollen"
+msgstr "Cvetni prah"
+
+#: ../app/components/DayDelegateExtraInfo.qml:81
+msgid "Humidity"
+msgstr "Vlažnost"
+
+#: ../app/components/DayDelegateExtraInfo.qml:88
+msgid "Sunrise"
+msgstr "Sončni vzhod"
+
+#: ../app/components/DayDelegateExtraInfo.qml:95
+msgid "Sunset"
+msgstr "Sončni zahod"
+
+#: ../app/components/HomePageEmptyStateComponent.qml:51
+msgid "Searching for current location..."
+msgstr "Iskanje trenutnega mesta ..."
+
+#: ../app/components/HomePageEmptyStateComponent.qml:52
+msgid "Cannot determine your location"
+msgstr "Vašega mesta ni možno določiti"
+
+#: ../app/components/HomePageEmptyStateComponent.qml:62
+msgid "Manually add a location by swiping up from the bottom of the display"
+msgstr "Ročno dodajte mesto s potegom z dna zaslona"
+
+#: ../app/components/HomeTempInfo.qml:103
+msgid "Today"
+msgstr "Danes"
+
+#: ../app/components/ListItemActions/Remove.qml:26
+msgid "Remove"
+msgstr "Odstrani"
+
+#: ../app/components/LocationsPageEmptyStateComponent.qml:36
+msgid "No locations found. Tap the plus icon to search for one."
+msgstr "Ni najdenih mest. Dodaknite se znaka plus za iskanje."
+
+#: ../app/components/MultiSelectHeadState.qml:27
+msgid "Select All"
+msgstr "Izberi vse"
+
+#: ../app/components/MultiSelectHeadState.qml:39
+msgid "Delete"
+msgstr "Izbriši"
+
+#: ../app/components/MultiSelectHeadState.qml:51
+msgid "Cancel selection"
+msgstr "Prekliči izbor"
+
+#: ../app/components/NetworkErrorStateComponent.qml:48
+msgid "Network Error"
+msgstr "Napaka omrežja"
+
+#: ../app/components/NetworkErrorStateComponent.qml:57
+msgid "Please check your network settings and try again."
+msgstr "Preverite omrežne nastavitve in poskusite ponovno."
+
+#: ../app/components/NetworkErrorStateComponent.qml:63
+msgid "Retry"
+msgstr "Poskusi znova"
+
+#: ../app/components/NoAPIKeyErrorStateComponent.qml:48
+msgid "No API Keys Found"
+msgstr "Ni ključev API"
+
+#: ../app/components/NoAPIKeyErrorStateComponent.qml:57
+msgid ""
+"If you are a developer, please see the README file for instructions on how "
+"to obtain your own Open Weather Map API key."
+msgstr ""
+"Če ste razvijalec, si preberite datoteko README z navodili, kako pridobiti "
+"svoj ključ API za Open Weather Map."
+
+#: ../app/ui/AddLocationPage.qml:29
+msgid "Select a city"
+msgstr "Izberite mesto"
+
+#: ../app/ui/AddLocationPage.qml:47 ../app/ui/AddLocationPage.qml:69
+msgid "Back"
+msgstr "Nazaj"
+
+#: ../app/ui/AddLocationPage.qml:54
+msgid "City"
+msgstr "Mesto"
+
+#: ../app/ui/AddLocationPage.qml:113
+msgid "Search city"
+msgstr "Poišči mesto"
+
+#: ../app/ui/AddLocationPage.qml:299
+msgid "No city found"
+msgstr "Ni najdenih mest"
+
+#: ../app/ui/AddLocationPage.qml:312
+msgid "Couldn't load weather data, please try later again!"
+msgstr "Podatkov vremena ni mogoče naložiti, poskusite kasneje!"
+
+#: ../app/ui/AddLocationPage.qml:322
+msgid "Location already added."
+msgstr "Mesto je že dodano."
+
+#: ../app/ui/AddLocationPage.qml:325
+msgid "OK"
+msgstr "V redu"
+
+#: ../app/ui/HomePage.qml:32 ../app/ui/LocationsPage.qml:29
+msgid "Locations"
+msgstr "Mesta"
+
+#: ../app/ui/LocationsPage.qml:109
+msgid "Current Location"
+msgstr "Trenutno mesto"
+
+#: ../app/ui/SettingsPage.qml:24
+msgid "Settings"
+msgstr "Nastavitve"
+
+#: ../app/ui/SettingsPage.qml:33 ../app/ui/settings/UnitsPage.qml:24
+msgid "Units"
+msgstr "Enote"
+
+#: ../app/ui/SettingsPage.qml:38 ../app/ui/settings/DataProviderPage.qml:25
+msgid "Data Provider"
+msgstr "Ponudnik podatkov"
+
+#: ../app/ui/SettingsPage.qml:43 ../app/ui/settings/RefreshIntervalPage.qml:24
+msgid "Refresh Interval"
+msgstr "Interval osveževanja"
+
+#: ../app/ui/SettingsPage.qml:48 ../app/ui/settings/LocationPage.qml:24
+msgid "Location"
+msgstr "Mesto"
+
+#: ../app/ui/settings/DataProviderPage.qml:37
+msgid "Provider"
+msgstr "Ponudnik"
+
+#: ../app/ui/settings/LocationPage.qml:32
+msgid "Detect current location"
+msgstr "Odkrij trenutno mesto"
+
+#: ../app/ui/settings/RefreshIntervalPage.qml:30
+#: ../app/ui/settings/RefreshIntervalPage.qml:31
+#: ../app/ui/settings/RefreshIntervalPage.qml:32
+#: ../app/ui/settings/RefreshIntervalPage.qml:33
+#: ../app/ui/settings/RefreshIntervalPage.qml:43
+#, qt-format
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] "%1 minut"
+msgstr[1] "%1 minuta"
+msgstr[2] "%1 minuti"
+msgstr[3] "%1 minute"
+
+#: ../app/ui/settings/RefreshIntervalPage.qml:42
+msgid "Interval"
+msgstr "Interval"
+
+#. TRANSLATORS: The strings are standard measurement units
+#. of temperature in Celcius and are shown in the settings page.
+#. Only the abbreviated form of Celcius should be used.
+#: ../app/ui/settings/UnitsPage.qml:42 ../app/ui/settings/UnitsPage.qml:78
+msgid "°C"
+msgstr "°C"
+
+#. TRANSLATORS: The strings are standard measurement units
+#. of temperature in Fahrenheit and are shown in the settings page.
+#. Only the abbreviated form of Fahrenheit should be used.
+#: ../app/ui/settings/UnitsPage.qml:47 ../app/ui/settings/UnitsPage.qml:79
+msgid "°F"
+msgstr "°F"
+
+#. TRANSLATORS: The strings are standard measurement units
+#. of wind speed in kilometers per hour and are shown in the settings page.
+#. Only the abbreviated form of kilometers per hour should be used.
+#: ../app/ui/settings/UnitsPage.qml:58 ../app/ui/settings/UnitsPage.qml:99
+msgid "kph"
+msgstr "km/h"
+
+#. TRANSLATORS: The strings are standard measurement units
+#. of wind speed in miles per hour and are shown in the settings page.
+#. Only the abbreviated form of miles per hour should be used.
+#: ../app/ui/settings/UnitsPage.qml:63 ../app/ui/settings/UnitsPage.qml:100
+msgid "mph"
+msgstr "mph"
+
+#: ../app/ui/settings/UnitsPage.qml:77
+msgid "Temperature"
+msgstr "Temperatura"
+
+#: ../app/ui/settings/UnitsPage.qml:98
+msgid "Wind Speed"
+msgstr "Hitrost vetra"
+
+#: ubuntu-weather-app.desktop.in.in.h:1
+msgid "Weather"
+msgstr "Vreme"
+
+#: ubuntu-weather-app.desktop.in.in.h:2
+msgid ""
+"A weather forecast application for Ubuntu with support for multiple online "
+"weather data sources"
+msgstr ""
+"Program vremenske napovedi za Ubuntu s podporo večim spletnim virom z "
+"vremenskimi podatki"
+
+#: ubuntu-weather-app.desktop.in.in.h:3
+msgid "weather;forecast;twc;openweathermap;the weather channel;"
+msgstr "vreme;napoved;openweathermap;vremenski kanal;"
