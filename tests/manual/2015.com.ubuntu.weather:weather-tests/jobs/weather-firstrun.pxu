@@ -1,0 +1,65 @@
+plugin: resource
+id: weather-firstrun/system-image
+_summary: [Automated] gather system information
+command: system-image-cli -i
+_description:
+ Gather system info
+
+id: weather-firstrun/check-icon
+plugin: manual
+_summary: Test to check correct icon is used
+estimated_duration: 600
+_description:
+    Test to check correct icon is used
+    1. Install weather reboot
+        Weather icon with a cloud and 12-spiked sun should appear in the dash
+
+id: weather-firstrun/location-check
+plugin: manual
+_summary: Test to confirm location is requested
+estimated_duration: 600
+_description:
+    Test to confirm location is requested
+    1. Launch weather reboot
+        Expect to see 'location acceptance screen'
+
+id: weather-firstrun/location-deny
+plugin: manual
+_summary: Test to confirm effect of denying location access
+estimated_duration: 600
+_description:
+    Test to confirm effect of denying location access
+    1. Launch weather reboot
+        Expect to see 'location acceptance screen'
+    2. Choose 'deny'
+        Expect to see the "Cannot determine your location", "Manually add" screen
+
+id: weather-firstrun/location-allow
+plugin: manual
+_summary: Test to confirm effect of allowing location access
+estimated_duration: 600
+_description:
+    Test to confirm effect of allowing location access
+    1. Close weather app (if already open)
+    2. Launch System Settings
+    3. Choose "Security & Privacy"
+    4. Choose "Location Access"
+    5. Switch location access for weather app on
+        This reverses the location denial from the previous test
+    6. Launch weather reboot
+        Expect to _not_ see 'location acceptance screen'
+    7. Wait for a short while
+        Expect to see weather for your current location
+
+id: weather-firstrun/pull-refresh
+plugin: manual
+_summary: Test to confirm pull to refresh works
+estimated_duration: 600
+_description:
+    Test to confirm pull to refresh works
+    1. Launch weather reboot
+        Expect to see weather details for current location
+    2. Pull down the screen to refresh
+        Expect to see 'Pull down to refresh' then 'Release to refresh'
+    3. Let go of the screen
+        Expect view to refresh - although you may not see any difference if the data recently refreshed

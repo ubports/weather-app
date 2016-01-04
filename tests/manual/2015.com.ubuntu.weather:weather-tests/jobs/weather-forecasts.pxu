@@ -1,0 +1,62 @@
+plugin: resource
+id: weather-forecasts/system-image
+_summary: [Automated] gather system information
+command: system-image-cli -i
+_description:
+ Gather system info
+
+id: weather-forecasts/test-daily-forecast
+plugin: manual
+_summary: Test to future day forecast is shown
+estimated_duration: 600
+_description:
+    Test to future day forecast is shown
+    1. Launch weather app
+        Expect to see weather for your current location
+    2. Scroll up
+        Expect to see weather for at least the following 4 days
+
+id: weather-forecasts/test-hourly-forecast-detail
+plugin: manual
+_summary: Test to ensure hourly forecast detail is shown
+estimated_duration: 600
+_description:
+    Test to ensure hourly forecast detail is shown
+    1. Launch weather app
+        Expect to see weather for your current location
+    2. Tap large current weather icon (cloud/sun/rain) in the top half of the display
+        Expect to see weather for the following hours
+    3. Swipe right and left
+        Expect to see further details about the weather on coming hours
+    4. Tap in that area again
+        Expect the previously shown current weather icon to be displayed
+
+id: weather-forecasts/test-daily-forecast-detail
+plugin: manual
+_summary: Test to ensure daily forecast detail is shown
+estimated_duration: 600
+_description:
+    Test to ensure daily forecast detail is shown
+    1. Launch weather app
+        Expect to see weather for your current location
+    2. Scroll up
+        Expect to see weather for at least the following 4 days
+    3. Tap any day in the future
+        Expect to see further details about the weather on that day
+    4. Tap any other day
+        Expect the previously tapped day to shrink, and the newly tapped day to expand
+    5. Tap the same day again
+        Expect the tapped day detail to shrink
+
+id: weather-forecasts/test-final-day
+plugin: manual
+_summary: Test to ensure UI expands properly
+estimated_duration: 600
+_description:
+    Test to ensure UI expands properly
+    1. Launch weather app
+        Expect to see weather for your current location
+    2. Scroll up to the very bottom
+        Expect to see weather for at least the following 4 days
+    3. Tap the final day in the list
+        Expect it to expand, and still be on screen (i.e. not expanded off-screen)

@@ -1,0 +1,40 @@
+plugin: resource
+id: weather-settings/system-image
+_summary: [Automated] gather system information
+command: system-image-cli -i
+_description:
+ Gather system info
+
+id: weather-settings/change-units-temp
+plugin: manual
+_summary: Test to change temperature units
+estimated_duration: 600
+_description:
+    Test to change temperature units
+    1. Launch weather app
+        Expect to see weather for your current location
+    2. Tap settings cog in top right corner
+        Expect to see a list of settings
+    3. Tap "Units"
+        Expect to see 'Units' screen
+    4. Tap "Temperature"
+        Expect to see options unfolded
+    5. Switch to different temperature units and go back to main screen
+        Expect units shown to be different
+
+id: weather-settings/change-units-speed
+plugin: manual
+_summary: Test to change wind speed units
+estimated_duration: 600
+_description:
+    Test to change wind speed units
+    1. Launch weather app
+        Expect to see weather for your current location
+    2. Tap settings cog in top right corner
+        Expect to see a list of settings
+    3. Tap "Units"
+        Expect to see 'Units' screen
+    4. Tap "Wind Speed"
+        Expect to see options unfolded
+    5. Switch to different wind speed units and go back to main screen
+        Expect wind speed units shown to be different
