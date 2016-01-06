@@ -43,6 +43,7 @@ ListView {
     property string hourlyTempUnits
 
     property var todayData
+    property bool graphicVisible : false
 
     delegate: DayDelegate {
         day: model.day
@@ -75,10 +76,11 @@ ListView {
         HomeGraphic {
             id: homeGraphic
             icon: mainPageWeekdayListView.icon
+            visible: graphicVisible;
             MouseArea {
                 anchors.fill: parent
                 onClicked: {
-                    homeGraphic.visible = false;
+                    graphicVisible = false;
                 }
             }
         }

@@ -127,6 +127,27 @@ MainView {
         }
     }
 
+    Arguments {
+        id: args;
+
+        defaultArgument.help: i18n.tr("One arguments for weather app: --display, They will be managed by system. See the source for a full comment about them");
+        defaultArgument.valueNames: ["URL"]
+
+        /* ARGUMENTS on startup
+          *
+          * Display hourly view when startup. This enable us to navigate weather app from weather scope
+          * Keyword: display
+          * Value: hourly or default
+          *
+          */
+
+        Argument {
+            name: "display"
+            required: false
+            valueNames: ["DISPLAY"]
+        }
+    }
+
     CurrentLocation {
         id: currentLocation
     }
@@ -294,6 +315,17 @@ MainView {
 
     PageStack {
         id: mainPageStack
-        Component.onCompleted: mainPageStack.push(Qt.resolvedUrl("ui/HomePage.qml"))
+        Component.onCompleted: {
+            var url = args.defaultArgument.at(0)
+
+            var hourlyVisible = false;
+            var displaypattern = new RegExp("display=.*");
+            if (displaypattern.test(url)) {
+                var display = url.match(/display=(.*)/)[1];
+                hourlyVisible = display === "hourly" ? true: false
+            }
+
+            mainPageStack.push(Qt.resolvedUrl("ui/HomePage.qml"), {"hourlyVisible": hourlyVisible})
+        }
     }
 }
