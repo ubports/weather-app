@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-06 11:01+0800\n"
+"POT-Creation-Date: 2016-01-08 17:12+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -104,10 +104,10 @@ msgid ""
 "to obtain your own Open Weather Map API key."
 msgstr ""
 
-#: ../app/ubuntu-weather-app.qml:133
+#: ../app/ubuntu-weather-app.qml:235
 msgid ""
-"One arguments for weather app: --display, They will be managed by system. "
-"See the source for a full comment about them"
+"One arguments for weather app: --display, --city, --lat, --lng They will be "
+"managed by system. See the source for a full comment about them"
 msgstr ""
 
 #: ../app/ui/AddLocationPage.qml:29

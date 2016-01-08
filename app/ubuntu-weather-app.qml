@@ -64,11 +64,27 @@ MainView {
     property bool networkError: false
 
     /*
+      Indicates of the location info requested from Url
+    */
+    property var requestLocationByUrl;
+
+    /*
       (re)load the pages on completion
     */
     Component.onCompleted: {
+        var url = args.defaultArgument.at(0)
+        var argus = parseArguments(url);
+
+        mainPageStack.push(Qt.resolvedUrl("ui/HomePage.qml"), {"hourlyVisible": argus.hourVisibly})
+
         storage.getLocations(fillPages);
-        refreshData();
+        if (argus.city && argus.lat && argus.lng) {
+            if (positionViewAtCity(argus.city) === -1) {
+                searchForLocation("searchByUrl", argus.lat, argus.lng)
+            }
+        } else {
+            refreshData();
+        }
     }
 
     /*
@@ -86,6 +102,20 @@ MainView {
                  });
                  //print(JSON.stringify(messageObject.result));
                  fillPages(messageObject.result);
+
+                 //1.Re-position current display index at requested location index
+                 //2.Prevent index changed after reorder when geoChanged is triggered on startup
+                 if (requestLocationByUrl) {
+                     for (var i = 0; i < locationsList.length; i++) {
+                         var loc = locationsList[i].location;
+                         if (requestLocationByUrl !== undefined && loc.services.geonames !== undefined &&
+                                 requestLocationByUrl.services.geonames === loc.services.geonames) {
+                             settings.current = i;
+                             requestLocationByUrl = undefined
+                             break;
+                         }
+                     }
+                 }
              }
          } else {
              console.log(messageObject.error.msg+" / "+messageObject.error.request.url)
@@ -113,7 +143,7 @@ MainView {
         } else {
             storage.getLocations(function(locations) {
                 WeatherApi.sendRequest({
-                    action: "updateData",
+                    action:  "updateData",
                     params: {
                         locations: locations,
                         force: force_refresh,
@@ -127,10 +157,82 @@ MainView {
         }
     }
 
+    /*
+      parse arguments retrieved from url. The url format can be as following:
+      weather://?display=hourly&city=London&lat=51.50853&lng=-0.12574
+    */
+    function parseArguments(url) {
+        var arguments = url.substring(url.lastIndexOf('?') + 1).split('&');
+
+        var hourlyVisible = false;
+        var city, lat, lng;
+        var index = 0;
+        while(index < arguments.length) {
+            var params = arguments[index].split('=');
+            if (params[0] === "display")
+                hourlyVisible = params[1] === "hourly" ?  true: false;
+            if (params[0] === "lng")
+                lng = params[1];
+            if (params[0] === "lat")
+                lat = params[1];
+            if (params[0] === "city")
+                city = params[1];
+
+            index++;
+        }
+
+        return {"hourlyVisible": hourlyVisible, "city": city, "lat":  lat, "lng" : lng}
+    }
+
+    /*
+      Positions the view that with the specified cityName,
+      return pos index of the city if it can be found in locationlist
+      and return -1 if city is not found in locationlist.
+      NOTE: potential minor issue: cities with the same name in different countries
+    */
+    function positionViewAtCity(cityName) {
+        var index = -1;
+
+        for (var i = 0; i < locationsList.length; i++) {
+            var loc = locationsList[i].location;
+            if (cityName === loc.name) {
+                settings.current =  i;
+                index  = i;
+                break;
+            }
+        }
+
+        return index ;
+    }
+
+    function searchForLocation(action, lat, lon) {
+        WeatherApi.sendRequest({
+            action: action,
+            params: {
+                coords: {
+                    lat: lat,
+                    lon: lon
+                }
+            }
+        }, searchResponseHandler)
+    }
+
+    function searchResponseHandler(msgObject) {
+        if (!msgObject.error ) {
+            console.log("Loc to add:", JSON.stringify(msgObject.result.locations[0]))
+            if (msgObject.action === "searchByUrl") {
+                requestLocationByUrl = msgObject.result.locations[0];
+                storage.addLocation(requestLocationByUrl)
+            } else if (settings.detectCurrentLocation) {
+                storage.updateCurrentLocation(msgObject.result.locations[0])
+            }
+        }
+    }
+
     Arguments {
         id: args;
 
-        defaultArgument.help: i18n.tr("One arguments for weather app: --display, They will be managed by system. See the source for a full comment about them");
+        defaultArgument.help: i18n.tr("One arguments for weather app: --display, --city, --lat, --lng They will be managed by system. See the source for a full comment about them");
         defaultArgument.valueNames: ["URL"]
 
         /* ARGUMENTS on startup
@@ -139,12 +241,56 @@ MainView {
           * Keyword: display
           * Value: hourly or default
           *
+          * Location information. This enable us to navigate relevant city weather view with geo information specified
+          * please pass all three basic geo parameters together when requesting specific city weather
+          * Keyword: city
+          * Value: city name
+          *
+          * Keyword: lat
+          * Value:  latitude of city
+          *
+          * Keyword: lng
+          * Value:  longitude of city
           */
 
         Argument {
             name: "display"
             required: false
             valueNames: ["DISPLAY"]
+        }
+
+        Argument {
+            name: "city"
+            required: false
+            valueNames: ["CITY"]
+        }
+
+        Argument {
+            name: "lat"
+            required: false
+            valueNames: ["LATITUDE"]
+        }
+
+        Argument {
+            name: "lng"
+            required: false
+            valueNames: ["LONGITUDE"]
+        }
+    }
+
+    Connections {
+        target: UriHandler
+        onOpened: {
+            var argus = parseArguments(uris[0]);
+            if (argus.city && argus.lat && argus.lng) {
+                while (mainPageStack.depth > 1) {
+                    mainPageStack.pop()
+                }
+
+                if (positionViewAtCity(argus.city) === -1) {
+                    searchForLocation("searchByUrl", argus.lat, argus.lng)
+                }
+            }
         }
     }
 
@@ -315,17 +461,5 @@ MainView {
 
     PageStack {
         id: mainPageStack
-        Component.onCompleted: {
-            var url = args.defaultArgument.at(0)
-
-            var hourlyVisible = false;
-            var displaypattern = new RegExp("display=.*");
-            if (displaypattern.test(url)) {
-                var display = url.match(/display=(.*)/)[1];
-                hourlyVisible = display === "hourly" ? true: false
-            }
-
-            mainPageStack.push(Qt.resolvedUrl("ui/HomePage.qml"), {"hourlyVisible": hourlyVisible})
-        }
     }
 }
