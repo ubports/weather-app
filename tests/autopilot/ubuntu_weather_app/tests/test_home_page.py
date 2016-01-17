@@ -83,3 +83,19 @@ class TestHomePage(UbuntuWeatherAppTestCaseWithData):
         # Check that the state and height of the HomeTempInfo have changed
         self.assertThat(home_temp_info.state, Eventually(Equals("expanded")))
         self.assertEqual(home_temp_info.height, home_temp_info.expandedHeight)
+
+    def test_swiping_locations(self):
+        """tests swiping between the location tabs"""
+
+        # Get the current index for the selected location
+        current_index = self.home_page.get_selected_location_index()
+
+        # Set the index of the location to be selected
+        new_index = current_index + 1
+
+        # Swipe to the left to switch Location tabs
+        self.home_page.swipe_left()
+
+        # Check that the selected location is now the intended location
+        self.assertThat(self.home_page.get_selected_location_index(),
+                        Eventually(Equals(new_index)))
