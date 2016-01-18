@@ -25,7 +25,6 @@ class TestHomePage(UbuntuWeatherAppTestCaseWithData):
         super(TestHomePage, self).setUp()
 
         self.home_page = self.app.get_home_page()
-        self.locations_page = self.app.get_locations_page()
 
     def test_locations_count_startup(self):
         """ tests that the correct number of locations appear at startup """
