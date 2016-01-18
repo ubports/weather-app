@@ -88,43 +88,12 @@ class TestHomePage(UbuntuWeatherAppTestCaseWithData):
     def test_swiping_locations(self):
         """tests swiping between the location tabs"""
 
-        # Define the start and stop locations of the left swipe
-        start_x = (self.home_page.globalRect.x +
-                   (self.home_page.globalRect.width * 0.9))
-        stop_x = (self.home_page.globalRect.x +
-                  (self.home_page.globalRect.width * 0.1))
-        start_y = stop_y = (self.home_page.globalRect.y +
-                            (self.home_page.globalRect.height * 0.5))
-        rate = 5
-
-        # Get the current index for the selected location
-        # initial_index = self.home_page.get_selected_location_index()
-
-        # Set the index of the location to be selected
-        # new_index = initial_index + 1
-
         # Swipe to the left to switch Location tabs
-        self.home_page.swipe(start_x, start_y, stop_x, stop_y, rate)
+        self.home_page.swipe_left()
 
         # Check that the selected location is now the intended location
         self.assertThat(self.home_page.get_selected_location_index(),
                         Eventually(Equals(1)))
         self.assertThat(
-                            self.locations_page.get_location(1).get_name(),
+                            self.home_page.get_location_pane(1).get_name(),
                             Equals('Washington'))
-
-        # Reassign values of the swipe locations to swipe to the right
-        start_x = (self.home_page.globalRect.x +
-                   (self.home_page.globalRect.width * 0.1))
-        stop_x = (self.home_page.globalRect.x +
-                  (self.home_page.globalRect.width * 0.9))
-
-        # Swipe to the right
-        self.home_page.swipe(start_x, start_y, stop_x, stop_y, rate)
-
-        # Check that the selected location is now the intended location
-        self.assertThat(self.home_page.get_selected_location_index(),
-                        Eventually(Equals(0)))
-        self.assertThat(
-                            self.locations_page.get_location(0).get_name(),
-                            Equals('London'))

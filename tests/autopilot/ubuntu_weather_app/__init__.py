@@ -10,7 +10,6 @@ from autopilot.introspection import dbus
 import logging
 from ubuntuuitoolkit import (MainView, QQuickListView,
                              UbuntuUIToolkitCustomProxyObjectBase)
-from autopilot.input import Touch, Pointer
 
 logger = logging.getLogger(__name__)
 
@@ -27,11 +26,6 @@ def click_object(func):
         return item
 
     return func_wrapper
-
-
-def swipe(start_x, start_y, stop_x, stop_y, rate):
-    touch = Pointer(Touch.create())
-    touch.drag(start_x, start_y, stop_x, stop_y, rate)
 
 #
 # Base helpers
@@ -206,8 +200,18 @@ class HomePage(PageWithBottomEdge):
     def get_selected_location_pane(self):
         return self.get_location_pane(self.get_selected_location_index())
 
-    def swipe(self, start_x, start_y, stop_x, stop_y, rate):
-        swipe(start_x, start_y, stop_x, stop_y, rate)
+    def swipe_left(self):
+
+        # Define the start and stop locations of the left swipe
+        start_x = (self.globalRect.x +
+                   (self.globalRect.width * 0.9))
+        stop_x = (self.globalRect.x +
+                  (self.globalRect.width * 0.1))
+        start_y = stop_y = (self.globalRect.y +
+                            (self.globalRect.height * 0.5))
+        rate = 5
+
+        self.pointing_device.drag(start_x, start_y, stop_x, stop_y, rate)
 
 
 class HomeTempInfo(UbuntuUIToolkitCustomProxyObjectBase):
@@ -228,6 +232,9 @@ class LocationPane(QQuickListView):
         self.swipe_to_top()  # ensure at the top of the flickable
 
         return self.get_settings_button()
+
+    def get_name(self):
+        return self.name
 
     def get_day_delegate(self, day):
         return self.wait_select_single(
