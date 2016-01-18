@@ -10,7 +10,6 @@ from autopilot.introspection import dbus
 import logging
 from ubuntuuitoolkit import (MainView, QQuickListView,
                              UbuntuUIToolkitCustomProxyObjectBase)
-from autopilot.display import Display
 from autopilot.input import Touch, Pointer
 
 logger = logging.getLogger(__name__)
@@ -30,7 +29,9 @@ def click_object(func):
     return func_wrapper
 
 
-# def swipe(direction):
+def swipe(start_x, start_y, stop_x, stop_y, rate):
+    touch = Pointer(Touch.create())
+    touch.drag(start_x, start_y, stop_x, stop_y, rate)
 
 #
 # Base helpers
@@ -187,9 +188,6 @@ class HomePage(PageWithBottomEdge):
     """Autopilot helper for HomePage."""
     def __init__(self, *args, **kwargs):
         super(HomePage, self).__init__(*args, **kwargs)
-        self.display = Display.create()
-        self.touch = Pointer(Touch.create())
-        self.center_y = self.display.get_screen_height() // 2
 
     def get_location_count(self):
         return self.get_location_pages().count
@@ -208,11 +206,8 @@ class HomePage(PageWithBottomEdge):
     def get_selected_location_pane(self):
         return self.get_location_pane(self.get_selected_location_index())
 
-    def swipe_left(self):
-        self.touch.drag(self.display.get_screen_width(), self.center_y, 0, self.center_y)
-
-    def swipe_right(self):
-        self.touch.drag(0, self.center_y, self.display.get_screen_width(), self.center_y)
+    def swipe(self, start_x, start_y, stop_x, stop_y, rate):
+        swipe(start_x, start_y, stop_x, stop_y, rate)
 
 
 class HomeTempInfo(UbuntuUIToolkitCustomProxyObjectBase):
