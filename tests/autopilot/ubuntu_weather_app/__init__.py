@@ -235,8 +235,7 @@ class LocationPane(QQuickListView):
 
     def get_name(self):
         return self.wait_select_single(
-            "HeaderRow", objectName='headerRow').wait_select_single(
-                "UCLabel", objectName='headerLabel').text
+            "UCLabel", objectName='headerLabel').text
 
     def get_day_delegate(self, day):
         return self.wait_select_single(
