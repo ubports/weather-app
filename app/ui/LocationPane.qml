@@ -68,7 +68,7 @@ ListView {
         }
 
         HeaderRow {
-            objectName: "name"
+            objectName: 'headerRow'
             id: headerRow
             locationName: mainPageWeekdayListView.name
         }

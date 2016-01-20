@@ -87,12 +87,15 @@ class TestHomePage(UbuntuWeatherAppTestCaseWithData):
     def test_swiping_locations(self):
         """tests swiping between the location tabs"""
 
+        # Check that starts at the first (index = 0) location tab
+        self.assertThat(self.home_page.get_selected_location_index(),
+                        Equals(0))
+
         # Swipe to the left to switch Location tabs
         self.home_page.swipe_left()
 
         # Check that the selected location is now the intended location
         self.assertThat(self.home_page.get_selected_location_index(),
                         Eventually(Equals(1)))
-        self.assertThat(
-                            self.home_page.get_location_pane(1).get_name(),
-                            Equals('Washington'))
+        self.assertThat(self.home_page.get_location_pane(1).get_name(),
+                        Equals('Washington'))
