@@ -48,10 +48,10 @@ Column {
     }
 
     ForecastDetailsDelegate {
-        id: chanceOfRainForecast
-        forecast: i18n.tr("Chance of rain")
+        id: chanceOfPrecipForecast
+        forecast: i18n.tr("Chance of precipitation")
         imageSource: "../graphics/extended-information_chance-of-rain.svg"
-        value: modelData.chanceOfRain
+        value: modelData.chanceOfPrecip
     }
 
     ForecastDetailsDelegate {

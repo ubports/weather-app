@@ -153,7 +153,7 @@ ListView {
             high: (data[tempUnits].tempMax !== undefined) ? Math.round(data[tempUnits].tempMax).toString() + settings.tempScale : "",
             image: (data.icon !== undefined && iconMap[data.icon] !== undefined) ? iconMap[data.icon] : "",
             condition: emptyIfUndefined(data.condition),
-            chanceOfRain: emptyIfUndefined(data.propPrecip, "%"),
+            chanceOfPrecip: emptyIfUndefined(data.propPrecip, "%"),
             humidity: emptyIfUndefined(data.humidity, "%"),
             sunrise: data.sunrise || sunrise.toLocaleTimeString(Qt.locale().name, options),
             sunset: data.sunset || sunset.toLocaleTimeString(Qt.locale().name, options),
