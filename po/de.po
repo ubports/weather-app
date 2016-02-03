@@ -8,19 +8,19 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-12-11 21:39-0600\n"
-"PO-Revision-Date: 2016-02-01 21:45+0000\n"
-"Last-Translator: Torsten Franz <Unknown>\n"
+"PO-Revision-Date: 2016-02-02 21:50+0000\n"
+"Last-Translator: Tobias Bannert <Unknown>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-02-02 05:48+0000\n"
+"X-Launchpad-Export-Date: 2016-02-03 06:05+0000\n"
 "X-Generator: Launchpad (build 17908)\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of precipitation"
-msgstr ""
+msgstr "Niederschlagswahrscheinlichkeit"
 
 #: ../app/components/DayDelegateExtraInfo.qml:59
 msgid "Winds"
@@ -100,17 +100,20 @@ msgstr "Wiederholen"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:48
 msgid "No API Keys Found"
-msgstr ""
+msgstr "Keine API-Schlüssel gefunden"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:57
 msgid ""
 "If you are a developer, please see the README file for instructions on how "
 "to obtain your own Open Weather Map API key."
 msgstr ""
+"Wenn Sie ein Entwickler sind, sehen Sie bitte in der README-Datei nach "
+"Anweisungen, wie Sie Ihren eigenen Open-Weather-Map-API-Schlüssel erhalten "
+"können."
 
 #: ../app/ui/AddLocationPage.qml:29
 msgid "Select a city"
-msgstr "Wählen Sie einen Ort"
+msgstr "Bitte Ort auswählen"
 
 #: ../app/ui/AddLocationPage.qml:47 ../app/ui/AddLocationPage.qml:69
 msgid "Back"
@@ -219,7 +222,7 @@ msgstr "km/h"
 #. Only the abbreviated form of miles per hour should be used.
 #: ../app/ui/settings/UnitsPage.qml:63 ../app/ui/settings/UnitsPage.qml:100
 msgid "mph"
-msgstr "Meilen/h"
+msgstr "mph"
 
 #: ../app/ui/settings/UnitsPage.qml:77
 msgid "Temperature"
@@ -238,7 +241,7 @@ msgid ""
 "A weather forecast application for Ubuntu with support for multiple online "
 "weather data sources"
 msgstr ""
-"Eine Wettervorhersagen-App für Ubuntu mit Unterstützung für viele Online-"
+"Eine Wettervorhersage-App für Ubuntu mit Unterstützung vieler Online-"
 "Wetterdatenquellen"
 
 #: ubuntu-weather-app.desktop.in.in.h:3
