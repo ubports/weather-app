@@ -8,19 +8,19 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-12-11 21:39-0600\n"
-"PO-Revision-Date: 2015-10-03 02:28+0000\n"
-"Last-Translator: Marius Gripsgard  <me@mariogrip.com>\n"
+"PO-Revision-Date: 2016-02-03 07:42+0000\n"
+"Last-Translator: Åka Sikrom <Unknown>\n"
 "Language-Team: Norwegian Bokmal <nb@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-01-30 05:47+0000\n"
+"X-Launchpad-Export-Date: 2016-02-04 06:19+0000\n"
 "X-Generator: Launchpad (build 17908)\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of precipitation"
-msgstr ""
+msgstr "Sannsynlighet for nedbør"
 
 #: ../app/components/DayDelegateExtraInfo.qml:59
 msgid "Winds"
@@ -88,7 +88,7 @@ msgstr "Nettverksfeil"
 
 #: ../app/components/NetworkErrorStateComponent.qml:57
 msgid "Please check your network settings and try again."
-msgstr ""
+msgstr "Kontroller nettverksinnstillingene og prøv igjen."
 
 #: ../app/components/NetworkErrorStateComponent.qml:63
 msgid "Retry"
@@ -96,13 +96,15 @@ msgstr "Prøv igjen"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:48
 msgid "No API Keys Found"
-msgstr ""
+msgstr "Fant ingen API-nøkler"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:57
 msgid ""
 "If you are a developer, please see the README file for instructions on how "
 "to obtain your own Open Weather Map API key."
 msgstr ""
+"Les fila «README» (engelsk) for å få hjelp til å lage din egen Open Weather "
+"Map-API-nøkkel."
 
 #: ../app/ui/AddLocationPage.qml:29
 msgid "Select a city"
