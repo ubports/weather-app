@@ -1,20 +1,20 @@
-# Czech translation for ubuntu-weather-app
-# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# Esperanto translation for ubuntu-weather-app
+# Copyright (c) 2016 Rosetta Contributors and Canonical Ltd 2016
 # This file is distributed under the same license as the ubuntu-weather-app package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-12-11 21:39-0600\n"
-"PO-Revision-Date: 2015-08-11 23:21+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Czech <cs@li.org>\n"
+"PO-Revision-Date: 2016-01-27 18:00+0000\n"
+"Last-Translator: Robin van der Vliet <info@robinvandervliet.com>\n"
+"Language-Team: Esperanto <eo@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Launchpad-Export-Date: 2016-01-30 05:47+0000\n"
 "X-Generator: Launchpad (build 17908)\n"
 
@@ -36,15 +36,15 @@ msgstr ""
 
 #: ../app/components/DayDelegateExtraInfo.qml:81
 msgid "Humidity"
-msgstr "Vlhkost"
+msgstr "Humideco"
 
 #: ../app/components/DayDelegateExtraInfo.qml:88
 msgid "Sunrise"
-msgstr ""
+msgstr "Sunleviĝo"
 
 #: ../app/components/DayDelegateExtraInfo.qml:95
 msgid "Sunset"
-msgstr ""
+msgstr "Sunsubiro"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:51
 msgid "Searching for current location..."
@@ -60,11 +60,11 @@ msgstr ""
 
 #: ../app/components/HomeTempInfo.qml:103
 msgid "Today"
-msgstr ""
+msgstr "Hodiaŭ"
 
 #: ../app/components/ListItemActions/Remove.qml:26
 msgid "Remove"
-msgstr ""
+msgstr "Forigi"
 
 #: ../app/components/LocationsPageEmptyStateComponent.qml:36
 msgid "No locations found. Tap the plus icon to search for one."
@@ -72,19 +72,19 @@ msgstr ""
 
 #: ../app/components/MultiSelectHeadState.qml:27
 msgid "Select All"
-msgstr ""
+msgstr "Elekti ĉion"
 
 #: ../app/components/MultiSelectHeadState.qml:39
 msgid "Delete"
-msgstr ""
+msgstr "Forigi"
 
 #: ../app/components/MultiSelectHeadState.qml:51
 msgid "Cancel selection"
-msgstr ""
+msgstr "Nuligi selekton"
 
 #: ../app/components/NetworkErrorStateComponent.qml:48
 msgid "Network Error"
-msgstr ""
+msgstr "Reteraro"
 
 #: ../app/components/NetworkErrorStateComponent.qml:57
 msgid "Please check your network settings and try again."
@@ -92,7 +92,7 @@ msgstr ""
 
 #: ../app/components/NetworkErrorStateComponent.qml:63
 msgid "Retry"
-msgstr ""
+msgstr "Reprovi"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:48
 msgid "No API Keys Found"
@@ -106,19 +106,19 @@ msgstr ""
 
 #: ../app/ui/AddLocationPage.qml:29
 msgid "Select a city"
-msgstr ""
+msgstr "Elekti urbon"
 
 #: ../app/ui/AddLocationPage.qml:47 ../app/ui/AddLocationPage.qml:69
 msgid "Back"
-msgstr ""
+msgstr "Reen"
 
 #: ../app/ui/AddLocationPage.qml:54
 msgid "City"
-msgstr ""
+msgstr "Urbo"
 
 #: ../app/ui/AddLocationPage.qml:113
 msgid "Search city"
-msgstr ""
+msgstr "Serĉi urbon"
 
 #: ../app/ui/AddLocationPage.qml:299
 msgid "No city found"
@@ -126,31 +126,31 @@ msgstr ""
 
 #: ../app/ui/AddLocationPage.qml:312
 msgid "Couldn't load weather data, please try later again!"
-msgstr "Nezle načíst údaje o počasí, zkuste to prosím později."
+msgstr ""
 
 #: ../app/ui/AddLocationPage.qml:322
 msgid "Location already added."
-msgstr "Umístění bylo již přidáno."
+msgstr ""
 
 #: ../app/ui/AddLocationPage.qml:325
 msgid "OK"
-msgstr "OK"
+msgstr "Bone"
 
 #: ../app/ui/HomePage.qml:32 ../app/ui/LocationsPage.qml:29
 msgid "Locations"
-msgstr "Umístění"
+msgstr "Lokoj"
 
 #: ../app/ui/LocationsPage.qml:109
 msgid "Current Location"
-msgstr ""
+msgstr "Nuna loko"
 
 #: ../app/ui/SettingsPage.qml:24
 msgid "Settings"
-msgstr "Nastavení"
+msgstr "Agordoj"
 
 #: ../app/ui/SettingsPage.qml:33 ../app/ui/settings/UnitsPage.qml:24
 msgid "Units"
-msgstr ""
+msgstr "Unuoj"
 
 #: ../app/ui/SettingsPage.qml:38 ../app/ui/settings/DataProviderPage.qml:25
 msgid "Data Provider"
@@ -162,11 +162,11 @@ msgstr ""
 
 #: ../app/ui/SettingsPage.qml:48 ../app/ui/settings/LocationPage.qml:24
 msgid "Location"
-msgstr ""
+msgstr "Loko"
 
 #: ../app/ui/settings/DataProviderPage.qml:37
 msgid "Provider"
-msgstr ""
+msgstr "Provizanto"
 
 #: ../app/ui/settings/LocationPage.qml:32
 msgid "Detect current location"
@@ -180,8 +180,8 @@ msgstr ""
 #, qt-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 minuto"
+msgstr[1] "%1 minutoj"
 
 #: ../app/ui/settings/RefreshIntervalPage.qml:42
 msgid "Interval"
@@ -192,47 +192,47 @@ msgstr ""
 #. Only the abbreviated form of Celcius should be used.
 #: ../app/ui/settings/UnitsPage.qml:42 ../app/ui/settings/UnitsPage.qml:78
 msgid "°C"
-msgstr ""
+msgstr "°C"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of temperature in Fahrenheit and are shown in the settings page.
 #. Only the abbreviated form of Fahrenheit should be used.
 #: ../app/ui/settings/UnitsPage.qml:47 ../app/ui/settings/UnitsPage.qml:79
 msgid "°F"
-msgstr ""
+msgstr "°F"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of wind speed in kilometers per hour and are shown in the settings page.
 #. Only the abbreviated form of kilometers per hour should be used.
 #: ../app/ui/settings/UnitsPage.qml:58 ../app/ui/settings/UnitsPage.qml:99
 msgid "kph"
-msgstr ""
+msgstr "km/h"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of wind speed in miles per hour and are shown in the settings page.
 #. Only the abbreviated form of miles per hour should be used.
 #: ../app/ui/settings/UnitsPage.qml:63 ../app/ui/settings/UnitsPage.qml:100
 msgid "mph"
-msgstr ""
+msgstr "mi/h"
 
 #: ../app/ui/settings/UnitsPage.qml:77
 msgid "Temperature"
-msgstr ""
+msgstr "Temperaturo"
 
 #: ../app/ui/settings/UnitsPage.qml:98
 msgid "Wind Speed"
-msgstr ""
+msgstr "Venta rapido"
 
 #: ubuntu-weather-app.desktop.in.in.h:1
 msgid "Weather"
-msgstr "Počasí"
+msgstr "Vetero"
 
 #: ubuntu-weather-app.desktop.in.in.h:2
 msgid ""
 "A weather forecast application for Ubuntu with support for multiple online "
 "weather data sources"
-msgstr "Aplikace předpovědi počasí pro Ubuntu s podporou mnoha online zdrojů"
+msgstr ""
 
 #: ubuntu-weather-app.desktop.in.in.h:3
 msgid "weather;forecast;twc;openweathermap;the weather channel;"
-msgstr "počasí;předpověď;twc;openweathermat;the weather channel;"
+msgstr ""

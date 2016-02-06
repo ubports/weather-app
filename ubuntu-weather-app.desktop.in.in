@@ -9,6 +9,7 @@ _Comment=A weather forecast application for Ubuntu with support for multiple onl
 _Keywords=weather;forecast;twc;openweathermap;the weather channel;
 X-Ubuntu-Touch=true
 X-Ubuntu-Default-Department-ID=accessories
+X-Ubuntu-StageHint=SideStage
 X-Ubuntu-Splash-Color=#F5F5F5
 X-Ubuntu-Splash-Show-Header=true
 X-Ubuntu-Supported-Orientations=portrait

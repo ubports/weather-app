@@ -7,20 +7,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-11-26 02:04+0000\n"
-"PO-Revision-Date: 2015-11-04 22:41+0000\n"
+"POT-Creation-Date: 2015-12-11 21:39-0600\n"
+"PO-Revision-Date: 2016-01-28 20:34+0000\n"
 "Last-Translator: Angutivik Casper Rúnur Tausen Hansen <Unknown>\n"
 "Language-Team: Faroese <fo@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-11-27 05:40+0000\n"
-"X-Generator: Launchpad (build 17850)\n"
+"X-Launchpad-Export-Date: 2016-01-30 05:47+0000\n"
+"X-Generator: Launchpad (build 17908)\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
-msgid "Chance of rain"
-msgstr "Møguleiki fyri regn"
+msgid "Chance of precipitation"
+msgstr ""
 
 #: ../app/components/DayDelegateExtraInfo.qml:59
 msgid "Winds"
@@ -96,13 +96,15 @@ msgstr "Royn aftur"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:48
 msgid "No API Keys Found"
-msgstr ""
+msgstr "Eingin API-lykil funnon"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:57
 msgid ""
 "If you are a developer, please see the README file for instructions on how "
 "to obtain your own Open Weather Map API key."
 msgstr ""
+"Um tú ert forritari, vinarliga les README-fílan til vegleiðing um hvussu tú "
+"gjørt tín egna Open Weather Map API-lykil"
 
 #: ../app/ui/AddLocationPage.qml:29
 msgid "Select a city"

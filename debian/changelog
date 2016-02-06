@@ -2,9 +2,13 @@ ubuntu-weather-app (3.2) UNRELEASED; urgency=medium
 
   [ Andrew Hayzen ]
   * Release 3.1 and bump version to 3.2
+  * Use sidestage so that tablets don't go into portrait mode
 
   [ Girish Rawat ]
   * Added new READMEs
+
+  [ Victor Thompson ]
+  * Change translatable string from "rain" to "precipitation" (LP:1521701)
 
   [ Vamshi Balanaga ]
   * Added test to swipe between location tabs on home page (LP: #1452492)
