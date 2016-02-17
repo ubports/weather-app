@@ -1,0 +1,242 @@
+# Welsh translation for ubuntu-weather-app
+# Copyright (c) 2016 Rosetta Contributors and Canonical Ltd 2016
+# This file is distributed under the same license as the ubuntu-weather-app package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ubuntu-weather-app\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2015-12-11 21:39-0600\n"
+"PO-Revision-Date: 2016-02-16 16:25+0000\n"
+"Last-Translator: Owen Llywelyn <owen.llywelyn@gmail.com>\n"
+"Language-Team: Welsh <cy@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 0 : n==2 ? 1 : (n != 8 && n != 11) ? "
+"2 : 3;\n"
+"X-Launchpad-Export-Date: 2016-02-17 05:46+0000\n"
+"X-Generator: Launchpad (build 17925)\n"
+
+#: ../app/components/DayDelegateExtraInfo.qml:52
+msgid "Chance of precipitation"
+msgstr "Siawns o ddyodiad"
+
+#: ../app/components/DayDelegateExtraInfo.qml:59
+msgid "Winds"
+msgstr "Gwyntoedd"
+
+#: ../app/components/DayDelegateExtraInfo.qml:68
+msgid "UV Index"
+msgstr "Mynegau UV"
+
+#: ../app/components/DayDelegateExtraInfo.qml:74
+msgid "Pollen"
+msgstr "Paill"
+
+#: ../app/components/DayDelegateExtraInfo.qml:81
+msgid "Humidity"
+msgstr "Lleithder"
+
+#: ../app/components/DayDelegateExtraInfo.qml:88
+msgid "Sunrise"
+msgstr "Codiad haul"
+
+#: ../app/components/DayDelegateExtraInfo.qml:95
+msgid "Sunset"
+msgstr "Machlud haul"
+
+#: ../app/components/HomePageEmptyStateComponent.qml:51
+msgid "Searching for current location..."
+msgstr "Chwilio am eich lleoliad cyfredol..."
+
+#: ../app/components/HomePageEmptyStateComponent.qml:52
+msgid "Cannot determine your location"
+msgstr "Methu pennu eich lleoliad"
+
+#: ../app/components/HomePageEmptyStateComponent.qml:62
+msgid "Manually add a location by swiping up from the bottom of the display"
+msgstr "Ychwanegu lleoliad â llaw drwy drawio fyny o waelod y dangosydd"
+
+#: ../app/components/HomeTempInfo.qml:103
+msgid "Today"
+msgstr "Heddiw"
+
+#: ../app/components/ListItemActions/Remove.qml:26
+msgid "Remove"
+msgstr "Tynnu"
+
+#: ../app/components/LocationsPageEmptyStateComponent.qml:36
+msgid "No locations found. Tap the plus icon to search for one."
+msgstr "Heb ganfod lleoliadau. Tapiwch yr eicon plws i chwilio am un."
+
+#: ../app/components/MultiSelectHeadState.qml:27
+msgid "Select All"
+msgstr "Dewis y Cyfan"
+
+#: ../app/components/MultiSelectHeadState.qml:39
+msgid "Delete"
+msgstr "Dileu"
+
+#: ../app/components/MultiSelectHeadState.qml:51
+msgid "Cancel selection"
+msgstr "Diddymu'r dewis"
+
+#: ../app/components/NetworkErrorStateComponent.qml:48
+msgid "Network Error"
+msgstr "Gwall Rhwydwaith"
+
+#: ../app/components/NetworkErrorStateComponent.qml:57
+msgid "Please check your network settings and try again."
+msgstr "Gwiriwch eich gosodiadau rhwydwaith a cheisio eto."
+
+#: ../app/components/NetworkErrorStateComponent.qml:63
+msgid "Retry"
+msgstr "Ailgynnig"
+
+#: ../app/components/NoAPIKeyErrorStateComponent.qml:48
+msgid "No API Keys Found"
+msgstr "Heb ganfod Allweddi API"
+
+#: ../app/components/NoAPIKeyErrorStateComponent.qml:57
+msgid ""
+"If you are a developer, please see the README file for instructions on how "
+"to obtain your own Open Weather Map API key."
+msgstr ""
+
+#: ../app/ui/AddLocationPage.qml:29
+msgid "Select a city"
+msgstr "Dewiswch ddinas"
+
+#: ../app/ui/AddLocationPage.qml:47 ../app/ui/AddLocationPage.qml:69
+msgid "Back"
+msgstr "Nôl"
+
+#: ../app/ui/AddLocationPage.qml:54
+msgid "City"
+msgstr "Dinas"
+
+#: ../app/ui/AddLocationPage.qml:113
+msgid "Search city"
+msgstr "Chwilio am ddinas"
+
+#: ../app/ui/AddLocationPage.qml:299
+msgid "No city found"
+msgstr "Heb ganfos dinas"
+
+#: ../app/ui/AddLocationPage.qml:312
+msgid "Couldn't load weather data, please try later again!"
+msgstr "Methu llwytho data tywydd, rhowch gynnig arall arni yn nes ymlaen!"
+
+#: ../app/ui/AddLocationPage.qml:322
+msgid "Location already added."
+msgstr "Lleoliad eisoes yno."
+
+#: ../app/ui/AddLocationPage.qml:325
+msgid "OK"
+msgstr "Iawn"
+
+#: ../app/ui/HomePage.qml:32 ../app/ui/LocationsPage.qml:29
+msgid "Locations"
+msgstr "Lleoliadau"
+
+#: ../app/ui/LocationsPage.qml:109
+msgid "Current Location"
+msgstr "Lleoliad Cyfredol"
+
+#: ../app/ui/SettingsPage.qml:24
+msgid "Settings"
+msgstr "Gosodiadau"
+
+#: ../app/ui/SettingsPage.qml:33 ../app/ui/settings/UnitsPage.qml:24
+msgid "Units"
+msgstr "Unedau"
+
+#: ../app/ui/SettingsPage.qml:38 ../app/ui/settings/DataProviderPage.qml:25
+msgid "Data Provider"
+msgstr "Darparwr Data"
+
+#: ../app/ui/SettingsPage.qml:43 ../app/ui/settings/RefreshIntervalPage.qml:24
+msgid "Refresh Interval"
+msgstr "Cyfnod Adnewyddu"
+
+#: ../app/ui/SettingsPage.qml:48 ../app/ui/settings/LocationPage.qml:24
+msgid "Location"
+msgstr "Lleoliad"
+
+#: ../app/ui/settings/DataProviderPage.qml:37
+msgid "Provider"
+msgstr "Darparwr"
+
+#: ../app/ui/settings/LocationPage.qml:32
+msgid "Detect current location"
+msgstr "Canfod lleoliad cyfredol"
+
+#: ../app/ui/settings/RefreshIntervalPage.qml:30
+#: ../app/ui/settings/RefreshIntervalPage.qml:31
+#: ../app/ui/settings/RefreshIntervalPage.qml:32
+#: ../app/ui/settings/RefreshIntervalPage.qml:33
+#: ../app/ui/settings/RefreshIntervalPage.qml:43
+#, qt-format
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] "%1 munud"
+msgstr[1] "%1 munud"
+msgstr[2] "%1 munud"
+msgstr[3] "%1 munud"
+
+#: ../app/ui/settings/RefreshIntervalPage.qml:42
+msgid "Interval"
+msgstr "Cyfnod"
+
+#. TRANSLATORS: The strings are standard measurement units
+#. of temperature in Celcius and are shown in the settings page.
+#. Only the abbreviated form of Celcius should be used.
+#: ../app/ui/settings/UnitsPage.qml:42 ../app/ui/settings/UnitsPage.qml:78
+msgid "°C"
+msgstr "°C"
+
+#. TRANSLATORS: The strings are standard measurement units
+#. of temperature in Fahrenheit and are shown in the settings page.
+#. Only the abbreviated form of Fahrenheit should be used.
+#: ../app/ui/settings/UnitsPage.qml:47 ../app/ui/settings/UnitsPage.qml:79
+msgid "°F"
+msgstr "°F"
+
+#. TRANSLATORS: The strings are standard measurement units
+#. of wind speed in kilometers per hour and are shown in the settings page.
+#. Only the abbreviated form of kilometers per hour should be used.
+#: ../app/ui/settings/UnitsPage.qml:58 ../app/ui/settings/UnitsPage.qml:99
+msgid "kph"
+msgstr "kya"
+
+#. TRANSLATORS: The strings are standard measurement units
+#. of wind speed in miles per hour and are shown in the settings page.
+#. Only the abbreviated form of miles per hour should be used.
+#: ../app/ui/settings/UnitsPage.qml:63 ../app/ui/settings/UnitsPage.qml:100
+msgid "mph"
+msgstr "mya"
+
+#: ../app/ui/settings/UnitsPage.qml:77
+msgid "Temperature"
+msgstr "Tymheredd"
+
+#: ../app/ui/settings/UnitsPage.qml:98
+msgid "Wind Speed"
+msgstr "Cyflymder Gwynt"
+
+#: ubuntu-weather-app.desktop.in.in.h:1
+msgid "Weather"
+msgstr "Tywydd"
+
+#: ubuntu-weather-app.desktop.in.in.h:2
+msgid ""
+"A weather forecast application for Ubuntu with support for multiple online "
+"weather data sources"
+msgstr ""
+"Ap tywydd ar gyfer Ubuntu sy'n cefnogi sawl ffynhonnell data tywydd arlein"
+
+#: ubuntu-weather-app.desktop.in.in.h:3
+msgid "weather;forecast;twc;openweathermap;the weather channel;"
+msgstr "tywydd;rhagolwg;twc;openweathermap;the weather channel;"
