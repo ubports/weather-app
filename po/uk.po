@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-12-11 21:39-0600\n"
-"PO-Revision-Date: 2015-10-16 17:05+0000\n"
+"PO-Revision-Date: 2016-02-08 18:55+0000\n"
 "Last-Translator: Yuri Chornoivan <yurchor@gmail.com>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,12 +16,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2016-01-30 05:47+0000\n"
+"X-Launchpad-Export-Date: 2016-02-09 06:08+0000\n"
 "X-Generator: Launchpad (build 17908)\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of precipitation"
-msgstr ""
+msgstr "Ймовірність опадів"
 
 #: ../app/components/DayDelegateExtraInfo.qml:59
 msgid "Winds"
@@ -91,6 +91,8 @@ msgstr "Помилка мережі"
 #: ../app/components/NetworkErrorStateComponent.qml:57
 msgid "Please check your network settings and try again."
 msgstr ""
+"Будь ласка, переконайтеся, що параметри мережі вказано правильно, і "
+"повторіть спробу."
 
 #: ../app/components/NetworkErrorStateComponent.qml:63
 msgid "Retry"
@@ -98,13 +100,16 @@ msgstr "Повторити спробу"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:48
 msgid "No API Keys Found"
-msgstr ""
+msgstr "Не знайдено ключів API"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:57
 msgid ""
 "If you are a developer, please see the README file for instructions on how "
 "to obtain your own Open Weather Map API key."
 msgstr ""
+"Якщо ви є розробником, будь ласка, ознайомтеся із вмістом файла README, щоб "
+"дізнатися більше про те, як отримати власний ключ до програмного інтерфейсу "
+"Open Weather Map."
 
 #: ../app/ui/AddLocationPage.qml:29
 msgid "Select a city"
