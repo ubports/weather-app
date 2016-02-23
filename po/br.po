@@ -8,19 +8,19 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-12-11 21:39-0600\n"
-"PO-Revision-Date: 2015-11-03 07:03+0000\n"
+"PO-Revision-Date: 2016-02-22 12:32+0000\n"
 "Last-Translator: Fohanno Thierry <thierry.fohanno@ofis-bzh.org>\n"
 "Language-Team: Breton <br@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2016-01-30 05:47+0000\n"
-"X-Generator: Launchpad (build 17908)\n"
+"X-Launchpad-Export-Date: 2016-02-23 06:06+0000\n"
+"X-Generator: Launchpad (build 17925)\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of precipitation"
-msgstr ""
+msgstr "Chañsoù e vefe glav"
 
 #: ../app/components/DayDelegateExtraInfo.qml:59
 msgid "Winds"
@@ -97,13 +97,15 @@ msgstr "Esaeañ en-dro"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:48
 msgid "No API Keys Found"
-msgstr ""
+msgstr "N'eus ket bet kavet alc'hwezioù API"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:57
 msgid ""
 "If you are a developer, please see the README file for instructions on how "
 "to obtain your own Open Weather Map API key."
 msgstr ""
+"Ma'z oc'h un diorroer, lennit ar restr README, mar plij, evit gouzout penaos "
+"tapout hoc'h alc'hwez API Open Weather Map deoc'h-c'hwi."
 
 #: ../app/ui/AddLocationPage.qml:29
 msgid "Select a city"
