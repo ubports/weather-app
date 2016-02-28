@@ -43,9 +43,9 @@ Page {
         subText.text: settings.service === "weatherchannel" ? "The Weather Channel" : "OpenWeatherMap"
 
         delegate: StandardListItem {
-            title: model.text
-            icon: "ok"
-            showIcon: dataProviderSetting.subText === model.text
+            title.text: model.text
+            icon.name: "ok"
+            icon.visible: dataProviderSetting.subText === model.text
             onClicked: {
                 if (model.text === "The Weather Channel") {
                     settings.service = "weatherchannel"

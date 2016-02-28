@@ -48,9 +48,9 @@ Page {
         subText.text: i18n.tr("%1 minute", "%1 minutes", Math.floor(settings.refreshInterval / 60).toString()).arg(Math.floor(settings.refreshInterval / 60).toString())
 
         delegate: StandardListItem {
-            title: model.text
-            icon: "ok"
-            showIcon: settings.refreshInterval === model.interval
+            title.text: model.text
+            icon.name: "ok"
+            icon.visible: settings.refreshInterval === model.interval
             onClicked: {
                 settings.refreshInterval = model.interval
                 refreshData(false, true)

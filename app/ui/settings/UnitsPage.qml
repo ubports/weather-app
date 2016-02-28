@@ -84,9 +84,9 @@ Page {
                                                      : i18n.tr("°F")
 
                 delegate: StandardListItem {
-                    title: model.text
-                    icon: "ok"
-                    showIcon: settings.tempScale === model.value
+                    title.text: model.text
+                    icon.name: "ok"
+                    icon.visible: settings.tempScale === model.value
                     onClicked: {
                         settings.tempScale = model.value
                         refreshData(true)
@@ -105,9 +105,9 @@ Page {
                                                       : i18n.tr("mph")
 
                 delegate: StandardListItem {
-                    title: model.text
-                    icon: "ok"
-                    showIcon: settings.windUnits === model.value
+                    title.text: model.text
+                    icon.name: "ok"
+                    icon.visible: settings.windUnits === model.value
                     onClicked: {
                         settings.windUnits = model.value
                         refreshData(true)
