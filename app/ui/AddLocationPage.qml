@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Canonical Ltd
+ * Copyright (C) 2015-2016 Canonical Ltd
  *
  * This file is part of Ubuntu Weather App
  *
@@ -26,65 +26,60 @@ import "../data/WeatherApi.js" as WeatherApi
 Page {
     id: addLocationPage
     objectName: "addLocationPage"
-    title: i18n.tr("Select a city")
-    visible: false
 
-    /*
-      Flickable is set to null to stop page header from hiding since the fast
-      scroll component hides top anchor margin is incorrect.
-    */
-    flickable: null
+    visible: false
 
     property bool searching: citiesModel.loading || searchTimer.running
 
-    state: "default"
-    states: [
-        PageHeadState {
-            name: "default"
-            head: addLocationPage.head
-            backAction: Action {
-                iconName: "back"
-                text: i18n.tr("Back")
-                onTriggered: mainPageStack.pop()
-            }
-            actions: [
-                Action {
-                    iconName: "search"
-                    objectName: "search"
-                    text: i18n.tr("City")
-                    onTriggered: {
-                        addLocationPage.state = "search"
-                        searchComponentLoader.sourceComponent = searchComponent
-                        searchComponentLoader.item.forceActiveFocus()
-                    }
-                }
-            ]
-        },
+    header: standardHeader
 
-        PageHeadState {
-            name: "search"
-            head: addLocationPage.head
-            backAction: Action {
+    PageHeader {
+        id: standardHeader
+        title: i18n.tr("Select a city")
+        /*
+          Flickable is set to null to stop page header from hiding since the fast
+          scroll component hides top anchor margin is incorrect.
+        */
+        flickable: null
+        visible: addLocationPage.header === standardHeader
+        trailingActionBar.actions: [
+            Action {
+                iconName: "search"
+                objectName: "search"
+                text: i18n.tr("City")
+                onTriggered: {
+                    addLocationPage.header = searchHeader
+                    searchComponentLoader.sourceComponent = searchComponent
+                    searchComponentLoader.item.forceActiveFocus()
+                }
+            }
+        ]
+    }
+
+    PageHeader {
+        id: searchHeader
+        visible: addLocationPage.header === searchHeader
+        leadingActionBar.actions: [
+            Action {
                 iconName: "back"
                 text: i18n.tr("Back")
                 onTriggered: {
                     locationList.forceActiveFocus()
                     searchComponentLoader.item.text = ""
-                    addLocationPage.state = "default"
+                    addLocationPage.header = standardHeader
                     searchComponentLoader.sourceComponent = undefined
                 }
             }
-
-            contents: Loader {
-                id: searchComponentLoader
-                anchors {
-                    left: parent ? parent.left : undefined
-                    right: parent ? parent.right : undefined
-                    rightMargin: units.gu(2)
-                }
+        ]
+        contents: Loader {
+            id: searchComponentLoader
+            anchors {
+                left: parent ? parent.left : undefined
+                right: parent ? parent.right : undefined
+                verticalCenter: parent ? parent.verticalCenter : undefined
             }
         }
-    ]
+    }
 
     // Outside component so property can bind to for autopilot
     Timer {
@@ -181,9 +176,12 @@ Page {
     ListView {
         id: locationList
         anchors {
-            fill: parent
-            rightMargin: fastScroll.showing ? fastScroll.width - units.gu(1) : 0
+            top: addLocationPage.header.bottom
             topMargin: units.gu(2)
+            left: parent.left
+            right: parent.right
+            rightMargin: fastScroll.showing ? fastScroll.width - units.gu(1) : 0
+            bottom: parent.bottom
         }
 
         objectName: "locationList"
@@ -224,30 +222,14 @@ Page {
         delegate: ListItem {
             divider.visible: false
             objectName: "addLocation" + index
-            Column {
-                anchors {
-                    left: parent.left
-                    leftMargin: units.gu(2)
-                    right: parent.right
-                    rightMargin: units.gu(2)
-                    verticalCenter: parent.verticalCenter
-                }
 
-                Label {
-                    color: UbuntuColors.darkGrey
-                    elide: Text.ElideRight
-                    fontSize: "medium"
-                    text: name
-                    width: parent.width
-                }
+            height: listDelegateLayout.height
 
-                Label {
-                    color: UbuntuColors.lightGrey
-                    elide: Text.ElideRight
-                    fontSize: "xx-small"
-                    text: areaLabel
-                    width: parent.width
-                }
+            ListItemLayout {
+                id: listDelegateLayout
+                title.text: name
+                subtitle.text: areaLabel
+                subtitle.textSize: Label.Small
             }
 
             onClicked: {
