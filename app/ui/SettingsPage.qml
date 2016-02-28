@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Canonical Ltd
+ * Copyright (C) 2015-2016 Canonical Ltd
  *
  * This file is part of Ubuntu Weather App
  *
@@ -21,31 +21,53 @@ import Ubuntu.Components 1.3
 import "../components"
 
 Page {
-    title: i18n.tr("Settings")
+    id: settingsPage
+
+    header: PageHeader {
+        title: i18n.tr("Settings")
+    }
+
     property bool bug1341671workaround: true
 
     Column {
         id: settingsColumn
 
-        anchors.fill: parent
+        anchors {
+            top: settingsPage.header.bottom
+            left: parent.left
+            right: parent.right
+            bottom: parent.bottom
+        }
 
-        StandardListItem {
-            title: i18n.tr("Units")
+        ListItem {
+            ListItemLayout {
+                title.text: i18n.tr("Units")
+                ProgressionSlot{}
+            }
             onClicked: mainPageStack.push(Qt.resolvedUrl("settings/UnitsPage.qml"))
         }
 
-        StandardListItem {
-            title: i18n.tr("Data Provider")
+        ListItem {
+            ListItemLayout {
+                title.text: i18n.tr("Data Provider")
+                ProgressionSlot{}
+            }
             onClicked: mainPageStack.push(Qt.resolvedUrl("settings/DataProviderPage.qml"))
         }
 
-        StandardListItem {
-            title: i18n.tr("Refresh Interval")
+        ListItem {
+            ListItemLayout {
+                title.text: i18n.tr("Refresh Interval")
+                ProgressionSlot{}
+            }
             onClicked: mainPageStack.push(Qt.resolvedUrl("settings/RefreshIntervalPage.qml"))
         }
 
-        StandardListItem {
-            title: i18n.tr("Location")
+        ListItem {
+            ListItemLayout {
+                title.text: i18n.tr("Location")
+                ProgressionSlot{}
+            }
             onClicked: mainPageStack.push(Qt.resolvedUrl("settings/LocationPage.qml"))
         }
     }
