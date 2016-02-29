@@ -39,7 +39,7 @@ ListView {
     MouseArea {
         anchors.fill: parent
         onClicked: {
-            homeGraphic.visible = true
+            graphicVisible = true
         }
     }
 

@@ -28,26 +28,6 @@ Item {
 
     property string string: "Undefined"
 
-    function searchForLocation(lat, lon) {
-        WeatherApi.sendRequest({
-                                   action: "searchByPoint",
-                                   params: {
-                                       coords: {
-                                           lat: lat,
-                                           lon: lon
-                                       }
-                                   }
-                               }, searchResponseHandler)
-    }
-
-    function searchResponseHandler(msgObject) {
-        if (!msgObject.error && settings.detectCurrentLocation) {
-            console.log("Loc to add:", JSON.stringify(msgObject.result.locations[0]))
-            storage.updateCurrentLocation(msgObject.result.locations[0])
-        }
-    }
-
-
     PositionSource {
         id: currentPosition
         updateInterval: 1000
@@ -74,7 +54,10 @@ Item {
 
         onCountChanged: {
             // Update the currentLocation if one is found and it does not match the stored location
-            if (count > 0 && currentLocation.string !== geocodeModel.get(0).address.city) {
+            // if there is a location request from url on startup, we ignore this first a few times when signal is triggerd
+            // to avoid view position to current location. It works after requestLocationByUrl was set to undefined
+            if (weatherApp.requestLocationByUrl === undefined
+                    && count > 0 && currentLocation.string !== geocodeModel.get(0).address.city) {
                 search();
             }
         }
@@ -82,7 +65,7 @@ Item {
         function search() {
             var loc = geocodeModel.get(0)
             currentLocation.string = loc.address.city
-            searchForLocation(loc.coordinate.latitude, loc.coordinate.longitude)
+            searchForLocation("searchByPoint", loc.coordinate.latitude, loc.coordinate.longitude)
         }
     }
 
