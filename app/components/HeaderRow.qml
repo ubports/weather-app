@@ -28,6 +28,7 @@ RowLayout {
     width: parent.width
 
     Label {
+        objectName: 'headerLabel'
         id: locationNameLabel
         color: UbuntuColors.darkGrey
         elide: Text.ElideRight

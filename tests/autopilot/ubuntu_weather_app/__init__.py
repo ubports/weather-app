@@ -27,7 +27,6 @@ def click_object(func):
 
     return func_wrapper
 
-
 #
 # Base helpers
 #
@@ -201,6 +200,19 @@ class HomePage(PageWithBottomEdge):
     def get_selected_location_pane(self):
         return self.get_location_pane(self.get_selected_location_index())
 
+    def swipe_left(self):
+
+        # Define the start and stop locations of the left swipe
+        start_x = (self.globalRect.x +
+                   (self.globalRect.width * 0.9))
+        stop_x = (self.globalRect.x +
+                  (self.globalRect.width * 0.1))
+        start_y = stop_y = (self.globalRect.y +
+                            (self.globalRect.height * 0.5))
+        rate = 5
+
+        self.pointing_device.drag(start_x, start_y, stop_x, stop_y, rate)
+
 
 class HomeTempInfo(UbuntuUIToolkitCustomProxyObjectBase):
     pass
@@ -220,6 +232,10 @@ class LocationPane(QQuickListView):
         self.swipe_to_top()  # ensure at the top of the flickable
 
         return self.get_settings_button()
+
+    def get_name(self):
+        return self.wait_select_single(
+            "UCLabel", objectName='headerLabel').text
 
     def get_day_delegate(self, day):
         return self.wait_select_single(
