@@ -100,15 +100,20 @@ function parameterize(obj) {
 }
 
 
-// Remove anything including and after APPID in the given term
+// Remove just the API key
 function trimAPIKey(data) {
-    var owm = data.indexOf("&APPID=");
-    var twc = data.indexOf("&key=");
+    var owm = data.indexOf("APPID=");
+    var twc = data.indexOf("apiKey=");
+
+    // Key length is 32 char for both APIs
+    var keySize = 32;
 
     if (owm > -1) {
-        data = data.substr(0, owm);
+        var replace = data.substr(owm+6, keySize);
+        data = data.replace(replace,"")
     } else if (twc > -1) {
-        data = data.substr(0, twc);
+        var replace = data.substr(twc+7, keySize);
+        data = data.replace(replace,"")
     }
 
     return data;
@@ -400,7 +405,7 @@ var WeatherChannelApi = (function() {
     /**
       provides neccessary methods for requesting and preparing data from OpenWeatherMap.org
     */
-    var _baseUrl = "http://wxdata.weather.com/wxdata/";
+    var _baseUrl = "https://api.weather.com/";
     //
     var _serviceName = "weatherchannel";
     //
@@ -594,21 +599,19 @@ var WeatherChannelApi = (function() {
     function _getUrl(params) {
         var url, serviceId,
             baseParams = {
-                key: params.twc_api_key,
                 units: (params.units === "metric") ? "m" : "e",
-                locale: Qt.locale().name,
-                hours: "48",
+                language: Qt.locale().name.replace("_","-"),
+                apiKey: params.twc_api_key,
             },
             commands = {
-                "mobileaggregation": "mobile/mobagg/",
+                "geocode": "v1/geocode/",
             };
         if(params.location.services && params.location.services[_serviceName]) {
             serviceId = encodeURIComponent(params.location.services[_serviceName]);
-            url = _baseUrl+commands["mobileaggregation"]+serviceId+".js?"+parameterize(baseParams);
+            url = _baseUrl+commands["geocode"]+serviceId+".js?"+parameterize(baseParams);
         } else if (params.location.coord) {
             var coord = {lat: params.location.coord.lat, lng: params.location.coord.lon};
-            url = _baseUrl+commands["mobileaggregation"]+"get.js?"+parameterize(baseParams)+"&"+
-                  parameterize(coord);
+            url = _baseUrl+commands["geocode"]+coord.lat+"/"+coord.lng+"/forecast/hourly/48hour.json?"+parameterize(baseParams);
         }
         return url;
     }
