@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-12-11 21:39-0600\n"
+"POT-Creation-Date: 2016-02-29 04:21+0530\n"
 "PO-Revision-Date: 2016-03-07 13:18+0000\n"
 "Last-Translator: P_E_T_O <Unknown>\n"
 "Language-Team: Slovak <sk@li.org>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
-"X-Launchpad-Export-Date: 2016-03-08 05:56+0000\n"
-"X-Generator: Launchpad (build 17936)\n"
+"X-Launchpad-Export-Date: 2016-03-26 05:46+0000\n"
+"X-Generator: Launchpad (build 17967)\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of precipitation"
@@ -107,35 +107,35 @@ msgstr ""
 "Ak ste vývojár, pozrite si v súbore README návod, ako získať svoj vlastný "
 "Open Weather Map API kľúč."
 
-#: ../app/ui/AddLocationPage.qml:29
+#: ../app/ui/AddLocationPage.qml:38
 msgid "Select a city"
 msgstr "Vybrať mesto"
 
-#: ../app/ui/AddLocationPage.qml:47 ../app/ui/AddLocationPage.qml:69
-msgid "Back"
-msgstr "Naspäť"
-
-#: ../app/ui/AddLocationPage.qml:54
+#: ../app/ui/AddLocationPage.qml:49
 msgid "City"
 msgstr "Mesto"
 
-#: ../app/ui/AddLocationPage.qml:113
+#: ../app/ui/AddLocationPage.qml:65
+msgid "Back"
+msgstr "Naspäť"
+
+#: ../app/ui/AddLocationPage.qml:108
 msgid "Search city"
 msgstr "Hľadať mesto"
 
-#: ../app/ui/AddLocationPage.qml:299
+#: ../app/ui/AddLocationPage.qml:281
 msgid "No city found"
 msgstr "Žiadne mesto nenájdené"
 
-#: ../app/ui/AddLocationPage.qml:312
+#: ../app/ui/AddLocationPage.qml:294
 msgid "Couldn't load weather data, please try later again!"
 msgstr "Nemožno načítať údaje o počasí, skúste to prosím neskôr!"
 
-#: ../app/ui/AddLocationPage.qml:322
+#: ../app/ui/AddLocationPage.qml:304
 msgid "Location already added."
 msgstr "Poloha už bola pridaná."
 
-#: ../app/ui/AddLocationPage.qml:325
+#: ../app/ui/AddLocationPage.qml:307
 msgid "OK"
 msgstr "OK"
 
@@ -147,39 +147,39 @@ msgstr "Umiestnenia"
 msgid "Current Location"
 msgstr "Aktuálna poloha"
 
-#: ../app/ui/SettingsPage.qml:24
+#: ../app/ui/SettingsPage.qml:27
 msgid "Settings"
 msgstr "Nastavenia"
 
-#: ../app/ui/SettingsPage.qml:33 ../app/ui/settings/UnitsPage.qml:24
+#: ../app/ui/SettingsPage.qml:44 ../app/ui/settings/UnitsPage.qml:29
 msgid "Units"
 msgstr "Jednotky"
 
-#: ../app/ui/SettingsPage.qml:38 ../app/ui/settings/DataProviderPage.qml:25
+#: ../app/ui/SettingsPage.qml:52 ../app/ui/settings/DataProviderPage.qml:28
 msgid "Data Provider"
 msgstr "Poskytovateľ dát"
 
-#: ../app/ui/SettingsPage.qml:43 ../app/ui/settings/RefreshIntervalPage.qml:24
+#: ../app/ui/SettingsPage.qml:60 ../app/ui/settings/RefreshIntervalPage.qml:27
 msgid "Refresh Interval"
 msgstr "Interval obnovovania"
 
-#: ../app/ui/SettingsPage.qml:48 ../app/ui/settings/LocationPage.qml:24
+#: ../app/ui/SettingsPage.qml:68 ../app/ui/settings/LocationPage.qml:26
 msgid "Location"
 msgstr "Poloha"
 
-#: ../app/ui/settings/DataProviderPage.qml:37
+#: ../app/ui/settings/DataProviderPage.qml:42
 msgid "Provider"
 msgstr "Poskytovateľ"
 
-#: ../app/ui/settings/LocationPage.qml:32
+#: ../app/ui/settings/LocationPage.qml:34
 msgid "Detect current location"
 msgstr "Zistiť aktuálnu polohu"
 
-#: ../app/ui/settings/RefreshIntervalPage.qml:30
-#: ../app/ui/settings/RefreshIntervalPage.qml:31
-#: ../app/ui/settings/RefreshIntervalPage.qml:32
-#: ../app/ui/settings/RefreshIntervalPage.qml:33
-#: ../app/ui/settings/RefreshIntervalPage.qml:43
+#: ../app/ui/settings/RefreshIntervalPage.qml:34
+#: ../app/ui/settings/RefreshIntervalPage.qml:35
+#: ../app/ui/settings/RefreshIntervalPage.qml:36
+#: ../app/ui/settings/RefreshIntervalPage.qml:37
+#: ../app/ui/settings/RefreshIntervalPage.qml:48
 #, qt-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
@@ -187,43 +187,43 @@ msgstr[0] "%1 minút"
 msgstr[1] "%1 minúta"
 msgstr[2] "%1 minúty"
 
-#: ../app/ui/settings/RefreshIntervalPage.qml:42
+#: ../app/ui/settings/RefreshIntervalPage.qml:47
 msgid "Interval"
 msgstr "Interval"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of temperature in Celcius and are shown in the settings page.
 #. Only the abbreviated form of Celcius should be used.
-#: ../app/ui/settings/UnitsPage.qml:42 ../app/ui/settings/UnitsPage.qml:78
+#: ../app/ui/settings/UnitsPage.qml:47 ../app/ui/settings/UnitsPage.qml:83
 msgid "°C"
 msgstr "°C"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of temperature in Fahrenheit and are shown in the settings page.
 #. Only the abbreviated form of Fahrenheit should be used.
-#: ../app/ui/settings/UnitsPage.qml:47 ../app/ui/settings/UnitsPage.qml:79
+#: ../app/ui/settings/UnitsPage.qml:52 ../app/ui/settings/UnitsPage.qml:84
 msgid "°F"
 msgstr "°F"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of wind speed in kilometers per hour and are shown in the settings page.
 #. Only the abbreviated form of kilometers per hour should be used.
-#: ../app/ui/settings/UnitsPage.qml:58 ../app/ui/settings/UnitsPage.qml:99
+#: ../app/ui/settings/UnitsPage.qml:63 ../app/ui/settings/UnitsPage.qml:104
 msgid "kph"
 msgstr "km/h"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of wind speed in miles per hour and are shown in the settings page.
 #. Only the abbreviated form of miles per hour should be used.
-#: ../app/ui/settings/UnitsPage.qml:63 ../app/ui/settings/UnitsPage.qml:100
+#: ../app/ui/settings/UnitsPage.qml:68 ../app/ui/settings/UnitsPage.qml:105
 msgid "mph"
 msgstr "míľ/h"
 
-#: ../app/ui/settings/UnitsPage.qml:77
+#: ../app/ui/settings/UnitsPage.qml:82
 msgid "Temperature"
 msgstr "Teplota"
 
-#: ../app/ui/settings/UnitsPage.qml:98
+#: ../app/ui/settings/UnitsPage.qml:103
 msgid "Wind Speed"
 msgstr "Rýchlosť vetra"
 
