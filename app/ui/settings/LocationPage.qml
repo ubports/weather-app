@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Canonical Ltd
+ * Copyright (C) 2015-2016 Canonical Ltd
  *
  * This file is part of Ubuntu Weather App
  *
@@ -18,19 +18,28 @@
 
 import QtQuick 2.4
 import Ubuntu.Components 1.3
-import Ubuntu.Components.ListItems 1.0 as ListItem
 
 Page {
-    title: i18n.tr("Location")
+    id: locationPage
 
-    ListItem.Standard {
-        control: CheckBox {
-            checked: settings.detectCurrentLocation
+    header: PageHeader {
+        title: i18n.tr("Location")
+    }
 
-            onCheckedChanged: settings.detectCurrentLocation = checked;
+    ListItem {
+        anchors.top: locationPage.header.bottom
+        height: locationLayout.height + divider.height
+        ListItemLayout {
+            id: locationLayout
+            title.text: i18n.tr("Detect current location")
+            Switch {
+                id: locationSwitch
+                SlotsLayout.position: SlotsLayout.Last
+                checked: settings.detectCurrentLocation
+                onCheckedChanged: settings.detectCurrentLocation = checked;
+            }
         }
-        text: i18n.tr("Detect current location")
 
-        onClicked: control.checked = !control.checked
+        onClicked: locationSwitch.checked = !locationSwitch.checked
     }
 }

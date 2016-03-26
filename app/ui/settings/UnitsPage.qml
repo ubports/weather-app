@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Canonical Ltd
+ * Copyright (C) 2015-2016 Canonical Ltd
  *
  * This file is part of Ubuntu Weather App
  *
@@ -21,12 +21,17 @@ import Ubuntu.Components 1.3
 import "../../components"
 
 Page {
-    title: i18n.tr("Units")
+    id: unitsPage
+
     property bool bug1341671workaround: true
 
-    flickable: null
+    header: PageHeader {
+        title: i18n.tr("Units")
+        flickable: unitsFlickable
+    }
 
     Flickable {
+        id: unitsFlickable
         clip: true
         anchors.fill: parent
         height: parent.height
@@ -74,14 +79,14 @@ Page {
 
                 listViewHeight: temperatureModel.count*units.gu(7) - units.gu(1)
                 model: temperatureModel
-                text: i18n.tr("Temperature")
-                subText: settings.tempScale === "°C" ? i18n.tr("°C")
+                title.text: i18n.tr("Temperature")
+                subText.text: settings.tempScale === "°C" ? i18n.tr("°C")
                                                      : i18n.tr("°F")
 
                 delegate: StandardListItem {
-                    title: model.text
-                    icon: "ok"
-                    showIcon: settings.tempScale === model.value
+                    title.text: model.text
+                    icon.name: "ok"
+                    icon.visible: settings.tempScale === model.value
                     onClicked: {
                         settings.tempScale = model.value
                         refreshData(true)
@@ -95,14 +100,14 @@ Page {
 
                 listViewHeight: windSpeedModel.count*units.gu(7) - units.gu(1)
                 model: windSpeedModel
-                text: i18n.tr("Wind Speed")
-                subText: settings.windUnits === "kph" ? i18n.tr("kph")
+                title.text: i18n.tr("Wind Speed")
+                subText.text: settings.windUnits === "kph" ? i18n.tr("kph")
                                                       : i18n.tr("mph")
 
                 delegate: StandardListItem {
-                    title: model.text
-                    icon: "ok"
-                    showIcon: settings.windUnits === model.value
+                    title.text: model.text
+                    icon.name: "ok"
+                    icon.visible: settings.windUnits === model.value
                     onClicked: {
                         settings.windUnits = model.value
                         refreshData(true)

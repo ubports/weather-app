@@ -8,7 +8,13 @@ ubuntu-weather-app (3.2) UNRELEASED; urgency=medium
   * Added new READMEs
 
   [ Victor Thompson ]
-  * Change translatable string from "rain" to "precipitation" (LP:1521701)
+  * Change translatable string from "rain" to "precipitation" (LP: #1521701)
+
+  [ Nekhelesh Ramananthan ]
+  * Update frameworks to ubuntu-sdk-15.04.3-qml
+  * Migrate Settings Page (and child settings pages) to ListItemLayout
+    and PageLayout.
+  * Fix label color issues due to SDK Palette changed in OTA10 (LP: #1550507)
 
   [ Vamshi Balanaga ]
   * Added test to swipe between location tabs on home page (LP: #1452492)

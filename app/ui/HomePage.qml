@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Canonical Ltd
+ * Copyright (C) 2015-2016 Canonical Ltd
  *
  * This file is part of Ubuntu Weather App
  *
@@ -85,8 +85,7 @@ PageWithBottomEdge {
     }
 
     // Do not show the Page Header
-    head {
-        locked: true
+    header: PageHeader {
         visible: false
     }
 

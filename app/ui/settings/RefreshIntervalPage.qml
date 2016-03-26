@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Canonical Ltd
+ * Copyright (C) 2015-2016 Canonical Ltd
  *
  * This file is part of Ubuntu Weather App
  *
@@ -21,7 +21,11 @@ import Ubuntu.Components 1.3
 import "../../components"
 
 Page {
-    title: i18n.tr("Refresh Interval")
+    id: refreshIntervalPage
+
+    header: PageHeader {
+        title: i18n.tr("Refresh Interval")
+    }
 
     ListModel {
         id: refreshModel
@@ -37,15 +41,16 @@ Page {
     ExpandableListItem {
         id: dataProviderSetting
 
+        anchors.top: refreshIntervalPage.header.bottom
         listViewHeight: refreshModel.count*units.gu(7) - units.gu(1)
         model: refreshModel
-        text: i18n.tr("Interval")
-        subText: i18n.tr("%1 minute", "%1 minutes", Math.floor(settings.refreshInterval / 60).toString()).arg(Math.floor(settings.refreshInterval / 60).toString())
+        title.text: i18n.tr("Interval")
+        subText.text: i18n.tr("%1 minute", "%1 minutes", Math.floor(settings.refreshInterval / 60).toString()).arg(Math.floor(settings.refreshInterval / 60).toString())
 
         delegate: StandardListItem {
-            title: model.text
-            icon: "ok"
-            showIcon: settings.refreshInterval === model.interval
+            title.text: model.text
+            icon.name: "ok"
+            icon.visible: settings.refreshInterval === model.interval
             onClicked: {
                 settings.refreshInterval = model.interval
                 refreshData(false, true)

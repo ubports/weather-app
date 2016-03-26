@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Canonical Ltd
+ * Copyright (C) 2015-2016 Canonical Ltd
  *
  * This file is part of Ubuntu Weather App
  *
@@ -18,31 +18,27 @@
 
 import QtQuick 2.4
 import Ubuntu.Components 1.3
-import Ubuntu.Components.ListItems 1.0 as ListItem
 
 /*
  Component which extends the SDK Expandable list item and provides a easy
- to use component where the title, subtitle and listview can be displayed. It
+ to use component where the title, subtitle and a listview can be displayed. It
  matches the design specification provided for clock.
 */
 
-ListItem.Expandable {
+ListItem {
     id: expandableListItem
 
+    // Public APIs
     property ListModel model
     property Component delegate
-    property alias text: expandableHeader.text
-    property alias subText: expandableHeader.subText
+    property alias title: expandableHeader.title
+    property alias subText: expandableHeader.subtitle
     property alias listViewHeight: expandableList.height
 
-    anchors {
-        left: parent.left
-        right: parent.right
-        margins: units.gu(-2)
-    }
-
-    collapseOnClick: true
-    expandedHeight: contentColumn.height + units.gu(1)
+    highlightColor: "Transparent"
+    height: expandableHeader.height + divider.height
+    expansion.height: contentColumn.height
+    onClicked: expansion.expanded = !expansion.expanded
 
     Column {
         id: contentColumn
@@ -52,25 +48,21 @@ ListItem.Expandable {
             right: parent.right
         }
 
-        Item {
-            width: parent.width
-            height: expandableListItem.collapsedHeight
-
-            ListItem.Subtitled {
+        ListItem {
+            height: expandableHeader.height + divider.height
+            ListItemLayout {
                 id: expandableHeader
-                onClicked: expandableListItem.expanded = true
 
                 Icon {
                     id: arrow
 
                     width: units.gu(2)
                     height: width
-                    anchors.right: parent.right
+                    SlotsLayout.position: SlotsLayout.Trailing
+                    SlotsLayout.overrideVerticalPositioning: true
                     anchors.verticalCenter: parent.verticalCenter
-
                     name: "go-down"
-                    color: "Grey"
-                    rotation: expandableListItem.expanded ? 180 : 0
+                    rotation: expandableListItem.expansion.expanded ? 180 : 0
 
                     Behavior on rotation {
                         UbuntuNumberAnimation {}
@@ -88,3 +80,4 @@ ListItem.Expandable {
         }
     }
 }
+

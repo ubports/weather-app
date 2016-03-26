@@ -17,32 +17,26 @@
  */
 
 import QtQuick 2.4
-import QtQuick.Layouts 1.1
 import Ubuntu.Components 1.3
 
 ListItem {
     id: listItem
 
-    property alias title: _title.text
-    property alias icon: _icon.name
-    property alias showIcon: _icon.visible
+    property alias title: listitemlayout.title
+    property alias icon: _icon
 
-    RowLayout {
-        anchors { left: parent.left; right: parent.right; verticalCenter: parent.verticalCenter; margins: units.gu(2) }
-        height: _icon.height
-        spacing: units.gu(2)
-        
-        Label {
-            id: _title
-            anchors.verticalCenter: _icon.verticalCenter
-            elide: Text.ElideRight
-            Layout.fillWidth: true
-        }
-        
+    height: listitemlayout.height + divider.height
+
+    ListItemLayout {
+        id: listitemlayout
+
+        title.text: ""
+
         Icon {
             id: _icon
             height: units.gu(2); width: height
             name: "go-next"
+            SlotsLayout.position: SlotsLayout.Last
         }
     }
 }
