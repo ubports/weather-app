@@ -45,7 +45,7 @@ Page {
         delegate: StandardListItem {
             title.text: model.text
             icon.name: "ok"
-            icon.visible: dataProviderSetting.subText === model.text
+            icon.visible: dataProviderSetting.subText.text === model.text
             onClicked: {
                 if (model.text === "The Weather Channel") {
                     settings.service = "weatherchannel"

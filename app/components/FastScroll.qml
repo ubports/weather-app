@@ -180,7 +180,7 @@ Item {
                 horizontalAlignment: Text.AlignHCenter
                 text: modelData
                 fontSize: "x-small"
-                color: cursor.y === y ? "white" : Theme.palette.selected.backgroundText
+                color: cursor.y === y ? UbuntuColors.graphite : UbuntuColors.jet
                 opacity: !internal.modelDirty && Sections.contains(text) ? 1.0 : 0.5
             }
         }
