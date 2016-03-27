@@ -9,6 +9,7 @@ ubuntu-weather-app (3.2) UNRELEASED; urgency=medium
 
   [ Victor Thompson ]
   * Change translatable string from "rain" to "precipitation" (LP: #1521701)
+  * Add further fixes for SDK palette issues (LP: #1550507)
 
   [ Nekhelesh Ramananthan ]
   * Update frameworks to ubuntu-sdk-15.04.3-qml
