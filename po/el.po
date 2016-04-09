@@ -8,19 +8,19 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-03-26 11:43-0500\n"
-"PO-Revision-Date: 2015-10-26 08:18+0000\n"
+"PO-Revision-Date: 2016-04-08 16:39+0000\n"
 "Last-Translator: Aggelos Arnaoutis <angelosarn@hotmail.com>\n"
 "Language-Team: Greek <el@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-03-28 05:48+0000\n"
-"X-Generator: Launchpad (build 17967)\n"
+"X-Launchpad-Export-Date: 2016-04-09 05:56+0000\n"
+"X-Generator: Launchpad (build 17990)\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of precipitation"
-msgstr ""
+msgstr "Πιθανότητα βροχής"
 
 #: ../app/components/DayDelegateExtraInfo.qml:59
 msgid "Winds"
@@ -32,7 +32,7 @@ msgstr ""
 
 #: ../app/components/DayDelegateExtraInfo.qml:74
 msgid "Pollen"
-msgstr ""
+msgstr "Γύρη"
 
 #: ../app/components/DayDelegateExtraInfo.qml:81
 msgid "Humidity"
@@ -96,13 +96,16 @@ msgstr "Δοκιμάστε ξανά"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:47
 msgid "No API Keys Found"
-msgstr ""
+msgstr "Δεν βρέθηκαν κλειδιά διεπαφής προγραμματισμού εφαρμογών"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:56
 msgid ""
 "If you are a developer, please see the README file for instructions on how "
 "to obtain your own Open Weather Map API key."
 msgstr ""
+"Εάν είστε προγραμματιστής, παρακαλώ διαβάστε το αρχείο README για οδηγίες "
+"σχετικά με την απόκτηση του δικού σας κλειδιού διεπαφής προγραμματισμού "
+"εφαρμογών του Open Weather Map."
 
 #: ../app/ui/AddLocationPage.qml:38
 msgid "Select a city"
