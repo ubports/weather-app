@@ -525,6 +525,8 @@ var WeatherChannelApi = (function() {
     }
     //
     function formatResult(combinedData, location) {
+        print("COMBINED DATA: ", JSON.stringify(combinedData));
+
         var tmpResult = {}, result = [],
             day=null, todayDate,
             offset=(location.timezone && location.timezone.gmtOffset) ? location.timezone.gmtOffset*60*60*1000: 0,
@@ -532,11 +534,11 @@ var WeatherChannelApi = (function() {
             nowMs = parseInt(now/1000),
             localNow = getLocationTime(now+offset),
             data = {
-                "location": combinedData[0]["Location"],
-                "daily": combinedData[0]["DailyForecasts"],
-                "forecast": combinedData[0]["HourlyForecasts"],
-                "current": combinedData[0]["StandardObservation"],
-                "sunRiseSet": combinedData[0]["SunRiseSet"],
+                "location": combinedData["current"]["metadata"],
+                "daily": combinedData["daily"]["forecasts"],
+                "forecast": combinedData["forecast"]["forecasts"],
+                "current": combinedData["current"]["observation"],
+                //"sunRiseSet": combinedData[0]["SunRiseSet"],  // TODO: now in daily
             };
         print("["+location.name+"] "+JSON.stringify(localNow));
         // add openweathermap id for faster responses
@@ -596,46 +598,101 @@ var WeatherChannelApi = (function() {
         return result;
     }
     //
-    function _getUrl(params) {
-        var url, serviceId,
-            baseParams = {
-                units: (params.units === "metric") ? "m" : "e",
-                language: Qt.locale().name.replace("_","-"),
-                apiKey: params.twc_api_key,
-            },
-            commands = {
-                "geocode": "v1/geocode/",
-            };
-        if(params.location.services && params.location.services[_serviceName]) {
-            serviceId = encodeURIComponent(params.location.services[_serviceName]);
-            url = _baseUrl+commands["geocode"]+serviceId+".js?"+parameterize(baseParams);
+    function _getUrls(params) {
+        var baseParams = {
+            units: (params.units === "metric") ? "m" : "e",
+            language: Qt.locale().name.replace("_","-"),
+            apiKey: params.twc_api_key,
+        };
+        var commands = {
+            "geocode": "v1/geocode/",
+        };
+        var urls = {
+            current: "",
+            daily: "",
+            hourly: "",
+        };
+
+        if(1==2 && params.location.services && params.location.services[_serviceName]) {  // FIXME: disable for now (UKXX0085)
+            var serviceId = encodeURIComponent(params.location.services[_serviceName]);
+
+            urls.current = _baseUrl + commands["geocode"] +
+                    serviceId + ".js?" + parameterize(baseParams);
+            urls.daily = _baseUrl + commands["geocode"] +
+                    serviceId + ".js?" + parameterize(baseParams);
+            urls.hourly = _baseUrl + commands["geocode"] +
+                    serviceId + ".js?" + parameterize(baseParams);
         } else if (params.location.coord) {
-            var coord = {lat: params.location.coord.lat, lng: params.location.coord.lon};
-            url = _baseUrl+commands["geocode"]+coord.lat+"/"+coord.lng+"/forecast/hourly/48hour.json?"+parameterize(baseParams);
+            var coord = {
+                lat: params.location.coord.lat,
+                lng: params.location.coord.lon
+            };
+
+            urls.current = _baseUrl + commands["geocode"] +
+                    coord.lat + "/" + coord.lng +
+                    "/observations/current.json?" +
+                    parameterize(baseParams);
+            urls.daily = _baseUrl + commands["geocode"] +
+                    coord.lat + "/" + coord.lng +
+                    "/forecast/daily/5day.json?" +
+                    parameterize(baseParams);
+            urls.hourly = _baseUrl + commands["geocode"] +
+                    coord.lat + "/" + coord.lng +
+                    "/forecast/hourly/48hour.json?" +
+                    parameterize(baseParams);
         }
-        return url;
+
+        return urls;
     }
     //
     return {
         getData: function(params, apiCaller, onSuccess, onError) {
-            var url = _getUrl(params),
+            var urls = _getUrls(params),
                 handlerMap = {
-                    all: { type: "all", url: url}
+                current: {
+                    type: "current",
+                    url: urls.current
                 },
-                response = {
-                    location: params.location,
-                    db: (params.db) ? params.db : null,
-                    format: RESPONSE_DATA_VERSION
+                daily: {
+                    type: "daily",
+                    url: urls.daily
                 },
-                addDataToResponse = (function(request, data) {
-                    var formattedResult;
-                    response["data"] = formatResult(data, params.location);
+                forecast: {
+                    type: "forecast",
+                    url: urls.hourly
+                }
+            },
+            response = {
+                location: params.location,
+                db: (params.db) ? params.db : null,
+                format: RESPONSE_DATA_VERSION
+            },
+            respData = {},
+            addDataToResponse = (function(request, data) {
+                var formattedResult;
+                respData[request.type] = data;
+
+                if (respData["current"] !== undefined &&
+                        respData["forecast"] !== undefined &&
+                            respData["daily"] !== undefined) {
+
+                    response["data"] = formatResult(respData, params.location);
                     onSuccess(response);
-                }),
-                onErrorHandler = (function(err) {
-                    onError(err);
-                });
-            apiCaller(handlerMap.all, addDataToResponse, onErrorHandler);
+                }
+            }),
+            onErrorHandler = (function(err) {
+                onError(err);
+            }),
+            retryHandler = (function(err) {
+                console.log("retry of " + trimAPIKey(err.request.url));
+                var retryFunc = handlerMap[err.request.type];
+
+                apiCaller(retryFunc, addDataToResponse, onErrorHandler);
+            });
+
+            apiCaller(handlerMap.current, addDataToResponse, retryHandler);
+            apiCaller(handlerMap.forecast, addDataToResponse, retryHandler);
+            apiCaller(handlerMap.daily, addDataToResponse, retryHandler);
         }
     }
 })();
