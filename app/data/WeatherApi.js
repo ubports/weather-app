@@ -541,7 +541,6 @@ var WeatherChannelApi = (function() {
                 "daily": combinedData["daily"]["forecasts"],
                 "forecast": combinedData["forecast"]["forecasts"],
                 "current": combinedData["current"]["observation"],
-                //"sunRiseSet": combinedData[0]["SunRiseSet"],  // TODO: now in daily
             };
         print("["+location.name+"] "+JSON.stringify(localNow));
         // add openweathermap id for faster responses
