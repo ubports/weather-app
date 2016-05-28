@@ -462,71 +462,74 @@ var WeatherChannelApi = (function() {
     };
     //
     function _buildDataPoint(date, dataObj) {
-        var data = dataObj["Observation"] || dataObj,
+        var partData = dataObj["metric"] || dataObj["imperial"] || dataObj;  // TODO: be more intelligent?
+        var data = dataObj["observation"] || dataObj,
             result = {
-                timestamp: data.date || data.dateTime,
+                timestamp: data.fcst_valid,
                 date: date,
                 metric: {
-                    temp: data.temp,
-                    tempFeels: data.feelsLike,
-                    windSpeed: data.wSpeed
+                    temp: partData.temp,
+                    tempFeels: partData.feels_like,
+                    windSpeed: partData.wspd
                 },
                 imperial: {
-                    temp: calcFahrenheit(data.temp),
-                    tempFeels: calcFahrenheit(data.feelsLike),
-                    windSpeed: convertKphToMph(data.wSpeed)
+                    temp: calcFahrenheit(partData.temp),
+                    tempFeels: calcFahrenheit(partData.feels_like),
+                    windSpeed: convertKphToMph(partData.wspd)
                 },
                 precipType: (data.precip_type !== undefined) ? data.precip_type : null,
                 propPrecip: (data.pop !== undefined) ? data.pop : null,
-                humidity: data.humid,
-                pressure: data.pressure,
-                windDeg: data.wDir,
-                windDir: data.wDirText,
-                icon: _iconMap[(data.wxIcon||data.icon)],
-                condition: data.text || data.wDesc,
-                uv: data.uv
+                humidity: partData.rh,
+                pressure: partData.mslp,
+                windDeg: data.wdir,
+                windDir: data.wdir_cardinal,
+                icon: _iconMap[data.icon_code],
+                condition: data.phrase_32char,
+                uv: data.uv_index
         };
-        if(_iconMap[data.wxIcon||data.icon] === undefined) {
-            print("ICON MISSING POINT: "+(data.wxIcon||data.icon)+" "+result.condition)
+
+        if (_iconMap[data.icon_code] === undefined) {
+            print("ICON MISSING POINT: " + data.icon_code + " " + result.condition)
         }
+
         return result;
     }
     //
     function _buildDayFormat(date, data, now) {
-        var partData = (now > data.validDate || data.day === undefined) ? data.night : data.day,
+        var partData = (now > data.fcst_valid || data.day === undefined) ? data.night : data.day,
             result = {
             date: date,
-            timestamp: data.validDate,
+            timestamp: data.fcst_valid,
             metric: {
-                tempMin: data.minTemp,
-                tempMax: data.maxTemp,
-                windSpeed: partData.wSpeed
+                tempMin: data.min_temp,
+                tempMax: data.max_temp,
+                windSpeed: partData.wspd
             },
             imperial: {
-                tempMin: calcFahrenheit(data.minTemp),
-                tempMax: calcFahrenheit(data.maxTemp !== undefined ? data.maxTemp : data.minTemp),
-                windSpeed: convertKphToMph(partData.wSpeed)
+                tempMin: calcFahrenheit(data.min_temp),
+                tempMax: calcFahrenheit(data.max_temp !== undefined ? data.max_temp : data.min_temp),
+                windSpeed: convertKphToMph(partData.wspd)
             },
             precipType: partData.precip_type,
             propPrecip: partData.pop,
             pressure: null,
-            humidity: partData.humid,
-            icon: _iconMap[partData.icon],
-            condition: partData.phrase,
-            windDeg: partData.wDir,
-            windDir: partData.wDirText,
-            uv: partData.uv,
+            humidity: partData.rh,
+            icon: _iconMap[partData.icon_code],
+            condition: partData.phrase_32char,
+            windDeg: partData.wdir,
+            windDir: partData.wdir_cardinal,
+            uv: partData.uv_index,
             hourly: []
         }
-        if(_iconMap[partData.icon] === undefined) {
-            print("ICON MISSING  DAY: "+partData.icon+" "+result.condition)
+
+        if (_iconMap[partData.icon_code] === undefined) {
+            print("ICON MISSING  DAY: " + partData.icon_code + " " + result.condition)
         }
+
         return result;
     }
     //
     function formatResult(combinedData, location) {
-        print("COMBINED DATA: ", JSON.stringify(combinedData));
-
         var tmpResult = {}, result = [],
             day=null, todayDate,
             offset=(location.timezone && location.timezone.gmtOffset) ? location.timezone.gmtOffset*60*60*1000: 0,
@@ -544,25 +547,34 @@ var WeatherChannelApi = (function() {
         // add openweathermap id for faster responses
         if(location.services && !location.services[_serviceName] && data["location"].key) {
             location.services[_serviceName] = data["location"].key
-        }                
+        }
         // only 5 days of forecast for TWC
-        for(var x=0;x<5;x++) {
+        for(var x=0; x<5; x++) {
             var dayData = data["daily"][x],
-                date = getLocationTime(((dayData.validDate*1000)-1000)+offset); // minus 1 sec to handle +/-12 TZ
-            var sunRiseSet = data["sunRiseSet"][x];
+                date = getLocationTime(((dayData.fcst_valid * 1000) - 1000) + offset);  // minus 1 sec to handle +/-12 TZ
+
+            // Sun{rise,set} is in ISOString format so use getTime() to convert
+            var sunrise = new Date(dayData.sunrise).getTime(),
+                sunset = new Date(dayData.sunset).getTime();
             day = date.year+"-"+date.month+"-"+date.date;
-            if(!todayDate) {
-                if(localNow.year+"-"+localNow.month+"-"+localNow.date > day) {
+
+            if (!todayDate) {
+                if (localNow.year + "-" + localNow.month + "-" + localNow.date > day) {
                     // skip "yesterday"
                     continue;
                 }
+
                 todayDate = date;
             }
+
             tmpResult[day] = _buildDayFormat(date, dayData, nowMs);
+
             var timezoneOffset = new Date().getTimezoneOffset();
             var timesOffset = (location.timezone && location.timezone.dstOffset !== undefined) ? (location.timezone.dstOffset*60 + timezoneOffset)*60*1000: 0
-            var sunrise = new Date(sunRiseSet.rise*1000 + timesOffset);
-            var sunset = new Date(sunRiseSet.set*1000 + timesOffset);
+
+            sunrise = new Date(sunrise + timesOffset);
+            sunset = new Date(sunset + timesOffset);
+
             var options = { timeZone: location.timezone.timeZoneId, timeZoneName: 'long' };
             tmpResult[day].sunrise = sunrise.toLocaleTimeString(Qt.locale().name, options);
             tmpResult[day].sunset = sunset.toLocaleTimeString(Qt.locale().name, options);
@@ -570,8 +582,9 @@ var WeatherChannelApi = (function() {
         //
         if(data["forecast"] !== undefined) {
             data["forecast"].forEach(function(hourData) {
-                var dateData = getLocationTime((hourData.dateTime*1000)+offset),
+                var dateData = getLocationTime((hourData.fcst_valid * 1000) + offset),
                     day = dateData.year+"-"+dateData.month+"-"+dateData.date;
+
                 if(tmpResult[day]) {
                     tmpResult[day]["hourly"].push(_buildDataPoint(dateData, hourData));
                 }
