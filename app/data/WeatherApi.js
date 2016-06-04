@@ -462,7 +462,7 @@ var WeatherChannelApi = (function() {
     };
     //
     function _buildDataPoint(date, dataObj) {
-        var partData = dataObj["metric"] || dataObj["imperial"] || dataObj;  // TODO: be more intelligent?
+        var partData = dataObj["metric"] || dataObj;
         var data = dataObj["observation"] || dataObj,
             result = {
                 timestamp: data.fcst_valid,
@@ -625,19 +625,7 @@ var WeatherChannelApi = (function() {
             hourly: "",
         };
 
-        // FIXME: disable for now (UKXX0085)
-        // uses location codes but api doesn't list these as supported
-//        if (params.location.services && params.location.services[_serviceName]) {
-//            var serviceId = encodeURIComponent(params.location.services[_serviceName]);
-
-//            urls.current = _baseUrl + commands["geocode"] +
-//                    serviceId + ".js?" + parameterize(baseParams);
-//            urls.daily = _baseUrl + commands["geocode"] +
-//                    serviceId + ".js?" + parameterize(baseParams);
-//            urls.hourly = _baseUrl + commands["geocode"] +
-//                    serviceId + ".js?" + parameterize(baseParams);
-//        } else
-
+        // FIXME: only use coords for now and not location codes (UKXX0085)
         if (params.location.coord) {
             var coord = {
                 lat: params.location.coord.lat,
