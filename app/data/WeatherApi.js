@@ -625,16 +625,20 @@ var WeatherChannelApi = (function() {
             hourly: "",
         };
 
-        if(1==2 && params.location.services && params.location.services[_serviceName]) {  // FIXME: disable for now (UKXX0085)
-            var serviceId = encodeURIComponent(params.location.services[_serviceName]);
+        // FIXME: disable for now (UKXX0085)
+        // uses location codes but api doesn't list these as supported
+//        if (params.location.services && params.location.services[_serviceName]) {
+//            var serviceId = encodeURIComponent(params.location.services[_serviceName]);
 
-            urls.current = _baseUrl + commands["geocode"] +
-                    serviceId + ".js?" + parameterize(baseParams);
-            urls.daily = _baseUrl + commands["geocode"] +
-                    serviceId + ".js?" + parameterize(baseParams);
-            urls.hourly = _baseUrl + commands["geocode"] +
-                    serviceId + ".js?" + parameterize(baseParams);
-        } else if (params.location.coord) {
+//            urls.current = _baseUrl + commands["geocode"] +
+//                    serviceId + ".js?" + parameterize(baseParams);
+//            urls.daily = _baseUrl + commands["geocode"] +
+//                    serviceId + ".js?" + parameterize(baseParams);
+//            urls.hourly = _baseUrl + commands["geocode"] +
+//                    serviceId + ".js?" + parameterize(baseParams);
+//        } else
+
+        if (params.location.coord) {
             var coord = {
                 lat: params.location.coord.lat,
                 lng: params.location.coord.lon
