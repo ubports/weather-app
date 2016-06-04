@@ -150,7 +150,7 @@ ListView {
         return {
             day: formatTimestamp(data.date, 'dddd'),
             low: Math.round(data[tempUnits].tempMin).toString() + settings.tempScale,
-            high: (data[tempUnits].tempMax !== undefined) ? Math.round(data[tempUnits].tempMax).toString() + settings.tempScale : "-",
+            high: (data[tempUnits].tempMax !== undefined) ? Math.round(data[tempUnits].tempMax).toString() + settings.tempScale : "–",
             image: (data.icon !== undefined && iconMap[data.icon] !== undefined) ? iconMap[data.icon] : "",
             condition: emptyIfUndefined(data.condition),
             chanceOfPrecip: emptyIfUndefined(data.propPrecip, "%"),
