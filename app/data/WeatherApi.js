@@ -502,12 +502,12 @@ var WeatherChannelApi = (function() {
             timestamp: data.fcst_valid,
             metric: {
                 tempMin: data.min_temp,
-                tempMax: data.max_temp,
+                tempMax: data.max_temp !== null ? data.max_temp : undefined,
                 windSpeed: partData.wspd
             },
             imperial: {
                 tempMin: calcFahrenheit(data.min_temp),
-                tempMax: calcFahrenheit(data.max_temp !== undefined ? data.max_temp : data.min_temp),
+                tempMax: data.max_temp !== null && data.max_temp !== undefined ? calcFahrenheit(data.max_temp) : undefined,
                 windSpeed: convertKphToMph(partData.wspd)
             },
             precipType: partData.precip_type,
