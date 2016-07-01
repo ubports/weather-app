@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-03-26 11:43-0500\n"
-"PO-Revision-Date: 2016-05-17 03:18+0000\n"
+"PO-Revision-Date: 2016-06-30 16:33+0000\n"
 "Last-Translator: Po-Hsu Lin <po-hsu.lin@canonical.com>\n"
 "Language-Team: Chinese (Traditional) <zh_TW@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2016-05-18 05:48+0000\n"
-"X-Generator: Launchpad (build 18025)\n"
+"X-Launchpad-Export-Date: 2016-07-01 06:03+0000\n"
+"X-Generator: Launchpad (build 18115)\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of precipitation"
@@ -24,7 +24,7 @@ msgstr "降雨機率"
 
 #: ../app/components/DayDelegateExtraInfo.qml:59
 msgid "Winds"
-msgstr ""
+msgstr "風"
 
 #: ../app/components/DayDelegateExtraInfo.qml:68
 msgid "UV Index"
@@ -96,7 +96,7 @@ msgstr "重試"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:47
 msgid "No API Keys Found"
-msgstr ""
+msgstr "沒有找到 API 金鑰"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:56
 msgid ""
@@ -205,14 +205,14 @@ msgstr "°F"
 #. Only the abbreviated form of kilometers per hour should be used.
 #: ../app/ui/settings/UnitsPage.qml:63 ../app/ui/settings/UnitsPage.qml:104
 msgid "kph"
-msgstr ""
+msgstr "公里/時"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of wind speed in miles per hour and are shown in the settings page.
 #. Only the abbreviated form of miles per hour should be used.
 #: ../app/ui/settings/UnitsPage.qml:68 ../app/ui/settings/UnitsPage.qml:105
 msgid "mph"
-msgstr ""
+msgstr "英里/時"
 
 #: ../app/ui/settings/UnitsPage.qml:82
 msgid "Temperature"
