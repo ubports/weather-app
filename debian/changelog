@@ -1,4 +1,12 @@
-ubuntu-weather-app (3.3ubuntu1) UNRELEASED; urgency=medium
+ubuntu-weather-app (3.4ubuntu1) UNRELEASED; urgency=medium
+
+  [ Andrew Hayzen ]
+  * Set useragent in geocode so that osm can uniquely identify our requests
+  * Release 3.3 and bump version to 3.4
+
+ -- Andrew Hayzen <ahayzen@gmail.com>  Tue, 19 Jul 2016 12:22:57 +0100
+
+ubuntu-weather-app (3.3ubuntu1) xenial; urgency=medium
 
   [ Andrew Hayzen ]
   * Release 3.2 and bump version to 3.3
@@ -8,7 +16,7 @@ ubuntu-weather-app (3.3ubuntu1) UNRELEASED; urgency=medium
   * Update to use new weather API
   * Change the trimAPIKey function so it only trims the API Key
 
- -- Andrew Hayzen <ahayzen@gmail.com>  Sat, 04 Jun 2016 18:31:29 +0100
+ -- Andrew Hayzen <ahayzen@gmail.com>  Tue, 19 Jul 2016 12:22:35 +0100
 
 ubuntu-weather-app (3.2ubuntu1) vivid; urgency=medium
 
