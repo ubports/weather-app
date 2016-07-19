@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Canonical Ltd.
-# This file is distributed under the same license as the ubuntu-weather-app package.
+# This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-26 11:43-0500\n"
+"POT-Creation-Date: 2016-07-19 18:34+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,6 +46,23 @@ msgstr ""
 msgid "Sunset"
 msgstr ""
 
+#: ../app/components/HeadState/LocationsHeadState.qml:36
+#: ../app/components/HeadState/MultiSelectHeadState.qml:41
+msgid "Locations"
+msgstr ""
+
+#: ../app/components/HeadState/MultiSelectHeadState.qml:32
+msgid "Cancel selection"
+msgstr ""
+
+#: ../app/components/HeadState/MultiSelectHeadState.qml:46
+msgid "Select All"
+msgstr ""
+
+#: ../app/components/HeadState/MultiSelectHeadState.qml:58
+msgid "Delete"
+msgstr ""
+
 #: ../app/components/HomePageEmptyStateComponent.qml:51
 msgid "Searching for current location..."
 msgstr ""
@@ -68,18 +85,6 @@ msgstr ""
 
 #: ../app/components/LocationsPageEmptyStateComponent.qml:36
 msgid "No locations found. Tap the plus icon to search for one."
-msgstr ""
-
-#: ../app/components/MultiSelectHeadState.qml:27
-msgid "Select All"
-msgstr ""
-
-#: ../app/components/MultiSelectHeadState.qml:39
-msgid "Delete"
-msgstr ""
-
-#: ../app/components/MultiSelectHeadState.qml:51
-msgid "Cancel selection"
 msgstr ""
 
 #: ../app/components/NetworkErrorStateComponent.qml:48
@@ -136,11 +141,7 @@ msgstr ""
 msgid "OK"
 msgstr ""
 
-#: ../app/ui/HomePage.qml:32 ../app/ui/LocationsPage.qml:29
-msgid "Locations"
-msgstr ""
-
-#: ../app/ui/LocationsPage.qml:109
+#: ../app/ui/LocationsPage.qml:99
 msgid "Current Location"
 msgstr ""
 

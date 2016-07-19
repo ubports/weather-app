@@ -22,16 +22,29 @@ import "../components"
 import "../data/keys.js" as Keys
 
 
-PageWithBottomEdge {
+Page {
     // Set to null otherwise the header is shown (but blank) over the top of the listview
     id: locationPage
     objectName: "homePage"
     flickable: null
 
-    bottomEdgePageSource: Qt.resolvedUrl("LocationsPage.qml")
-    bottomEdgeTitle: i18n.tr("Locations")
-    tipColor: UbuntuColors.orange
-    tipLabelColor: "#FFF"
+    BottomEdge {
+        id: bottomEdge
+        // Note: cannot use contentUrl and preload until pad.lv/1604509
+        contentComponent: locationsPage
+        height: parent.height
+        preloadContent: true
+
+        Component {
+            id: locationsPage
+            LocationsPage {
+                height: bottomEdge.height
+                width: bottomEdge.width
+
+                onPop: bottomEdge.collapse()
+            }
+        }
+    }
 
     property var iconMap: {
         "sun": "weather-clear-symbolic",

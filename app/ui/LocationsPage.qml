@@ -41,6 +41,11 @@ Page {
         }
     ]
 
+    height: units.gu(20)
+    width: units.gu(20)
+
+    signal pop()
+
     ListModel {
         id: currentLocationModel
     }
