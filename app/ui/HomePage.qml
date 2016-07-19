@@ -34,7 +34,7 @@ Page {
         contentComponent: locationsPage
         height: parent.height
         preloadContent: true
-        hint.text: i18n.tr("Locations")
+        // hint.text: i18n.tr("Locations")
 
         Component {
             id: locationsPage
