@@ -34,7 +34,12 @@ Page {
         contentComponent: locationsPage
         height: parent.height
         preloadContent: true
-        // hint.text: i18n.tr("Locations")
+        hint {
+            // Once pad.lv/1536669 is fixed, the status will be auto set to
+            // locked when a mouse is detected, in that case we'll show text
+            // otherwise we hide the text as this causes strange animations
+            text: bottomEdge.hint.status == BottomEdgeHint.Locked ? i18n.tr("Locations") : ""
+        }
 
         Component {
             id: locationsPage
