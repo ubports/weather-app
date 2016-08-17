@@ -89,6 +89,11 @@ Item {
 
     property alias now: nowLabel.text
 
+    // Don't store as int as reaches max int
+    property var updatedAt
+
+    onUpdatedAtChanged: diffTimer.restart()
+
     Column {
         id: labelColumn
         anchors {
@@ -100,7 +105,35 @@ Item {
         Label {
             font.weight: Font.Light
             fontSize: "small"
-            text: i18n.tr("Today")
+            text: i18n.tr("Today") + " - " + updatedAtText + " "
+
+            readonly property string updatedAtText: {
+                if (diffDays > 0) {
+                    i18n.tr("updated %1 day ago", "updated %1 days ago", diffDays).arg(diffDays)
+                } else if (diffHours > 0) {
+                    i18n.tr("updated %1 hour ago", "updated %1 hours ago", diffHours).arg(diffHours)
+                } else if (diffMinutes > 0) {
+                    i18n.tr("updated %1 minute ago", "updated %1 minutes ago", diffMinutes).arg(diffMinutes)
+                } else {
+                    i18n.tr("updated recently")
+                }
+            }
+
+            property var diff
+            property int diffMinutes: Math.floor(diff / 60)
+            property int diffHours: Math.floor(diffMinutes / 60)
+            property int diffDays: Math.floor(diffHours / 24)
+
+            // Check the time every 15 seconds
+            Timer {
+                id: diffTimer
+                interval: 15000
+                repeat: true
+                running: parent.visible
+                triggeredOnStart: true
+
+                onTriggered: parent.diff = ((new Date().getTime() - updatedAt) / 1000)
+            }
         }
 
         Label {

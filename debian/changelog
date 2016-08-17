@@ -1,10 +1,18 @@
-ubuntu-weather-app (3.4ubuntu1) UNRELEASED; urgency=medium
+ubuntu-weather-app (3.5ubuntu1) UNRELEASED; urgency=medium
+
+  [ Andrew Hayzen ]
+  * Release 3.4 and bump version to 3.5
+  * Add support for showing updated X minutes ago (LP: #1583169)
+
+ -- Andrew Hayzen <ahayzen@gmail.com>  Wed, 17 Aug 2016 21:10:10 +0100
+
+ubuntu-weather-app (3.4ubuntu1) xenial; urgency=medium
 
   [ Andrew Hayzen ]
   * Set useragent in geocode so that osm can uniquely identify our requests
   * Release 3.3 and bump version to 3.4
 
- -- Andrew Hayzen <ahayzen@gmail.com>  Tue, 19 Jul 2016 12:22:57 +0100
+ -- Andrew Hayzen <ahayzen@gmail.com>  Wed, 17 Aug 2016 21:09:46 +0100
 
 ubuntu-weather-app (3.3ubuntu1) xenial; urgency=medium
 
