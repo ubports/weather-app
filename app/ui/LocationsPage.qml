@@ -117,7 +117,7 @@ Page {
                             leftMargin: units.gu(2)
                         }
 
-                        color: UbuntuColors.lightGrey
+                        color: UbuntuColors.graphite
                         elide: Text.ElideRight
                         fontSize: "small"
                         font.weight: Font.Light
@@ -213,7 +213,7 @@ Page {
                     }
                     Label {
                         id: locationName2
-                        color: UbuntuColors.lightGrey
+                        color: UbuntuColors.graphite
                         elide: Text.ElideRight
                         fontSize: "small"
                         font.weight: Font.Light

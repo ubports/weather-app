@@ -75,7 +75,7 @@ MainView {
         var url = args.defaultArgument.at(0)
         var argus = parseArguments(url);
 
-        mainPageStack.push(Qt.resolvedUrl("ui/HomePage.qml"), {"hourlyVisible": argus.hourVisibly})
+        mainPageStack.push(Qt.resolvedUrl("ui/HomePage.qml"), {"hourlyVisible": argus.hourlyVisible})
 
         storage.getLocations(fillPages);
         if (argus.city && argus.lat && argus.lng) {

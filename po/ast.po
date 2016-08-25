@@ -7,20 +7,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-12-11 21:39-0600\n"
-"PO-Revision-Date: 2015-10-31 15:27+0000\n"
-"Last-Translator: enolp <enolp@softastur.org>\n"
+"POT-Creation-Date: 2016-03-26 11:43-0500\n"
+"PO-Revision-Date: 2016-03-14 16:20+0000\n"
+"Last-Translator: Xuacu Saturio <xuacusk8@gmail.com>\n"
 "Language-Team: Asturian <ast@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-01-30 05:47+0000\n"
-"X-Generator: Launchpad (build 17908)\n"
+"X-Launchpad-Export-Date: 2016-07-28 06:15+0000\n"
+"X-Generator: Launchpad (build 18153)\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of precipitation"
-msgstr ""
+msgstr "Probabilidá de lluvia"
 
 #: ../app/components/DayDelegateExtraInfo.qml:59
 msgid "Winds"
@@ -96,45 +96,47 @@ msgstr ""
 msgid "Retry"
 msgstr "Reintentar"
 
-#: ../app/components/NoAPIKeyErrorStateComponent.qml:48
+#: ../app/components/NoAPIKeyErrorStateComponent.qml:47
 msgid "No API Keys Found"
-msgstr ""
+msgstr "Nun s'alcontraron claves API"
 
-#: ../app/components/NoAPIKeyErrorStateComponent.qml:57
+#: ../app/components/NoAPIKeyErrorStateComponent.qml:56
 msgid ""
 "If you are a developer, please see the README file for instructions on how "
 "to obtain your own Open Weather Map API key."
 msgstr ""
+"Si yes un desendolcador, llei'l ficheru README p'alcontrar instrucciones "
+"sobre cómo tener una clave Open Weather Map API propia."
 
-#: ../app/ui/AddLocationPage.qml:29
+#: ../app/ui/AddLocationPage.qml:38
 msgid "Select a city"
 msgstr "Esbilla una ciudá"
 
-#: ../app/ui/AddLocationPage.qml:47 ../app/ui/AddLocationPage.qml:69
-msgid "Back"
-msgstr "Atrás"
-
-#: ../app/ui/AddLocationPage.qml:54
+#: ../app/ui/AddLocationPage.qml:49
 msgid "City"
 msgstr "Ciudá"
 
-#: ../app/ui/AddLocationPage.qml:113
+#: ../app/ui/AddLocationPage.qml:65
+msgid "Back"
+msgstr "Atrás"
+
+#: ../app/ui/AddLocationPage.qml:108
 msgid "Search city"
 msgstr "Guetar ciudá"
 
-#: ../app/ui/AddLocationPage.qml:299
+#: ../app/ui/AddLocationPage.qml:281
 msgid "No city found"
 msgstr "Nun s'alcontró denguna ciudá"
 
-#: ../app/ui/AddLocationPage.qml:312
+#: ../app/ui/AddLocationPage.qml:294
 msgid "Couldn't load weather data, please try later again!"
 msgstr "¡Nun pudieron cargase los datos, inténtalo de nueves sero!"
 
-#: ../app/ui/AddLocationPage.qml:322
+#: ../app/ui/AddLocationPage.qml:304
 msgid "Location already added."
 msgstr "Yá s'amestó l'allugamientu."
 
-#: ../app/ui/AddLocationPage.qml:325
+#: ../app/ui/AddLocationPage.qml:307
 msgid "OK"
 msgstr "Aceutar"
 
@@ -146,82 +148,82 @@ msgstr "Allugamientos"
 msgid "Current Location"
 msgstr "Allugamientu actual"
 
-#: ../app/ui/SettingsPage.qml:24
+#: ../app/ui/SettingsPage.qml:27
 msgid "Settings"
 msgstr "Axustes"
 
-#: ../app/ui/SettingsPage.qml:33 ../app/ui/settings/UnitsPage.qml:24
+#: ../app/ui/SettingsPage.qml:44 ../app/ui/settings/UnitsPage.qml:29
 msgid "Units"
 msgstr "Unidaes"
 
-#: ../app/ui/SettingsPage.qml:38 ../app/ui/settings/DataProviderPage.qml:25
+#: ../app/ui/SettingsPage.qml:52 ../app/ui/settings/DataProviderPage.qml:28
 msgid "Data Provider"
 msgstr "Fornidor de datos"
 
-#: ../app/ui/SettingsPage.qml:43 ../app/ui/settings/RefreshIntervalPage.qml:24
+#: ../app/ui/SettingsPage.qml:60 ../app/ui/settings/RefreshIntervalPage.qml:27
 msgid "Refresh Interval"
 msgstr "Intervalu de refrescu"
 
-#: ../app/ui/SettingsPage.qml:48 ../app/ui/settings/LocationPage.qml:24
+#: ../app/ui/SettingsPage.qml:68 ../app/ui/settings/LocationPage.qml:26
 msgid "Location"
 msgstr "Allugamientu"
 
-#: ../app/ui/settings/DataProviderPage.qml:37
+#: ../app/ui/settings/DataProviderPage.qml:42
 msgid "Provider"
 msgstr "Fornidor"
 
-#: ../app/ui/settings/LocationPage.qml:32
+#: ../app/ui/settings/LocationPage.qml:34
 msgid "Detect current location"
 msgstr "Deteutar allugamientu actual"
 
-#: ../app/ui/settings/RefreshIntervalPage.qml:30
-#: ../app/ui/settings/RefreshIntervalPage.qml:31
-#: ../app/ui/settings/RefreshIntervalPage.qml:32
-#: ../app/ui/settings/RefreshIntervalPage.qml:33
-#: ../app/ui/settings/RefreshIntervalPage.qml:43
+#: ../app/ui/settings/RefreshIntervalPage.qml:34
+#: ../app/ui/settings/RefreshIntervalPage.qml:35
+#: ../app/ui/settings/RefreshIntervalPage.qml:36
+#: ../app/ui/settings/RefreshIntervalPage.qml:37
+#: ../app/ui/settings/RefreshIntervalPage.qml:48
 #, qt-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1 minutu"
 msgstr[1] "%1 minutos"
 
-#: ../app/ui/settings/RefreshIntervalPage.qml:42
+#: ../app/ui/settings/RefreshIntervalPage.qml:47
 msgid "Interval"
 msgstr "Intervalu"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of temperature in Celcius and are shown in the settings page.
 #. Only the abbreviated form of Celcius should be used.
-#: ../app/ui/settings/UnitsPage.qml:42 ../app/ui/settings/UnitsPage.qml:78
+#: ../app/ui/settings/UnitsPage.qml:47 ../app/ui/settings/UnitsPage.qml:83
 msgid "°C"
 msgstr "°C"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of temperature in Fahrenheit and are shown in the settings page.
 #. Only the abbreviated form of Fahrenheit should be used.
-#: ../app/ui/settings/UnitsPage.qml:47 ../app/ui/settings/UnitsPage.qml:79
+#: ../app/ui/settings/UnitsPage.qml:52 ../app/ui/settings/UnitsPage.qml:84
 msgid "°F"
 msgstr "°F"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of wind speed in kilometers per hour and are shown in the settings page.
 #. Only the abbreviated form of kilometers per hour should be used.
-#: ../app/ui/settings/UnitsPage.qml:58 ../app/ui/settings/UnitsPage.qml:99
+#: ../app/ui/settings/UnitsPage.qml:63 ../app/ui/settings/UnitsPage.qml:104
 msgid "kph"
 msgstr "kph"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of wind speed in miles per hour and are shown in the settings page.
 #. Only the abbreviated form of miles per hour should be used.
-#: ../app/ui/settings/UnitsPage.qml:63 ../app/ui/settings/UnitsPage.qml:100
+#: ../app/ui/settings/UnitsPage.qml:68 ../app/ui/settings/UnitsPage.qml:105
 msgid "mph"
 msgstr "mph"
 
-#: ../app/ui/settings/UnitsPage.qml:77
+#: ../app/ui/settings/UnitsPage.qml:82
 msgid "Temperature"
 msgstr "Temperatura"
 
-#: ../app/ui/settings/UnitsPage.qml:98
+#: ../app/ui/settings/UnitsPage.qml:103
 msgid "Wind Speed"
 msgstr "Velocidá del vientu"
 

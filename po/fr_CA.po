@@ -1,21 +1,21 @@
-# French translation for ubuntu-weather-app
-# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# French (Canada) translation for ubuntu-weather-app
+# Copyright (c) 2016 Rosetta Contributors and Canonical Ltd 2016
 # This file is distributed under the same license as the ubuntu-weather-app package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-03-26 11:43-0500\n"
-"PO-Revision-Date: 2016-06-07 19:03+0000\n"
-"Last-Translator: Anne <anneonyme017@gmail.com>\n"
-"Language-Team: French <fr@li.org>\n"
+"PO-Revision-Date: 2016-06-06 19:44+0000\n"
+"Last-Translator: Ubuntu-QC-1 <Unknown>\n"
+"Language-Team: French (Canada) <fr_CA@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2016-07-28 06:15+0000\n"
+"X-Launchpad-Export-Date: 2016-07-28 06:16+0000\n"
 "X-Generator: Launchpad (build 18153)\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
@@ -24,7 +24,7 @@ msgstr "Risque de précipitation"
 
 #: ../app/components/DayDelegateExtraInfo.qml:59
 msgid "Winds"
-msgstr "Vents"
+msgstr "Vent"
 
 #: ../app/components/DayDelegateExtraInfo.qml:68
 msgid "UV Index"
@@ -52,7 +52,7 @@ msgstr "Recherche de la position actuelle..."
 
 #: ../app/components/HomePageEmptyStateComponent.qml:52
 msgid "Cannot determine your location"
-msgstr "Impossible de déterminer votre localisation"
+msgstr "Impossible de déterminer votre position"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:62
 msgid "Manually add a location by swiping up from the bottom of the display"
@@ -71,12 +71,11 @@ msgstr "Supprimer"
 #: ../app/components/LocationsPageEmptyStateComponent.qml:36
 msgid "No locations found. Tap the plus icon to search for one."
 msgstr ""
-"Aucune localisation trouvée. Appuyez sur l'icône « plus » pour en chercher "
-"une."
+"Aucun emplacement trouvée. Toquer sur l'icône « plus » pour en chercher un."
 
 #: ../app/components/MultiSelectHeadState.qml:27
 msgid "Select All"
-msgstr "Tout sélectionner"
+msgstr "Sélectionner tout"
 
 #: ../app/components/MultiSelectHeadState.qml:39
 msgid "Delete"
@@ -88,32 +87,31 @@ msgstr "Annuler la sélection"
 
 #: ../app/components/NetworkErrorStateComponent.qml:48
 msgid "Network Error"
-msgstr "Erreur de réseau"
+msgstr "Erreur réseau"
 
 #: ../app/components/NetworkErrorStateComponent.qml:57
 msgid "Please check your network settings and try again."
-msgstr "Veuillez vérifier vos paramètres de réseau et réessayer."
+msgstr "Veuillez vérifier vos paramètres réseau et ressayer."
 
 #: ../app/components/NetworkErrorStateComponent.qml:63
 msgid "Retry"
-msgstr "Réessayer"
+msgstr "Ressayer"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:47
 msgid "No API Keys Found"
-msgstr "Aucune clé API trouvée"
+msgstr "Aucune clef d'API trouvée"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:56
 msgid ""
 "If you are a developer, please see the README file for instructions on how "
 "to obtain your own Open Weather Map API key."
 msgstr ""
-"Si vous êtes un développeur, veuillez lire le fichier README (« LISEZ-MOI ») "
-"pour plus d'instructions sur la manière d'obtenir votre propre clé API pour "
-"Open Weather Map."
+"Si vous êtes un développeur, le fichier LISEZ-MOI vous donnera des "
+"instructions sur la façon d'obtenir votre propre clef d'API Open Weather Map."
 
 #: ../app/ui/AddLocationPage.qml:38
 msgid "Select a city"
-msgstr "Sélectionner une ville"
+msgstr "Choisir une ville"
 
 #: ../app/ui/AddLocationPage.qml:49
 msgid "City"
@@ -121,7 +119,7 @@ msgstr "Ville"
 
 #: ../app/ui/AddLocationPage.qml:65
 msgid "Back"
-msgstr "Précédent"
+msgstr "Retour"
 
 #: ../app/ui/AddLocationPage.qml:108
 msgid "Search city"
@@ -134,8 +132,7 @@ msgstr "Aucune ville trouvée"
 #: ../app/ui/AddLocationPage.qml:294
 msgid "Couldn't load weather data, please try later again!"
 msgstr ""
-"Impossible de récupérer les données météorologiques, veuillez réessayer plus "
-"tard !"
+"Impossible de charger les données météo, veuillez ressayer plus tard!"
 
 #: ../app/ui/AddLocationPage.qml:304
 msgid "Location already added."
@@ -179,7 +176,7 @@ msgstr "Fournisseur"
 
 #: ../app/ui/settings/LocationPage.qml:34
 msgid "Detect current location"
-msgstr "Détecter l'emplacement actuel"
+msgstr "Détecter la position actuelle"
 
 #: ../app/ui/settings/RefreshIntervalPage.qml:34
 #: ../app/ui/settings/RefreshIntervalPage.qml:35
@@ -189,8 +186,8 @@ msgstr "Détecter l'emplacement actuel"
 #, qt-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
-msgstr[0] "%1 minute"
-msgstr[1] "%1 minutes"
+msgstr[0] "%1 minute"
+msgstr[1] "%1 minutes"
 
 #: ../app/ui/settings/RefreshIntervalPage.qml:47
 msgid "Interval"
@@ -222,7 +219,7 @@ msgstr "km/h"
 #. Only the abbreviated form of miles per hour should be used.
 #: ../app/ui/settings/UnitsPage.qml:68 ../app/ui/settings/UnitsPage.qml:105
 msgid "mph"
-msgstr "miles/h"
+msgstr "mi/h"
 
 #: ../app/ui/settings/UnitsPage.qml:82
 msgid "Temperature"
@@ -241,8 +238,8 @@ msgid ""
 "A weather forecast application for Ubuntu with support for multiple online "
 "weather data sources"
 msgstr ""
-"Une application de prévisions météo pour Ubuntu avec prise en charge de "
-"plusieurs sources de données météorologiques en ligne"
+"Une application de prévisions météo pour Ubuntu offrant la prise en charge "
+"de plusieurs sources en ligne de données météo"
 
 #: ubuntu-weather-app.desktop.in.in.h:3
 msgid "weather;forecast;twc;openweathermap;the weather channel;"

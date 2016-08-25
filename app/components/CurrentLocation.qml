@@ -45,6 +45,12 @@ Item {
     Plugin {
         id: osmPlugin
         name: "osm"
+
+        // Set a useragent so that osm can uniquely identify out requests
+        PluginParameter {
+            name: "osm.useragent"
+            value: "ubuntu-weather-app"
+        }
     }
 
     GeocodeModel {

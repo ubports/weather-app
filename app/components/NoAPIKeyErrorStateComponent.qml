@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Canonical Ltd
+ * Copyright (C) 2015-2016 Canonical Ltd
  *
  * This file is part of Ubuntu Weather App
  *
@@ -17,9 +17,8 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.5
+import Ubuntu.Components 1.3
 import "../components"
-
 
 Rectangle {
     color: "white"

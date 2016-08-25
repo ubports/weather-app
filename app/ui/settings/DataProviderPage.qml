@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Canonical Ltd
+ * Copyright (C) 2015-2016 Canonical Ltd
  *
  * This file is part of Ubuntu Weather App
  *
@@ -22,7 +22,11 @@ import "../../components"
 import "../../data/keys.js" as Keys
 
 Page {
-    title: i18n.tr("Data Provider")
+    id: dataProviderPage
+
+    header: PageHeader {
+        title: i18n.tr("Data Provider")
+    }
 
     ListModel {
         id: dataProviderModel
@@ -32,15 +36,16 @@ Page {
     ExpandableListItem {
         id: dataProviderSetting
 
+        anchors.top: dataProviderPage.header.bottom
         listViewHeight: dataProviderModel.count*units.gu(7) - units.gu(1)
         model: dataProviderModel
-        text: i18n.tr("Provider")
-        subText: settings.service === "weatherchannel" ? "The Weather Channel" : "OpenWeatherMap"
+        title.text: i18n.tr("Provider")
+        subText.text: settings.service === "weatherchannel" ? "The Weather Channel" : "OpenWeatherMap"
 
         delegate: StandardListItem {
-            title: model.text
-            icon: "ok"
-            showIcon: dataProviderSetting.subText === model.text
+            title.text: model.text
+            icon.name: "ok"
+            icon.visible: dataProviderSetting.subText.text === model.text
             onClicked: {
                 if (model.text === "The Weather Channel") {
                     settings.service = "weatherchannel"
