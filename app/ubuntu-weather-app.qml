@@ -202,7 +202,7 @@ MainView {
             }
         }
 
-        return index ;
+        return index;
     }
 
     function searchForLocation(action, lat, lon) {
@@ -371,8 +371,8 @@ MainView {
                 if(location.dbId === undefined || location.dbId === 0) {
                     storage.insertLocation({location: location});
                 }
-                refreshData();
             }
+            refreshData();
 
             return !exists;
         }
