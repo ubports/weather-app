@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-03-26 11:43-0500\n"
+"POT-Creation-Date: 2016-10-08 01:18-0700\n"
 "PO-Revision-Date: 2016-12-17 05:14+0000\n"
 "Last-Translator: AungKhantBo <aungkhantbo@yahoo.com>\n"
 "Language-Team: Burmese <my@li.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2016-12-17 05:39+0000\n"
+"X-Launchpad-Export-Date: 2016-12-18 05:30+0000\n"
 "X-Generator: Launchpad (build 18298)\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
@@ -108,6 +108,12 @@ msgstr ""
 "သင်​သည်​ developerတစ်​​ယောက်​ဖြစ်​ပါက သင့်ကိုယ်​ပိုင်​Open Weather Map API "
 "key မည်​သို့ရရှိနိုင်​သည်​ဆိုသည့်ညွှန်​ကြားချက်​များအတွက်​ README "
 "fileကိုဖတ်​​ပေးပါ"
+
+#: ../app/ubuntu-weather-app.qml:235
+msgid ""
+"One arguments for weather app: --display, --city, --lat, --lng They will be "
+"managed by system. See the source for a full comment about them"
+msgstr ""
 
 #: ../app/ui/AddLocationPage.qml:38
 msgid "Select a city"
