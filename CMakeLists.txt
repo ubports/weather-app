@@ -69,6 +69,7 @@ else(CLICK_MODE)
     DESTINATION ${CMAKE_INSTALL_BINDIR})
   set(DESKTOP_DIR ${CMAKE_INSTALL_DATADIR}/applications)
   set(URLS_DIR ${CMAKE_INSTALL_DATADIR}/url-dispatcher/urls)
+  set(UBUNTU-WEATHER_APP_DIR "${DATA_DIR}/app")
 endif(CLICK_MODE)
 
 if(${CLICK_MODE})
