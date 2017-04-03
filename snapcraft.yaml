@@ -3,22 +3,14 @@ version: '0.1'
 summary: ubuntu weather app.
 description: |
     A weather forecast application for Ubuntu with support for multiple online weather data sources.
-grade: devel
 confinement: strict
+grade: devel
 architectures: [all]
 
 apps:
     ubuntu-weather-app:
-        aliases: [ubuntu-weather-app]
-        command: desktop-launch qmlscene $SNAP/usr/share/ubuntu-weather-app/app/ubuntu-weather-app.qml 
-        plugs:
-            - network
-            - location-observe
-            - opengl
-            - platform
-            - unity7
-            - unity8
-            - mir-libs
+        command: desktop-launch qmlscene "$@" $SNAP/usr/share/ubuntu-weather-app/app/ubuntu-weather-app.qml 
+        plugs: [network, location-observe, opengl, platform, unity7, unity8, mir, mir-libs]
 
 plugs:
     platform:
