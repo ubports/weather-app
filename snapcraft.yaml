@@ -18,6 +18,7 @@ apps:
             - platform
             - unity7
             - unity8
+            - mir
             - mir-libs
 
 plugs:
