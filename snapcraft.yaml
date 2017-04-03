@@ -10,7 +10,7 @@ architectures: [all]
 apps:
     ubuntu-weather-app:
         aliases: [ubuntu-weather-app]
-        command: desktop-launch qmlscene $SNAP/usr/share/ubuntu-weather-app/app/ubuntu-weather-app.qml 
+        command: desktop-launch qmlscene "$@" $SNAP/usr/share/ubuntu-weather-app/app/ubuntu-weather-app.qml 
         plugs:
             - network
             - location-observe
