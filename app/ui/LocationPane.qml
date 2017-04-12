@@ -45,6 +45,8 @@ ListView {
     property var todayData
     property bool graphicVisible : false
 
+    property var lastFetch  // don't store as int as reaches max int
+
     delegate: DayDelegate {
         day: model.day
         high: model.high
@@ -99,6 +101,7 @@ ListView {
             id: homeTempInfo
             modelData: todayData
             now: mainPageWeekdayListView.currentTemp
+            updatedAt: mainPageWeekdayListView.lastFetch
         }
 
         // TODO: Migrate this to using the new SDK list item when possible.
@@ -231,6 +234,9 @@ ListView {
             hourlyForecastsData = hourlyForecasts;
             hourlyTempUnits = tempUnits;
         }
+
+        // Set last updated time
+        mainPageWeekdayListView.lastFetch = data.updated;
     }
 
     Component.onCompleted: renderData(index)
