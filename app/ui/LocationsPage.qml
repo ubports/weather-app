@@ -41,9 +41,7 @@ Page {
         }
     ]
 
-    height: units.gu(20)
-    width: units.gu(20)
-
+    // This is used by the header state (LocationsHeadState) to go back
     signal pop()
 
     ListModel {

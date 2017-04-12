@@ -125,8 +125,10 @@ Page {
     ListView {
         id: locationPages
         objectName: "locationPages"
-        anchors.fill: parent
-        contentHeight: parent.height
+        anchors {
+            fill: parent
+        }
+        contentHeight: parent.height - bottomEdge.hint.height
         currentIndex: settings.current
         delegate: LocationPane {
             objectName: "locationPane" + index
