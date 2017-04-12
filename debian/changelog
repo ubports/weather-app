@@ -15,7 +15,7 @@ ubuntu-weather-app (3.4ubuntu1) xenial; urgency=medium
   [ Gary Wang ]
   * Add url-dispatcher to support for app launching from weather scope (LP: #1518888)
 
- -- Andrew Hayzen <ahayzen@gmail.com> Tue, 19 Jul 2016 12:22:57 +0100
+ -- Andrew Hayzen <ahayzen@gmail.com>  Tue, 19 Jul 2016 12:22:57 +0100
 
 ubuntu-weather-app (3.3ubuntu1) xenial; urgency=medium
 
