@@ -43,6 +43,7 @@ ListView {
     property string hourlyTempUnits
 
     property var todayData
+    property bool graphicVisible : false
 
     property var lastFetch  // don't store as int as reaches max int
 
@@ -77,10 +78,11 @@ ListView {
         HomeGraphic {
             id: homeGraphic
             icon: mainPageWeekdayListView.icon
+            visible: graphicVisible;
             MouseArea {
                 anchors.fill: parent
                 onClicked: {
-                    homeGraphic.visible = false;
+                    graphicVisible = false;
                 }
             }
         }

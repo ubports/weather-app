@@ -32,6 +32,7 @@ set(APP_NAME weather)
 set(APP_HARDCODE ubuntu-weather-app)
 set(MAIN_QML app/${APP_HARDCODE}.qml)
 set(DESKTOP_FILE "${APP_HARDCODE}.desktop")
+set(URLS_FILE "${APP_HARDCODE}.url-dispatcher")
 set(ICON app/weather-app@30.png)
 set(AUTOPILOT_DIR ubuntu_weather_app)
 
@@ -41,8 +42,9 @@ if(CLICK_MODE)
   set(UBUNTU-WEATHER_APP_DIR "${CMAKE_INSTALL_DATADIR}/qml")
 
   set(QT_IMPORTS_DIR "${CMAKE_INSTALL_LIBDIR}")
-  set(EXEC "qmlscene $@ ${MAIN_QML}")
+  set(EXEC "qmlscene %u ${MAIN_QML}")
   set(DATA_DIR /)
+  set(URLS_DIR ${DATA_DIR})
 
   set(MODULE_PATH ${QT_IMPORTS_DIR})
   if(NOT BZR_REVNO)
@@ -67,6 +69,7 @@ else(CLICK_MODE)
     DESTINATION ${CMAKE_INSTALL_BINDIR})
   set(DESKTOP_DIR ${CMAKE_INSTALL_DATADIR}/applications)
   set(URLS_DIR ${CMAKE_INSTALL_DATADIR}/url-dispatcher/urls)
+  set(UBUNTU-WEATHER_APP_DIR "${DATA_DIR}/app")
 endif(CLICK_MODE)
 
 if(${CLICK_MODE})
@@ -96,6 +99,8 @@ add_custom_target(${DESKTOP_FILE} ALL
 
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${DESKTOP_FILE}
         DESTINATION ${CMAKE_INSTALL_DATADIR}/applications)
+
+install(FILES ${URLS_FILE} DESTINATION ${URLS_DIR})
 
 add_subdirectory(app)
 add_subdirectory(po)

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-03-26 11:43-0500\n"
+"POT-Creation-Date: 2016-10-08 01:18-0700\n"
 "PO-Revision-Date: 2016-01-27 18:00+0000\n"
 "Last-Translator: Robin van der Vliet <info@robinvandervliet.com>\n"
 "Language-Team: Esperanto <eo@li.org>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-07-28 06:15+0000\n"
-"X-Generator: Launchpad (build 18153)\n"
+"X-Launchpad-Export-Date: 2017-04-07 06:42+0000\n"
+"X-Generator: Launchpad (build 18343)\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of precipitation"
@@ -102,6 +102,12 @@ msgstr ""
 msgid ""
 "If you are a developer, please see the README file for instructions on how "
 "to obtain your own Open Weather Map API key."
+msgstr ""
+
+#: ../app/ubuntu-weather-app.qml:235
+msgid ""
+"One arguments for weather app: --display, --city, --lat, --lng They will be "
+"managed by system. See the source for a full comment about them"
 msgstr ""
 
 #: ../app/ui/AddLocationPage.qml:38
