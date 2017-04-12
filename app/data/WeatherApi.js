@@ -797,7 +797,8 @@ var sendRequest = function(message, responseCallback) {
     // perform the api calls
     if(message.action === "searchByName") {
         WeatherApi.search("name", message.params, finished, onError);
-    } else if(message.action === "searchByPoint") {
+    } else if(message.action === "searchByPoint"
+              || message.action === "searchByUrl") {
         WeatherApi.search("point", message.params, finished, onError);
     } else if(message.action === "getGeoIp") {
         WeatherApi.geoLookup(message.params, finished, onError);

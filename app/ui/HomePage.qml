@@ -52,6 +52,8 @@ Page {
         }
     }
 
+    property bool hourlyVisible : false
+
     property var iconMap: {
         "sun": "weather-clear-symbolic",
         "moon": "weather-clear-night-symbolic",
@@ -128,6 +130,7 @@ Page {
         currentIndex: settings.current
         delegate: LocationPane {
             objectName: "locationPane" + index
+            graphicVisible: !hourlyVisible
         }
         highlightRangeMode: ListView.StrictlyEnforceRange
         model: weatherApp.locationsList.length
