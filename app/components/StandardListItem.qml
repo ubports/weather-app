@@ -25,6 +25,10 @@ ListItem {
     property alias title: listitemlayout.title
     property alias icon: _icon
 
+    // For autopilot
+    readonly property bool iconVisible: icon.visible
+    readonly property string titleValue: title.text
+
     height: listitemlayout.height + divider.height
 
     ListItemLayout {

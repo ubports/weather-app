@@ -35,6 +35,9 @@ ListItem {
     property alias subText: expandableHeader.subtitle
     property alias listViewHeight: expandableList.height
 
+    // For autopilot
+    readonly property double expansionHeight: expansion.height
+
     highlightColor: "Transparent"
     height: expandableHeader.height + divider.height
     expansion.height: contentColumn.height

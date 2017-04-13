@@ -40,6 +40,8 @@ Page {
         }
 
         ListItem {
+            objectName: "units"
+
             ListItemLayout {
                 title.text: i18n.tr("Units")
                 ProgressionSlot{}

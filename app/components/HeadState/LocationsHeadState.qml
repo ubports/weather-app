@@ -29,9 +29,11 @@ State {
             actions: [
                 Action {
                     iconName: "down"
+                    objectName: "back"
                     onTriggered: thisPage.pop()
                 }
             ]
+            objectName: "locationsLeadingActionBar"
         }
         title: i18n.tr("Locations")
         trailingActionBar {
@@ -42,6 +44,7 @@ State {
                     onTriggered: mainPageStack.push(Qt.resolvedUrl("../../ui/AddLocationPage.qml"))
                 }
             ]
+            objectName: "locationsTrailingActionBar"
         }
         visible: thisPage.state === "default"
     }
