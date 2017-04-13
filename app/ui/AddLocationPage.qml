@@ -42,35 +42,42 @@ Page {
         */
         flickable: null
         visible: addLocationPage.header === standardHeader
-        trailingActionBar.actions: [
-            Action {
-                iconName: "search"
-                objectName: "search"
-                text: i18n.tr("City")
-                onTriggered: {
-                    addLocationPage.header = searchHeader
-                    searchComponentLoader.sourceComponent = searchComponent
-                    searchComponentLoader.item.forceActiveFocus()
+        trailingActionBar {
+            actions: [
+                Action {
+                    iconName: "search"
+                    objectName: "search"
+                    text: i18n.tr("City")
+                    onTriggered: {
+                        addLocationPage.header = searchHeader
+                        searchComponentLoader.sourceComponent = searchComponent
+                        searchComponentLoader.item.forceActiveFocus()
+                    }
                 }
-            }
-        ]
+            ]
+            objectName: "addLocationTrailingActionBar"
+        }
     }
 
     PageHeader {
         id: searchHeader
         visible: addLocationPage.header === searchHeader
-        leadingActionBar.actions: [
-            Action {
-                iconName: "back"
-                text: i18n.tr("Back")
-                onTriggered: {
-                    locationList.forceActiveFocus()
-                    searchComponentLoader.item.text = ""
-                    addLocationPage.header = standardHeader
-                    searchComponentLoader.sourceComponent = undefined
+        leadingActionBar {
+            actions: [
+                Action {
+                    iconName: "back"
+                    objectName: "pagestack_back_action_button"
+                    text: i18n.tr("Back")
+
+                    onTriggered: {
+                        locationList.forceActiveFocus()
+                        searchComponentLoader.item.text = ""
+                        addLocationPage.header = standardHeader
+                        searchComponentLoader.sourceComponent = undefined
+                    }
                 }
-            }
-        ]
+            ]
+        }
         contents: Loader {
             id: searchComponentLoader
             anchors {

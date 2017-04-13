@@ -22,16 +22,35 @@ import "../components"
 import "../data/keys.js" as Keys
 
 
-PageWithBottomEdge {
+Page {
     // Set to null otherwise the header is shown (but blank) over the top of the listview
     id: locationPage
     objectName: "homePage"
     flickable: null
 
-    bottomEdgePageSource: Qt.resolvedUrl("LocationsPage.qml")
-    bottomEdgeTitle: i18n.tr("Locations")
-    tipColor: UbuntuColors.orange
-    tipLabelColor: "#FFF"
+    BottomEdge {
+        id: bottomEdge
+        // Note: cannot use contentUrl and preload until pad.lv/1604509
+        contentComponent: locationsPage
+        height: parent.height
+        preloadContent: true
+        hint {
+            // Once pad.lv/1536669 is fixed, the status will be auto set to
+            // locked when a mouse is detected, in that case we'll show text
+            // otherwise we hide the text as this causes strange animations
+            text: bottomEdge.hint.status == BottomEdgeHint.Locked ? i18n.tr("Locations") : ""
+        }
+
+        Component {
+            id: locationsPage
+            LocationsPage {
+                height: bottomEdge.height
+                width: bottomEdge.width
+
+                onPop: bottomEdge.collapse()
+            }
+        }
+    }
 
     property bool hourlyVisible : false
 
@@ -106,8 +125,10 @@ PageWithBottomEdge {
     ListView {
         id: locationPages
         objectName: "locationPages"
-        anchors.fill: parent
-        contentHeight: parent.height
+        anchors {
+            fill: parent
+        }
+        contentHeight: parent.height - bottomEdge.hint.height
         currentIndex: settings.current
         delegate: LocationPane {
             objectName: "locationPane" + index

@@ -67,40 +67,12 @@ class Page(UbuntuUIToolkitCustomProxyObjectBase):
         self.main_view = self.get_root_instance().select_single(
             objectName="weather")
 
+    @click_object
     def click_back(self):
-        return self.main_view.get_header().click_back_button()
-
-
-class PageWithBottomEdge(Page):
-    """
-    An emulator class that makes it easy to interact with the bottom edge
-    swipe page
-    """
-    def __init__(self, *args, **kwargs):
-        super(PageWithBottomEdge, self).__init__(*args, **kwargs)
-
-    def reveal_bottom_edge_page(self):
-        """Bring the bottom edge page to the screen"""
-        self.bottomEdgePageLoaded.wait_for(True)
-
-        try:
-            action_item = self.wait_select_single("UCUbuntuShape",
-                                                  objectName='bottomEdgeTip')
-            action_item.visible.wait_for(True)
-
-            # Pick the middle horizontally and vertically of the bottomEdgeTip
-            start_x = (action_item.globalRect.x +
-                       (action_item.globalRect.width * 0.5))
-            start_y = (action_item.globalRect.y +
-                       (action_item.globalRect.height * 0.5))
-            stop_y = start_y - (self.height * 0.7)
-
-            self.pointing_device.drag(start_x, start_y,
-                                      start_x, stop_y, rate=2)
-            self.isReady.wait_for(True)
-        except dbus.StateNotFoundError:
-            logger.error('BottomEdge element not found.')
-            raise
+        return self.wait_select_single(
+            "UCAbstractButton", objectName="pagestack_back_action_button",
+            visible=True,
+        )
 
 
 #
@@ -113,8 +85,12 @@ class AddLocationPage(Page):
     def __init__(self, *args, **kwargs):
         super(AddLocationPage, self).__init__(*args, **kwargs)
 
+    @click_object
     def click_back(self):
-        self.main_view.get_header().click_custom_back_button()
+        return self.wait_select_single(
+            "UCAbstractButton", objectName="pagestack_back_action_button",
+            visible=True,
+        )
 
     @click_object
     def click_location(self, index):
@@ -122,16 +98,17 @@ class AddLocationPage(Page):
                                   objectName="addLocation" + str(index))
 
     def click_search_action(self):
-        self.main_view.get_header().click_action_button("search")
+        return self.wait_select_single(
+            "ActionBar", objectName="addLocationTrailingActionBar",
+            visible=True,
+        ).click_action_button("search")
 
     def get_results_count(self):
         return self.wait_select_single(
             "QQuickListView", objectName="locationList").count
 
     def get_search_field(self):
-        header = self.main_view.get_header()
-
-        return header.select_single("TextField", objectName="searchField")
+        return self.select_single("TextField", objectName="searchField")
 
     def is_empty_label_visible(self):
         return self.select_single("UCLabel", objectName="noCity").visible
@@ -178,7 +155,7 @@ class DayDelegateExtraInfo(UbuntuUIToolkitCustomProxyObjectBase):
                                   objectName="windForecast").value
 
 
-class HomePage(PageWithBottomEdge):
+class HomePage(Page):
     """Autopilot helper for HomePage."""
     def __init__(self, *args, **kwargs):
         super(HomePage, self).__init__(*args, **kwargs)
@@ -199,6 +176,25 @@ class HomePage(PageWithBottomEdge):
 
     def get_selected_location_pane(self):
         return self.get_location_pane(self.get_selected_location_index())
+
+    def reveal_bottom_edge_page(self):
+        try:
+            bottom_edge_hint = self.wait_select_single(
+                "UCBottomEdgeHint", visible=True)
+            bottom_edge_hint.visible.wait_for(True)
+            start_x = (bottom_edge_hint.globalRect.x +
+                       (bottom_edge_hint.globalRect.width * 0.5))
+            start_y = (bottom_edge_hint.globalRect.y +
+                       (bottom_edge_hint.height * 0.5))
+            stop_y = start_y - (self.height * 0.7)
+            self.pointing_device.drag(start_x, start_y,
+                                      start_x, stop_y, rate=2)
+            bottom_edge = self.wait_select_single(
+                "LocationsPage", objectName="locationsPage")
+            bottom_edge.visible.wait_for(True)
+        except dbus.StateNotFoundError:
+            logger.error('BottomEdge element not found.')
+            raise
 
     def swipe_left(self):
 
@@ -256,10 +252,14 @@ class LocationsPage(Page):
         super(LocationsPage, self).__init__(*args, **kwargs)
 
     def click_add_location_action(self):
-        self.main_view.get_header().click_action_button("addLocation")
+        return self.wait_select_single(
+            "ActionBar", objectName="locationsTrailingActionBar", visible=True,
+        ).click_action_button("addLocation")
 
     def click_back(self):
-        return self.main_view.get_header().click_custom_back_button()
+        return self.wait_select_single(
+            "ActionBar", objectName="locationsLeadingActionBar", visible=True,
+        ).click_action_button("back")
 
     @click_object
     def click_location(self, index):
@@ -282,8 +282,8 @@ class MainView(MainView):
 class SettingsPage(Page):
     """Autopilot helper for SettingsPage."""
     @click_object
-    def click_settings_page_listitem(self, listitem_title):
-        return self.select_single("StandardListItem", title=listitem_title)
+    def click_settings_page_listitem(self, objectName):
+        return self.select_single("UCListItem", objectName=objectName)
 
     def get_units_page(self):
         return self.main_view.wait_select_single(UnitsPage, visible=True)
@@ -298,14 +298,16 @@ class UnitsPage(Page):
         self.expand_units_listitem(unit_name)
 
         # Get the currently selected value
-        previous_unit = self.get_expanded_listitem(unit_name, "True").title
+        previous_unit = self.get_expanded_listitem(
+            unit_name, "True"
+        ).titleValue
 
         # Click the non-selected value
         self.click_not_selected_listitem(unit_name)
 
         # Return True/False if the selection has changed
         return self.get_expanded_listitem(
-            unit_name, "True").title != previous_unit
+            unit_name, "True").titleValue != previous_unit
 
     @click_object
     def click_not_selected_listitem(self, unit_name):
@@ -317,14 +319,14 @@ class UnitsPage(Page):
 
     def expand_units_listitem(self, listitem):
         item = self.click_units_listitem(listitem)
-        item.expanded.wait_for(True)
+        item.height.wait_for(item.expansionHeight)
         return item
 
     def get_expanded_listitem(self, listitem, showIcon):
         listitemSetting = self.select_single(
             "ExpandableListItem", objectName=listitem)
         return listitemSetting.select_single(
-            "StandardListItem", showIcon=showIcon)
+            "StandardListItem", iconVisible=showIcon)
 
 
 class WeatherListItem(UbuntuUIToolkitCustomProxyObjectBase):

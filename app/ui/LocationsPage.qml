@@ -20,33 +20,17 @@ import QtQuick 2.4
 import Ubuntu.Components 1.3
 import Ubuntu.Components.ListItems 0.1 as ListItem
 import "../components"
+import "../components/HeadState"
 import "../components/ListItemActions"
 
 
 Page {
     id: locationsPage
     objectName: "locationsPage"
-    title: i18n.tr("Locations")
-
     state: locationsListView.state === "multiselectable" ? "selection" : "default"
     states: [
-        PageHeadState {
-            id: defaultState
-            head: locationsPage.head
-            name: "default"
-            actions: [
-                Action {
-                    iconName: "add"
-                    objectName: "addLocation"
-                    onTriggered: mainPageStack.push(Qt.resolvedUrl("AddLocationPage.qml"))
-                }
-            ]
-            backAction: Action {
-                iconName: "down"
-                onTriggered: {
-                    pageStack.pop()
-                }
-            }
+        LocationsHeadState {
+            thisPage: locationsPage
         },
         MultiSelectHeadState {
             listview: locationsListView
@@ -57,6 +41,9 @@ Page {
         }
     ]
 
+    // This is used by the header state (LocationsHeadState) to go back
+    signal pop()
+
     ListModel {
         id: currentLocationModel
     }
@@ -64,9 +51,10 @@ Page {
     MultiSelectListView {
         id: locationsListView
         anchors {
-            fill: parent
-            // TODO: Fix this offset
-            topMargin: -units.gu(6.125)  // FIXME: 6.125 is the header.height
+            bottom: parent.bottom
+            left: parent.left
+            right: parent.right
+            top: locationsPage.header.bottom
         }
         model: ListModel {
             id: locationsModel

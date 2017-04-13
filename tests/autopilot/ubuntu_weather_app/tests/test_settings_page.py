@@ -41,7 +41,7 @@ class TestSettingsPage(UbuntuWeatherAppTestCaseWithData):
         self.settings_page = self.app.get_settings_page()
 
         # Click the units page
-        self.settings_page.click_settings_page_listitem("Units")
+        self.settings_page.click_settings_page_listitem("units")
 
         # Get the units page
         self.units_page = self.settings_page.get_units_page()

@@ -73,7 +73,6 @@ class BaseTestCaseWithPatchedHome(AutopilotTestCase):
         return self.launch_test_application(
             base.get_qmlscene_launch_command(),
             self.local_location,
-            "debug",
             app_type='qt',
             emulator_base=ubuntuuitoolkit.UbuntuUIToolkitCustomProxyObjectBase)
 
@@ -82,7 +81,6 @@ class BaseTestCaseWithPatchedHome(AutopilotTestCase):
         return self.launch_test_application(
             base.get_qmlscene_launch_command(),
             self.installed_location,
-            "debug",
             app_type='qt',
             emulator_base=ubuntuuitoolkit.UbuntuUIToolkitCustomProxyObjectBase)
 
@@ -122,16 +120,23 @@ class BaseTestCaseWithPatchedHome(AutopilotTestCase):
             temp_dir = os.environ.get('HOME')
 
             # before each test, remove the app's databases
-            local_dir = os.path.join(temp_dir,
-                                     '.local/share/com.ubuntu.weather')
+            # NOTE: path seems to be .local/share/QtProject/com.ubuntu.weather
+            # now not .local/share/com.ubuntu.weather
+            local_dir = os.path.join(
+                temp_dir, '.local/share/QtProject/com.ubuntu.weather'
+            )
 
             if (os.path.exists(local_dir)):
                 shutil.rmtree(local_dir)
 
-            local_dir = os.path.join(temp_dir, '.config/com.ubuntu.weather')
+            # NOTE: path seems to be .config/QtProject/com.ubuntu.weather.conf
+            # now not .config/com.ubuntu.weather/com.ubuntu.weather.conf
+            local_path = os.path.join(
+                temp_dir, '.config/QtProject/com.ubuntu.weather.conf'
+            )
 
-            if (os.path.exists(local_dir)):
-                shutil.rmtree(local_dir)
+            if (os.path.exists(local_path)):
+                os.remove(local_path)
         else:
             temp_dir_fixture = fixtures.TempDir()
             self.useFixture(temp_dir_fixture)
@@ -221,9 +226,11 @@ class DatabaseMixin(object):
         return result
 
     def load_database_vars(self):
+        # NOTE: path seems to be .local/share/QtProject/com.ubuntu.weather
+        # now not .local/share/com.ubuntu.weather
         self.app_dir = os.path.join(
             os.environ.get('HOME'),
-            ".local/share/com.ubuntu.weather")
+            ".local/share/QtProject/com.ubuntu.weather")
         self.database_tmpl_dir = os.path.join(
             os.path.dirname(ubuntu_weather_app.__file__),
             'databases')
@@ -237,9 +244,11 @@ class DatabaseMixin(object):
 
 class LegacyDatabaseMixin(DatabaseMixin):
     def load_database_vars(self):
+        # NOTE: path seems to be .local/share/QtProject/com.ubuntu.weather
+        # now not .local/share/com.ubuntu.weather
         self.app_dir = os.path.join(
             os.environ.get('HOME'),
-            ".local/share/com.ubuntu.weather")
+            ".local/share/QtProject/com.ubuntu.weather")
         self.database_tmpl_dir = os.path.join(
             os.path.dirname(ubuntu_weather_app.__file__),
             'databases', 'legacy')
@@ -280,9 +289,11 @@ class SettingsMixin(object):
     def load_settings_vars(self):
         self.db_dir = os.path.abspath(
             os.path.join(os.path.dirname(__file__), '..', 'databases'))
+        # NOTE: path seems to be .config/QtProject/com.ubuntu.weather.conf
+        # now not .config/com.ubuntu.weather/com.ubuntu.weather.conf
         self.settings_dir = os.path.join(
             os.environ.get('HOME'),
-            ".config/com.ubuntu.weather")
+            ".config/QtProject")
         self.settings_filepath = os.path.join(self.settings_dir,
                                               'com.ubuntu.weather.conf')
         self.settings_location_added = os.path.join(self.db_dir,

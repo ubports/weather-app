@@ -1,3 +1,4 @@
+add_subdirectory(HeadState)
 add_subdirectory(ListItemActions)
 
 file(GLOB COMPONENTS_QML_JS_FILES *.qml *.js)
