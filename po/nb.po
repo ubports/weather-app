@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-10-08 01:18-0700\n"
+"POT-Creation-Date: 2017-04-12 12:07+0100\n"
 "PO-Revision-Date: 2016-02-03 07:42+0000\n"
 "Last-Translator: Åka Sikrom <Unknown>\n"
 "Language-Team: Norwegian Bokmal <nb@li.org>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-04-07 06:42+0000\n"
-"X-Generator: Launchpad (build 18343)\n"
+"X-Launchpad-Export-Date: 2017-04-14 05:53+0000\n"
+"X-Generator: Launchpad (build 18352)\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of precipitation"
@@ -46,6 +46,24 @@ msgstr "Soloppgang"
 msgid "Sunset"
 msgstr "Solnedgang"
 
+#: ../app/components/HeadState/LocationsHeadState.qml:36
+#: ../app/components/HeadState/MultiSelectHeadState.qml:41
+#: ../app/ui/HomePage.qml:41
+msgid "Locations"
+msgstr "Steder"
+
+#: ../app/components/HeadState/MultiSelectHeadState.qml:32
+msgid "Cancel selection"
+msgstr "Avbryt utvalg"
+
+#: ../app/components/HeadState/MultiSelectHeadState.qml:46
+msgid "Select All"
+msgstr "Velg alle"
+
+#: ../app/components/HeadState/MultiSelectHeadState.qml:58
+msgid "Delete"
+msgstr "Slett"
+
 #: ../app/components/HomePageEmptyStateComponent.qml:51
 msgid "Searching for current location..."
 msgstr "Søker etter gjeldende sted …"
@@ -58,9 +76,34 @@ msgstr "Fant ikke ut hvor du befinner deg"
 msgid "Manually add a location by swiping up from the bottom of the display"
 msgstr "Legg til steder manuelt ved å dra opp fra bunnen av skjermen"
 
-#: ../app/components/HomeTempInfo.qml:103
+#: ../app/components/HomeTempInfo.qml:108
 msgid "Today"
 msgstr "I dag"
+
+#: ../app/components/HomeTempInfo.qml:112
+#, qt-format
+msgid "updated %1 day ago"
+msgid_plural "updated %1 days ago"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../app/components/HomeTempInfo.qml:114
+#, qt-format
+msgid "updated %1 hour ago"
+msgid_plural "updated %1 hours ago"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../app/components/HomeTempInfo.qml:116
+#, qt-format
+msgid "updated %1 minute ago"
+msgid_plural "updated %1 minutes ago"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../app/components/HomeTempInfo.qml:118
+msgid "updated recently"
+msgstr ""
 
 #: ../app/components/ListItemActions/Remove.qml:26
 msgid "Remove"
@@ -69,18 +112,6 @@ msgstr "Fjern"
 #: ../app/components/LocationsPageEmptyStateComponent.qml:36
 msgid "No locations found. Tap the plus icon to search for one."
 msgstr "Fant ingen steder. Trykk på pluss-ikonet for å søke etter et sted."
-
-#: ../app/components/MultiSelectHeadState.qml:27
-msgid "Select All"
-msgstr "Velg alle"
-
-#: ../app/components/MultiSelectHeadState.qml:39
-msgid "Delete"
-msgstr "Slett"
-
-#: ../app/components/MultiSelectHeadState.qml:51
-msgid "Cancel selection"
-msgstr "Avbryt utvalg"
 
 #: ../app/components/NetworkErrorStateComponent.qml:48
 msgid "Network Error"
@@ -144,11 +175,7 @@ msgstr "Dette stedet er allerede lagt til."
 msgid "OK"
 msgstr "OK"
 
-#: ../app/ui/HomePage.qml:32 ../app/ui/LocationsPage.qml:29
-msgid "Locations"
-msgstr "Steder"
-
-#: ../app/ui/LocationsPage.qml:109
+#: ../app/ui/LocationsPage.qml:99
 msgid "Current Location"
 msgstr "Gjeldende sted"
 
