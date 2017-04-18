@@ -73,7 +73,7 @@ Page {
 
                 onItemClicked: {
                     settings.current = index;
-                    pageStack.pop()
+                    locationsPage.pop()
                 }
 
                 Column {
@@ -161,7 +161,7 @@ Page {
                     settings.current = index;
                 }
 
-                pageStack.pop()
+                locationsPage.pop()
             }
             onReorder: {
                 console.debug("Move: ", from, to);
