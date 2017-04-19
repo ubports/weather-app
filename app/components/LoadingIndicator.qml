@@ -22,18 +22,12 @@ import Ubuntu.Components 1.3
 Rectangle {
     id: indicator
     objectName: "processingIndicator"
-    anchors {
-        left: parent.left
-        right: parent.right
-        bottom: parent.bottom
-        bottomMargin: Qt.inputMethod.keyboardRectangle.height
-    }
     height: units.dp(3)
     color: "white"
     opacity: 0
     visible: opacity > 0
 
-    readonly property bool processing: loading
+    property bool processing: false
 
     Behavior on opacity {
         UbuntuNumberAnimation { duration: UbuntuAnimation.FastDuration }

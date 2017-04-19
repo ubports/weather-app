@@ -128,6 +128,13 @@ MainView {
     function fillPages(locations) {
         locationsList = []
         locationsList = locations;
+
+        // Loading is complete
+        // Either directly from cached entries being passed here
+        //  - storage.getLocations(fillPages);
+        // or after updateData has occurred
+        //  - fillPages(messageObject.result) from responseDataHandler
+        loading = false;
     }
 
     /*

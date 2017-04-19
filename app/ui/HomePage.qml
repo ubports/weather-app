@@ -35,10 +35,19 @@ Page {
         height: parent.height
         preloadContent: true
         hint {
+            // Force using mouse style bottom edge hint (works well in touch)
+            status: BottomEdgeHint.Locked
             // Once pad.lv/1536669 is fixed, the status will be auto set to
             // locked when a mouse is detected, in that case we'll show text
             // otherwise we hide the text as this causes strange animations
             text: bottomEdge.hint.status == BottomEdgeHint.Locked ? i18n.tr("Locations") : ""
+
+            // Force using mouse style bottom edge hint (works well in touch)
+            onStatusChanged: {
+                if (status == BottomEdgeHint.Inactive) {
+                    bottomEdge.hint.status = BottomEdgeHint.Locked;
+                }
+            }
         }
 
         Component {
@@ -183,6 +192,13 @@ Page {
 
     LoadingIndicator {
         id: loadingIndicator
+        anchors {
+            bottom: parent.bottom
+            bottomMargin: Qt.inputMethod.keyboardRectangle.height + bottomEdge.hint.height
+            left: parent.left
+            right: parent.right
+        }
+        processing: loading
     }
 
     Loader {
