@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Canonical Ltd
+ * Copyright (C) 2015, 2017 Canonical Ltd
  *
  * This file is part of Ubuntu Weather App
  *
@@ -18,7 +18,6 @@
 
 import QtQuick 2.4
 import Ubuntu.Components 1.3
-import Ubuntu.Components.ListItems 0.1 as ListItem
 import "../components"
 import "../components/HeadState"
 import "../components/ListItemActions"
@@ -37,7 +36,7 @@ Page {
             removable: true
             thisPage: locationsPage
 
-            onRemoved: storage.removeMultiLocations(selectedItems.slice());
+            onRemoved: storage.removeMultiLocations(selectedIndices.slice());
         }
     ]
 
@@ -65,93 +64,91 @@ Page {
                 left: parent.left
                 right: parent.right
             }
-            height: settings.addedCurrentLocation && settings.detectCurrentLocation ? units.gu(8) : units.gu(0)
+            height: settings.addedCurrentLocation && settings.detectCurrentLocation ? contentHeight : units.gu(0)
             interactive: false
             model: currentLocationModel
             delegate: WeatherListItem {
                 id: currentLocationListItem
+                height: currentListItemLayout.height + (divider.visible ? divider.height : 0) + (fakeDivider.visible ? fakeDivider.height : 0)
 
                 onItemClicked: {
                     settings.current = index;
+
+                    // Ensure any selections are closed
+                    locationsListView.closeSelection();
+
                     locationsPage.pop()
                 }
 
-                Column {
-                    anchors {
-                        left: parent.left
-                        right: currentWeatherImage.left
-                        rightMargin: units.gu(3)
-                        verticalCenter: parent.verticalCenter
+                ListItemLayout {
+                    id: currentListItemLayout
+                    subtitle {
+                        elide: Text.ElideRight
+                        fontSize: "small"
+                        text: name + ", " + (adminName1 == name ? countryName : adminName1)
                     }
-
-                    Label {
-                        id: currentLocationName
-
-                        anchors {
-                            left: parent.left
-                            leftMargin: units.gu(2)
-                        }
-
+                    title {
                         elide: Text.ElideRight
                         fontSize: "medium"
                         text: i18n.tr("Current Location")
-                        width: parent.width
                     }
-                    Label {
-                        id: currentLocationName2
 
+                    Icon {
                         anchors {
-                            left: parent.left
-                            leftMargin: units.gu(2)
+                            verticalCenter: parent.verticalCenter
                         }
+                        height: parent.height / 2
+                        name: icon
+                        SlotsLayout.position: SlotsLayout.Trailing
+                        SlotsLayout.overrideVerticalPositioning: true
+                        width: height
+                    }
 
-                        color: UbuntuColors.graphite
+                    Label {
+                        anchors {
+                            verticalCenter: parent.verticalCenter
+                        }
+                        color: UbuntuColors.orange
                         elide: Text.ElideRight
-                        fontSize: "small"
-                        font.weight: Font.Light
-                        text: name + ", " + (adminName1 == name ? countryName : adminName1)
-                        width: parent.width
+                        font {
+                            pixelSize: parent.height / 2
+                            weight: Font.Light
+                        }
+                        horizontalAlignment: Text.AlignRight
+                        SlotsLayout.position: SlotsLayout.Trailing
+                        SlotsLayout.overrideVerticalPositioning: true
+                        text: temp + settings.tempScale
                     }
                 }
 
-                Icon {
-                    id: currentWeatherImage
+                // Inject extra divider when we are the last as the SDK hides it
+                // but we need one as we have another listview directly below
+                ListItem {
+                    id: fakeDivider
                     anchors {
-                        right: parent.right
-                        rightMargin: units.gu(14)
-                        verticalCenter: parent.verticalCenter
+                        bottom: parent.bottom
                     }
-                    name: icon
-                    height: units.gu(3)
-                    width: units.gu(3)
-                }
-
-                Label {
-                    id: currentTemperatureLabel
-                    anchors {
-                        left: currentWeatherImage.right
-                        leftMargin: units.gu(1)
-                        right: parent.right
-                        rightMargin: units.gu(2)
-                        verticalCenter: parent.verticalCenter
+                    divider {
+                        visible: true
                     }
-                    color: UbuntuColors.orange
-                    elide: Text.ElideRight
-                    font.pixelSize: units.gu(4)
-                    font.weight: Font.Light
-                    horizontalAlignment: Text.AlignRight
-                    text: temp + settings.tempScale
+                    height: divider.height
+                    visible: currentLocationModel.count - 1 == index
                 }
             }
         }
 
         delegate: WeatherListItem {
             id: locationsListItem
-            objectName: "location" + index
-            leftSideAction: Remove {
-                onTriggered: storage.removeLocation(index)
+            height: listItemLayout.height + (divider.visible ? divider.height : 0)
+            leadingActions: ListItemActions {
+                actions: [
+                    Remove {
+                        onTriggered: storage.removeLocation(index)
+                    }
+                ]
             }
             multiselectable: true
+            objectName: "location" + index
             reorderable: true
 
             onItemClicked: {
@@ -163,89 +160,56 @@ Page {
 
                 locationsPage.pop()
             }
-            onReorder: {
-                console.debug("Move: ", from, to);
 
-                storage.moveLocation(from, to);
-            }
-
-            ListItem.ThinDivider {
-                anchors {
-                    top: parent.top
+            ListItemLayout {
+                id: listItemLayout
+                subtitle {
+                    elide: Text.ElideRight
+                    fontSize: "small"
+                    text: adminName1 == name ? countryName : adminName1
                 }
-                visible: index == 0
-            }
-
-            Item {
-                anchors {
-                    fill: parent
-                    leftMargin: units.gu(2)
-                    rightMargin: units.gu(2)
-                }
-
-                Column {
-                    anchors {
-                        left: parent.left
-                        right: weatherImage.visible ? weatherImage.left : parent.right
-                        rightMargin: units.gu(1)
-                        verticalCenter: parent.verticalCenter
-                    }
-
-                    Label {
-                        id: locationName
-                        objectName: "name"
-                        elide: Text.ElideRight
-                        fontSize: "medium"
-                        text: name
-                        width: parent.width
-                    }
-                    Label {
-                        id: locationName2
-                        color: UbuntuColors.graphite
-                        elide: Text.ElideRight
-                        fontSize: "small"
-                        font.weight: Font.Light
-                        text: adminName1 == name ? countryName : adminName1
-                        width: parent.width
-                    }
+                title {
+                    elide: Text.ElideRight
+                    fontSize: "medium"
+                    objectName: "name"
+                    text: name
                 }
 
                 Icon {
-                    id: weatherImage
                     anchors {
-                        right: parent.right
-                        rightMargin: units.gu(12)
                         verticalCenter: parent.verticalCenter
                     }
+                    height: parent.height / 2
                     name: icon
-                    height: units.gu(3)
-                    width: units.gu(3)
-                    visible: locationsPage.state === "default"
+                    SlotsLayout.position: SlotsLayout.Trailing
+                    SlotsLayout.overrideVerticalPositioning: true
+                    width: height
+                    visible: locationsListView.state === "default"
                 }
 
                 Label {
-                    id: temperatureLabel
                     anchors {
-                        left: weatherImage.right
-                        leftMargin: units.gu(1)
-                        right: parent.right
                         verticalCenter: parent.verticalCenter
                     }
                     color: UbuntuColors.orange
                     elide: Text.ElideRight
-                    font.pixelSize: units.gu(4)
-                    font.weight: Font.Light
+                    font {
+                        pixelSize: parent.height / 2
+                        weight: Font.Light
+                    }
                     horizontalAlignment: Text.AlignRight
+                    SlotsLayout.position: SlotsLayout.Trailing
+                    SlotsLayout.overrideVerticalPositioning: true
                     text: temp + settings.tempScale
-                    visible: locationsPage.state === "default"
+                    visible: locationsListView.state === "default"
                 }
             }
+        }
 
-            ListItem.ThinDivider {
-                anchors {
-                    bottom: parent.bottom
-                }
-            }
+        onReorder: {
+            console.debug("Move: ", from, to);
+
+            storage.moveLocation(from, to);
         }
     }
 

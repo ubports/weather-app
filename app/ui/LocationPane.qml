@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Canonical Ltd
+ * Copyright (C) 2015, 2017 Canonical Ltd
  *
  * This file is part of Ubuntu Weather App
  *
@@ -18,7 +18,6 @@
 
 import QtQuick 2.4
 import Ubuntu.Components 1.3
-import Ubuntu.Components.ListItems 0.1 as ListItem
 import "../components"
 import "../data/suncalc.js" as SunCalc
 
@@ -55,79 +54,78 @@ ListView {
 
         modelData: model
     }
-    header: Column {
-        id: locationTop
-
-        anchors {
-            left: parent.left
-            right: parent.right
-            margins: units.gu(2)
+    header: ListItem {
+        divider {
+            visible: true
         }
-        spacing: units.gu(1)
+        height: locationTop.height
 
-        Row {  // spacing at top
-            height: units.gu(1)
-            width: parent.width
-        }
+        Column {
+            id: locationTop
 
-        HeaderRow {
-            id: headerRow
-            locationName: mainPageWeekdayListView.name
-        }
+            anchors {
+                left: parent.left
+                right: parent.right
+                margins: units.gu(2)
+            }
+            spacing: units.gu(1)
 
-        HomeGraphic {
-            id: homeGraphic
-            icon: mainPageWeekdayListView.icon
-            visible: graphicVisible;
-            MouseArea {
-                anchors.fill: parent
-                onClicked: {
-                    graphicVisible = false;
+            Row {  // spacing at top
+                height: units.gu(1)
+                width: parent.width
+            }
+
+            HeaderRow {
+                id: headerRow
+                locationName: mainPageWeekdayListView.name
+            }
+
+            HomeGraphic {
+                id: homeGraphic
+                icon: mainPageWeekdayListView.icon
+                visible: graphicVisible;
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: {
+                        graphicVisible = false;
+                    }
                 }
             }
-        }
 
-        Loader {
-            id: homeHourlyLoader
-            active: !homeGraphic.visible
-            asynchronous: true
-            height: units.gu(32)
-            source: "../components/HomeHourly.qml"
-            visible: active
-            width: parent.width
-        }
-
-        HomeTempInfo {
-            id: homeTempInfo
-            modelData: todayData
-            now: mainPageWeekdayListView.currentTemp
-            updatedAt: mainPageWeekdayListView.lastFetch
-        }
-
-        // TODO: Migrate this to using the new SDK list item when possible.
-        ListItem.ThinDivider {
-            anchors {
-                leftMargin: units.gu(-2);
-                rightMargin: units.gu(-2)
+            Loader {
+                id: homeHourlyLoader
+                active: !homeGraphic.visible
+                asynchronous: true
+                height: units.gu(32)
+                source: "../components/HomeHourly.qml"
+                visible: active
+                width: parent.width
             }
-        }
 
-        NumberAnimation {
-            id: scrollToTopAnimation
-            target: mainPageWeekdayListView;
-            property: "contentY";
-            duration: 200;
-            easing.type: Easing.InOutQuad
-            to: -height
-        }
+            HomeTempInfo {
+                id: homeTempInfo
+                modelData: todayData
+                now: mainPageWeekdayListView.currentTemp
+                updatedAt: mainPageWeekdayListView.lastFetch
+            }
 
-        Connections {
-            target: locationPages
-            onCurrentIndexChanged: {
-                if (locationPages.currentIndex !== index) {
-                    scrollToTopAnimation.start()
-                } else {
-                    mainPageWeekdayListView.contentY = -locationTop.height
+            NumberAnimation {
+                id: scrollToTopAnimation
+                target: mainPageWeekdayListView;
+                property: "contentY";
+                duration: 200;
+                easing.type: Easing.InOutQuad
+                to: -height
+            }
+
+            Connections {
+                target: locationPages
+                onCurrentIndexChanged: {
+                    if (locationPages.currentIndex !== index) {
+                        scrollToTopAnimation.start()
+                    } else {
+                        mainPageWeekdayListView.contentY = -locationTop.height
+                    }
                 }
             }
         }
