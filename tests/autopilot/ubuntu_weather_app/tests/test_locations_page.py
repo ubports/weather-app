@@ -1,5 +1,5 @@
 # -*- Mode: Python; coding: utf-8; indent-tabs-mode: nil; tab-width: 4 -*-
-# Copyright 2013, 2014, 2015 Canonical
+# Copyright 2013, 2014, 2015, 2017 Canonical
 #
 # This program is free software: you can redistribute it and/or modify it
 # under the terms of the GNU General Public License version 3, as published
@@ -48,7 +48,7 @@ class TestLocationsPage(UbuntuWeatherAppTestCaseWithData):
         self.assertThat(list_item.get_name(), Equals("London"))
 
         # Remove the location via the list item action
-        list_item.swipe_and_select_remove()
+        list_item.click_remove_action()
 
         # Check that the location was removed
         self.assertThat(self.home_page.get_location_count,

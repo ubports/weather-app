@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015
+ * Copyright (C) 2015, 2017
  *      Andrew Hayzen <ahayzen@gmail.com>
  *      Victor Thompson <victor.thompson@gmail.com>
  *
@@ -31,10 +31,7 @@ State {
                 Action {
                     text: i18n.tr("Cancel selection")
                     iconName: "back"
-                    onTriggered: {
-                        listview.clearSelection()
-                        listview.state = "normal"
-                    }
+                    onTriggered: listview.closeSelection()
                 }
             ]
         }
@@ -45,7 +42,7 @@ State {
                     iconName: "select"
                     text: i18n.tr("Select All")
                     onTriggered: {
-                        if (listview.selectedItems.length === listview.model.count) {
+                        if (listview.getSelectedIndices().length === listview.model.count) {
                             listview.clearSelection()
                         } else {
                             listview.selectAll()
@@ -53,13 +50,13 @@ State {
                     }
                 },
                 Action {
-                    enabled: listview.selectedItems.length > 0
+                    enabled: listview.getSelectedIndices().length > 0
                     iconName: "delete"
                     text: i18n.tr("Delete")
                     visible: removable
 
                     onTriggered: {
-                        removed(listview.selectedItems)
+                        removed(listview.getSelectedIndices())
 
                         listview.closeSelection()
                     }
@@ -74,7 +71,7 @@ State {
     property bool removable: false
     property Page thisPage
 
-    signal removed(var selectedItems)
+    signal removed(var selectedIndices)
 
     PropertyChanges {
         target: thisPage

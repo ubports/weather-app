@@ -1,5 +1,5 @@
 # -*- Mode: Python; coding: utf-8; indent-tabs-mode: nil; tab-width: 4 -*-
-# Copyright 2013, 2014, 2015 Canonical
+# Copyright 2013, 2014, 2015, 2017 Canonical
 #
 # This program is free software: you can redistribute it and/or modify it
 # under the terms of the GNU General Public License version 3, as published
@@ -8,7 +8,7 @@
 """ubuntu-weather-app tests and emulators - top level package."""
 from autopilot.introspection import dbus
 import logging
-from ubuntuuitoolkit import (MainView, QQuickListView,
+from ubuntuuitoolkit import (MainView, QQuickListView, UCListItem,
                              UbuntuUIToolkitCustomProxyObjectBase)
 
 logger = logging.getLogger(__name__)
@@ -329,20 +329,10 @@ class UnitsPage(Page):
             "StandardListItem", iconVisible=showIcon)
 
 
-class WeatherListItem(UbuntuUIToolkitCustomProxyObjectBase):
+class WeatherListItem(UCListItem):
+    def click_remove_action(self):
+        return self.trigger_leading_action("swipeDeleteAction",
+                                           self.wait_until_destroyed)
+
     def get_name(self):
         return self.select_single("UCLabel", objectName="name").text
-
-    @click_object
-    def select_remove(self):
-        return self.select_single(objectName="swipeDeleteAction")
-
-    def swipe_and_select_remove(self):
-        x, y, width, height = self.globalRect
-        start_x = x + (width * 0.2)
-        stop_x = x + (width * 0.8)
-        start_y = stop_y = y + (height // 2)
-
-        self.pointing_device.drag(start_x, start_y, stop_x, stop_y)
-
-        self.select_remove()
