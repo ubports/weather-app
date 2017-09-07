@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2017-09-07 17:20+0000\n"
+"PO-Revision-Date: 2017-09-07 17:30+0000\n"
 "Last-Translator: advocatux <advocatux@airpost.net>\n"
 "Language-Team: Spanish <https://translate.ubports.com/projects/ubports"
 "/weather-app/es/>\n"
@@ -111,7 +111,7 @@ msgstr "actualizado recientemente"
 
 #: ../app/components/ListItemActions/Remove.qml:26
 msgid "Remove"
-msgstr "Quitar"
+msgstr "Eliminar"
 
 #: ../app/components/LocationsPageEmptyStateComponent.qml:36
 msgid "No locations found. Tap the plus icon to search for one."
@@ -123,7 +123,7 @@ msgstr "Error de red"
 
 #: ../app/components/NetworkErrorStateComponent.qml:57
 msgid "Please check your network settings and try again."
-msgstr "Compruebe sus ajustes de red e inténtelo de nuevo"
+msgstr "Compruebe sus ajustes de red e inténtelo de nuevo."
 
 #: ../app/components/NetworkErrorStateComponent.qml:63
 msgid "Retry"
@@ -173,7 +173,8 @@ msgstr "No se encontró ninguna ciudad"
 #: ../app/ui/AddLocationPage.qml:294
 msgid "Couldn't load weather data, please try later again!"
 msgstr ""
-"No se pudo cargar la información meteorológica. Inténtelo de nuevo más tarde."
+"No se pudo cargar la información meteorológica, ¡Inténtelo de nuevo más "
+"tarde!"
 
 #: ../app/ui/AddLocationPage.qml:304
 msgid "Location already added."
