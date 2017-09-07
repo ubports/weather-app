@@ -6,17 +6,19 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2016-03-07 13:18+0000\n"
-"Last-Translator: P_E_T_O <Unknown>\n"
-"Language-Team: Slovak <sk@li.org>\n"
+"PO-Revision-Date: 2017-09-07 19:21+0000\n"
+"Last-Translator: t-h-e-p-e-t-e-r <peter.valachovic@gmail.com>\n"
+"Language-Team: Slovak <https://translate.ubports.com/projects/ubports"
+"/weather-app/sk/>\n"
+"Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 2.15\n"
 "X-Launchpad-Export-Date: 2017-04-27 05:56+0000\n"
-"X-Generator: Launchpad (build 18364)\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of precipitation"
@@ -84,26 +86,29 @@ msgstr "Dnes"
 #, qt-format
 msgid "updated %1 day ago"
 msgid_plural "updated %1 days ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "aktualizované pred %1 dňom"
+msgstr[1] "aktualizované pred %1 dňami"
+msgstr[2] "aktualizované %1 dní dozadu"
 
 #: ../app/components/HomeTempInfo.qml:114
 #, qt-format
 msgid "updated %1 hour ago"
 msgid_plural "updated %1 hours ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "aktualizované pred %1 hodinou"
+msgstr[1] "aktualizované pred %1 hodinami"
+msgstr[2] "aktualizované %1 hodín dozadu"
 
 #: ../app/components/HomeTempInfo.qml:116
 #, qt-format
 msgid "updated %1 minute ago"
 msgid_plural "updated %1 minutes ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "aktualizované pred %1 minútou"
+msgstr[1] "aktualizované pred %1 minútami"
+msgstr[2] "aktualizované %1 minút dozadu"
 
 #: ../app/components/HomeTempInfo.qml:118
 msgid "updated recently"
-msgstr ""
+msgstr "aktualizované nedávno"
 
 #: ../app/components/ListItemActions/Remove.qml:26
 msgid "Remove"
@@ -111,8 +116,7 @@ msgstr "Odstrániť"
 
 #: ../app/components/LocationsPageEmptyStateComponent.qml:36
 msgid "No locations found. Tap the plus icon to search for one."
-msgstr ""
-"Nebola nájdená žiadna poloha. Pre vyhľadanie kliknite na ikonu plus ."
+msgstr "Nebola nájdená žiadna poloha. Pre vyhľadanie kliknite na ikonu plus ."
 
 #: ../app/components/NetworkErrorStateComponent.qml:48
 msgid "Network Error"
@@ -143,6 +147,8 @@ msgid ""
 "One arguments for weather app: --display, --city, --lat, --lng They will be "
 "managed by system. See the source for a full comment about them"
 msgstr ""
+"Jeden z argumentov pre aplikáciu počasie: --display, --city, --lat, --lng "
+"Budú spravované systémom. Viď zdrojový kód pre ich plný popis"
 
 #: ../app/ui/AddLocationPage.qml:38
 msgid "Select a city"
@@ -154,7 +160,7 @@ msgstr "Mesto"
 
 #: ../app/ui/AddLocationPage.qml:65
 msgid "Back"
-msgstr "Naspäť"
+msgstr "Späť"
 
 #: ../app/ui/AddLocationPage.qml:108
 msgid "Search city"
