@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2017-09-07 22:15+0000\n"
+"PO-Revision-Date: 2017-09-07 22:22+0000\n"
 "Last-Translator: Milan Korecký <milan.korecky@gmail.com>\n"
 "Language-Team: Czech <https://translate.ubports.com/projects/ubports/weather-"
 "app/cs/>\n"
@@ -52,7 +52,7 @@ msgstr "Západ slunce"
 #: ../app/components/HeadState/MultiSelectHeadState.qml:41
 #: ../app/ui/HomePage.qml:41
 msgid "Locations"
-msgstr "Umístění"
+msgstr "Místa"
 
 #: ../app/components/HeadState/MultiSelectHeadState.qml:32
 msgid "Cancel selection"
@@ -116,7 +116,7 @@ msgstr "Odstranit"
 
 #: ../app/components/LocationsPageEmptyStateComponent.qml:36
 msgid "No locations found. Tap the plus icon to search for one."
-msgstr "Žádná poloha nenalezena. Pro vyhledání ťukněte na ikonu plus."
+msgstr "Žádná poloha nenalezena. Pro vyhledání zvolte ikonu plus."
 
 #: ../app/components/NetworkErrorStateComponent.qml:48
 msgid "Network Error"
@@ -172,7 +172,7 @@ msgstr "Žádné město nenalezeno"
 
 #: ../app/ui/AddLocationPage.qml:294
 msgid "Couldn't load weather data, please try later again!"
-msgstr "Nezle načíst údaje o počasí, zkuste to prosím později."
+msgstr "Nelze načíst údaje o počasí, zkuste to prosím později!"
 
 #: ../app/ui/AddLocationPage.qml:304
 msgid "Location already added."
