@@ -8,201 +8,207 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2017-09-09 08:59+0000\n"
+"Last-Translator: Jeff <jeffi27@live.at>\n"
+"Language-Team: Albanian <https://translate.ubports.com/projects/ubports"
+"/weather-app/sq/>\n"
 "Language: sq\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.15\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of precipitation"
-msgstr ""
+msgstr "Mundësia e precipitimit"
 
 #: ../app/components/DayDelegateExtraInfo.qml:59
 msgid "Winds"
-msgstr ""
+msgstr "Erërat"
 
 #: ../app/components/DayDelegateExtraInfo.qml:68
 msgid "UV Index"
-msgstr ""
+msgstr "Indeksi UV"
 
 #: ../app/components/DayDelegateExtraInfo.qml:74
 msgid "Pollen"
-msgstr ""
+msgstr "Polenat"
 
 #: ../app/components/DayDelegateExtraInfo.qml:81
 msgid "Humidity"
-msgstr ""
+msgstr "Lagështirë ajri"
 
 #: ../app/components/DayDelegateExtraInfo.qml:88
 msgid "Sunrise"
-msgstr ""
+msgstr "Lindja e diellit"
 
 #: ../app/components/DayDelegateExtraInfo.qml:95
 msgid "Sunset"
-msgstr ""
+msgstr "Përëndimi i diellit"
 
 #: ../app/components/HeadState/LocationsHeadState.qml:36
 #: ../app/components/HeadState/MultiSelectHeadState.qml:41
 #: ../app/ui/HomePage.qml:41
 msgid "Locations"
-msgstr ""
+msgstr "Vende"
 
 #: ../app/components/HeadState/MultiSelectHeadState.qml:32
 msgid "Cancel selection"
-msgstr ""
+msgstr "Anulo zgjedhjen"
 
 #: ../app/components/HeadState/MultiSelectHeadState.qml:46
 msgid "Select All"
-msgstr ""
+msgstr "Zgjidhë të gjitha"
 
 #: ../app/components/HeadState/MultiSelectHeadState.qml:58
 msgid "Delete"
-msgstr ""
+msgstr "Fshijë"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:51
 msgid "Searching for current location..."
-msgstr ""
+msgstr "Vendi po përcaktohet…"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:52
 msgid "Cannot determine your location"
-msgstr ""
+msgstr "Vendndodhja juaj nuk mund të përcaktohet"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:62
 msgid "Manually add a location by swiping up from the bottom of the display"
-msgstr ""
+msgstr "Shto një vendndodhje manualisht duke u zhvendosur nga fundit i ekranit"
 
 #: ../app/components/HomeTempInfo.qml:108
 msgid "Today"
-msgstr ""
+msgstr "Sotë"
 
 #: ../app/components/HomeTempInfo.qml:112
 #, qt-format
 msgid "updated %1 day ago"
 msgid_plural "updated %1 days ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Aktualizuar para %1 dite"
+msgstr[1] "Aktualizuar para %1 ditëve"
 
 #: ../app/components/HomeTempInfo.qml:114
 #, qt-format
 msgid "updated %1 hour ago"
 msgid_plural "updated %1 hours ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Aktualizuar para %1 ore"
+msgstr[1] "Aktualizuar para %1 orëve"
 
 #: ../app/components/HomeTempInfo.qml:116
 #, qt-format
 msgid "updated %1 minute ago"
 msgid_plural "updated %1 minutes ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Aktualizuar para %1 Minute"
+msgstr[1] "Aktualizuar para %1 Minutave"
 
 #: ../app/components/HomeTempInfo.qml:118
 msgid "updated recently"
-msgstr ""
+msgstr "Aktualizuar para pak kohe"
 
 #: ../app/components/ListItemActions/Remove.qml:26
 msgid "Remove"
-msgstr ""
+msgstr "Hiqe"
 
 #: ../app/components/LocationsPageEmptyStateComponent.qml:36
 msgid "No locations found. Tap the plus icon to search for one."
-msgstr ""
+msgstr "Nuk u gjet asnjë vend. Klikoni mbi ikonën »+« për të kërkuar një."
 
 #: ../app/components/NetworkErrorStateComponent.qml:48
 msgid "Network Error"
-msgstr ""
+msgstr "Dështim në Rrjet"
 
 #: ../app/components/NetworkErrorStateComponent.qml:57
 msgid "Please check your network settings and try again."
-msgstr ""
+msgstr "Kontrollo cilësimet e rrjetit tënd dhe provo përsëri."
 
 #: ../app/components/NetworkErrorStateComponent.qml:63
 msgid "Retry"
-msgstr ""
+msgstr "Riprovo"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:47
 msgid "No API Keys Found"
-msgstr ""
+msgstr "Nuk u gjet asnjë çelës API"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:56
 msgid ""
 "If you are a developer, please see the README file for instructions on how "
 "to obtain your own Open Weather Map API key."
 msgstr ""
+"Nëse jeni një zhvillues, ju lutemi shihni skedarin README për udhëzime se si "
+"të merrni çelësin tuaj të Hapur Moti."
 
 #: ../app/ubuntu-weather-app.qml:235
 msgid ""
 "One arguments for weather app: --display, --city, --lat, --lng They will be "
 "managed by system. See the source for a full comment about them"
 msgstr ""
+"Një argumente për aplikacionin e motit: --shfaqja, --qyteti, --gjuha Ata do "
+"të menaxhohen nga sistemi. Shikoni burimin për një koment të plotë rreth tyre"
 
 #: ../app/ui/AddLocationPage.qml:38
 msgid "Select a city"
-msgstr ""
+msgstr "Zgjidhë një qytet"
 
 #: ../app/ui/AddLocationPage.qml:49
 msgid "City"
-msgstr ""
+msgstr "Qyteti"
 
 #: ../app/ui/AddLocationPage.qml:65
 msgid "Back"
-msgstr ""
+msgstr "Mbrapa"
 
 #: ../app/ui/AddLocationPage.qml:108
 msgid "Search city"
-msgstr ""
+msgstr "Kërko qytet"
 
 #: ../app/ui/AddLocationPage.qml:281
 msgid "No city found"
-msgstr ""
+msgstr "Asnjë qytet nuk gjindët"
 
 #: ../app/ui/AddLocationPage.qml:294
 msgid "Couldn't load weather data, please try later again!"
-msgstr ""
+msgstr "Nuk mund të ngarkoheshin të dhënat e motit, provo përsëri më vonë!"
 
 #: ../app/ui/AddLocationPage.qml:304
 msgid "Location already added."
-msgstr ""
+msgstr "Vendi tashmë është shtuar."
 
 #: ../app/ui/AddLocationPage.qml:307
 msgid "OK"
-msgstr ""
+msgstr "Ok"
 
 #: ../app/ui/LocationsPage.qml:99
 msgid "Current Location"
-msgstr ""
+msgstr "Vendndodhja aktuale"
 
 #: ../app/ui/SettingsPage.qml:27
 msgid "Settings"
-msgstr ""
+msgstr "Konfigurimi"
 
 #: ../app/ui/SettingsPage.qml:44 ../app/ui/settings/UnitsPage.qml:29
 msgid "Units"
-msgstr ""
+msgstr "Njësitë"
 
 #: ../app/ui/SettingsPage.qml:52 ../app/ui/settings/DataProviderPage.qml:28
 msgid "Data Provider"
-msgstr ""
+msgstr "Burimi i të dhënave"
 
 #: ../app/ui/SettingsPage.qml:60 ../app/ui/settings/RefreshIntervalPage.qml:27
 msgid "Refresh Interval"
-msgstr ""
+msgstr "Intervali i Aktualizimit"
 
 #: ../app/ui/SettingsPage.qml:68 ../app/ui/settings/LocationPage.qml:26
 msgid "Location"
-msgstr ""
+msgstr "Vendndodhja"
 
 #: ../app/ui/settings/DataProviderPage.qml:42
 msgid "Provider"
-msgstr ""
+msgstr "Operatori"
 
 #: ../app/ui/settings/LocationPage.qml:34
 msgid "Detect current location"
-msgstr ""
+msgstr "Përcaktoni vendndodhjen aktuale"
 
 #: ../app/ui/settings/RefreshIntervalPage.qml:34
 #: ../app/ui/settings/RefreshIntervalPage.qml:35
@@ -212,59 +218,61 @@ msgstr ""
 #, qt-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 minutë"
+msgstr[1] "%1 minuta"
 
 #: ../app/ui/settings/RefreshIntervalPage.qml:47
 msgid "Interval"
-msgstr ""
+msgstr "Intervali"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of temperature in Celcius and are shown in the settings page.
 #. Only the abbreviated form of Celcius should be used.
 #: ../app/ui/settings/UnitsPage.qml:47 ../app/ui/settings/UnitsPage.qml:83
 msgid "°C"
-msgstr ""
+msgstr "°C"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of temperature in Fahrenheit and are shown in the settings page.
 #. Only the abbreviated form of Fahrenheit should be used.
 #: ../app/ui/settings/UnitsPage.qml:52 ../app/ui/settings/UnitsPage.qml:84
 msgid "°F"
-msgstr ""
+msgstr "°F"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of wind speed in kilometers per hour and are shown in the settings page.
 #. Only the abbreviated form of kilometers per hour should be used.
 #: ../app/ui/settings/UnitsPage.qml:63 ../app/ui/settings/UnitsPage.qml:104
 msgid "kph"
-msgstr ""
+msgstr "km/h"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of wind speed in miles per hour and are shown in the settings page.
 #. Only the abbreviated form of miles per hour should be used.
 #: ../app/ui/settings/UnitsPage.qml:68 ../app/ui/settings/UnitsPage.qml:105
 msgid "mph"
-msgstr ""
+msgstr "mph"
 
 #: ../app/ui/settings/UnitsPage.qml:82
 msgid "Temperature"
-msgstr ""
+msgstr "Temperatura"
 
 #: ../app/ui/settings/UnitsPage.qml:103
 msgid "Wind Speed"
-msgstr ""
+msgstr "Shpejtësia e erës"
 
 #: ubuntu-weather-app.desktop.in.in.h:1
 msgid "Weather"
-msgstr ""
+msgstr "Moti"
 
 #: ubuntu-weather-app.desktop.in.in.h:2
 msgid ""
 "A weather forecast application for Ubuntu with support for multiple online "
 "weather data sources"
 msgstr ""
+"Një aplikim për parashikimin e motit për Ubuntu me mbështetje për shumë "
+"burime të të dhënave të motit online"
 
 #: ubuntu-weather-app.desktop.in.in.h:3
 msgid "weather;forecast;twc;openweathermap;the weather channel;"
-msgstr ""
+msgstr "Moti;Parashikimi;harta e hapur e motit;kanali i motit;"
