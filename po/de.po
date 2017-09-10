@@ -6,17 +6,19 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2016-02-02 21:50+0000\n"
-"Last-Translator: Tobias Bannert <tobannert@gmail.com>\n"
-"Language-Team: German <de@li.org>\n"
+"PO-Revision-Date: 2017-09-08 19:44+0000\n"
+"Last-Translator: Alois Nebel <kunze.freyburg@freenet.de>\n"
+"Language-Team: German <https://translate.ubports.com/projects/ubports"
+"/weather-app/de/>\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.15\n"
 "X-Launchpad-Export-Date: 2017-04-27 05:56+0000\n"
-"X-Generator: Launchpad (build 18364)\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of precipitation"
@@ -86,26 +88,26 @@ msgstr "Heute"
 #, qt-format
 msgid "updated %1 day ago"
 msgid_plural "updated %1 days ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "vor %1 Tag aktualisiert"
+msgstr[1] "vor %1 Tagen aktualisiert"
 
 #: ../app/components/HomeTempInfo.qml:114
 #, qt-format
 msgid "updated %1 hour ago"
 msgid_plural "updated %1 hours ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "vor %1 Stunde aktualisiert"
+msgstr[1] "vor %1 Stunden aktualisiert"
 
 #: ../app/components/HomeTempInfo.qml:116
 #, qt-format
 msgid "updated %1 minute ago"
 msgid_plural "updated %1 minutes ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "vor %1 Minute aktualisiert"
+msgstr[1] "vor %1 Minuten aktualisiert"
 
 #: ../app/components/HomeTempInfo.qml:118
 msgid "updated recently"
-msgstr ""
+msgstr "kürzlich aktualisiert"
 
 #: ../app/components/ListItemActions/Remove.qml:26
 msgid "Remove"
@@ -113,8 +115,7 @@ msgstr "Entfernen"
 
 #: ../app/components/LocationsPageEmptyStateComponent.qml:36
 msgid "No locations found. Tap the plus icon to search for one."
-msgstr ""
-"Keinen Ort gefunden. Tippen Sie auf das +-Symbol, um einen zu suchen."
+msgstr "Keinen Ort gefunden. Tippen Sie auf das +-Symbol, um einen zu suchen."
 
 #: ../app/components/NetworkErrorStateComponent.qml:48
 msgid "Network Error"
@@ -143,18 +144,22 @@ msgstr ""
 "können."
 
 #: ../app/ubuntu-weather-app.qml:235
+#, fuzzy
 msgid ""
 "One arguments for weather app: --display, --city, --lat, --lng They will be "
 "managed by system. See the source for a full comment about them"
 msgstr ""
+"Argumente für die Wetter-App: --display, --city, --lat, --lng Diese werden "
+"vom System zur Verfügung gestellt. Anmerkung zu diesen finden Sie im "
+"Quellcode."
 
 #: ../app/ui/AddLocationPage.qml:38
 msgid "Select a city"
-msgstr "Bitte Ort auswählen"
+msgstr "Eine Stadt auswählen"
 
 #: ../app/ui/AddLocationPage.qml:49
 msgid "City"
-msgstr "Ort"
+msgstr "Stadt"
 
 #: ../app/ui/AddLocationPage.qml:65
 msgid "Back"
@@ -204,7 +209,7 @@ msgstr "Aktualisierungsintervall"
 
 #: ../app/ui/SettingsPage.qml:68 ../app/ui/settings/LocationPage.qml:26
 msgid "Location"
-msgstr "Ort"
+msgstr "Standort"
 
 #: ../app/ui/settings/DataProviderPage.qml:42
 msgid "Provider"

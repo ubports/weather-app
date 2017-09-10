@@ -1,218 +1,214 @@
-# Slovak translation for ubuntu-weather-app
-# Copyright (c) 2016 Rosetta Contributors and Canonical Ltd 2016
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Canonical Ltd.
 # This file is distributed under the same license as the ubuntu-weather-app package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2017-09-07 19:21+0000\n"
-"Last-Translator: t-h-e-p-e-t-e-r <peter.valachovic@gmail.com>\n"
-"Language-Team: Slovak <https://translate.ubports.com/projects/ubports"
-"/weather-app/sk/>\n"
-"Language: sk\n"
+"PO-Revision-Date: 2017-09-09 08:59+0000\n"
+"Last-Translator: Jeff <jeffi27@live.at>\n"
+"Language-Team: Albanian <https://translate.ubports.com/projects/ubports"
+"/weather-app/sq/>\n"
+"Language: sq\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.15\n"
-"X-Launchpad-Export-Date: 2017-04-27 05:56+0000\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of precipitation"
-msgstr "Pravdepodobnosť zrážok"
+msgstr "Mundësia e precipitimit"
 
 #: ../app/components/DayDelegateExtraInfo.qml:59
 msgid "Winds"
-msgstr "Vietor"
+msgstr "Erërat"
 
 #: ../app/components/DayDelegateExtraInfo.qml:68
 msgid "UV Index"
-msgstr "UV index"
+msgstr "Indeksi UV"
 
 #: ../app/components/DayDelegateExtraInfo.qml:74
 msgid "Pollen"
-msgstr "Peľ"
+msgstr "Polenat"
 
 #: ../app/components/DayDelegateExtraInfo.qml:81
 msgid "Humidity"
-msgstr "Vlhkosť"
+msgstr "Lagështirë ajri"
 
 #: ../app/components/DayDelegateExtraInfo.qml:88
 msgid "Sunrise"
-msgstr "Východ slnka"
+msgstr "Lindja e diellit"
 
 #: ../app/components/DayDelegateExtraInfo.qml:95
 msgid "Sunset"
-msgstr "Západ slnka"
+msgstr "Përëndimi i diellit"
 
 #: ../app/components/HeadState/LocationsHeadState.qml:36
 #: ../app/components/HeadState/MultiSelectHeadState.qml:41
 #: ../app/ui/HomePage.qml:41
 msgid "Locations"
-msgstr "Umiestnenia"
+msgstr "Vende"
 
 #: ../app/components/HeadState/MultiSelectHeadState.qml:32
 msgid "Cancel selection"
-msgstr "Zrušiť výber"
+msgstr "Anulo zgjedhjen"
 
 #: ../app/components/HeadState/MultiSelectHeadState.qml:46
 msgid "Select All"
-msgstr "Vybrať všetko"
+msgstr "Zgjidhë të gjitha"
 
 #: ../app/components/HeadState/MultiSelectHeadState.qml:58
 msgid "Delete"
-msgstr "Vymazať"
+msgstr "Fshijë"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:51
 msgid "Searching for current location..."
-msgstr "Hľadanie aktuálnej polohy..."
+msgstr "Vendi po përcaktohet…"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:52
 msgid "Cannot determine your location"
-msgstr "Nemožno určiť vašu polohu"
+msgstr "Vendndodhja juaj nuk mund të përcaktohet"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:62
 msgid "Manually add a location by swiping up from the bottom of the display"
-msgstr "Pridajte polohu manuálne potiahnutím hore od spodnej časti displeja"
+msgstr "Shto një vendndodhje manualisht duke u zhvendosur nga fundit i ekranit"
 
 #: ../app/components/HomeTempInfo.qml:108
 msgid "Today"
-msgstr "Dnes"
+msgstr "Sotë"
 
 #: ../app/components/HomeTempInfo.qml:112
 #, qt-format
 msgid "updated %1 day ago"
 msgid_plural "updated %1 days ago"
-msgstr[0] "aktualizované pred %1 dňom"
-msgstr[1] "aktualizované pred %1 dňami"
-msgstr[2] "aktualizované %1 dní dozadu"
+msgstr[0] "Aktualizuar para %1 dite"
+msgstr[1] "Aktualizuar para %1 ditëve"
 
 #: ../app/components/HomeTempInfo.qml:114
 #, qt-format
 msgid "updated %1 hour ago"
 msgid_plural "updated %1 hours ago"
-msgstr[0] "aktualizované pred %1 hodinou"
-msgstr[1] "aktualizované pred %1 hodinami"
-msgstr[2] "aktualizované %1 hodín dozadu"
+msgstr[0] "Aktualizuar para %1 ore"
+msgstr[1] "Aktualizuar para %1 orëve"
 
 #: ../app/components/HomeTempInfo.qml:116
 #, qt-format
 msgid "updated %1 minute ago"
 msgid_plural "updated %1 minutes ago"
-msgstr[0] "aktualizované pred %1 minútou"
-msgstr[1] "aktualizované pred %1 minútami"
-msgstr[2] "aktualizované %1 minút dozadu"
+msgstr[0] "Aktualizuar para %1 Minute"
+msgstr[1] "Aktualizuar para %1 Minutave"
 
 #: ../app/components/HomeTempInfo.qml:118
 msgid "updated recently"
-msgstr "aktualizované nedávno"
+msgstr "Aktualizuar para pak kohe"
 
 #: ../app/components/ListItemActions/Remove.qml:26
 msgid "Remove"
-msgstr "Odstrániť"
+msgstr "Hiqe"
 
 #: ../app/components/LocationsPageEmptyStateComponent.qml:36
 msgid "No locations found. Tap the plus icon to search for one."
-msgstr "Nebola nájdená žiadna poloha. Pre vyhľadanie kliknite na ikonu plus ."
+msgstr "Nuk u gjet asnjë vend. Klikoni mbi ikonën »+« për të kërkuar një."
 
 #: ../app/components/NetworkErrorStateComponent.qml:48
 msgid "Network Error"
-msgstr "Chyba siete"
+msgstr "Dështim në Rrjet"
 
 #: ../app/components/NetworkErrorStateComponent.qml:57
 msgid "Please check your network settings and try again."
-msgstr "Skontrolujte nastavenia siete a skúste to znova."
+msgstr "Kontrollo cilësimet e rrjetit tënd dhe provo përsëri."
 
 #: ../app/components/NetworkErrorStateComponent.qml:63
 msgid "Retry"
-msgstr "Skúsiť znova"
+msgstr "Riprovo"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:47
 msgid "No API Keys Found"
-msgstr "Nenašli sa žiadne API kľúče"
+msgstr "Nuk u gjet asnjë çelës API"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:56
 msgid ""
 "If you are a developer, please see the README file for instructions on how "
 "to obtain your own Open Weather Map API key."
 msgstr ""
-"Ak ste vývojár, pozrite si v súbore README návod, ako získať svoj vlastný "
-"Open Weather Map API kľúč."
+"Nëse jeni një zhvillues, ju lutemi shihni skedarin README për udhëzime se si "
+"të merrni çelësin tuaj të Hapur Moti."
 
 #: ../app/ubuntu-weather-app.qml:235
 msgid ""
 "One arguments for weather app: --display, --city, --lat, --lng They will be "
 "managed by system. See the source for a full comment about them"
 msgstr ""
-"Jeden z argumentov pre aplikáciu počasie: --display, --city, --lat, --lng "
-"Budú spravované systémom. Viď zdrojový kód pre ich plný popis"
+"Një argumente për aplikacionin e motit: --shfaqja, --qyteti, --gjuha Ata do "
+"të menaxhohen nga sistemi. Shikoni burimin për një koment të plotë rreth tyre"
 
 #: ../app/ui/AddLocationPage.qml:38
 msgid "Select a city"
-msgstr "Vybrať mesto"
+msgstr "Zgjidhë një qytet"
 
 #: ../app/ui/AddLocationPage.qml:49
 msgid "City"
-msgstr "Mesto"
+msgstr "Qyteti"
 
 #: ../app/ui/AddLocationPage.qml:65
 msgid "Back"
-msgstr "Späť"
+msgstr "Mbrapa"
 
 #: ../app/ui/AddLocationPage.qml:108
 msgid "Search city"
-msgstr "Hľadať mesto"
+msgstr "Kërko qytet"
 
 #: ../app/ui/AddLocationPage.qml:281
 msgid "No city found"
-msgstr "Žiadne mesto nenájdené"
+msgstr "Asnjë qytet nuk gjindët"
 
 #: ../app/ui/AddLocationPage.qml:294
 msgid "Couldn't load weather data, please try later again!"
-msgstr "Nemožno načítať údaje o počasí, skúste to prosím neskôr!"
+msgstr "Nuk mund të ngarkoheshin të dhënat e motit, provo përsëri më vonë!"
 
 #: ../app/ui/AddLocationPage.qml:304
 msgid "Location already added."
-msgstr "Poloha už bola pridaná."
+msgstr "Vendi tashmë është shtuar."
 
 #: ../app/ui/AddLocationPage.qml:307
 msgid "OK"
-msgstr "OK"
+msgstr "Ok"
 
 #: ../app/ui/LocationsPage.qml:99
 msgid "Current Location"
-msgstr "Aktuálna poloha"
+msgstr "Vendndodhja aktuale"
 
 #: ../app/ui/SettingsPage.qml:27
 msgid "Settings"
-msgstr "Nastavenia"
+msgstr "Konfigurimi"
 
 #: ../app/ui/SettingsPage.qml:44 ../app/ui/settings/UnitsPage.qml:29
 msgid "Units"
-msgstr "Jednotky"
+msgstr "Njësitë"
 
 #: ../app/ui/SettingsPage.qml:52 ../app/ui/settings/DataProviderPage.qml:28
 msgid "Data Provider"
-msgstr "Poskytovateľ dát"
+msgstr "Burimi i të dhënave"
 
 #: ../app/ui/SettingsPage.qml:60 ../app/ui/settings/RefreshIntervalPage.qml:27
 msgid "Refresh Interval"
-msgstr "Interval obnovovania"
+msgstr "Intervali i Aktualizimit"
 
 #: ../app/ui/SettingsPage.qml:68 ../app/ui/settings/LocationPage.qml:26
 msgid "Location"
-msgstr "Poloha"
+msgstr "Vendndodhja"
 
 #: ../app/ui/settings/DataProviderPage.qml:42
 msgid "Provider"
-msgstr "Poskytovateľ"
+msgstr "Operatori"
 
 #: ../app/ui/settings/LocationPage.qml:34
 msgid "Detect current location"
-msgstr "Zistiť aktuálnu polohu"
+msgstr "Përcaktoni vendndodhjen aktuale"
 
 #: ../app/ui/settings/RefreshIntervalPage.qml:34
 #: ../app/ui/settings/RefreshIntervalPage.qml:35
@@ -222,13 +218,12 @@ msgstr "Zistiť aktuálnu polohu"
 #, qt-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
-msgstr[0] "%1 minút"
-msgstr[1] "%1 minúta"
-msgstr[2] "%1 minúty"
+msgstr[0] "%1 minutë"
+msgstr[1] "%1 minuta"
 
 #: ../app/ui/settings/RefreshIntervalPage.qml:47
 msgid "Interval"
-msgstr "Interval"
+msgstr "Intervali"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of temperature in Celcius and are shown in the settings page.
@@ -256,28 +251,28 @@ msgstr "km/h"
 #. Only the abbreviated form of miles per hour should be used.
 #: ../app/ui/settings/UnitsPage.qml:68 ../app/ui/settings/UnitsPage.qml:105
 msgid "mph"
-msgstr "míľ/h"
+msgstr "mph"
 
 #: ../app/ui/settings/UnitsPage.qml:82
 msgid "Temperature"
-msgstr "Teplota"
+msgstr "Temperatura"
 
 #: ../app/ui/settings/UnitsPage.qml:103
 msgid "Wind Speed"
-msgstr "Rýchlosť vetra"
+msgstr "Shpejtësia e erës"
 
 #: ubuntu-weather-app.desktop.in.in.h:1
 msgid "Weather"
-msgstr "Počasie"
+msgstr "Moti"
 
 #: ubuntu-weather-app.desktop.in.in.h:2
 msgid ""
 "A weather forecast application for Ubuntu with support for multiple online "
 "weather data sources"
 msgstr ""
-"Aplikácia na predpoveď počasia pre Ubuntu s podporou viacerých online "
-"zdrojov počasia"
+"Një aplikim për parashikimin e motit për Ubuntu me mbështetje për shumë "
+"burime të të dhënave të motit online"
 
 #: ubuntu-weather-app.desktop.in.in.h:3
 msgid "weather;forecast;twc;openweathermap;the weather channel;"
-msgstr "počasie;predpoveď;twc;otvoriťmapupočasia;the weather channel;"
+msgstr "Moti;Parashikimi;harta e hapur e motit;kanali i motit;"
