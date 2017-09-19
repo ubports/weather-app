@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2017-09-07 17:30+0000\n"
+"PO-Revision-Date: 2017-09-19 15:57+0000\n"
 "Last-Translator: advocatux <advocatux@airpost.net>\n"
 "Language-Team: Spanish <https://translate.ubports.com/projects/ubports"
 "/weather-app/es/>\n"
@@ -68,7 +68,7 @@ msgstr "Eliminar"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:51
 msgid "Searching for current location..."
-msgstr "Buscando la ubicación actual…"
+msgstr "Buscando la ubicación actual..."
 
 #: ../app/components/HomePageEmptyStateComponent.qml:52
 msgid "Cannot determine your location"
@@ -77,7 +77,7 @@ msgstr "No se puede determinar la ubicación"
 #: ../app/components/HomePageEmptyStateComponent.qml:62
 msgid "Manually add a location by swiping up from the bottom of the display"
 msgstr ""
-"Deslice hacia arriba el borde inferior de la pantalla para añadir una "
+"Deslice hacia arriba desde el borde inferior de la pantalla para añadir una "
 "ubicación manualmente."
 
 #: ../app/components/HomeTempInfo.qml:108
@@ -131,15 +131,15 @@ msgstr "Volver a intentar"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:47
 msgid "No API Keys Found"
-msgstr "No se encontraron claves de API"
+msgstr "No se encontraron claves de la API"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:56
 msgid ""
 "If you are a developer, please see the README file for instructions on how "
 "to obtain your own Open Weather Map API key."
 msgstr ""
-"Si es desarrollador, en el archivo README encontrará instrucciones para "
-"obtener su propia clave de API de Open Weather Map."
+"Si es un desarrollador, en el archivo README encontrará instrucciones para "
+"obtener su propia clave de la API de Open Weather Map."
 
 #: ../app/ubuntu-weather-app.qml:235
 msgid ""
@@ -269,16 +269,16 @@ msgstr "Velocidad del viento"
 
 #: ubuntu-weather-app.desktop.in.in.h:1
 msgid "Weather"
-msgstr "Meteorología"
+msgstr "Tiempo"
 
 #: ubuntu-weather-app.desktop.in.in.h:2
 msgid ""
 "A weather forecast application for Ubuntu with support for multiple online "
 "weather data sources"
 msgstr ""
-"Una aplicación de meteorología para Ubuntu compatible con múltiples fuentes "
-"de datos climáticos en línea"
+"Una aplicación de pronóstico del tiempo para Ubuntu compatible con múltiples "
+"fuentes de datos climáticos en línea"
 
 #: ubuntu-weather-app.desktop.in.in.h:3
 msgid "weather;forecast;twc;openweathermap;the weather channel;"
-msgstr "clima;meteo;pronóstico;twc;openweathermap;the weather channel;"
+msgstr "clima;pronóstico;twc;openweathermap;the weather channel;"
