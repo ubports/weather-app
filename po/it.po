@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2017-09-07 20:20+0000\n"
-"Last-Translator: Mike <miguel2000@livecom.it>\n"
+"PO-Revision-Date: 2017-09-20 21:13+0000\n"
+"Last-Translator: Stefano Melchior <stefano.melchior@me.com>\n"
 "Language-Team: Italian <https://translate.ubports.com/projects/ubports"
 "/weather-app/it/>\n"
 "Language: it\n"
@@ -145,6 +145,8 @@ msgid ""
 "One arguments for weather app: --display, --city, --lat, --lng They will be "
 "managed by system. See the source for a full comment about them"
 msgstr ""
+"Un argomento per l'app del meteo: --display, --city, --lat, --lng Sono "
+"gestiti dal sistema. Guardare la fonte per un commento completo"
 
 #: ../app/ui/AddLocationPage.qml:38
 msgid "Select a city"
@@ -200,7 +202,7 @@ msgstr "Intervallo di aggiornamento"
 
 #: ../app/ui/SettingsPage.qml:68 ../app/ui/settings/LocationPage.qml:26
 msgid "Location"
-msgstr "Luogo"
+msgstr "Ubicazione"
 
 #: ../app/ui/settings/DataProviderPage.qml:42
 msgid "Provider"
