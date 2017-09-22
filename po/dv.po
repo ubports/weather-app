@@ -8,14 +8,16 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2017-09-22 02:50+0000\n"
+"Last-Translator: Galhi ali <galhialimail@gmail.com>\n"
+"Language-Team: Dhivehi <https://translate.ubports.com/projects/ubports"
+"/weather-app/dv/>\n"
 "Language: dv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.15\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of precipitation"
@@ -39,17 +41,17 @@ msgstr ""
 
 #: ../app/components/DayDelegateExtraInfo.qml:88
 msgid "Sunrise"
-msgstr ""
+msgstr "އިރު އަރާ"
 
 #: ../app/components/DayDelegateExtraInfo.qml:95
 msgid "Sunset"
-msgstr ""
+msgstr "އިރުއޮއްސޭ"
 
 #: ../app/components/HeadState/LocationsHeadState.qml:36
 #: ../app/components/HeadState/MultiSelectHeadState.qml:41
 #: ../app/ui/HomePage.qml:41
 msgid "Locations"
-msgstr ""
+msgstr "ތަންތަން"
 
 #: ../app/components/HeadState/MultiSelectHeadState.qml:32
 msgid "Cancel selection"
@@ -61,7 +63,7 @@ msgstr ""
 
 #: ../app/components/HeadState/MultiSelectHeadState.qml:58
 msgid "Delete"
-msgstr ""
+msgstr "ފޮހެލާ"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:51
 msgid "Searching for current location..."
