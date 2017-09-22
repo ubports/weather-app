@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2017-09-22 02:50+0000\n"
+"PO-Revision-Date: 2017-09-22 02:57+0000\n"
 "Last-Translator: Galhi ali <galhialimail@gmail.com>\n"
 "Language-Team: Dhivehi <https://translate.ubports.com/projects/ubports"
 "/weather-app/dv/>\n"
@@ -67,19 +67,19 @@ msgstr "ފޮހެލާ"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:51
 msgid "Searching for current location..."
-msgstr ""
+msgstr "ތިޔަހުރީ ކޮންތަނެއްގަތޯ ބަލަނީ..."
 
 #: ../app/components/HomePageEmptyStateComponent.qml:52
 msgid "Cannot determine your location"
-msgstr ""
+msgstr "ތިޔަހުރިތަނެއް ނޭނގުނު"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:62
 msgid "Manually add a location by swiping up from the bottom of the display"
-msgstr ""
+msgstr "އަމިއްލައަށް ތަނެއް ފާހަގަކުރުމަށް ޑިސްޕްލޭގެ ތިރިން މައްޗައް ކަހާލާ"
 
 #: ../app/components/HomeTempInfo.qml:108
 msgid "Today"
-msgstr ""
+msgstr "މިއަދު"
 
 #: ../app/components/HomeTempInfo.qml:112
 #, qt-format
@@ -108,11 +108,12 @@ msgstr ""
 
 #: ../app/components/ListItemActions/Remove.qml:26
 msgid "Remove"
-msgstr ""
+msgstr "ފޮހެލާ"
 
 #: ../app/components/LocationsPageEmptyStateComponent.qml:36
 msgid "No locations found. Tap the plus icon to search for one."
 msgstr ""
+"އެއްވެސް ތަނެއް ނެތް. ތަނެއް ހޯދުމަށް މަތީކަނުގައިން އެއްކުރާ އަށް ފިތާލާ."
 
 #: ../app/components/NetworkErrorStateComponent.qml:48
 msgid "Network Error"
