@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2017-09-22 02:57+0000\n"
+"PO-Revision-Date: 2017-09-22 03:08+0000\n"
 "Last-Translator: Galhi ali <galhialimail@gmail.com>\n"
 "Language-Team: Dhivehi <https://translate.ubports.com/projects/ubports"
 "/weather-app/dv/>\n"
@@ -117,19 +117,19 @@ msgstr ""
 
 #: ../app/components/NetworkErrorStateComponent.qml:48
 msgid "Network Error"
-msgstr ""
+msgstr "ނެޓްވޯކެއް ނުލިބޭ"
 
 #: ../app/components/NetworkErrorStateComponent.qml:57
 msgid "Please check your network settings and try again."
-msgstr ""
+msgstr "ނެޓްވޯކު ރަނގަޅުތޯ ބެލުމަށްފަހު ޗެކްކުރޭ."
 
 #: ../app/components/NetworkErrorStateComponent.qml:63
 msgid "Retry"
-msgstr ""
+msgstr "އަދި މަސައްކަތްކޮއްލާ"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:47
 msgid "No API Keys Found"
-msgstr ""
+msgstr "އޭޕީއައި ކީ އެއް ނުފެނުނު"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:56
 msgid ""
@@ -145,39 +145,39 @@ msgstr ""
 
 #: ../app/ui/AddLocationPage.qml:38
 msgid "Select a city"
-msgstr ""
+msgstr "ރަށް ފާހަގަކުރޭ"
 
 #: ../app/ui/AddLocationPage.qml:49
 msgid "City"
-msgstr ""
+msgstr "ރަށް"
 
 #: ../app/ui/AddLocationPage.qml:65
 msgid "Back"
-msgstr ""
+msgstr "ފަހަތަށް"
 
 #: ../app/ui/AddLocationPage.qml:108
 msgid "Search city"
-msgstr ""
+msgstr "ރަށް ހޯދާ"
 
 #: ../app/ui/AddLocationPage.qml:281
 msgid "No city found"
-msgstr ""
+msgstr "ތިޔަ ރަށެއް ނުފެނުނު"
 
 #: ../app/ui/AddLocationPage.qml:294
 msgid "Couldn't load weather data, please try later again!"
-msgstr ""
+msgstr "މޫސުމާބެހޭ މައުލޫމާތެއް ނުލިބުނު، ފަހުން ބަލައިލާ!"
 
 #: ../app/ui/AddLocationPage.qml:304
 msgid "Location already added."
-msgstr ""
+msgstr "ތިރައް މިހާރުވެސް އެބައިން."
 
 #: ../app/ui/AddLocationPage.qml:307
 msgid "OK"
-msgstr ""
+msgstr "ކުރިއަށް"
 
 #: ../app/ui/LocationsPage.qml:99
 msgid "Current Location"
-msgstr ""
+msgstr "މިހާރުހުރިތަން"
 
 #: ../app/ui/SettingsPage.qml:27
 msgid "Settings"
@@ -197,7 +197,7 @@ msgstr ""
 
 #: ../app/ui/SettingsPage.qml:68 ../app/ui/settings/LocationPage.qml:26
 msgid "Location"
-msgstr ""
+msgstr "ތަންތަނަ"
 
 #: ../app/ui/settings/DataProviderPage.qml:42
 msgid "Provider"
