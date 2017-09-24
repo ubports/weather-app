@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2017-09-19 21:33+0000\n"
-"Last-Translator: Beton <betonn@protonmail.com>\n"
+"PO-Revision-Date: 2017-09-24 22:09+0000\n"
+"Last-Translator: Daniel Frańczak <danielfranczak5@wp.pl>\n"
 "Language-Team: Polish <https://translate.ubports.com/projects/ubports"
 "/weather-app/pl/>\n"
 "Language: pl\n"
@@ -109,7 +109,7 @@ msgstr[2] "Zaktualizowano %1 minut temu"
 
 #: ../app/components/HomeTempInfo.qml:118
 msgid "updated recently"
-msgstr ""
+msgstr "niedawno aktualizowane"
 
 #: ../app/components/ListItemActions/Remove.qml:26
 msgid "Remove"
@@ -149,6 +149,8 @@ msgid ""
 "One arguments for weather app: --display, --city, --lat, --lng They will be "
 "managed by system. See the source for a full comment about them"
 msgstr ""
+"Argumenty dotyczące aplikacji pogody: --display, --city, --lat, --lng Będą "
+"one zarządzane przez system. Zobacz źródło pełnego komentarza na ich temat"
 
 #: ../app/ui/AddLocationPage.qml:38
 msgid "Select a city"
