@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2017-09-24 22:09+0000\n"
+"PO-Revision-Date: 2017-09-27 22:08+0000\n"
 "Last-Translator: Daniel Frańczak <danielfranczak5@wp.pl>\n"
 "Language-Team: Polish <https://translate.ubports.com/projects/ubports"
 "/weather-app/pl/>\n"
@@ -130,7 +130,7 @@ msgstr "Proszę sprawdzić ustawienia sieci i spróbować ponownie."
 
 #: ../app/components/NetworkErrorStateComponent.qml:63
 msgid "Retry"
-msgstr "Ponów"
+msgstr "Spróbuj ponownie"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:47
 msgid "No API Keys Found"
@@ -174,7 +174,7 @@ msgstr "Nie znaleziono miasta"
 
 #: ../app/ui/AddLocationPage.qml:294
 msgid "Couldn't load weather data, please try later again!"
-msgstr "Nie udało się załadować danych pogodowych. Spróbuj ponownie później."
+msgstr "Nie udało się załadować danych pogodowych. Spróbuj ponownie później!"
 
 #: ../app/ui/AddLocationPage.qml:304
 msgid "Location already added."
@@ -182,7 +182,7 @@ msgstr "Lokalizacja została już dodana."
 
 #: ../app/ui/AddLocationPage.qml:307
 msgid "OK"
-msgstr "Ok"
+msgstr "OK"
 
 #: ../app/ui/LocationsPage.qml:99
 msgid "Current Location"
