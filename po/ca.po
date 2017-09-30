@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2017-09-07 17:39+0000\n"
-"Last-Translator: Walter Garcia-Fontes <walter.garcia@upf.edu>\n"
+"PO-Revision-Date: 2017-09-30 19:11+0000\n"
+"Last-Translator: Stefano Melchior <stefano.melchior@me.com>\n"
 "Language-Team: Catalan <https://translate.ubports.com/projects/ubports"
 "/weather-app/ca/>\n"
 "Language: ca\n"
@@ -64,7 +64,7 @@ msgstr "Selecciona-ho tot"
 
 #: ../app/components/HeadState/MultiSelectHeadState.qml:58
 msgid "Delete"
-msgstr "Suprimeix-lo"
+msgstr "Suprimeix"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:51
 msgid "Searching for current location..."
@@ -111,7 +111,7 @@ msgstr "actualitzat recentment"
 
 #: ../app/components/ListItemActions/Remove.qml:26
 msgid "Remove"
-msgstr "Suprimeix-la"
+msgstr "Suprimeix"
 
 #: ../app/components/LocationsPageEmptyStateComponent.qml:36
 msgid "No locations found. Tap the plus icon to search for one."
