@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2017-09-15 23:25+0000\n"
+"PO-Revision-Date: 2017-09-18 11:46+0000\n"
 "Last-Translator: Eran <etherpulse@gmail.com>\n"
 "Language-Team: Hebrew <https://translate.ubports.com/projects/ubports"
 "/weather-app/he/>\n"
@@ -80,7 +80,7 @@ msgstr ""
 
 #: ../app/components/HomeTempInfo.qml:108
 msgid "Today"
-msgstr ""
+msgstr "היום"
 
 #: ../app/components/HomeTempInfo.qml:112
 #, qt-format
@@ -153,7 +153,7 @@ msgstr ""
 
 #: ../app/ui/AddLocationPage.qml:65
 msgid "Back"
-msgstr ""
+msgstr "אחורה"
 
 #: ../app/ui/AddLocationPage.qml:108
 msgid "Search city"
@@ -197,7 +197,7 @@ msgstr ""
 
 #: ../app/ui/SettingsPage.qml:68 ../app/ui/settings/LocationPage.qml:26
 msgid "Location"
-msgstr ""
+msgstr "מיקום"
 
 #: ../app/ui/settings/DataProviderPage.qml:42
 msgid "Provider"
@@ -215,8 +215,8 @@ msgstr ""
 #, qt-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "דקה %1"
+msgstr[1] "%1 דקות"
 
 #: ../app/ui/settings/RefreshIntervalPage.qml:47
 msgid "Interval"

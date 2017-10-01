@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2017-09-09 08:59+0000\n"
+"PO-Revision-Date: 2017-09-29 07:41+0000\n"
 "Last-Translator: Jeff <jeffi27@live.at>\n"
 "Language-Team: Albanian <https://translate.ubports.com/projects/ubports"
 "/weather-app/sq/>\n"
@@ -59,7 +59,7 @@ msgstr "Anulo zgjedhjen"
 
 #: ../app/components/HeadState/MultiSelectHeadState.qml:46
 msgid "Select All"
-msgstr "Zgjidhë të gjitha"
+msgstr "Përzgjidh Gjithçka"
 
 #: ../app/components/HeadState/MultiSelectHeadState.qml:58
 msgid "Delete"
@@ -79,7 +79,7 @@ msgstr "Shto një vendndodhje manualisht duke u zhvendosur nga fundit i ekranit"
 
 #: ../app/components/HomeTempInfo.qml:108
 msgid "Today"
-msgstr "Sotë"
+msgstr "Sot"
 
 #: ../app/components/HomeTempInfo.qml:112
 #, qt-format

@@ -6,17 +6,19 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2017-01-12 20:45+0000\n"
-"Last-Translator: Ivo Xavier <ivoxavier.8@gmail.com>\n"
-"Language-Team: Portuguese <pt@li.org>\n"
+"PO-Revision-Date: 2017-09-28 13:37+0000\n"
+"Last-Translator: Ivo Xavier <ivofernandes12@gmail.com>\n"
+"Language-Team: Portuguese <https://translate.ubports.com/projects/ubports"
+"/weather-app/pt/>\n"
+"Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.15\n"
 "X-Launchpad-Export-Date: 2017-04-27 05:56+0000\n"
-"X-Generator: Launchpad (build 18364)\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of precipitation"
@@ -123,7 +125,7 @@ msgstr "Verifique as suas definições de rede e tente novamente."
 
 #: ../app/components/NetworkErrorStateComponent.qml:63
 msgid "Retry"
-msgstr "Repetir"
+msgstr "Tentar novamente"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:47
 msgid "No API Keys Found"
@@ -176,7 +178,7 @@ msgstr "Localização já adicionada."
 
 #: ../app/ui/AddLocationPage.qml:307
 msgid "OK"
-msgstr "OK"
+msgstr "Confirmar"
 
 #: ../app/ui/LocationsPage.qml:99
 msgid "Current Location"

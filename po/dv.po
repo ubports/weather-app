@@ -1,135 +1,135 @@
-# Danish translation for ubuntu-weather-app
-# Copyright (c) 2016 Rosetta Contributors and Canonical Ltd 2016
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Canonical Ltd.
 # This file is distributed under the same license as the ubuntu-weather-app package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2017-09-28 20:32+0000\n"
-"Last-Translator: Henrik Holm <hbir@post10.tele.dk>\n"
-"Language-Team: Danish <https://translate.ubports.com/projects/ubports"
-"/weather-app/da/>\n"
-"Language: da\n"
+"PO-Revision-Date: 2017-09-22 03:08+0000\n"
+"Last-Translator: Galhi ali <galhialimail@gmail.com>\n"
+"Language-Team: Dhivehi <https://translate.ubports.com/projects/ubports"
+"/weather-app/dv/>\n"
+"Language: dv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.15\n"
-"X-Launchpad-Export-Date: 2017-04-27 05:56+0000\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of precipitation"
-msgstr "Sandsynlighed for nedbør"
+msgstr ""
 
 #: ../app/components/DayDelegateExtraInfo.qml:59
 msgid "Winds"
-msgstr "Vind"
+msgstr ""
 
 #: ../app/components/DayDelegateExtraInfo.qml:68
 msgid "UV Index"
-msgstr "UV Index"
+msgstr ""
 
 #: ../app/components/DayDelegateExtraInfo.qml:74
 msgid "Pollen"
-msgstr "Pollen"
+msgstr ""
 
 #: ../app/components/DayDelegateExtraInfo.qml:81
 msgid "Humidity"
-msgstr "Luftfugtighed"
+msgstr ""
 
 #: ../app/components/DayDelegateExtraInfo.qml:88
 msgid "Sunrise"
-msgstr "Solopgang"
+msgstr "އިރު އަރާ"
 
 #: ../app/components/DayDelegateExtraInfo.qml:95
 msgid "Sunset"
-msgstr "Solnedgang"
+msgstr "އިރުއޮއްސޭ"
 
 #: ../app/components/HeadState/LocationsHeadState.qml:36
 #: ../app/components/HeadState/MultiSelectHeadState.qml:41
 #: ../app/ui/HomePage.qml:41
 msgid "Locations"
-msgstr "Steder"
+msgstr "ތަންތަން"
 
 #: ../app/components/HeadState/MultiSelectHeadState.qml:32
 msgid "Cancel selection"
-msgstr "Annullér valg"
+msgstr ""
 
 #: ../app/components/HeadState/MultiSelectHeadState.qml:46
 msgid "Select All"
-msgstr "Vælg alle"
+msgstr ""
 
 #: ../app/components/HeadState/MultiSelectHeadState.qml:58
 msgid "Delete"
-msgstr "Slet"
+msgstr "ފޮހެލާ"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:51
 msgid "Searching for current location..."
-msgstr "Søger efter nuværende position..."
+msgstr "ތިޔަހުރީ ކޮންތަނެއްގަތޯ ބަލަނީ..."
 
 #: ../app/components/HomePageEmptyStateComponent.qml:52
 msgid "Cannot determine your location"
-msgstr "Kan ikke bestemme din position"
+msgstr "ތިޔަހުރިތަނެއް ނޭނގުނު"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:62
 msgid "Manually add a location by swiping up from the bottom of the display"
-msgstr "Tilføj din position manuelt ved at swipe op fra bunden af skærmen"
+msgstr "އަމިއްލައަށް ތަނެއް ފާހަގަކުރުމަށް ޑިސްޕްލޭގެ ތިރިން މައްޗައް ކަހާލާ"
 
 #: ../app/components/HomeTempInfo.qml:108
 msgid "Today"
-msgstr "I dag"
+msgstr "މިއަދު"
 
 #: ../app/components/HomeTempInfo.qml:112
 #, qt-format
 msgid "updated %1 day ago"
 msgid_plural "updated %1 days ago"
-msgstr[0] "opdateret for %1 dag siden"
-msgstr[1] "opdateret for %1 dage siden"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../app/components/HomeTempInfo.qml:114
 #, qt-format
 msgid "updated %1 hour ago"
 msgid_plural "updated %1 hours ago"
-msgstr[0] "opdateret for %1 time siden"
-msgstr[1] "opdateret for %1 timer siden"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../app/components/HomeTempInfo.qml:116
 #, qt-format
 msgid "updated %1 minute ago"
 msgid_plural "updated %1 minutes ago"
-msgstr[0] "opdateret for %1 minut siden"
-msgstr[1] "opdateret for %1 minutter siden"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../app/components/HomeTempInfo.qml:118
 msgid "updated recently"
-msgstr "opdateret for nylig"
+msgstr ""
 
 #: ../app/components/ListItemActions/Remove.qml:26
 msgid "Remove"
-msgstr "Fjern"
+msgstr "ފޮހެލާ"
 
 #: ../app/components/LocationsPageEmptyStateComponent.qml:36
 msgid "No locations found. Tap the plus icon to search for one."
-msgstr "Ingen position fundet.  Tryk på plus ikonet for at søge efter position."
+msgstr ""
+"އެއްވެސް ތަނެއް ނެތް. ތަނެއް ހޯދުމަށް މަތީކަނުގައިން އެއްކުރާ އަށް ފިތާލާ."
 
 #: ../app/components/NetworkErrorStateComponent.qml:48
 msgid "Network Error"
-msgstr "Netværks fejl"
+msgstr "ނެޓްވޯކެއް ނުލިބޭ"
 
 #: ../app/components/NetworkErrorStateComponent.qml:57
 msgid "Please check your network settings and try again."
-msgstr ""
+msgstr "ނެޓްވޯކު ރަނގަޅުތޯ ބެލުމަށްފަހު ޗެކްކުރޭ."
 
 #: ../app/components/NetworkErrorStateComponent.qml:63
 msgid "Retry"
-msgstr "Prøv igen"
+msgstr "އަދި މަސައްކަތްކޮއްލާ"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:47
 msgid "No API Keys Found"
-msgstr ""
+msgstr "އޭޕީއައި ކީ އެއް ނުފެނުނު"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:56
 msgid ""
@@ -145,43 +145,43 @@ msgstr ""
 
 #: ../app/ui/AddLocationPage.qml:38
 msgid "Select a city"
-msgstr ""
+msgstr "ރަށް ފާހަގަކުރޭ"
 
 #: ../app/ui/AddLocationPage.qml:49
 msgid "City"
-msgstr ""
+msgstr "ރަށް"
 
 #: ../app/ui/AddLocationPage.qml:65
 msgid "Back"
-msgstr "Tilbage"
+msgstr "ފަހަތަށް"
 
 #: ../app/ui/AddLocationPage.qml:108
 msgid "Search city"
-msgstr ""
+msgstr "ރަށް ހޯދާ"
 
 #: ../app/ui/AddLocationPage.qml:281
 msgid "No city found"
-msgstr ""
+msgstr "ތިޔަ ރަށެއް ނުފެނުނު"
 
 #: ../app/ui/AddLocationPage.qml:294
 msgid "Couldn't load weather data, please try later again!"
-msgstr "Kunne ikke indlæse vejrdata. Prøv venligst igen senere!"
+msgstr "މޫސުމާބެހޭ މައުލޫމާތެއް ނުލިބުނު، ފަހުން ބަލައިލާ!"
 
 #: ../app/ui/AddLocationPage.qml:304
 msgid "Location already added."
-msgstr "Stedet allerede tilføjet."
+msgstr "ތިރައް މިހާރުވެސް އެބައިން."
 
 #: ../app/ui/AddLocationPage.qml:307
 msgid "OK"
-msgstr "OK"
+msgstr "ކުރިއަށް"
 
 #: ../app/ui/LocationsPage.qml:99
 msgid "Current Location"
-msgstr ""
+msgstr "މިހާރުހުރިތަން"
 
 #: ../app/ui/SettingsPage.qml:27
 msgid "Settings"
-msgstr "Indstillinger"
+msgstr ""
 
 #: ../app/ui/SettingsPage.qml:44 ../app/ui/settings/UnitsPage.qml:29
 msgid "Units"
@@ -197,7 +197,7 @@ msgstr ""
 
 #: ../app/ui/SettingsPage.qml:68 ../app/ui/settings/LocationPage.qml:26
 msgid "Location"
-msgstr "Placering"
+msgstr "ތަންތަނަ"
 
 #: ../app/ui/settings/DataProviderPage.qml:42
 msgid "Provider"
@@ -215,8 +215,8 @@ msgstr ""
 #, qt-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
-msgstr[0] "%1 minut"
-msgstr[1] "%1 minutter"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../app/ui/settings/RefreshIntervalPage.qml:47
 msgid "Interval"
@@ -260,7 +260,7 @@ msgstr ""
 
 #: ubuntu-weather-app.desktop.in.in.h:1
 msgid "Weather"
-msgstr "Vejret"
+msgstr ""
 
 #: ubuntu-weather-app.desktop.in.in.h:2
 msgid ""

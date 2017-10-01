@@ -6,18 +6,20 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2016-02-01 07:27+0000\n"
-"Last-Translator: Krzysztof Tataradziński <Unknown>\n"
-"Language-Team: Polish <pl@li.org>\n"
+"PO-Revision-Date: 2017-09-27 22:08+0000\n"
+"Last-Translator: Daniel Frańczak <danielfranczak5@wp.pl>\n"
+"Language-Team: Polish <https://translate.ubports.com/projects/ubports"
+"/weather-app/pl/>\n"
+"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 2.15\n"
 "X-Launchpad-Export-Date: 2017-04-27 05:56+0000\n"
-"X-Generator: Launchpad (build 18364)\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of precipitation"
@@ -85,26 +87,29 @@ msgstr "Dzisiaj"
 #, qt-format
 msgid "updated %1 day ago"
 msgid_plural "updated %1 days ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Zaktualizowano %1 dzień temu"
+msgstr[1] "Zaktualizowano %1 dni temu"
+msgstr[2] "Zaktualizowano %1 dni temu"
 
 #: ../app/components/HomeTempInfo.qml:114
 #, qt-format
 msgid "updated %1 hour ago"
 msgid_plural "updated %1 hours ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Zaktualizowano godzinę temu"
+msgstr[1] "Zaktualizowano %1 godziny temu"
+msgstr[2] "Zaktualizowano %1 godzin temu"
 
 #: ../app/components/HomeTempInfo.qml:116
 #, qt-format
 msgid "updated %1 minute ago"
 msgid_plural "updated %1 minutes ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Zaktualizowano minutę temu"
+msgstr[1] "Zaktualizowano %1 minuty temu"
+msgstr[2] "Zaktualizowano %1 minut temu"
 
 #: ../app/components/HomeTempInfo.qml:118
 msgid "updated recently"
-msgstr ""
+msgstr "niedawno aktualizowane"
 
 #: ../app/components/ListItemActions/Remove.qml:26
 msgid "Remove"
@@ -125,7 +130,7 @@ msgstr "Proszę sprawdzić ustawienia sieci i spróbować ponownie."
 
 #: ../app/components/NetworkErrorStateComponent.qml:63
 msgid "Retry"
-msgstr "Ponów"
+msgstr "Spróbuj ponownie"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:47
 msgid "No API Keys Found"
@@ -144,6 +149,8 @@ msgid ""
 "One arguments for weather app: --display, --city, --lat, --lng They will be "
 "managed by system. See the source for a full comment about them"
 msgstr ""
+"Argumenty dotyczące aplikacji pogody: --display, --city, --lat, --lng Będą "
+"one zarządzane przez system. Zobacz źródło pełnego komentarza na ich temat"
 
 #: ../app/ui/AddLocationPage.qml:38
 msgid "Select a city"
@@ -167,7 +174,7 @@ msgstr "Nie znaleziono miasta"
 
 #: ../app/ui/AddLocationPage.qml:294
 msgid "Couldn't load weather data, please try later again!"
-msgstr "Nie udało się załadować danych pogodowych. Spróbuj ponownie później."
+msgstr "Nie udało się załadować danych pogodowych. Spróbuj ponownie później!"
 
 #: ../app/ui/AddLocationPage.qml:304
 msgid "Location already added."
@@ -175,7 +182,7 @@ msgstr "Lokalizacja została już dodana."
 
 #: ../app/ui/AddLocationPage.qml:307
 msgid "OK"
-msgstr "Ok"
+msgstr "OK"
 
 #: ../app/ui/LocationsPage.qml:99
 msgid "Current Location"
@@ -199,7 +206,7 @@ msgstr "Częstość odświeżania"
 
 #: ../app/ui/SettingsPage.qml:68 ../app/ui/settings/LocationPage.qml:26
 msgid "Location"
-msgstr "Położenie"
+msgstr "Lokalizacja"
 
 #: ../app/ui/settings/DataProviderPage.qml:42
 msgid "Provider"
