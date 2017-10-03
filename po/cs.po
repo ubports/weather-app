@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2017-09-18 19:27+0000\n"
+"PO-Revision-Date: 2017-10-03 07:46+0000\n"
 "Last-Translator: Milan Korecký <milan.korecky@gmail.com>\n"
 "Language-Team: Czech <https://translate.ubports.com/projects/ubports/weather-"
 "app/cs/>\n"
@@ -72,11 +72,11 @@ msgstr "Hledání aktuální polohy…"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:52
 msgid "Cannot determine your location"
-msgstr "Nelze určit Vaší polohu"
+msgstr "Nelze určit vaší polohu"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:62
 msgid "Manually add a location by swiping up from the bottom of the display"
-msgstr "Zadejte Vaší polohu ručně vysunutím spodní části displeje"
+msgstr "Zadejte vaší polohu ručně vysunutím spodní části displeje"
 
 #: ../app/components/HomeTempInfo.qml:108
 msgid "Today"
@@ -132,7 +132,7 @@ msgstr "Zkusit znovu"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:47
 msgid "No API Keys Found"
-msgstr "Žádné API kódy nenalezeny"
+msgstr "Žádné API klíče nenalezeny"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:56
 msgid ""
@@ -278,4 +278,4 @@ msgstr "Aplikace předpovědi počasí pro Ubuntu s podporou mnoha online zdroj�
 
 #: ubuntu-weather-app.desktop.in.in.h:3
 msgid "weather;forecast;twc;openweathermap;the weather channel;"
-msgstr "počasí;předpověď;twc;openweathermat;the weather channel;"
+msgstr "počasí;předpověď;twc;otevřítmapupočasí;the weather channel;"
