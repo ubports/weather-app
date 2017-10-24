@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2017-09-28 13:37+0000\n"
+"PO-Revision-Date: 2017-10-18 11:18+0000\n"
 "Last-Translator: Ivo Xavier <ivofernandes12@gmail.com>\n"
 "Language-Team: Portuguese <https://translate.ubports.com/projects/ubports"
 "/weather-app/pt/>\n"
@@ -60,7 +60,7 @@ msgstr "Cancelar seleção"
 
 #: ../app/components/HeadState/MultiSelectHeadState.qml:46
 msgid "Select All"
-msgstr "Selecionar todas"
+msgstr "Selecionar tudo"
 
 #: ../app/components/HeadState/MultiSelectHeadState.qml:58
 msgid "Delete"
@@ -86,26 +86,26 @@ msgstr "Hoje"
 #, qt-format
 msgid "updated %1 day ago"
 msgid_plural "updated %1 days ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "atualizado há %1 dia"
+msgstr[1] "atualizado há %1 dias"
 
 #: ../app/components/HomeTempInfo.qml:114
 #, qt-format
 msgid "updated %1 hour ago"
 msgid_plural "updated %1 hours ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "atualizado há %1 hora"
+msgstr[1] "atualizado há %1 horas"
 
 #: ../app/components/HomeTempInfo.qml:116
 #, qt-format
 msgid "updated %1 minute ago"
 msgid_plural "updated %1 minutes ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "atualizado há %1 minuto"
+msgstr[1] "atualizado há %1 minutos"
 
 #: ../app/components/HomeTempInfo.qml:118
 msgid "updated recently"
-msgstr ""
+msgstr "atualizado recentemente"
 
 #: ../app/components/ListItemActions/Remove.qml:26
 msgid "Remove"
