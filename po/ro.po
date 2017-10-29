@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2017-10-29 12:44+0000\n"
+"PO-Revision-Date: 2017-10-29 12:54+0000\n"
 "Last-Translator: Brînzariu Cristian <info@ebeton.ro>\n"
 "Language-Team: Romanian <https://translate.ubports.com/projects/ubports"
 "/weather-app/ro/>\n"
@@ -150,26 +150,29 @@ msgid ""
 "One arguments for weather app: --display, --city, --lat, --lng They will be "
 "managed by system. See the source for a full comment about them"
 msgstr ""
+"Unele argumente ale aplicației pentru vreme: --display, --ciy, --lat, --lng "
+"vor fi manageriate de către sistem. Verifică sursa pentru un comentariu "
+"complect despre ele"
 
 #: ../app/ui/AddLocationPage.qml:38
 msgid "Select a city"
-msgstr ""
+msgstr "Selectează un oraș"
 
 #: ../app/ui/AddLocationPage.qml:49
 msgid "City"
-msgstr ""
+msgstr "Oraș"
 
 #: ../app/ui/AddLocationPage.qml:65
 msgid "Back"
-msgstr ""
+msgstr "Înapoi"
 
 #: ../app/ui/AddLocationPage.qml:108
 msgid "Search city"
-msgstr ""
+msgstr "Caută oraș"
 
 #: ../app/ui/AddLocationPage.qml:281
 msgid "No city found"
-msgstr ""
+msgstr "Nu am găsit nici un oraș"
 
 #: ../app/ui/AddLocationPage.qml:294
 msgid "Couldn't load weather data, please try later again!"
@@ -185,7 +188,7 @@ msgstr "În regulă"
 
 #: ../app/ui/LocationsPage.qml:99
 msgid "Current Location"
-msgstr ""
+msgstr "Locația curentă"
 
 #: ../app/ui/SettingsPage.qml:27
 msgid "Settings"
@@ -193,27 +196,27 @@ msgstr "Configurări"
 
 #: ../app/ui/SettingsPage.qml:44 ../app/ui/settings/UnitsPage.qml:29
 msgid "Units"
-msgstr ""
+msgstr "Unități"
 
 #: ../app/ui/SettingsPage.qml:52 ../app/ui/settings/DataProviderPage.qml:28
 msgid "Data Provider"
-msgstr ""
+msgstr "Sursă date"
 
 #: ../app/ui/SettingsPage.qml:60 ../app/ui/settings/RefreshIntervalPage.qml:27
 msgid "Refresh Interval"
-msgstr ""
+msgstr "Intervalul de reactualizare"
 
 #: ../app/ui/SettingsPage.qml:68 ../app/ui/settings/LocationPage.qml:26
 msgid "Location"
-msgstr ""
+msgstr "Locația"
 
 #: ../app/ui/settings/DataProviderPage.qml:42
 msgid "Provider"
-msgstr ""
+msgstr "Sursă"
 
 #: ../app/ui/settings/LocationPage.qml:34
 msgid "Detect current location"
-msgstr ""
+msgstr "Detectează locația curentă"
 
 #: ../app/ui/settings/RefreshIntervalPage.qml:34
 #: ../app/ui/settings/RefreshIntervalPage.qml:35
@@ -223,48 +226,49 @@ msgstr ""
 #, qt-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "un minut"
+msgstr[1] "%1 minute"
+msgstr[2] ""
 
 #: ../app/ui/settings/RefreshIntervalPage.qml:47
 msgid "Interval"
-msgstr ""
+msgstr "Interval"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of temperature in Celcius and are shown in the settings page.
 #. Only the abbreviated form of Celcius should be used.
 #: ../app/ui/settings/UnitsPage.qml:47 ../app/ui/settings/UnitsPage.qml:83
 msgid "°C"
-msgstr ""
+msgstr "°C"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of temperature in Fahrenheit and are shown in the settings page.
 #. Only the abbreviated form of Fahrenheit should be used.
 #: ../app/ui/settings/UnitsPage.qml:52 ../app/ui/settings/UnitsPage.qml:84
 msgid "°F"
-msgstr ""
+msgstr "°F"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of wind speed in kilometers per hour and are shown in the settings page.
 #. Only the abbreviated form of kilometers per hour should be used.
 #: ../app/ui/settings/UnitsPage.qml:63 ../app/ui/settings/UnitsPage.qml:104
 msgid "kph"
-msgstr ""
+msgstr "km/h"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of wind speed in miles per hour and are shown in the settings page.
 #. Only the abbreviated form of miles per hour should be used.
 #: ../app/ui/settings/UnitsPage.qml:68 ../app/ui/settings/UnitsPage.qml:105
 msgid "mph"
-msgstr ""
+msgstr "m/h"
 
 #: ../app/ui/settings/UnitsPage.qml:82
 msgid "Temperature"
-msgstr ""
+msgstr "Temperatura"
 
 #: ../app/ui/settings/UnitsPage.qml:103
 msgid "Wind Speed"
-msgstr ""
+msgstr "Viteză vânt"
 
 #: ubuntu-weather-app.desktop.in.in.h:1
 msgid "Weather"
