@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2017-10-29 12:54+0000\n"
+"PO-Revision-Date: 2017-10-29 22:10+0000\n"
 "Last-Translator: Brînzariu Cristian <info@ebeton.ro>\n"
 "Language-Team: Romanian <https://translate.ubports.com/projects/ubports"
 "/weather-app/ro/>\n"
@@ -89,7 +89,7 @@ msgid "updated %1 day ago"
 msgid_plural "updated %1 days ago"
 msgstr[0] "actualizat acum o zi"
 msgstr[1] "actualizat acum %1 zile"
-msgstr[2] ""
+msgstr[2] "actualizat de %1 zile"
 
 #: ../app/components/HomeTempInfo.qml:114
 #, qt-format
@@ -97,7 +97,7 @@ msgid "updated %1 hour ago"
 msgid_plural "updated %1 hours ago"
 msgstr[0] "actualizat acum o oră"
 msgstr[1] "actualizat acum %1 ore"
-msgstr[2] ""
+msgstr[2] "actualizat de %1 ore"
 
 #: ../app/components/HomeTempInfo.qml:116
 #, qt-format
@@ -105,7 +105,7 @@ msgid "updated %1 minute ago"
 msgid_plural "updated %1 minutes ago"
 msgstr[0] "actualizat acum un minut"
 msgstr[1] "actualizat acum %1 minute"
-msgstr[2] "actualizat acum %1 minute"
+msgstr[2] "actualizat de %1 minute"
 
 #: ../app/components/HomeTempInfo.qml:118
 msgid "updated recently"
@@ -184,7 +184,7 @@ msgstr "Localitate adăugată deja."
 
 #: ../app/ui/AddLocationPage.qml:307
 msgid "OK"
-msgstr "În regulă"
+msgstr "Ok"
 
 #: ../app/ui/LocationsPage.qml:99
 msgid "Current Location"
@@ -192,7 +192,7 @@ msgstr "Locația curentă"
 
 #: ../app/ui/SettingsPage.qml:27
 msgid "Settings"
-msgstr "Configurări"
+msgstr "Setări"
 
 #: ../app/ui/SettingsPage.qml:44 ../app/ui/settings/UnitsPage.qml:29
 msgid "Units"
@@ -228,7 +228,7 @@ msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "un minut"
 msgstr[1] "%1 minute"
-msgstr[2] ""
+msgstr[2] "%1 de minute"
 
 #: ../app/ui/settings/RefreshIntervalPage.qml:47
 msgid "Interval"
