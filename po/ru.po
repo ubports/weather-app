@@ -6,22 +6,24 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2015-12-07 06:32+0000\n"
-"Last-Translator: Roman Zonov <Unknown>\n"
-"Language-Team: Russian <ru@li.org>\n"
+"PO-Revision-Date: 2017-11-21 00:47+0000\n"
+"Last-Translator: Alexey Balmashnov <a.balmashnov@gmail.com>\n"
+"Language-Team: Russian <https://translate.ubports.com/projects/ubports"
+"/weather-app/ru/>\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 2.15\n"
 "X-Launchpad-Export-Date: 2017-04-27 05:56+0000\n"
-"X-Generator: Launchpad (build 18364)\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of precipitation"
-msgstr ""
+msgstr "Вероятность осадков"
 
 #: ../app/components/DayDelegateExtraInfo.qml:59
 msgid "Winds"
@@ -75,8 +77,7 @@ msgstr "Не удалось определить местоположение"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:62
 msgid "Manually add a location by swiping up from the bottom of the display"
-msgstr ""
-"Вручную добавить местоположение, проведя вверх от нижней части экрана"
+msgstr "Вручную добавить местоположение, проведя вверх от нижней части экрана"
 
 #: ../app/components/HomeTempInfo.qml:108
 msgid "Today"
@@ -86,26 +87,29 @@ msgstr "Сегодня"
 #, qt-format
 msgid "updated %1 day ago"
 msgid_plural "updated %1 days ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "обновлено %1 день назад"
+msgstr[1] "обновлено %1 дня назад"
+msgstr[2] "обновлено %1 дней назад"
 
 #: ../app/components/HomeTempInfo.qml:114
 #, qt-format
 msgid "updated %1 hour ago"
 msgid_plural "updated %1 hours ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "обновлено %1 час назад"
+msgstr[1] "обновлено %1 часа назад"
+msgstr[2] "обновлено %1 часов назад"
 
 #: ../app/components/HomeTempInfo.qml:116
 #, qt-format
 msgid "updated %1 minute ago"
 msgid_plural "updated %1 minutes ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "обновлено %1 минуту назад"
+msgstr[1] "обновлено %1 минуты назад"
+msgstr[2] "обновлено %1 минут назад"
 
 #: ../app/components/HomeTempInfo.qml:118
 msgid "updated recently"
-msgstr ""
+msgstr "обновлено недавно"
 
 #: ../app/components/ListItemActions/Remove.qml:26
 msgid "Remove"
@@ -121,7 +125,7 @@ msgstr "Ошибка сети"
 
 #: ../app/components/NetworkErrorStateComponent.qml:57
 msgid "Please check your network settings and try again."
-msgstr "Пожалуйста, проверьте Ваше соединение и повторите ещё раз"
+msgstr "Пожалуйста, проверьте Ваше соединение и повторите ещё раз."
 
 #: ../app/components/NetworkErrorStateComponent.qml:63
 msgid "Retry"
@@ -129,19 +133,24 @@ msgstr "Повторить"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:47
 msgid "No API Keys Found"
-msgstr ""
+msgstr "Не найден ключ API"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:56
 msgid ""
 "If you are a developer, please see the README file for instructions on how "
 "to obtain your own Open Weather Map API key."
 msgstr ""
+"Для разработчиков: информация о том, как можно получить собственный ключ "
+"Open Weather Map API, находится в файле README."
 
 #: ../app/ubuntu-weather-app.qml:235
 msgid ""
 "One arguments for weather app: --display, --city, --lat, --lng They will be "
 "managed by system. See the source for a full comment about them"
 msgstr ""
+"Аргументы приложения weather app: --display, --city, --lat, --lng Они будут "
+"обрабатываться системой. Подробные комментарии к этим параметрам даны в "
+"исходном коде"
 
 #: ../app/ui/AddLocationPage.qml:38
 msgid "Select a city"
@@ -269,7 +278,7 @@ msgid ""
 "weather data sources"
 msgstr ""
 "Приложение для Ubuntu, предоставляющее данные о погоде из нескольких "
-"интерактивных источников."
+"интерактивных источников"
 
 #: ubuntu-weather-app.desktop.in.in.h:3
 msgid "weather;forecast;twc;openweathermap;the weather channel;"
