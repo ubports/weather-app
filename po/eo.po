@@ -6,33 +6,35 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2016-01-27 18:00+0000\n"
-"Last-Translator: Robin van der Vliet <info@robinvandervliet.com>\n"
-"Language-Team: Esperanto <eo@li.org>\n"
+"PO-Revision-Date: 2017-11-22 19:48+0000\n"
+"Last-Translator: Pablo Foche <pablo.foche@gmail.com>\n"
+"Language-Team: Esperanto <https://translate.ubports.com/projects/ubports"
+"/weather-app/eo/>\n"
+"Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.15\n"
 "X-Launchpad-Export-Date: 2017-04-27 05:56+0000\n"
-"X-Generator: Launchpad (build 18364)\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of precipitation"
-msgstr ""
+msgstr "Pluvoprobableco"
 
 #: ../app/components/DayDelegateExtraInfo.qml:59
 msgid "Winds"
-msgstr ""
+msgstr "Vento"
 
 #: ../app/components/DayDelegateExtraInfo.qml:68
 msgid "UV Index"
-msgstr ""
+msgstr "Transviola indekso"
 
 #: ../app/components/DayDelegateExtraInfo.qml:74
 msgid "Pollen"
-msgstr ""
+msgstr "Poleno"
 
 #: ../app/components/DayDelegateExtraInfo.qml:81
 msgid "Humidity"
@@ -58,7 +60,7 @@ msgstr "Nuligi selekton"
 
 #: ../app/components/HeadState/MultiSelectHeadState.qml:46
 msgid "Select All"
-msgstr "Elekti ĉion"
+msgstr "Elekti ĉiujn"
 
 #: ../app/components/HeadState/MultiSelectHeadState.qml:58
 msgid "Delete"
@@ -66,15 +68,15 @@ msgstr "Forigi"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:51
 msgid "Searching for current location..."
-msgstr ""
+msgstr "Serĉante la nuntempan lokon..."
 
 #: ../app/components/HomePageEmptyStateComponent.qml:52
 msgid "Cannot determine your location"
-msgstr ""
+msgstr "Ne eblas determini vian lokon"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:62
 msgid "Manually add a location by swiping up from the bottom of the display"
-msgstr ""
+msgstr "Ŝovumu supren el la subo de la ekrano por permane aldoni lokon"
 
 #: ../app/components/HomeTempInfo.qml:108
 msgid "Today"
@@ -84,26 +86,26 @@ msgstr "Hodiaŭ"
 #, qt-format
 msgid "updated %1 day ago"
 msgid_plural "updated %1 days ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "ĝisdatigita antaŭ %1 tago"
+msgstr[1] "ĝisdatigita antaŭ %1 tagoj"
 
 #: ../app/components/HomeTempInfo.qml:114
 #, qt-format
 msgid "updated %1 hour ago"
 msgid_plural "updated %1 hours ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "ĝisdatigita antaŭ %1 horo"
+msgstr[1] "ĝistaditiga antaŭ %1 horoj"
 
 #: ../app/components/HomeTempInfo.qml:116
 #, qt-format
 msgid "updated %1 minute ago"
 msgid_plural "updated %1 minutes ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "ĝisdatigita antaŭ %1 minuto"
+msgstr[1] "ĝisdatigita antaŭ %1 minutoj"
 
 #: ../app/components/HomeTempInfo.qml:118
 msgid "updated recently"
-msgstr ""
+msgstr "ĝisdatigita freŝdate"
 
 #: ../app/components/ListItemActions/Remove.qml:26
 msgid "Remove"
@@ -111,7 +113,7 @@ msgstr "Forigi"
 
 #: ../app/components/LocationsPageEmptyStateComponent.qml:36
 msgid "No locations found. Tap the plus icon to search for one."
-msgstr ""
+msgstr "Neniu loko trovita. Premu la piktogramon '+' por serĉi unu."
 
 #: ../app/components/NetworkErrorStateComponent.qml:48
 msgid "Network Error"
@@ -119,7 +121,7 @@ msgstr "Reteraro"
 
 #: ../app/components/NetworkErrorStateComponent.qml:57
 msgid "Please check your network settings and try again."
-msgstr ""
+msgstr "Bv. kontroli viajn retajn agordojn kaj provu denove."
 
 #: ../app/components/NetworkErrorStateComponent.qml:63
 msgid "Retry"
@@ -127,23 +129,27 @@ msgstr "Reprovi"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:47
 msgid "No API Keys Found"
-msgstr ""
+msgstr "Neniu API-ŝlosilo trovita"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:56
 msgid ""
 "If you are a developer, please see the README file for instructions on how "
 "to obtain your own Open Weather Map API key."
 msgstr ""
+"Se vi estas programisto, bv. legi la dosieron README por ricevi instrukcion "
+"pri la maniero ricevi vian propran Open Weather Map API-ŝlosilo."
 
 #: ../app/ubuntu-weather-app.qml:235
 msgid ""
 "One arguments for weather app: --display, --city, --lat, --lng They will be "
 "managed by system. See the source for a full comment about them"
 msgstr ""
+"Argumentoj por la vetera aplikaĵo: --display, --city, --lat, --lng Ili estos "
+"mastrumitaj de la sistemo. Vidu la fonton por plena komento pri ili"
 
 #: ../app/ui/AddLocationPage.qml:38
 msgid "Select a city"
-msgstr "Elekti urbon"
+msgstr "Elektu urbon"
 
 #: ../app/ui/AddLocationPage.qml:49
 msgid "City"
@@ -159,19 +165,19 @@ msgstr "Serĉi urbon"
 
 #: ../app/ui/AddLocationPage.qml:281
 msgid "No city found"
-msgstr ""
+msgstr "Neniu urbo trovita"
 
 #: ../app/ui/AddLocationPage.qml:294
 msgid "Couldn't load weather data, please try later again!"
-msgstr ""
+msgstr "Ne eblis ŝarĝi veter-datumon, bv. provi denove poste!"
 
 #: ../app/ui/AddLocationPage.qml:304
 msgid "Location already added."
-msgstr ""
+msgstr "Loko jam aldonita."
 
 #: ../app/ui/AddLocationPage.qml:307
 msgid "OK"
-msgstr "Bone"
+msgstr "Jes"
 
 #: ../app/ui/LocationsPage.qml:99
 msgid "Current Location"
@@ -187,11 +193,11 @@ msgstr "Unuoj"
 
 #: ../app/ui/SettingsPage.qml:52 ../app/ui/settings/DataProviderPage.qml:28
 msgid "Data Provider"
-msgstr ""
+msgstr "Datum-provizanto"
 
 #: ../app/ui/SettingsPage.qml:60 ../app/ui/settings/RefreshIntervalPage.qml:27
 msgid "Refresh Interval"
-msgstr ""
+msgstr "Ĝisdatigo-prokrasto"
 
 #: ../app/ui/SettingsPage.qml:68 ../app/ui/settings/LocationPage.qml:26
 msgid "Location"
@@ -203,7 +209,7 @@ msgstr "Provizanto"
 
 #: ../app/ui/settings/LocationPage.qml:34
 msgid "Detect current location"
-msgstr ""
+msgstr "Trovi nunan lokon"
 
 #: ../app/ui/settings/RefreshIntervalPage.qml:34
 #: ../app/ui/settings/RefreshIntervalPage.qml:35
@@ -218,7 +224,7 @@ msgstr[1] "%1 minutoj"
 
 #: ../app/ui/settings/RefreshIntervalPage.qml:47
 msgid "Interval"
-msgstr ""
+msgstr "Intertempo"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of temperature in Celcius and are shown in the settings page.
@@ -265,7 +271,9 @@ msgid ""
 "A weather forecast application for Ubuntu with support for multiple online "
 "weather data sources"
 msgstr ""
+"Veter-antaŭvida aplikaĵo por Ubuntu kongrua kun pluraj enretaj veter-datumaj "
+"fontoj"
 
 #: ubuntu-weather-app.desktop.in.in.h:3
 msgid "weather;forecast;twc;openweathermap;the weather channel;"
-msgstr ""
+msgstr "vetero;antaŭvido;twc;openweathermap;the weather channel;"

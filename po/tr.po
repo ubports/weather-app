@@ -6,17 +6,19 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2015-11-20 18:42+0000\n"
-"Last-Translator: Mutlu Can YILMAZ <mtlcnylmz@gmail.com>\n"
-"Language-Team: Turkish <tr@li.org>\n"
+"PO-Revision-Date: 2017-11-25 21:41+0000\n"
+"Last-Translator: Mevlüt Erdem Güven <merdem2002@yandex.com>\n"
+"Language-Team: Turkish <https://translate.ubports.com/projects/ubports"
+"/weather-app/tr/>\n"
+"Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.15\n"
 "X-Launchpad-Export-Date: 2017-04-27 05:56+0000\n"
-"X-Generator: Launchpad (build 18364)\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of precipitation"
@@ -149,7 +151,7 @@ msgstr "Bir şehir seçin"
 
 #: ../app/ui/AddLocationPage.qml:49
 msgid "City"
-msgstr "Şehir"
+msgstr "İl"
 
 #: ../app/ui/AddLocationPage.qml:65
 msgid "Back"
