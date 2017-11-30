@@ -6,17 +6,19 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2015-10-17 16:33+0000\n"
-"Last-Translator: Hannie Dumoleyn <Unknown>\n"
-"Language-Team: Dutch <nl@li.org>\n"
+"PO-Revision-Date: 2017-11-30 18:47+0000\n"
+"Last-Translator: Mappack Owner <mappack@null.net>\n"
+"Language-Team: Dutch <https://translate.ubports.com/projects/ubports/weather-"
+"app/nl/>\n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.15\n"
 "X-Launchpad-Export-Date: 2017-04-27 05:56+0000\n"
-"X-Generator: Launchpad (build 18364)\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of precipitation"
@@ -113,8 +115,7 @@ msgstr "Verwijderen"
 
 #: ../app/components/LocationsPageEmptyStateComponent.qml:36
 msgid "No locations found. Tap the plus icon to search for one."
-msgstr ""
-"Geen locaties gevonden. Tik op het plus-pictogram om er een te zoeken."
+msgstr "Geen locaties gevonden. Tik op het plus-pictogram om er een te zoeken."
 
 #: ../app/components/NetworkErrorStateComponent.qml:48
 msgid "Network Error"
@@ -174,7 +175,7 @@ msgstr "Locatie is al toegevoegd."
 
 #: ../app/ui/AddLocationPage.qml:307
 msgid "OK"
-msgstr "Ok"
+msgstr "Oké"
 
 #: ../app/ui/LocationsPage.qml:99
 msgid "Current Location"
@@ -274,5 +275,5 @@ msgstr ""
 #: ubuntu-weather-app.desktop.in.in.h:3
 msgid "weather;forecast;twc;openweathermap;the weather channel;"
 msgstr ""
-"weather;forecast;twc;openweathermap;the weather "
-"channel;weer;weersverwachting;weerkanaal;"
+"weather;forecast;twc;openweathermap;the weather channel;weer;"
+"weersverwachting;weerkanaal;"
