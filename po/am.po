@@ -6,17 +6,19 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2017-04-30 01:15+0000\n"
-"Last-Translator: samson <Unknown>\n"
-"Language-Team: Amharic <am@li.org>\n"
+"PO-Revision-Date: 2017-12-25 02:49+0000\n"
+"Last-Translator: Samson <sambelet@yahoo.com>\n"
+"Language-Team: Amharic <https://translate.ubports.com/projects/ubports"
+"/weather-app/am/>\n"
+"Language: am\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 2.15\n"
 "X-Launchpad-Export-Date: 2017-05-01 06:30+0000\n"
-"X-Generator: Launchpad (build 18364)\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of precipitation"
@@ -66,7 +68,7 @@ msgstr "ማጥፊያ"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:51
 msgid "Searching for current location..."
-msgstr "የ አሁኑን አካባቢ በ መፈለግ ላይ"
+msgstr "የ አሁኑን አካባቢ በ መፈለግ ላይ..."
 
 #: ../app/components/HomePageEmptyStateComponent.qml:52
 msgid "Cannot determine your location"
@@ -111,7 +113,7 @@ msgstr "ማስወገጃ"
 
 #: ../app/components/LocationsPageEmptyStateComponent.qml:36
 msgid "No locations found. Tap the plus icon to search for one."
-msgstr "አካባቢ አልተገኘም: መታ ያድርጉ መደመሪያ ምልክት ፈልጎ ለ መጨመር"
+msgstr "አካባቢ አልተገኘም: መታ ያድርጉ መደመሪያ ምልክት ላይ ፈልጎ ለ መጨመር"
 
 #: ../app/components/NetworkErrorStateComponent.qml:48
 msgid "Network Error"
@@ -135,7 +137,7 @@ msgid ""
 "to obtain your own Open Weather Map API key."
 msgstr ""
 "እርስዎ አበልፃጊ ከሆኑ: እባክዎን የ አንብቡኝ ፋይልን ይመልከቱ: ለ መመሪያ እርስዎ የ ራስዎትን የ አየር ንብረት ካርታ "
-"API ቁልፍ እንደሚያገኙ"
+"API ቁልፍ እንደሚያገኙ:"
 
 #: ../app/ubuntu-weather-app.qml:235
 msgid ""
@@ -143,7 +145,7 @@ msgid ""
 "managed by system. See the source for a full comment about them"
 msgstr ""
 "የ አየር ንብረት ክርክር መተግበሪያ: --ያሳያል: --ከተማ: --ላቲ: --ሎን የሚተዳደሩት በ ስርአቱ ነው: ለ ሙሉ "
-"አስተያየት ምንጩን ይመልከቱ"
+"አስተያየት ምንጩን ይመልከቱ:"
 
 #: ../app/ui/AddLocationPage.qml:38
 msgid "Select a city"
@@ -272,4 +274,4 @@ msgstr "ለ ኡቡንቱ የ አየር ንብረት መተግበሪያ በርካ
 
 #: ubuntu-weather-app.desktop.in.in.h:3
 msgid "weather;forecast;twc;openweathermap;the weather channel;"
-msgstr "የ አየር ንብረት: ግምት: twc;openweathermap የ አየር ንብረት ጣቢያ:"
+msgstr "የ አየር ንብረት: ግምት: twc;openweathermap የ አየር ንብረት ጣቢያ;"
