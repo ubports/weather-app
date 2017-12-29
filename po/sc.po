@@ -1,0 +1,270 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Canonical Ltd.
+# This file is distributed under the same license as the ubuntu-weather-app package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ubuntu-weather-app\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-04-12 12:07+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: sc\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: ../app/components/DayDelegateExtraInfo.qml:52
+msgid "Chance of precipitation"
+msgstr ""
+
+#: ../app/components/DayDelegateExtraInfo.qml:59
+msgid "Winds"
+msgstr ""
+
+#: ../app/components/DayDelegateExtraInfo.qml:68
+msgid "UV Index"
+msgstr ""
+
+#: ../app/components/DayDelegateExtraInfo.qml:74
+msgid "Pollen"
+msgstr ""
+
+#: ../app/components/DayDelegateExtraInfo.qml:81
+msgid "Humidity"
+msgstr ""
+
+#: ../app/components/DayDelegateExtraInfo.qml:88
+msgid "Sunrise"
+msgstr ""
+
+#: ../app/components/DayDelegateExtraInfo.qml:95
+msgid "Sunset"
+msgstr ""
+
+#: ../app/components/HeadState/LocationsHeadState.qml:36
+#: ../app/components/HeadState/MultiSelectHeadState.qml:41
+#: ../app/ui/HomePage.qml:41
+msgid "Locations"
+msgstr ""
+
+#: ../app/components/HeadState/MultiSelectHeadState.qml:32
+msgid "Cancel selection"
+msgstr ""
+
+#: ../app/components/HeadState/MultiSelectHeadState.qml:46
+msgid "Select All"
+msgstr ""
+
+#: ../app/components/HeadState/MultiSelectHeadState.qml:58
+msgid "Delete"
+msgstr ""
+
+#: ../app/components/HomePageEmptyStateComponent.qml:51
+msgid "Searching for current location..."
+msgstr ""
+
+#: ../app/components/HomePageEmptyStateComponent.qml:52
+msgid "Cannot determine your location"
+msgstr ""
+
+#: ../app/components/HomePageEmptyStateComponent.qml:62
+msgid "Manually add a location by swiping up from the bottom of the display"
+msgstr ""
+
+#: ../app/components/HomeTempInfo.qml:108
+msgid "Today"
+msgstr ""
+
+#: ../app/components/HomeTempInfo.qml:112
+#, qt-format
+msgid "updated %1 day ago"
+msgid_plural "updated %1 days ago"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../app/components/HomeTempInfo.qml:114
+#, qt-format
+msgid "updated %1 hour ago"
+msgid_plural "updated %1 hours ago"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../app/components/HomeTempInfo.qml:116
+#, qt-format
+msgid "updated %1 minute ago"
+msgid_plural "updated %1 minutes ago"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../app/components/HomeTempInfo.qml:118
+msgid "updated recently"
+msgstr ""
+
+#: ../app/components/ListItemActions/Remove.qml:26
+msgid "Remove"
+msgstr ""
+
+#: ../app/components/LocationsPageEmptyStateComponent.qml:36
+msgid "No locations found. Tap the plus icon to search for one."
+msgstr ""
+
+#: ../app/components/NetworkErrorStateComponent.qml:48
+msgid "Network Error"
+msgstr ""
+
+#: ../app/components/NetworkErrorStateComponent.qml:57
+msgid "Please check your network settings and try again."
+msgstr ""
+
+#: ../app/components/NetworkErrorStateComponent.qml:63
+msgid "Retry"
+msgstr ""
+
+#: ../app/components/NoAPIKeyErrorStateComponent.qml:47
+msgid "No API Keys Found"
+msgstr ""
+
+#: ../app/components/NoAPIKeyErrorStateComponent.qml:56
+msgid ""
+"If you are a developer, please see the README file for instructions on how "
+"to obtain your own Open Weather Map API key."
+msgstr ""
+
+#: ../app/ubuntu-weather-app.qml:235
+msgid ""
+"One arguments for weather app: --display, --city, --lat, --lng They will be "
+"managed by system. See the source for a full comment about them"
+msgstr ""
+
+#: ../app/ui/AddLocationPage.qml:38
+msgid "Select a city"
+msgstr ""
+
+#: ../app/ui/AddLocationPage.qml:49
+msgid "City"
+msgstr ""
+
+#: ../app/ui/AddLocationPage.qml:65
+msgid "Back"
+msgstr ""
+
+#: ../app/ui/AddLocationPage.qml:108
+msgid "Search city"
+msgstr ""
+
+#: ../app/ui/AddLocationPage.qml:281
+msgid "No city found"
+msgstr ""
+
+#: ../app/ui/AddLocationPage.qml:294
+msgid "Couldn't load weather data, please try later again!"
+msgstr ""
+
+#: ../app/ui/AddLocationPage.qml:304
+msgid "Location already added."
+msgstr ""
+
+#: ../app/ui/AddLocationPage.qml:307
+msgid "OK"
+msgstr ""
+
+#: ../app/ui/LocationsPage.qml:99
+msgid "Current Location"
+msgstr ""
+
+#: ../app/ui/SettingsPage.qml:27
+msgid "Settings"
+msgstr ""
+
+#: ../app/ui/SettingsPage.qml:44 ../app/ui/settings/UnitsPage.qml:29
+msgid "Units"
+msgstr ""
+
+#: ../app/ui/SettingsPage.qml:52 ../app/ui/settings/DataProviderPage.qml:28
+msgid "Data Provider"
+msgstr ""
+
+#: ../app/ui/SettingsPage.qml:60 ../app/ui/settings/RefreshIntervalPage.qml:27
+msgid "Refresh Interval"
+msgstr ""
+
+#: ../app/ui/SettingsPage.qml:68 ../app/ui/settings/LocationPage.qml:26
+msgid "Location"
+msgstr ""
+
+#: ../app/ui/settings/DataProviderPage.qml:42
+msgid "Provider"
+msgstr ""
+
+#: ../app/ui/settings/LocationPage.qml:34
+msgid "Detect current location"
+msgstr ""
+
+#: ../app/ui/settings/RefreshIntervalPage.qml:34
+#: ../app/ui/settings/RefreshIntervalPage.qml:35
+#: ../app/ui/settings/RefreshIntervalPage.qml:36
+#: ../app/ui/settings/RefreshIntervalPage.qml:37
+#: ../app/ui/settings/RefreshIntervalPage.qml:48
+#, qt-format
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../app/ui/settings/RefreshIntervalPage.qml:47
+msgid "Interval"
+msgstr ""
+
+#. TRANSLATORS: The strings are standard measurement units
+#. of temperature in Celcius and are shown in the settings page.
+#. Only the abbreviated form of Celcius should be used.
+#: ../app/ui/settings/UnitsPage.qml:47 ../app/ui/settings/UnitsPage.qml:83
+msgid "°C"
+msgstr ""
+
+#. TRANSLATORS: The strings are standard measurement units
+#. of temperature in Fahrenheit and are shown in the settings page.
+#. Only the abbreviated form of Fahrenheit should be used.
+#: ../app/ui/settings/UnitsPage.qml:52 ../app/ui/settings/UnitsPage.qml:84
+msgid "°F"
+msgstr ""
+
+#. TRANSLATORS: The strings are standard measurement units
+#. of wind speed in kilometers per hour and are shown in the settings page.
+#. Only the abbreviated form of kilometers per hour should be used.
+#: ../app/ui/settings/UnitsPage.qml:63 ../app/ui/settings/UnitsPage.qml:104
+msgid "kph"
+msgstr ""
+
+#. TRANSLATORS: The strings are standard measurement units
+#. of wind speed in miles per hour and are shown in the settings page.
+#. Only the abbreviated form of miles per hour should be used.
+#: ../app/ui/settings/UnitsPage.qml:68 ../app/ui/settings/UnitsPage.qml:105
+msgid "mph"
+msgstr ""
+
+#: ../app/ui/settings/UnitsPage.qml:82
+msgid "Temperature"
+msgstr ""
+
+#: ../app/ui/settings/UnitsPage.qml:103
+msgid "Wind Speed"
+msgstr ""
+
+#: ubuntu-weather-app.desktop.in.in.h:1
+msgid "Weather"
+msgstr ""
+
+#: ubuntu-weather-app.desktop.in.in.h:2
+msgid ""
+"A weather forecast application for Ubuntu with support for multiple online "
+"weather data sources"
+msgstr ""
+
+#: ubuntu-weather-app.desktop.in.in.h:3
+msgid "weather;forecast;twc;openweathermap;the weather channel;"
+msgstr ""
