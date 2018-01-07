@@ -1,215 +1,216 @@
-# Amharic translation for ubuntu-weather-app
-# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Canonical Ltd.
 # This file is distributed under the same license as the ubuntu-weather-app package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2017-12-25 02:49+0000\n"
-"Last-Translator: Samson <sambelet@yahoo.com>\n"
-"Language-Team: Amharic <https://translate.ubports.com/projects/ubports"
-"/weather-app/am/>\n"
-"Language: am\n"
+"PO-Revision-Date: 2017-12-29 16:35+0000\n"
+"Last-Translator: Adrià <adriamartinmor@gmail.com>\n"
+"Language-Team: Sardinian <https://translate.ubports.com/projects/ubports"
+"/weather-app/sc/>\n"
+"Language: sc\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.15\n"
-"X-Launchpad-Export-Date: 2017-05-01 06:30+0000\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of precipitation"
-msgstr "የ መዝነብ እድል"
+msgstr ""
 
 #: ../app/components/DayDelegateExtraInfo.qml:59
 msgid "Winds"
-msgstr "ነፋስ"
+msgstr "Bentu"
 
 #: ../app/components/DayDelegateExtraInfo.qml:68
 msgid "UV Index"
-msgstr "የ ፀሐይ ጨረር"
+msgstr "Ìnditze UV"
 
 #: ../app/components/DayDelegateExtraInfo.qml:74
 msgid "Pollen"
-msgstr "ብናኝ"
+msgstr "Pòddine"
 
 #: ../app/components/DayDelegateExtraInfo.qml:81
 msgid "Humidity"
-msgstr "የ አየር እርጥበት"
+msgstr "Umidade"
 
 #: ../app/components/DayDelegateExtraInfo.qml:88
 msgid "Sunrise"
-msgstr "የ ፀሐይ መውጫ"
+msgstr "Arbèschida"
 
 #: ../app/components/DayDelegateExtraInfo.qml:95
 msgid "Sunset"
-msgstr "የ ፀሐይ መጥለቂያ"
+msgstr "Iscurigadorzu"
 
 #: ../app/components/HeadState/LocationsHeadState.qml:36
 #: ../app/components/HeadState/MultiSelectHeadState.qml:41
 #: ../app/ui/HomePage.qml:41
 msgid "Locations"
-msgstr "አካባቢ"
+msgstr "Positziones"
 
 #: ../app/components/HeadState/MultiSelectHeadState.qml:32
 msgid "Cancel selection"
-msgstr "ምርጫውን መሰረዣ"
+msgstr "Annulla sa seletzione"
 
 #: ../app/components/HeadState/MultiSelectHeadState.qml:46
 msgid "Select All"
-msgstr "ሁሉንም መምረጫ"
+msgstr "Seletziona totus"
 
 #: ../app/components/HeadState/MultiSelectHeadState.qml:58
 msgid "Delete"
-msgstr "ማጥፊያ"
+msgstr "Cantzella"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:51
 msgid "Searching for current location..."
-msgstr "የ አሁኑን አካባቢ በ መፈለግ ላይ..."
+msgstr "Chirchende sa positzione atuale..."
 
 #: ../app/components/HomePageEmptyStateComponent.qml:52
 msgid "Cannot determine your location"
-msgstr "ያሉበትን አካባቢ ማወቅ አልተቻለም"
+msgstr "Impossìbile determinare sa positzione"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:62
+#, fuzzy
 msgid "Manually add a location by swiping up from the bottom of the display"
-msgstr "በ እጅ አካባቢ ይጨምሩ ማሳያውን ከ ታች ወደ ላይ በ መጥረግ"
+msgstr "Agiunghe una positzione iscurrende in susu dae su bassu de s'ischermu"
 
 #: ../app/components/HomeTempInfo.qml:108
 msgid "Today"
-msgstr "ዛሬ"
+msgstr "Oe"
 
 #: ../app/components/HomeTempInfo.qml:112
-#, qt-format
+#, fuzzy, qt-format
 msgid "updated %1 day ago"
 msgid_plural "updated %1 days ago"
-msgstr[0] "የ ተሻሻለው ከ %1 ቀን በፊት ነው"
-msgstr[1] "የ ተሻሻለው ከ %1 ቀኖች በፊት ነው"
+msgstr[0] "atualizadu %1 die a oe"
+msgstr[1] "atualizadu %1 dies a oe"
 
 #: ../app/components/HomeTempInfo.qml:114
 #, qt-format
 msgid "updated %1 hour ago"
 msgid_plural "updated %1 hours ago"
-msgstr[0] "የ ተሻሻለው ከ %1 ሰአት በፊት ነው"
-msgstr[1] "የ ተሻሻለው ከ %1 ሰአቶች በፊት ነው"
+msgstr[0] "atualizadu %1 ora a como"
+msgstr[1] "atualizadu %1 oras a como"
 
 #: ../app/components/HomeTempInfo.qml:116
 #, qt-format
 msgid "updated %1 minute ago"
 msgid_plural "updated %1 minutes ago"
-msgstr[0] "የ ተሻሻለው ከ %1 ደቂቃ በፊት ነው"
-msgstr[1] "የ ተሻሻለው ከ %1 ደቂቆች በፊት ነው"
+msgstr[0] "atualizadu %1 minutu a como"
+msgstr[1] "atualizadu %1 minutos a como"
 
 #: ../app/components/HomeTempInfo.qml:118
 msgid "updated recently"
-msgstr "የ ተሻሻለው በ ቅርብ ጊዜ ነው"
+msgstr "atualizadu de reghente"
 
 #: ../app/components/ListItemActions/Remove.qml:26
 msgid "Remove"
-msgstr "ማስወገጃ"
+msgstr "Cantzella"
 
 #: ../app/components/LocationsPageEmptyStateComponent.qml:36
+#, fuzzy
 msgid "No locations found. Tap the plus icon to search for one."
-msgstr "አካባቢ አልተገኘም: መታ ያድርጉ መደመሪያ ምልክት ላይ ፈልጎ ለ መጨመር"
+msgstr "Peruna positzione agatada. Incarca s'icona + pro nde chircare una."
 
 #: ../app/components/NetworkErrorStateComponent.qml:48
 msgid "Network Error"
-msgstr "የ ኔትዎርክ ስህተት"
+msgstr "Errore de rete"
 
 #: ../app/components/NetworkErrorStateComponent.qml:57
 msgid "Please check your network settings and try again."
-msgstr "እባክዎን የ ኔትዎርክ ማሰናጃውን ይመርምሩ እና እንደገና ይሞክሩ"
+msgstr "Controlla sa cunfiguratzione de rete e torra·bi a proare."
 
 #: ../app/components/NetworkErrorStateComponent.qml:63
 msgid "Retry"
-msgstr "እንደገና መሞከሪያ"
+msgstr "Torra·bi a proare"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:47
 msgid "No API Keys Found"
-msgstr "ምንም የ API ቁልፎች አልተገኙም"
+msgstr "Peruna crae API agatada"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:56
+#, fuzzy
 msgid ""
 "If you are a developer, please see the README file for instructions on how "
 "to obtain your own Open Weather Map API key."
 msgstr ""
-"እርስዎ አበልፃጊ ከሆኑ: እባክዎን የ አንብቡኝ ፋይልን ይመልከቱ: ለ መመሪያ እርስዎ የ ራስዎትን የ አየር ንብረት ካርታ "
-"API ቁልፍ እንደሚያገኙ:"
+"Si ses unu isvilupadore, leghe s'archìviu README pro tènnere istrutzione "
+"subra de comente podes otènnere una crae API tua de Open Weather Map."
 
 #: ../app/ubuntu-weather-app.qml:235
 msgid ""
 "One arguments for weather app: --display, --city, --lat, --lng They will be "
 "managed by system. See the source for a full comment about them"
 msgstr ""
-"የ አየር ንብረት ክርክር መተግበሪያ: --ያሳያል: --ከተማ: --ላቲ: --ሎን የሚተዳደሩት በ ስርአቱ ነው: ለ ሙሉ "
-"አስተያየት ምንጩን ይመልከቱ:"
 
 #: ../app/ui/AddLocationPage.qml:38
 msgid "Select a city"
-msgstr "ከተማ ይምረጡ"
+msgstr "Seletziona una tzitade"
 
 #: ../app/ui/AddLocationPage.qml:49
 msgid "City"
-msgstr "ከተማ"
+msgstr "Tzitade"
 
 #: ../app/ui/AddLocationPage.qml:65
 msgid "Back"
-msgstr "ወደ ኋላ"
+msgstr "In segus"
 
 #: ../app/ui/AddLocationPage.qml:108
 msgid "Search city"
-msgstr "ከተማ መፈለጊያ"
+msgstr "Chirca tzitade"
 
 #: ../app/ui/AddLocationPage.qml:281
 msgid "No city found"
-msgstr "ምንም ከተማ አልተገኘም"
+msgstr "Peruna tzitade agatada"
 
 #: ../app/ui/AddLocationPage.qml:294
 msgid "Couldn't load weather data, please try later again!"
-msgstr "የ አየር ንብረት ዳታ መጫን አልተቻለም፡ እባክዎን እንደገና ይሞክሩ!"
+msgstr "Impossìbile carrigare datos meteorològicos, torra·bi a proare a pustis!"
 
 #: ../app/ui/AddLocationPage.qml:304
+#, fuzzy
 msgid "Location already added."
-msgstr "አካባቢው ቀደም ብሎ ተጨምሯል"
+msgstr "Positzione giai agiunta."
 
 #: ../app/ui/AddLocationPage.qml:307
 msgid "OK"
-msgstr "እሺ"
+msgstr "AB"
 
 #: ../app/ui/LocationsPage.qml:99
 msgid "Current Location"
-msgstr "የ አሁኑ አካባቢ"
+msgstr "Positzione atuale"
 
 #: ../app/ui/SettingsPage.qml:27
 msgid "Settings"
-msgstr "ማሰናጃዎች"
+msgstr "Cunfiguratzione"
 
 #: ../app/ui/SettingsPage.qml:44 ../app/ui/settings/UnitsPage.qml:29
 msgid "Units"
-msgstr "መለኪያ"
+msgstr "Unidades"
 
 #: ../app/ui/SettingsPage.qml:52 ../app/ui/settings/DataProviderPage.qml:28
 msgid "Data Provider"
-msgstr "ዳታ አቅራቢው"
+msgstr "Fornidore de datos"
 
 #: ../app/ui/SettingsPage.qml:60 ../app/ui/settings/RefreshIntervalPage.qml:27
 msgid "Refresh Interval"
-msgstr "ማናቃቂያ ከ እረፍት"
+msgstr ""
 
 #: ../app/ui/SettingsPage.qml:68 ../app/ui/settings/LocationPage.qml:26
 msgid "Location"
-msgstr "አካባቢ"
+msgstr "Positzione"
 
 #: ../app/ui/settings/DataProviderPage.qml:42
 msgid "Provider"
-msgstr "አቅራቢው"
+msgstr "Fornidore"
 
 #: ../app/ui/settings/LocationPage.qml:34
 msgid "Detect current location"
-msgstr "የ አሁኑን አካባቢ መፈለጊያ"
+msgstr "Rileva sa positzione atuale"
 
 #: ../app/ui/settings/RefreshIntervalPage.qml:34
 #: ../app/ui/settings/RefreshIntervalPage.qml:35
@@ -219,59 +220,62 @@ msgstr "የ አሁኑን አካባቢ መፈለጊያ"
 #, qt-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
-msgstr[0] "%1 ደቂቃ"
-msgstr[1] "%1 ደቂቃዎች"
+msgstr[0] "%1 minutu"
+msgstr[1] "%1 minutos"
 
 #: ../app/ui/settings/RefreshIntervalPage.qml:47
 msgid "Interval"
-msgstr "ክፍተት"
+msgstr "Intervallu"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of temperature in Celcius and are shown in the settings page.
 #. Only the abbreviated form of Celcius should be used.
 #: ../app/ui/settings/UnitsPage.qml:47 ../app/ui/settings/UnitsPage.qml:83
 msgid "°C"
-msgstr "°ሴ"
+msgstr "°C"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of temperature in Fahrenheit and are shown in the settings page.
 #. Only the abbreviated form of Fahrenheit should be used.
 #: ../app/ui/settings/UnitsPage.qml:52 ../app/ui/settings/UnitsPage.qml:84
 msgid "°F"
-msgstr "°ፋ"
+msgstr "°F"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of wind speed in kilometers per hour and are shown in the settings page.
 #. Only the abbreviated form of kilometers per hour should be used.
 #: ../app/ui/settings/UnitsPage.qml:63 ../app/ui/settings/UnitsPage.qml:104
 msgid "kph"
-msgstr "ኪሜ/በ"
+msgstr "km/h"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of wind speed in miles per hour and are shown in the settings page.
 #. Only the abbreviated form of miles per hour should be used.
 #: ../app/ui/settings/UnitsPage.qml:68 ../app/ui/settings/UnitsPage.qml:105
 msgid "mph"
-msgstr "ማ/ሰ"
+msgstr "mph"
 
 #: ../app/ui/settings/UnitsPage.qml:82
 msgid "Temperature"
-msgstr "የ አየር ንብረት"
+msgstr "Temperadura"
 
 #: ../app/ui/settings/UnitsPage.qml:103
 msgid "Wind Speed"
-msgstr "የ ንፋስ ፍጥነት"
+msgstr "Velotzidade de su bentu"
 
 #: ubuntu-weather-app.desktop.in.in.h:1
 msgid "Weather"
-msgstr "የ አየር ንብረት"
+msgstr "Meteo"
 
 #: ubuntu-weather-app.desktop.in.in.h:2
+#, fuzzy
 msgid ""
 "A weather forecast application for Ubuntu with support for multiple online "
 "weather data sources"
-msgstr "ለ ኡቡንቱ የ አየር ንብረት መተግበሪያ በርካታ የ አየር ንብረት ዳታ ምንጮች በመስመር ላይ ይደገፋል"
+msgstr ""
+"Un'aplicatzione de previsione meteorològica pro Ubuntu cun sa "
+"collaboratzione de meda fontes de datos meteorològicos in lìnia"
 
 #: ubuntu-weather-app.desktop.in.in.h:3
 msgid "weather;forecast;twc;openweathermap;the weather channel;"
-msgstr "የ አየር ንብረት: ግምት: twc;openweathermap የ አየር ንብረት ጣቢያ;"
+msgstr "meteo;previsione;twc;openweathermap;the weather channel;"
