@@ -6,11 +6,12 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
 "PO-Revision-Date: 2016-02-04 22:13+0000\n"
 "Last-Translator: Danial Behzadi <dani.behzi@gmail.com>\n"
 "Language-Team: Persian <fa@li.org>\n"
+"Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -166,8 +167,7 @@ msgstr "هیچ شهری پیدا نشد"
 
 #: ../app/ui/AddLocationPage.qml:294
 msgid "Couldn't load weather data, please try later again!"
-msgstr ""
-"نمی‌توان داده‌های آب‌وخوا را بار کرد، لطفاً بعداً دوباره تلاش نمایید!"
+msgstr "نمی‌توان داده‌های آب‌وخوا را بار کرد، لطفاً بعداً دوباره تلاش نمایید!"
 
 #: ../app/ui/AddLocationPage.qml:304
 msgid "Location already added."
