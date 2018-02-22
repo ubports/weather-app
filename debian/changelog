@@ -1,4 +1,4 @@
-ubuntu-weather-app (3.5ubuntu1) UNRELEASED; urgency=medium
+ubuntu-weather-app (3.5ubports1) xenial; urgency=medium
 
   [ Andrew Hayzen ]
   * Release 3.4 and bump version to 3.5
