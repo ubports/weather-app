@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2018-03-02 09:44+0000\n"
+"PO-Revision-Date: 2018-03-04 20:21+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://translate.ubports.com/projects/ubports"
 "/weather-app/he/>\n"
@@ -30,11 +30,11 @@ msgstr "רוחות"
 
 #: ../app/components/DayDelegateExtraInfo.qml:68
 msgid "UV Index"
-msgstr ""
+msgstr "מדד קרינה"
 
 #: ../app/components/DayDelegateExtraInfo.qml:74
 msgid "Pollen"
-msgstr ""
+msgstr "אבקנים"
 
 #: ../app/components/DayDelegateExtraInfo.qml:81
 msgid "Humidity"
@@ -56,7 +56,7 @@ msgstr "מיקומים"
 
 #: ../app/components/HeadState/MultiSelectHeadState.qml:32
 msgid "Cancel selection"
-msgstr "ביטול בחירה"
+msgstr "ביטול הבחירה"
 
 #: ../app/components/HeadState/MultiSelectHeadState.qml:46
 msgid "Select All"
@@ -68,15 +68,15 @@ msgstr "מחיקה"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:51
 msgid "Searching for current location..."
-msgstr "מחפש אחר מיקום נוכחי…"
+msgstr "חיפוש אחר המיקום הנוכחי…"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:52
 msgid "Cannot determine your location"
-msgstr "לא ניתן לזהות את המיקום הנוכחי"
+msgstr "לא ניתן לאתר את המיקום הנוכחי"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:62
 msgid "Manually add a location by swiping up from the bottom of the display"
-msgstr "הוסיפו מיקום בצורה ידנית באמצעות החלקה למעלה מתחתית המסך"
+msgstr "ניתן להוסיף מיקום בצורה ידנית באמצעות החלקה למעלה מתחתית המסך"
 
 #: ../app/components/HomeTempInfo.qml:108
 msgid "Today"
@@ -86,21 +86,21 @@ msgstr "היום"
 #, qt-format
 msgid "updated %1 day ago"
 msgid_plural "updated %1 days ago"
-msgstr[0] "עודכן לפני יום %1"
+msgstr[0] "עודכן אתמול"
 msgstr[1] "עודכן לפני %1 ימים"
 
 #: ../app/components/HomeTempInfo.qml:114
 #, qt-format
 msgid "updated %1 hour ago"
 msgid_plural "updated %1 hours ago"
-msgstr[0] "עודכן לפני  שעה %1"
+msgstr[0] "עודכן לפני שעה"
 msgstr[1] "עודכן לפני %1 שעות"
 
 #: ../app/components/HomeTempInfo.qml:116
 #, qt-format
 msgid "updated %1 minute ago"
 msgid_plural "updated %1 minutes ago"
-msgstr[0] "עודכן לפני דקה %1"
+msgstr[0] "עודכן לפני דקה"
 msgstr[1] "עודכן לפני %1 דקות"
 
 #: ../app/components/HomeTempInfo.qml:118
@@ -113,7 +113,7 @@ msgstr "הסרה"
 
 #: ../app/components/LocationsPageEmptyStateComponent.qml:36
 msgid "No locations found. Tap the plus icon to search for one."
-msgstr "לא נמצא מיקום. לחצו על כפתור הפלוס על מנת לחפש מיקום."
+msgstr "לא נמצא מיקום. יש ללחוץ על כפתור ההוספה כדי לחפש מיקום."
 
 #: ../app/components/NetworkErrorStateComponent.qml:48
 msgid "Network Error"
@@ -121,7 +121,7 @@ msgstr "שגיאת רשת"
 
 #: ../app/components/NetworkErrorStateComponent.qml:57
 msgid "Please check your network settings and try again."
-msgstr "אנא בדקו את הגדרות הרשת ונסו שנית."
+msgstr "נא לבדוק את הגדרות הרשת ולנסות שנית."
 
 #: ../app/components/NetworkErrorStateComponent.qml:63
 msgid "Retry"
@@ -129,13 +129,15 @@ msgstr "ניסיון מחדש"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:47
 msgid "No API Keys Found"
-msgstr "לא נמצא מפתח ל API"
+msgstr "לא נמצאו מפתחות API"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:56
 msgid ""
 "If you are a developer, please see the README file for instructions on how "
 "to obtain your own Open Weather Map API key."
 msgstr ""
+"אם יש לך עניין בפיתוח, נא לקרוא את קובץ ה־README לקבלת הנחיות על קבלת מפתח "
+"API של Open Weather Map משלך."
 
 #: ../app/ubuntu-weather-app.qml:235
 msgid ""
@@ -145,11 +147,11 @@ msgstr ""
 
 #: ../app/ui/AddLocationPage.qml:38
 msgid "Select a city"
-msgstr ""
+msgstr "בחירת עיר"
 
 #: ../app/ui/AddLocationPage.qml:49
 msgid "City"
-msgstr ""
+msgstr "עיר"
 
 #: ../app/ui/AddLocationPage.qml:65
 msgid "Back"
@@ -157,11 +159,11 @@ msgstr "אחורה"
 
 #: ../app/ui/AddLocationPage.qml:108
 msgid "Search city"
-msgstr ""
+msgstr "חיפוש עיר"
 
 #: ../app/ui/AddLocationPage.qml:281
 msgid "No city found"
-msgstr ""
+msgstr "לא נמצאו ערים"
 
 #: ../app/ui/AddLocationPage.qml:294
 msgid "Couldn't load weather data, please try later again!"
@@ -169,7 +171,7 @@ msgstr "לא ניתן לטעון את נתוני מזג האוויר, נא לנ�
 
 #: ../app/ui/AddLocationPage.qml:304
 msgid "Location already added."
-msgstr "מיקום זה כבר התווסף."
+msgstr "מיקום זה כבר נוסף."
 
 #: ../app/ui/AddLocationPage.qml:307
 msgid "OK"
@@ -177,7 +179,7 @@ msgstr "אישור"
 
 #: ../app/ui/LocationsPage.qml:99
 msgid "Current Location"
-msgstr ""
+msgstr "המיקום הנוכחי"
 
 #: ../app/ui/SettingsPage.qml:27
 msgid "Settings"
@@ -185,15 +187,15 @@ msgstr "הגדרות"
 
 #: ../app/ui/SettingsPage.qml:44 ../app/ui/settings/UnitsPage.qml:29
 msgid "Units"
-msgstr ""
+msgstr "יחידות"
 
 #: ../app/ui/SettingsPage.qml:52 ../app/ui/settings/DataProviderPage.qml:28
 msgid "Data Provider"
-msgstr ""
+msgstr "ספק נתונים"
 
 #: ../app/ui/SettingsPage.qml:60 ../app/ui/settings/RefreshIntervalPage.qml:27
 msgid "Refresh Interval"
-msgstr ""
+msgstr "הפרש בין עדכונים"
 
 #: ../app/ui/SettingsPage.qml:68 ../app/ui/settings/LocationPage.qml:26
 msgid "Location"
@@ -201,11 +203,11 @@ msgstr "מיקום"
 
 #: ../app/ui/settings/DataProviderPage.qml:42
 msgid "Provider"
-msgstr ""
+msgstr "ספק"
 
 #: ../app/ui/settings/LocationPage.qml:34
 msgid "Detect current location"
-msgstr ""
+msgstr "איתור המיקום הנוכחי"
 
 #: ../app/ui/settings/RefreshIntervalPage.qml:34
 #: ../app/ui/settings/RefreshIntervalPage.qml:35
@@ -215,26 +217,26 @@ msgstr ""
 #, qt-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
-msgstr[0] "דקה %1"
+msgstr[0] "דקה"
 msgstr[1] "%1 דקות"
 
 #: ../app/ui/settings/RefreshIntervalPage.qml:47
 msgid "Interval"
-msgstr ""
+msgstr "הפרש"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of temperature in Celcius and are shown in the settings page.
 #. Only the abbreviated form of Celcius should be used.
 #: ../app/ui/settings/UnitsPage.qml:47 ../app/ui/settings/UnitsPage.qml:83
 msgid "°C"
-msgstr ""
+msgstr "‎°C"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of temperature in Fahrenheit and are shown in the settings page.
 #. Only the abbreviated form of Fahrenheit should be used.
 #: ../app/ui/settings/UnitsPage.qml:52 ../app/ui/settings/UnitsPage.qml:84
 msgid "°F"
-msgstr ""
+msgstr "‎°F"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of wind speed in kilometers per hour and are shown in the settings page.
@@ -252,11 +254,11 @@ msgstr ""
 
 #: ../app/ui/settings/UnitsPage.qml:82
 msgid "Temperature"
-msgstr ""
+msgstr "טמפרטורה"
 
 #: ../app/ui/settings/UnitsPage.qml:103
 msgid "Wind Speed"
-msgstr ""
+msgstr "מהירות הרוח"
 
 #: ubuntu-weather-app.desktop.in.in.h:1
 msgid "Weather"
@@ -266,7 +268,7 @@ msgstr "מזג אוויר"
 msgid ""
 "A weather forecast application for Ubuntu with support for multiple online "
 "weather data sources"
-msgstr "יישום תחזית מזג אוויר לאובונטו עם תמיכה במגוון מקורות נתונים"
+msgstr "יישומון תחזית מזג אוויר לאובונטו עם תמיכה במגוון מקורות נתונים"
 
 #: ubuntu-weather-app.desktop.in.in.h:3
 msgid "weather;forecast;twc;openweathermap;the weather channel;"
