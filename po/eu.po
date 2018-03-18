@@ -1,0 +1,279 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Canonical Ltd.
+# This file is distributed under the same license as the ubuntu-weather-app package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ubuntu-weather-app\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-04-12 12:07+0100\n"
+"PO-Revision-Date: 2018-03-11 16:14+0000\n"
+"Last-Translator: Aitzol Berasategi <aitzol76@gmail.com>\n"
+"Language-Team: Basque <https://translate.ubports.com/projects/ubports"
+"/weather-app/eu/>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.15\n"
+
+#: ../app/components/DayDelegateExtraInfo.qml:52
+msgid "Chance of precipitation"
+msgstr "Euri arriskua"
+
+#: ../app/components/DayDelegateExtraInfo.qml:59
+msgid "Winds"
+msgstr "Haizea"
+
+#: ../app/components/DayDelegateExtraInfo.qml:68
+msgid "UV Index"
+msgstr "UV indizea"
+
+#: ../app/components/DayDelegateExtraInfo.qml:74
+msgid "Pollen"
+msgstr "Polena"
+
+#: ../app/components/DayDelegateExtraInfo.qml:81
+msgid "Humidity"
+msgstr "Hezetasuna"
+
+#: ../app/components/DayDelegateExtraInfo.qml:88
+msgid "Sunrise"
+msgstr "Egunsentia"
+
+#: ../app/components/DayDelegateExtraInfo.qml:95
+msgid "Sunset"
+msgstr "Ilunabarra"
+
+#: ../app/components/HeadState/LocationsHeadState.qml:36
+#: ../app/components/HeadState/MultiSelectHeadState.qml:41
+#: ../app/ui/HomePage.qml:41
+msgid "Locations"
+msgstr "Kokapenak"
+
+#: ../app/components/HeadState/MultiSelectHeadState.qml:32
+msgid "Cancel selection"
+msgstr "Hautapena ezeztatu"
+
+#: ../app/components/HeadState/MultiSelectHeadState.qml:46
+msgid "Select All"
+msgstr "Guztia Hautatu"
+
+#: ../app/components/HeadState/MultiSelectHeadState.qml:58
+msgid "Delete"
+msgstr "Ezabatu"
+
+#: ../app/components/HomePageEmptyStateComponent.qml:51
+msgid "Searching for current location..."
+msgstr "Uneko kokapena bilatzen..."
+
+#: ../app/components/HomePageEmptyStateComponent.qml:52
+msgid "Cannot determine your location"
+msgstr "Ezin da kokapena zehaztu"
+
+#: ../app/components/HomePageEmptyStateComponent.qml:62
+msgid "Manually add a location by swiping up from the bottom of the display"
+msgstr "kokapena eskuz gehitu pantailaren goikaldetik beheruntz irristatuz"
+
+#: ../app/components/HomeTempInfo.qml:108
+msgid "Today"
+msgstr "Gaur"
+
+#: ../app/components/HomeTempInfo.qml:112
+#, qt-format
+msgid "updated %1 day ago"
+msgid_plural "updated %1 days ago"
+msgstr[0] "Duela egun %1 eguneratua"
+msgstr[1] "Duela %1 egun eguneratua"
+
+#: ../app/components/HomeTempInfo.qml:114
+#, qt-format
+msgid "updated %1 hour ago"
+msgid_plural "updated %1 hours ago"
+msgstr[0] "Duela ordu %1 eguneratua"
+msgstr[1] "Duela %1 ordu eguneratua"
+
+#: ../app/components/HomeTempInfo.qml:116
+#, qt-format
+msgid "updated %1 minute ago"
+msgid_plural "updated %1 minutes ago"
+msgstr[0] "Duela minutu %1 eguneratua"
+msgstr[1] "Duela %1 minutu eguneratua"
+
+#: ../app/components/HomeTempInfo.qml:118
+msgid "updated recently"
+msgstr "Duela gutxi eguneratua"
+
+#: ../app/components/ListItemActions/Remove.qml:26
+msgid "Remove"
+msgstr "Ezabatu"
+
+#: ../app/components/LocationsPageEmptyStateComponent.qml:36
+msgid "No locations found. Tap the plus icon to search for one."
+msgstr "Ez da kokapenik aurkitu. Ukitu «+» bat bilatzeko."
+
+#: ../app/components/NetworkErrorStateComponent.qml:48
+msgid "Network Error"
+msgstr "Sareko akatsa"
+
+#: ../app/components/NetworkErrorStateComponent.qml:57
+msgid "Please check your network settings and try again."
+msgstr "Mesedez egiaztatu zure sareko ezarpenak eta saiatu berriz."
+
+#: ../app/components/NetworkErrorStateComponent.qml:63
+msgid "Retry"
+msgstr "Berriz saiatu"
+
+#: ../app/components/NoAPIKeyErrorStateComponent.qml:47
+msgid "No API Keys Found"
+msgstr "Ez da API gakorik aurkitu"
+
+#: ../app/components/NoAPIKeyErrorStateComponent.qml:56
+msgid ""
+"If you are a developer, please see the README file for instructions on how "
+"to obtain your own Open Weather Map API key."
+msgstr ""
+"Garatzailea baldin bazara, mesedez irakurri README fitxategia, bertan  zure "
+"Open Weather Map API gakoa lortzeko argibideak aurkituko dituzu."
+
+#: ../app/ubuntu-weather-app.qml:235
+msgid ""
+"One arguments for weather app: --display, --city, --lat, --lng They will be "
+"managed by system. See the source for a full comment about them"
+msgstr ""
+"Eguraldiaren aplikaziorako argumentuak: --display, --city, --lat, --lng "
+"Sistemak kudeatuko ditu. Xehetasun guztiak iturrian aurkitzen dira"
+
+#: ../app/ui/AddLocationPage.qml:38
+msgid "Select a city"
+msgstr "Hautatu hiri bat"
+
+#: ../app/ui/AddLocationPage.qml:49
+msgid "City"
+msgstr "Hiria"
+
+#: ../app/ui/AddLocationPage.qml:65
+msgid "Back"
+msgstr "Atzera"
+
+#: ../app/ui/AddLocationPage.qml:108
+msgid "Search city"
+msgstr "Hiria bilatu"
+
+#: ../app/ui/AddLocationPage.qml:281
+msgid "No city found"
+msgstr "Ez da hiririk aurkitu"
+
+#: ../app/ui/AddLocationPage.qml:294
+msgid "Couldn't load weather data, please try later again!"
+msgstr ""
+"Ezin izan dira eguraldiaren datuak kargatu, mesedez saiatu berriz beranduago!"
+
+#: ../app/ui/AddLocationPage.qml:304
+msgid "Location already added."
+msgstr "Kokapena dagoeneko gehitu da."
+
+#: ../app/ui/AddLocationPage.qml:307
+msgid "OK"
+msgstr "Ados"
+
+#: ../app/ui/LocationsPage.qml:99
+msgid "Current Location"
+msgstr "Uneko Kokapena"
+
+#: ../app/ui/SettingsPage.qml:27
+msgid "Settings"
+msgstr "Ezarpenak"
+
+#: ../app/ui/SettingsPage.qml:44 ../app/ui/settings/UnitsPage.qml:29
+msgid "Units"
+msgstr "Unitateak"
+
+#: ../app/ui/SettingsPage.qml:52 ../app/ui/settings/DataProviderPage.qml:28
+msgid "Data Provider"
+msgstr "Datu Hornitzailea"
+
+#: ../app/ui/SettingsPage.qml:60 ../app/ui/settings/RefreshIntervalPage.qml:27
+msgid "Refresh Interval"
+msgstr "Datu-berritze tartea"
+
+#: ../app/ui/SettingsPage.qml:68 ../app/ui/settings/LocationPage.qml:26
+msgid "Location"
+msgstr "Kokapena"
+
+#: ../app/ui/settings/DataProviderPage.qml:42
+msgid "Provider"
+msgstr "Hornitzailea"
+
+#: ../app/ui/settings/LocationPage.qml:34
+msgid "Detect current location"
+msgstr "Uneko kokapena detektatu"
+
+#: ../app/ui/settings/RefreshIntervalPage.qml:34
+#: ../app/ui/settings/RefreshIntervalPage.qml:35
+#: ../app/ui/settings/RefreshIntervalPage.qml:36
+#: ../app/ui/settings/RefreshIntervalPage.qml:37
+#: ../app/ui/settings/RefreshIntervalPage.qml:48
+#, qt-format
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] "minutu %1"
+msgstr[1] "%1 minutu"
+
+#: ../app/ui/settings/RefreshIntervalPage.qml:47
+msgid "Interval"
+msgstr "Tartea"
+
+#. TRANSLATORS: The strings are standard measurement units
+#. of temperature in Celcius and are shown in the settings page.
+#. Only the abbreviated form of Celcius should be used.
+#: ../app/ui/settings/UnitsPage.qml:47 ../app/ui/settings/UnitsPage.qml:83
+msgid "°C"
+msgstr "°C"
+
+#. TRANSLATORS: The strings are standard measurement units
+#. of temperature in Fahrenheit and are shown in the settings page.
+#. Only the abbreviated form of Fahrenheit should be used.
+#: ../app/ui/settings/UnitsPage.qml:52 ../app/ui/settings/UnitsPage.qml:84
+msgid "°F"
+msgstr "°F"
+
+#. TRANSLATORS: The strings are standard measurement units
+#. of wind speed in kilometers per hour and are shown in the settings page.
+#. Only the abbreviated form of kilometers per hour should be used.
+#: ../app/ui/settings/UnitsPage.qml:63 ../app/ui/settings/UnitsPage.qml:104
+msgid "kph"
+msgstr "km/h"
+
+#. TRANSLATORS: The strings are standard measurement units
+#. of wind speed in miles per hour and are shown in the settings page.
+#. Only the abbreviated form of miles per hour should be used.
+#: ../app/ui/settings/UnitsPage.qml:68 ../app/ui/settings/UnitsPage.qml:105
+msgid "mph"
+msgstr "mi/h"
+
+#: ../app/ui/settings/UnitsPage.qml:82
+msgid "Temperature"
+msgstr "Tenperatura"
+
+#: ../app/ui/settings/UnitsPage.qml:103
+msgid "Wind Speed"
+msgstr "Haizearen Abiadura"
+
+#: ubuntu-weather-app.desktop.in.in.h:1
+msgid "Weather"
+msgstr "Eguraldia"
+
+#: ubuntu-weather-app.desktop.in.in.h:2
+msgid ""
+"A weather forecast application for Ubuntu with support for multiple online "
+"weather data sources"
+msgstr ""
+"Eguraldiaren aurreikuspenerako aplikazioa Ubunturentzako, lineako eguraldi "
+"datuen iturri anitzekin erabilgarri"
+
+#: ubuntu-weather-app.desktop.in.in.h:3
+msgid "weather;forecast;twc;openweathermap;the weather channel;"
+msgstr "eguraldia;aurreikuspena;twc;openweathermap;the weather channel;"
