@@ -76,7 +76,11 @@ msgstr "Impossìbile determinare sa positzione"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:62
 msgid "Manually add a location by swiping up from the bottom of the display"
+<<<<<<< dd900487005e375d09c537480086f800996e29fb
 msgstr "Agiunghe una positzione iscurrende dae bàsciu a susu de s'ischermu"
+=======
+msgstr "Agiunghe una positzione iscurrende dae basciu a susu de s'ischermu"
+>>>>>>> Translated using Weblate (Sardinian)
 
 #: ../app/components/HomeTempInfo.qml:108
 msgid "Today"
