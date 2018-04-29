@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
 "PO-Revision-Date: 2018-04-29 11:15+0000\n"
-"Last-Translator: Matteo Mandis <mandismatteo@gmail.com>\n"
+"Last-Translator: Flavia <flavia.efloris@gmail.com>\n"
 "Language-Team: Sardinian <https://translate.ubports.com/projects/ubports"
 "/weather-app/sc/>\n"
 "Language: sc\n"
@@ -75,9 +75,8 @@ msgid "Cannot determine your location"
 msgstr "Impossìbile determinare sa positzione"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:62
-#, fuzzy
 msgid "Manually add a location by swiping up from the bottom of the display"
-msgstr "Agiunghe una positzione iscurrende in susu dae su bassu de s'ischermu"
+msgstr "Agiunghe una positzione iscurrende dae basciu a susu de s'ischermu"
 
 #: ../app/components/HomeTempInfo.qml:108
 msgid "Today"
