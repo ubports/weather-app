@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2018-05-01 17:55+0000\n"
-"Last-Translator: Hugh Y <hugh_yan@live.com>\n"
+"PO-Revision-Date: 2018-05-01 17:56+0000\n"
+"Last-Translator: kuailexs <952415538@qq.com>\n"
 "Language-Team: Chinese (Simplified) "
 "<https://translate.ubports.com/projects/ubports/weather-app/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -98,12 +98,11 @@ msgstr[0] "最近更新于%1小时前"
 #, qt-format
 msgid "updated %1 minute ago"
 msgid_plural "updated %1 minutes ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "更新于％1分钟前"
 
 #: ../app/components/HomeTempInfo.qml:118
 msgid "updated recently"
-msgstr ""
+msgstr "最近更新"
 
 #: ../app/components/ListItemActions/Remove.qml:26
 msgid "Remove"
@@ -119,7 +118,7 @@ msgstr "网络错误"
 
 #: ../app/components/NetworkErrorStateComponent.qml:57
 msgid "Please check your network settings and try again."
-msgstr ""
+msgstr "请检查您的网络设置，然后重试。"
 
 #: ../app/components/NetworkErrorStateComponent.qml:63
 msgid "Retry"
@@ -127,13 +126,13 @@ msgstr "重试"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:47
 msgid "No API Keys Found"
-msgstr ""
+msgstr "没有找到 API 密钥"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:56
 msgid ""
 "If you are a developer, please see the README file for instructions on how "
 "to obtain your own Open Weather Map API key."
-msgstr ""
+msgstr "如果您是开发人员，请参阅自述文件以获取有关如何获取您自己的Open Weather Map API密钥的说明。"
 
 #: ../app/ubuntu-weather-app.qml:235
 msgid ""
