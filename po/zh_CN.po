@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
 "PO-Revision-Date: 2018-05-01 17:56+0000\n"
-"Last-Translator: kuailexs <952415538@qq.com>\n"
+"Last-Translator: Hugh Y <hugh_yan@live.com>\n"
 "Language-Team: Chinese (Simplified) "
 "<https://translate.ubports.com/projects/ubports/weather-app/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of precipitation"
-msgstr "降水几率"
+msgstr "降水概率"
 
 #: ../app/components/DayDelegateExtraInfo.qml:59
 msgid "Winds"
@@ -98,7 +98,7 @@ msgstr[0] "最近更新于%1小时前"
 #, qt-format
 msgid "updated %1 minute ago"
 msgid_plural "updated %1 minutes ago"
-msgstr[0] "更新于％1分钟前"
+msgstr[0] "最近更新于％1分钟前"
 
 #: ../app/components/HomeTempInfo.qml:118
 msgid "updated recently"
