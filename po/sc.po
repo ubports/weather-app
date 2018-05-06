@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2018-04-27 13:38+0000\n"
-"Last-Translator: Adrià <adriamartinmor@gmail.com>\n"
+"PO-Revision-Date: 2018-04-30 14:39+0000\n"
+"Last-Translator: Flavia <flavia.efloris@gmail.com>\n"
 "Language-Team: Sardinian <https://translate.ubports.com/projects/ubports"
 "/weather-app/sc/>\n"
 "Language: sc\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of precipitation"
-msgstr ""
+msgstr "Possibilidade de abba"
 
 #: ../app/components/DayDelegateExtraInfo.qml:59
 msgid "Winds"
@@ -75,16 +75,15 @@ msgid "Cannot determine your location"
 msgstr "Impossìbile determinare sa positzione"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:62
-#, fuzzy
 msgid "Manually add a location by swiping up from the bottom of the display"
-msgstr "Agiunghe una positzione iscurrende in susu dae su bassu de s'ischermu"
+msgstr "Agiunghe una positzione iscurrende dae bàsciu a susu de s'ischermu"
 
 #: ../app/components/HomeTempInfo.qml:108
 msgid "Today"
 msgstr "Oe"
 
 #: ../app/components/HomeTempInfo.qml:112
-#, fuzzy, qt-format
+#, qt-format
 msgid "updated %1 day ago"
 msgid_plural "updated %1 days ago"
 msgstr[0] "atualizadu %1 die a oe"
@@ -113,7 +112,6 @@ msgid "Remove"
 msgstr "Cantzella"
 
 #: ../app/components/LocationsPageEmptyStateComponent.qml:36
-#, fuzzy
 msgid "No locations found. Tap the plus icon to search for one."
 msgstr "Peruna positzione agatada. Incarca s'icona + pro nde chircare una."
 
@@ -147,6 +145,9 @@ msgid ""
 "One arguments for weather app: --display, --city, --lat, --lng They will be "
 "managed by system. See the source for a full comment about them"
 msgstr ""
+"Argumentos ùnicos pro s'aplicatzione de su tempus: --display, --city, --lat, "
+"--lng Ant a èssere gestidos dae su sistema. Càstia su còdighe de orìgine pro "
+"unu cummentu cumpletu"
 
 #: ../app/ui/AddLocationPage.qml:38
 msgid "Select a city"
@@ -199,7 +200,7 @@ msgstr "Fornidore de datos"
 
 #: ../app/ui/SettingsPage.qml:60 ../app/ui/settings/RefreshIntervalPage.qml:27
 msgid "Refresh Interval"
-msgstr ""
+msgstr "Intervallu de atualizatzione"
 
 #: ../app/ui/SettingsPage.qml:68 ../app/ui/settings/LocationPage.qml:26
 msgid "Location"
