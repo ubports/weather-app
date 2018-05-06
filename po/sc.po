@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2018-04-30 14:39+0000\n"
-"Last-Translator: Flavia <flavia.efloris@gmail.com>\n"
+"PO-Revision-Date: 2018-05-06 10:35+0000\n"
+"Last-Translator: Adrià <adriamartinmor@gmail.com>\n"
 "Language-Team: Sardinian <https://translate.ubports.com/projects/ubports"
 "/weather-app/sc/>\n"
 "Language: sc\n"
@@ -58,7 +58,6 @@ msgid "Cancel selection"
 msgstr "Annulla sa seletzione"
 
 #: ../app/components/HeadState/MultiSelectHeadState.qml:46
-#, fuzzy
 msgid "Select All"
 msgstr "Seletziona totus"
 
@@ -132,13 +131,12 @@ msgid "No API Keys Found"
 msgstr "Peruna crae API agatada"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:56
-#, fuzzy
 msgid ""
 "If you are a developer, please see the README file for instructions on how "
 "to obtain your own Open Weather Map API key."
 msgstr ""
-"Si ses unu isvilupadore, leghe s'archìviu README pro tènnere istrutzione "
-"subra de comente podes otènnere una crae API tua de Open Weather Map."
+"Si ses un'isvilupadore, leghe s'archìviu README e sighi is istrutziones pro "
+"otènnere una crae API tua de Open Weather Map."
 
 #: ../app/ubuntu-weather-app.qml:235
 msgid ""
@@ -174,7 +172,6 @@ msgid "Couldn't load weather data, please try later again!"
 msgstr "Impossìbile carrigare datos meteorològicos, torra·bi a proare a pustis!"
 
 #: ../app/ui/AddLocationPage.qml:304
-#, fuzzy
 msgid "Location already added."
 msgstr "Positzione giai agiunta."
 
@@ -270,7 +267,6 @@ msgid "Weather"
 msgstr "Meteo"
 
 #: ubuntu-weather-app.desktop.in.in.h:2
-#, fuzzy
 msgid ""
 "A weather forecast application for Ubuntu with support for multiple online "
 "weather data sources"
