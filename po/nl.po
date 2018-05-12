@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2018-01-16 09:15+0000\n"
-"Last-Translator: Mathijs Verbeek <m.verbeek@boboti.nl>\n"
+"PO-Revision-Date: 2018-05-12 10:03+0000\n"
+"Last-Translator: Laurentijn Tilleman <laurentijn.tilleman@gmail.com>\n"
 "Language-Team: Dutch <https://translate.ubports.com/projects/ubports/weather-"
 "app/nl/>\n"
 "Language: nl\n"
@@ -175,7 +175,7 @@ msgstr "Locatie is al toegevoegd."
 
 #: ../app/ui/AddLocationPage.qml:307
 msgid "OK"
-msgstr "Oké"
+msgstr "OK"
 
 #: ../app/ui/LocationsPage.qml:99
 msgid "Current Location"
