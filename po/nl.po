@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2018-05-12 10:03+0000\n"
-"Last-Translator: Laurentijn Tilleman <laurentijn.tilleman@gmail.com>\n"
+"PO-Revision-Date: 2018-05-25 22:00+0000\n"
+"Last-Translator: Joachim Lazaroms <joachim.pc@gmail.com>\n"
 "Language-Team: Dutch <https://translate.ubports.com/projects/ubports/weather-"
 "app/nl/>\n"
 "Language: nl\n"
@@ -88,22 +88,22 @@ msgstr "Vandaag"
 #, qt-format
 msgid "updated %1 day ago"
 msgid_plural "updated %1 days ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 dag geleden ge-update"
+msgstr[1] "%1 dagen geleden ge-update"
 
 #: ../app/components/HomeTempInfo.qml:114
 #, qt-format
 msgid "updated %1 hour ago"
 msgid_plural "updated %1 hours ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 uur geleden ge-update"
+msgstr[1] "%1 uren geleden ge-update"
 
 #: ../app/components/HomeTempInfo.qml:116
 #, qt-format
 msgid "updated %1 minute ago"
 msgid_plural "updated %1 minutes ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 minuut geleden ge-update"
+msgstr[1] "%1 minuten geleden ge-update"
 
 #: ../app/components/HomeTempInfo.qml:118
 msgid "updated recently"
@@ -123,7 +123,7 @@ msgstr "Netwerkfout"
 
 #: ../app/components/NetworkErrorStateComponent.qml:57
 msgid "Please check your network settings and try again."
-msgstr ""
+msgstr "Controleer uw netwerk (instellingen) en probeer het opnieuw."
 
 #: ../app/components/NetworkErrorStateComponent.qml:63
 msgid "Retry"
@@ -131,13 +131,16 @@ msgstr "Opnieuw proberen"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:47
 msgid "No API Keys Found"
-msgstr ""
+msgstr "Geen “API keys” gevonden"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:56
 msgid ""
 "If you are a developer, please see the README file for instructions on how "
 "to obtain your own Open Weather Map API key."
 msgstr ""
+"Kijk in het bestand genaamd “README”, voor instructies om je eigen “Open "
+"Weather Map API key” te verkrijgen. De kans is groot dat u een ontwikkelaar/"
+"programmeur moet zijn om dit te begrijpen."
 
 #: ../app/ubuntu-weather-app.qml:235
 msgid ""
@@ -147,7 +150,7 @@ msgstr ""
 
 #: ../app/ui/AddLocationPage.qml:38
 msgid "Select a city"
-msgstr "Een plaats selecteren"
+msgstr "Selecteer een plaats"
 
 #: ../app/ui/AddLocationPage.qml:49
 msgid "City"
@@ -199,7 +202,7 @@ msgstr "Verversingsinterval"
 
 #: ../app/ui/SettingsPage.qml:68 ../app/ui/settings/LocationPage.qml:26
 msgid "Location"
-msgstr "Locatie"
+msgstr "Plaats"
 
 #: ../app/ui/settings/DataProviderPage.qml:42
 msgid "Provider"
