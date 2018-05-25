@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2018-05-12 15:04+0000\n"
-"Last-Translator: Tomas Öqvist <tomas.oqvist@gmail.com>\n"
+"PO-Revision-Date: 2018-05-25 00:21+0000\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Swedish <https://translate.ubports.com/projects/ubports"
 "/weather-app/sv/>\n"
 "Language: sv\n"
@@ -176,7 +176,7 @@ msgstr "Platsen redan tillagd."
 
 #: ../app/ui/AddLocationPage.qml:307
 msgid "OK"
-msgstr "Ok"
+msgstr "OK"
 
 #: ../app/ui/LocationsPage.qml:99
 msgid "Current Location"
