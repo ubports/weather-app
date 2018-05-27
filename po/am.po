@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2018-05-13 20:51+0000\n"
+"PO-Revision-Date: 2018-05-27 14:12+0000\n"
 "Last-Translator: Samson <sambelet@yahoo.com>\n"
 "Language-Team: Amharic <https://translate.ubports.com/projects/ubports"
 "/weather-app/am/>\n"
@@ -125,7 +125,7 @@ msgstr "እባክዎን የ ኔትዎርክ ማሰናጃውን ይመርምሩ �
 
 #: ../app/components/NetworkErrorStateComponent.qml:63
 msgid "Retry"
-msgstr "እንደገና መሞከሪያ"
+msgstr "እንደገና ይሞክሩ"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:47
 msgid "No API Keys Found"
