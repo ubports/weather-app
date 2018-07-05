@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2018-07-05 08:20+0000\n"
+"PO-Revision-Date: 2018-07-05 11:28+0000\n"
 "Last-Translator: konrad <kohofer@gmail.com>\n"
 "Language-Team: English (United Kingdom) "
 "<https://translate.ubports.com/projects/ubports/weather-app/en_GB/>\n"
@@ -64,7 +64,7 @@ msgstr "Select All"
 
 #: ../app/components/HeadState/MultiSelectHeadState.qml:58
 msgid "Delete"
-msgstr "Supprimer"
+msgstr "Delete"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:51
 msgid "Searching for current location..."
@@ -157,7 +157,7 @@ msgstr "City"
 
 #: ../app/ui/AddLocationPage.qml:65
 msgid "Back"
-msgstr "Tillbaka"
+msgstr "Back"
 
 #: ../app/ui/AddLocationPage.qml:108
 msgid "Search city"
