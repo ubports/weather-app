@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2017-09-29 07:41+0000\n"
+"PO-Revision-Date: 2018-06-02 21:19+0000\n"
 "Last-Translator: Jeff <jeffi27@live.at>\n"
 "Language-Team: Albanian <https://translate.ubports.com/projects/ubports"
 "/weather-app/sq/>\n"
@@ -176,7 +176,7 @@ msgstr "Vendi tashmë është shtuar."
 
 #: ../app/ui/AddLocationPage.qml:307
 msgid "OK"
-msgstr "Ok"
+msgstr "OK"
 
 #: ../app/ui/LocationsPage.qml:99
 msgid "Current Location"
@@ -184,7 +184,7 @@ msgstr "Vendndodhja aktuale"
 
 #: ../app/ui/SettingsPage.qml:27
 msgid "Settings"
-msgstr "Konfigurimi"
+msgstr "Cilsimet"
 
 #: ../app/ui/SettingsPage.qml:44 ../app/ui/settings/UnitsPage.qml:29
 msgid "Units"
