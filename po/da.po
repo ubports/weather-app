@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2017-10-15 13:51+0000\n"
-"Last-Translator: Henrik Holm <hbir@post10.tele.dk>\n"
-"Language-Team: Danish <https://translate.ubports.com/projects/ubports"
-"/weather-app/da/>\n"
+"PO-Revision-Date: 2018-08-05 15:49+0000\n"
+"Last-Translator: Tom Rausner <tomrausner@gmail.com>\n"
+"Language-Team: Danish <https://translate.ubports.com/projects/ubports/"
+"weather-app/da/>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.15\n"
+"X-Generator: Weblate 2.20\n"
 "X-Launchpad-Export-Date: 2017-04-27 05:56+0000\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
@@ -136,6 +136,8 @@ msgid ""
 "If you are a developer, please see the README file for instructions on how "
 "to obtain your own Open Weather Map API key."
 msgstr ""
+"Hvis du er programudvikler, så læs venligst README filen for instruktion om "
+"hvordan du kan få din egen Open Weather Map API nøgle."
 
 #: ../app/ubuntu-weather-app.qml:235
 msgid ""
@@ -177,7 +179,7 @@ msgstr "OK"
 
 #: ../app/ui/LocationsPage.qml:99
 msgid "Current Location"
-msgstr "Nuværende lokation"
+msgstr "Nuværende placering"
 
 #: ../app/ui/SettingsPage.qml:27
 msgid "Settings"
@@ -205,7 +207,7 @@ msgstr "Udbyder"
 
 #: ../app/ui/settings/LocationPage.qml:34
 msgid "Detect current location"
-msgstr ""
+msgstr "Find nuværende lokation"
 
 #: ../app/ui/settings/RefreshIntervalPage.qml:34
 #: ../app/ui/settings/RefreshIntervalPage.qml:35
@@ -220,7 +222,7 @@ msgstr[1] "%1 minutter"
 
 #: ../app/ui/settings/RefreshIntervalPage.qml:47
 msgid "Interval"
-msgstr ""
+msgstr "Interval"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of temperature in Celcius and are shown in the settings page.
@@ -241,22 +243,22 @@ msgstr ""
 #. Only the abbreviated form of kilometers per hour should be used.
 #: ../app/ui/settings/UnitsPage.qml:63 ../app/ui/settings/UnitsPage.qml:104
 msgid "kph"
-msgstr ""
+msgstr "Km/t"
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of wind speed in miles per hour and are shown in the settings page.
 #. Only the abbreviated form of miles per hour should be used.
 #: ../app/ui/settings/UnitsPage.qml:68 ../app/ui/settings/UnitsPage.qml:105
 msgid "mph"
-msgstr ""
+msgstr "mph"
 
 #: ../app/ui/settings/UnitsPage.qml:82
 msgid "Temperature"
-msgstr ""
+msgstr "Temperatur"
 
 #: ../app/ui/settings/UnitsPage.qml:103
 msgid "Wind Speed"
-msgstr ""
+msgstr "Vindhastighed"
 
 #: ubuntu-weather-app.desktop.in.in.h:1
 msgid "Weather"
@@ -267,7 +269,9 @@ msgid ""
 "A weather forecast application for Ubuntu with support for multiple online "
 "weather data sources"
 msgstr ""
+"Et vejrforudsigelses program for Ubuntu med support for flere forskellige "
+"online vejrdata kilder"
 
 #: ubuntu-weather-app.desktop.in.in.h:3
 msgid "weather;forecast;twc;openweathermap;the weather channel;"
-msgstr ""
+msgstr "vejr;forudsigelse;twc;åbenvejrkort;vejrkanalen;"
