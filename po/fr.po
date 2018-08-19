@@ -208,7 +208,7 @@ msgstr "Intervalle d'actualisation"
 
 #: ../app/ui/SettingsPage.qml:68 ../app/ui/settings/LocationPage.qml:26
 msgid "Location"
-msgstr "Position"
+msgstr "Emplacement"
 
 #: ../app/ui/settings/DataProviderPage.qml:42
 msgid "Provider"
