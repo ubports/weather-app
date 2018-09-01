@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2018-08-05 15:49+0000\n"
+"PO-Revision-Date: 2018-08-12 06:18+0000\n"
 "Last-Translator: Tom Rausner <tomrausner@gmail.com>\n"
 "Language-Team: Danish <https://translate.ubports.com/projects/ubports/"
 "weather-app/da/>\n"
@@ -144,6 +144,8 @@ msgid ""
 "One arguments for weather app: --display, --city, --lat, --lng They will be "
 "managed by system. See the source for a full comment about them"
 msgstr ""
+"Et argumenter til vejr app: --fremvis, --by, --bred, --læng De vil blive "
+"håndteret af systemet. Se kilden for den fulde kommentar til dem"
 
 #: ../app/ui/AddLocationPage.qml:38
 msgid "Select a city"
@@ -207,7 +209,7 @@ msgstr "Udbyder"
 
 #: ../app/ui/settings/LocationPage.qml:34
 msgid "Detect current location"
-msgstr "Find nuværende lokation"
+msgstr "Find nuværende placering"
 
 #: ../app/ui/settings/RefreshIntervalPage.qml:34
 #: ../app/ui/settings/RefreshIntervalPage.qml:35
@@ -262,7 +264,7 @@ msgstr "Vindhastighed"
 
 #: ubuntu-weather-app.desktop.in.in.h:1
 msgid "Weather"
-msgstr "Vejret"
+msgstr "Vejr"
 
 #: ubuntu-weather-app.desktop.in.in.h:2
 msgid ""
