@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2018-10-23 01:55+0000\n"
+"PO-Revision-Date: 2018-10-25 10:33+0000\n"
 "Last-Translator: Louies <louies0623@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://translate.ubports.com/projects/"
 "ubports/weather-app/zh_Hant/>\n"
@@ -33,6 +33,7 @@ msgid "UV Index"
 msgstr "紫外線指數"
 
 #: ../app/components/DayDelegateExtraInfo.qml:74
+#, fuzzy
 msgid "Pollen"
 msgstr "花粉"
 
@@ -75,6 +76,7 @@ msgid "Cannot determine your location"
 msgstr "無法確定您的位置"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:62
+#, fuzzy
 msgid "Manually add a location by swiping up from the bottom of the display"
 msgstr "從螢幕下緣往上拉來新增位置"
 
@@ -125,18 +127,19 @@ msgid "Retry"
 msgstr "重試"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:47
+#, fuzzy
 msgid "No API Keys Found"
 msgstr "沒有找到 API 金鑰"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:56
+#, fuzzy
 msgid ""
 "If you are a developer, please see the README file for instructions on how "
 "to obtain your own Open Weather Map API key."
-msgstr ""
-"若您是開發人員，請閱讀 README 檔來取得關於如何獲得您自己的 Open Weather Map "
-"API 金鑰的相關訊息。"
+msgstr "若您是開發人員，請閱讀 README 檔來取得關於如何獲得您自己的 Open Weather Map API 金鑰的相關訊息。"
 
 #: ../app/ubuntu-weather-app.qml:235
+#, fuzzy
 msgid ""
 "One arguments for weather app: --display, --city, --lat, --lng They will be "
 "managed by system. See the source for a full comment about them"
@@ -165,7 +168,7 @@ msgstr "找不到城市"
 
 #: ../app/ui/AddLocationPage.qml:294
 msgid "Couldn't load weather data, please try later again!"
-msgstr "無法載入天氣資料，請稍後重試！"
+msgstr "無法載入天氣資料，請稍後在重試！"
 
 #: ../app/ui/AddLocationPage.qml:304
 msgid "Location already added."
@@ -268,5 +271,6 @@ msgid ""
 msgstr "Ubuntu 的天氣預測桯式，支援多個天氣資料提供者"
 
 #: ubuntu-weather-app.desktop.in.in.h:3
+#, fuzzy
 msgid "weather;forecast;twc;openweathermap;the weather channel;"
 msgstr "weather;forecast;twc;openweathermap;the weather channel;天氣;預測;"
