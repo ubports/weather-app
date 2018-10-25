@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2018-10-25 10:33+0000\n"
-"Last-Translator: Louies <louies0623@gmail.com>\n"
+"PO-Revision-Date: 2018-10-25 11:11+0000\n"
+"Last-Translator: P.-H. Lin <cypressyew@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://translate.ubports.com/projects/"
 "ubports/weather-app/zh_Hant/>\n"
 "Language: zh_TW\n"
@@ -33,7 +33,6 @@ msgid "UV Index"
 msgstr "紫外線指數"
 
 #: ../app/components/DayDelegateExtraInfo.qml:74
-#, fuzzy
 msgid "Pollen"
 msgstr "花粉"
 
@@ -76,7 +75,6 @@ msgid "Cannot determine your location"
 msgstr "無法確定您的位置"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:62
-#, fuzzy
 msgid "Manually add a location by swiping up from the bottom of the display"
 msgstr "從螢幕下緣往上拉來新增位置"
 
@@ -127,12 +125,10 @@ msgid "Retry"
 msgstr "重試"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:47
-#, fuzzy
 msgid "No API Keys Found"
 msgstr "沒有找到 API 金鑰"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:56
-#, fuzzy
 msgid ""
 "If you are a developer, please see the README file for instructions on how "
 "to obtain your own Open Weather Map API key."
@@ -273,4 +269,4 @@ msgstr "Ubuntu 的天氣預測桯式，支援多個天氣資料提供者"
 #: ubuntu-weather-app.desktop.in.in.h:3
 #, fuzzy
 msgid "weather;forecast;twc;openweathermap;the weather channel;"
-msgstr "weather;forecast;twc;openweathermap;the weather channel;天氣;預測;"
+msgstr "weather;forecast;twc;openweathermap;the weather channel;天氣;預報;"
