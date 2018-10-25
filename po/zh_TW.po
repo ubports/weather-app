@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2018-10-25 11:18+0000\n"
+"PO-Revision-Date: 2018-10-25 14:02+0000\n"
 "Last-Translator: Louies <louies0623@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://translate.ubports.com/projects/"
 "ubports/weather-app/zh_Hant/>\n"
@@ -76,7 +76,7 @@ msgstr "無法確定您的位置"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:62
 msgid "Manually add a location by swiping up from the bottom of the display"
-msgstr "從螢幕下緣往上拉來新增位置"
+msgstr "從螢幕底部往上拉來新增位置"
 
 #: ../app/components/HomeTempInfo.qml:108
 msgid "Today"
