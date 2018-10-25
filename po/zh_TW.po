@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2018-10-25 11:11+0000\n"
-"Last-Translator: P.-H. Lin <cypressyew@gmail.com>\n"
+"PO-Revision-Date: 2018-10-25 11:18+0000\n"
+"Last-Translator: Louies <louies0623@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://translate.ubports.com/projects/"
 "ubports/weather-app/zh_Hant/>\n"
 "Language: zh_TW\n"
@@ -135,12 +135,11 @@ msgid ""
 msgstr "若您是開發人員，請閱讀 README 檔來取得關於如何獲得您自己的 Open Weather Map API 金鑰的相關訊息。"
 
 #: ../app/ubuntu-weather-app.qml:235
-#, fuzzy
 msgid ""
 "One arguments for weather app: --display, --city, --lat, --lng They will be "
 "managed by system. See the source for a full comment about them"
 msgstr ""
-"天氣應用程序的一個參數： --display， --city， --lalat， --lng它們將由系統管理。 請參閱消息來源以獲取有關它們的完整評論"
+"天氣應用程序的一個參數:--display, --city, --lat, --lng 它們將由系統管理。 請參閱消息來源以獲取有關它們的完整評論"
 
 #: ../app/ui/AddLocationPage.qml:38
 msgid "Select a city"
@@ -267,6 +266,5 @@ msgid ""
 msgstr "Ubuntu 的天氣預測桯式，支援多個天氣資料提供者"
 
 #: ubuntu-weather-app.desktop.in.in.h:3
-#, fuzzy
 msgid "weather;forecast;twc;openweathermap;the weather channel;"
-msgstr "weather;forecast;twc;openweathermap;the weather channel;天氣;預報;"
+msgstr "天氣;預報;twc;openweathermap;天氣通道;"
