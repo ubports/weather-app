@@ -8,16 +8,17 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2016-07-14 10:33+0000\n"
-"Last-Translator: Po-Hsu Lin <po-hsu.lin@canonical.com>\n"
-"Language-Team: Chinese (Traditional) <zh_TW@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2018-10-25 14:02+0000\n"
+"Last-Translator: Louies <louies0623@gmail.com>\n"
+"Language-Team: Chinese (Traditional) <https://translate.ubports.com/projects/"
+"ubports/weather-app/zh_Hant/>\n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-04-27 05:56+0000\n"
-"X-Generator: Launchpad (build 18364)\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of precipitation"
@@ -59,7 +60,7 @@ msgstr "取消選取"
 
 #: ../app/components/HeadState/MultiSelectHeadState.qml:46
 msgid "Select All"
-msgstr "全部選取"
+msgstr "全選"
 
 #: ../app/components/HeadState/MultiSelectHeadState.qml:58
 msgid "Delete"
@@ -75,7 +76,7 @@ msgstr "無法確定您的位置"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:62
 msgid "Manually add a location by swiping up from the bottom of the display"
-msgstr "從螢幕下緣往上拉來新增位置"
+msgstr "從螢幕底部往上拉來新增位置"
 
 #: ../app/components/HomeTempInfo.qml:108
 msgid "Today"
@@ -85,26 +86,23 @@ msgstr "今日"
 #, qt-format
 msgid "updated %1 day ago"
 msgid_plural "updated %1 days ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "％1天前已更新"
 
 #: ../app/components/HomeTempInfo.qml:114
 #, qt-format
 msgid "updated %1 hour ago"
 msgid_plural "updated %1 hours ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "％1小時前已更新"
 
 #: ../app/components/HomeTempInfo.qml:116
 #, qt-format
 msgid "updated %1 minute ago"
 msgid_plural "updated %1 minutes ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "％1分鐘前已更新"
 
 #: ../app/components/HomeTempInfo.qml:118
 msgid "updated recently"
-msgstr ""
+msgstr "最近更新"
 
 #: ../app/components/ListItemActions/Remove.qml:26
 msgid "Remove"
@@ -134,15 +132,14 @@ msgstr "沒有找到 API 金鑰"
 msgid ""
 "If you are a developer, please see the README file for instructions on how "
 "to obtain your own Open Weather Map API key."
-msgstr ""
-"若您是開發人員，請閱讀 README 檔來取得關於如何獲得您自己的 Open Weather Map "
-"API 金鑰的相關訊息。"
+msgstr "若您是開發人員，請閱讀 README 檔來取得關於如何獲得您自己的 Open Weather Map API 金鑰的相關訊息。"
 
 #: ../app/ubuntu-weather-app.qml:235
 msgid ""
 "One arguments for weather app: --display, --city, --lat, --lng They will be "
 "managed by system. See the source for a full comment about them"
 msgstr ""
+"天氣應用程序的一個參數:--display, --city, --lat, --lng 它們將由系統管理。 請參閱消息來源以獲取有關它們的完整評論"
 
 #: ../app/ui/AddLocationPage.qml:38
 msgid "Select a city"
@@ -166,7 +163,7 @@ msgstr "找不到城市"
 
 #: ../app/ui/AddLocationPage.qml:294
 msgid "Couldn't load weather data, please try later again!"
-msgstr "無法載入天氣資料，請稍後重試！"
+msgstr "無法載入天氣資料，請稍後在重試！"
 
 #: ../app/ui/AddLocationPage.qml:304
 msgid "Location already added."
@@ -270,4 +267,4 @@ msgstr "Ubuntu 的天氣預測桯式，支援多個天氣資料提供者"
 
 #: ubuntu-weather-app.desktop.in.in.h:3
 msgid "weather;forecast;twc;openweathermap;the weather channel;"
-msgstr "weather;forecast;twc;openweathermap;the weather channel;天氣;預測;"
+msgstr "天氣;預報;twc;openweathermap;天氣通道;"
