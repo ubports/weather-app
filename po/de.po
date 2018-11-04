@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2017-09-24 07:45+0000\n"
-"Last-Translator: Twinkybot <me@twinkybot.org>\n"
-"Language-Team: German <https://translate.ubports.com/projects/ubports"
-"/weather-app/de/>\n"
+"PO-Revision-Date: 2018-10-28 18:54+0000\n"
+"Last-Translator: Florian Leeber <flori@bin.org.in>\n"
+"Language-Team: German <https://translate.ubports.com/projects/ubports/"
+"weather-app/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.15\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-04-27 05:56+0000\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
@@ -60,7 +60,7 @@ msgstr "Auswahl abbrechen"
 
 #: ../app/components/HeadState/MultiSelectHeadState.qml:46
 msgid "Select All"
-msgstr "Alle auswählen"
+msgstr "Alles auswählen"
 
 #: ../app/components/HeadState/MultiSelectHeadState.qml:58
 msgid "Delete"
