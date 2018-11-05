@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2018-05-06 10:21+0000\n"
-"Last-Translator: Adrià <adriamartinmor@gmail.com>\n"
-"Language-Team: Catalan <https://translate.ubports.com/projects/ubports"
-"/weather-app/ca/>\n"
+"PO-Revision-Date: 2018-11-11 00:02+0000\n"
+"Last-Translator: Joan CiberSheep <cibersheep@gmail.com>\n"
+"Language-Team: Catalan <https://translate.ubports.com/projects/ubports/"
+"weather-app/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.15\n"
+"X-Generator: Weblate 3.1.1\n"
 "X-Launchpad-Export-Date: 2017-04-27 05:56+0000\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
@@ -181,7 +181,7 @@ msgstr "Ja s'ha afegit la ubicació."
 
 #: ../app/ui/AddLocationPage.qml:307
 msgid "OK"
-msgstr "D'acord"
+msgstr "D’acord"
 
 #: ../app/ui/LocationsPage.qml:99
 msgid "Current Location"
