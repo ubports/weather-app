@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2018-10-25 14:02+0000\n"
+"PO-Revision-Date: 2018-11-18 08:46+0000\n"
 "Last-Translator: Louies <louies0623@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://translate.ubports.com/projects/"
 "ubports/weather-app/zh_Hant/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 3.1.1\n"
 "X-Launchpad-Export-Date: 2017-04-27 05:56+0000\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
@@ -76,29 +76,29 @@ msgstr "無法確定您的位置"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:62
 msgid "Manually add a location by swiping up from the bottom of the display"
-msgstr "從螢幕底部往上拉來新增位置"
+msgstr "從螢幕底部往上拉來加入位置"
 
 #: ../app/components/HomeTempInfo.qml:108
 msgid "Today"
-msgstr "今日"
+msgstr "今天"
 
 #: ../app/components/HomeTempInfo.qml:112
 #, qt-format
 msgid "updated %1 day ago"
 msgid_plural "updated %1 days ago"
-msgstr[0] "％1天前已更新"
+msgstr[0] "%1天前已更新"
 
 #: ../app/components/HomeTempInfo.qml:114
 #, qt-format
 msgid "updated %1 hour ago"
 msgid_plural "updated %1 hours ago"
-msgstr[0] "％1小時前已更新"
+msgstr[0] "%1小時前已更新"
 
 #: ../app/components/HomeTempInfo.qml:116
 #, qt-format
 msgid "updated %1 minute ago"
 msgid_plural "updated %1 minutes ago"
-msgstr[0] "％1分鐘前已更新"
+msgstr[0] "%1分鐘前已更新"
 
 #: ../app/components/HomeTempInfo.qml:118
 msgid "updated recently"
@@ -132,18 +132,18 @@ msgstr "沒有找到 API 金鑰"
 msgid ""
 "If you are a developer, please see the README file for instructions on how "
 "to obtain your own Open Weather Map API key."
-msgstr "若您是開發人員，請閱讀 README 檔來取得關於如何獲得您自己的 Open Weather Map API 金鑰的相關訊息。"
+msgstr "若您是開發人員，請閱讀 README 檔案來取得關於如何獲得您自己的 Open Weather Map API 金鑰的相關訊息。"
 
 #: ../app/ubuntu-weather-app.qml:235
 msgid ""
 "One arguments for weather app: --display, --city, --lat, --lng They will be "
 "managed by system. See the source for a full comment about them"
 msgstr ""
-"天氣應用程序的一個參數:--display, --city, --lat, --lng 它們將由系統管理。 請參閱消息來源以獲取有關它們的完整評論"
+"天氣應用程式的一個參數:--display, --city, --lat, --lng 它們將由系統管理。 請參閱消息來源以獲取有關它們的完整評論"
 
 #: ../app/ui/AddLocationPage.qml:38
 msgid "Select a city"
-msgstr "選取城市"
+msgstr "選擇城市"
 
 #: ../app/ui/AddLocationPage.qml:49
 msgid "City"
