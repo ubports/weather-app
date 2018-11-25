@@ -1,66 +1,65 @@
-# Chinese (Traditional) translation for ubuntu-weather-app
-# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Canonical Ltd.
 # This file is distributed under the same license as the ubuntu-weather-app package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-weather-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-12 12:07+0100\n"
-"PO-Revision-Date: 2018-11-18 08:46+0000\n"
+"PO-Revision-Date: 2018-11-25 00:01+0000\n"
 "Last-Translator: Louies <louies0623@gmail.com>\n"
-"Language-Team: Chinese (Traditional) <https://translate.ubports.com/projects/"
-"ubports/weather-app/zh_Hant/>\n"
-"Language: zh_TW\n"
+"Language-Team: Chinese (Hong Kong) <https://translate.ubports.com/projects/"
+"ubports/weather-app/zh_Hant_HK/>\n"
+"Language: zh_Hant_HK\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 3.1.1\n"
-"X-Launchpad-Export-Date: 2017-04-27 05:56+0000\n"
 
 #: ../app/components/DayDelegateExtraInfo.qml:52
 msgid "Chance of precipitation"
-msgstr "降雨機率"
+msgstr ""
 
 #: ../app/components/DayDelegateExtraInfo.qml:59
 msgid "Winds"
-msgstr "風"
+msgstr ""
 
 #: ../app/components/DayDelegateExtraInfo.qml:68
 msgid "UV Index"
-msgstr "紫外線指數"
+msgstr ""
 
 #: ../app/components/DayDelegateExtraInfo.qml:74
 msgid "Pollen"
-msgstr "花粉"
+msgstr ""
 
 #: ../app/components/DayDelegateExtraInfo.qml:81
 msgid "Humidity"
-msgstr "溼度"
+msgstr ""
 
 #: ../app/components/DayDelegateExtraInfo.qml:88
 msgid "Sunrise"
-msgstr "日出"
+msgstr ""
 
 #: ../app/components/DayDelegateExtraInfo.qml:95
 msgid "Sunset"
-msgstr "日落"
+msgstr ""
 
 #: ../app/components/HeadState/LocationsHeadState.qml:36
 #: ../app/components/HeadState/MultiSelectHeadState.qml:41
 #: ../app/ui/HomePage.qml:41
 msgid "Locations"
-msgstr "位置"
+msgstr ""
 
 #: ../app/components/HeadState/MultiSelectHeadState.qml:32
 msgid "Cancel selection"
-msgstr "取消選取"
+msgstr ""
 
 #: ../app/components/HeadState/MultiSelectHeadState.qml:46
 msgid "Select All"
-msgstr "全選"
+msgstr ""
 
 #: ../app/components/HeadState/MultiSelectHeadState.qml:58
 msgid "Delete"
@@ -68,15 +67,15 @@ msgstr "刪除"
 
 #: ../app/components/HomePageEmptyStateComponent.qml:51
 msgid "Searching for current location..."
-msgstr "搜尋目前位置..."
+msgstr ""
 
 #: ../app/components/HomePageEmptyStateComponent.qml:52
 msgid "Cannot determine your location"
-msgstr "無法確定您的位置"
+msgstr ""
 
 #: ../app/components/HomePageEmptyStateComponent.qml:62
 msgid "Manually add a location by swiping up from the bottom of the display"
-msgstr "從螢幕底部往上拉來加入位置"
+msgstr ""
 
 #: ../app/components/HomeTempInfo.qml:108
 msgid "Today"
@@ -86,23 +85,23 @@ msgstr "今天"
 #, qt-format
 msgid "updated %1 day ago"
 msgid_plural "updated %1 days ago"
-msgstr[0] "%1天前已更新"
+msgstr[0] ""
 
 #: ../app/components/HomeTempInfo.qml:114
 #, qt-format
 msgid "updated %1 hour ago"
 msgid_plural "updated %1 hours ago"
-msgstr[0] "%1小時前已更新"
+msgstr[0] ""
 
 #: ../app/components/HomeTempInfo.qml:116
 #, qt-format
 msgid "updated %1 minute ago"
 msgid_plural "updated %1 minutes ago"
-msgstr[0] "%1分鐘前已更新"
+msgstr[0] ""
 
 #: ../app/components/HomeTempInfo.qml:118
 msgid "updated recently"
-msgstr "最近更新"
+msgstr ""
 
 #: ../app/components/ListItemActions/Remove.qml:26
 msgid "Remove"
@@ -110,15 +109,15 @@ msgstr "移除"
 
 #: ../app/components/LocationsPageEmptyStateComponent.qml:36
 msgid "No locations found. Tap the plus icon to search for one."
-msgstr "沒有找到您的位置。點擊加號來搜尋地點。"
+msgstr ""
 
 #: ../app/components/NetworkErrorStateComponent.qml:48
 msgid "Network Error"
-msgstr "網路錯誤"
+msgstr ""
 
 #: ../app/components/NetworkErrorStateComponent.qml:57
 msgid "Please check your network settings and try again."
-msgstr "請檢查您的網路設定並重試。"
+msgstr ""
 
 #: ../app/components/NetworkErrorStateComponent.qml:63
 msgid "Retry"
@@ -126,28 +125,27 @@ msgstr "重試"
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:47
 msgid "No API Keys Found"
-msgstr "沒有找到 API 金鑰"
+msgstr ""
 
 #: ../app/components/NoAPIKeyErrorStateComponent.qml:56
 msgid ""
 "If you are a developer, please see the README file for instructions on how "
 "to obtain your own Open Weather Map API key."
-msgstr "若您是開發人員，請閱讀 README 檔案來取得關於如何獲得您自己的 Open Weather Map API 金鑰的相關訊息。"
+msgstr ""
 
 #: ../app/ubuntu-weather-app.qml:235
 msgid ""
 "One arguments for weather app: --display, --city, --lat, --lng They will be "
 "managed by system. See the source for a full comment about them"
 msgstr ""
-"天氣應用程式的一個參數:--display, --city, --lat, --lng 它們將由系統管理。 請參閱消息來源以獲取有關它們的完整評論"
 
 #: ../app/ui/AddLocationPage.qml:38
 msgid "Select a city"
-msgstr "選擇城市"
+msgstr ""
 
 #: ../app/ui/AddLocationPage.qml:49
 msgid "City"
-msgstr "城市"
+msgstr ""
 
 #: ../app/ui/AddLocationPage.qml:65
 msgid "Back"
@@ -155,19 +153,19 @@ msgstr "返回"
 
 #: ../app/ui/AddLocationPage.qml:108
 msgid "Search city"
-msgstr "搜尋城市"
+msgstr ""
 
 #: ../app/ui/AddLocationPage.qml:281
 msgid "No city found"
-msgstr "找不到城市"
+msgstr ""
 
 #: ../app/ui/AddLocationPage.qml:294
 msgid "Couldn't load weather data, please try later again!"
-msgstr "無法載入天氣資料，請稍後在重試！"
+msgstr ""
 
 #: ../app/ui/AddLocationPage.qml:304
 msgid "Location already added."
-msgstr "位置已經加入。"
+msgstr ""
 
 #: ../app/ui/AddLocationPage.qml:307
 msgid "OK"
@@ -175,7 +173,7 @@ msgstr "確定"
 
 #: ../app/ui/LocationsPage.qml:99
 msgid "Current Location"
-msgstr "目前位置"
+msgstr ""
 
 #: ../app/ui/SettingsPage.qml:27
 msgid "Settings"
@@ -183,15 +181,15 @@ msgstr "設定"
 
 #: ../app/ui/SettingsPage.qml:44 ../app/ui/settings/UnitsPage.qml:29
 msgid "Units"
-msgstr "單位"
+msgstr ""
 
 #: ../app/ui/SettingsPage.qml:52 ../app/ui/settings/DataProviderPage.qml:28
 msgid "Data Provider"
-msgstr "資料提供者"
+msgstr ""
 
 #: ../app/ui/SettingsPage.qml:60 ../app/ui/settings/RefreshIntervalPage.qml:27
 msgid "Refresh Interval"
-msgstr "更新間隔"
+msgstr ""
 
 #: ../app/ui/SettingsPage.qml:68 ../app/ui/settings/LocationPage.qml:26
 msgid "Location"
@@ -199,11 +197,11 @@ msgstr "位置"
 
 #: ../app/ui/settings/DataProviderPage.qml:42
 msgid "Provider"
-msgstr "提供者"
+msgstr ""
 
 #: ../app/ui/settings/LocationPage.qml:34
 msgid "Detect current location"
-msgstr "偵測目前位置"
+msgstr ""
 
 #: ../app/ui/settings/RefreshIntervalPage.qml:34
 #: ../app/ui/settings/RefreshIntervalPage.qml:35
@@ -213,58 +211,58 @@ msgstr "偵測目前位置"
 #, qt-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
-msgstr[0] "%1 分鐘"
+msgstr[0] ""
 
 #: ../app/ui/settings/RefreshIntervalPage.qml:47
 msgid "Interval"
-msgstr "間隔"
+msgstr ""
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of temperature in Celcius and are shown in the settings page.
 #. Only the abbreviated form of Celcius should be used.
 #: ../app/ui/settings/UnitsPage.qml:47 ../app/ui/settings/UnitsPage.qml:83
 msgid "°C"
-msgstr "°C"
+msgstr ""
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of temperature in Fahrenheit and are shown in the settings page.
 #. Only the abbreviated form of Fahrenheit should be used.
 #: ../app/ui/settings/UnitsPage.qml:52 ../app/ui/settings/UnitsPage.qml:84
 msgid "°F"
-msgstr "°F"
+msgstr ""
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of wind speed in kilometers per hour and are shown in the settings page.
 #. Only the abbreviated form of kilometers per hour should be used.
 #: ../app/ui/settings/UnitsPage.qml:63 ../app/ui/settings/UnitsPage.qml:104
 msgid "kph"
-msgstr "公里/時"
+msgstr ""
 
 #. TRANSLATORS: The strings are standard measurement units
 #. of wind speed in miles per hour and are shown in the settings page.
 #. Only the abbreviated form of miles per hour should be used.
 #: ../app/ui/settings/UnitsPage.qml:68 ../app/ui/settings/UnitsPage.qml:105
 msgid "mph"
-msgstr "英里/時"
+msgstr ""
 
 #: ../app/ui/settings/UnitsPage.qml:82
 msgid "Temperature"
-msgstr "溫度"
+msgstr ""
 
 #: ../app/ui/settings/UnitsPage.qml:103
 msgid "Wind Speed"
-msgstr "風速"
+msgstr ""
 
 #: ubuntu-weather-app.desktop.in.in.h:1
 msgid "Weather"
-msgstr "天氣"
+msgstr ""
 
 #: ubuntu-weather-app.desktop.in.in.h:2
 msgid ""
 "A weather forecast application for Ubuntu with support for multiple online "
 "weather data sources"
-msgstr "Ubuntu 的天氣預測桯式，支援多個天氣資料提供者"
+msgstr ""
 
 #: ubuntu-weather-app.desktop.in.in.h:3
 msgid "weather;forecast;twc;openweathermap;the weather channel;"
-msgstr "天氣;預報;twc;openweathermap;天氣通道;"
+msgstr ""
